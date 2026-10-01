@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Daily RSI / MACD scanner for US, Japan, India and Taiwan markets.
+Daily RSI / MACD scanner for US, Japan, India, Taiwan stocks + metals, energy and FX majors.
 Output: Telegram message (aligned tables) + full CSV + signal history with performance.
 
 Environment variables:
@@ -49,7 +49,21 @@ MARKETS = {
     "JP": "🇯🇵 ژاپن",
     "IN": "🇮🇳 هند",
     "TW": "🇹🇼 تایوان",
+    "CM": "🛢 فلزات و انرژی",
+    "FX": "💱 جفت‌ارزها",
 }
+
+# Commodities (futures) and FX majors - Yahoo Finance symbols with readable names
+COMMODITIES = {
+    "GC=F": "Gold", "SI=F": "Silver", "HG=F": "Copper", "PL=F": "Platinum",
+    "PA=F": "Palladium", "ALI=F": "Aluminum",
+    "CL=F": "WTI-Oil", "BZ=F": "Brent-Oil", "NG=F": "NatGas", "HO=F": "Heating-Oil",
+}
+FOREX = {
+    "EURUSD=X": "EURUSD", "GBPUSD=X": "GBPUSD", "USDJPY=X": "USDJPY", "USDCHF=X": "USDCHF",
+    "AUDUSD=X": "AUDUSD", "USDCAD=X": "USDCAD", "NZDUSD=X": "NZDUSD", "DX-Y.NYB": "DXY",
+}
+NAMES = {**COMMODITIES, **FOREX}
 
 # ---------------------------------------------------------------------------
 # Symbol lists
@@ -126,7 +140,8 @@ def read_extra():
 
 
 def build_universe():
-    uni = {"US": get_sp500(), "JP": JAPAN, "IN": get_nifty500(), "TW": TAIWAN}
+    uni = {"US": get_sp500(), "JP": JAPAN, "IN": get_nifty500(), "TW": TAIWAN,
+           "CM": list(COMMODITIES), "FX": list(FOREX)}
     for m, lst in read_extra().items():
         uni[m] = list(dict.fromkeys(uni[m] + lst))  # de-duplicate
     return uni
@@ -258,7 +273,7 @@ def analyze(market, ticker, s):
     return {
         "market": market, "ticker": ticker,
         "last_date": s.index[-1].strftime("%Y-%m-%d"),
-        "close": round(daily[-1], 2),
+        "close": round(daily[-1], 5 if daily[-1] < 10 else 2),
         "chg_pct": round(chg, 2) if chg is not None else None,
         "daily_signal": d_code, "daily_reason": d_label,
         "daily_rsi": round(rd, 1) if rd is not None else None,
@@ -312,7 +327,7 @@ def update_history(cur):
             continue
         price, d = prices[key]
         ret = side_return(h.at[i, "side"], float(h.at[i, "entry_price"]), price)
-        h.at[i, "last_price"] = round(price, 4)
+        h.at[i, "last_price"] = round(price, 5)
         h.at[i, "last_date"] = d
         h.at[i, "return_pct"] = round(ret, 2)
         h.at[i, "max_return"] = round(max(float(h.at[i, "max_return"] or 0), ret), 2)
@@ -378,7 +393,7 @@ def perf_blocks(h, new_count):
         out = [f"{'Symbol':<12}{'Sig':<7}{'Date':<6}{'Days':>4}{'Ret%':>7}", "-" * 36]
         for r in sub.itertuples():
             sig = ("Buy" if r.side == "BUY" else "Sell") + "-" + r.timeframe
-            out.append(f"{str(r.ticker)[:12]:<12}{sig:<7}{str(r.signal_date)[5:]:<6}"
+            out.append(f"{NAMES.get(str(r.ticker), str(r.ticker))[:12]:<12}{sig:<7}{str(r.signal_date)[5:]:<6}"
                        f"{int(r.days_n):>4}{r.ret_n:>+7.1f}")
         return pre(out)
 
@@ -420,6 +435,8 @@ def git_save(paths, msg):
 # Telegram message (tables in <pre> blocks for clean alignment)
 # ---------------------------------------------------------------------------
 def short(ticker):
+    if ticker in NAMES:
+        return NAMES[ticker]
     for suf in (".NS", ".TW", ".T"):
         if ticker.endswith(suf):
             return ticker[: -len(suf)]
@@ -442,7 +459,9 @@ def fmt_price(p):
         return f"{p:,.0f}"
     if p >= 100:
         return f"{p:.1f}"
-    return f"{p:.2f}"
+    if p >= 10:
+        return f"{p:.2f}"
+    return f"{p:.4f}"
 
 
 def pre(lines):
