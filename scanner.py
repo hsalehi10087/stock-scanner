@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Daily RSI / MACD scanner for US, Japan, India, Taiwan, China stocks + metals, energy and FX majors,
-plus a fundamental ranking (sales & profit growth) for US, China and Japan.
+plus a fundamental ranking (sales & profit growth) for US, China, Japan, Taiwan and India.
 Output: Telegram message (aligned tables) + CSV files + signal history with performance.
 
 Environment variables:
@@ -585,11 +585,11 @@ def send(blocks, csv_bytes, filename, extra_docs=()):
 
 
 # ---------------------------------------------------------------------------
-# Fundamental ranking: latest-quarter YoY sales & profit growth (US, China, Japan)
+# Fundamental ranking: YoY sales & profit growth (US, China, Japan, Taiwan, India)
 # ---------------------------------------------------------------------------
 FUND_PATH = os.path.join(HERE, "fundamentals.csv")
 WATCH_PATH = os.path.join(HERE, "fundamentals_watch.csv")
-FUND_MARKETS = ("US", "CN", "JP")
+FUND_MARKETS = ("US", "CN", "JP", "TW", "IN")
 FUND_MAX_AGE_DAYS = 7          # each symbol's fundamentals are refreshed weekly
 FUND_TIME_BUDGET = 20 * 60     # seconds per run spent fetching fundamentals
 FUND_TOP = int(os.environ.get("FUND_TOP", "15"))
@@ -641,6 +641,32 @@ def fetch_fundamental(ticker):
             "quarter_end": q, "fetched_at": dt.date.today().isoformat()}
 
 
+def fetch_tw_monthly():
+    """Taiwan listed companies' monthly revenue (TWSE open data): code -> (YoY %, period)."""
+    url = "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"
+    data = None
+    for verify in (True, False):
+        try:
+            r = requests.get(url, headers=UA, timeout=30, verify=verify)
+            data = r.json()
+            break
+        except Exception as e:
+            print("TWSE monthly revenue failed (verify=%s):" % verify, str(e)[:150])
+    out = {}
+    if not isinstance(data, list):
+        return out
+    for row in data:
+        code = next((str(v).strip() for k, v in row.items() if "公司代號" in k), "")
+        yoy = next((num(v) for k, v in row.items() if "去年同月增減" in k), None)
+        period = next((str(v).strip() for k, v in row.items() if "資料年月" in k), "")
+        if code and yoy is not None:
+            if len(period) == 5 and period.isdigit():  # ROC year: 11508 -> 2025-08
+                period = f"{int(period[:3]) + 1911}-{period[3:]}"
+            out[code + ".TW"] = (round(yoy, 1), period)
+    print(f"TWSE monthly revenue: {len(out)} companies")
+    return out
+
+
 def update_fundamentals(uni):
     from concurrent.futures import ThreadPoolExecutor
     cache = pd.read_csv(FUND_PATH, dtype={"ticker": str}) if os.path.exists(FUND_PATH) else pd.DataFrame()
@@ -666,6 +692,12 @@ def update_fundamentals(uni):
             for (m, _), res in zip(batch, ex.map(lambda mt: fetch_fundamental(mt[1]), batch)):
                 res["market"] = m
                 rows[res["ticker"]] = res
+    # Taiwan: replace quarterly sales growth with the latest monthly revenue YoY (refreshed every run)
+    monthly = fetch_tw_monthly()
+    for t, (yoy, period) in monthly.items():
+        if t in rows:
+            rows[t]["rev_growth"] = yoy
+            rows[t]["rev_source"] = f"monthly {period}"
     out = pd.DataFrame(list(rows.values()))
     out.to_csv(FUND_PATH, index=False)
     return out
@@ -713,9 +745,8 @@ def update_watch(top, prices):
 
 
 def fund_blocks(ranked, watch, prices):
-    labels = {"US": "🇺🇸 آمریکا", "CN": "🇨🇳 چین", "JP": "🇯🇵 ژاپن"}
     head = ("📊 <b>رتبه‌بندی بنیادی: رشد فروش و سود</b>\n"
-            "<i>آخرین گزارش فصلی نسبت به فصل مشابه سال قبل · "
+            "<i>آخرین گزارش فصلی نسبت به فصل مشابه سال قبل (تایوان: فروش ماهانه نسبت به ماه مشابه سال قبل) · "
             "Ret% = بازده از روزی که نماد وارد این فهرست شد</i>")
     if ranked.empty:
         return [head + "\nداده‌ی بنیادی هنوز آماده نیست؛ در اجراهای بعدی تکمیل می‌شود."]
@@ -740,7 +771,13 @@ def fund_blocks(ranked, watch, prices):
             rows.append(f"{short(r.ticker)[:8]:<8}{g(r.rev_growth):>7}{g(r.profit_growth):>7}"
                         f"{fmt_price(p):>9}{(f'{ret:+.1f}' if ret is not None else '-'):>6}")
         n_all = (ranked["market"] == m).sum()
-        blocks.append(f"{labels[m]} — {len(sub)} برتر از {n_all}\n" + pre(rows))
+        note = ""
+        if m == "TW" and "rev_source" in sub.columns:
+            src = sub["rev_source"].dropna().astype(str)
+            src = src[src.str.startswith("monthly")]
+            if len(src):
+                note = f" · فروش ماهانه {src.iloc[0].split()[-1]}"
+        blocks.append(f"{MARKETS[m]} — {len(sub)} برتر از {n_all}{note}\n" + pre(rows))
     return blocks
 
 
