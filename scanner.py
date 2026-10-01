@@ -778,7 +778,41 @@ def fund_blocks(ranked, watch, prices):
             if len(src):
                 note = f" · فروش ماهانه {src.iloc[0].split()[-1]}"
         blocks.append(f"{MARKETS[m]} — {len(sub)} برتر از {n_all}{note}\n" + pre(rows))
+    try:
+        blocks += iran_blocks()
+    except Exception as e:
+        print("iran block failed:", e)
     return blocks
+
+
+IRAN_PATH = os.path.join(HERE, "iran_weekly.csv")
+
+
+def iran_blocks():
+    """Weekly Iran list (sales/profit growth from Codal monthly reports), kept in iran_weekly.csv."""
+    if not os.path.exists(IRAN_PATH):
+        return []
+    d = pd.read_csv(IRAN_PATH, dtype=str, keep_default_na=False)
+    if d.empty:
+        return []
+    updated = str(d["updated"].max())
+    try:
+        if (dt.date.today() - dt.date.fromisoformat(updated)).days > 10:
+            return []  # stale list: show only during the week it was prepared
+    except ValueError:
+        pass
+
+    def g(v):
+        v = num(v)
+        return "-" if v is None else f"{max(min(v, 999), -999):+.0f}"
+
+    rows = [f"{'Month%':>7}{'Cum%':>7}{'Prof%':>7}  Symbol", "-" * 30]
+    for r in d.itertuples():
+        rows.append(f"{g(r.month_yoy):>7}{g(r.cum_yoy):>7}{g(r.profit_yoy):>7}  {r.symbol}")
+    period = d["period"].iloc[0] if "period" in d.columns else ""
+    return ["🇮🇷 <b>ایران — بیشترین رشد فروش و سود</b> (گزارش " + html.escape(period) + ")\n"
+            "<i>Month% = فروش ماه نسبت به همان ماه سال قبل · Cum% = فروش تجمعی سال مالی نسبت به دوره‌ی مشابه · "
+            "Prof% = رشد سود (پس از انتشار صورت مالی) · به‌روزرسانی هفتگی: " + updated + "</i>\n" + pre(rows)]
 
 
 # ---------------------------------------------------------------------------
