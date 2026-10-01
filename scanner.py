@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Daily RSI / MACD scanner for US, Japan, India, Taiwan stocks + metals, energy and FX majors.
-Output: Telegram message (aligned tables) + full CSV + signal history with performance.
+Daily RSI / MACD scanner for US, Japan, India, Taiwan, China stocks + metals, energy and FX majors,
+plus a fundamental ranking (sales & profit growth) for US, China and Japan.
+Output: Telegram message (aligned tables) + CSV files + signal history with performance.
 
 Environment variables:
   TELEGRAM_BOT_TOKEN  bot token (from BotFather)
   TELEGRAM_CHAT_ID    your chat id
   DRY_RUN=1           print only, do not send to Telegram
   MAX_PER_MARKET      max symbols per market per message section (default 15)
+  FUND_TOP            top symbols per market in the fundamental ranking (default 15)
 """
 import datetime as dt
 import html
@@ -49,6 +51,7 @@ MARKETS = {
     "JP": "🇯🇵 ژاپن",
     "IN": "🇮🇳 هند",
     "TW": "🇹🇼 تایوان",
+    "CN": "🇨🇳 چین",
     "CM": "🛢 فلزات و انرژی",
     "FX": "💱 جفت‌ارزها",
 }
@@ -92,6 +95,15 @@ TAIWAN = [c + ".TW" for c in """2330 2317 2454 2308 2382 2881 2882 2412 2891 371
 1216 2002 1301 1303 2357 3008 2345 3231 2379 3034 2885 2892 2880 5880 2883 2887 2890 1101 2207
 2912 2603 2609 2615 3045 4904 2395 6669 3037 2327 4938 2301 1326 6505 1590 2408 3661 3443 2376
 2356 3017 2383""".split()]
+
+CHINA = """600519.SS 601318.SS 600036.SS 601398.SS 601288.SS 601939.SS 601988.SS 600900.SS 601857.SS
+600028.SS 601166.SS 600276.SS 600030.SS 601012.SS 600309.SS 601888.SS 600887.SS 601899.SS 600031.SS
+601668.SS 600585.SS 601088.SS 600050.SS 601728.SS 600941.SS 688981.SS 601633.SS 600104.SS 601601.SS
+601628.SS 600016.SS 600000.SS 601328.SS 600048.SS 601919.SS 600690.SS 603288.SS 600809.SS 603259.SS
+688111.SS 000858.SZ 300750.SZ 000333.SZ 002594.SZ 000651.SZ 002415.SZ 300059.SZ 000001.SZ 000568.SZ
+002475.SZ 300760.SZ 002714.SZ 300124.SZ 002352.SZ 000725.SZ 002230.SZ 300274.SZ 002371.SZ 000063.SZ
+300015.SZ 0700.HK 9988.HK 3690.HK 1810.HK 9618.HK 9999.HK 1211.HK 2318.HK 0941.HK 9888.HK 2020.HK
+1024.HK 9961.HK 0981.HK BABA PDD JD BIDU NIO LI XPEV TCOM NTES BEKE""".split()
 
 
 def get_sp500():
@@ -140,7 +152,7 @@ def read_extra():
 
 
 def build_universe():
-    uni = {"US": get_sp500(), "JP": JAPAN, "IN": get_nifty500(), "TW": TAIWAN,
+    uni = {"US": get_sp500(), "JP": JAPAN, "IN": get_nifty500(), "TW": TAIWAN, "CN": CHINA,
            "CM": list(COMMODITIES), "FX": list(FOREX)}
     for m, lst in read_extra().items():
         uni[m] = list(dict.fromkeys(uni[m] + lst))  # de-duplicate
@@ -408,7 +420,7 @@ def perf_blocks(h, new_count):
 
 
 def git_save(paths, msg):
-    """Commit the history file back to the repo (only inside GitHub Actions)."""
+    """Commit data files back to the repo (only inside GitHub Actions)."""
     if os.environ.get("GITHUB_ACTIONS") != "true":
         return True
 
@@ -437,7 +449,7 @@ def git_save(paths, msg):
 def short(ticker):
     if ticker in NAMES:
         return NAMES[ticker]
-    for suf in (".NS", ".TW", ".T"):
+    for suf in (".NS", ".TW", ".SS", ".SZ", ".HK", ".T"):
         if ticker.endswith(suf):
             return ticker[: -len(suf)]
     return ticker
@@ -573,6 +585,166 @@ def send(blocks, csv_bytes, filename, extra_docs=()):
 
 
 # ---------------------------------------------------------------------------
+# Fundamental ranking: latest-quarter YoY sales & profit growth (US, China, Japan)
+# ---------------------------------------------------------------------------
+FUND_PATH = os.path.join(HERE, "fundamentals.csv")
+WATCH_PATH = os.path.join(HERE, "fundamentals_watch.csv")
+FUND_MARKETS = ("US", "CN", "JP")
+FUND_MAX_AGE_DAYS = 7          # each symbol's fundamentals are refreshed weekly
+FUND_TIME_BUDGET = 20 * 60     # seconds per run spent fetching fundamentals
+FUND_TOP = int(os.environ.get("FUND_TOP", "15"))
+WATCH_COLS = ["market", "ticker", "added_date", "entry_price", "last_date", "last_price",
+              "return_pct", "days", "in_top"]
+
+
+def _pct(v):
+    v = num(v)
+    return None if v is None else round(v * 100, 1)
+
+
+def fetch_fundamental(ticker):
+    t = yf.Ticker(ticker)
+    rev = prof = None
+    q, name = "", ""
+    try:
+        info = t.info or {}
+        rev = _pct(info.get("revenueGrowth"))
+        prof = _pct(info.get("earningsQuarterlyGrowth"))
+        if prof is None:
+            prof = _pct(info.get("earningsGrowth"))
+        mrq = info.get("mostRecentQuarter")
+        if mrq:
+            q = dt.datetime.fromtimestamp(int(mrq), dt.timezone.utc).strftime("%Y-%m-%d")
+        name = info.get("shortName") or ""
+    except Exception as e:
+        print("info failed", ticker, str(e)[:120])
+    if rev is None or prof is None:  # fallback: compute YoY from quarterly statements
+        try:
+            qs = t.quarterly_income_stmt
+            if qs is not None and qs.shape[1] >= 5:
+                cols = sorted(qs.columns, reverse=True)
+
+                def yoy(row):
+                    if row not in qs.index:
+                        return None
+                    a, b = num(qs.at[row, cols[0]]), num(qs.at[row, cols[4]])
+                    if a is None or not b:
+                        return None
+                    return round((a - b) / abs(b) * 100, 1)
+
+                rev = rev if rev is not None else yoy("Total Revenue")
+                prof = prof if prof is not None else yoy("Net Income")
+                q = q or str(cols[0])[:10]
+        except Exception as e:
+            print("statement failed", ticker, str(e)[:120])
+    return {"ticker": ticker, "name": str(name)[:40], "rev_growth": rev, "profit_growth": prof,
+            "quarter_end": q, "fetched_at": dt.date.today().isoformat()}
+
+
+def update_fundamentals(uni):
+    from concurrent.futures import ThreadPoolExecutor
+    cache = pd.read_csv(FUND_PATH, dtype={"ticker": str}) if os.path.exists(FUND_PATH) else pd.DataFrame()
+    rows = {r["ticker"]: r for r in cache.to_dict("records")} if len(cache) else {}
+    today = dt.date.today()
+
+    def age(t):
+        try:
+            return (today - dt.date.fromisoformat(str(rows[t]["fetched_at"]))).days
+        except Exception:
+            return 10 ** 6  # never fetched
+
+    targets = [(m, t) for m in FUND_MARKETS for t in uni.get(m, [])]
+    stale = sorted([mt for mt in targets if age(mt[1]) >= FUND_MAX_AGE_DAYS], key=lambda mt: -age(mt[1]))
+    print(f"fundamentals: {len(stale)} of {len(targets)} need refresh")
+    start = time.time()
+    with ThreadPoolExecutor(4) as ex:
+        for i in range(0, len(stale), 40):
+            if time.time() - start > FUND_TIME_BUDGET:
+                print("fundamentals: time budget reached, rest continues next run")
+                break
+            batch = stale[i:i + 40]
+            for (m, _), res in zip(batch, ex.map(lambda mt: fetch_fundamental(mt[1]), batch)):
+                res["market"] = m
+                rows[res["ticker"]] = res
+    out = pd.DataFrame(list(rows.values()))
+    out.to_csv(FUND_PATH, index=False)
+    return out
+
+
+def rank_fundamentals(fund):
+    f = fund[fund["market"].isin(FUND_MARKETS)].copy()
+    f["rev_growth"] = pd.to_numeric(f["rev_growth"], errors="coerce")
+    f["profit_growth"] = pd.to_numeric(f["profit_growth"], errors="coerce")
+    f = f.dropna(subset=["rev_growth", "profit_growth"])
+    if f.empty:
+        return f
+    g = f.groupby("market")
+    f["score"] = (g["rev_growth"].rank(pct=True) * 50 + g["profit_growth"].rank(pct=True) * 50).round(1)
+    return f.sort_values(["market", "score"], ascending=[True, False])
+
+
+def update_watch(top, prices):
+    """Track price & return of each stock from the day it enters the top list."""
+    w = pd.read_csv(WATCH_PATH, dtype=str, keep_default_na=False) if os.path.exists(WATCH_PATH) \
+        else pd.DataFrame(columns=WATCH_COLS)
+    w = w.reindex(columns=WATCH_COLS).fillna("").astype(object)
+    known = set(zip(w["market"], w["ticker"]))
+    new = []
+    for r in top.itertuples():
+        key = (r.market, r.ticker)
+        if key not in known and key in prices:
+            p, d = prices[key]
+            new.append({"market": r.market, "ticker": r.ticker, "added_date": d, "entry_price": p,
+                        "last_date": d, "last_price": p, "return_pct": 0.0, "days": 0, "in_top": True})
+    if new:
+        w = pd.concat([w, pd.DataFrame(new, columns=WATCH_COLS).astype(object)], ignore_index=True)
+    top_keys = set(zip(top["market"], top["ticker"]))
+    for i in w.index:
+        key = (w.at[i, "market"], w.at[i, "ticker"])
+        w.at[i, "in_top"] = key in top_keys
+        if key in prices and num(w.at[i, "entry_price"]):
+            p, d = prices[key]
+            w.at[i, "last_price"] = p
+            w.at[i, "last_date"] = d
+            w.at[i, "return_pct"] = round((p / float(w.at[i, "entry_price"]) - 1) * 100, 2)
+            w.at[i, "days"] = (pd.Timestamp(d) - pd.Timestamp(w.at[i, "added_date"])).days
+    w.to_csv(WATCH_PATH, index=False)
+    return w
+
+
+def fund_blocks(ranked, watch, prices):
+    labels = {"US": "🇺🇸 آمریکا", "CN": "🇨🇳 چین", "JP": "🇯🇵 ژاپن"}
+    head = ("📊 <b>رتبه‌بندی بنیادی: رشد فروش و سود</b>\n"
+            "<i>آخرین گزارش فصلی نسبت به فصل مشابه سال قبل · "
+            "Ret% = بازده از روزی که نماد وارد این فهرست شد</i>")
+    if ranked.empty:
+        return [head + "\nداده‌ی بنیادی هنوز آماده نیست؛ در اجراهای بعدی تکمیل می‌شود."]
+    wmap = {(r.market, r.ticker): r for r in watch.itertuples()}
+
+    def g(v):
+        v = num(v)
+        if v is None:
+            return "-"
+        return f"{max(min(v, 999), -999):+.0f}"
+
+    blocks = [head]
+    for m in FUND_MARKETS:
+        sub = ranked[ranked["market"] == m].head(FUND_TOP)
+        if sub.empty:
+            continue
+        rows = [f"{'Symbol':<8}{'Sales%':>7}{'Prof%':>7}{'Price':>9}{'Ret%':>6}", "-" * 37]
+        for r in sub.itertuples():
+            p = prices.get((m, r.ticker), (None, None))[0]
+            wr = wmap.get((m, r.ticker))
+            ret = num(wr.return_pct) if wr is not None else None
+            rows.append(f"{short(r.ticker)[:8]:<8}{g(r.rev_growth):>7}{g(r.profit_growth):>7}"
+                        f"{fmt_price(p):>9}{(f'{ret:+.1f}' if ret is not None else '-'):>6}")
+        n_all = (ranked["market"] == m).sum()
+        blocks.append(f"{labels[m]} — {len(sub)} برتر از {n_all}\n" + pre(rows))
+    return blocks
+
+
+# ---------------------------------------------------------------------------
 def main():
     uni = build_universe()
     total = sum(len(v) for v in uni.values())
@@ -599,15 +771,30 @@ def main():
     try:
         h, new_count = update_history(df)
         perf = perf_blocks(h, new_count)
-        if not git_save([os.path.basename(HIST_PATH)], f"Signal history {dt.date.today()}"):
-            perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
         hist_csv = h.sort_values(["status", "signal_date"], ascending=[False, False]) \
                     .to_csv(index=False).encode("utf-8-sig")
     except Exception as e:
         print("history failed:", e)
         perf = [f"⚠️ خطا در به‌روزرسانی تاریخچه: {html.escape(str(e))[:200]}"]
-    send(build_blocks(df, len(df), total, perf), csv, f"signals-{dt.date.today()}.csv",
-         extra_docs=[("signals-history.csv", hist_csv)])
+
+    fblocks, fund_csv = [], b""
+    try:
+        prices = {(r.market, r.ticker): (float(r.close), r.last_date) for r in df.itertuples()}
+        ranked = rank_fundamentals(update_fundamentals(uni))
+        top = ranked.groupby("market").head(FUND_TOP) if len(ranked) else ranked
+        watch = update_watch(top, prices)
+        fblocks = fund_blocks(ranked, watch, prices)
+        if len(ranked):
+            fund_csv = ranked.to_csv(index=False).encode("utf-8-sig")
+    except Exception as e:
+        print("fundamentals failed:", e)
+        fblocks = [f"⚠️ خطا در رتبه‌بندی بنیادی: {html.escape(str(e))[:200]}"]
+
+    saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH) if os.path.exists(p)]
+    if not git_save(saved, f"Daily data {dt.date.today()}"):
+        perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
+    send(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
+         extra_docs=[("signals-history.csv", hist_csv), ("fundamentals-rank.csv", fund_csv)])
     return 0
 
 
