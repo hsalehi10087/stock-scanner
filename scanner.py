@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-اسکنر روزانه RSI / MACD برای بازارهای آمریکا، ژاپن، هند و تایوان
-خروجی: پیام تلگرام + فایل CSV کامل + تاریخچه‌ی عملکرد سیگنال‌ها
+Daily RSI / MACD scanner for US, Japan, India and Taiwan markets.
+Output: Telegram message (aligned tables) + full CSV + signal history with performance.
 
-متغیرهای محیطی:
-  TELEGRAM_BOT_TOKEN  توکن ربات (از BotFather)
-  TELEGRAM_CHAT_ID    شناسه‌ی چت شما
-  DRY_RUN=1           فقط چاپ در خروجی، بدون ارسال به تلگرام
-  MAX_PER_MARKET      حداکثر نماد هر بازار در هر بخش پیام (پیش‌فرض ۲۵)
+Environment variables:
+  TELEGRAM_BOT_TOKEN  bot token (from BotFather)
+  TELEGRAM_CHAT_ID    your chat id
+  DRY_RUN=1           print only, do not send to Telegram
+  MAX_PER_MARKET      max symbols per market per message section (default 15)
 """
 import datetime as dt
 import html
@@ -41,7 +41,7 @@ _CFG = _read_config()
 TOKEN = (os.environ.get("TELEGRAM_BOT_TOKEN") or _CFG.get("TELEGRAM_BOT_TOKEN", "")).strip()
 CHAT_ID = (os.environ.get("TELEGRAM_CHAT_ID") or _CFG.get("TELEGRAM_CHAT_ID", "")).strip()
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
-MAX_PER_MARKET = int(os.environ.get("MAX_PER_MARKET", "25"))
+MAX_PER_MARKET = int(os.environ.get("MAX_PER_MARKET", "15"))
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64)"}
 
 MARKETS = {
@@ -351,43 +351,45 @@ def update_history(cur):
     return h, len(new)
 
 
-def perf_section(h, new_count):
-    side_fa = {"BUY": "خرید", "SELL": "فروش"}
-    tf_fa = {"D": "روزانه", "W": "هفتگی"}
-    lines = ["📈 <b>عملکرد سیگنال‌های قبلی</b>",
-             "<i>بازده از روز سیگنال تا امروز؛ در سیگنال فروش، افت قیمت = سود</i>"]
+def perf_blocks(h, new_count):
+    title = "📈 <b>عملکرد سیگنال‌های قبلی</b>"
     hh = h.copy()
     hh["days_n"] = pd.to_numeric(hh["days"], errors="coerce").fillna(0)
     hh["ret_n"] = pd.to_numeric(hh["return_pct"], errors="coerce").fillna(0)
     seasoned = hh[hh["days_n"] >= 1]
     if seasoned.empty:
-        lines.append(f"تاریخچه از امروز شروع شد · {new_count} سیگنال جدید ثبت شد. "
-                     "از اسکن بعدی، بازدهی هر سیگنال اینجا نمایش داده می‌شود.")
-        return "\n".join(lines)
-    groups = [("⭐ هم‌راستا", seasoned[seasoned["aligned"].astype(str) == "True"])]
+        return [f"{title}\nتاریخچه از امروز شروع شد · {new_count} سیگنال جدید ثبت شد. "
+                "از اسکن بعدی، بازدهی هر سیگنال اینجا نمایش داده می‌شود."]
+    groups = [("Aligned*", seasoned[seasoned["aligned"].astype(str) == "True"])]
     for tf in ("D", "W"):
-        for side in ("BUY", "SELL"):
-            groups.append((f"{side_fa[side]} {tf_fa[tf]}",
-                           seasoned[(seasoned["timeframe"] == tf) & (seasoned["side"] == side)]))
+        for side, s in (("BUY", "Buy"), ("SELL", "Sell")):
+            groups.append((f"{s}-{tf}", seasoned[(seasoned["timeframe"] == tf) & (seasoned["side"] == side)]))
+    rows = [f"{'Group':<10}{'N':>5}{'Win%':>7}{'Avg%':>8}", "-" * 30]
     for label, sub in groups:
         if sub.empty:
             continue
         win = (sub["ret_n"] > 0).mean() * 100
-        lines.append(f"• {label}: {len(sub)} سیگنال · موفق {win:.0f}% · میانگین {sub['ret_n'].mean():+.2f}%")
+        rows.append(f"{label:<10}{len(sub):>5}{win:>7.0f}{sub['ret_n'].mean():>+8.2f}")
+    blocks = [title + "\n<i>بازده از روز سیگنال تا امروز؛ در فروش، افت قیمت = سود</i>\n" + pre(rows) +
+              "\n<i>D=روزانه · W=هفتگی · Aligned*=خرید روزانه هم‌جهت با روند هفتگی · "
+              "Win%=درصد سیگنال‌های سودده</i>"]
 
-    def row(r):
-        return (f"{html.escape(str(r.ticker))} {side_fa[r.side]} {tf_fa[r.timeframe]} "
-                f"از {r.signal_date} ({int(r.days_n)} روز): <b>{r.ret_n:+.1f}%</b>")
+    def table(sub):
+        out = [f"{'Symbol':<12}{'Sig':<7}{'Date':<6}{'Days':>4}{'Ret%':>7}", "-" * 36]
+        for r in sub.itertuples():
+            sig = ("Buy" if r.side == "BUY" else "Sell") + "-" + r.timeframe
+            out.append(f"{str(r.ticker)[:12]:<12}{sig:<7}{str(r.signal_date)[5:]:<6}"
+                       f"{int(r.days_n):>4}{r.ret_n:>+7.1f}")
+        return pre(out)
 
     open_ = seasoned[seasoned["status"] == "OPEN"].sort_values("ret_n", ascending=False)
     if len(open_):
-        lines += ["", "🏆 <b>بهترین سیگنال‌های باز</b>"]
-        lines += [row(r) for r in open_.head(5).itertuples()]
+        b = "🏆 <b>بهترین سیگنال‌های باز</b>\n" + table(open_.head(5))
         if len(open_) > 5:
-            lines.append("📉 <b>ضعیف‌ترین سیگنال‌های باز</b>")
-            lines += [row(r) for r in open_.tail(5).iloc[::-1].itertuples()]
-    lines.append(f"\nسیگنال جدید امروز: {new_count} · کل سیگنال‌های ثبت‌شده: {len(h)}")
-    return "\n".join(lines)
+            b += "\n📉 <b>ضعیف‌ترین سیگنال‌های باز</b>\n" + table(open_.tail(5).iloc[::-1])
+        blocks.append(b)
+    blocks.append(f"سیگنال جدید امروز: {new_count} · کل سیگنال‌های ثبت‌شده: {len(h)}")
+    return blocks
 
 
 def git_save(paths, msg):
@@ -415,41 +417,100 @@ def git_save(paths, msg):
 
 
 # ---------------------------------------------------------------------------
-# Telegram message
+# Telegram message (tables in <pre> blocks for clean alignment)
 # ---------------------------------------------------------------------------
-def fmt_list(df):
-    lines = []
+def short(ticker):
+    for suf in (".NS", ".TW", ".T"):
+        if ticker.endswith(suf):
+            return ticker[: -len(suf)]
+    return ticker
+
+
+def num(v):
+    try:
+        f = float(v)
+        return None if f != f else f  # NaN -> None
+    except (TypeError, ValueError):
+        return None
+
+
+def fmt_price(p):
+    p = num(p)
+    if p is None:
+        return "-"
+    if p >= 10000:
+        return f"{p:,.0f}"
+    if p >= 100:
+        return f"{p:.1f}"
+    return f"{p:.2f}"
+
+
+def pre(lines):
+    return "<pre>" + html.escape("\n".join(lines)) + "</pre>"
+
+
+def signal_table(sub, rsi_col):
+    rows = [f"{'Symbol':<11}{'Price':>9}{'Chg%':>7}{'RSI':>5}", "-" * 32]
+    for r in sub.head(MAX_PER_MARKET).itertuples():
+        chg, rv = num(r.chg_pct), num(getattr(r, rsi_col))
+        rows.append(f"{short(r.ticker)[:11]:<11}{fmt_price(r.close):>9}"
+                    f"{(f'{chg:+.1f}' if chg is not None else '-'):>7}"
+                    f"{(f'{rv:.0f}' if rv is not None else '-'):>5}")
+    return pre(rows)
+
+
+def section(title, df, rsi_col):
+    if df.empty:
+        return f"<b>{title}</b>\n—"
+    out = [f"<b>{title}</b> ({len(df)})"]
     for m, label in MARKETS.items():
         sub = df[df.market == m]
         if sub.empty:
             continue
-        items = [f"{html.escape(r.ticker)} ({r.daily_rsi if r.daily_rsi is not None else '—'})"
-                 for r in sub.head(MAX_PER_MARKET).itertuples()]
-        more = f" … +{len(sub) - MAX_PER_MARKET}" if len(sub) > MAX_PER_MARKET else ""
-        lines.append(f"<b>{label}</b> ({len(sub)}): " + "، ".join(items) + more)
-    return "\n".join(lines) if lines else "—"
+        out.append(f"{label} ({len(sub)})")
+        out.append(signal_table(sub, rsi_col))
+        if len(sub) > MAX_PER_MARKET:
+            out.append(f"<i>+{len(sub) - MAX_PER_MARKET} مورد دیگر در فایل CSV</i>")
+    return "\n".join(out)
 
 
-def build_message(df, scanned, total, perf=""):
+def build_blocks(df, scanned, total, perf_blocks=()):
     today = dt.date.today().strftime("%Y-%m-%d")
     aligned = df[df.aligned].sort_values("daily_rsi")
     d_buy = df[(df.daily_signal == "BUY") & ~df.aligned].sort_values("daily_rsi")
     d_sell = df[df.daily_signal == "SELL"].sort_values("daily_rsi", ascending=False)
     w_buy = df[df.weekly_signal == "BUY"].sort_values("weekly_rsi")
     w_sell = df[df.weekly_signal == "SELL"].sort_values("weekly_rsi", ascending=False)
-    parts = [
-        f"📡 <b>اسکن روزانه RSI/MACD</b> — {today}",
-        f"بررسی‌شده: {scanned} از {total} نماد · عدد داخل پرانتز = RSI",
-        "",
-        "⭐ <b>خرید روزانه + روند هفتگی مثبت (قوی‌ترین)</b>", fmt_list(aligned), "",
-        "🟢 <b>سایر سیگنال‌های خرید روزانه</b>", fmt_list(d_buy), "",
-        "🟢 <b>سیگنال خرید هفتگی</b>", fmt_list(w_buy), "",
-        "🔴 <b>سیگنال فروش روزانه</b>", fmt_list(d_sell), "",
-        "🔴 <b>سیگنال فروش هفتگی</b>", fmt_list(w_sell), "",
-        perf, "",
-        "<i>فهرست کامل در فایل CSV پیوست. این خروجی صرفاً غربالگری فنی است، نه توصیه‌ی خرید و فروش.</i>",
+    return [
+        f"📡 <b>اسکن روزانه RSI/MACD</b> — {today}\nبررسی‌شده: {scanned} از {total} نماد",
+        section("⭐ خرید روزانه + روند هفتگی مثبت (قوی‌ترین)", aligned, "daily_rsi"),
+        section("🟢 سایر سیگنال‌های خرید روزانه", d_buy, "daily_rsi"),
+        section("🟢 سیگنال خرید هفتگی", w_buy, "weekly_rsi"),
+        section("🔴 سیگنال فروش روزانه", d_sell, "daily_rsi"),
+        section("🔴 سیگنال فروش هفتگی", w_sell, "weekly_rsi"),
+        *perf_blocks,
+        "<i>فهرست کامل و تاریخچه در فایل‌های CSV پیوست. این خروجی صرفاً غربالگری فنی است، نه توصیه‌ی خرید و فروش.</i>",
     ]
-    return "\n".join(parts)
+
+
+def chunk_blocks(blocks, limit=3900):
+    chunks, cur = [], ""
+    for b in blocks:
+        if not b:
+            continue
+        if len(b) > limit:  # very large block: fall back to line splitting
+            if cur:
+                chunks.append(cur)
+                cur = ""
+            chunks.extend(split_message(b, limit))
+            continue
+        if cur and len(cur) + len(b) + 2 > limit:
+            chunks.append(cur)
+            cur = ""
+        cur += b + "\n\n"
+    if cur.strip():
+        chunks.append(cur)
+    return chunks
 
 
 def split_message(text, limit=3900):
@@ -474,12 +535,16 @@ def tg(method, **kw):
     return r.ok
 
 
-def send(text, csv_bytes, filename, extra_docs=()):
+def send(blocks, csv_bytes, filename, extra_docs=()):
+    if isinstance(blocks, str):
+        blocks = [blocks]
     if DRY_RUN or not TOKEN or not CHAT_ID:
-        print(text)
+        for c in chunk_blocks(blocks):
+            print(c)
+            print("=" * 40)
         print(f"\n[DRY RUN] CSV {filename}: {len(csv_bytes)} bytes")
         return
-    for chunk in split_message(text):
+    for chunk in chunk_blocks(blocks):
         tg("sendMessage", data={"chat_id": CHAT_ID, "text": chunk,
                                 "parse_mode": "HTML", "disable_web_page_preview": True})
     for fn, data in [(filename, csv_bytes), *extra_docs]:
@@ -510,19 +575,19 @@ def main():
         return 1
     df = pd.DataFrame(rows)
     csv = df.sort_values(["market", "daily_signal", "ticker"]).to_csv(index=False).encode("utf-8-sig")
-    perf = ""
+    perf = []
     hist_csv = b""
     try:
         h, new_count = update_history(df)
-        perf = perf_section(h, new_count)
+        perf = perf_blocks(h, new_count)
         if not git_save([os.path.basename(HIST_PATH)], f"Signal history {dt.date.today()}"):
-            perf += "\n⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود."
+            perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
         hist_csv = h.sort_values(["status", "signal_date"], ascending=[False, False]) \
                     .to_csv(index=False).encode("utf-8-sig")
     except Exception as e:
         print("history failed:", e)
-        perf = f"⚠️ خطا در به‌روزرسانی تاریخچه: {html.escape(str(e))[:200]}"
-    send(build_message(df, len(df), total, perf), csv, f"signals-{dt.date.today()}.csv",
+        perf = [f"⚠️ خطا در به‌روزرسانی تاریخچه: {html.escape(str(e))[:200]}"]
+    send(build_blocks(df, len(df), total, perf), csv, f"signals-{dt.date.today()}.csv",
          extra_docs=[("signals-history.csv", hist_csv)])
     return 0
 
