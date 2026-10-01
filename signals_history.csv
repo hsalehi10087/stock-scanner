@@ -205,3 +205,8 @@ signal_date,market,ticker,timeframe,side,reason,aligned,entry_price,last_date,la
 2026-10-01,IN,ATHERENERG.NS,W,SELL,تقاطع نزولی MACD,False,1406.1,2026-10-01,1406.1,0.0,0.0,0.0,0,OPEN,,
 2026-10-01,IN,BPCL.NS,W,SELL,تقاطع نزولی MACD,False,300.6,2026-10-01,300.6,0.0,0.0,0.0,0,OPEN,,
 2026-10-01,IN,TTML.NS,D,BUY,تقاطع صعودی MACD,False,34.82,2026-10-01,34.82,0.0,0.0,0.0,0,OPEN,,
+2026-10-01,CM,GC=F,W,SELL,تقاطع نزولی MACD,False,4205.5,2026-10-01,4205.5,0.0,0.0,0.0,0,OPEN,,
+2026-10-01,CM,SI=F,W,SELL,تقاطع نزولی MACD,False,61.37,2026-10-01,61.37,0.0,0.0,0.0,0,OPEN,,
+2026-10-01,CM,PA=F,W,SELL,تقاطع نزولی MACD,False,1193.5,2026-10-01,1193.5,0.0,0.0,0.0,0,OPEN,,
+2026-10-01,FX,USDCAD=X,W,BUY,تقاطع صعودی MACD,False,1.424,2026-10-01,1.424,0.0,0.0,0.0,0,OPEN,,
+2026-10-01,FX,DX-Y.NYB,W,BUY,تقاطع صعودی MACD,False,101.77,2026-10-01,101.77,0.0,0.0,0.0,0,OPEN,,
