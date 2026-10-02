@@ -23,9 +23,12 @@ ASSETS = [
     ("SI=F", "Silver", "فلزات"),
     ("HG=F", "Copper", "فلزات"),
     ("PL=F", "Platinum", "فلزات"),
+    ("PA=F", "Palladium", "فلزات"),
+    ("ALI=F", "Aluminum", "فلزات"),
     ("CL=F", "WTI Oil", "انرژی"),
     ("BZ=F", "Brent Oil", "انرژی"),
     ("NG=F", "Natural Gas", "انرژی"),
+    ("HO=F", "Heating Oil", "انرژی"),
 ]
 
 FA_NAMES = {
