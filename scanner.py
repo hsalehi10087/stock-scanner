@@ -866,6 +866,11 @@ def main():
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
     send(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
          extra_docs=[("signals-history.csv", hist_csv), ("fundamentals-rank.csv", fund_csv)])
+    try:
+        import macro
+        macro.run(lambda blocks: send(blocks, b"", "macro"), download_all, macd, rsi, pre)
+    except Exception as e:
+        print("macro outlook failed:", e)
     return 0
 
 
