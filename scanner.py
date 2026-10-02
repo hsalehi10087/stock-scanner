@@ -294,6 +294,8 @@ def analyze(market, ticker, s):
         "weekly_rsi": round(rw, 1) if rw is not None else None,
         "weekly_hist": round(mw["hist"], 4) if mw else None,
         "aligned": d_code == "BUY" and w_code in ("BUY", "UP"),
+        "ret_6m": round((daily[-1] / daily[-127] - 1) * 100, 2) if len(daily) > 127 else None,
+        "high_gap": round((daily[-1] / daily[-252:].max() - 1) * 100, 2),
     }
 
 
