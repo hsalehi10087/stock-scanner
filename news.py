@@ -164,12 +164,21 @@ def run(send, polymarket=None, gemini=None):
                   "<i>بر اساس لحن تیترها (Up = صعودی/مثبت/کاهش نرخ · Down = نزولی/منفی/افزایش نرخ)</i>\n"
                   + "<pre>" + html.escape("\n".join(rows)) + "</pre>\n" + "\n".join(readings))
 
+    # translate displayed English texts (headlines, Polymarket questions) to Persian
+    try:
+        from translate import fa_list
+    except Exception:
+        fa_list = lambda x: x
+    shown = [q for items in pm.values() for q, _, _ in items[:2]]
+    shown += [title[:150] for items in data.values() for title, _, _ in items[:4]]
+    tr = dict(zip(shown, fa_list(shown)))
+
     # Polymarket side by side
     if pm:
         lines = ["🎲 <b>بازار پیش‌بینی Polymarket</b> <i>(منبع: Polymarket)</i>"]
         for topic, items in pm.items():
             for q, p, _ in items[:2]:
-                lines.append(f"• [{topic}] {html.escape(q)} — <b>{p * 100:.0f}%</b>")
+                lines.append(f"• [{topic}] {html.escape(tr.get(q, q))} — <b>{p * 100:.0f}%</b>")
         blocks.append("\n".join(lines))
 
     # key headlines per topic
@@ -179,7 +188,8 @@ def run(send, polymarket=None, gemini=None):
         top = items[:4]
         mark = {"up": "🟢", "down": "🔴", "neutral": "⚪️"}
         blocks.append(f"<b>{topic}</b>\n" + "\n".join(
-            f"{mark[t]} {html.escape(title[:150])} — <i>{html.escape(src)}</i>" for title, src, t in top))
+            f"{mark[t]} {html.escape(tr.get(title[:150], title[:150]))} — <i>{html.escape(src)}</i>"
+            for title, src, t in top))
 
     if gemini:
         heads = "\n".join(f"[{tp}] {t} ({s})" for tp, it in data.items() for t, s, _ in it[:12])
