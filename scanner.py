@@ -863,7 +863,15 @@ def main():
         print("fundamentals failed:", e)
         fblocks = [f"⚠️ خطا در رتبه‌بندی بنیادی: {html.escape(str(e))[:200]}"]
 
-    saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH) if os.path.exists(p)]
+    qmsgs = []
+    try:
+        import quality
+        qmsgs = quality.build(df, download_all, pre, short, fmt_price)
+    except Exception as e:
+        print("quality filters failed:", e)
+
+    saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH,
+                                           os.path.join(HERE, "quality_cache.csv")) if os.path.exists(p)]
     if not git_save(saved, f"Daily data {dt.date.today()}"):
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
     send(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
