@@ -185,10 +185,16 @@ def run(send, download_all, macd, rsi, pre):
     if pm:
         lines = ["🎲 <b>پیش‌بینی‌های Polymarket</b>",
                  "<i>منبع: Polymarket — احتمال «بله» بر اساس قیمت بازار پیش‌بینی (پرمعامله‌ترین‌ها)</i>"]
+        try:
+            from translate import fa_list
+        except Exception:
+            fa_list = lambda x: x
+        qs = [q for items in pm.values() for q, _, _ in items]
+        tr = dict(zip(qs, fa_list(qs)))
         for topic, items in pm.items():
             lines.append(f"\n<b>{topic}</b>")
             for q, p, _ in items:
-                lines.append(f"• {html.escape(q)} — <b>{p * 100:.0f}%</b>")
+                lines.append(f"• {html.escape(tr.get(q, q))} — <b>{p * 100:.0f}%</b>")
         blocks.append("\n".join(lines))
     else:
         blocks.append("🎲 Polymarket: امروز داده‌ای دریافت نشد.")
