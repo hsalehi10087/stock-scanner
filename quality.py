@@ -3,8 +3,10 @@ Two extra daily Telegram messages:
   1) RSI/MACD buy signals filtered by Warren Buffett's criteria (auto-computable part of the scorecard)
   2) RSI/MACD buy signals filtered by CANSLIM (C, A, N, L, I + market direction M)
 Fundamentals come free from Yahoo Finance and are cached weekly in quality_cache.csv.
+Each list's performance since a stock entered it is tracked in quality_track.csv.
 """
 import datetime as dt
+import html
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -171,6 +173,87 @@ def buffett_score(r):
     return round(pts / mx * 100)
 
 
+TRACK = os.path.join(HERE, "quality_track.csv")
+TCOLS = ["list", "market", "ticker", "added_date", "entry_price", "last_date", "last_price",
+         "return_pct", "max_return", "min_return", "days", "status"]
+HOLD_DAYS = 60   # each stock is followed for 60 days after it enters a list
+
+
+def track(lists, prices):
+    """Record the day/price each stock enters a list, and update its return every day."""
+    if os.path.exists(TRACK):
+        w = pd.read_csv(TRACK, dtype=str, keep_default_na=False).reindex(columns=TCOLS).fillna("")
+    else:
+        w = pd.DataFrame(columns=TCOLS)
+    w = w.astype(object)
+    for i in w.index[w["status"] == "OPEN"]:
+        key = (w.at[i, "market"], w.at[i, "ticker"])
+        if key not in prices or not _num(w.at[i, "entry_price"]):
+            continue
+        p, d = prices[key]
+        ret = (p / float(w.at[i, "entry_price"]) - 1) * 100
+        w.at[i, "last_price"], w.at[i, "last_date"] = p, d
+        w.at[i, "return_pct"] = round(ret, 2)
+        w.at[i, "max_return"] = round(max(_num(w.at[i, "max_return"]) or 0, ret), 2)
+        w.at[i, "min_return"] = round(min(_num(w.at[i, "min_return"]) or 0, ret), 2)
+        days = (pd.Timestamp(d) - pd.Timestamp(w.at[i, "added_date"])).days
+        w.at[i, "days"] = days
+        if days >= HOLD_DAYS:
+            w.at[i, "status"] = "CLOSED"
+    open_keys = set(zip(w.loc[w["status"] == "OPEN", "list"], w.loc[w["status"] == "OPEN", "market"],
+                        w.loc[w["status"] == "OPEN", "ticker"]))
+    new = []
+    for name, keys in lists.items():
+        for m, t in keys:
+            if (name, m, t) not in open_keys and (m, t) in prices:
+                p, d = prices[(m, t)]
+                new.append({"list": name, "market": m, "ticker": t, "added_date": d, "entry_price": p,
+                            "last_date": d, "last_price": p, "return_pct": 0.0, "max_return": 0.0,
+                            "min_return": 0.0, "days": 0, "status": "OPEN"})
+                open_keys.add((name, m, t))
+    if new:
+        w = pd.concat([w, pd.DataFrame(new, columns=TCOLS).astype(object)], ignore_index=True)
+    w.to_csv(TRACK, index=False)
+    return w
+
+
+def open_return(w, name, m, t):
+    sub = w[(w["list"] == name) & (w["market"] == m) & (w["ticker"] == t) & (w["status"] == "OPEN")]
+    return _num(sub["return_pct"].iloc[-1]) if len(sub) else None
+
+
+def perf_block(w, name, short):
+    title = "📈 <b>بازدهی این فهرست از روز ورود هر سهم</b>"
+    h = w[w["list"] == name].copy()
+    h["d"] = pd.to_numeric(h["days"], errors="coerce").fillna(0)
+    h["r"] = pd.to_numeric(h["return_pct"], errors="coerce").fillna(0)
+    h = h[h["d"] >= 1]
+    if h.empty:
+        return (f"{title}\nتاریخچه‌ی این فهرست از امروز شروع شد. از اسکن بعدی، بازدهی هر سهم "
+                "از روزی که وارد فهرست شده اینجا نمایش داده می‌شود.")
+    rows = [f"{'Group':<8}{'N':>4}{'Win%':>6}{'Avg%':>7}{'Best%':>7}", "-" * 32]
+    for label, sub in (("All", h), ("Open", h[h["status"] == "OPEN"]), ("Closed", h[h["status"] == "CLOSED"])):
+        if len(sub):
+            rows.append(f"{label:<8}{len(sub):>4}{(sub['r'] > 0).mean() * 100:>6.0f}"
+                        f"{sub['r'].mean():>+7.1f}{sub['r'].max():>+7.1f}")
+    out = [title, "<i>All = همه‌ی سهم‌هایی که تا حالا وارد این فهرست شده‌اند · Open = هنوز در دوره‌ی ۶۰ روزه‌ی پیگیری · "
+           "Win% = درصد سهم‌هایی که سود داده‌اند · Avg% = میانگین بازده · Best% = بهترین بازده</i>",
+           "<pre>" + "\n".join(rows) + "</pre>"]
+
+    def table(sub):
+        t = [f"{'Symbol':<9}{'Mkt':<4}{'Date':<6}{'Days':>5}{'Ret%':>7}", "-" * 31]
+        for r in sub.itertuples():
+            t.append(f"{short(r.ticker)[:9]:<9}{r.market:<4}{str(r.added_date)[5:]:<6}{int(r.d):>5}{r.r:>+7.1f}")
+        return "<pre>" + html.escape("\n".join(t)) + "</pre>"
+
+    op = h[h["status"] == "OPEN"].sort_values("r", ascending=False)
+    if len(op):
+        out += ["🏆 <b>بهترین‌ها</b>", table(op.head(5))]
+        if len(op) > 5:  # show the weakest ones that are not already in the best list
+            out += ["📉 <b>ضعیف‌ترین‌ها</b>", table(op.tail(min(5, len(op) - 5)).iloc[::-1])]
+    return "\n".join(out)
+
+
 def market_trend(download_all):
     data = download_all(list(INDEX.values()))
     out = {}
@@ -235,25 +318,39 @@ def build(df, download_all, pre, short, fmt_price):
     def f0(v, fmt="{:.0f}"):
         return "-" if v is None or v != v else fmt.format(v)
 
+    # which stocks enter each list today
+    good = res[res["buf"].notna() & (res["buf"] >= BUFFETT_MIN)] if len(res) else res
+    if len(res):
+        cand = res[(res["avail"] >= 3) & (res["passed"] >= res["avail"] - 1) & (res["passed"] >= 3)
+                   & res["checks"].map(lambda c: c["C"] is not False)]
+    else:
+        cand = res
+    both = cand[cand["buf"].notna() & (cand["buf"] >= BUFFETT_MIN)] if len(cand) else cand
+    prices = {(r.market, r.ticker): (float(r.close), r.last_date) for r in df.itertuples()}
+    keys = lambda d: list(zip(d["market"], d["ticker"])) if len(d) else []
+    tw = track({"buffett": keys(good), "canslim": keys(cand), "all3": keys(both)}, prices)
+
     # ---------------- message 1: Buffett ----------------
     b_blocks = [f"🧠 <b>سیگنال خرید + معیار وارن بافت</b> — {today}\n"
                 "<i>سهم‌هایی که امروز سیگنال خرید MACD/RSI گرفته‌اند و از نظر روش بافت هم شرکت باکیفیتی هستند "
                 f"(امتیاز بافت حداقل {BUFFETT_MIN} از ۱۰۰). "
                 "Buf = امتیاز بافت · ROE = بازده حقوق صاحبان سهم (٪) · D/E = نسبت بدهی به سرمایه · PE = نسبت قیمت به سود · "
                 "Sig: D = خرید روزانه، W = خرید هفتگی، *= هم‌جهت با روند هفتگی</i>"]
-    good = res[res["buf"].notna() & (res["buf"] >= BUFFETT_MIN)] if len(res) else res
     if good.empty:
         b_blocks.append(f"امروز هیچ سهمی هم سیگنال خرید نگرفت و هم امتیاز بافت بالای {BUFFETT_MIN} داشت.")
     for m in STOCK_MARKETS:
         sub = good[good["market"] == m].sort_values("buf", ascending=False).head(TOP) if len(good) else good
         if sub.empty:
             continue
-        t = [f"{'Symbol':<9}{'Sig':<4}{'Buf':>4}{'ROE':>5}{'D/E':>5}{'PE':>5}", "-" * 32]
+        t = [f"{'Symbol':<8}{'Sig':<3}{'Buf':>4}{'ROE':>4}{'D/E':>5}{'PE':>4}{'Ret%':>6}", "-" * 34]
         for r in sub.itertuples():
-            t.append(f"{short(r.ticker)[:9]:<9}{r.sig:<4}{f0(r.buf):>4}{f0(r.roe):>5}"
-                     f"{f0(r.de, '{:.1f}'):>5}{f0(r.pe):>5}")
+            ret = open_return(tw, "buffett", r.market, r.ticker)
+            t.append(f"{short(r.ticker)[:8]:<8}{r.sig:<3}{f0(r.buf):>4}{f0(r.roe):>4}"
+                     f"{f0(r.de, '{:.1f}'):>5}{f0(r.pe):>4}{f0(ret, '{:+.1f}'):>6}")
         b_blocks.append(f"{MARKET_FA[m]}\n" + pre(t))
-    b_blocks.append("<i>امتیاز بافت فقط بخش قابل محاسبه‌ی جدول است. مزیت رقابتی و کیفیت مدیریت را خودتان بررسی کنید. "
+    b_blocks.append(perf_block(tw, "buffett", short))
+    b_blocks.append("<i>Ret% = بازده هر سهم از روزی که وارد این فهرست شده. "
+                    "امتیاز بافت فقط بخش قابل محاسبه‌ی جدول است. مزیت رقابتی و کیفیت مدیریت را خودتان بررسی کنید. "
                     "این فهرست توصیه‌ی خرید نیست.</i>")
 
     # ---------------- message 2: CANSLIM ----------------
@@ -269,27 +366,28 @@ def build(df, download_all, pre, short, fmt_price):
                 "L قوی‌تر از ۸۰٪ سهام بازار خودش · I خرید صندوق‌ها و نهادها. "
                 "EPSq = رشد سود فصلی (٪) · RS = رتبه‌ی قدرت قیمت از ۱۰۰</i>",
                 "📈 <b>وضعیت بازارها (حرف M)</b>\n" + "\n".join(trend_lines)]
-    if len(res):
-        cand = res[(res["avail"] >= 3) & (res["passed"] >= res["avail"] - 1) & (res["passed"] >= 3)
-                   & res["checks"].map(lambda c: c["C"] is not False)]
-    else:
-        cand = res
     if cand.empty:
         c_blocks.append("امروز هیچ سهمی هم سیگنال خرید نگرفت و هم شرط‌های CANSLIM را داشت.")
     for m in STOCK_MARKETS:
         sub = cand[cand["market"] == m].sort_values(["passed", "rs"], ascending=False).head(TOP) if len(cand) else cand
         if sub.empty:
             continue
-        t = [f"{'Symbol':<9}{'Sig':<4}{'CANLI':<6}{'EPSq':>6}{'RS':>4}", "-" * 29]
+        t = [f"{'Symbol':<9}{'Sig':<4}{'CANLI':<6}{'EPSq':>5}{'RS':>4}{'Ret%':>6}", "-" * 34]
         for r in sub.itertuples():
             word = "".join(k if r.checks[k] else "-" for k in "CANLI")
-            t.append(f"{short(r.ticker)[:9]:<9}{r.sig:<4}{word:<6}{f0(r.epsq, '{:+.0f}'):>6}{f0(r.rs):>4}")
+            ret = open_return(tw, "canslim", r.market, r.ticker)
+            t.append(f"{short(r.ticker)[:9]:<9}{r.sig:<4}{word:<6}{f0(r.epsq, '{:+.0f}'):>5}{f0(r.rs):>4}"
+                     f"{f0(ret, '{:+.1f}'):>6}")
         c_blocks.append(f"{MARKET_FA[m]}\n" + pre(t))
 
     # stocks that pass all three filters
-    both = cand[cand["buf"].notna() & (cand["buf"] >= BUFFETT_MIN)] if len(cand) else cand
     if len(both):
-        names = "، ".join(f"{short(r.ticker)} ({MARKET_FA[r.market].split()[-1]})" for r in both.itertuples())
+        def nm(r):
+            ret = open_return(tw, "all3", r.market, r.ticker)
+            return f"{html.escape(short(r.ticker))} ({MARKET_FA[r.market].split()[-1]}، {f0(ret, '{:+.1f}')}٪)"
+        names = "، ".join(nm(r) for r in both.itertuples())
         c_blocks.append("⭐ <b>هر سه با هم</b> (سیگنال خرید + معیار بافت + CANSLIM):\n" + names)
-    c_blocks.append("<i>شرط S (عرضه و تقاضای سهم) خودکار بررسی نمی‌شود. این فهرست توصیه‌ی خرید نیست.</i>")
+    c_blocks.append(perf_block(tw, "canslim", short))
+    c_blocks.append("⭐ " + perf_block(tw, "all3", short).replace("📈 <b>بازدهی این فهرست", "<b>بازدهی فهرست «هر سه با هم»", 1))
+    c_blocks.append("<i>Ret% = بازده هر سهم از روزی که وارد این فهرست شده. شرط S (عرضه و تقاضای سهم) خودکار بررسی نمی‌شود. این فهرست توصیه‌ی خرید نیست.</i>")
     return [b_blocks, c_blocks]
