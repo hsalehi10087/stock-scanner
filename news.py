@@ -18,43 +18,43 @@ def gnews(q):
             + "&hl=en-US&gl=US&ceid=US:en")
 
 
-# topic -> (Google News queries, up words, down words, up label, down label, Polymarket topic)
+# topic -> (Google News queries, up words, down words, up sentence, down sentence, Polymarket topic)
 TOPICS = {
     "نرخ بهره و فدرال رزرو": (
         ["Fed interest rate outlook analysts", "Federal Reserve rate cut expectations economists"],
         ["cut", "cuts", "easing", "dovish", "lower rates", "pause"],
         ["hike", "hikes", "hawkish", "higher for longer", "sticky inflation", "no cut", "delay"],
-        "کاهش نرخ", "حفظ/افزایش نرخ", "نرخ بهره و فدرال رزرو"),
+        "بیشتر خبرها از کاهش نرخ بهره در آمریکا می‌گویند", "بیشتر خبرها از ثابت ماندن یا افزایش نرخ بهره می‌گویند", "نرخ بهره و فدرال رزرو"),
     "اقتصاد آمریکا": (
         ["US economy outlook economists", "US recession risk analysts", "US jobs report economy"],
         ["growth", "strong", "beats", "resilient", "expands", "rebound", "soft landing", "robust", "gains"],
         ["recession", "slowdown", "contraction", "weak", "layoffs", "misses", "downturn", "stagflation", "slows"],
-        "مثبت/رشد", "منفی/کندی", "رکود و رشد"),
+        "بیشتر خبرها از رشد و قوی بودن اقتصاد آمریکا می‌گویند", "بیشتر خبرها از کند شدن اقتصاد آمریکا می‌گویند", "رکود و رشد"),
     "اقتصاد جهان": (
         ["global economy outlook IMF World Bank", "world economy forecast analysts", "China economy outlook"],
         ["growth", "upgrade", "recovery", "rebound", "strong", "expands", "raises forecast"],
         ["recession", "slowdown", "downgrade", "weak", "risks", "cuts forecast", "contraction", "slump"],
-        "مثبت", "منفی", None),
+        "بیشتر خبرها درباره‌ی اقتصاد جهان مثبت‌اند", "بیشتر خبرها درباره‌ی اقتصاد جهان نگران‌کننده‌اند", None),
     "تورم": (
         ["inflation outlook economists", "CPI inflation expectations"],
         ["cools", "eases", "slows", "falls", "lower", "moderates"],
         ["rises", "accelerates", "hot", "sticky", "jumps", "higher", "surges"],
-        "کاهش تورم", "افزایش تورم", "تورم"),
+        "بیشتر خبرها از کم شدن تورم می‌گویند", "بیشتر خبرها از بالا رفتن تورم می‌گویند", "تورم"),
     "نفت": (
         ["oil price forecast analysts", "OPEC oil market outlook", "Brent crude outlook"],
         ["rise", "rises", "surge", "rally", "higher", "jump", "climbs", "gains", "deficit", "tight"],
         ["fall", "falls", "drop", "slump", "glut", "surplus", "lower", "slides", "declines", "tumbles"],
-        "صعودی", "نزولی", "نفت و انرژی"),
+        "بیشتر خبرها از بالا رفتن قیمت نفت می‌گویند", "بیشتر خبرها از پایین آمدن قیمت نفت می‌گویند", "نفت و انرژی"),
     "طلا و فلزات": (
         ["gold price outlook analysts", "copper silver price forecast"],
         ["rise", "rises", "record", "rally", "higher", "jump", "gains", "climbs", "surge"],
         ["fall", "falls", "drop", "slump", "lower", "slides", "declines", "tumbles", "retreat"],
-        "صعودی", "نزولی", "طلا و فلزات"),
+        "بیشتر خبرها از بالا رفتن قیمت طلا و فلزات می‌گویند", "بیشتر خبرها از پایین آمدن قیمت طلا و فلزات می‌گویند", "طلا و فلزات"),
     "تکنولوژی و هوش مصنوعی": (
         ["AI stocks outlook analysts", "tech stocks Nasdaq outlook", "semiconductor demand outlook"],
         ["record", "surge", "beats", "rally", "boom", "strong demand", "gains", "upgrade"],
         ["slump", "selloff", "bubble", "falls", "layoffs", "downgrade", "weak", "slides", "misses"],
-        "مثبت", "منفی", None),
+        "بیشتر خبرها درباره‌ی شرکت‌های فناوری و هوش مصنوعی مثبت‌اند", "بیشتر خبرها درباره‌ی شرکت‌های فناوری و هوش مصنوعی نگران‌کننده‌اند", None),
 }
 
 # Major outlets' own feeds (broad coverage; matched to topics by keywords)
@@ -103,8 +103,10 @@ def fetch_items(url):
 
 def tone(title, up, down):
     t = " " + title.lower() + " "
-    u = sum(1 for w in up if re.search(r"\b" + re.escape(w) + r"\b", t))
-    d = sum(1 for w in down if re.search(r"\b" + re.escape(w) + r"\b", t))
+    def hit(w):  # also matches simple word forms: jump/jumps/jumped/jumping
+        return re.search(r"\b" + re.escape(w) + r"(s|es|ed|d|ing)?\b", t) is not None
+    u = sum(1 for w in up if hit(w))
+    d = sum(1 for w in down if hit(w))
     return "up" if u > d else ("down" if d > u else "neutral")
 
 
@@ -142,11 +144,11 @@ def run(send, polymarket=None, gemini=None):
     pm = polymarket() if polymarket else {}
     total = sum(len(v) for v in data.values())
     sources = {s for v in data.values() for _, s, _ in v}
-    blocks = [f"📰 <b>مرور روزانه‌ی اخبار و نظر تحلیلگران</b> — {today}\n"
-              f"<i>{total} تیتر از {len(sources)} منبع خبری در ۴۸ ساعت گذشته</i>"]
+    blocks = [f"📰 <b>خلاصه‌ی خبرها و نظر کارشناسان</b> — {today}\n"
+              f"<i>{total} خبر از {len(sources)} رسانه در دو روز گذشته بررسی شد.</i>"]
 
-    # statistics table: headline tone per topic + Polymarket
-    rows = [f"{'Topic':<12}{'N':>4}{'Up%':>6}{'Down%':>7}", "-" * 29]
+    # statistics table: headline tone per topic
+    rows = [f"{'Topic':<12}{'N':>4}{'Up%':>5}{'Down%':>6}{'Neu%':>5}", "-" * 32]
     short = {"نرخ بهره و فدرال رزرو": "Fed/Rates", "اقتصاد آمریکا": "US Economy", "اقتصاد جهان": "World Econ",
              "تورم": "Inflation", "نفت": "Oil", "طلا و فلزات": "Gold/Metals", "تکنولوژی و هوش مصنوعی": "Tech/AI"}
     readings = []
@@ -156,12 +158,23 @@ def run(send, polymarket=None, gemini=None):
             continue
         up = sum(1 for *_, t in items if t == "up") * 100 / n
         dn = sum(1 for *_, t in items if t == "down") * 100 / n
-        rows.append(f"{short[topic]:<12}{n:>4}{up:>6.0f}{dn:>7.0f}")
+        neu = 100 - up - dn
+        rows.append(f"{short[topic]:<12}{n:>4}{up:>5.0f}{dn:>6.0f}{neu:>5.0f}")
         _, _, _, ul, dl, _ = TOPICS[topic]
-        lean = ul if up > dn + 10 else (dl if dn > up + 10 else "متعادل")
-        readings.append(f"• {topic}: غالب لحن رسانه‌ها <b>{lean}</b> ({up:.0f}% در برابر {dn:.0f}%)")
-    blocks.append("📊 <b>آمار نظر رسانه‌ها و تحلیلگران</b>\n"
-                  "<i>بر اساس لحن تیترها (Up = صعودی/مثبت/کاهش نرخ · Down = نزولی/منفی/افزایش نرخ)</i>\n"
+        if n < 5:
+            sentence = "امروز خبر کافی برای نتیجه‌گیری نبود."
+        elif neu >= 70:
+            sentence = "بیشتر خبرها جهت روشنی ندارند و نمی‌شود نتیجه‌ی مشخصی گرفت."
+        elif up > dn + 10:
+            sentence = ul + "."
+        elif dn > up + 10:
+            sentence = dl + "."
+        else:
+            sentence = "خبرهای مثبت و منفی تقریباً برابرند."
+        readings.append(f"• <b>{topic}:</b> {sentence}")
+    blocks.append("📊 <b>کارشناسان و رسانه‌ها چه می‌گویند؟</b>\n"
+                  "<i>در جدول: N تعداد خبرها، Up درصد خبرهای مثبت، Down درصد خبرهای منفی، "
+                  "Neu درصد خبرهای بی‌طرف.</i>\n"
                   + "<pre>" + html.escape("\n".join(rows)) + "</pre>\n" + "\n".join(readings))
 
     # translate displayed English texts (headlines, Polymarket questions) to Persian
@@ -175,10 +188,12 @@ def run(send, polymarket=None, gemini=None):
 
     # Polymarket side by side
     if pm:
-        lines = ["🎲 <b>بازار پیش‌بینی Polymarket</b> <i>(منبع: Polymarket)</i>"]
+        lines = ["🎲 <b>پیش‌بینی‌ها در Polymarket</b>",
+                 "<i>Polymarket سایتی است که مردم روی اتفاق‌های آینده شرط می‌بندند. "
+                 "عدد هر سطر یعنی به نظر آن‌ها چقدر احتمال دارد آن اتفاق بیفتد.</i>"]
         for topic, items in pm.items():
             for q, p, _ in items[:2]:
-                lines.append(f"• [{topic}] {html.escape(tr.get(q, q))} — <b>{p * 100:.0f}%</b>")
+                lines.append(f"• {html.escape(tr.get(q, q))} — احتمال <b>{p * 100:.0f}٪</b>")
         blocks.append("\n".join(lines))
 
     # key headlines per topic
@@ -187,7 +202,7 @@ def run(send, polymarket=None, gemini=None):
             continue
         top = items[:4]
         mark = {"up": "🟢", "down": "🔴", "neutral": "⚪️"}
-        blocks.append(f"<b>{topic}</b>\n" + "\n".join(
+        blocks.append(f"<b>مهم‌ترین خبرهای {topic}</b>\n" + "\n".join(
             f"{mark[t]} {html.escape(tr.get(title[:150], title[:150]))} — <i>{html.escape(src)}</i>"
             for title, src, t in top))
 
@@ -195,12 +210,13 @@ def run(send, polymarket=None, gemini=None):
         heads = "\n".join(f"[{tp}] {t} ({s})" for tp, it in data.items() for t, s, _ in it[:12])
         pm_txt = "\n".join(f"[{t}] {q}: {p * 100:.0f}%" for t, it in pm.items() for q, p, _ in it)
         ai = gemini(
-            "تو تحلیلگر ارشد اقتصاد کلان هستی. از تیترهای خبری و احتمالات Polymarket زیر، یک جمع‌بندی خلاصه "
-            "(حداکثر ۱۵ خط) به فارسی بنویس: دیدگاه غالب تحلیلگران درباره‌ی نرخ بهره‌ی فدرال رزرو، اقتصاد آمریکا، "
+            "تو تحلیلگر ارشد اقتصاد کلان هستی. با فارسی ساده، روان و قابل فهم برای عموم و جمله‌های کوتاه، از تیترهای خبری و احتمالات Polymarket زیر، یک جمع‌بندی خلاصه "
+            "(حداکثر ۱۵ خط) بنویس: دیدگاه غالب تحلیلگران درباره‌ی نرخ بهره‌ی فدرال رزرو، اقتصاد آمریکا، "
             "اقتصاد جهان، تورم، نفت، طلا و تکنولوژی؛ برای هر مورد بگو اکثریت چه نظری دارند و اختلاف نظر کجاست. "
             "هرجا از Polymarket استفاده می‌کنی بنویس «طبق Polymarket». توصیه‌ی خرید و فروش نده.\n\n"
             f"تیترها:\n{heads}\n\nPolymarket:\n{pm_txt}")
         if ai:
-            blocks.append("🤖 <b>جمع‌بندی نظر تحلیلگران (Gemini)</b>\n" + html.escape(ai))
-    blocks.append("<i>آمار بر اساس لحن تیترها به‌صورت خودکار محاسبه شده و صرفاً برای اطلاع است.</i>")
+            blocks.append("🤖 <b>جمع‌بندی نظر کارشناسان</b>\n" + html.escape(ai))
+    blocks.append("<i>این آمار از روی کلمات تیترها حساب شده و فقط یک دید کلی می‌دهد. "
+                  "ترجمه‌ی خبرها ماشینی است.</i>")
     send(blocks)
