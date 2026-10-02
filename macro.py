@@ -28,6 +28,14 @@ ASSETS = [
     ("NG=F", "Natural Gas", "انرژی"),
 ]
 
+FA_NAMES = {
+    "S&P 500": "شاخص S&P 500 (بورس آمریکا)", "US 10Y Yield": "سود اوراق ۱۰ ساله‌ی آمریکا",
+    "Dollar Index": "دلار آمریکا", "VIX": "شاخص ترس بازار (VIX)", "Gold": "طلا", "Silver": "نقره",
+    "Copper": "مس", "Platinum": "پلاتین", "WTI Oil": "نفت آمریکا (WTI)", "Brent Oil": "نفت برنت",
+    "Natural Gas": "گاز طبیعی",
+}
+VIEW_TEXT = {"صعودی": "روندش رو به بالاست", "نزولی": "روندش رو به پایین است", "خنثی": "فعلاً جهت مشخصی ندارد"}
+
 PM_TOPICS = {
     "نرخ بهره و فدرال رزرو": ["fed ", "fomc", "rate cut", "interest rate", "rate hike", "powell"],
     "رکود و رشد": ["recession", "gdp", "unemployment"],
@@ -72,13 +80,13 @@ def assess(s, macd, rsi):
         view = "خنثی"
     note = ""
     if r is not None and r > 70:
-        note = "اشباع خرید، احتمال اصلاح"
+        note = "خیلی سریع بالا رفته و ممکن است کمی عقب بنشیند"
     elif r is not None and r < 30:
-        note = "اشباع فروش، احتمال برگشت"
+        note = "خیلی سریع پایین آمده و ممکن است کمی برگردد"
     elif m and m["prev_hist"] is not None and m["prev_hist"] <= 0 < m["hist"]:
-        note = "تقاطع صعودی تازه MACD"
+        note = "تازه نشانه‌ی شروع حرکت رو به بالا داده"
     elif m and m["prev_hist"] is not None and m["prev_hist"] >= 0 > m["hist"]:
-        note = "تقاطع نزولی تازه MACD"
+        note = "تازه نشانه‌ی شروع حرکت رو به پایین داده"
     return {"last": last, "w1": w1, "m1": m1, "rsi": r, "score": score, "view": view, "note": note}
 
 
@@ -150,41 +158,59 @@ def run(send, download_all, macd, rsi, pre):
     def f(v, plus=True):
         return "-" if v is None else (f"{v:+.1f}" if plus else f"{v:.0f}")
 
-    blocks = [f"🧭 <b>تحلیل روزانه‌ی اقتصاد، فلزات و انرژی</b> — {today}\n"
-              "<i>روند بر اساس میانگین‌های ۵۰ و ۲۰۰ روزه، MACD و RSI</i>"]
+    blocks = [f"🧭 <b>وضعیت امروز اقتصاد، فلزات و انرژی</b> — {today}\n"
+              "<i>جهت هر مورد از روی روند قیمتش در چند ماه گذشته تعیین شده است. "
+              "در جدول‌ها: 1W و 1M یعنی درصد تغییر قیمت در یک هفته و یک ماه گذشته. "
+              "RSI بالای ۷۰ یعنی قیمت خیلی سریع بالا رفته و زیر ۳۰ یعنی خیلی سریع پایین آمده.</i>"]
     arrow = {"صعودی": "⬆️", "نزولی": "⬇️", "خنثی": "↔️"}
     for group, items in rows_by_group.items():
         t = [f"{'Asset':<13}{'1W%':>6}{'1M%':>6}{'RSI':>5}", "-" * 30]
         lines = []
         for name, a in items:
             t.append(f"{name[:13]:<13}{f(a['w1']):>6}{f(a['m1']):>6}{f(a['rsi'], False):>5}")
-            lines.append(f"{arrow[a['view']]} {html.escape(name)}: <b>{a['view']}</b>"
-                         + (f" · {a['note']}" if a["note"] else ""))
+            lines.append(f"{arrow[a['view']]} <b>{FA_NAMES.get(name, name)}:</b> {VIEW_TEXT[a['view']]}"
+                         + (f"؛ {a['note']}" if a["note"] else "") + ".")
         blocks.append(f"<b>{group}</b>\n" + pre(t) + "\n" + "\n".join(lines))
 
     # overall reading
     def avg(group):
-        sc = [a["score"] for g, a in results.values() if g == group]
-        return sum(sc) / len(sc) if sc else 0
+        """+1 if most items in the group trend up, -1 if most trend down, else 0."""
+        views = [a["view"] for g, a in results.values() if g == group]
+        if not views:
+            return 0
+        up, down = views.count("صعودی"), views.count("نزولی")
+        if up > len(views) / 2:
+            return 1
+        if down > len(views) / 2:
+            return -1
+        return 0
 
-    def word(x):
-        return "رو به بالا" if x >= 1 else ("رو به پایین" if x <= -1 else "بدون جهت مشخص")
+    def word(x, what):
+        if x >= 1:
+            return f"قیمت {what} در مجموع رو به افزایش است."
+        if x <= -1:
+            return f"قیمت {what} در مجموع رو به کاهش است."
+        return f"{what} فعلاً جهت مشخصی ندارند."
 
-    summary = [f"• فلزات: {word(avg('فلزات'))}", f"• انرژی: {word(avg('انرژی'))}"]
+    summary = [f"• {word(avg('فلزات'), 'فلزات')}", f"• {word(avg('انرژی'), 'نفت و گاز')}"]
     if "Dollar Index" in results:
-        summary.append(f"• دلار: {results['Dollar Index'][1]['view']}"
-                       " (دلار قوی معمولاً فشار روی طلا و کالاهاست)")
+        summary.append(f"• دلار آمریکا {VIEW_TEXT[results['Dollar Index'][1]['view']]}. "
+                       "وقتی دلار قوی‌تر می‌شود، معمولاً طلا و کالاها ارزان‌تر می‌شوند.")
     if "US 10Y Yield" in results:
-        summary.append(f"• بازده اوراق ۱۰ ساله آمریکا: {results['US 10Y Yield'][1]['view']}")
+        summary.append(f"• سود اوراق ۱۰ ساله‌ی آمریکا {VIEW_TEXT[results['US 10Y Yield'][1]['view']]}. "
+                       "بالا رفتنش یعنی وام گرفتن در دنیا گران‌تر می‌شود.")
     if "VIX" in results:
         v = results["VIX"][1]["last"]
-        summary.append(f"• شاخص ترس VIX: {v:.1f} — " + ("بازار آرام" if v < 18 else ("نگرانی متوسط" if v < 25 else "ترس بالا")))
-    blocks.append("📌 <b>جمع‌بندی</b>\n" + "\n".join(summary))
+        mood = ("بازار آرام است و نگرانی خاصی دیده نمی‌شود." if v < 18 else
+                ("کمی نگرانی در بازار هست." if v < 25 else "ترس در بازار بالاست."))
+        summary.append(f"• شاخص ترس بازار {v:.0f} است؛ {mood}")
+    blocks.append("📌 <b>خلاصه به زبان ساده</b>\n" + "\n".join(summary))
 
     pm = polymarket()
     if pm:
-        lines = ["🎲 <b>پیش‌بینی‌های Polymarket</b>",
-                 "<i>منبع: Polymarket — احتمال «بله» بر اساس قیمت بازار پیش‌بینی (پرمعامله‌ترین‌ها)</i>"]
+        lines = ["🎲 <b>پیش‌بینی‌ها در Polymarket</b>",
+                 "<i>Polymarket سایتی است که مردم روی اتفاق‌های آینده شرط می‌بندند. "
+                 "عدد هر سطر یعنی به نظر آن‌ها چقدر احتمال دارد آن اتفاق بیفتد.</i>"]
         try:
             from translate import fa_list
         except Exception:
@@ -194,21 +220,21 @@ def run(send, download_all, macd, rsi, pre):
         for topic, items in pm.items():
             lines.append(f"\n<b>{topic}</b>")
             for q, p, _ in items:
-                lines.append(f"• {html.escape(tr.get(q, q))} — <b>{p * 100:.0f}%</b>")
+                lines.append(f"• {html.escape(tr.get(q, q))} — احتمال <b>{p * 100:.0f}٪</b>")
         blocks.append("\n".join(lines))
     else:
-        blocks.append("🎲 Polymarket: امروز داده‌ای دریافت نشد.")
+        blocks.append("🎲 امروز اطلاعاتی از Polymarket دریافت نشد.")
 
     # optional AI-written analysis (free Gemini key)
     data_txt = "\n".join(f"{n}: price {a['last']:.2f}, 1W {f(a['w1'])}%, 1M {f(a['m1'])}%, RSI {f(a['rsi'], False)}, trend {a['view']} {a['note']}"
                          for n, (g, a) in results.items())
     pm_txt = "\n".join(f"[{t}] {q}: {p * 100:.0f}%" for t, it in pm.items() for q, p, _ in it)
     ai = gemini_summary(
-        "تو یک تحلیلگر کلان اقتصادی هستی. بر اساس داده‌های زیر، تحلیلی جامع ولی خلاصه (حداکثر ۱۲ خط) به فارسی بنویس "
-        "که جهت احتمالی کوتاه‌مدت اقتصاد آمریکا، دلار، بازده اوراق، طلا، نقره، مس، نفت و گاز را بگوید. "
+        "تو یک تحلیلگر کلان اقتصادی هستی. بر اساس داده‌های زیر، تحلیلی جامع ولی خلاصه (حداکثر ۱۲ خط) به فارسی ساده، روان و قابل فهم برای عموم بنویس؛ جمله‌ها کوتاه باشند و اصطلاحات تخصصی را با زبان ساده توضیح بده. "
+        "در تحلیل بگو جهت احتمالی کوتاه‌مدت اقتصاد آمریکا، دلار، سود اوراق، طلا، نقره، مس، نفت و گاز چیست. "
         "هرجا از احتمالات Polymarket استفاده می‌کنی، صریحاً بنویس «طبق Polymarket». توصیه‌ی خرید و فروش نده.\n\n"
         f"داده‌های قیمت:\n{data_txt}\n\nPolymarket:\n{pm_txt}")
     if ai:
-        blocks.append("🤖 <b>تحلیل نوشتاری (Gemini)</b>\n" + html.escape(ai))
-    blocks.append("<i>این تحلیل خودکار و صرفاً برای اطلاع است، نه توصیه‌ی سرمایه‌گذاری.</i>")
+        blocks.append("🤖 <b>تحلیل نوشتاری</b>\n" + html.escape(ai))
+    blocks.append("<i>این گزارش خودکار است و توصیه‌ی خرید یا فروش نیست.</i>")
     send(blocks)
