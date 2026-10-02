@@ -871,6 +871,12 @@ def main():
         macro.run(lambda blocks: send(blocks, b"", "macro"), download_all, macd, rsi, pre)
     except Exception as e:
         print("macro outlook failed:", e)
+    try:
+        import macro
+        import news
+        news.run(lambda blocks: send(blocks, b"", "news"), macro.polymarket, macro.gemini_summary)
+    except Exception as e:
+        print("news digest failed:", e)
     return 0
 
 
