@@ -887,6 +887,8 @@ def main():
         news.run(lambda blocks: send(blocks, b"", "news"), macro.polymarket, macro.gemini_summary)
     except Exception as e:
         print("news digest failed:", e)
+    for blocks in qmsgs:
+        send(blocks, b"", "quality")
     return 0
 
 
