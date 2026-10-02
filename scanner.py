@@ -871,7 +871,8 @@ def main():
         print("quality filters failed:", e)
 
     saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH,
-                                           os.path.join(HERE, "quality_cache.csv")) if os.path.exists(p)]
+                                           os.path.join(HERE, "quality_cache.csv"),
+                                           os.path.join(HERE, "quality_track.csv")) if os.path.exists(p)]
     if not git_save(saved, f"Daily data {dt.date.today()}"):
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
     send(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
