@@ -867,6 +867,10 @@ def run_backtest_once(uni):
         import stops
         ok = stops.run(req, uni, download_all, short, pre, send)
         files = ["backtest_stops.json", "backtest_stops.csv"]
+    elif kind == "atr":
+        import backtest_stops
+        ok = backtest_stops.run(req, uni, download_all, short, pre, send)
+        files = ["backtest_atr.json"]
     else:
         import backtest
         ok = backtest.run(req, uni, download_all, short, pre, send)
