@@ -195,6 +195,8 @@ def run(send, polymarket=None, gemini=None):
         else:
             sentence = "خبرهای مثبت و منفی تقریباً برابرند."
         readings.append(f"• <b>{topic}:</b> {sentence}")
+        if n >= 5 and neu < 70 and abs(up - dn) > 10:
+            hl_items.append((abs(up - dn), f"• {topic}: {sentence}"))
     blocks.append("📊 <b>کارشناسان و رسانه‌ها چه می‌گویند؟</b>\n"
                   "<i>در جدول: N تعداد خبرها، Up درصد خبرهای مثبت، Down درصد خبرهای منفی، "
                   "Neu درصد خبرهای بی‌طرف.</i>\n"
