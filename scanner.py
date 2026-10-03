@@ -245,7 +245,7 @@ def extract_close(data, ticker, single):
         return None
 
 
-def download_all(tickers, chunk=100):
+def download_all(tickers, chunk=100, period="2y"):
     out = {}
     for i in range(0, len(tickers), chunk):
         part = tickers[i:i + chunk]
