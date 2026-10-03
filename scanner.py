@@ -252,7 +252,7 @@ def download_all(tickers, chunk=100, period="2y"):
         data = None
         for attempt in range(3):
             try:
-                data = yf.download(part, period="2y", interval="1d", group_by="ticker",
+                data = yf.download(part, period=period, interval="1d", group_by="ticker",
                                    auto_adjust=True, threads=True, progress=False)
                 break
             except Exception as e:
