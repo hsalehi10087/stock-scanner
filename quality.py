@@ -390,4 +390,16 @@ def build(df, download_all, pre, short, fmt_price):
     c_blocks.append(perf_block(tw, "canslim", short))
     c_blocks.append("⭐ " + perf_block(tw, "all3", short).replace("📈 <b>بازدهی این فهرست", "<b>بازدهی فهرست «هر سه با هم»", 1))
     c_blocks.append("<i>Ret% = بازده هر سهم از روزی که وارد این فهرست شده. شرط S (عرضه و تقاضای سهم) خودکار بررسی نمی‌شود. این فهرست توصیه‌ی خرید نیست.</i>")
-    return [b_blocks, c_blocks]
+    hl = []
+    if len(good):
+        hl.append(f"• {len(good)} سهم هم سیگنال خرید دارند و هم از نظر معیار بافت امتیاز بالای {BUFFETT_MIN} گرفته‌اند.")
+    else:
+        hl.append("• امروز سهمی همزمان سیگنال خرید و امتیاز بالای بافت نداشت.")
+    hl.append(f"• {len(cand)} سهم سیگنال خرید دارند و بیشتر شرط‌های CANSLIM را هم دارند." if len(cand)
+              else "• امروز سهمی همزمان سیگنال خرید و شرط‌های CANSLIM نداشت.")
+    if len(both):
+        hl.append("• ⭐ هر سه فیلتر با هم: " + "، ".join(html.escape(short(r.ticker)) for r in both.head(6).itertuples()) + ".")
+    weak = [MARKET_FA[m] for m in STOCK_MARKETS if m in trend and not trend[m]]
+    if weak:
+        hl.append("• بازار این کشورها در روند صعودی نیست و روش CANSLIM در آن‌ها احتیاط می‌گوید: " + "، ".join(weak) + ".")
+    return [b_blocks, c_blocks, hl]
