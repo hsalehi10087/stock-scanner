@@ -40,14 +40,14 @@ def ask(prompt, json_mode=False, timeout=120):
     headers = {"x-goog-api-key": k, "Content-Type": "application/json"}
     for model in MODELS:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-        for attempt in range(2):
+        for attempt in range(4):
             try:
                 r = requests.post(url, headers=headers, json=body, timeout=timeout)
             except Exception as e:
                 print("gemini request failed:", str(e)[:100])
                 break
-            if r.status_code == 429 and attempt == 0:
-                time.sleep(20)
+            if r.status_code in (429, 500, 503) and attempt < 3:
+                time.sleep(8 * (attempt + 1))
                 continue
             if r.status_code != 200:
                 print(f"gemini {model} -> HTTP {r.status_code}: {r.text[:120]}")
