@@ -198,6 +198,8 @@ def run(request_id, uni, download_all, short, pre, send):
     print("backtest: downloading 5y history for", {m: len(uni[m]) for m in markets})
     idx_data = download_all(list(INDEX.values()), period="5y")
     collected, bases = {}, {}
+    stops_only = ":stops" in str(request_id)   # request id like "bt2:stops" runs the stop-loss experiment
+    stops_acc = {}
     for m in markets:
         series = download_all(uni[m], period="5y")
         close = build_frame(series)
