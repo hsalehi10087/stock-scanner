@@ -15,6 +15,13 @@ def fa_list(texts, tl="fa"):
     texts = [str(t) for t in texts]
     if not texts:
         return []
+    try:  # fluent translation with Gemini when a key is configured
+        import ai
+        got = ai.translate_fa(texts)
+        if got:
+            return got
+    except Exception as e:
+        print("gemini translate failed:", str(e)[:100])
     out = list(texts)
     # batch with newlines, chunk to stay under the endpoint limit
     batches, cur = [], []
