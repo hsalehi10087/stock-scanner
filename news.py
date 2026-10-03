@@ -101,6 +101,17 @@ def fetch_items(url):
     return out
 
 
+TONE_DEF = {
+    "نرخ بهره و فدرال رزرو": ("expectations of interest-rate cuts / easier monetary policy", "expectations that rates stay high or rise / tighter policy"),
+    "اقتصاد آمریکا": ("the US economy is strong or growing", "the US economy is weakening or recession fears"),
+    "اقتصاد جهان": ("the global economy is improving", "the global economy is weakening"),
+    "تورم": ("inflation is falling or cooling", "inflation is rising or sticky"),
+    "نفت": ("oil prices are rising", "oil prices are falling"),
+    "طلا و فلزات": ("gold or metal prices are rising", "gold or metal prices are falling"),
+    "تکنولوژی و هوش مصنوعی": ("good news for tech / AI companies", "bad news for tech / AI companies"),
+}
+
+
 def tone(title, up, down):
     t = " " + title.lower() + " "
     def hit(w):  # also matches simple word forms: jump/jumps/jumped/jumping
