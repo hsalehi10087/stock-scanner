@@ -250,4 +250,22 @@ def run(send, download_all, macd, rsi, pre):
     if ai:
         blocks.append("🤖 <b>تحلیل نوشتاری</b>\n" + html.escape(ai))
     blocks.append("<i>این گزارش خودکار است و توصیه‌ی خرید یا فروش نیست.</i>")
+
+    # short highlights for the daily summary message
+    hl = [f"• {word(avg('فلزات'), 'فلزات')}", f"• {word(avg('انرژی'), 'نفت و گاز')}"]
+    for name in ("Gold", "WTI Oil"):
+        if name in results and results[name][1]["w1"] is not None:
+            a = results[name][1]
+            month = f" و {a['m1']:+.1f}٪ در یک ماه" if a["m1"] is not None else ""
+            hl.append(f"• {FA_NAMES[name]}: {a['w1']:+.1f}٪ در یک هفته گذشته{month}.")
+    fresh = [FA_NAMES.get(n, n) for n, (g, a) in results.items() if "تازه نشانه" in a["note"]]
+    if fresh:
+        hl.append("• تازه نشانه‌ی تغییر جهت داده‌اند: " + "، ".join(fresh) + ".")
+    if "VIX" in results:
+        v = results["VIX"][1]["last"]
+        hl.append("• بازار " + ("آرام است." if v < 18 else ("کمی نگران است." if v < 25 else "ترسیده است.")))
+    if pm and pm.get("نرخ بهره و فدرال رزرو"):
+        q, p, _ = pm["نرخ بهره و فدرال رزرو"][0]
+        hl.append(f"• طبق Polymarket: {html.escape(tr.get(q, q))} — احتمال {p * 100:.0f}٪.")
     send(blocks)
+    return hl
