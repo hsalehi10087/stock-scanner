@@ -905,21 +905,33 @@ def main():
                                            os.path.join(HERE, "quality_track.csv")) if os.path.exists(p)]
     if not git_save(saved, f"Daily data {dt.date.today()}"):
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
-    send(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
-         extra_docs=[("signals-history.csv", hist_csv), ("fundamentals-rank.csv", fund_csv)])
+    # everything is queued first, so a short summary can be sent before the detailed messages
+    outbox = [(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
+               [("signals-history.csv", hist_csv), ("fundamentals-rank.csv", fund_csv)])]
+    macro_hl, news_hl = [], []
     try:
         import macro
-        macro.run(lambda blocks: send(blocks, b"", "macro"), download_all, macd, rsi, pre)
+        macro_hl = macro.run(lambda blocks: outbox.append((blocks, b"", "macro", ())),
+                             download_all, macd, rsi, pre) or []
     except Exception as e:
         print("macro outlook failed:", e)
     try:
         import macro
         import news
-        news.run(lambda blocks: send(blocks, b"", "news"), macro.polymarket, macro.gemini_summary)
+        news_hl = news.run(lambda blocks: outbox.append((blocks, b"", "news", ())),
+                           macro.polymarket, macro.gemini_summary) or []
     except Exception as e:
         print("news digest failed:", e)
-    for blocks in qmsgs:
-        send(blocks, b"", "quality")
+    for blocks in qmsgs[:2]:
+        outbox.append((blocks, b"", "quality", ()))
+    quality_hl = qmsgs[2] if len(qmsgs) > 2 else []
+    try:
+        send(summary_blocks(df, locals().get("new_count", 0), locals().get("ranked"),
+                            macro_hl, news_hl, quality_hl), b"", "summary")
+    except Exception as e:
+        print("summary failed:", e)
+    for blocks, c, fn, docs in outbox:
+        send(blocks, c, fn, extra_docs=docs)
     return 0
 
 
