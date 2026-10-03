@@ -848,22 +848,30 @@ def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
 
 
 def run_backtest_once(uni):
-    """Runs the 2-year backtest once per id written in backtest_request.txt (then skips the daily scan)."""
+    """Runs a one-time analysis requested in backtest_request.txt ("<id> [signals|stops]") and skips the daily scan."""
     import json
     flag = os.path.join(HERE, "backtest_request.txt")
-    done = os.path.join(HERE, "backtest_results.json")
     if not os.path.exists(flag):
         return None
-    req = open(flag, encoding="utf-8").read().strip()
+    parts = open(flag, encoding="utf-8").read().split()
+    req = parts[0] if parts else ""
+    kind = parts[1] if len(parts) > 1 else "signals"
+    done_name = "backtest_results.json" if kind == "signals" else f"backtest_{kind}.json"
+    done = os.path.join(HERE, done_name)
     try:
         if os.path.exists(done) and json.load(open(done, encoding="utf-8")).get("request") == req:
             return None
     except Exception:
         pass
-    import backtest
-    ok = backtest.run(req, uni, download_all, short, pre, send)
-    git_save([p for p in ("backtest_results.json", "backtest_results.csv") if os.path.exists(os.path.join(HERE, p))],
-             f"Backtest results {dt.date.today()}")
+    if kind == "stops":
+        import stops
+        ok = stops.run(req, uni, download_all, short, pre, send)
+        files = ["backtest_stops.json", "backtest_stops.csv"]
+    else:
+        import backtest
+        ok = backtest.run(req, uni, download_all, short, pre, send)
+        files = ["backtest_results.json", "backtest_results.csv"]
+    git_save([p for p in files if os.path.exists(os.path.join(HERE, p))], f"Backtest {kind} results {dt.date.today()}")
     return 0 if ok else 1
 
 
