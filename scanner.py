@@ -847,6 +847,26 @@ def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
     return blocks
 
 
+def run_backtest_once(uni):
+    """Runs the 2-year backtest once per id written in backtest_request.txt (then skips the daily scan)."""
+    import json
+    flag = os.path.join(HERE, "backtest_request.txt")
+    done = os.path.join(HERE, "backtest_results.json")
+    if not os.path.exists(flag):
+        return None
+    req = open(flag, encoding="utf-8").read().strip()
+    try:
+        if os.path.exists(done) and json.load(open(done, encoding="utf-8")).get("request") == req:
+            return None
+    except Exception:
+        pass
+    import backtest
+    ok = backtest.run(req, uni, download_all, short, pre, send)
+    git_save([p for p in ("backtest_results.json", "backtest_results.csv") if os.path.exists(os.path.join(HERE, p))],
+             f"Backtest results {dt.date.today()}")
+    return 0 if ok else 1
+
+
 # ---------------------------------------------------------------------------
 def main():
     uni = build_universe()
