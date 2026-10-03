@@ -245,3 +245,4 @@ def run(send, polymarket=None, gemini=None):
     blocks.append("<i>این آمار از روی کلمات تیترها حساب شده و فقط یک دید کلی می‌دهد. "
                   "ترجمه‌ی خبرها ماشینی است.</i>")
     send(blocks)
+    return [line for _, line in sorted(hl_items, reverse=True)[:4]]
