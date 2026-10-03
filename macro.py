@@ -128,6 +128,15 @@ def polymarket(limit=500):
 
 
 def gemini_summary(prompt):
+    try:
+        import ai
+        return ai.ask(prompt)
+    except Exception as e:
+        print("gemini failed:", str(e)[:100])
+        return None
+
+
+def _old_gemini_summary(prompt):
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not key:
         cfg = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.txt")
