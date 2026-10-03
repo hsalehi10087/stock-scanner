@@ -11,7 +11,7 @@ import time
 import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MODELS = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-flash-lite-latest"]
 
 
 def key():
