@@ -15,6 +15,7 @@ Not tested (no point-in-time data is available for free): the earnings-based par
 (C, A, I) and the whole Buffett scorecard.
 """
 import datetime as dt
+import html as _html
 import json
 import os
 
