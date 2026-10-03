@@ -872,6 +872,9 @@ def main():
     uni = build_universe()
     total = sum(len(v) for v in uni.values())
     print("Universe:", {m: len(v) for m, v in uni.items()}, "total", total)
+    bt = run_backtest_once(uni)
+    if bt is not None:
+        return bt
     rows = []
     for market, tickers in uni.items():
         series = download_all(tickers)
