@@ -16,9 +16,9 @@ import numpy as np
 import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RESULT = os.path.join(HERE, "backtest_stops.json")
+RESULT = os.path.join(HERE, "backtest_atr.json")
 H = 60
-RULES = [("Hold60", None, None), ("S2/T3", 2, 3), ("S2/T4", 2, 4), ("S3/T6", 3, 6), ("S2 only", 2, None)]
+RULES = [("Hold60", None, None), ("S2 only", 2, None), ("S3 only", 3, None), ("S5 only", 5, None), ("S3/T6", 3, 6)]
 SETS = ["D-BUY", "D-BUY+W", "CANSLIM*", "Random"]
 
 
@@ -116,10 +116,10 @@ def report(acc, pre):
         return pre(t)
 
     blocks = [
-        f"🧪 <b>آزمون حد ضرر و هدف قیمتی</b> — {dt.date.today()}\n"
+        f"🧪 <b>آزمون حد ضرر بر اساس نوسان هر سهم (ATR)</b> — {dt.date.today()}\n"
         "<i>روی همان دو سال تاریخچه، هر سیگنال خرید را تا ۶۰ روز دنبال کردیم. «ATR» اندازه‌ی نوسان معمول روزانه‌ی هر سهم است. "
-        "S2/T3 یعنی خروج اگر قیمت پایانی ۲ ATR پایین‌تر از خرید بسته شود (حد ضرر) یا ۳ ATR بالاتر (هدف)؛ "
-        "Hold60 یعنی نگه‌داشتن کامل ۶۰ روز بدون حد؛ «S2 only» فقط حد ضرر. "
+        "S3 only یعنی خروج اگر قیمت پایانی ۳ ATR پایین‌تر از خرید بسته شود (فقط حد ضرر)؛ S3/T6 یعنی حد ضرر ۳ ATR و هدف ۶ ATR؛ "
+        "Hold60 یعنی نگه‌داشتن کامل ۶۰ روز بدون هیچ حدی. "
         "Win% = درصد سودده · Avg% = میانگین · P5% = ضعیف‌ترین ۵٪ نتیجه‌ها (بدترین حالت‌های معمول) · Worst = بدترین مورد.</i>"]
     for name, label in (("D-BUY", "خرید روزانه"), ("D-BUY+W", "خرید روزانه + روند هفتگی"),
                         ("CANSLIM*", "فیلتر قیمتی CANSLIM"), ("Random", "ورود تصادفی (برای مقایسه)")):
@@ -128,18 +128,19 @@ def report(acc, pre):
 
     # plain-language reading
     lines = ["🧾 <b>نتیجه به زبان ساده</b>"]
-    h, s = get("D-BUY", "Hold60"), get("D-BUY", "S2 only")
-    s23 = get("D-BUY", "S2/T3")
-    if h and s:
-        lines.append(f"• حد ضرر ۲ ATR، بدترین ۵٪ نتیجه‌ها را از {f(h['p5'], '{:.0f}')}٪ به {f(s['p5'], '{:.0f}')}٪ رساند "
-                     f"و بدترین مورد را از {f(h['worst'], '{:.0f}')}٪ به {f(s['worst'], '{:.0f}')}٪. "
-                     f"هزینه‌اش: میانگین بازده از {f(h['avg'])}٪ به {f(s['avg'])}٪ تغییر کرد.")
-    if h and s23:
-        lines.append(f"• حد ضرر و هدف هم‌زمان (S2/T3): میانگین {f(s23['avg'])}٪ و ضعیف‌ترین ۵٪ برابر {f(s23['p5'], '{:.0f}')}٪.")
-    rh, rs_ = get("Random", "Hold60"), get("Random", "S2 only")
-    if rh and rs_ and h and s:
-        lines.append(f"• برای مقایسه، همین حد ضرر روی ورود تصادفی میانگین را از {f(rh['avg'])}٪ به {f(rs_['avg'])}٪ برد؛ "
-                     f"یعنی اثر آن بیشتر کنترل ریسک است تا ساختن سود اضافه.")
+    h = get("D-BUY", "Hold60")
+    for rule, label in (("S2 only", "۲"), ("S3 only", "۳"), ("S5 only", "۵")):
+        r = get("D-BUY", rule)
+        if h and r:
+            lines.append(f"• حد ضرر {label} ATR: بدترین ۵٪ نتیجه‌ها از {f(h['p5'], '{:.0f}')}٪ به {f(r['p5'], '{:.0f}')}٪ رسید "
+                         f"(بدترین مورد: {f(h['worst'], '{:.0f}')}٪ به {f(r['worst'], '{:.0f}')}٪)؛ میانگین بازده از {f(h['avg'])}٪ به {f(r['avg'])}٪ تغییر کرد.")
+    t = get("D-BUY", "S3/T6")
+    if h and t:
+        lines.append(f"• با هدف قیمتی ۶ ATR هم: میانگین فقط {f(t['avg'])}٪ شد؛ هدف قیمتی سودهای بزرگ را زود قطع می‌کند.")
+    rh, rr = get("Random", "Hold60"), get("Random", "S3 only")
+    if rh and rr:
+        lines.append(f"• برای مقایسه، همین حد ضرر ۳ ATR روی ورود تصادفی میانگین را از {f(rh['avg'])}٪ به {f(rr['avg'])}٪ برد؛ "
+                     "یعنی حد ضرر بیشتر کنترل ریسک است تا ساختن سود اضافه.")
     blocks.append("\n".join(lines))
     blocks.append("<i>قیمت‌ها بر پایه‌ی قیمت پایانی‌اند؛ کارمزد و لغزش حساب نشده است. این نتیجه توصیه‌ی خرید یا فروش نیست.</i>")
     return rows, blocks
@@ -148,3 +149,33 @@ def report(acc, pre):
 def save(rows, request_id):
     json.dump({"request": request_id, "date": str(dt.date.today()), "rows": rows},
               open(RESULT, "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=float)
+
+
+def run(request_id, uni, download_all, short, pre, send):
+    """Stand-alone runner (request kind 'atr'): downloads 5y history and runs the ATR stop experiment."""
+    import backtest as bt
+    markets = [m for m in ("US", "JP", "IN", "TW", "CN", "CM", "FX") if uni.get(m)]
+    idx_data = download_all(list(bt.INDEX.values()), period="5y")
+    acc = {}
+    for m in markets:
+        close = bt.build_frame(download_all(uni[m], period="5y"))
+        if close.shape[1] < 3 or len(close) < 500:
+            print(f"atr experiment: {m}: not enough data ({close.shape})")
+            continue
+        idx_close = None
+        if m in bt.INDEX and bt.INDEX[m] in idx_data:
+            x = idx_data[bt.INDEX[m]].copy()
+            xi = pd.to_datetime(x.index)
+            if getattr(xi, "tz", None) is not None:
+                xi = xi.tz_localize(None)
+            x.index = xi.normalize()
+            idx_close = x[~x.index.duplicated(keep="last")].astype(float)
+        collect(m, close, idx_close, acc, bt)
+        print(f"atr experiment: {m}: done ({close.shape[1]} symbols)")
+    if not acc:
+        send(["⚠️ آزمون حد ضرر انجام نشد: داده‌ی تاریخی دریافت نشد."], b"", "backtest")
+        return False
+    rows, blocks = report(acc, pre)
+    save(rows, request_id)
+    send(blocks, b"", "backtest")
+    return True
