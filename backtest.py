@@ -212,6 +212,11 @@ def run(request_id, uni, download_all, short, pre, send):
             s.index = pd.to_datetime(s.index).tz_localize(None).normalize() if getattr(s.index, "tz", None) \
                 else pd.to_datetime(s.index).normalize()
             idx_close = s[~s.index.duplicated(keep="last")].astype(float)
+        if stops_only:
+            import backtest_stops
+            backtest_stops.collect(m, close, idx_close, stops_acc, sys.modules[__name__])
+            print(f"backtest: {m}: stop experiment done ({close.shape[1]} symbols)")
+            continue
         out, base = analyse_market(m, close, idx_close)
         collected[m] = (out, base)
         bases[m] = base
