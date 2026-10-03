@@ -146,6 +146,17 @@ def collect():
                     seen.add(k)
                     items.append((title, source))
         data[topic] = [(t, s, tone(t, up, down)) for t, s in items]
+    try:  # better tone classification with Gemini when a key is configured
+        import ai
+        if ai.available():
+            flat = [(tp, i) for tp, its in data.items() for i in range(min(len(its), 40))]
+            res = ai.classify_tone([(TONE_DEF[tp][0], TONE_DEF[tp][1], data[tp][i][0]) for tp, i in flat])
+            if res:
+                for (tp, i), t in zip(flat, res):
+                    title, src, _ = data[tp][i]
+                    data[tp][i] = (title, src, t)
+    except Exception as e:
+        print("gemini tone failed:", str(e)[:100])
     return data
 
 
