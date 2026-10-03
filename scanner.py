@@ -817,6 +817,36 @@ def iran_blocks():
             "Prof% = رشد سود (پس از انتشار صورت مالی) · به‌روزرسانی هفتگی: " + updated + "</i>\n" + pre(rows)]
 
 
+def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
+    """One short message at the top: the most important points of the day, in plain Persian."""
+    today = dt.date.today().strftime("%Y-%m-%d")
+    d_buy = df[df.daily_signal == "BUY"]
+    d_sell = df[df.daily_signal == "SELL"]
+    aligned = df[df.aligned]
+    sig = [f"• امروز {len(d_buy)} نماد سیگنال خرید و {len(d_sell)} نماد سیگنال فروش روزانه گرفتند.",
+           f"• {len(aligned)} مورد از خریدها با روند هفتگی هم‌جهت است (قوی‌تر)."]
+    if len(aligned):
+        names = "، ".join(html.escape(short(t)) for t in aligned.sort_values("daily_rsi").head(5)["ticker"])
+        sig.append(f"• چند نمونه از خریدهای قوی‌تر: {names}.")
+    sig.append(f"• {new_count} سیگنال جدید امروز در تاریخچه ثبت شد.")
+    if ranked is not None and len(ranked):
+        tops = []
+        for m in FUND_MARKETS:
+            sub = ranked[ranked["market"] == m]
+            if len(sub):
+                tops.append(f"{MARKETS[m].split()[0]} {html.escape(short(sub.iloc[0]['ticker']))}")
+        if tops:
+            sig.append("• بیشترین رشد فروش و سود در هر بازار: " + " · ".join(tops) + ".")
+    blocks = [f"🗞 <b>خلاصه‌ی امروز</b> — {today}\n"
+              "<i>مهم‌ترین نکته‌ها در یک نگاه. جزئیات هر بخش در پیام‌های بعدی است.</i>"]
+    for title, lines in (("📡 سیگنال‌ها", sig), ("🧭 اقتصاد، فلزات و انرژی", macro_hl),
+                         ("📰 خبرها", news_hl), ("🧠 فیلتر بافت و CANSLIM", quality_hl)):
+        if lines:
+            blocks.append(f"<b>{title}</b>\n" + "\n".join(lines))
+    blocks.append("<i>این خلاصه خودکار است و توصیه‌ی خرید یا فروش نیست.</i>")
+    return blocks
+
+
 # ---------------------------------------------------------------------------
 def main():
     uni = build_universe()
