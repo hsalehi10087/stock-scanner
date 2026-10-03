@@ -56,6 +56,7 @@ def ask(prompt, json_mode=False, timeout=120):
                 parts = r.json()["candidates"][0]["content"]["parts"]
                 text = "".join(p.get("text", "") for p in parts).strip()
                 if text:
+                    print(f"gemini ok: {model}")
                     return text
             except Exception as e:
                 print("gemini parse failed:", str(e)[:100])
