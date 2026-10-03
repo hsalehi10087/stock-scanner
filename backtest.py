@@ -282,3 +282,147 @@ def run(request_id, uni, download_all, short, pre, send):
         "<i>این نتیجه توصیه‌ی خرید یا فروش نیست.</i>")
     send(blocks, b"", "backtest")
     return True
+
+
+# ---------------------------------------------------------------------------
+# Stop-loss / target experiment (request ids that start with "stops")
+# ---------------------------------------------------------------------------
+STOPS_RESULT = os.path.join(HERE, "backtest_stops.json")
+STOPS_CSV = os.path.join(HERE, "backtest_stops.csv")
+T_DAYS = 60
+RULES = [  # name, stop (x ATR), target (x ATR), trailing, max days
+    ("Hold60", None, None, False, 60),
+    ("Exit20", None, None, False, 20),
+    ("S2", 2, None, False, 60),
+    ("S3", 3, None, False, 60),
+    ("S2/T4", 2, 4, False, 60),
+    ("S3/T6", 3, 6, False, 60),
+    ("S2/T6", 2, 6, False, 60),
+    ("Trail3", 3, None, True, 60),
+]
+
+
+def simulate(paths, atrp, rule):
+    """paths: (n, T) returns (fraction) on days 1..T after entry. Exits on the first CLOSE that crosses a level."""
+    name, ks, kt, trailing, maxd = rule
+    n, T = paths.shape
+    T = min(T, maxd)
+    p = paths[:, :T]
+    big = T + 5
+    stop_day = np.full(n, big)
+    tgt_day = np.full(n, big)
+    if ks is not None:
+        s = (ks * atrp)[:, None]
+        if trailing:
+            price = 1 + p
+            cond = price <= np.maximum.accumulate(price, axis=1) * (1 - s)
+        else:
+            cond = p <= -s
+        stop_day = np.where(cond.any(1), cond.argmax(1), big)
+    if kt is not None:
+        cond = p >= (kt * atrp)[:, None]
+        tgt_day = np.where(cond.any(1), cond.argmax(1), big)
+    exit_day = np.minimum(np.minimum(stop_day, tgt_day), T - 1)
+    ret = p[np.arange(n), exit_day] * 100
+    stopped = (stop_day <= tgt_day) & (stop_day < big)
+    hit_t = (tgt_day < stop_day) & (tgt_day < big)
+    return ret, stopped, hit_t, exit_day + 1
+
+
+def collect_events(close, idx_close_unused=None):
+    """Event paths for D-BUY and D-BUY+W (inside the 2-year window) and for random entries every 10th day."""
+    start = close.index.max() - pd.DateOffset(years=YEARS)
+    nrow = len(close)
+    hist, rsi = indicators(close)
+    buy_ev, _ = events(hist, rsi)
+    wk = close.resample("W-FRI").last().dropna(how="all")
+    whist, _ = indicators(wk)
+    wbull = (whist > 0).astype(float).reindex(close.index, method="ffill").fillna(0).values > 0.5
+    atr = (close.diff().abs().rolling(14).mean() / close).values
+    arr = close.values
+    in_win = np.asarray(close.index >= start)
+    rows_ok = in_win & (np.arange(nrow) + 2 + T_DAYS <= nrow - 1)
+    B = buy_ev.values
+    rand = np.zeros_like(B)
+    rand[::10, :] = True
+    groups = {"D-BUY": B, "D-BUY+W": B & wbull, "Random": rand}
+    months = (close.index.year * 12 + close.index.month).values
+    out = {}
+    for g, mask in groups.items():
+        r, c = np.where(mask & rows_ok[:, None])
+        if r.size == 0:
+            continue
+        entry = arr[r + 1, c]
+        idx = r[:, None] + 2 + np.arange(T_DAYS)[None, :]
+        paths = arr[idx, c[:, None]] / entry[:, None] - 1
+        a = atr[r, c]
+        ok = np.isfinite(paths).all(1) & np.isfinite(a) & (a > 0) & np.isfinite(entry) & (entry > 0)
+        out[g] = (paths[ok], a[ok], months[r][ok])
+    return out
+
+
+def run_stops(request_id, uni, download_all, short, pre, send):
+    today = dt.date.today().strftime("%Y-%m-%d")
+    markets = [m for m in ("US", "JP", "IN", "TW", "CN", "CM", "FX") if uni.get(m)]
+    pooled = {}
+    for m in markets:
+        close = build_frame(download_all(uni[m], period="5y"))
+        if close.shape[1] < 3 or len(close) < 500:
+            continue
+        for g, (paths, a, mo) in collect_events(close).items():
+            cur = pooled.setdefault(g, [[], [], []])
+            cur[0].append(paths)
+            cur[1].append(a)
+            cur[2].append(mo)
+        print(f"stops: {m}: done")
+    rows = []
+    for g, (P, A, M) in pooled.items():
+        paths, atrp, mo = np.vstack(P), np.concatenate(A), np.concatenate(M)
+        hold, *_ = simulate(paths, atrp, RULES[0])
+        for rule in RULES:
+            ret, stopped, hit_t, days = simulate(paths, atrp, rule)
+            d = ret - hold
+            mm = pd.Series(d).groupby(mo).mean()
+            t = float("nan")
+            if rule[0] != "Hold60" and len(mm) >= 6 and mm.std(ddof=1) > 0:
+                t = float(mm.mean() / (mm.std(ddof=1) / np.sqrt(len(mm)))) / np.sqrt(60 / 21)
+            wins, losses = ret[ret > 0], ret[ret <= 0]
+            rows.append({"group": g, "rule": rule[0], "n": int(ret.size), "avg": float(ret.mean()),
+                         "win": float((ret > 0).mean() * 100), "avg_win": float(wins.mean()) if wins.size else float("nan"),
+                         "avg_loss": float(losses.mean()) if losses.size else float("nan"),
+                         "p5": float(np.percentile(ret, 5)), "p1": float(np.percentile(ret, 1)),
+                         "stopped": float(stopped.mean() * 100), "target": float(hit_t.mean() * 100),
+                         "days": float(days.mean()), "d_vs_hold": float(d.mean()), "t": t,
+                         "atr_med": float(np.median(atrp) * 100)})
+    if not rows:
+        send(["⚠️ آزمون حد ضرر انجام نشد: داده‌ی تاریخی دریافت نشد."], b"", "stops")
+        return False
+    json.dump({"request": request_id, "date": today, "rows": rows}, open(STOPS_RESULT, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1, default=float)
+    pd.DataFrame(rows).to_csv(STOPS_CSV, index=False)
+
+    def tbl(g):
+        t = [f"{'Rule':<8}{'Avg%':>6}{'Win%':>5}{'P5%':>6}{'Stop%':>6}{'Δ%':>6}{'t':>5}", "-" * 42]
+        for r in [x for x in rows if x["group"] == g]:
+            t.append(f"{r['rule']:<8}{f(r['avg']):>6}{r['win']:>5.0f}{f(r['p5']):>6}{r['stopped']:>6.0f}"
+                     f"{f(r['d_vs_hold']) if r['rule'] != 'Hold60' else '-':>6}"
+                     f"{f(r['t'], '{:+.1f}') if r['rule'] != 'Hold60' else '-':>5}")
+        return pre(t)
+
+    blocks = [
+        f"🛑 <b>آزمون حد ضرر و هدف قیمت</b> — {today}\n"
+        "<i>برای همان سیگنال‌های دو سال گذشته، چند قاعده‌ی خروج را امتحان کردیم. هر معامله حداکثر ۶۰ روز نگه داشته می‌شود. "
+        "ATR یعنی میانگین نوسان روزانه‌ی همان سهم در ۱۴ روز قبل از سیگنال؛ فاصله‌ی حد ضرر و هدف بر اساس آن تعیین می‌شود. "
+        "خروج در اولین قیمت پایانی است که از سطح عبور کند (پس ریزش ناگهانی هم حساب شده).\n"
+        "Hold60 = بدون قاعده، ۶۰ روز نگه داشتن · Exit20 = خروج روز بیستم · "
+        "S2/S3 = حد ضرر ۲ یا ۳ برابر ATR · T4/T6 = هدف ۴ یا ۶ برابر ATR · Trail3 = حد ضرر متحرک ۳ برابر ATR از بالاترین قیمت.\n"
+        "Avg% = میانگین بازده هر معامله · Win% = درصد سودده · P5% = بازده بدترین ۵٪ معاملات · "
+        "Stop% = درصد معاملاتی که با حد ضرر بسته شدند · Δ% = تفاوت میانگین با Hold60 روی همان معامله‌ها · "
+        "t = اطمینان آماری این تفاوت.</i>",
+        "🟢 <b>خرید روزانه (D-BUY)</b>\n" + tbl("D-BUY"),
+        "🟢 <b>خرید روزانه هم‌جهت با روند هفتگی (D-BUY+W)</b>\n" + tbl("D-BUY+W"),
+        "⚪️ <b>ورود تصادفی (هر ۱۰ روز یک بار، برای مقایسه)</b>\n" + tbl("Random"),
+        "<i>این آزمون توصیه‌ی خرید و فروش نیست. کارمزد و لغزش قیمت حساب نشده است.</i>",
+    ]
+    send(blocks, b"", "stops")
+    return True
