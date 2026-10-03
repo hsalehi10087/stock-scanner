@@ -221,6 +221,15 @@ def run(request_id, uni, download_all, short, pre, send):
         collected[m] = (out, base)
         bases[m] = base
         print(f"backtest: {m}: {close.shape[1]} symbols, {base[20][0]:,} obs")
+    if stops_only:
+        if not stops_acc:
+            send(["⚠️ آزمون حد ضرر انجام نشد: داده‌ی تاریخی دریافت نشد."], b"", "backtest")
+            return False
+        import backtest_stops
+        srows, sblocks = backtest_stops.report(stops_acc, pre)
+        backtest_stops.save(srows, request_id)
+        send(sblocks, b"", "backtest")
+        return True
     if not collected:
         send(["⚠️ بک‌تست انجام نشد: داده‌ی تاریخی دریافت نشد."], b"", "backtest")
         return False
