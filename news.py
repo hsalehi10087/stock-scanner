@@ -174,6 +174,7 @@ def run(send, polymarket=None, gemini=None):
     short = {"نرخ بهره و فدرال رزرو": "Fed/Rates", "اقتصاد آمریکا": "US Economy", "اقتصاد جهان": "World Econ",
              "تورم": "Inflation", "نفت": "Oil", "طلا و فلزات": "Gold/Metals", "تکنولوژی و هوش مصنوعی": "Tech/AI"}
     readings = []
+    hl_items = []
     for topic, items in data.items():
         n = len(items)
         if not n:
