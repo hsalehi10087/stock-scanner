@@ -1059,6 +1059,17 @@ def main():
     for blocks in qmsgs[:2]:
         outbox.append((blocks, b"", "quality", ()))
     quality_hl = qmsgs[2] if len(qmsgs) > 2 else []
+    try:
+        import core_live
+        core_blocks, core_hl = core_live.run(series_cache, bench_series, pre, short)
+        if core_blocks:
+            outbox.append((core_blocks, b"", "core", ()))
+        mom_hl = list(mom_hl) + list(core_hl)
+        if os.path.exists(os.path.join(HERE, "core_cohorts.csv")):
+            git_save(["core_cohorts.csv"], f"Core strategy cohorts {dt.date.today()}")
+    except Exception as e:
+        print("core live test failed:", e)
+        warnings.append("آزمون زنده‌ی استراتژی بهتر از RSI/MACD امروز به‌روز نشد.")
     if mom_blocks:
         outbox.append((mom_blocks, b"", "momentum", ()))
     try:
