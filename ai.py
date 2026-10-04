@@ -12,6 +12,7 @@ import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODELS = ["gemini-flash-latest", "gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-flash-lite-latest"]
+STATS = {"ok": 0, "fail": 0}
 
 
 def key():
@@ -56,11 +57,13 @@ def ask(prompt, json_mode=False, timeout=120):
                 parts = r.json()["candidates"][0]["content"]["parts"]
                 text = "".join(p.get("text", "") for p in parts).strip()
                 if text:
+                    STATS["ok"] += 1
                     print(f"gemini ok: {model}")
                     return text
             except Exception as e:
                 print("gemini parse failed:", str(e)[:100])
             break
+    STATS["fail"] += 1
     return None
 
 
