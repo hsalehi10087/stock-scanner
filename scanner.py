@@ -1122,6 +1122,11 @@ def main():
         print("summary failed:", e)
     for blocks, c, fn, docs in outbox:
         send(blocks, c, fn, extra_docs=docs)
+    try:
+        import subscribers
+        subscribers.deactivate(BLOCKED - {str(CHAT_ID)}, git_save)
+    except Exception as e:
+        print("subscribers cleanup failed:", e)
     return 0
 
 
