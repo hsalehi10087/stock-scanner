@@ -848,7 +848,7 @@ def iran_blocks():
             "Prof% = رشد سود (پس از انتشار صورت مالی) · به‌روزرسانی هفتگی: " + updated + "</i>\n" + pre(rows)]
 
 
-def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl, warnings=(), watch_hl=()):
+def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl, warnings=(), watch_hl=(), mom_hl=()):
     """One short message at the top: the most important points of the day, in plain Persian."""
     today = dt.date.today().strftime("%Y-%m-%d")
     d_buy = df[df.daily_signal == "BUY"]
@@ -876,7 +876,8 @@ def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl, warning
         blocks.append("⚠️ <b>هشدار درباره‌ی داده‌ی امروز</b>\n" + "\n".join(f"• {w}" for w in warnings))
     for title, lines in (("📡 سیگنال‌ها", sig), ("👀 سهم‌های شما", list(watch_hl)),
                          ("🧭 اقتصاد، فلزات و انرژی", macro_hl),
-                         ("📰 خبرها", news_hl), ("🧠 فیلتر بافت و CANSLIM", quality_hl)):
+                         ("📰 خبرها", news_hl), ("🧠 فیلتر بافت و CANSLIM", quality_hl),
+                         ("🔬 آزمون زنده‌ی روش‌ها", list(mom_hl))):
         if lines:
             blocks.append(f"<b>{title}</b>\n" + "\n".join(lines))
     blocks.append("<i>این خلاصه خودکار است و توصیه‌ی خرید یا فروش نیست.</i>")
@@ -928,8 +929,10 @@ def main():
     if bt is not None:
         return bt
     rows = []
+    series_cache = {}
     for market, tickers in uni.items():
         series = download_all(tickers)
+        series_cache[market] = series
         print(f"{market}: downloaded {len(series)}/{len(tickers)}")
         for t, s in series.items():
             try:
@@ -991,9 +994,18 @@ def main():
         print("quality filters failed:", e)
         warnings.append("فیلترهای بافت و CANSLIM امروز ساخته نشدند.")
 
+    mom_blocks, mom_hl = [], []
+    try:
+        import momentum_live
+        mom_blocks, mom_hl = momentum_live.run(series_cache, uni, bench_series, pre, short)
+    except Exception as e:
+        print("momentum live test failed:", e)
+        warnings.append("آزمون زنده‌ی روش‌های انتخاب سهم امروز به‌روز نشد.")
+
     saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH,
                                            os.path.join(HERE, "quality_cache.csv"),
-                                           os.path.join(HERE, "quality_track.csv")) if os.path.exists(p)]
+                                           os.path.join(HERE, "quality_track.csv"),
+                                           os.path.join(HERE, "momentum_cohorts.csv")) if os.path.exists(p)]
     if not git_save(saved, f"Daily data {dt.date.today()}"):
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
         warnings.append("ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
@@ -1035,6 +1047,8 @@ def main():
     for blocks in qmsgs[:2]:
         outbox.append((blocks, b"", "quality", ()))
     quality_hl = qmsgs[2] if len(qmsgs) > 2 else []
+    if mom_blocks:
+        outbox.append((mom_blocks, b"", "momentum", ()))
     try:
         try:
             import health
@@ -1042,7 +1056,7 @@ def main():
         except Exception:
             pass
         send(summary_blocks(df, locals().get("new_count", 0), locals().get("ranked"),
-                            macro_hl, news_hl, quality_hl, warnings, watch_hl), b"", "summary")
+                            macro_hl, news_hl, quality_hl, warnings, watch_hl, mom_hl), b"", "summary")
     except Exception as e:
         print("summary failed:", e)
     for blocks, c, fn, docs in outbox:
