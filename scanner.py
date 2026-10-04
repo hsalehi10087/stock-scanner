@@ -604,8 +604,7 @@ def tg(method, **kw):
     return r.ok
 
 
-def send(blocks, csv_bytes, filename, extra_docs=()):
-    if isinstance(blocks, str):
+def _send_to(chat, blocks, csv_bytes, filename, extra_docs=()):
         blocks = [blocks]
     if DRY_RUN or not TOKEN or not CHAT_ID:
         for c in chunk_blocks(blocks):
