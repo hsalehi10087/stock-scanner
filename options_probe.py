@@ -12,7 +12,7 @@ import pandas as pd
 import yfinance as yf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RESULT = os.path.join(HERE, "options_probe.json")
+RESULT = os.path.join(HERE, "backtest_optprobe.json")
 TICKERS = ["AAPL", "MSFT", "NVDA", "TSLA", "AMD", "META", "AMZN", "AVGO", "PLTR", "SPY"]
 TARGET_DTE = (30, 45)
 
