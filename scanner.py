@@ -904,6 +904,10 @@ def run_backtest_once(uni):
         import stops
         ok = stops.run(req, uni, download_all, short, pre, send)
         files = ["backtest_stops.json", "backtest_stops.csv"]
+    elif kind == "core":
+        import core_lab
+        ok = core_lab.run(req, uni, download_all, short, pre, send)
+        files = ["backtest_core.json"]
     elif kind == "optbt":
         import options_lab
         ok = options_lab.backtest(req, download_all, send, pre)
