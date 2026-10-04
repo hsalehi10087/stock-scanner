@@ -1,0 +1,926 @@
+{
+ "request": "bt5",
+ "run_at": "2026-10-04 09:00 UTC",
+ "rows": [
+  {
+   "ticker": "AAPL",
+   "spot": 333.69,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 31,
+      "n_near": 20,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 10.2,
+      "median_open_interest": 165.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 28.6,
+      "atm": {
+       "strike": 335.0,
+       "bid": 10.1,
+       "ask": 10.75,
+       "last": 10.45,
+       "iv": 28.0,
+       "volume": 156.0,
+       "oi": 286.0,
+       "last_trade": "2026-10-02 19:52:40"
+      }
+     },
+     "puts": {
+      "n": 19,
+      "n_near": 14,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 11.6,
+      "median_open_interest": 295.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 28.4,
+      "atm": {
+       "strike": 335.0,
+       "bid": 10.3,
+       "ask": 11.0,
+       "last": 10.44,
+       "iv": 25.4,
+       "volume": 131.0,
+       "oi": 271.0,
+       "last_trade": "2026-10-02 19:38:29"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 84,
+      "n_near": 20,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.8,
+      "median_open_interest": 7743.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 27.8,
+      "atm": {
+       "strike": 335.0,
+       "bid": 12.25,
+       "ask": 12.65,
+       "last": 12.35,
+       "iv": 27.5,
+       "volume": 825.0,
+       "oi": 8480.0,
+       "last_trade": "2026-10-02 19:58:45"
+      }
+     },
+     "puts": {
+      "n": 61,
+      "n_near": 20,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 5.7,
+      "median_open_interest": 3419.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 25.3,
+      "atm": {
+       "strike": 335.0,
+       "bid": 12.1,
+       "ask": 12.4,
+       "last": 12.35,
+       "iv": 24.3,
+       "volume": 240.0,
+       "oi": 2983.0,
+       "last_trade": "2026-10-02 19:43:51"
+      }
+     }
+    }
+   ],
+   "n_expiries": 21
+  },
+  {
+   "ticker": "MSFT",
+   "spot": 517.53,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 39,
+      "n_near": 28,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 9.6,
+      "median_open_interest": 72.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 36.7,
+      "atm": {
+       "strike": 520.0,
+       "bid": 19.0,
+       "ask": 21.45,
+       "last": 19.8,
+       "iv": 35.9,
+       "volume": 72.0,
+       "oi": 153.0,
+       "last_trade": "2026-10-02 19:56:26"
+      }
+     },
+     "puts": {
+      "n": 33,
+      "n_near": 20,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 25.4,
+      "median_open_interest": 133.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 35.1,
+      "atm": {
+       "strike": 520.0,
+       "bid": 20.05,
+       "ask": 22.85,
+       "last": 22.04,
+       "iv": 34.2,
+       "volume": 22.0,
+       "oi": 69.0,
+       "last_trade": "2026-10-02 14:56:02"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 97,
+      "n_near": 32,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 4.9,
+      "median_open_interest": 3228.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 33.5,
+      "atm": {
+       "strike": 520.0,
+       "bid": 22.7,
+       "ask": 23.65,
+       "last": 23.32,
+       "iv": 33.1,
+       "volume": 680.0,
+       "oi": 6890.0,
+       "last_trade": "2026-10-02 19:58:59"
+      }
+     },
+     "puts": {
+      "n": 97,
+      "n_near": 32,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 5.2,
+      "median_open_interest": 1153.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 31.0,
+      "atm": {
+       "strike": 520.0,
+       "bid": 23.15,
+       "ask": 24.2,
+       "last": 23.75,
+       "iv": 30.6,
+       "volume": 117.0,
+       "oi": 1290.0,
+       "last_trade": "2026-10-02 19:56:40"
+      }
+     }
+    }
+   ],
+   "n_expiries": 19
+  },
+  {
+   "ticker": "NVDA",
+   "spot": 233.95,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 24,
+      "n_near": 14,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 4.6,
+      "median_open_interest": 1718.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 32.5,
+      "atm": {
+       "strike": 235.0,
+       "bid": 8.35,
+       "ask": 8.65,
+       "last": 8.55,
+       "iv": 32.1,
+       "volume": 2180.0,
+       "oi": 1762.0,
+       "last_trade": "2026-10-02 19:59:02"
+      }
+     },
+     "puts": {
+      "n": 26,
+      "n_near": 10,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.7,
+      "median_open_interest": 850.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 30.7,
+      "atm": {
+       "strike": 235.0,
+       "bid": 8.3,
+       "ask": 8.75,
+       "last": 8.65,
+       "iv": 28.8,
+       "volume": 2109.0,
+       "oi": 97.0,
+       "last_trade": "2026-10-02 19:59:41"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 81,
+      "n_near": 14,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.9,
+      "median_open_interest": 22244.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 37.4,
+      "atm": {
+       "strike": 235.0,
+       "bid": 11.85,
+       "ask": 12.0,
+       "last": 11.92,
+       "iv": 36.9,
+       "volume": 4565.0,
+       "oi": 18095.0,
+       "last_trade": "2026-10-02 19:59:53"
+      }
+     },
+     "puts": {
+      "n": 62,
+      "n_near": 14,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.2,
+      "median_open_interest": 6344.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 33.5,
+      "atm": {
+       "strike": 235.0,
+       "bid": 11.5,
+       "ask": 11.65,
+       "last": 11.64,
+       "iv": 32.8,
+       "volume": 2014.0,
+       "oi": 3020.0,
+       "last_trade": "2026-10-02 19:59:54"
+      }
+     }
+    }
+   ],
+   "n_expiries": 20
+  },
+  {
+   "ticker": "TSLA",
+   "spot": 370.59,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 42,
+      "n_near": 19,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.4,
+      "median_open_interest": 346.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 45.0,
+      "atm": {
+       "strike": 370.0,
+       "bid": 20.0,
+       "ask": 20.7,
+       "last": 20.15,
+       "iv": 45.3,
+       "volume": 999.0,
+       "oi": 689.0,
+       "last_trade": "2026-10-02 19:57:40"
+      }
+     },
+     "puts": {
+      "n": 42,
+      "n_near": 22,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.1,
+      "median_open_interest": 51.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 42.9,
+      "atm": {
+       "strike": 370.0,
+       "bid": 18.25,
+       "ask": 18.6,
+       "last": 18.5,
+       "iv": 41.9,
+       "volume": 585.0,
+       "oi": 84.0,
+       "last_trade": "2026-10-02 19:58:18"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 146,
+      "n_near": 22,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.8,
+      "median_open_interest": 2514.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 44.2,
+      "atm": {
+       "strike": 370.0,
+       "bid": 23.55,
+       "ask": 24.0,
+       "last": 23.75,
+       "iv": 44.3,
+       "volume": 1370.0,
+       "oi": 3295.0,
+       "last_trade": "2026-10-02 19:59:21"
+      }
+     },
+     "puts": {
+      "n": 148,
+      "n_near": 22,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.8,
+      "median_open_interest": 2751.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 40.7,
+      "atm": {
+       "strike": 370.0,
+       "bid": 20.95,
+       "ask": 21.2,
+       "last": 21.0,
+       "iv": 40.2,
+       "volume": 824.0,
+       "oi": 4739.0,
+       "last_trade": "2026-10-02 19:59:34"
+      }
+     }
+    }
+   ],
+   "n_expiries": 20
+  },
+  {
+   "ticker": "AMD",
+   "spot": 633.91,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 68,
+      "n_near": 35,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.0,
+      "median_open_interest": 51.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 58.0,
+      "atm": {
+       "strike": 635.0,
+       "bid": 42.95,
+       "ask": 44.05,
+       "last": 43.44,
+       "iv": 57.1,
+       "volume": 117.0,
+       "oi": 51.0,
+       "last_trade": "2026-10-02 19:58:23"
+      }
+     },
+     "puts": {
+      "n": 61,
+      "n_near": 23,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 7.8,
+      "median_open_interest": 66.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 54.9,
+      "atm": {
+       "strike": 635.0,
+       "bid": 39.25,
+       "ask": 43.1,
+       "last": 42.0,
+       "iv": 52.7,
+       "volume": 49.0,
+       "oi": 9.0,
+       "last_trade": "2026-10-02 19:59:01"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 113,
+      "n_near": 19,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.3,
+      "median_open_interest": 1481.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 56.3,
+      "atm": {
+       "strike": 630.0,
+       "bid": 52.5,
+       "ask": 54.0,
+       "last": 53.35,
+       "iv": 56.2,
+       "volume": 294.0,
+       "oi": 4469.0,
+       "last_trade": "2026-10-02 19:59:54"
+      }
+     },
+     "puts": {
+      "n": 108,
+      "n_near": 19,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.7,
+      "median_open_interest": 335.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 52.6,
+      "atm": {
+       "strike": 630.0,
+       "bid": 45.35,
+       "ask": 46.3,
+       "last": 45.29,
+       "iv": 52.3,
+       "volume": 213.0,
+       "oi": 534.0,
+       "last_trade": "2026-10-02 19:37:03"
+      }
+     }
+    }
+   ],
+   "n_expiries": 20
+  },
+  {
+   "ticker": "META",
+   "spot": 728.08,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 48,
+      "n_near": 34,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.5,
+      "median_open_interest": 36.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 44.6,
+      "atm": {
+       "strike": 730.0,
+       "bid": 38.0,
+       "ask": 38.8,
+       "last": 38.37,
+       "iv": 44.8,
+       "volume": 89.0,
+       "oi": 588.0,
+       "last_trade": "2026-10-02 19:59:43"
+      }
+     },
+     "puts": {
+      "n": 54,
+      "n_near": 39,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 3.2,
+      "median_open_interest": 45.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 42.2,
+      "atm": {
+       "strike": 730.0,
+       "bid": 37.05,
+       "ask": 37.85,
+       "last": 37.84,
+       "iv": 41.6,
+       "volume": 16.0,
+       "oi": 80.0,
+       "last_trade": "2026-10-02 19:45:00"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 195,
+      "n_near": 44,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.9,
+      "median_open_interest": 1934.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 42.8,
+      "atm": {
+       "strike": 730.0,
+       "bid": 43.2,
+       "ask": 44.05,
+       "last": 42.89,
+       "iv": 42.7,
+       "volume": 333.0,
+       "oi": 1406.0,
+       "last_trade": "2026-10-02 19:36:09"
+      }
+     },
+     "puts": {
+      "n": 146,
+      "n_near": 44,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.6,
+      "median_open_interest": 580.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 39.3,
+      "atm": {
+       "strike": 730.0,
+       "bid": 41.3,
+       "ask": 42.0,
+       "last": 42.25,
+       "iv": 38.9,
+       "volume": 66.0,
+       "oi": 616.0,
+       "last_trade": "2026-10-02 19:57:06"
+      }
+     }
+    }
+   ],
+   "n_expiries": 19
+  },
+  {
+   "ticker": "AMZN",
+   "spot": 251.52,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 21,
+      "n_near": 14,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.0,
+      "median_open_interest": 339.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 40.8,
+      "atm": {
+       "strike": 250.0,
+       "bid": 12.9,
+       "ask": 13.3,
+       "last": 13.35,
+       "iv": 41.0,
+       "volume": 706.0,
+       "oi": 449.0,
+       "last_trade": "2026-10-02 19:54:18"
+      }
+     },
+     "puts": {
+      "n": 21,
+      "n_near": 12,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.1,
+      "median_open_interest": 221.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 39.2,
+      "atm": {
+       "strike": 250.0,
+       "bid": 10.3,
+       "ask": 10.85,
+       "last": 10.75,
+       "iv": 38.0,
+       "volume": 29.0,
+       "oi": 195.0,
+       "last_trade": "2026-10-02 19:54:18"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 58,
+      "n_near": 15,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.9,
+      "median_open_interest": 9293.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 39.0,
+      "atm": {
+       "strike": 250.0,
+       "bid": 14.7,
+       "ask": 14.9,
+       "last": 14.65,
+       "iv": 39.0,
+       "volume": 843.0,
+       "oi": 22747.0,
+       "last_trade": "2026-10-02 19:57:40"
+      }
+     },
+     "puts": {
+      "n": 54,
+      "n_near": 15,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 4.1,
+      "median_open_interest": 7873.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 36.5,
+      "atm": {
+       "strike": 250.0,
+       "bid": 11.85,
+       "ask": 12.1,
+       "last": 12.02,
+       "iv": 35.4,
+       "volume": 1273.0,
+       "oi": 22739.0,
+       "last_trade": "2026-10-02 19:58:41"
+      }
+     }
+    }
+   ],
+   "n_expiries": 21
+  },
+  {
+   "ticker": "AVGO",
+   "spot": 355.14,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 30,
+      "n_near": 19,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.3,
+      "median_open_interest": 134.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 38.5,
+      "atm": {
+       "strike": 355.0,
+       "bid": 16.3,
+       "ask": 16.7,
+       "last": 16.6,
+       "iv": 38.5,
+       "volume": 2525.0,
+       "oi": 189.0,
+       "last_trade": "2026-10-02 19:59:42"
+      }
+     },
+     "puts": {
+      "n": 31,
+      "n_near": 19,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 6.9,
+      "median_open_interest": 163.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 36.9,
+      "atm": {
+       "strike": 355.0,
+       "bid": 14.8,
+       "ask": 15.2,
+       "last": 14.8,
+       "iv": 35.3,
+       "volume": 54.0,
+       "oi": 163.0,
+       "last_trade": "2026-10-02 19:54:32"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 59,
+      "n_near": 10,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.5,
+      "median_open_interest": 5160.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 39.2,
+      "atm": {
+       "strike": 360.0,
+       "bid": 17.5,
+       "ask": 17.8,
+       "last": 17.6,
+       "iv": 39.0,
+       "volume": 1355.0,
+       "oi": 5867.0,
+       "last_trade": "2026-10-02 19:59:52"
+      }
+     },
+     "puts": {
+      "n": 54,
+      "n_near": 10,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.4,
+      "median_open_interest": 7804.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 36.0,
+      "atm": {
+       "strike": 360.0,
+       "bid": 20.3,
+       "ask": 20.65,
+       "last": 20.43,
+       "iv": 35.1,
+       "volume": 274.0,
+       "oi": 6516.0,
+       "last_trade": "2026-10-02 19:58:41"
+      }
+     }
+    }
+   ],
+   "n_expiries": 20
+  },
+  {
+   "ticker": "PLTR",
+   "spot": 188.75,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 36,
+      "n_near": 21,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.3,
+      "median_open_interest": 65.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 58.3,
+      "atm": {
+       "strike": 190.0,
+       "bid": 12.65,
+       "ask": 12.95,
+       "last": 12.7,
+       "iv": 58.3,
+       "volume": 82.0,
+       "oi": 203.0,
+       "last_trade": "2026-10-02 19:58:07"
+      }
+     },
+     "puts": {
+      "n": 29,
+      "n_near": 16,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 2.6,
+      "median_open_interest": 43.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 55.6,
+      "atm": {
+       "strike": 190.0,
+       "bid": 13.15,
+       "ask": 13.45,
+       "last": 13.3,
+       "iv": 55.0,
+       "volume": 105.0,
+       "oi": 43.0,
+       "last_trade": "2026-10-02 19:59:52"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 57,
+      "n_near": 9,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.5,
+      "median_open_interest": 6612.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 56.6,
+      "atm": {
+       "strike": 190.0,
+       "bid": 14.6,
+       "ask": 14.85,
+       "last": 14.63,
+       "iv": 56.1,
+       "volume": 714.0,
+       "oi": 7213.0,
+       "last_trade": "2026-10-02 19:55:39"
+      }
+     },
+     "puts": {
+      "n": 57,
+      "n_near": 9,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.4,
+      "median_open_interest": 3451.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 52.7,
+      "atm": {
+       "strike": 190.0,
+       "bid": 14.85,
+       "ask": 15.05,
+       "last": 15.0,
+       "iv": 52.3,
+       "volume": 334.0,
+       "oi": 3645.0,
+       "last_trade": "2026-10-02 19:51:27"
+      }
+     }
+    }
+   ],
+   "n_expiries": 18
+  },
+  {
+   "ticker": "SPY",
+   "spot": 769.64,
+   "last_bar": "2026-10-02",
+   "expiries": [
+    {
+     "expiry": "2026-11-06",
+     "dte": 33,
+     "calls": {
+      "n": 84,
+      "n_near": 82,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.9,
+      "median_open_interest": 112.5,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 14.1,
+      "atm": {
+       "strike": 770.0,
+       "bid": 14.06,
+       "ask": 14.19,
+       "last": 14.06,
+       "iv": 15.3,
+       "volume": 1201.0,
+       "oi": 592.0,
+       "last_trade": "2026-10-02 20:11:51"
+      }
+     },
+     "puts": {
+      "n": 108,
+      "n_near": 84,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.6,
+      "median_open_interest": 157.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 15.1,
+      "atm": {
+       "strike": 770.0,
+       "bid": 11.07,
+       "ask": 11.19,
+       "last": 11.15,
+       "iv": 11.8,
+       "volume": 578.0,
+       "oi": 468.0,
+       "last_trade": "2026-10-02 20:14:17"
+      }
+     }
+    },
+    {
+     "expiry": "2026-11-20",
+     "dte": 47,
+     "calls": {
+      "n": 177,
+      "n_near": 97,
+      "pct_bid_ask_ok": 100.0,
+      "median_spread_pct": 1.4,
+      "median_open_interest": 502.0,
+      "pct_volume_gt0": 99.0,
+      "median_iv_pct": 16.2,
+      "atm": {
+       "strike": 770.0,
+       "bid": 17.5,
+       "ask": 17.6,
+       "last": 17.61,
+       "iv": 16.0,
+       "volume": 2967.0,
+       "oi": 13802.0,
+       "last_trade": "2026-10-02 20:14:35"
+      }
+     },
+     "puts": {
+      "n": 189,
+      "n_near": 111,
+      "pct_bid_ask_ok": 99.0,
+      "median_spread_pct": 0.6,
+      "median_open_interest": 433.0,
+      "pct_volume_gt0": 100.0,
+      "median_iv_pct": 14.9,
+      "atm": {
+       "strike": 770.0,
+       "bid": 13.38,
+       "ask": 13.44,
+       "last": 13.4,
+       "iv": 11.9,
+       "volume": 7133.0,
+       "oi": 13950.0,
+       "last_trade": "2026-10-02 20:14:33"
+      }
+     }
+    }
+   ],
+   "n_expiries": 26
+  }
+ ]
+}
