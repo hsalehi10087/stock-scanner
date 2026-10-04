@@ -1112,6 +1112,8 @@ def main():
             pass
         send(summary_blocks(df, locals().get("new_count", 0), locals().get("ranked"),
                             macro_hl, news_hl, quality_hl, warnings, watch_hl, mom_hl), b"", "summary")
+        send(summary_blocks(df, locals().get("new_count", 0), locals().get("ranked"),
+                            macro_hl, news_hl, quality_hl, warnings, (), mom_hl), b"", "summary_pub")
     except Exception as e:
         print("summary failed:", e)
     for blocks, c, fn, docs in outbox:
