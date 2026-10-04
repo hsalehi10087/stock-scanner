@@ -15,6 +15,8 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
+import bench
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "quality_cache.csv")
 STOCK_MARKETS = ("US", "JP", "IN", "TW", "CN")
@@ -227,23 +229,26 @@ def perf_block(w, name, short):
     h = w[w["list"] == name].copy()
     h["d"] = pd.to_numeric(h["days"], errors="coerce").fillna(0)
     h["r"] = pd.to_numeric(h["return_pct"], errors="coerce").fillna(0)
-    h = h[h["d"] >= 1]
+    h = h[h["d"] >= 1].copy()
+    h["b"] = [bench.ret(m, a, l) for m, a, l in zip(h["market"], h["added_date"], h["last_date"])]
+    h["x"] = h["r"] - pd.to_numeric(h["b"], errors="coerce")
     if h.empty:
         return (f"{title}\nتاریخچه‌ی این فهرست از امروز شروع شد. از اسکن بعدی، بازدهی هر سهم "
                 "از روزی که وارد فهرست شده اینجا نمایش داده می‌شود.")
-    rows = [f"{'Group':<8}{'N':>4}{'Win%':>6}{'Avg%':>7}{'Best%':>7}", "-" * 32]
+    rows = [f"{'Group':<8}{'N':>4}{'Win%':>6}{'Avg%':>7}{'Exc%':>7}", "-" * 32]
     for label, sub in (("All", h), ("Open", h[h["status"] == "OPEN"]), ("Closed", h[h["status"] == "CLOSED"])):
         if len(sub):
             rows.append(f"{label:<8}{len(sub):>4}{(sub['r'] > 0).mean() * 100:>6.0f}"
-                        f"{sub['r'].mean():>+7.1f}{sub['r'].max():>+7.1f}")
+                        f"{sub['r'].mean():>+7.1f}{('-' if sub['x'].isna().all() else format(sub['x'].mean(), '+.1f')):>7}")
     out = [title, "<i>All = همه‌ی سهم‌هایی که تا حالا وارد این فهرست شده‌اند · Open = هنوز در دوره‌ی ۶۰ روزه‌ی پیگیری · "
-           "Win% = درصد سهم‌هایی که سود داده‌اند · Avg% = میانگین بازده · Best% = بهترین بازده</i>",
+           "Win% = درصد سهم‌هایی که سود داده‌اند · Avg% = میانگین بازده · Exc% = برتری نسبت به شاخص بازار همان کشور در همان مدت</i>",
            "<pre>" + "\n".join(rows) + "</pre>"]
 
     def table(sub):
-        t = [f"{'Symbol':<9}{'Mkt':<4}{'Date':<6}{'Days':>5}{'Ret%':>7}", "-" * 31]
+        t = [f"{'Symbol':<9}{'Mkt':<4}{'Date':<6}{'Ret%':>7}{'Exc%':>7}", "-" * 33]
         for r in sub.itertuples():
-            t.append(f"{short(r.ticker)[:9]:<9}{r.market:<4}{str(r.added_date)[5:]:<6}{int(r.d):>5}{r.r:>+7.1f}")
+            t.append(f"{short(r.ticker)[:9]:<9}{r.market:<4}{str(r.added_date)[5:]:<6}{r.r:>+7.1f}"
+                     f"{('-' if r.x != r.x else format(r.x, '+.1f')):>7}")
         return "<pre>" + html.escape("\n".join(t)) + "</pre>"
 
     op = h[h["status"] == "OPEN"].sort_values("r", ascending=False)
@@ -334,7 +339,7 @@ def build(df, download_all, pre, short, fmt_price):
     b_blocks = [f"🧠 <b>سیگنال خرید + معیار وارن بافت</b> — {today}\n"
                 "<i>سهم‌هایی که امروز سیگنال خرید MACD/RSI گرفته‌اند و از نظر روش بافت هم شرکت باکیفیتی هستند "
                 f"(امتیاز بافت حداقل {BUFFETT_MIN} از ۱۰۰). "
-                "Buf = امتیاز بافت · ROE = بازده حقوق صاحبان سهم (٪) · D/E = نسبت بدهی به سرمایه · PE = نسبت قیمت به سود · "
+                "Buf = امتیاز بافت · ROE = بازده حقوق صاحبان سهام (٪) · D/E = نسبت بدهی به سرمایه · PE = نسبت قیمت به سود · "
                 "Sig: D = خرید روزانه، W = خرید هفتگی، *= هم‌جهت با روند هفتگی</i>"]
     if good.empty:
         b_blocks.append(f"امروز هیچ سهمی هم سیگنال خرید نگرفت و هم امتیاز بافت بالای {BUFFETT_MIN} داشت.")
