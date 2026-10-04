@@ -614,7 +614,7 @@ def _send_to(chat, blocks, csv_bytes, filename, extra_docs=()):
         print(f"\n[DRY RUN] CSV {filename}: {len(csv_bytes)} bytes")
         return
     for chunk in chunk_blocks(blocks):
-        tg("sendMessage", data={"chat_id": CHAT_ID, "text": chunk,
+        tg("sendMessage", data={"chat_id": chat, "text": chunk,
                                 "parse_mode": "HTML", "disable_web_page_preview": True})
     for fn, data in [(filename, csv_bytes), *extra_docs]:
         if data:
