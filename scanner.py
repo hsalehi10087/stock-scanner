@@ -961,6 +961,11 @@ def run_backtest_once(uni):
 
 # ---------------------------------------------------------------------------
 def main():
+    try:
+        import subscribers
+        subscribers.process(TOKEN, CHAT_ID, _CFG.get("INVITE_CODE", ""), git_save)
+    except Exception as e:
+        print("subscribers failed:", e)
     uni = build_universe()
     total = sum(len(v) for v in uni.values())
     print("Universe:", {m: len(v) for m, v in uni.items()}, "total", total)
