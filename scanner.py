@@ -618,7 +618,7 @@ def _send_to(chat, blocks, csv_bytes, filename, extra_docs=()):
                                 "parse_mode": "HTML", "disable_web_page_preview": True})
     for fn, data in [(filename, csv_bytes), *extra_docs]:
         if data:
-            tg("sendDocument", data={"chat_id": CHAT_ID},
+            tg("sendDocument", data={"chat_id": chat},
                files={"document": (fn, data, "text/csv")})
 
 
