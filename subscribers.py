@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PATH = os.path.join(HERE, "subscribers.csv")
 DONE = os.path.join(HERE, "backtest_subs.json")
 COLS = ["chat_id", "name", "username", "joined_at", "status"]
-PRIVATE = {"summary", "watch"}          # owner only
+PRIVATE = {"summary", "watch", "portfolio", "aibasket"}          # owner only
 PUBLIC_ONLY = {"summary_pub"}           # subscribers only (summary without the personal watchlist part)
 
 WELCOME = ("سلام {name} 👋\n"
