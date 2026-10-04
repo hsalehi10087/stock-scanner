@@ -599,8 +599,16 @@ BLOCKED = set()
 def tg(method, **kw):
     url = f"https://api.telegram.org/bot{TOKEN}/{method}"
     r = requests.post(url, timeout=60, **kw)
+    if r.status_code == 429:
+        try:
+            time.sleep(min(int(r.json().get("parameters", {}).get("retry_after", 3)) + 1, 30))
+        except Exception:
+            time.sleep(4)
+        r = requests.post(url, timeout=60, **kw)
     if not r.ok:
         print("Telegram error:", r.status_code, r.text[:300])
+        if r.status_code == 403:
+            BLOCKED.add(str(kw.get("data", {}).get("chat_id")))
     return r.ok
 
 
