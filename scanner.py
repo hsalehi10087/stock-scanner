@@ -1106,6 +1106,29 @@ def main():
     except Exception as e:
         print("core live test failed:", e)
         warnings.append("آزمون زنده‌ی استراتژی بهتر از RSI/MACD امروز به‌روز نشد.")
+    try:
+        import portfolio_live
+        pf_blocks, _pf_hl, _pf_ch = portfolio_live.run(series_cache, download_all, pre, short)
+        if pf_blocks:
+            outbox.append((pf_blocks, b"", "portfolio", ()))
+        else:
+            warnings.append("سبد پیشنهادی امروز ساخته نشد.")
+    except Exception as e:
+        print("portfolio failed:", e)
+        warnings.append("سبد پیشنهادی امروز به‌روز نشد.")
+    try:
+        import ai_basket
+        ab_blocks, _ab_hl, _ab_ch = ai_basket.run(download_all, pre)
+        if ab_blocks:
+            outbox.append((ab_blocks, b"", "aibasket", ()))
+        else:
+            warnings.append("سبد هوش مصنوعی امروز ساخته نشد.")
+    except Exception as e:
+        print("ai basket failed:", e)
+        warnings.append("سبد هوش مصنوعی امروز به‌روز نشد.")
+    _saved = [f for f in ("portfolio_state.csv", "portfolio_nav.csv", "ai_basket.csv") if os.path.exists(os.path.join(HERE, f))]
+    if _saved:
+        git_save(_saved, f"Portfolio tracking {dt.date.today()}")
     if mom_blocks:
         outbox.append((mom_blocks, b"", "momentum", ()))
     try:
