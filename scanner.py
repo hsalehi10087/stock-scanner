@@ -796,7 +796,21 @@ def fund_blocks(ranked, watch, prices, bench=None):
             src = src[src.str.startswith("monthly")]
             if len(src):
                 note = f" · فروش ماهانه {src.iloc[0].split()[-1]}"
-        blocks.append(f"{MARKETS[m]} — {len(sub)} برتر از {n_all}{note}\n" + pre(rows))
+        foot = ""
+        if bench:
+            import bench as bench_mod
+            rs, es = [], []
+            for r in sub.itertuples():
+                wr = wmap.get((m, r.ticker))
+                rv = num(wr.return_pct) if wr is not None else None
+                bv = bench_mod.ret(bench, m, wr.added_date, wr.last_date) if wr is not None else None
+                if rv is not None and bv is not None and num(wr.days) and num(wr.days) > 0:
+                    rs.append(rv)
+                    es.append(rv - bv)
+            if len(rs) >= 5:
+                foot = (f"\nمیانگین بازده این فهرست از روز ورود: {sum(rs) / len(rs):+.1f}٪ "
+                        f"(نسبت به شاخص بازار: {sum(es) / len(es):+.1f}٪)")
+        blocks.append(f"{MARKETS[m]} — {len(sub)} برتر از {n_all}{note}\n" + pre(rows) + foot)
     try:
         blocks += iran_blocks()
     except Exception as e:
@@ -834,7 +848,7 @@ def iran_blocks():
             "Prof% = رشد سود (پس از انتشار صورت مالی) · به‌روزرسانی هفتگی: " + updated + "</i>\n" + pre(rows)]
 
 
-def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
+def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl, warnings=(), watch_hl=()):
     """One short message at the top: the most important points of the day, in plain Persian."""
     today = dt.date.today().strftime("%Y-%m-%d")
     d_buy = df[df.daily_signal == "BUY"]
@@ -846,6 +860,8 @@ def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
         names = "، ".join(html.escape(short(t)) for t in aligned.sort_values("daily_rsi").head(5)["ticker"])
         sig.append(f"• چند نمونه از خریدهای قوی‌تر: {names}.")
     sig.append(f"• {new_count} سیگنال جدید امروز در تاریخچه ثبت شد.")
+    if PERF_LINE:
+        sig.append(PERF_LINE)
     if ranked is not None and len(ranked):
         tops = []
         for m in FUND_MARKETS:
@@ -856,7 +872,10 @@ def summary_blocks(df, new_count, ranked, macro_hl, news_hl, quality_hl):
             sig.append("• بیشترین رشد فروش و سود در هر بازار: " + " · ".join(tops) + ".")
     blocks = [f"🗞 <b>خلاصه‌ی امروز</b> — {today}\n"
               "<i>مهم‌ترین نکته‌ها در یک نگاه. جزئیات هر بخش در پیام‌های بعدی است.</i>"]
-    for title, lines in (("📡 سیگنال‌ها", sig), ("🧭 اقتصاد، فلزات و انرژی", macro_hl),
+    if warnings:
+        blocks.append("⚠️ <b>هشدار درباره‌ی داده‌ی امروز</b>\n" + "\n".join(f"• {w}" for w in warnings))
+    for title, lines in (("📡 سیگنال‌ها", sig), ("👀 سهم‌های شما", list(watch_hl)),
+                         ("🧭 اقتصاد، فلزات و انرژی", macro_hl),
                          ("📰 خبرها", news_hl), ("🧠 فیلتر بافت و CANSLIM", quality_hl)):
         if lines:
             blocks.append(f"<b>{title}</b>\n" + "\n".join(lines))
@@ -921,16 +940,30 @@ def main():
         return 1
     df = pd.DataFrame(rows)
     csv = df.sort_values(["market", "daily_signal", "ticker"]).to_csv(index=False).encode("utf-8-sig")
+    warnings = []
+    try:
+        import health
+        warnings += health.coverage_warnings(uni, df)
+    except Exception as e:
+        print("health check failed:", e)
+    bench_series = {}
+    try:
+        import bench as bench_mod
+        bench_series = bench_mod.load(download_all)
+    except Exception as e:
+        print("benchmark load failed:", e)
+        warnings.append("شاخص بازارها دریافت نشد؛ مقایسه با بازار امروز در گزارش‌ها نیست.")
     perf = []
     hist_csv = b""
     try:
-        h, new_count = update_history(df)
+        h, new_count = update_history(df, bench_series)
         perf = perf_blocks(h, new_count)
         hist_csv = h.sort_values(["status", "signal_date"], ascending=[False, False]) \
                     .to_csv(index=False).encode("utf-8-sig")
     except Exception as e:
         print("history failed:", e)
         perf = [f"⚠️ خطا در به‌روزرسانی تاریخچه: {html.escape(str(e))[:200]}"]
+        warnings.append("تاریخچه‌ی سیگنال‌ها امروز به‌روز نشد.")
 
     fblocks, fund_csv = [], b""
     try:
@@ -938,12 +971,13 @@ def main():
         ranked = rank_fundamentals(update_fundamentals(uni))
         top = ranked.groupby("market").head(FUND_TOP) if len(ranked) else ranked
         watch = update_watch(top, prices)
-        fblocks = fund_blocks(ranked, watch, prices)
+        fblocks = fund_blocks(ranked, watch, prices, bench_series)
         if len(ranked):
             fund_csv = ranked.to_csv(index=False).encode("utf-8-sig")
     except Exception as e:
         print("fundamentals failed:", e)
         fblocks = [f"⚠️ خطا در رتبه‌بندی بنیادی: {html.escape(str(e))[:200]}"]
+        warnings.append("رتبه‌بندی بنیادی امروز ساخته نشد.")
 
     qmsgs = []
     try:
@@ -951,15 +985,33 @@ def main():
         qmsgs = quality.build(df, download_all, pre, short, fmt_price)
     except Exception as e:
         print("quality filters failed:", e)
+        warnings.append("فیلترهای بافت و CANSLIM امروز ساخته نشدند.")
 
     saved = [os.path.basename(p) for p in (HIST_PATH, FUND_PATH, WATCH_PATH,
                                            os.path.join(HERE, "quality_cache.csv"),
                                            os.path.join(HERE, "quality_track.csv")) if os.path.exists(p)]
     if not git_save(saved, f"Daily data {dt.date.today()}"):
         perf.append("⚠️ ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
+        warnings.append("ذخیره‌ی تاریخچه در GitHub ناموفق بود.")
     # everything is queued first, so a short summary can be sent before the detailed messages
     outbox = [(build_blocks(df, len(df), total, perf + fblocks), csv, f"signals-{dt.date.today()}.csv",
                [("signals-history.csv", hist_csv), ("fundamentals-rank.csv", fund_csv)])]
+    watch_hl = []
+    try:
+        import watch
+        wblocks, watch_hl = watch.build(df, download_all, analyze, pre, short, fmt_price)
+        if wblocks:
+            outbox.append((wblocks, b"", "watch", ()))
+    except Exception as e:
+        print("watchlist failed:", e)
+        warnings.append("هشدار سهم‌های شما امروز ساخته نشد.")
+    try:
+        import risk
+        rblocks = risk.block(df, pre, short, fmt_price)
+        if rblocks:
+            outbox.append((rblocks, b"", "risk", ()))
+    except Exception as e:
+        print("risk levels failed:", e)
     macro_hl, news_hl = [], []
     try:
         import macro
@@ -967,6 +1019,7 @@ def main():
                              download_all, macd, rsi, pre) or []
     except Exception as e:
         print("macro outlook failed:", e)
+        warnings.append("گزارش اقتصاد، فلزات و انرژی امروز ساخته نشد.")
     try:
         import macro
         import news
@@ -974,12 +1027,18 @@ def main():
                            macro.polymarket, macro.gemini_summary) or []
     except Exception as e:
         print("news digest failed:", e)
+        warnings.append("خلاصه‌ی خبرها امروز ساخته نشد.")
     for blocks in qmsgs[:2]:
         outbox.append((blocks, b"", "quality", ()))
     quality_hl = qmsgs[2] if len(qmsgs) > 2 else []
     try:
+        try:
+            import health
+            warnings += health.ai_warning()
+        except Exception:
+            pass
         send(summary_blocks(df, locals().get("new_count", 0), locals().get("ranked"),
-                            macro_hl, news_hl, quality_hl), b"", "summary")
+                            macro_hl, news_hl, quality_hl, warnings, watch_hl), b"", "summary")
     except Exception as e:
         print("summary failed:", e)
     for blocks, c, fn, docs in outbox:
