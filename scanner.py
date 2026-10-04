@@ -577,6 +577,25 @@ def split_message(text, limit=3900):
     return chunks
 
 
+def send(blocks, csv_bytes, filename, extra_docs=()):
+    """Sends to the owner and, except for personal messages, to every subscriber."""
+    chats = [CHAT_ID]
+    if TOKEN and CHAT_ID and not DRY_RUN:
+        try:
+            import subscribers
+            chats = subscribers.recipients(CHAT_ID, filename)
+        except Exception as e:
+            print("recipients failed:", e)
+    for chat in chats:
+        try:
+            _send_to(chat, blocks, csv_bytes, filename, extra_docs)
+        except Exception as e:
+            print("send failed for one recipient:", str(e)[:100])
+
+
+BLOCKED = set()
+
+
 def tg(method, **kw):
     url = f"https://api.telegram.org/bot{TOKEN}/{method}"
     r = requests.post(url, timeout=60, **kw)
