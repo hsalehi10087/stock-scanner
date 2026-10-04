@@ -294,6 +294,7 @@ def analyze(market, ticker, s):
         "weekly_rsi": round(rw, 1) if rw is not None else None,
         "weekly_hist": round(mw["hist"], 4) if mw else None,
         "aligned": d_code == "BUY" and w_code in ("BUY", "UP"),
+        "unit": float(pd.Series(np.abs(np.diff(daily))).ewm(alpha=1 / 14, adjust=False).mean().iloc[-1]),
         "ret_6m": round((daily[-1] / daily[-127] - 1) * 100, 2) if len(daily) > 127 else None,
         "high_gap": round((daily[-1] / daily[-252:].max() - 1) * 100, 2),
     }
@@ -303,9 +304,10 @@ def analyze(market, ticker, s):
 # Signal history & performance tracking (signals_history.csv in the repo)
 # ---------------------------------------------------------------------------
 HIST_PATH = os.path.join(HERE, "signals_history.csv")
+PERF_LINE = ""
 HIST_COLS = ["signal_date", "market", "ticker", "timeframe", "side", "reason", "aligned",
              "entry_price", "last_date", "last_price", "return_pct", "max_return", "min_return",
-             "days", "status", "close_date", "close_reason"]
+             "days", "status", "close_date", "close_reason", "bench_return"]
 HOLD_DAYS = {"D": 60, "W": 180}   # tracking period in calendar days, then the signal is closed
 
 
@@ -329,7 +331,7 @@ def _close(h, i, date, reason):
     h.at[i, "close_reason"] = reason
 
 
-def update_history(cur):
+def update_history(cur, bench=None):
     """Mark open signals to market, close expired/reversed ones, add today's new signals."""
     h = load_history()
     prices = {(r.market, r.ticker): (float(r.close), r.last_date) for r in cur.itertuples()}
@@ -376,6 +378,11 @@ def update_history(cur):
             })
     if new:
         h = pd.concat([h, pd.DataFrame(new, columns=HIST_COLS).astype(object)], ignore_index=True)
+    if bench:  # index return over the same dates, so every signal can be compared with its market
+        import bench as bench_mod
+        for i in h.index:
+            b = bench_mod.ret(bench, h.at[i, "market"], h.at[i, "signal_date"], h.at[i, "last_date"])
+            h.at[i, "bench_return"] = "" if b is None else round(b, 2)
     h.to_csv(HIST_PATH, index=False)
     return h, len(new)
 
@@ -385,7 +392,15 @@ def perf_blocks(h, new_count):
     hh = h.copy()
     hh["days_n"] = pd.to_numeric(hh["days"], errors="coerce").fillna(0)
     hh["ret_n"] = pd.to_numeric(hh["return_pct"], errors="coerce").fillna(0)
+    bn = pd.to_numeric(hh["bench_return"], errors="coerce") if "bench_return" in hh else pd.Series(np.nan, index=hh.index)
+    hh["exc_n"] = hh["ret_n"] - hh["side"].map({"BUY": 1.0, "SELL": -1.0}).fillna(1.0) * bn
     seasoned = hh[hh["days_n"] >= 1]
+    global PERF_LINE
+    PERF_LINE = ""
+    be = seasoned[(seasoned["side"] == "BUY") & seasoned["exc_n"].notna()]
+    if len(be) >= 20:
+        PERF_LINE = (f"• خریدهای قبلی ({len(be)} مورد) تا امروز به‌طور میانگین {be['exc_n'].mean():+.1f}٪ "
+                     "نسبت به شاخص بازار همان کشور داشته‌اند.")
     if seasoned.empty:
         return [f"{title}\nتاریخچه از امروز شروع شد · {new_count} سیگنال جدید ثبت شد. "
                 "از اسکن بعدی، بازدهی هر سیگنال اینجا نمایش داده می‌شود."]
@@ -393,15 +408,17 @@ def perf_blocks(h, new_count):
     for tf in ("D", "W"):
         for side, s in (("BUY", "Buy"), ("SELL", "Sell")):
             groups.append((f"{s}-{tf}", seasoned[(seasoned["timeframe"] == tf) & (seasoned["side"] == side)]))
-    rows = [f"{'Group':<10}{'N':>5}{'Win%':>7}{'Avg%':>8}", "-" * 30]
+    rows = [f"{'Group':<10}{'N':>5}{'Win%':>6}{'Avg%':>7}{'Exc%':>7}", "-" * 35]
     for label, sub in groups:
         if sub.empty:
             continue
         win = (sub["ret_n"] > 0).mean() * 100
-        rows.append(f"{label:<10}{len(sub):>5}{win:>7.0f}{sub['ret_n'].mean():>+8.2f}")
+        ex = sub["exc_n"].mean()
+        rows.append(f"{label:<10}{len(sub):>5}{win:>6.0f}{sub['ret_n'].mean():>+7.2f}"
+                    f"{(f'{ex:+.2f}' if ex == ex else '-'):>7}")
     blocks = [title + "\n<i>بازده از روز سیگنال تا امروز؛ در فروش، افت قیمت = سود</i>\n" + pre(rows) +
               "\n<i>D=روزانه · W=هفتگی · Aligned*=خرید روزانه هم‌جهت با روند هفتگی · "
-              "Win%=درصد سیگنال‌های سودده</i>"]
+              "Win%=درصد سیگنال‌های سودده · Exc%=برتری نسبت به شاخص بازار همان کشور (در فروش برعکس)</i>"]
 
     def table(sub):
         out = [f"{'Symbol':<12}{'Sig':<7}{'Date':<6}{'Days':>4}{'Ret%':>7}", "-" * 36]
@@ -746,7 +763,7 @@ def update_watch(top, prices):
     return w
 
 
-def fund_blocks(ranked, watch, prices):
+def fund_blocks(ranked, watch, prices, bench=None):
     head = ("📊 <b>رتبه‌بندی بنیادی: رشد فروش و سود</b>\n"
             "<i>آخرین گزارش فصلی نسبت به فصل مشابه سال قبل (تایوان: فروش ماهانه نسبت به ماه مشابه سال قبل) · "
             "Ret% = بازده از روزی که نماد وارد این فهرست شد</i>")
