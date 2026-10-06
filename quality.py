@@ -219,6 +219,11 @@ def track(lists, prices):
     return w
 
 
+def open_date(w, name, m, t):
+    sub = w[(w["list"] == name) & (w["market"] == m) & (w["ticker"] == t) & (w["status"] == "OPEN")]
+    return str(sub["added_date"].iloc[-1])[5:] if len(sub) else "-"
+
+
 def open_return(w, name, m, t):
     sub = w[(w["list"] == name) & (w["market"] == m) & (w["ticker"] == t) & (w["status"] == "OPEN")]
     return _num(sub["return_pct"].iloc[-1]) if len(sub) else None
