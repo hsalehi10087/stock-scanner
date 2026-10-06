@@ -836,7 +836,7 @@ def update_watch(top, prices):
 def fund_blocks(ranked, watch, prices, bench=None):
     head = ("📊 <b>رتبه‌بندی بنیادی: رشد فروش و سود</b>\n"
             "<i>آخرین گزارش فصلی نسبت به فصل مشابه سال قبل (تایوان: فروش ماهانه نسبت به ماه مشابه سال قبل) · "
-            "Ret% = بازده از روزی که نماد وارد این فهرست شد</i>")
+            "Sal% رشد فروش · Prf% رشد سود · Date تاریخ ورود به فهرست (ماه-روز) · Ret% = بازده از روزی که نماد وارد این فهرست شد</i>")
     if ranked.empty:
         return [head + "\nداده‌ی بنیادی هنوز آماده نیست؛ در اجراهای بعدی تکمیل می‌شود."]
     wmap = {(r.market, r.ticker): r for r in watch.itertuples()}
