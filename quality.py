@@ -382,7 +382,7 @@ def build(df, download_all, pre, short, fmt_price):
         sub = cand[cand["market"] == m].sort_values(["passed", "rs"], ascending=False).head(TOP) if len(cand) else cand
         if sub.empty:
             continue
-        t = [f"{'Symbol':<9}{'Sig':<4}{'CANLI':<6}{'EPSq':>5}{'RS':>4}{'Ret%':>6}", "-" * 34]
+        t = [f"{'Symbol':<7}{'Sig':<4}{'Date':<6}{'CANLI':<6}{'EPSq':>5}{'RS':>4}{'Ret%':>6}", "-" * 38]
         for r in sub.itertuples():
             word = "".join(k if r.checks[k] else "-" for k in "CANLI")
             ret = open_return(tw, "canslim", r.market, r.ticker)
