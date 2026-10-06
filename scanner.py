@@ -432,6 +432,36 @@ def perf_blocks(h, new_count):
     blocks = [title + "\n<i>بازده از روز سیگنال تا امروز؛ در فروش، افت قیمت = سود</i>\n" + pre(rows) +
               "\n<i>D=روزانه · W=هفتگی · Aligned*=خرید روزانه هم‌جهت با روند هفتگی · "
               "Win%=درصد سیگنال‌های سودده · Exc%=برتری نسبت به شاخص بازار همان کشور (در فروش برعکس)</i>"]
+    # how signals did by age, and the return ~1 week / ~1 month after each signal
+    ar = [f"{'Age':<8}{'N':>5}{'Win%':>6}{'Avg%':>7}{'Exc%':>7}", "-" * 33]
+    for label, lo, hi in (("1-5d", 1, 5), ("6-20d", 6, 20), ("21d+", 21, 10 ** 6)):
+        sb = seasoned[(seasoned["days_n"] >= lo) & (seasoned["days_n"] <= hi)]
+        if len(sb):
+            ex = sb["exc_n"].mean()
+            ar.append(f"{label:<8}{len(sb):>5}{(sb['ret_n'] > 0).mean() * 100:>6.0f}{sb['ret_n'].mean():>+7.2f}"
+                      f"{(f'{ex:+.2f}' if ex == ex else '-'):>7}")
+    hz = [f"{'After':<9}{'N':>5}{'Win%':>6}{'Avg%':>7}{'Exc%':>7}", "-" * 34]
+    for label, rc, bc in (("~1 week", "ret_1w", "bench_1w"), ("~1 month", "ret_1m", "bench_1m")):
+        if rc not in hh.columns:
+            continue
+        r_ = pd.to_numeric(hh[rc], errors="coerce")
+        sb = hh[r_.notna()]
+        if len(sb):
+            r_ = r_[r_.notna()]
+            b_ = pd.to_numeric(sb[bc], errors="coerce") * sb["side"].map({"BUY": 1.0, "SELL": -1.0}).fillna(1.0)
+            ex = (r_ - b_).mean()
+            hz.append(f"{label:<9}{len(sb):>5}{(r_ > 0).mean() * 100:>6.0f}{r_.mean():>+7.2f}"
+                      f"{(f'{ex:+.2f}' if ex == ex else '-'):>7}")
+    if len(ar) > 2:
+        blocks.append("⏱ <b>اثر کوتاه‌مدت سیگنال‌ها</b>\n"
+                      "<i>سیگنال‌ها بر اساس اینکه چند روز از صدورشان گذشته (هر سیگنال فقط یک‌بار، در ردیف سنِ فعلی‌اش). "
+                      "بازده یعنی «اگر از سیگنال پیروی کرده بودید»؛ در فروش، افت قیمت = سود. Exc% برتری نسبت به شاخص بازار همان کشور.</i>\n" + pre(ar))
+    if len(hz) > 2:
+        blocks.append("🎯 <b>بازده دقیقاً حدود ۱ هفته و ۱ ماه بعد از صدور</b>\n"
+                      "<i>این بازده در همان روزی ثبت می‌شود که سیگنال به یک هفته یا یک ماه می‌رسد (از امروز به بعد؛ سیگنال‌های قدیمی‌تر ندارند). "
+                      "برای نتیجه‌گیری به چند صد سیگنال و چند هفته داده نیاز است.</i>\n" + pre(hz))
+    else:
+        blocks.append("🎯 هنوز هیچ سیگنالی به یک هفته نرسیده؛ بازدهِ «دقیقاً یک هفته بعد» از چند روز دیگر اینجا می‌آید.")
 
     def table(sub):
         out = [f"{'Symbol':<12}{'Sig':<7}{'Date':<6}{'Days':>4}{'Ret%':>7}", "-" * 36]
