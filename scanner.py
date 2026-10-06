@@ -858,7 +858,7 @@ def fund_blocks(ranked, watch, prices, bench=None):
             wr = wmap.get((m, r.ticker))
             ret = num(wr.return_pct) if wr is not None else None
             rows.append(f"{short(r.ticker)[:7]:<7}{g(r.rev_growth):>5}{g(r.profit_growth):>5}"
-                        f"{fmt_price(p):>9}{(f'{ret:+.1f}' if ret is not None else '-'):>6}")
+                        f"{fmt_price(p):>8}{(str(wr.added_date)[5:] if wr is not None else '-'):>6}{(f'{ret:+.1f}' if ret is not None else '-'):>6}")
         n_all = (ranked["market"] == m).sum()
         note = ""
         if m == "TW" and "rev_source" in sub.columns:
