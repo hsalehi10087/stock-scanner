@@ -386,7 +386,7 @@ def build(df, download_all, pre, short, fmt_price):
         for r in sub.itertuples():
             word = "".join(k if r.checks[k] else "-" for k in "CANLI")
             ret = open_return(tw, "canslim", r.market, r.ticker)
-            t.append(f"{short(r.ticker)[:9]:<9}{r.sig:<4}{word:<6}{f0(r.epsq, '{:+.0f}'):>5}{f0(r.rs):>4}"
+            t.append(f"{short(r.ticker)[:7]:<7}{r.sig:<4}{open_date(tw, 'canslim', r.market, r.ticker):<6}{word:<6}{f0(r.epsq, '{:+.0f}'):>5}{f0(r.rs):>4}"
                      f"{f0(ret, '{:+.1f}'):>6}")
         c_blocks.append(f"{MARKET_FA[m]}\n" + pre(t))
 
