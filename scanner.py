@@ -852,7 +852,7 @@ def fund_blocks(ranked, watch, prices, bench=None):
         sub = ranked[ranked["market"] == m].head(FUND_TOP)
         if sub.empty:
             continue
-        rows = [f"{'Symbol':<8}{'Sales%':>7}{'Prof%':>7}{'Price':>9}{'Ret%':>6}", "-" * 37]
+        rows = [f"{'Symbol':<7}{'Sal%':>5}{'Prf%':>5}{'Price':>8}{'Date':>6}{'Ret%':>6}", "-" * 37]
         for r in sub.itertuples():
             p = prices.get((m, r.ticker), (None, None))[0]
             wr = wmap.get((m, r.ticker))
