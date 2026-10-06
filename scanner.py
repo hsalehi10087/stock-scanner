@@ -307,7 +307,8 @@ HIST_PATH = os.path.join(HERE, "signals_history.csv")
 PERF_LINE = ""
 HIST_COLS = ["signal_date", "market", "ticker", "timeframe", "side", "reason", "aligned",
              "entry_price", "last_date", "last_price", "return_pct", "max_return", "min_return",
-             "days", "status", "close_date", "close_reason", "bench_return"]
+             "days", "status", "close_date", "close_reason", "bench_return",
+             "ret_1w", "bench_1w", "ret_1m", "bench_1m"]
 HOLD_DAYS = {"D": 60, "W": 180}   # tracking period in calendar days, then the signal is closed
 
 
