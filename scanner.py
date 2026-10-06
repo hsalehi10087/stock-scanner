@@ -384,6 +384,18 @@ def update_history(cur, bench=None):
         for i in h.index:
             b = bench_mod.ret(bench, h.at[i, "market"], h.at[i, "signal_date"], h.at[i, "last_date"])
             h.at[i, "bench_return"] = "" if b is None else round(b, 2)
+            if h.at[i, "status"] == "OPEN":   # the return when the signal reaches ~1 week / ~1 month of age
+                try:
+                    dd = float(h.at[i, "days"] or 0)
+                    rr = float(h.at[i, "return_pct"] or 0)
+                    if dd >= 7 and str(h.at[i, "ret_1w"]) in ("", "nan"):
+                        h.at[i, "ret_1w"] = round(rr, 2)
+                        h.at[i, "bench_1w"] = "" if b is None else round(b, 2)
+                    if dd >= 30 and str(h.at[i, "ret_1m"]) in ("", "nan"):
+                        h.at[i, "ret_1m"] = round(rr, 2)
+                        h.at[i, "bench_1m"] = "" if b is None else round(b, 2)
+                except (TypeError, ValueError):
+                    pass
     h.to_csv(HIST_PATH, index=False)
     return h, len(new)
 
