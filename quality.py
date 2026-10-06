@@ -352,7 +352,7 @@ def build(df, download_all, pre, short, fmt_price):
         sub = good[good["market"] == m].sort_values("buf", ascending=False).head(TOP) if len(good) else good
         if sub.empty:
             continue
-        t = [f"{'Symbol':<8}{'Sig':<3}{'Buf':>4}{'ROE':>4}{'D/E':>5}{'PE':>4}{'Ret%':>6}", "-" * 34]
+        t = [f"{'Symbol':<7}{'Sig':<4}{'Date':<6}{'Buf':>4}{'ROE':>4}{'D/E':>4}{'PE':>3}{'Ret%':>6}", "-" * 38]
         for r in sub.itertuples():
             ret = open_return(tw, "buffett", r.market, r.ticker)
             t.append(f"{short(r.ticker)[:8]:<8}{r.sig:<3}{f0(r.buf):>4}{f0(r.roe):>4}"
