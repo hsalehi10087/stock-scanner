@@ -394,7 +394,7 @@ def build(df, download_all, pre, short, fmt_price):
     if len(both):
         def nm(r):
             ret = open_return(tw, "all3", r.market, r.ticker)
-            return f"{html.escape(short(r.ticker))} ({MARKET_FA[r.market].split()[-1]}، {f0(ret, '{:+.1f}')}٪)"
+            return f"{html.escape(short(r.ticker))} ({MARKET_FA[r.market].split()[-1]}، از {open_date(tw, 'all3', r.market, r.ticker)}، {f0(ret, '{:+.1f}')}٪)"
         names = "، ".join(nm(r) for r in both.itertuples())
         c_blocks.append("⭐ <b>هر سه با هم</b> (سیگنال خرید + معیار بافت + CANSLIM):\n" + names)
     c_blocks.append(perf_block(tw, "canslim", short))
