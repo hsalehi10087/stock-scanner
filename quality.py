@@ -359,7 +359,7 @@ def build(df, download_all, pre, short, fmt_price):
                      f"{f0(r.de, '{:.1f}'):>4}{f0(r.pe):>3}{f0(ret, '{:+.1f}'):>6}")
         b_blocks.append(f"{MARKET_FA[m]}\n" + pre(t))
     b_blocks.append(perf_block(tw, "buffett", short))
-    b_blocks.append("<i>Ret% = بازده هر سهم از روزی که وارد این فهرست شده. "
+    b_blocks.append("<i>Date = تاریخ ورود به این فهرست (ماه-روز) · Ret% = بازده هر سهم از همان روز تا امروز. "
                     "امتیاز بافت فقط بخش قابل محاسبه‌ی جدول است. مزیت رقابتی و کیفیت مدیریت را خودتان بررسی کنید. "
                     "این فهرست توصیه‌ی خرید نیست.</i>")
 
