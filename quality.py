@@ -399,7 +399,7 @@ def build(df, download_all, pre, short, fmt_price):
         c_blocks.append("⭐ <b>هر سه با هم</b> (سیگنال خرید + معیار بافت + CANSLIM):\n" + names)
     c_blocks.append(perf_block(tw, "canslim", short))
     c_blocks.append("⭐ " + perf_block(tw, "all3", short).replace("📈 <b>بازدهی این فهرست", "<b>بازدهی فهرست «هر سه با هم»", 1))
-    c_blocks.append("<i>Ret% = بازده هر سهم از روزی که وارد این فهرست شده. شرط S (عرضه و تقاضای سهم) خودکار بررسی نمی‌شود. این فهرست توصیه‌ی خرید نیست.</i>")
+    c_blocks.append("<i>Date = تاریخ ورود به این فهرست (ماه-روز) · Ret% = بازده هر سهم از همان روز تا امروز. شرط S (عرضه و تقاضای سهم) خودکار بررسی نمی‌شود. این فهرست توصیه‌ی خرید نیست.</i>")
     hl = []
     if len(good):
         hl.append(f"• {len(good)} سهم هم سیگنال خرید دارند و هم از نظر معیار بافت امتیاز بالای {BUFFETT_MIN} گرفته‌اند.")
