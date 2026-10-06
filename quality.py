@@ -355,7 +355,7 @@ def build(df, download_all, pre, short, fmt_price):
         t = [f"{'Symbol':<7}{'Sig':<4}{'Date':<6}{'Buf':>4}{'ROE':>4}{'D/E':>4}{'PE':>3}{'Ret%':>6}", "-" * 38]
         for r in sub.itertuples():
             ret = open_return(tw, "buffett", r.market, r.ticker)
-            t.append(f"{short(r.ticker)[:8]:<8}{r.sig:<3}{f0(r.buf):>4}{f0(r.roe):>4}"
+            t.append(f"{short(r.ticker)[:7]:<7}{r.sig:<4}{open_date(tw, 'buffett', r.market, r.ticker):<6}{f0(r.buf):>4}{f0(r.roe):>4}"
                      f"{f0(r.de, '{:.1f}'):>5}{f0(r.pe):>4}{f0(ret, '{:+.1f}'):>6}")
         b_blocks.append(f"{MARKET_FA[m]}\n" + pre(t))
     b_blocks.append(perf_block(tw, "buffett", short))
