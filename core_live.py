@@ -170,7 +170,8 @@ def run(series_cache, bench_series, pre, short, force=False):
         "• <b>TechOld</b>: سهم‌هایی که MACD مثبت و RSI زیر ۷۰ دارند",
         "<i>Cum% بازده از شروع آزمون · MTD% بازده ماه جاری · vsEW اختلاف با EW (مثبت یعنی بهتر از «نگه‌داشتن همه») · "
         "Beat تعداد ماه‌های کامل که از EW بهتر بود از کل ماه‌های کامل</i>",
-        "📊 <b>جدول امتیاز</b> (میانگین پنج بازار با وزن مساوی)\n" + pre(t),
+        f"📊 <b>جدول امتیاز</b> — از {str(cohorts['entry_date'].min())[5:]} "
+        f"({(today - dt.date.fromisoformat(str(cohorts['entry_date'].min()))).days} روز) · میانگین پنج بازار با وزن مساوی\n" + pre(t),
     ]
     if n_closed < 6:
         blocks.append(f"⏳ هنوز فقط {n_closed} ماه کامل داریم. با کمتر از ۶ ماه نمی‌شود نتیجه گرفت.")
