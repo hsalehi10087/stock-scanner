@@ -155,11 +155,11 @@ def run(series_cache, bench_series, pre, short, force=False):
     if not (new_rows or first or force or today.weekday() == 5):
         return [], hl
 
-    t = [f"{'Strategy':<10}{'Cum%':>7}{'MTD%':>7}{'vsEW':>7}{'Beat':>6}", "-" * 37]
+    t = [f"{'Strat':<9}{'Cum':>6}{'MTD':>6}{'vsEW':>6}{'Beat':>5}", "-" * 32]
     for r in rows:
-        t.append(f"{r['name']:<10}{mt.f1(r['cum']):>7}{mt.f1(r['mtd']):>7}"
-                 f"{(mt.f1(r['vs_ew']) if r['name'] != 'EW' else '-'):>7}"
-                 f"{(str(r['beat']) + '/' + str(r['closed']) if r['name'] not in ('EW', 'Index') else '-'):>6}")
+        t.append(f"{r['name']:<9}{mt.f1(r['cum']):>6}{mt.f1(r['mtd']):>6}"
+                 f"{(mt.f1(r['vs_ew']) if r['name'] != 'EW' else '-'):>6}"
+                 f"{(str(r['beat']) + '/' + str(r['closed']) if r['name'] not in ('EW', 'Index') else '-'):>5}")
     blocks = [
         f"🏅 <b>آزمون زنده‌ی استراتژی‌های بهتر از RSI/MACD</b> — {today}\n"
         "<i>در بک‌تست ۱۰ ساله، مومنتوم تعدیل‌شده با نوسان (V1-RAMom) بهترین نتیجه را داشت: سالی حدود ۱۰٪ بهتر از نگه‌داشتن همه‌ی سهم‌ها "
