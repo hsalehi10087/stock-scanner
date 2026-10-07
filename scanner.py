@@ -1183,6 +1183,11 @@ def main():
         print("whales failed:", e)
         warnings.append("گزارش سرمایه‌گذاران بزرگ امروز به‌روز نشد.")
     _wsaved = [f for f in ("whales_state.json", "whales_cache.json") if os.path.exists(os.path.join(HERE, f))]
+    try:
+        import whales_web
+        _wsaved += whales_web.probe()
+    except Exception as e:
+        print("web probe failed:", e)
     if _wsaved:
         git_save(_wsaved, f"Whales tracking {dt.date.today()}")
     if mom_blocks:
