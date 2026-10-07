@@ -1198,6 +1198,16 @@ def main():
     except Exception as e:
         print("whales failed:", e)
         warnings.append("گزارش سرمایه‌گذاران بزرگ امروز به‌روز نشد.")
+    try:
+        import alpaca_live
+        al_blocks, _al_hl, _al_ch = alpaca_live.run(pre)
+        if al_blocks:
+            outbox.append((al_blocks, b"", "alpaca", ()))
+        if os.path.exists(os.path.join(HERE, "alpaca_state.json")):
+            git_save(["alpaca_state.json"], f"Alpaca state {dt.date.today()}")
+    except Exception as e:
+        print("alpaca failed:", e)
+        warnings.append("حساب Alpaca امروز به‌روز نشد.")
     _wsaved = [f for f in ("whales_state.json", "whales_cache.json") if os.path.exists(os.path.join(HERE, f))]
     try:
         import whales_web
