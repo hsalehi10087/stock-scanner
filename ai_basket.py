@@ -113,11 +113,12 @@ def run(download_all, pre, force=False):
           f"{'AI basket (' + str(n) + ')':<14}{f1(port_day):>7}{f1(port):>9}",
           f"{'QQQ (Nasdaq)':<14}{f1(qq_d):>7}{f1(qq):>9}",
           f"{'VT (world)':<14}{f1(vt_d):>7}{f1(vt):>9}"]
-    t2 = [f"{'Symbol':<6}{'Date':<6}{'Days':>4}{'Ret%':>8}{'Day%':>7}{'P10x':>8}", "-" * 39]
+    t2 = [f"{'Sym':<6}{'Entry':<6}{'Ret%':>7}{'Day%':>6}", "-" * 25]
+    t3 = [f"{'Sym':<6}{'10x@15':>7}{'10x@30':>7}{'-50%':>6}", "-" * 26]
     for _, r in st.sort_values("ret", ascending=False).iterrows():
-        pp = f"{r['p10_15'] * 100:.0f}/{r['p10_30'] * 100:.0f}" if r["p10_15"] == r["p10_15"] else "-"
-        age = (today - dt.date.fromisoformat(str(r["entry_date"]))).days
-        t2.append(f"{r['ticker']:<6}{str(r['entry_date'])[5:]:<6}{age:>4}{f1(r['ret']):>8}{f1(r['day']):>7}{pp:>8}")
+        t2.append(f"{r['ticker']:<6}{str(r['entry_date'])[5:]:<6}{f1(r['ret']):>7}{f1(r['day']):>6}")
+        if r["p10_15"] == r["p10_15"]:
+            t3.append(f"{r['ticker']:<6}{r['p10_15'] * 100:>6.1f}%{r['p10_30'] * 100:>6.1f}%{r['p_loss50'] * 100:>5.0f}%")
     ok = st["p10_15"].notna()
     any15 = 1 - float(np.prod(1 - st.loc[ok, "p10_15"]))
     any30 = 1 - float(np.prod(1 - st.loc[ok, "p10_30"]))
