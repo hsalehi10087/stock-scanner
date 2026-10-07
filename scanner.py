@@ -539,7 +539,13 @@ def fmt_price(p):
 
 
 def pre(lines):
-    return "<b><pre>" + html.escape("\n".join(lines)) + "</pre></b>"
+    import re as _re
+    out = []
+    for ln in lines:
+        if ln.strip() and set(ln.strip()) <= {"-"}:
+            continue
+        out.append(html.escape(_re.sub(r"\s{2,}", " │ ", ln.strip())))
+    return "<b>" + "\n".join(out) + "</b>"
 
 
 def signal_table(sub, rsi_col):
