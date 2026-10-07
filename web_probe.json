@@ -1,27 +1,18 @@
 {
  "dataroma_home": {
   "status": 200,
-  "bytes": 56884,
-  "tables": 5
+  "bytes": 57007
  },
- "dataroma_managers": {
-  "status": 200,
-  "bytes": 211850,
-  "tables": 1
- },
- "dataroma_activity_brk": {
-  "status": 200,
-  "bytes": 33469,
-  "tables": 1
- },
- "dataroma_holdings_brk": {
-  "status": 200,
-  "bytes": 24771,
-  "tables": 2
+ "capitol_bff": {
+  "status": 503,
+  "bytes": 1019
  },
  "capitol_trades": {
   "status": 429,
-  "bytes": 33962,
-  "tables": 0
+  "bytes": 33939
+ },
+ "house_watcher": {
+  "status": 403,
+  "bytes": 243
  }
 }
