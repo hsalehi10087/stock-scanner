@@ -178,7 +178,7 @@ def tag_pc(pc):
 
 
 def pre(lines):
-    return "<pre>" + html.escape("\n".join(lines)) + "</pre>"
+    return "<b><pre>" + html.escape("\n".join(lines)) + "</pre></b>"
 
 
 def fmt_diff(d):
