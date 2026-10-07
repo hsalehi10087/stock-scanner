@@ -539,7 +539,7 @@ def fmt_price(p):
 
 
 def pre(lines):
-    return "<pre>" + html.escape("\n".join(lines)) + "</pre>"
+    return "<b><pre>" + html.escape("\n".join(lines)) + "</pre></b>"
 
 
 def signal_table(sub, rsi_col):
