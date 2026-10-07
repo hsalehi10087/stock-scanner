@@ -112,7 +112,12 @@ def dr_insiders(text):
 
 
 def pre(lines):
-    return "<b><pre>" + html.escape("\n".join(lines)) + "</pre></b>"
+    out = []
+    for ln in lines:
+        if ln.strip() and set(ln.strip()) <= {"-"}:
+            continue
+        out.append(html.escape(re.sub(r"\s{2,}", " │ ", ln.strip())))
+    return "<b>" + "\n".join(out) + "</b>"
 
 
 def fmt_activity(rows, top=7):
