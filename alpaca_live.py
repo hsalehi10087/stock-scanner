@@ -245,4 +245,4 @@ def run(pre):
         blocks.append("⚠️ " + html.escape("؛ ".join(log[:6])))
     blocks.append("<i>این حساب آزمایشی است و پول واقعی در آن نیست. نتیجه‌ی آن دقیق‌تر از سبد کاغذی است، چون قیمت اجرای واقعی را دارد.</i>")
     hl = [f"• حساب Alpaca: {eq:,.0f}$ ({since_pct:+.1f}٪ از شروع)."]
-    return blocks, hl, changed, log
+    return blocks, hl, changed
