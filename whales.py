@@ -177,25 +177,38 @@ def tag_pc(pc):
     return " (Put)" if pc == "PUT" else (" (Call)" if pc == "CALL" else "")
 
 
+def pre(lines):
+    return "<pre>" + html.escape("\n".join(lines)) + "</pre>"
+
+
 def fmt_diff(d):
-    lines = []
+    """Changes as a small table: Move / Stock / Chg% / Wt% (weight in the portfolio; for SOLD the old weight)."""
+    rows = []
     for w, n, pc in d["new"]:
-        lines.append(f"🆕 خرید جدید: {html.escape(short_name(n))}{tag_pc(pc)} — {w:.1f}٪ سبد")
+        rows.append(("NEW", short_name(n) + tag_pc(pc), "-", w))
     for w, n, ch, pc in d["up"]:
-        lines.append(f"➕ افزایش {ch:.0f}٪: {html.escape(short_name(n))}{tag_pc(pc)} — اکنون {w:.1f}٪ سبد")
+        rows.append(("ADD", short_name(n) + tag_pc(pc), f"+{ch:.0f}", w))
     for w, n, ch, pc in d["down"]:
-        lines.append(f"➖ کاهش {abs(ch):.0f}٪: {html.escape(short_name(n))}{tag_pc(pc)} — اکنون {w:.1f}٪ سبد")
+        rows.append(("CUT", short_name(n) + tag_pc(pc), f"{ch:.0f}", w))
     for w, n, pc in d["gone"]:
-        lines.append(f"❌ فروش کامل: {html.escape(short_name(n))}{tag_pc(pc)} — بود {w:.1f}٪ سبد")
-    return lines or ["تغییر قابل‌توجهی (بیش از ۲۵٪ سهم یا ورود/خروج بالای ۰٫۵٪ سبد) نبود."]
+        rows.append(("SOLD", short_name(n) + tag_pc(pc), "-100", w))
+    if not rows:
+        return "تغییر قابل‌توجهی نبود (کمتر از ۲۵٪ تغییر سهم یا زیر ۰٫۵٪ سبد)."
+    t = [f"{'Move':<6}{'Stock':<15}{'Chg%':>5}{'Wt%':>5}", "-" * 31]
+    for mv, nm, ch, w in rows:
+        t.append(f"{mv:<6}{nm[:14]:<15}{ch:>5}{w:>5.1f}")
+    return pre(t)
 
 
-def fmt_top(top, k=5):
-    return "، ".join(f"{html.escape(short_name(t['name']))}{tag_pc(t['pc'])} {t['w']:.0f}٪" for t in top[:k])
+def fmt_top(top, k=6):
+    t = [f"{'Top holdings':<20}{'Wt%':>6}", "-" * 26]
+    for x in top[:k]:
+        t.append(f"{(short_name(x['name']) + tag_pc(x['pc']))[:19]:<20}{x['w']:>6.1f}")
+    return pre(t)
 
 
 def refresh_investor(label, cik, word, cache, state, first_run):
-    """Checks one investor; returns (new_filing_entry or None, error or None)."""
+    """Checks one investor; returns (new_filing_lines or None, error or None)."""
     sub = submissions(cik)
     if not sub:
         return None, f"{label}: دریافت نشد"
@@ -314,12 +327,10 @@ def insider_trades(state, today):
                     tot[t["code"]][1] += t["shares"] * t["price"]
             for code, (sh, usd) in tot.items():
                 if usd >= MIN_INSIDER_USD:
-                    verb = "🟢 خرید" if code == "P" else "🔴 فروش"
-                    lines.append((usd, f"{verb} {tk}: {html.escape(owner)}"
-                                       + (f" ({html.escape(role)})" if role else "")
-                                       + f" — {sh:,.0f} سهم ≈ ${usd / 1e6:,.1f}M · ثبت {f['filed'][5:]}"))
+                    lines.append((usd, {"date": f["filed"][5:], "sym": tk, "act": "BUY" if code == "P" else "SELL",
+                                        "who": owner.split()[0][:9] if owner else "?", "usd": usd}))
     state["form4_seen"] = (list(seen) + new_seen)[-400:]
-    return [l for _, l in sorted(lines, key=lambda x: -x[0])[:12]], first
+    return [x for _, x in sorted(lines, key=lambda x: -x[0])[:10]], first
 
 
 # ------------------------------------------------------------------ main entry
@@ -339,9 +350,9 @@ def run(today=None):
             new_filings.append(ent)
         if err:
             errors.append(err)
-    ins_lines, ins_first = [], False
+    ins_rows, ins_first = [], False
     try:
-        ins_lines, ins_first = insider_trades(state, today)
+        ins_rows, ins_first = insider_trades(state, today)
     except Exception as e:
         errors.append(f"معاملات داخلی: خطا ({type(e).__name__})")
     web_blocks = []
@@ -354,48 +365,50 @@ def run(today=None):
     json.dump(cache, open(CACHE, "w"), ensure_ascii=False)
     json.dump(state, open(STATE, "w"), ensure_ascii=False)
     if not cache:
-        return [f"🐋 <b>سرمایه‌گذاران بزرگ</b> — {today}\nامروز داده‌ای از SEC دریافت نشد."], [], False
+        return [f"🐋 <b>سرمایه‌گذاران بزرگ</b> — {today}\nامروز داده‌ای از SEC دریافت نشد."] + web_blocks, [], False
 
-    blocks = [f"🐋 <b>گزارش روزانه‌ی سرمایه‌گذاران بزرگ</b> — {today}\n"
-              "<i>منبع: سازمان بورس آمریکا (SEC). فایل ۱۳F هر سرمایه‌گذار فقط فصلی و ۴۵ روز بعد از پایان فصل می‌آید و سهام آمریکایی را نشان می‌دهد، "
-              "نه معاملات همین امروز. برای تغییرات روزانه، معاملات مدیران شرکت‌های بزرگ (فرم ۴) را هم می‌آورم.</i>"]
+    name_fa = lambda lab: html.escape(lab.split(" · ")[0])
+    blocks = [f"🐋 <b>گزارش سرمایه‌گذاران بزرگ</b> — {today}\n"
+              "<i>منبع: SEC و Dataroma. فایل ۱۳F فصلی است و ۴۵ روز دیرتر می‌آید؛ معاملات مدیران روزانه است.</i>"]
     hl = []
     if first_run:
-        rows = []
         for label, cik, _ in FILERS:
             e = cache.get(str(cik))
             if e:
-                rows.append(f"<b>{html.escape(label)}</b> ({period_label(e['period'])}، {e['summary']['n']} سهم)\n{fmt_top(e['summary']['top'], 4)}")
-        blocks.append("📋 <b>شروع پیگیری — بزرگ‌ترین سهام هر نفر</b>\n" + "\n\n".join(rows))
+                blocks.append(f"<b>{name_fa(label)}</b> — {period_label(e['period'])}، {e['summary']['n']} سهم\n" + fmt_top(e["summary"]["top"], 5))
+    for e in new_filings:
+        blocks.append(f"📄 <b>فایل جدید: {name_fa(e['label'])}</b> — فصل {period_label(e['period'])} (ثبت {e['filed']})\n"
+                      + (fmt_diff(e["diff"]) if e["diff"] else "فصل قبلی برای مقایسه نبود.")
+                      + "\n" + fmt_top(e["summary"]["top"], 5)
+                      + "\n<i>Move: NEW خرید جدید · ADD افزایش · CUT کاهش · SOLD فروش کامل · Chg% تغییر تعداد سهم · Wt% وزن در سبد</i>")
     if new_filings:
-        for e in new_filings:
-            blocks.append(f"📄 <b>فایل جدید ۱۳F: {html.escape(e['label'])}</b> — فصل {period_label(e['period'])} (ثبت {e['filed']})\n"
-                          + ("\n".join(fmt_diff(e["diff"])) if e["diff"] else "فصل قبلی برای مقایسه نبود.")
-                          + f"\nبزرگ‌ترین‌ها: {fmt_top(e['summary']['top'])}")
-        hl.append(f"• فایل جدید ۱۳F: " + "، ".join(e["label"].split(" · ")[0] for e in new_filings) + ".")
+        hl.append("• فایل جدید ۱۳F: " + "، ".join(e["label"].split(" · ")[0] for e in new_filings) + ".")
     else:
-        blocks.append("📄 امروز فایل ۱۳F جدیدی از این سرمایه‌گذاران ثبت نشد.")
-    if ins_lines:
-        blocks.append(f"🧑‍💼 <b>معاملات مدیران (فرم ۴، بالای ${MIN_INSIDER_USD // 1000}K، چند روز اخیر)</b>\n" + "\n".join(ins_lines))
-        hl.append(f"• {len(ins_lines)} معامله‌ی مهم مدیران.")
+        blocks.append("📄 امروز فایل ۱۳F جدیدی از سرمایه‌گذاران SEC-محور ثبت نشد.")
+    if ins_rows:
+        t = [f"{'Date':<6}{'Stock':<6}{'Act':<5}{'Insider':<10}{'$M':>5}", "-" * 32]
+        for x in ins_rows:
+            t.append(f"{x['date']:<6}{x['sym']:<6}{x['act']:<5}{x['who']:<10}{x['usd'] / 1e6:>5.1f}")
+        blocks.append("🧑‍💼 <b>معاملات مدیران بزرگ‌ترین شرکت‌ها (فرم ۴، بالای ۵۰۰ هزار دلار)</b>\n" + pre(t))
+        hl.append(f"• {len(ins_rows)} معامله‌ی مهم مدیران.")
     elif ins_first:
-        blocks.append("🧑‍💼 پیگیری معاملات مدیران (NVDA، META، TSLA، AMZN، AAPL، MSFT، GOOGL، PLTR، AVGO، JPM) از امروز شروع شد؛ موارد جدید از فردا می‌آید.")
+        blocks.append("🧑‍💼 پیگیری معاملات مدیران ۱۰ شرکت بزرگ از امروز شروع شد؛ موارد جدید از فردا می‌آید.")
     else:
-        blocks.append("🧑‍💼 معامله‌ی مهم (بالای $500K) از مدیران شرکت‌های دنبال‌شده در چند روز اخیر ثبت نشد.")
-    # rotating spotlight from the cache
+        blocks.append("🧑‍💼 معامله‌ی مهم (بالای ۵۰۰ هزار دلار) از مدیران شرکت‌های دنبال‌شده نبود.")
     keys = [str(c) for _, c, _ in FILERS if str(c) in cache]
-    if keys and not first_run:
+    if keys and not first_run and not new_filings:
         e = cache[keys[today.toordinal() % len(keys)]]
-        sp = [f"🔦 <b>تمرکز امروز: {html.escape(e['label'])}</b> — فصل {period_label(e['period'])} (ثبت {e['filed']}، {e['summary']['n']} سهم)",
-              f"بزرگ‌ترین‌ها: {fmt_top(e['summary']['top'], 6)}"]
+        sp = f"🔦 <b>تمرکز امروز: {name_fa(e['label'])}</b> — فصل {period_label(e['period'])}، {e['summary']['n']} سهم\n" + fmt_top(e["summary"]["top"], 8)
         if e.get("diff"):
-            sp += ["تغییرات نسبت به فصل قبل:"] + fmt_diff(e["diff"])
-        blocks.append("\n".join(sp))
+            sp += "\nتغییرات نسبت به فصل قبل:\n" + fmt_diff(e["diff"])
+        blocks.append(sp)
     blocks += web_blocks
+    foot = []
     nd = next_deadline(today)
     if nd:
-        blocks.append(f"⏳ مهلت قانونی فایل‌های فصل بعد: {nd} — از آن روز تغییرات جدید می‌آید.")
+        foot.append(f"⏳ مهلت ۱۳F فصل بعد: {nd}")
     if errors:
-        blocks.append("⚠️ " + "؛ ".join(errors[:5]))
-    blocks.append("<i>این گزارش اطلاعات عمومی است و توصیه‌ی خرید یا فروش نیست. دانستن سبد یک سرمایه‌گذار، دلیل خوبی برای همان خرید در قیمت امروز نیست.</i>")
+        foot.append("⚠️ " + "؛ ".join(errors[:4]))
+    foot.append("اطلاعات عمومی است و توصیه‌ی خرید یا فروش نیست.")
+    blocks.append("<i>" + html.escape("\n".join(foot)) + "</i>")
     return blocks, hl, True
