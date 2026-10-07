@@ -148,11 +148,11 @@ def run(series_cache, download_all, pre, short, force=False):
                 (s.iloc[-1] / base - 1) * 100, (s.iloc[-1] / s.iloc[0] - 1) * 100)
 
     n_cur = len(segs[-1]["picks"])
-    rows = {"Plan 70/30": stats("plan"), "Core (VT)": stats("core"), f"Sleeve ({n_cur})": stats("sleeve")}
-    plan_s, core_s = rows["Plan 70/30"][2], rows["Core (VT)"][2]
-    t = [f"{'Portfolio':<13}{'Day%':>6}{'MTD%':>7}{'Since%':>8}{'vsCore':>8}", "-" * 42]
+    rows = {"Plan": stats("plan"), "VT": stats("core"), "Sleeve": stats("sleeve")}
+    plan_s, core_s = rows["Plan"][2], rows["VT"][2]
+    t = [f"{'':<7}{'Day':>6}{'MTD':>6}{'All':>7}{'vsVT':>6}", "-" * 32]
     for name, (d, m_, s_) in rows.items():
-        t.append(f"{name:<13}{f1(d):>6}{f1(m_):>7}{f1(s_):>8}{(f1(s_ - core_s) if name != 'Core (VT)' else '-'):>8}")
+        t.append(f"{name:<7}{f1(d):>6}{f1(m_):>6}{f1(s_):>7}{(f1(s_ - core_s) if name != 'VT' else '-'):>6}")
     since_date = nav.index[0].date().isoformat()
     cur = segs[-1]
     blocks = [
