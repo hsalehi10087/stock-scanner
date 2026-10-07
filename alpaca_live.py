@@ -1,169 +1,248 @@
 """
-Alpaca PAPER-trading link (virtual money only; the endpoint is paper-api.alpaca.markets).
-Target portfolio of the account (weights of equity, 2% kept as cash):
-  35%  VT                      (world stock ETF = core of the suggested portfolio)
-  15%  US momentum sleeve      (top 8 US picks of the newest V1-RAMom cohort, equal weight)
-  50%  AI basket               (the 20 stocks of ai_basket.py, equal weight)
-Orders are placed (market, day, notional) only when the target list changes (first run and when a new monthly
-cohort changes the sleeve); positions that this script bought earlier and that left the target are closed.
-Positions that were not opened by this script are never touched. Open orders block new orders for that symbol.
-State: alpaca_state.json. Credentials: ALPACA_KEY / ALPACA_SECRET (env or config.txt).
+Alpaca PAPER-trading link (virtual money only). Mirrors the paper portfolios into a real Alpaca paper account:
+  * Plan bucket (50% of the base capital): 70% VT + 30% equal-weight of the US names in the current momentum sleeve
+    (portfolio_state.csv). Re-balanced when a new monthly cohort appears.
+  * AI bucket (50%): the 20-stock AI basket (ai_basket.csv), equal weight, bought once and held.
+Safety: refuses to run unless the endpoint is paper-api.alpaca.markets; every order is a small notional market order.
+State: alpaca_state.json (the dollar target per symbol per bucket that has really been ordered).
+Keys are read from env or config.txt: ALPACA_KEY, ALPACA_SECRET, ALPACA_ENDPOINT.
 """
 import datetime as dt
-import hashlib
 import html
 import json
+import math
 import os
 import re
+import time
 
+import pandas as pd
 import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, "alpaca_state.json")
-BASE = "https://paper-api.alpaca.markets/v2"
-W_VT, W_SLEEVE, W_AI = 0.35, 0.15, 0.50
-CASH_KEEP = 0.98
-MIN_TRADE = 25.0          # dollars; smaller differences are ignored
-N_SLEEVE = 8
+DATA = "https://data.alpaca.markets"
+BASE_CAP = 100_000.0          # capital the plan is sized on (paper accounts start at 100k)
+PLAN_SHARE, AI_SHARE = 0.5, 0.5
+CORE_W, SLEEVE_W = 0.70, 0.30
+MIN_TRADE = 25.0
+US_RE = re.compile(r"^[A-Z]{1,5}$")
 
 
-def creds():
-    k, s = os.environ.get("ALPACA_KEY"), os.environ.get("ALPACA_SECRET")
-    if not (k and s):
-        try:
-            for line in open(os.path.join(HERE, "config.txt"), encoding="utf-8"):
-                if line.startswith("ALPACA_KEY="):
-                    k = line.split("=", 1)[1].strip()
-                elif line.startswith("ALPACA_SECRET="):
-                    s = line.split("=", 1)[1].strip()
-        except OSError:
-            pass
-    return (k, s) if k and s else None
-
-
-def api(method, path, c, **kw):
+def cfg(name, default=None):
+    v = os.environ.get(name)
+    if v:
+        return v.strip()
     try:
-        r = requests.request(method, BASE + path, timeout=40,
-                             headers={"APCA-API-KEY-ID": c[0], "APCA-API-SECRET-KEY": c[1]}, **kw)
-        try:
-            body = r.json()
-        except Exception:
-            body = r.text[:200]
-        return r.status_code, body
+        for line in open(os.path.join(HERE, "config.txt"), encoding="utf-8"):
+            if line.startswith(name + "="):
+                return line.split("=", 1)[1].strip()
+    except OSError:
+        pass
+    return default
+
+
+class Client:
+    def __init__(self):
+        self.base = (cfg("ALPACA_ENDPOINT", "https://paper-api.alpaca.markets/v2") or "").rstrip("/")
+        if "paper-api.alpaca.markets" not in self.base:
+            raise RuntimeError("endpoint is not the paper endpoint; refusing to trade")
+        self.h = {"APCA-API-KEY-ID": cfg("ALPACA_KEY") or "", "APCA-API-SECRET-KEY": cfg("ALPACA_SECRET") or ""}
+        if not self.h["APCA-API-KEY-ID"] or not self.h["APCA-API-SECRET-KEY"]:
+            raise RuntimeError("Alpaca key or secret missing in config.txt")
+
+    def req(self, method, path, **kw):
+        url = path if path.startswith("http") else self.base + path
+        for i in range(3):
+            r = requests.request(method, url, headers=self.h, timeout=40, **kw)
+            if r.status_code == 429:
+                time.sleep(2 + 2 * i)
+                continue
+            return r
+        return r
+
+    def get(self, path, **kw):
+        r = self.req("GET", path, **kw)
+        r.raise_for_status()
+        return r.json()
+
+
+def us_only(tickers):
+    return [t for t in tickers if US_RE.match(t or "")]
+
+
+def plan_targets(state_csv=None):
+    """{symbol: dollars} for the plan bucket, and the cohort label."""
+    path = os.path.join(HERE, "portfolio_state.csv")
+    if not os.path.exists(path):
+        return {}, None
+    st = pd.read_csv(path, dtype=str, keep_default_na=False)
+    if st.empty:
+        return {}, None
+    row = st.iloc[-1]
+    picks = us_only([t for t in row["picks"].split(";") if t])
+    cap = BASE_CAP * PLAN_SHARE
+    tg = {"VT": cap * CORE_W}
+    if picks:
+        for t in picks:
+            tg[t] = tg.get(t, 0.0) + cap * SLEEVE_W / len(picks)
+    else:
+        tg["VT"] = cap
+    return tg, row["cohort"]
+
+
+def ai_targets():
+    path = os.path.join(HERE, "ai_basket.csv")
+    if not os.path.exists(path):
+        return {}
+    st = pd.read_csv(path, dtype={"ticker": str})
+    tk = us_only(list(st["ticker"]))
+    if not tk:
+        return {}
+    cap = BASE_CAP * AI_SHARE
+    return {t: cap / len(tk) for t in tk}
+
+
+def last_price(c, sym):
+    try:
+        r = c.req("GET", f"{DATA}/v2/stocks/{sym}/trades/latest", params={"feed": "iex"})
+        if r.ok:
+            return float(r.json()["trade"]["p"])
+    except Exception:
+        pass
+    return None
+
+
+def place(c, sym, usd, side, log):
+    """One market order of |usd| dollars. Returns True when accepted."""
+    usd = round(abs(usd), 2)
+    try:
+        a = c.req("GET", f"/assets/{sym}")
+        if not a.ok:
+            log.append(f"{sym}: نماد در Alpaca نیست")
+            return False
+        info = a.json()
+        if not info.get("tradable"):
+            log.append(f"{sym}: قابل‌معامله نیست")
+            return False
+        body = {"symbol": sym, "side": side, "type": "market", "time_in_force": "day"}
+        if info.get("fractionable"):
+            body["notional"] = f"{usd:.2f}"
+        else:
+            px = last_price(c, sym)
+            if not px:
+                log.append(f"{sym}: قیمت برای سفارش پیدا نشد")
+                return False
+            q = math.floor(usd / px)
+            if q < 1:
+                log.append(f"{sym}: مبلغ کمتر از یک سهم")
+                return False
+            body["qty"] = str(q)
+        r = c.req("POST", "/orders", json=body)
+        if r.ok:
+            return True
+        log.append(f"{sym}: سفارش رد شد ({r.status_code}: {r.text[:80]})")
     except Exception as e:
-        return 0, str(type(e).__name__)
+        log.append(f"{sym}: خطا ({type(e).__name__})")
+    return False
 
 
-def sym_fix(t):
-    return t.strip().upper().replace("-", ".")
+def sync_bucket(c, bucket, target, state, log):
+    """Moves a bucket from its recorded dollars to `target`. Returns number of orders sent."""
+    rec = state.setdefault(bucket, {})
+    n = 0
+    others = {s for b, d in state.items() if isinstance(d, dict) and b != bucket for s in d}
+    for sym in sorted(set(rec) | set(target)):
+        delta = target.get(sym, 0.0) - rec.get(sym, 0.0)
+        if abs(delta) < MIN_TRADE:
+            continue
+        if delta < 0 and sym not in target and sym not in others:
+            r = c.req("DELETE", f"/positions/{sym}")      # closes the whole position
+            ok = r.ok or r.status_code == 404
+            if not ok:
+                log.append(f"{sym}: بستن ناموفق ({r.status_code})")
+        else:
+            ok = place(c, sym, delta, "buy" if delta > 0 else "sell", log)
+        if ok:
+            n += 1
+            if sym in target:
+                rec[sym] = target[sym]
+            else:
+                rec.pop(sym, None)
+    return n
 
 
-def us_sleeve():
-    import core_live
-    co = core_live.load()
-    v1 = co[(co["market"] == "US") & (co["strategy"] == "V1-RAMom")]
-    if v1.empty:
-        return []
-    row = v1[v1["cohort"] == v1["cohort"].max()].iloc[0]
-    out = [sym_fix(x.rsplit(":", 1)[0]) for x in row["picks"].split(";") if ":" in x]
-    return [t for t in out if re.fullmatch(r"[A-Z.]{1,6}", t)][:N_SLEEVE]
-
-
-def targets():
-    import ai_basket
-    w = {}
-    w["VT"] = W_VT
-    sl = us_sleeve()
-    for t in sl:
-        w[t] = w.get(t, 0) + W_SLEEVE / len(sl)
-    ai = [t for t, _ in ai_basket.BASKET]
-    for t in ai:
-        w[t] = w.get(t, 0) + W_AI / len(ai)
-    return w, sl
-
-
-def f0(v):
-    return f"{v:,.0f}"
-
-
-def run(pre, today=None):
-    """Returns (telegram_blocks, summary_lines, changed)."""
-    today = today or dt.date.today()
-    c = creds()
-    if not c:
-        return [], ["• Alpaca: کلید در config.txt نیست."], False
-    st, acct = api("GET", "/account", c)
-    if st != 200 or not isinstance(acct, dict):
-        return [f"⚠️ اتصال به Alpaca برقرار نشد (کد {st}). کلید یا سرویس را بررسی کنید."], [], False
-    equity = float(acct.get("equity", 0))
-    last_eq = float(acct.get("last_equity", equity) or equity)
-    cash = float(acct.get("cash", 0))
+def run(pre):
+    """Returns (telegram_blocks, summary_lines, state_changed, warnings)."""
+    today = dt.date.today()
+    try:
+        c = Client()
+    except Exception as e:
+        return [], [], False, [f"Alpaca: {e}"]
     state = json.load(open(STATE)) if os.path.exists(STATE) else {}
-    changed, notes = False, []
-    st, pos = api("GET", "/positions", c)
-    pos = pos if st == 200 and isinstance(pos, list) else []
-    cur_mv = {p["symbol"]: float(p.get("market_value", 0)) for p in pos}
-    st, oo = api("GET", "/orders?status=open&limit=200", c)
-    open_syms = {o["symbol"] for o in oo} if st == 200 and isinstance(oo, list) else set()
-
+    log, orders, changed = [], 0, False
     try:
-        tgt, sleeve = targets()
+        acct = c.get("/account")
     except Exception as e:
-        tgt, sleeve = None, []
-        notes.append(f"هدف سبد ساخته نشد ({type(e).__name__})")
-    key = hashlib.md5(json.dumps(sorted((k, round(v, 4)) for k, v in (tgt or {}).items())).encode()).hexdigest()[:10]
-    placed, failed = [], []
-    if tgt and state.get("key") != key:
-        managed = set(state.get("managed", []))
-        for sym in sorted(managed - set(tgt)):                      # left the target: close
-            if sym in cur_mv and sym not in open_syms:
-                s2, b = api("DELETE", f"/positions/{sym}", c)
-                (placed if s2 in (200, 207) else failed).append((sym, "SELL ALL", cur_mv.get(sym, 0), s2))
-        for sym, w in sorted(tgt.items()):
-            if sym in open_syms:
-                continue
-            want = w * equity * CASH_KEEP
-            diff = want - cur_mv.get(sym, 0.0)
-            if abs(diff) < MIN_TRADE:
-                continue
-            side = "buy" if diff > 0 else "sell"
-            s2, b = api("POST", "/orders", c, json={"symbol": sym, "notional": f"{abs(diff):.2f}", "side": side,
-                                                    "type": "market", "time_in_force": "day"})
-            (placed if s2 in (200, 201) else failed).append((sym, side.upper(), abs(diff), s2 if s2 not in (200, 201) else
-                                                             ""))
-        state.update({"key": key if not failed else state.get("key"), "managed": sorted(set(tgt)), "last_rebalance": today.isoformat(),
-                      "equity_start": state.get("equity_start", equity), "start_date": state.get("start_date", today.isoformat())})
-        changed = True
-    elif not state.get("start_date"):
-        state.update({"start_date": today.isoformat(), "equity_start": equity})
-        changed = True
-    if changed:
-        json.dump(state, open(STATE, "w"), ensure_ascii=False)
-
-    eq0 = float(state.get("equity_start", equity)) or equity
-    t1 = [f"{'Account':<10}{'Value$':>10}{'Day%':>7}{'Since%':>8}", "-" * 35,
-          f"{'Equity':<10}{f0(equity):>10}{(equity / last_eq - 1) * 100 if last_eq else 0:>+7.1f}{(equity / eq0 - 1) * 100:>+8.1f}",
-          f"{'Cash':<10}{f0(cash):>10}"]
-    rows = sorted(pos, key=lambda p: -float(p.get("market_value", 0)))
-    t2 = [f"{'Stock':<7}{'Value$':>8}{'P/L%':>7}{'Day%':>7}", "-" * 29]
-    for p in rows[:30]:
-        t2.append(f"{p['symbol'][:6]:<7}{f0(float(p.get('market_value', 0))):>8}"
-                  f"{float(p.get('unrealized_plpc', 0)) * 100:>+7.1f}{float(p.get('change_today', 0)) * 100:>+7.1f}")
-    since = state.get("start_date", today.isoformat())
-    blocks = [f"🏦 <b>حساب آزمایشی Alpaca</b> — {today}\n<i>پول مجازی؛ سبد: ۳۵٪ VT، ۱۵٪ سهم‌های مومنتوم آمریکا، ۵۰٪ سبد هوش مصنوعی. "
-              f"از {since} دنبال می‌شود. سفارش‌ها فقط هنگام عوض شدن فهرست (ابتدا و هر ماه) ثبت می‌شوند و در بازار باز اجرا می‌شوند.</i>",
-              "📊 <b>ارزش حساب</b>\n" + pre(t1)]
-    if rows:
-        blocks.append("📋 <b>سهم‌های حساب</b>\n" + pre(t2))
-    elif placed:
-        blocks.append("⏳ سفارش‌ها ثبت شد و پس از باز شدن بازار آمریکا اجرا می‌شود؛ سهم‌ها فردا در جدول می‌آیند.")
-    if placed or failed:
-        msg = f"🧾 <b>سفارش‌های این اجرا</b>: {len(placed)} ثبت شد"
-        if failed:
-            msg += f"، {len(failed)} ناموفق: " + "، ".join(f"{html.escape(s)}({code})" for s, _, _, code in failed[:12])
-        blocks.append(msg)
-    if notes:
-        blocks.append("⚠️ " + html.escape("؛ ".join(notes)))
-    blocks.append("<i>حساب آزمایشی است و توصیه‌ی خرید یا فروش نیست.</i>")
-    hl = [f"• حساب Alpaca: {f0(equity)} دلار ({(equity / eq0 - 1) * 100:+.1f}٪ از شروع)."]
-    return blocks, hl, changed
+        return [], [], False, [f"Alpaca: اتصال یا کلید ناموفق ({type(e).__name__})"]
+    existing = []
+    if not state.get("plan") and not state.get("ai"):
+        try:
+            existing = c.get("/positions")
+        except Exception:
+            existing = []
+    if acct.get("trading_blocked") or acct.get("account_blocked"):
+        log.append("حساب Alpaca مسدود است")
+    elif existing:
+        log.append("حساب از قبل سهم دارد و فایل وضعیت خالی است؛ برای جلوگیری از خرید تکراری معامله نشد")
+    else:
+        plan, cohort = plan_targets()
+        if plan and (state.get("plan_cohort") != cohort):
+            n = sync_bucket(c, "plan", plan, state, log)
+            orders += n
+            if n or not plan:
+                state["plan_cohort"] = cohort
+            changed = changed or n > 0
+        if not state.get("ai_done"):
+            ai = ai_targets()
+            if ai:
+                n = sync_bucket(c, "ai", ai, state, log)
+                orders += n
+                if n:
+                    state["ai_done"] = today.isoformat()
+                    changed = True
+        if orders and not state.get("started"):
+            state["started"] = today.isoformat()
+        changed = changed or orders > 0
+    json.dump(state, open(STATE, "w"), ensure_ascii=False)
+    try:
+        pos = c.get("/positions")
+        acct = c.get("/account")
+    except Exception:
+        pos = []
+    eq, cash = float(acct.get("equity", 0)), float(acct.get("cash", 0))
+    last_eq = float(acct.get("last_equity", eq) or eq)
+    day_pct = (eq / last_eq - 1) * 100 if last_eq else 0.0
+    since_pct = (eq / BASE_CAP - 1) * 100
+    head = [f"{'Account':<10}{'Value$':>10}{'Day%':>7}{'Since%':>8}", "-" * 35,
+            f"{'Paper':<10}{eq:>10,.0f}{day_pct:>+7.1f}{since_pct:>+8.1f}",
+            f"{'Cash':<10}{cash:>10,.0f}"]
+    blocks = [f"🏦 <b>حساب آزمایشی Alpaca (پول مجازی)</b> — {today}\n"
+              "<i>سبد پیشنهادی (نیمی از سرمایه: ۷۰٪ VT + ۳۰٪ سهم‌های آمریکایی بخش مومنتوم) و سبد ۲۰ سهمی هوش مصنوعی (نیم دیگر) "
+              "با سفارش‌های واقعی در حساب Paper ثبت شده‌اند. بخش مومنتوم فقط سهم‌های آمریکایی دارد، چون Alpaca بازار دیگری ندارد. "
+              "Since% نسبت به سرمایه‌ی اولیه‌ی ۱۰۰ هزار دلاری.</i>", pre(head)]
+    if pos:
+        rows = sorted(pos, key=lambda p: -float(p.get("market_value", 0)))[:25]
+        t = [f"{'Symbol':<7}{'Value$':>9}{'P&L%':>8}{'Day%':>7}", "-" * 31]
+        for p in rows:
+            t.append(f"{p['symbol'][:6]:<7}{float(p['market_value']):>9,.0f}"
+                     f"{float(p.get('unrealized_plpc', 0)) * 100:>+8.1f}{float(p.get('unrealized_intraday_plpc', 0)) * 100:>+7.1f}")
+        blocks.append("📋 <b>سهم‌های حساب</b>\n" + pre(t))
+    elif orders:
+        blocks.append("⏳ سفارش‌ها ثبت شد و با باز شدن بازار آمریکا اجرا می‌شود؛ موجودی از اجرای بعدی دیده می‌شود.")
+    if orders:
+        blocks.append(f"🧾 امروز {orders} سفارش جدید ثبت شد.")
+    if log:
+        blocks.append("⚠️ " + html.escape("؛ ".join(log[:6])))
+    blocks.append("<i>این حساب آزمایشی است و پول واقعی در آن نیست. نتیجه‌ی آن دقیق‌تر از سبد کاغذی است، چون قیمت اجرای واقعی را دارد.</i>")
+    hl = [f"• حساب Alpaca: {eq:,.0f}$ ({since_pct:+.1f}٪ از شروع)."]
+    return blocks, hl, changed, log
