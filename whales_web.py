@@ -183,7 +183,123 @@ def dataroma_blocks(state, today, first_run, errors):
 
 
 # ------------------------------------------------------------------ Capitol Trades (Congress)
+CONG_TICKERS = ("NVDA AAPL MSFT GOOGL AMZN META TSLA AVGO AMD PLTR NFLX ORCL CRM INTC MU QCOM JPM V COST LLY UNH XOM "
+                "SMCI ARM COIN MSTR BA DIS UBER TSM ASML").split()
+
+
+def finnhub_key():
+    k = os.environ.get("FINNHUB_KEY")
+    if k:
+        return k.strip()
+    try:
+        for line in open(os.path.join(HERE, "config.txt"), encoding="utf-8"):
+            if line.startswith("FINNHUB_KEY="):
+                return line.split("=", 1)[1].strip()
+    except OSError:
+        pass
+    return None
+
+
 def congress_blocks(state, today, errors):
+    """US Congress trades from Finnhub /stock/congressional-trading, for a list of popular tickers."""
+    key = finnhub_key()
+    if not key:
+        errors.append("Finnhub: کلید در config.txt نیست")
+        return []
+    rows, bad = [], None
+    frm = (today - dt.timedelta(days=60)).isoformat()
+    for tk in CONG_TICKERS:
+        try:
+            time.sleep(0.4)
+            r = requests.get("https://finnhub.io/api/v1/stock/congressional-trading",
+                             params={"symbol": tk, "from": frm, "to": today.isoformat(), "token": key}, timeout=30)
+        except Exception:
+            continue
+        if r.status_code in (401, 403):
+            bad = r.status_code
+            break
+        if r.status_code != 200:
+            continue
+        try:
+            for x in r.json().get("data", []):
+                rows.append({"id": f"{x.get('name')}|{x.get('symbol') or tk}|{x.get('transactionDate')}|{x.get('transactionType')}|{x.get('amountFrom')}",
+                             "pub": str(x.get("filingDate", ""))[:10], "sym": (x.get("symbol") or tk)[:6],
+                             "type": "Buy" if "purch" in str(x.get("transactionType", "")).lower() else ("Sell" if "sale" in str(x.get("transactionType", "")).lower() else "Other"),
+                             "who": str(x.get("name", "?")).split()[-1][:11], "mid": ((x.get("amountFrom") or 0) + (x.get("amountTo") or 0)) / 2})
+        except Exception:
+            continue
+    if bad:
+        errors.append(f"Finnhub: کلید یا پلن اجازه‌ی داده‌ی کنگره را نمی‌دهد (خطای {bad})")
+        return []
+    if not rows:
+        return []
+    seen = set(state.get("cap_seen", []))
+    first = "cap_seen" not in state
+    state["cap_seen"] = (list(seen) + [x["id"] for x in rows])[-1500:]
+    new = rows if first else [x for x in rows if x["id"] not in seen]
+    new = sorted(new, key=lambda x: (x["pub"], x["mid"]), reverse=True)[:12]
+    if not new:
+        return []
+    t = [f"{'Filed':<6}{'Stock':<7}{'Type':<5}{'Politician':<12}{'Size
+    if r is None:
+        errors.append("Capitol Trades: سایت از سرور ما جلوگیری می‌کند؛ معاملات کنگره امروز نیامد")
+        return []
+    try:
+        data = r.json().get("data", [])
+    except Exception:
+        errors.append("Capitol Trades: پاسخ قابل‌خواندن نبود")
+        return []
+    rows = []
+    for x in data:
+        try:
+            pol = x.get("politician", {}) or {}
+            iss = x.get("issuer", {}) or {}
+            sym = (iss.get("issuerTicker") or "").split(":")[0] or (iss.get("issuerName") or "?")[:6]
+            size = x.get("value")
+            rows.append({"id": str(x.get("_txId") or f"{pol.get('lastName')}{sym}{x.get('txDate')}{size}"),
+                         "pub": str(x.get("pubDate", ""))[:10], "tx": str(x.get("txDate", ""))[:10],
+                         "who": f"{(pol.get('lastName') or '?')[:9]} {(pol.get('party') or '?')[:1].upper()}",
+                         "sym": sym[:6], "type": str(x.get("txType", "?")), "usd": size or 0})
+        except Exception:
+            continue
+    if not rows:
+        errors.append("Capitol Trades: فهرست خالی بود (ساختار عوض شده؟)")
+        return []
+    seen = set(state.get("cap_seen", []))
+    first = "cap_seen" not in state
+    state["cap_seen"] = (list(seen) + [x["id"] for x in rows])[-600:]
+    new = rows if first else [x for x in rows if x["id"] not in seen]
+    new = sorted(new, key=lambda x: (x["pub"], x["usd"]), reverse=True)[:12]
+    if not new:
+        return []
+    t = [f"{'Pub':<6}{'Stock':<7}{'Type':<5}{'Politician':<12}{'Size$':>7}", "-" * 37]
+    for x in new:
+        usd = f"{x['usd'] / 1000:.0f}K" if x["usd"] else "-"
+        t.append(f"{x['pub'][5:]:<6}{x['sym']:<7}{x['type'][:4]:<5}{x['who']:<12}{usd:>7}")
+    return ["🏛 <b>معاملات سیاستمداران آمریکا (Capitol Trades)</b> — " + ("آخرین‌ها" if first else "موارد تازه") +
+            "\n<i>اعلام این معاملات تا ۴۵ روز دیرتر از انجامشان است؛ Size$ میانه‌ی بازه‌ی اعلام‌شده است.</i>\n" + pre(t)]
+
+
+def run(state, today, first_run):
+    errors, blocks = [], []
+    try:
+        blocks += dataroma_blocks(state, today, first_run, errors)
+    except Exception as e:
+        errors.append(f"Dataroma: خطا ({type(e).__name__})")
+    try:
+        blocks += congress_blocks(state, today, errors)
+    except Exception as e:
+        errors.append(f"Capitol Trades: خطا ({type(e).__name__})")
+    return blocks, errors
+:>6}", "-" * 36]
+    for x in new:
+        usd = f"{x['mid'] / 1000:.0f}K" if x["mid"] else "-"
+        t.append(f"{x['pub'][5:]:<6}{x['sym']:<7}{x['type']:<5}{x['who']:<12}{usd:>6}")
+    return ["🏛 <b>معاملات سیاستمداران آمریکا (Finnhub)</b> — " + ("آخرین‌ها" if first else "موارد تازه") +
+            "\n<i>اعلام این معاملات تا ۴۵ روز دیرتر از انجامشان است؛ Size$ میانه‌ی بازه‌ی اعلام‌شده است. فقط ۳۰ سهم پرطرفدار بررسی می‌شود.</i>\n" + pre(t)]
+
+
+def _congress_old(state, today, errors):
     r = _get(PAGES["capitol_bff"], CAP_HDR)
     if r is None:
         errors.append("Capitol Trades: سایت از سرور ما جلوگیری می‌کند؛ معاملات کنگره امروز نیامد")
