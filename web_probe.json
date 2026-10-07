@@ -1,7 +1,7 @@
 {
  "dataroma_home": {
   "status": 200,
-  "bytes": 57007
+  "bytes": 56948
  },
  "capitol_bff": {
   "status": 503,
@@ -9,10 +9,10 @@
  },
  "capitol_trades": {
   "status": 429,
-  "bytes": 33939
+  "bytes": 33946
  },
  "house_watcher": {
   "status": 403,
-  "bytes": 243
+  "bytes": 263
  }
 }
