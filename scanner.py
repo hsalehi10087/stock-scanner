@@ -640,6 +640,16 @@ BLOCKED = set()
 
 
 def tg(method, **kw):
+    """Sends; tables are wrapped as bold <pre>. If Telegram rejects that, resend with plain <pre>."""
+    txt = str(kw.get("data", {}).get("text", ""))
+    if method == "sendMessage" and "<b><pre>" in txt:
+        if _tg(method, **kw):
+            return True
+        kw["data"] = dict(kw["data"], text=txt.replace("<b><pre>", "<pre>").replace("</pre></b>", "</pre>"))
+    return _tg(method, **kw)
+
+
+def _tg(method, **kw):
     url = f"https://api.telegram.org/bot{TOKEN}/{method}"
     r = requests.post(url, timeout=60, **kw)
     if r.status_code == 429:
