@@ -1172,6 +1172,19 @@ def main():
     _saved = [f for f in ("portfolio_state.csv", "portfolio_nav.csv", "ai_basket.csv") if os.path.exists(os.path.join(HERE, f))]
     if _saved:
         git_save(_saved, f"Portfolio tracking {dt.date.today()}")
+    try:
+        import whales
+        wh_blocks, _wh_hl, _wh_ch = whales.run()
+        if wh_blocks:
+            outbox.append((wh_blocks, b"", "whales", ()))
+        else:
+            warnings.append("گزارش سرمایه‌گذاران بزرگ امروز ساخته نشد.")
+    except Exception as e:
+        print("whales failed:", e)
+        warnings.append("گزارش سرمایه‌گذاران بزرگ امروز به‌روز نشد.")
+    _wsaved = [f for f in ("whales_state.json", "whales_cache.json") if os.path.exists(os.path.join(HERE, f))]
+    if _wsaved:
+        git_save(_wsaved, f"Whales tracking {dt.date.today()}")
     if mom_blocks:
         outbox.append((mom_blocks, b"", "momentum", ()))
     try:
