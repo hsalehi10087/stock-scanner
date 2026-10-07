@@ -113,7 +113,7 @@ def run(download_all, pre, force=False):
           f"{'AI basket (' + str(n) + ')':<14}{f1(port_day):>7}{f1(port):>9}",
           f"{'QQQ (Nasdaq)':<14}{f1(qq_d):>7}{f1(qq):>9}",
           f"{'VT (world)':<14}{f1(vt_d):>7}{f1(vt):>9}"]
-    t2 = [f"{'Symbol':<6}{'Ret%':>8}{'Day%':>7}{'P10x':>8}", "-" * 29]
+    t2 = [f"{'Symbol':<6}{'Date':<6}{'Days':>4}{'Ret%':>8}{'Day%':>7}{'P10x':>8}", "-" * 39]
     for _, r in st.sort_values("ret", ascending=False).iterrows():
         pp = f"{r['p10_15'] * 100:.0f}/{r['p10_30'] * 100:.0f}" if r["p10_15"] == r["p10_15"] else "-"
         t2.append(f"{r['ticker']:<6}{f1(r['ret']):>8}{f1(r['day']):>7}{pp:>8}")
