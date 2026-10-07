@@ -344,6 +344,13 @@ def run(today=None):
         ins_lines, ins_first = insider_trades(state, today)
     except Exception as e:
         errors.append(f"معاملات داخلی: خطا ({type(e).__name__})")
+    web_blocks = []
+    try:
+        import whales_web
+        web_blocks, web_err = whales_web.run(state, today, first_run)
+        errors += web_err
+    except Exception as e:
+        errors.append(f"منابع وب: خطا ({type(e).__name__})")
     json.dump(cache, open(CACHE, "w"), ensure_ascii=False)
     json.dump(state, open(STATE, "w"), ensure_ascii=False)
     if not cache:
