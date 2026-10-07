@@ -177,7 +177,7 @@ def run(pre):
     try:
         c = Client()
     except Exception as e:
-        return [], [], False, [f"Alpaca: {e}"]
+        return ["⚠️ " + html.escape(f"Alpaca: {e}")], [], False
     state = json.load(open(STATE)) if os.path.exists(STATE) else {}
     log, orders, changed = [], 0, False
     try:
