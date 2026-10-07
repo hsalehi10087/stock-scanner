@@ -391,6 +391,7 @@ def run(today=None):
         if e.get("diff"):
             sp += ["تغییرات نسبت به فصل قبل:"] + fmt_diff(e["diff"])
         blocks.append("\n".join(sp))
+    blocks += web_blocks
     nd = next_deadline(today)
     if nd:
         blocks.append(f"⏳ مهلت قانونی فایل‌های فصل بعد: {nd} — از آن روز تغییرات جدید می‌آید.")
