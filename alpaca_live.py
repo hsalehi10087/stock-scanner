@@ -183,7 +183,7 @@ def run(pre):
     try:
         acct = c.get("/account")
     except Exception as e:
-        return [], [], False, [f"Alpaca: اتصال یا کلید ناموفق ({type(e).__name__})"]
+        return ["⚠️ " + html.escape(f"Alpaca: اتصال یا کلید ناموفق ({type(e).__name__})")], [], False
     existing = []
     if not state.get("plan") and not state.get("ai"):
         try:
