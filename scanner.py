@@ -1199,11 +1199,20 @@ def main():
         print("whales failed:", e)
         warnings.append("گزارش سرمایه‌گذاران بزرگ امروز به‌روز نشد.")
     try:
-        import financials_analyzer
-        fin_blocks, _fin_hl, _fin_ch = financials_analyzer.run()
-        if fin_blocks:
-            outbox.append((fin_blocks, b"", "financials", ()))
-        else:
+        # سعی برای استفاده API اول
+        try:
+            import financials_analyzer_api
+            fin_blocks, _fin_hl, _fin_ch = financials_analyzer_api.run_api()
+            if fin_blocks:
+                outbox.append((fin_blocks, b"", "financials", ()))
+        except:
+            # Fallback به نمونه
+            import financials_analyzer
+            fin_blocks, _fin_hl, _fin_ch = financials_analyzer.run()
+            if fin_blocks:
+                outbox.append((fin_blocks, b"", "financials", ()))
+
+        if not fin_blocks:
             warnings.append("تحلیل صورتهای مالی امروز ساخته نشد.")
     except Exception as e:
         print("financials failed:", e)
