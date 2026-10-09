@@ -175,19 +175,19 @@ class InvestmentReportV2:
             blocks.append(f"\n<b>{category_name}</b> ({len(stocks)} سهام)")
             
             table = "<code>"
-            table += "<b>نماد    رشد فروش  حاشیهٔ سود  P&L    کوتاه‌مدت  بلند‌مدت</b>\n"
-            table += "        (سالانه%)    (%)      (فرضی%)  (0-100)   (0-100)\n"
-            table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            table += "<b>کد / رشد% / سود% / P&L% / کوتاه / بلند</b>\n"
+            table += "<i>(سهم) (سال) (خالص) (فرضی) (3-6م) (1-3سال)</i>\n"
+            table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
             for stock in stocks[:8]:  # حداکثر 8 در هر دسته
-                symbol = stock['symbol'].ljust(8)
-                growth = f"{stock['revenue_growth']:+.0f}%".rjust(8)
-                margin = f"{stock['profit_margin']:.0f}%".rjust(10)
-                pnl = f"{stock['pnl_simulation']:+.1f}%".rjust(8)
-                short = f"{stock['short_term']:.0f}".rjust(9)
-                long = f"{stock['long_term']:.0f}".rjust(10)
+                symbol = stock['symbol']
+                growth = f"{stock['revenue_growth']:+.0f}"
+                margin = f"{stock['profit_margin']:.0f}"
+                pnl = f"{stock['pnl_simulation']:+.1f}"
+                short = f"{stock['short_term']:.0f}"
+                long = f"{stock['long_term']:.0f}"
 
-                table += f"{symbol}{growth}{margin}{pnl}{short}{long}\n"
+                table += f"{symbol} / {growth}% / {margin}% / {pnl}% / {short} / {long}\n"
             
             table += "</code>"
             blocks.append(table)
