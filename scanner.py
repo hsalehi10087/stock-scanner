@@ -1199,6 +1199,16 @@ def main():
         print("whales failed:", e)
         warnings.append("گزارش سرمایه‌گذاران بزرگ امروز به‌روز نشد.")
     try:
+        import financials_analyzer
+        fin_blocks, _fin_hl, _fin_ch = financials_analyzer.run()
+        if fin_blocks:
+            outbox.append((fin_blocks, b"", "financials", ()))
+        else:
+            warnings.append("تحلیل صورتهای مالی امروز ساخته نشد.")
+    except Exception as e:
+        print("financials failed:", e)
+        warnings.append("تحلیل صورتهای مالی امروز به‌روز نشد.")
+    try:
         import alpaca_live
         al_blocks, _al_hl, _al_ch = alpaca_live.run(pre)
         if al_blocks:
