@@ -1,9 +1,9 @@
-name: 📊 Daily Market Regime Signals
+name: 📊 Daily Comprehensive Report (10 AM Tehran)
 
 on:
   schedule:
-    # هر روز ساعت ۸ صبح تهران (23:30 UTC شب قبل)
-    - cron: '0 4 * * *'  # UTC
+    # هر روز ساعت 10 صبح تهران = 6:30 صبح UTC
+    - cron: '30 6 * * *'  # UTC
   workflow_dispatch:
 
 jobs:
@@ -32,13 +32,13 @@ jobs:
           echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> $GITHUB_ENV
           echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> $GITHUB_ENV
       
-      - name: Run daily regime signals
+      - name: Run daily comprehensive report
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd stock-scanner
-          python3 daily_regime_signals.py
+          python3 daily_comprehensive_report.py
       
       - name: Commit and push if changed
         run: |
