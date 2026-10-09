@@ -189,15 +189,15 @@ class FinancialsAnalyzerAPI:
 
         blocks.append(f"<b>🌍 شرکت‌های بورسی</b>\n<b>کل:</b> {len(companies)} شرکت")
 
-        # جدول RTL برای فارسی - نماد چپ، درآمد راست
+        # جدول RTL برای فارسی - نماد راست، درآمد چپ
         table = "<code>"
-        table += "<b>درآمد (میلیارد)               نماد</b>\n"
+        table += "<b>نماد            درآمد (میلیارد ریال)</b>\n"
         table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
         for company in companies[:20]:
-            ticker = company['symbol'].rjust(8)
-            revenue = f"${company.get('revenue', 0) / 1e9:.0f}B".ljust(20)
-            table += f"{revenue} {ticker}\n"
+            ticker = company['symbol'].ljust(12)
+            revenue = f"{company.get('revenue', 0) / 1e9 * 40:.0f}".rjust(10)  # ریال (1$ ≈ 40,000 ریال)
+            table += f"{ticker} {revenue}\n"
 
         table += "</code>"
         blocks.append(table)
