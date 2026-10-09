@@ -1217,6 +1217,17 @@ def main():
     except Exception as e:
         print("financials failed:", e)
         warnings.append("تحلیل صورتهای مالی امروز به‌روز نشد.")
+    # Codal Daily Report
+    try:
+        import codal_pipeline
+        codal_blocks = codal_pipeline.run_pipeline()
+        if codal_blocks:
+            outbox.append((codal_blocks, b"", "codal", ()))
+            print("✅ Codal report added to queue")
+    except Exception as e:
+        print("codal failed:", e)
+        warnings.append("گزارش روزانهٔ کودال امروز به‌روز نشد.")
+
     try:
         import alpaca_live
         al_blocks, _al_hl, _al_ch = alpaca_live.run(pre)
