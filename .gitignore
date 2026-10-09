@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.DS_Store
+.env
+*.log
+*.csv
+*.json
+signal_*.txt
+report_*.txt
