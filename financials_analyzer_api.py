@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-تحلیل صورتهای مالی - نسخهٔ API (Finnhub)
-Financial Statement Analysis - API Version
+تحلیل صورتهای مالی - نسخهٔ API
+Financial Statement Analysis - API Version (Finnhub + Fallback to Yahoo Finance)
 تمام شرکت‌های بورسی جهان بدون محدودیت
 """
 
@@ -11,6 +11,13 @@ import os
 import json
 from typing import List, Dict, Tuple
 import requests
+
+# سعی برای import yfinance برای fallback
+try:
+    import yfinance as yf
+    YFINANCE_AVAILABLE = True
+except ImportError:
+    YFINANCE_AVAILABLE = False
 
 class FinancialsAnalyzerAPI:
     """تحلیل صورتهای مالی با استفاده از Finnhub API - تمام شرکت‌ها"""
@@ -79,107 +86,129 @@ class FinancialsAnalyzerAPI:
     
     def generate_report_from_api(self) -> Tuple[List[str], List]:
         """
-        تولید گزارش از داده‌های واقعی Finnhub API
-        شامل تمام شرکت‌های بورسی آمریکا، چین و ژاپن
+        تولید گزارش از داده‌های واقعی
+        Fallback levels: Finnhub → Yahoo Finance → Sample Data
         """
+        # سطح 1: سعی برای Finnhub
+        if self.finnhub_key:
+            print("📡 سعی برای Finnhub API...")
+            try:
+                exchanges = {
+                    '🇺🇸': ['NASDAQ', 'NYSE'],
+                    '🇨🇳': ['SSE', 'SZSE'],
+                    '🇯🇵': ['TSE']
+                }
+
+                all_companies = {}
+                total = 0
+
+                for region, exch_list in exchanges.items():
+                    all_companies[region] = []
+                    for exchange in exch_list:
+                        companies = self.get_all_companies(exchange)
+                        if companies:
+                            all_companies[region].extend(companies[:50])
+                            total += len(companies)
+
+                if total > 0:
+                    print(f"✅ Finnhub: {total} شرکت دریافت شد")
+                    # Finnhub blocks generation
+                    blocks = []
+                    blocks.append(f"📊 <b>تحلیل صورتهای مالی - Finnhub API</b> — {self.timestamp}")
+                    blocks.append(f"✅ Finnhub فعال | {total}+ شرکت")
+                    return blocks, []
+            except Exception as e:
+                print(f"⚠️ Finnhub خرابی: {e}")
+
+        # سطح 2: Fallback به Yahoo Finance
+        print("📡 سعی برای Yahoo Finance...")
+        try:
+            blocks, _ = self.generate_report_from_yfinance()
+            if blocks and len(blocks) > 1:
+                print("✅ Yahoo Finance: داده دریافت شد")
+                return blocks, []
+        except Exception as e:
+            print(f"⚠️ Yahoo Finance خرابی: {e}")
+
+        # سطح 3: Fallback به نمونه (113 شرکت)
+        print("⚠️ هردو API fail شد - استفاده نمونهٔ 113 شرکت")
+        return self._fallback_to_sample(), []
+
+    def get_companies_from_yfinance(self) -> List[Dict]:
+        """
+        دریافت داده‌های شرکت‌ها از Yahoo Finance (Fallback)
+        """
+        if not YFINANCE_AVAILABLE:
+            print("⚠️ yfinance نصب نشده - نصب کن: pip install yfinance")
+            return []
+
+        try:
+            print("📡 دریافت داده‌ها از Yahoo Finance...")
+
+            # لیست تیکر‌های محبوب
+            tickers_us = ['NVDA', 'MSFT', 'AAPL', 'AMZN', 'GOOGL', 'META', 'TSLA',
+                         'JPM', 'JNJ', 'V', 'WMT', 'MA', 'PG', 'KO', 'DIS']
+            tickers_cn = ['9988.HK', '0700.HK', '1398.HK', '1288.HK', '0001.HK', '3690.HK']
+            tickers_jp = ['9984.T', '9983.T', '6758.T', '7203.T', '8306.T', '8411.T']
+
+            companies = []
+
+            for ticker in tickers_us + tickers_cn + tickers_jp:
+                try:
+                    data = yf.Ticker(ticker)
+                    info = data.info
+
+                    companies.append({
+                        'symbol': ticker,
+                        'description': info.get('longName', ticker),
+                        'revenue': info.get('totalRevenue', 0),
+                        'netIncome': info.get('netIncomeToCommon', 0),
+                        'eps': info.get('trailingEps', 0),
+                    })
+                    print(f"  ✅ {ticker}")
+                except:
+                    pass
+
+            print(f"✅ {len(companies)} شرکت از Yahoo Finance دریافت شد")
+            return companies
+
+        except Exception as e:
+            print(f"❌ خطا در Yahoo Finance: {e}")
+            return []
+
+    def generate_report_from_yfinance(self) -> Tuple[List[str], List]:
+        """تولید گزارش از Yahoo Finance data"""
+        companies = self.get_companies_from_yfinance()
+
+        if not companies:
+            print("⚠️ Yahoo Finance هم کار نکرد - fallback به نمونه")
+            return self._fallback_to_sample(), []
+
         blocks = []
-
-        if not self.finnhub_key:
-            print("❌ FINNHUB_KEY یافت نشد - fallback به نمونه")
-            return self._fallback_to_sample(), []
-
-        # دریافت شرکت‌ها از هر بورس
-        exchanges = {
-            '🇺🇸': ['NASDAQ', 'NYSE'],
-            '🇨🇳': ['SSE', 'SZSE'],
-            '🇯🇵': ['TSE']
-        }
-
-        all_companies = {}
-        total = 0
-
-        print("📡 دریافت داده‌ها از Finnhub API...")
-
-        for region, exch_list in exchanges.items():
-            all_companies[region] = []
-            for exchange in exch_list:
-                companies = self.get_all_companies(exchange)
-                if companies:
-                    all_companies[region].extend(companies[:50])  # Top 50 هر بورس
-                    total += len(companies)
-
-        if total == 0:
-            print("⚠️ هیچ داده دریافت نشد - fallback به نمونه")
-            return self._fallback_to_sample(), []
-
-        # تولید گزارش
-        blocks.append(f"📊 <b>تحلیل صورتهای مالی - API</b> — {self.timestamp}\n"
-                     f"<i>شرکت‌های بورسی جهان (برتر‌های هر بورس)</i>")
-
-        us_count = len(all_companies.get('🇺🇸', []))
-        cn_count = len(all_companies.get('🇨🇳', []))
-        jp_count = len(all_companies.get('🇯🇵', []))
+        blocks.append(f"📊 <b>تحلیل صورتهای مالی - Yahoo Finance</b> — {self.timestamp}\n"
+                     f"<i>دریافت از Yahoo Finance API</i>")
 
         blocks.append(f"""
-🌍 <b>شرکت‌های بورسی (برتر‌های هر بورس)</b>
-🇺🇸 آمریکا: {us_count} شرکت | NASDAQ + NYSE
-🇨🇳 چین: {cn_count} شرکت | Shanghai + Shenzhen
-🇯🇵 ژاپن: {jp_count} شرکت | Tokyo Stock Exchange
+🌍 <b>شرکت‌های بورسی (Yahoo Finance)</b>
+📦 کل شرکت‌ها: {len(companies)} شرکت
 """)
 
-        # تجمیع داده برای جدول
-        table_data = []
-        for region, companies in all_companies.items():
-            for company in companies[:20]:  # Top 20 هر منطقه
-                ticker = company.get('symbol', 'N/A')
-                name = company.get('description', '')[:20]
-
-                # معلومات ساختگی برای نمایش (در آینده با داده واقعی جایگزین شود)
-                table_data.append({
-                    'region': region,
-                    'ticker': ticker,
-                    'name': name,
-                    'growth': f"{(-5 + hash(ticker) % 20):.1f}%",
-                    'margin': f"{(5 + hash(ticker) % 40):.1f}%",
-                })
-
-        # جدول کامل
-        blocks.append("<b>جدول برتر‌های شرکت‌های بورسی</b>")
-
+        # جدول ساده
+        blocks.append("<b>جدول شرکت‌ها</b>")
         table = "<code>"
-        table += "نماد       نام            رشد%QoQ حاشیه سود سیگنال\n"
-        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        table += "نماد       نام                    درآمد (میلیون)\n"
+        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
-        for item in sorted(table_data, key=lambda x: float(x['growth'].rstrip('%')), reverse=True):
-            ticker = (item['region'] + ' ' + item['ticker']).ljust(10)
-            name = item['name'].ljust(15)
-            growth = item['growth'].rjust(7)
-            margin = item['margin'].rjust(7)
-            signal = '🟢 خرید قوی' if float(item['growth'].rstrip('%')) > 5 else '🟡 خرید'
-
-            table += f"{ticker}{name}{growth}{margin}% {signal}\n"
+        for company in companies[:20]:
+            ticker = company['symbol'].ljust(10)
+            name = company['description'][:20].ljust(20)
+            revenue = f"{company.get('revenue', 0) / 1e9:.1f}B"
+            table += f"{ticker}{name}{revenue}\n"
 
         table += "</code>"
         blocks.append(table)
 
-        # تحلیل گروه‌بندی شده
-        blocks.append("<b>تحلیل گروه‌بندی بر اساس کشور</b>")
-
-        for region in ['🇺🇸', '🇨🇳', '🇯🇵']:
-            companies = all_companies.get(region, [])
-            region_name = {'🇺🇸': 'آمریکا', '🇨🇳': 'چین', '🇯🇵': 'ژاپن'}.get(region)
-
-            if companies:
-                blocks.append(f"\n<b>{region} شرکت‌های {region_name}</b> ({len(companies)} شرکت)")
-
-                for company in companies[:10]:
-                    ticker = company.get('symbol', 'N/A')
-                    name = company.get('description', 'Unknown')
-                    blocks.append(f"  • {ticker} - {name[:50]}")
-
-        blocks.append("""
-✅ داده‌های واقعی از Finnhub API
-#تحلیل #صورتهای_مالی #شرکت‌های_بورسی #رشد #سودآوری""")
+        blocks.append("✅ داده‌های واقعی از Yahoo Finance API")
 
         return blocks, []
 
