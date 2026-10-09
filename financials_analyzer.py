@@ -59,23 +59,23 @@ MAJOR_US = [
 
 MAJOR_CHINA = [
     # Finance & Insurance (6)
-    ("601318.SS", "中国平安 (Ping An)"), ("601398.SS", "工商银行 (ICBC)"),
-    ("601288.SS", "农业银行 (ABC)"), ("601988.SS", "中国银行 (BOC)"),
-    ("601628.SS", "中国人寿 (China Life)"), ("02333.HK", "中国恒大 (Evergrande)"),
+    ("601318.SS", "Ping An"), ("601398.SS", "ICBC"),
+    ("601288.SS", "ABC"), ("601988.SS", "BOC"),
+    ("601628.SS", "China Life"), ("02333.HK", "Evergrande"),
 
     # Consumer & Luxury (5)
-    ("600519.SS", "茅台 (Moutai)"), ("600030.SS", "中信证券 (CITIC)"),
-    ("603259.SS", "药明康德 (WuXi)"), ("000333.SZ", "美的 (Midea)"),
-    ("000858.SZ", "五粮液 (Wuliangye)"),
+    ("600519.SS", "Moutai"), ("600030.SS", "CITIC"),
+    ("603259.SS", "WuXi"), ("000333.SZ", "Midea"),
+    ("000858.SZ", "Wuliangye"),
 
     # Technology & Internet (5)
-    ("600036.SS", "招商银行 (CMB)"), ("601012.SS", "隆基绿能 (LONGi)"),
-    ("688969.SS", "康龙化成 (Kang Yuan)"), ("002202.SZ", "金风科技 (Goldwind)"),
-    ("600905.SS", "三花智控 (Sanhua)"),
+    ("600036.SS", "CMB"), ("601012.SS", "LONGi"),
+    ("688969.SS", "Kang Yuan"), ("002202.SZ", "Goldwind"),
+    ("600905.SS", "Sanhua"),
 
     # Energy & Materials (4)
-    ("601899.SS", "紫金矿业 (Zijin Mining)"), ("600188.SS", "兖州煤业 (Yankuang)"),
-    ("603501.SS", "韦尔股份 (Weir)"), ("002456.SZ", "欧菲光 (O-film)"),
+    ("601899.SS", "Zijin Mining"), ("600188.SS", "Yankuang"),
+    ("603501.SS", "Weir"), ("002456.SZ", "O-film"),
 ]
 
 MAJOR_JAPAN = [
