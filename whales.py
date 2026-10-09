@@ -43,7 +43,7 @@ FILERS = [
 # companies whose insider (Form 4) trades are followed: (ticker, CIK)
 ISSUERS = [("NVDA", 1045810), ("META", 1326801), ("TSLA", 1318605), ("AMZN", 1018724), ("AAPL", 320193),
            ("MSFT", 789019), ("GOOGL", 1652044), ("PLTR", 1321655), ("AVGO", 1730168), ("JPM", 19617)]
-MIN_INSIDER_USD = 500_000
+MIN_INSIDER_USD = 100  # حد حداقل معاملات مدیران (دلار)
 TOP_N = 60            # positions kept per investor in the cache
 
 
@@ -394,19 +394,25 @@ def run(today=None):
         t = [f"{'Date':<6}{'Stock':<6}{'Act':<5}{'Insider':<10}{'$M':>5}", "-" * 32]
         for x in ins_rows:
             t.append(f"{x['date']:<6}{x['sym']:<6}{x['act']:<5}{x['who']:<10}{x['usd'] / 1e6:>5.1f}")
-        blocks.append("🧑‍💼 <b>معاملات مدیران بزرگ‌ترین شرکت‌ها (فرم ۴، بالای ۵۰۰ هزار دلار)</b>\n" + pre(t))
+        blocks.append("🧑‍💼 <b>معاملات مدیران بزرگ‌ترین شرکت‌ها (فرم ۴، بالای ۱۰۰ دلار)</b>\n" + pre(t))
         hl.append(f"• {len(ins_rows)} معامله‌ی مهم مدیران.")
     elif ins_first:
         blocks.append("🧑‍💼 پیگیری معاملات مدیران ۱۰ شرکت بزرگ از امروز شروع شد؛ موارد جدید از فردا می‌آید.")
     else:
         blocks.append("🧑‍💼 معامله‌ی مهم (بالای ۵۰۰ هزار دلار) از مدیران شرکت‌های دنبال‌شده نبود.")
+    # نمایش تمام سرمایه‌گذاران بزرگ (نه فقط یکی)
     keys = [str(c) for _, c, _ in FILERS if str(c) in cache]
     if keys and not first_run and not new_filings:
-        e = cache[keys[today.toordinal() % len(keys)]]
-        sp = f"🔦 <b>تمرکز امروز: {name_fa(e['label'])}</b> — فصل {period_label(e['period'])}، {e['summary']['n']} سهم\n" + fmt_top(e["summary"]["top"], 8)
-        if e.get("diff"):
-            sp += "\nتغییرات نسبت به فصل قبل:\n" + fmt_diff(e["diff"])
-        blocks.append(sp)
+        blocks.append("🐋 <b>خلاصهٔ تمام سرمایه‌گذاران بزرگ — آخرین فصل</b>")
+        for label, cik, _ in FILERS:
+            cik_str = str(cik)
+            if cik_str not in cache:
+                continue
+            e = cache[cik_str]
+            sp = f"<b>{name_fa(label)}</b> — فصل {period_label(e['period'])}، {e['summary']['n']} سهم\n" + fmt_top(e["summary"]["top"], 5)
+            if e.get("diff"):
+                sp += "\nتغییرات نسبت به فصل قبل:\n" + fmt_diff(e["diff"])
+            blocks.append(sp)
     blocks += web_blocks
     foot = []
     nd = next_deadline(today)
