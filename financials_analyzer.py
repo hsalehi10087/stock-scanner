@@ -276,25 +276,30 @@ class FinancialsAnalyzer:
         ]
 
         # خلاصهٔ کلی
-        blocks.append(f"""🌍 <b>خلاصه شرکت‌های بورسی</b>
-🇺🇸 آمریکا: {len(us_companies)} شرکت | میانگین رشد: {sum(m['revenue_growth_qoq'] for m in us_companies) / len(us_companies):.1f}% | میانگین حاشیه: {sum(m['margin_current'] for m in us_companies) / len(us_companies):.1f}%
-🇨🇳 چین: {len(cn_companies)} شرکت | میانگین رشد: {sum(m['revenue_growth_qoq'] for m in cn_companies) / len(cn_companies):.1f}% | میانگین حاشیه: {sum(m['margin_current'] for m in cn_companies) / len(cn_companies):.1f}%
-🇯🇵 ژاپن: {len(jp_companies)} شرکت | میانگین رشد: {sum(m['revenue_growth_qoq'] for m in jp_companies) / len(jp_companies):.1f}% | میانگین حاشیه: {sum(m['margin_current'] for m in jp_companies) / len(jp_companies):.1f}%
-""")
+        us_avg_growth = sum(m['revenue_growth_qoq'] for m in us_companies) / len(us_companies) if us_companies else 0
+        us_avg_margin = sum(m['margin_current'] for m in us_companies) / len(us_companies) if us_companies else 0
+        cn_avg_growth = sum(m['revenue_growth_qoq'] for m in cn_companies) / len(cn_companies) if cn_companies else 0
+        cn_avg_margin = sum(m['margin_current'] for m in cn_companies) / len(cn_companies) if cn_companies else 0
+        jp_avg_growth = sum(m['revenue_growth_qoq'] for m in jp_companies) / len(jp_companies) if jp_companies else 0
+        jp_avg_margin = sum(m['margin_current'] for m in jp_companies) / len(jp_companies) if jp_companies else 0
+
+        blocks.append(f"<b>🌍 خلاصهٔ شرکت‌های بورسی</b>\n"
+                     f"<b>🇺🇸 آمریکا:</b> {len(us_companies)} شرکت | رشد: {us_avg_growth:+.1f}% | حاشیه: {us_avg_margin:.1f}%\n"
+                     f"<b>🇨🇳 چین:</b> {len(cn_companies)} شرکت | رشد: {cn_avg_growth:+.1f}% | حاشیه: {cn_avg_margin:.1f}%\n"
+                     f"<b>🇯🇵 ژاپن:</b> {len(jp_companies)} شرکت | رشد: {jp_avg_growth:+.1f}% | حاشیه: {jp_avg_margin:.1f}%")
 
         # جدول کامل تمام شرکت‌ها
-        blocks.append("<b>جدول کامل شرکت‌های بورسی</b>")
+        blocks.append("<b>📊 جدول شرکت‌های بورسی</b>")
 
-        table = "<code>"
-        table += "نماد       نام            رشد%QoQ حاشیه سود EPS سیگنال\n"
-        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        table = "<code><b>نماد    نام          رشد%  حاشیه%  EPS  سیگنال</b>\n"
+        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
         for m in metrics_sorted:  # تمام شرکت‌ها
-            ticker = (m['region'] + ' ' + m['ticker']).ljust(10)
-            name = m['name'][:15].ljust(15)
-            rev_qoq = f"{m['revenue_growth_qoq']:+6.1f}%".rjust(7)
+            ticker = (m['region'] + m['ticker']).ljust(8)
+            name = m['name'][:12].ljust(12)
+            rev_qoq = f"{m['revenue_growth_qoq']:+5.1f}%".rjust(6)
             margin = f"{m['margin_current']:5.1f}%".rjust(7)
-            eps = f"{m['eps_forecast']:.2f}".rjust(6)
+            eps = f"{m['eps_forecast']:.1f}".rjust(5)
             signal = m['signal']
 
             table += f"{ticker}{name}{rev_qoq}{margin}{eps} {signal}\n"

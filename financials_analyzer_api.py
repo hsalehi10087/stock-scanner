@@ -185,30 +185,25 @@ class FinancialsAnalyzerAPI:
             return self._fallback_to_sample(), []
 
         blocks = []
-        blocks.append(f"📊 <b>تحلیل صورتهای مالی - Yahoo Finance</b> — {self.timestamp}\n"
-                     f"<i>دریافت از Yahoo Finance API</i>")
+        blocks.append(f"📊 <b>تحلیل صورتهای مالی - Yahoo Finance</b> — {self.timestamp}\n<i>دریافت از Yahoo Finance API</i>")
 
-        blocks.append(f"""
-🌍 <b>شرکت‌های بورسی (Yahoo Finance)</b>
-📦 کل شرکت‌ها: {len(companies)} شرکت
-""")
+        blocks.append(f"<b>🌍 شرکت‌های بورسی</b>\n<b>کل:</b> {len(companies)} شرکت")
 
-        # جدول ساده
-        blocks.append("<b>جدول شرکت‌ها</b>")
+        # جدول بهتر
         table = "<code>"
-        table += "نماد       نام                    درآمد (میلیون)\n"
-        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        table += "<b>نماد    نام                  درآمد</b>\n"
+        table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
         for company in companies[:20]:
-            ticker = company['symbol'].ljust(10)
-            name = company['description'][:20].ljust(20)
-            revenue = f"{company.get('revenue', 0) / 1e9:.1f}B"
-            table += f"{ticker}{name}{revenue}\n"
+            ticker = company['symbol'].ljust(8)
+            name = company['description'][:18].ljust(18)
+            revenue = f"{company.get('revenue', 0) / 1e9:.0f}B".rjust(8)
+            table += f"{ticker} {name} {revenue}\n"
 
         table += "</code>"
         blocks.append(table)
 
-        blocks.append("✅ داده‌های واقعی از Yahoo Finance API")
+        blocks.append("✅ <b>Yahoo Finance API</b>")
 
         return blocks, []
 
