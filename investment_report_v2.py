@@ -171,13 +171,25 @@ class InvestmentReportV2:
         for category_name, stocks in categories.items():
             if not stocks:
                 continue
-            
+
             blocks.append(f"\n<b>{category_name}</b> ({len(stocks)} سهام)")
-            
+
             table = "<code>"
             table += "<b>کد / رشد% / سود% / P&L% / کوتاه / بلند</b>\n"
             table += "<i>(سهم) (سال) (خالص) (فرضی) (3-6م) (1-3سال)</i>\n"
             table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+
+            # نمونه تفسیری
+            if len(stocks) > 0:  # اگر سهام دارد
+                table += "\n<i>مثال تفسیر:</i>\n"
+                table += "GOOGL / +11% / 38% / +8.7% / 80 / 100\n"
+                table += "│     │      │     │       │   └─ بلند‌مدت: 100/100 (عالی!)\n"
+                table += "│     │      │     │       └─ کوتاه‌مدت: 80/100 (خوب)\n"
+                table += "│     │      │     └─ اگر امروز خریده بودیم +8.7% سود می‌کردیم\n"
+                table += "│     │      └─ از هر دلار درآمد 38 سنت سود خالص\n"
+                table += "│     └─ سالانه 11% رشد درآمد\n"
+                table += "└─ Alphabet (Google)\n"
+                table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
             for stock in stocks[:8]:  # حداکثر 8 در هر دسته
                 symbol = stock['symbol']
