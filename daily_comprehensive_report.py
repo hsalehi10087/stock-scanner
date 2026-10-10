@@ -13,6 +13,7 @@ from signal_performance_tracker import SignalPerformanceTracker
 from market_regime_detector import MarketRegimeDetector, generate_sample_ohlcv
 from adaptive_trading_system import AdaptiveTradingSystem
 from investment_report_v2 import InvestmentReportV2
+from report_scheduler import ReportScheduler
 
 class DailyComprehensiveReport:
     """گزارش روزانهٔ جامع - یک‌بار در روز"""
@@ -22,7 +23,8 @@ class DailyComprehensiveReport:
         self.trading_system = AdaptiveTradingSystem()
         self.investment_report = InvestmentReportV2()
         self.performance_tracker = SignalPerformanceTracker()
-        
+        self.scheduler = ReportScheduler()
+
         self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
         self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
     
@@ -158,15 +160,31 @@ class DailyComprehensiveReport:
     
     def run(self):
         """اجرای گزارش"""
+        # ✅ بررسی: آیا امروز قبلاً ارسال شده است؟
+        if not self.scheduler.should_send_daily('daily_comprehensive'):
+            now = datetime.now()
+            print(f"⏭️ گزارش امروز قبلاً ارسال شده است ({now.strftime('%Y-%m-%d %H:%M')})")
+            print("⏹️ ارسال دوباره متوقف شد - فقط روزی یک‌بار\n")
+
+            # نمایش وضعیت
+            self.scheduler.print_report_status()
+            return None
+
         print("🚀 تولید گزارش روزانهٔ جامع...\n")
-        
+
         message = self.format_telegram_message()
         print(message)
         print("\n" + "="*60)
-        
-        self.send_to_telegram(message)
-        
-        print("\n✅ گزارش روزانه تکمیل شد!")
+
+        # ✅ ارسال به تلگرام
+        if self.send_to_telegram(message):
+            # ✅ علامت‌گذاری: ارسال شد
+            self.scheduler.mark_sent('daily_comprehensive', 'sent')
+            print("\n✅ گزارش روزانه تکمیل شد و ارسال شد!")
+        else:
+            # ⚠️ اگر ارسال ناموفق بود، علامت نگذاریم (دوباره تلاش کنیم)
+            print("\n⚠️ گزارش ارسال نشد - دوباره تلاش خواهد شد")
+
         return message
 
 def run():
