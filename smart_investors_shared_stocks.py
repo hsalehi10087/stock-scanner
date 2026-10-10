@@ -1,241 +1,274 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Smart Investors - Shared Stocks Only
-سرمایه‌گذاران بزرگ - فقط سهام‌های مشترک
+سرمایه‌گذاران بزرگ - سهام مشترک (بهینه‌شده)
+Only show stocks held by 3+ major investors (strongest signal)
+First time: full details | Subsequent: changes only
 """
 
 import os
 import json
 from datetime import datetime
 from typing import Dict, List, Set
+import requests
 
-class SharedStocksTracker:
-    """فقط سهام‌های مشترک بین چند سرمایه‌گذار"""
+class SmartInvestorsSharedStocks:
+    """تحلیل سهام مشترک سرمایه‌گذاران بزرگ"""
     
-    # سرمایه‌گذاران کبیر
-    MAJOR_INVESTORS = {
-        'David Tepper': {},
-        'Carl Icahn': {},
-        'Dan Loeb': {},
-        'Seth Klarman': {},
-        'Cathie Wood': {},
-        'Chase Coleman': {}
-    }
+    HISTORY_FILE = 'data/smart_investors_history.json'
     
-    # سهام‌های مشترک (شناسایی‌شده از داده‌ها)
-    SHARED_STOCKS = {
-        'Amazon': {
-            'investors': ['David Tepper', 'Dan Loeb', 'Seth Klarman', 'Chase Coleman'],
-            'count': 4
+    # سرمایه‌گذاران بزرگ و سهام‌های آنها (Q2 2026)
+    INVESTORS_DATA = {
+        'وارن بافت': {
+            'holdings': {
+                'Apple': 22.0,
+                'American Express': 17.1,
+                'Coca Cola': 10.9,
+                'Alphabet': 9.4,
+                'Bank Of America': 9.2,
+            },
+            'changes': {
+                'ADD': [
+                    {'stock': 'Alphabet', 'change_pct': 45},
+                    {'stock': 'Delta Air Line', 'change_pct': 44},
+                ]
+            }
         },
-        'Alphabet': {
-            'investors': ['David Tepper', 'Dan Loeb', 'Seth Klarman', 'Cathie Wood', 'Chase Coleman'],
-            'count': 5
+        'بیل اکمن': {
+            'holdings': {
+                'Brookfield': 17.6,
+                'Amazon': 17.4,
+                'Uber Technologies': 15.7,
+                'Microsoft': 15.3,
+                'Restaurant Brands': 12.2,
+            },
+            'changes': {
+                'NEW': [{'stock': 'Microsoft'}],
+                'CUT': [{'stock': 'Alphabet'}],
+                'SOLD': [{'stock': 'Hilton Worldwide'}],
+            }
         },
-        'Meta Platforms': {
-            'investors': ['David Tepper', 'Cathie Wood', 'Chase Coleman'],
-            'count': 3
+        'ری دالیو': {
+            'holdings': {
+                'State Street SPY': 16.3,
+                'iShares': 9.2,
+                'Nvidia': 3.2,
+                'Broadcom': 2.0,
+                'Amazon': 2.0,
+            },
+            'changes': {
+                'ADD': [{'stock': 'Vanguard Index', 'change_pct': 189}],
+                'CUT': [
+                    {'stock': 'Broadcom', 'change_pct': -28},
+                    {'stock': 'Amazon', 'change_pct': -54},
+                ]
+            }
         },
-        'Taiwan Semiconductor': {
-            'investors': ['David Tepper', 'Dan Loeb', 'Chase Coleman'],
-            'count': 3
+        'جرج سوروس': {
+            'holdings': {
+                'Amazon': 3.5,
+                'Taiwan Semiconductors': 3.1,
+                'Global Payments': 2.7,
+                'Alphabet': 2.6,
+                'Nvidia': 2.6,
+            },
+            'changes': {
+                'NEW': [
+                    {'stock': 'Super Micro Computer'},
+                    {'stock': 'Nebius'},
+                ],
+                'ADD': [
+                    {'stock': 'Entergy', 'change_pct': 1084},
+                    {'stock': 'Digital Realty', 'change_pct': 840},
+                ],
+                'CUT': [
+                    {'stock': 'Amazon', 'change_pct': -39},
+                    {'stock': 'Taiwan Semiconductors', 'change_pct': -55},
+                ]
+            }
         },
-        'Broadcom': {
-            'investors': ['David Tepper', 'Dan Loeb', 'Chase Coleman'],
-            'count': 3
+        'استنلی دراکنمیلر': {
+            'holdings': {
+                'Natera': 16.6,
+                'Taiwan Semiconductors': 5.4,
+                'STMicroelectronics': 4.5,
+                'Invesco': 3.4,
+                'Insmed': 2.9,
+            },
+            'changes': {
+                'NEW': [
+                    {'stock': 'Alphabet'},
+                    {'stock': 'Amazon', 'change_pct': 1083},
+                ],
+                'SOLD': [
+                    {'stock': 'Broadcom'},
+                ]
+            }
         },
-        'Nvidia': {
-            'investors': ['Cathie Wood', 'Chase Coleman'],
-            'count': 2
-        }
-    }
-    
-    # تغییرات جدید (Q2 2026)
-    RECENT_CHANGES = {
-        'David Tepper': {
-            'Apple (Put)': 'NEW',
-            'Boeing': 'NEW',
-            'Broadcom': 'NEW',
-            'Meta Platforms': 'ADD +55%',
-            'Micron Technology': 'CUT -41%'
-        },
-        'Dan Loeb': {
-            'Warner Bros Discovery': 'NEW +11.4%',
-            'Alphabet': 'ADD +486%',
-            'Taiwan Semiconductor': 'ADD +67%',
-            'Meta Platforms': 'SOLD -100%',
-            'Nvidia': 'SOLD -100%',
-            'Broadcom': 'SOLD -100%'
-        },
-        'Seth Klarman': {
-            'Cme': 'NEW',
-            'Genuine Parts': 'ADD +89%',
-            'Willis Towers': 'SOLD -100%'
-        },
-        'Cathie Wood': {
-            'Space Exploration Technologies': 'NEW +5.0%',
-            'Alphabet': 'ADD +45%',
-            'Nvidia': 'ADD +33%',
-            'Meta Platforms': 'ADD +55%'
-        },
-        'Chase Coleman': {
-            'Cerebras Systems': 'NEW',
-            'Advanced Micro': 'NEW',
-            'Intel': 'ADD +160%',
-            'Alphabet': 'CUT -45%',
-            'Broadcom': 'CUT -51%'
-        }
     }
     
     def __init__(self):
+        self.history = self.load_history()
         self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
         self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
-        self.history_file = 'data/shared_stocks_history.json'
     
-    def get_shared_changes(self) -> Dict[str, List[Dict]]:
-        """
-        دریافت تغییرات برای سهام‌های مشترک
-        فقط اگر چند سرمایه‌گذار بر روی یک سهم تغییر کرده‌اند
-        """
-        shared_changes = {}
-        
-        for symbol, info in self.SHARED_STOCKS.items():
-            changes = []
-            
-            # بررسی تغییرات هر سرمایه‌گذار برای این سهم
-            for investor in info['investors']:
-                if investor in self.RECENT_CHANGES:
-                    investor_changes = self.RECENT_CHANGES[investor]
-                    
-                    # بررسی اگر این سهم در تغییرات این سرمایه‌گذار است
-                    for stock_name, change in investor_changes.items():
-                        if symbol.lower() in stock_name.lower():
-                            changes.append({
-                                'investor': investor,
-                                'action': change,
-                                'symbol': symbol
-                            })
-            
-            if changes:
-                shared_changes[symbol] = changes
-        
-        return shared_changes
+    def load_history(self) -> Dict:
+        """بارگیری تاریخچهٔ گزارش"""
+        if os.path.exists(self.HISTORY_FILE):
+            with open(self.HISTORY_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return {}
     
-    def format_telegram_message(self, shared_changes: Dict) -> str:
-        """تنسیق گزارش برای تلگرام"""
+    def save_history(self):
+        """ذخیرهٔ تاریخچهٔ گزارش"""
+        os.makedirs(os.path.dirname(self.HISTORY_FILE), exist_ok=True)
+        with open(self.HISTORY_FILE, 'w', encoding='utf-8') as f:
+            json.dump(self.history, f, ensure_ascii=False, indent=2)
+    
+    def find_shared_stocks(self, min_investors: int = 3) -> Dict[str, List[str]]:
+        """یافتن سهام مشترک بین N+ سرمایه‌گذار"""
+        from collections import defaultdict
         
-        if not shared_changes:
-            return None  # اگر تغییری نیست، پیام نفرست
+        stock_investors = defaultdict(list)
         
-        now = datetime.now().strftime('%Y-%m-%d %H:%M')
+        # شمارش سهام در هر سرمایه‌گذار
+        for investor, data in self.INVESTORS_DATA.items():
+            for stock in data['holdings'].keys():
+                stock_investors[stock].append(investor)
         
-        message = f"""
-<b>🐋 سرمایه‌گذاران بزرگ - سهام‌های مشترک</b>
-{now} (تهران)
-<i>فقط سهام‌های چند سرمایه‌گذار + تغییرات</i>
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-"""
+        # فیلتر: تنها سهام‌های مشترک بین min_investors+
+        shared = {}
+        for stock, investors in stock_investors.items():
+            if len(investors) >= min_investors:
+                shared[stock] = investors
         
-        for symbol, changes in sorted(shared_changes.items()):
-            # تعداد سرمایه‌گذاران
-            investor_count = len(set(c['investor'] for c in changes))
-            
-            message += f"\n<b>{'💰' if investor_count >= 4 else '📊'} {symbol}</b> ({investor_count} سرمایه‌گذار)\n"
-            
-            for change in changes:
-                action = change['action']
-                investor = change['investor']
+        return shared
+    
+    def get_stock_details(self, stock_name: str) -> Dict:
+        """دریافت جزئیات یک سهم در همهٔ سرمایه‌گذاران"""
+        details = {'holders': {}, 'total_weight': 0}
+        
+        for investor, data in self.INVESTORS_DATA.items():
+            if stock_name in data['holdings']:
+                weight = data['holdings'][stock_name]
+                changes = []
                 
-                # نماد بر اساس نوع تغییر
-                symbol_map = {
-                    'NEW': '🆕',
-                    'ADD': '➕',
-                    'CUT': '📉',
-                    'SOLD': '❌'
+                # جستجو برای تغییرات
+                for change_type, change_list in data['changes'].items():
+                    for change in change_list:
+                        if change['stock'] == stock_name:
+                            change_pct = change.get('change_pct', '-')
+                            changes.append(f"{change_type} ({change_pct}%)")
+                
+                details['holders'][investor] = {
+                    'weight': weight,
+                    'changes': changes
                 }
-                
-                symbol_prefix = symbol_map.get(action.split()[0], '●')
-                message += f"  {symbol_prefix} {investor}: {action}\n"
+                details['total_weight'] += weight
         
-        message += f"""
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        return details
+    
+    def format_first_report(self) -> str:
+        """گزارش کامل (اول بار)"""
+        shared = self.find_shared_stocks(min_investors=3)
+        
+        message = """
+<b>🐋 سهام مشترک سرمایه‌گذاران بزرگ</b>
 
-📌 معیار:
-  • فقط سهام‌های ۲+ سرمایه‌گذار
-  • فقط تغییرات (NEW/ADD/CUT/SOLD)
-  • بدون تکرار
-
-⏰ گزارش: هر موقع تغییر شد
+<b>⭐ سهام‌های قوی (موجود در 3+ سرمایه‌گذار)</b>
 """
+        
+        for stock in sorted(shared.keys()):
+            details = self.get_stock_details(stock)
+            holders = details['holders']
+            
+            message += f"\n<b>{stock}</b>\n"
+            for investor, info in holders.items():
+                message += f"  • {investor}: {info['weight']}%"
+                if info['changes']:
+                    message += f" [{', '.join(info['changes'])}]"
+                message += "\n"
+            message += f"  💰 وزن کل: {details['total_weight']:.1f}%\n"
+        
+        if not shared:
+            message += "\n<i>سهام مشترک بین 3+ سرمایه‌گذار موجود نیست</i>\n"
+        
+        message += """
+━━━━━━━━━━━━━━━━━━━━━━━━
+📅 گزارش: روزی یک‌بار
+🔔 نمایش: تغییرات جدید از بعد
+"""
+        return message
+    
+    def format_changes_only(self) -> str:
+        """گزارش تغییرات (دفعات بعد)"""
+        shared = self.find_shared_stocks(min_investors=3)
+        
+        message = """
+<b>🐋 سهام مشترک - تغییرات امروز</b>
+
+"""
+        
+        has_changes = False
+        for stock in sorted(shared.keys()):
+            details = self.get_stock_details(stock)
+            has_any_change = any(
+                details['holders'][inv]['changes'] 
+                for inv in details['holders']
+            )
+            
+            if has_any_change:
+                has_changes = True
+                message += f"<b>{stock}</b>\n"
+                for investor, info in details['holders'].items():
+                    if info['changes']:
+                        message += f"  • {investor}: {', '.join(info['changes'])}\n"
+                message += "\n"
+        
+        if not has_changes:
+            message += "<i>تغییری در سهام مشترک نداشته است</i>\n"
         
         return message
     
-    def send_to_telegram(self, message: str) -> bool:
-        """ارسال به تلگرام - فقط اگر تغییری است"""
-        if not message:
-            print("✅ تغییری نیست - پیام نفرستاده شد")
-            return False
-        
+    def send_report(self):
+        """ارسال گزارش"""
         if not self.telegram_token or not self.telegram_chat_id:
             print("⚠️ تلگرام تنظیم نشده")
-            return False
+            return
         
+        # بررسی: اول بار یا نه
+        is_first_time = 'last_sent' not in self.history
+        
+        if is_first_time:
+            message = self.format_first_report()
+            label = "📋 گزارش کامل (اول بار)"
+        else:
+            message = self.format_changes_only()
+            label = "🔄 تغییرات امروز"
+        
+        print(f"\n{label}")
+        print(message)
+        
+        # ارسال
         try:
-            import requests
             url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
             data = {
                 'chat_id': self.telegram_chat_id,
                 'text': message,
                 'parse_mode': 'HTML'
             }
-            
             response = requests.post(url, data=data, timeout=10)
             if response.status_code == 200:
-                print("✅ گزارش ارسال شد")
-                return True
-            else:
-                print(f"❌ خطا: {response.status_code}")
-                return False
+                self.history['last_sent'] = datetime.now().isoformat()
+                self.save_history()
+                print("✅ ارسال شد")
         except Exception as e:
             print(f"❌ خطا: {e}")
-            return False
-    
-    def run(self):
-        """اجرای ردیابی"""
-        print("🔍 بررسی سهام‌های مشترک...\n")
-        
-        # دریافت تغییرات
-        shared_changes = self.get_shared_changes()
-        
-        print(f"📊 سهام‌های مشترک: {len(self.SHARED_STOCKS)}")
-        print(f"📈 سهام‌های با تغییر: {len(shared_changes)}\n")
-        
-        if not shared_changes:
-            print("✅ تغییری نیست - پیام نفرستاده نمی‌شود\n")
-            return
-        
-        # نمایش در کنسول
-        for symbol, changes in sorted(shared_changes.items()):
-            investor_count = len(set(c['investor'] for c in changes))
-            print(f"📌 {symbol} ({investor_count} سرمایه‌گذار):")
-            for change in changes:
-                print(f"   • {change['investor']}: {change['action']}")
-            print()
-        
-        # تنسیق و ارسال
-        message = self.format_telegram_message(shared_changes)
-        
-        if message:
-            print(message)
-            self.send_to_telegram(message)
 
 def run():
-    """اجرای ردیابی"""
-    tracker = SharedStocksTracker()
-    tracker.run()
+    """اجرای گزارش"""
+    reporter = SmartInvestorsSharedStocks()
+    reporter.send_report()
 
 if __name__ == "__main__":
     run()
