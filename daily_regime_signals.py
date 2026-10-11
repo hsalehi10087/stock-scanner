@@ -3,6 +3,7 @@
 """
 گزارش روزانه: بهترین سهم‌های روز بر اساس رژیم بازار
 Daily Report: Best Stocks of the Day by Market Regime Detection
+Now with REAL market data from Yahoo Finance
 """
 
 import pandas as pd
@@ -11,208 +12,196 @@ from datetime import datetime, timedelta
 from typing import List, Dict, Tuple
 import requests
 import os
-from market_regime_detector import MarketRegimeDetector, generate_sample_ohlcv
-from adaptive_trading_system import AdaptiveTradingSystem
-from investment_report_v2 import InvestmentReportV2
 
-class DailyRegimeSignals:
-    """گزارش روزانهٔ سهام‌های بهترین بر اساس رژیم"""
+try:
+    import yfinance as yf
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
+
+from report_scheduler import ReportScheduler
+
+class DailyRegimeSignalsReal:
+    """گزارش روزانهٔ سهام‌های بهترین - Real Market Data"""
+    
+    # سهام برای تحلیل
+    SYMBOLS = {
+        'US': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META', 'JPM', 'WMT', 'JNJ'],
+        'Tech': ['AAPL', 'MSFT', 'NVDA', 'META', 'GOOGL', 'AMD', 'INTC', 'AVGO'],
+        'Finance': ['JPM', 'BAC', 'GS', 'MS', 'C', 'WFC'],
+    }
     
     def __init__(self):
-        self.regime_detector = MarketRegimeDetector()
-        self.trading_system = AdaptiveTradingSystem()
-        self.investment_report = InvestmentReportV2()
+        self.scheduler = ReportScheduler()
         self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
         self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
     
-    def get_market_data(self) -> pd.DataFrame:
-        """دریافت داده‌های بازار (فعلاً نمونه)"""
-        # توده: اتصال به API واقعی
-        return generate_sample_ohlcv(days=100)
+    def get_real_market_data(self, symbol: str) -> Dict:
+        """دریافت real market data از Yahoo Finance"""
+        if not HAS_YFINANCE:
+            return None
+        
+        try:
+            stock = yf.Ticker(symbol)
+            info = stock.info
+            hist = stock.history(period='3mo')  # 3 months for regime detection
+            
+            if hist.empty:
+                return None
+            
+            # محاسبهٔ regime indicators
+            close = hist['Close']
+            
+            # RSI (14)
+            delta = close.diff()
+            gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+            loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+            rs = gain / loss
+            rsi = 100 - (100 / (1 + rs))
+            
+            # Volatility (ATR)
+            high_low = hist['High'] - hist['Low']
+            high_close = abs(hist['High'] - close.shift())
+            low_close = abs(hist['Low'] - close.shift())
+            ranges = pd.concat([high_low, high_close, low_close], axis=1)
+            true_range = ranges.max(axis=1)
+            atr = true_range.rolling(window=14).mean()
+            
+            # Trend (slope of 20-day MA)
+            ma20 = close.rolling(window=20).mean()
+            trend_slope = (ma20.iloc[-1] - ma20.iloc[-20]) / ma20.iloc[-20] * 100 if len(ma20) >= 20 else 0
+            
+            # بازدهی
+            daily_return = (close.iloc[-1] - close.iloc[-5]) / close.iloc[-5] * 100  # 5-day return
+            
+            return {
+                'symbol': symbol,
+                'name': info.get('shortName', symbol),
+                'price': close.iloc[-1],
+                'rsi': rsi.iloc[-1],
+                'atr': atr.iloc[-1],
+                'trend': trend_slope,
+                'return_5d': daily_return,
+                'volatility': atr.iloc[-1] / close.iloc[-1] * 100 if close.iloc[-1] > 0 else 0,
+            }
+        except Exception as e:
+            return None
+    
+    def detect_regime(self, data_list: List[Dict]) -> str:
+        """تشخیص رژیم بازار بر اساس داده‌ها"""
+        if not data_list:
+            return "Unknown"
+        
+        avg_rsi = np.mean([d['rsi'] for d in data_list if d['rsi']])
+        avg_trend = np.mean([d['trend'] for d in data_list if d['trend'] is not None])
+        avg_vol = np.mean([d['volatility'] for d in data_list if d['volatility']])
+        
+        # رژیم تشخیص
+        if avg_rsi > 60 and avg_trend > 2:
+            return "🚀 Bullish Trend"
+        elif avg_rsi < 40 and avg_trend < -2:
+            return "📉 Bearish Trend"
+        elif 40 <= avg_rsi <= 60 and abs(avg_trend) < 2:
+            return "➡️ Range/Sideways"
+        elif avg_vol > 3:
+            return "⚡ High Volatility"
+        else:
+            return "⏸️ Neutral"
     
     def analyze_market(self) -> Dict:
-        """تحلیل کامل بازار"""
-        # دریافت داده‌ها
-        ohlcv = self.get_market_data()
+        """تحلیل کامل بازار - Real Data"""
+        print("📊 دریافت داده‌های بازار از Yahoo Finance...")
         
-        # تشخیص رژیم
-        features = self.regime_detector.extract_features(ohlcv)
-        regimes, _ = self.regime_detector.detect_regime_rule_based(features)
-        regime_report = self.regime_detector.generate_report(regimes)
+        all_data = []
+        for category, symbols in self.SYMBOLS.items():
+            for symbol in symbols[:5]:  # 5 تا برای سرعت
+                data = self.get_real_market_data(symbol)
+                if data:
+                    all_data.append(data)
         
-        # سیگنال‌های معاملاتی
-        trading_analysis = self.trading_system.generate_adaptive_signals(ohlcv)
+        if not all_data:
+            return None
         
-        # تحلیل سهام
-        all_stocks = self.investment_report.analyze_all_stocks()
+        # مرتب‌سازی براساس بهترین performers
+        all_data.sort(key=lambda x: x['return_5d'], reverse=True)
+        
+        regime = self.detect_regime(all_data)
         
         return {
             'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M"),
-            'jalali_date': self.investment_report.jalali_date,
-            'regime': regime_report,
-            'trading': trading_analysis,
-            'stocks': all_stocks
+            'regime': regime,
+            'top_stocks': all_data[:5],
+            'all_data': all_data
         }
     
-    def get_best_stocks_by_regime(self, analysis: Dict, top_n: int = 5) -> Dict[str, List]:
-        """بهترین سهم‌ها برای هر رژیم"""
-        stocks = analysis['stocks']
-        regime_id = analysis['trading']['regime_id']
-        
-        best_by_regime = {}
-        
-        # 🔥 رژیم صعودی: بالاترین short-term score
-        if regime_id == 0:
-            best_by_regime['strategy'] = "📈 Trend Following"
-            best_by_regime['stocks'] = sorted(
-                stocks, 
-                key=lambda x: x['short_term'], 
-                reverse=True
-            )[:top_n]
-        
-        # ❄️ رژیم نزولی: بالاترین short-term (خرید نقطهٔ ورود)
-        elif regime_id == 1:
-            best_by_regime['strategy'] = "📉 Short Selling Ready"
-            best_by_regime['stocks'] = sorted(
-                stocks, 
-                key=lambda x: x['short_term'], 
-                reverse=True
-            )[:top_n]
-        
-        # 🔄 رژیم رنج: بالاترین profit margin (Mean Reversion)
-        elif regime_id == 2:
-            best_by_regime['strategy'] = "🔄 Mean Reversion"
-            best_by_regime['stocks'] = sorted(
-                stocks, 
-                key=lambda x: x['profit_margin'], 
-                reverse=True
-            )[:top_n]
-        
-        # ⚡ رژیم بحران: بالاترین long-term (محافظ‌کاری)
-        else:
-            best_by_regime['strategy'] = "⚡ Defensive (Crisis Mode)"
-            best_by_regime['stocks'] = sorted(
-                stocks, 
-                key=lambda x: x['long_term'], 
-                reverse=True
-            )[:top_n]
-        
-        return best_by_regime
-    
     def format_telegram_message(self, analysis: Dict) -> str:
-        """تنسیق پیام تلگرام"""
-        regime_info = analysis['regime']
-        trading_info = analysis['trading']
-        best_stocks = self.get_best_stocks_by_regime(analysis)
-        
+        """تنسیق پیام برای تلگرام"""
         message = f"""
-<b>📊 گزارش روزانهٔ رژیم بازار</b>
+<b>📈 گزارش روزانهٔ بهترین سهام‌ها</b>
+<b>{analysis['timestamp']} (تهران)</b>
 
-<b>⏰ تاریخ:</b> {analysis['jalali_date']} میلادی
-<b>🎯 رژیم فعلی:</b> {trading_info['current_regime']}
-<b>📈 اطمینان:</b> {trading_info['confidence']*100:.0f}%
+<b>🔍 رژیم بازار: {analysis['regime']}</b>
 
-<b>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<b>💡 استراتژی فعال:</b> {best_stocks['strategy']}
-
-<b>🏆 بهترین ۵ سهام امروز:</b>
-<code>
+<b>⭐ ۵ بهترین سهم (۵ روز اخیر)</b>
 """
         
-        # جدول بهترین سهام
-        message += "<b>نماد / کوتاه / بلند / امتیاز</b>\n"
-        message += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        
-        for i, stock in enumerate(best_stocks['stocks'][:5], 1):
-            symbol = stock['symbol'].ljust(7)
-            short = f"{stock['short_term']:.0f}".rjust(5)
-            long = f"{stock['long_term']:.0f}".rjust(5)
-            overall = f"{stock['overall']:.0f}".rjust(5)
-            
-            message += f"{i}. {symbol} {short} {long} {overall}\n"
-        
-        message += """</code>
-
-<b>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b>
-
-<b>📌 توضیح ستون‌ها:</b>
-• <b>کوتاه:</b> امتیاز ۳-۶ ماه (۰-۱۰۰)
-• <b>بلند:</b> امتیاز ۱-۳ سال (۰-۱۰۰)
-• <b>امتیاز:</b> میانگین کوتاه‌مدت و بلند‌مدت
-
-<b>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b>
-
-<b>📊 توزیع رژیم‌ها (۱۰۰ روز اخیر):</b>
+        for i, stock in enumerate(analysis['top_stocks'], 1):
+            rsi_status = "🔥" if stock['rsi'] > 70 else "❄️" if stock['rsi'] < 30 else "⚖️"
+            message += f"""
+{i}. <b>{stock['symbol']}</b> ({stock['name'][:20]})
+   💰 {stock['price']:.2f} | 📊 {stock['return_5d']:+.2f}%
+   RSI: {stock['rsi']:.0f} {rsi_status} | Trend: {stock['trend']:+.1f}%
 """
         
-        for regime_name, count in regime_info['regime_distribution'].items():
-            percentage = regime_info['regime_percentages'][regime_name]
-            message += f"  {regime_name}: {count} روز ({percentage})\n"
-        
-        message += f"""
+        message += """
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<b>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</b>
-
-⚠️ <i>گزارش برای اطلاع‌رسانی است و توصیهٔ سرمایه‌گذاری نیست.</i>
-
-#رژیم_بازار #تحلیل #سهام #خرید_فروش
+✅ منبع: Yahoo Finance (Real-Time)
+📅 گزارش: روزی یک‌بار
+🤖 رژیم: خودکار تشخیص شده
 """
-        
         return message
     
-    def send_telegram_message(self, message: str) -> bool:
-        """ارسال پیام به تلگرام"""
-        if not self.telegram_token or not self.telegram_chat_id:
-            print("⚠️ TELEGRAM_BOT_TOKEN یا TELEGRAM_CHAT_ID تعریف نشده")
-            return False
+    def send_report(self):
+        """ارسال گزارش"""
+        # بررسی: آیا امروز قبلاً ارسال شده
+        if not self.scheduler.should_send_daily('daily_regime_signals'):
+            print("⏭️ گزارش امروز قبلاً ارسال شده است")
+            return
         
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
-            data = {
-                'chat_id': self.telegram_chat_id,
-                'text': message,
-                'parse_mode': 'HTML'
-            }
-            
-            response = requests.post(url, data=data, timeout=10)
-            
-            if response.status_code == 200:
-                print("✅ پیام به تلگرام ارسال شد")
-                return True
-            else:
-                print(f"❌ خطا در ارسال: {response.status_code}")
-                return False
+        print("🚀 تحلیل بازار (Real Data)...\n")
         
-        except Exception as e:
-            print(f"❌ خطا: {e}")
-            return False
-    
-    def run(self):
-        """اجرای گزارش کامل"""
-        print("🚀 شروع تحلیل رژیم بازار...\n")
-        
-        # تحلیل
         analysis = self.analyze_market()
+        if not analysis:
+            print("❌ خطا: داده‌های بازار دریافت نشد")
+            return
         
-        # تنسیق پیام
         message = self.format_telegram_message(analysis)
-        
-        # نمایش در کنسول
         print(message)
         
         # ارسال به تلگرام
-        self.send_telegram_message(message)
-        
-        print("\n✅ تکمیل شد!")
-        
-        return analysis
+        if self.telegram_token and self.telegram_chat_id:
+            try:
+                url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
+                response = requests.post(url, data={
+                    'chat_id': self.telegram_chat_id,
+                    'text': message,
+                    'parse_mode': 'HTML'
+                }, timeout=10)
+                
+                if response.status_code == 200:
+                    self.scheduler.mark_sent('daily_regime_signals')
+                    print("✅ ارسال شد")
+            except Exception as e:
+                print(f"❌ خطا: {e}")
+        else:
+            print("⚠️ تلگرام تنظیم نشده")
 
 def run():
-    """اجرای گزارش روزانه"""
-    reporter = DailyRegimeSignals()
-    analysis = reporter.run()
-    return analysis
+    reporter = DailyRegimeSignalsReal()
+    reporter.send_report()
 
 if __name__ == "__main__":
     run()

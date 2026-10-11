@@ -32,7 +32,7 @@ jobs:
           echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> $GITHUB_ENV
           echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> $GITHUB_ENV
       
-      - name: Run daily comprehensive report
+      - name: Run all daily reports
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -40,15 +40,14 @@ jobs:
           cd stock-scanner
           echo "📊 Running Daily Comprehensive Report..."
           python3 daily_comprehensive_report.py
-
+          
           echo ""
           echo "🐋 Running Smart Investors Report..."
           python3 smart_investors_shared_stocks.py
-
-          # TODO: Uncomment when daily_regime_signals.py is fixed
-          # echo ""
-          # echo "📈 Running Daily Regime Signals..."
-          # python3 daily_regime_signals.py
+          
+          echo ""
+          echo "📈 Running Daily Regime Signals..."
+          python3 daily_regime_signals.py
       
       - name: Commit and push if changed
         run: |
