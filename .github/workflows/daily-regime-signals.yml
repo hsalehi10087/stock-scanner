@@ -38,7 +38,17 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd stock-scanner
+          echo "📊 Running Daily Comprehensive Report..."
           python3 daily_comprehensive_report.py
+
+          echo ""
+          echo "🐋 Running Smart Investors Report..."
+          python3 smart_investors_shared_stocks.py
+
+          # TODO: Uncomment when daily_regime_signals.py is fixed
+          # echo ""
+          # echo "📈 Running Daily Regime Signals..."
+          # python3 daily_regime_signals.py
       
       - name: Commit and push if changed
         run: |
