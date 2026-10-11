@@ -37,9 +37,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          echo "🚀 Starting 5 Smart Reports (10 AM Tehran)..."
+          echo "🚀 Starting 6 Smart Reports (10 AM Tehran)..."
           echo ""
 
+          echo "0️⃣  📰 Running Daily Summary Report..."
+          python3 daily_summary_report.py
+          echo "✅ Done"
+
+          echo ""
           echo "1️⃣  📊 Running Daily Comprehensive Report..."
           python3 daily_comprehensive_report.py
           echo "✅ Done"
@@ -65,7 +70,7 @@ jobs:
           echo "✅ Done"
 
           echo ""
-          echo "🎉 All 5 reports completed!"
+          echo "🎉 All 6 reports completed!"
       
       - name: Commit and push if changed
         run: |
