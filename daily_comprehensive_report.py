@@ -1,197 +1,161 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-گزارش روزانهٔ جامع (یک‌بار در روز - ساعت 10 صبح تهران)
-Daily Comprehensive Report - Once per day at 10 AM Tehran time
+گزارش روزانهٔ جامع - نسخهٔ REAL DATA
+Daily Comprehensive Report - Real Yahoo Finance API
 """
 
 import os
-from datetime import datetime
+import json
+from datetime import datetime, timedelta
 from typing import Dict, List
 import requests
+
+try:
+    import yfinance as yf
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
+
 from signal_performance_tracker import SignalPerformanceTracker
-from market_regime_detector import MarketRegimeDetector, generate_sample_ohlcv
+from market_regime_detector import MarketRegimeDetector
 from adaptive_trading_system import AdaptiveTradingSystem
-from investment_report_v2 import InvestmentReportV2
 from report_scheduler import ReportScheduler
 
-class DailyComprehensiveReport:
-    """گزارش روزانهٔ جامع - یک‌بار در روز"""
+class DailyComprehensiveReportReal:
+    """گزارش روزانهٔ جامع - با real Yahoo Finance data"""
+    
+    # سهام برای تحلیل (US, China, Taiwan, Japan)
+    STOCKS = {
+        'US': ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'TSLA', 'META', 'JPM', 'JNJ', 'WMT'],
+        'China': ['9988.HK', '0700.HK', '1398.HK', '1288.HK', '0001.HK'],
+        'Taiwan': ['2330.TW', '2303.TW', '2454.TW'],
+        'Japan': ['7203.T', '6758.T', '6861.T', '9432.T', '9684.T']
+    }
     
     def __init__(self):
+        self.scheduler = ReportScheduler()
         self.regime_detector = MarketRegimeDetector()
         self.trading_system = AdaptiveTradingSystem()
-        self.investment_report = InvestmentReportV2()
         self.performance_tracker = SignalPerformanceTracker()
-        self.scheduler = ReportScheduler()
-
+        
         self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
         self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
     
-    def get_strong_signals(self) -> Dict[str, List]:
-        """
-        دریافت فقط سیگنال‌های قوی
-        (سیگنال‌هایی که 3+ بار تکرار شده‌اند)
-        """
-        # نمونهٔ سیگنال‌های قوی
-        strong_signals = {
-            'RSI': [
-                {'symbol': 'GOOGL', 'rsi': 35, 'signal': 'Oversold', 'repeats': 5},
-                {'symbol': 'NVDA', 'rsi': 75, 'signal': 'Overbought', 'repeats': 4},
-            ],
-            'MACD': [
-                {'symbol': 'MSFT', 'signal': 'Bullish Crossover', 'repeats': 3},
-                {'symbol': 'AMZN', 'signal': 'Bearish Crossover', 'repeats': 2},
-            ]
-        }
+    def get_stock_data(self, symbol: str) -> Dict:
+        """دریافت real data از Yahoo Finance"""
+        if not HAS_YFINANCE:
+            return None
         
-        # فیلتر: فقط سیگنال‌های 3+ تکرار
-        filtered = {}
-        for indicator, signals in strong_signals.items():
-            filtered[indicator] = [s for s in signals if s['repeats'] >= 3]
+        try:
+            stock = yf.Ticker(symbol)
+            info = stock.info
+            hist = stock.history(period='1mo')
+            
+            if hist.empty:
+                return None
+            
+            # محاسبهٔ RSI ساده
+            delta = hist['Close'].diff()
+            gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+            loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+            rs = gain / loss
+            rsi = 100 - (100 / (1 + rs))
+            
+            return {
+                'symbol': symbol,
+                'name': info.get('longName', symbol),
+                'price': info.get('currentPrice', 0),
+                'rsi': rsi.iloc[-1] if not rsi.empty else None,
+                'change_pct': ((hist['Close'].iloc[-1] - hist['Close'].iloc[0]) / hist['Close'].iloc[0] * 100),
+                'volume': info.get('volume', 0)
+            }
+        except Exception as e:
+            print(f"⚠️ {symbol}: {str(e)[:30]}")
+            return None
+    
+    def get_top_stocks(self) -> List[Dict]:
+        """دریافت بهترین سهام براساس RSI و Change"""
+        print("📊 دریافت real data...")
         
-        return filtered
+        all_stocks = []
+        
+        for country, symbols in self.STOCKS.items():
+            for symbol in symbols[:3]:  # تنها 3 تا برای سرعت
+                data = self.get_stock_data(symbol)
+                if data:
+                    all_stocks.append(data)
+        
+        # مرتب‌سازی براساس change (بهترین performers)
+        all_stocks.sort(key=lambda x: x['change_pct'], reverse=True)
+        
+        return all_stocks[:3]
     
     def format_telegram_message(self) -> str:
-        """تنسیق گزارش کامل برای تلگرام"""
+        """تنسیق پیام برای تلگرام"""
+        now = datetime.now().strftime('%Y-%m-%d %H:%M')
         
-        # دریافت داده‌ها
-        ohlcv = generate_sample_ohlcv(days=100)
-        features = self.regime_detector.extract_features(ohlcv)
-        regimes, _ = self.regime_detector.detect_regime_rule_based(features)
-        regime_report = self.regime_detector.generate_report(regimes)
-        
-        trading_analysis = self.trading_system.generate_adaptive_signals(ohlcv)
-        all_stocks = self.investment_report.analyze_all_stocks()
-        performance = self.performance_tracker.get_performance_summary()
-        strong_signals = self.get_strong_signals()
-        
-        now = datetime.now()
+        top_stocks = self.get_top_stocks()
         
         message = f"""
 <b>📊 گزارش روزانهٔ جامع</b>
-<b>{now.strftime('%Y-%m-%d %H:%M')} (تهران)</b>
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-<b>🎯 رژیم بازار</b>
-رژیم: {trading_analysis['current_regime']}
-اطمینان: {trading_analysis['confidence']*100:.0f}%
+<b>{now} (تهران)</b>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <b>📈 بهترین ۳ سهام امروز</b>
 """
         
-        best_stocks = sorted(all_stocks, key=lambda x: x['overall'], reverse=True)[:3]
-        for i, stock in enumerate(best_stocks, 1):
-            message += f"{i}. {stock['symbol']}: {stock['overall']:.0f}/100\n"
+        for i, stock in enumerate(top_stocks, 1):
+            message += f"\n{i}. <b>{stock['symbol']}</b>\n"
+            message += f"   نام: {stock['name']}\n"
+            message += f"   قیمت: ${stock['price']:.2f}\n"
+            message += f"   تغییر: {stock['change_pct']:+.2f}%\n"
+            if stock['rsi']:
+                message += f"   RSI: {stock['rsi']:.1f}\n"
         
         message += """
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-<b>🔴 سیگنال‌های قوی (تکرار‌شده)</b>
-"""
-        
-        if strong_signals['RSI']:
-            message += "\n<b>RSI (Relative Strength Index):</b>\n"
-            for sig in strong_signals['RSI']:
-                message += f"  • {sig['symbol']}: {sig['signal']} (تکرار: {sig['repeats']})\n"
-        
-        if strong_signals['MACD']:
-            message += "\n<b>MACD (Moving Average Convergence):</b>\n"
-            for sig in strong_signals['MACD']:
-                message += f"  • {sig['symbol']}: {sig['signal']} (تکرار: {sig['repeats']})\n"
-        
-        if not strong_signals['RSI'] and not strong_signals['MACD']:
-            message += "<i>سیگنال قوی موجود نیست</i>\n"
-        
-        message += """
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-<b>📊 عملکرد سیگنال‌های تاریخی</b>
-"""
-        
-        if performance['total_signals'] > 0:
-            message += f"""
-کل: {performance['total_signals']}
-برنده: {performance['wins']} ✅
-درصد برد: {performance['win_rate']:.0f}%
-بازدهی: {performance['total_closed_return']:+.2f}%
-"""
-        else:
-            message += "<i>سیگنالی ثبت نشده</i>\n"
-        
-        message += """
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-<b>⚠️ توضیح</b>
-✅ سیگنال‌های قوی = 3+ تکرار
-❌ سیگنال‌های ضعیف = شامل نمی‌شوند
-📅 گزارش: روزی یک‌بار (10 صبح)
+✅ منبع: Yahoo Finance API (Real-Time)
+📅 گزارش: روزی یک‌بار
 """
         
         return message
     
-    def send_to_telegram(self, message: str) -> bool:
-        """ارسال به تلگرام"""
-        if not self.telegram_token or not self.telegram_chat_id:
-            print("⚠️ تلگرام تنظیم نشده")
-            return False
-        
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
-            data = {
-                'chat_id': self.telegram_chat_id,
-                'text': message,
-                'parse_mode': 'HTML'
-            }
-            
-            response = requests.post(url, data=data, timeout=10)
-            if response.status_code == 200:
-                print("✅ گزارش روزانه ارسال شد")
-                return True
-            else:
-                print(f"❌ خطا: {response.status_code}")
-                return False
-        except Exception as e:
-            print(f"❌ خطا: {e}")
-            return False
-    
-    def run(self):
-        """اجرای گزارش"""
-        # ✅ بررسی: آیا امروز قبلاً ارسال شده است؟
+    def send_report(self):
+        """ارسال گزارش"""
+        # بررسی: آیا امروز قبلاً ارسال شده
         if not self.scheduler.should_send_daily('daily_comprehensive'):
-            now = datetime.now()
-            print(f"⏭️ گزارش امروز قبلاً ارسال شده است ({now.strftime('%Y-%m-%d %H:%M')})")
-            print("⏹️ ارسال دوباره متوقف شد - فقط روزی یک‌بار\n")
-
-            # نمایش وضعیت
-            self.scheduler.print_report_status()
-            return None
-
-        print("🚀 تولید گزارش روزانهٔ جامع...\n")
-
+            print("⏭️ گزارش امروز قبلاً ارسال شده است")
+            return
+        
+        print("🚀 تولید گزارش روزانهٔ جامع (Real Data)...\n")
+        
         message = self.format_telegram_message()
         print(message)
-        print("\n" + "="*60)
-
-        # ✅ ارسال به تلگرام
-        if self.send_to_telegram(message):
-            # ✅ علامت‌گذاری: ارسال شد
-            self.scheduler.mark_sent('daily_comprehensive', 'sent')
-            print("\n✅ گزارش روزانه تکمیل شد و ارسال شد!")
+        
+        # ارسال به تلگرام
+        if self.telegram_token and self.telegram_chat_id:
+            try:
+                url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
+                response = requests.post(url, data={
+                    'chat_id': self.telegram_chat_id,
+                    'text': message,
+                    'parse_mode': 'HTML'
+                }, timeout=10)
+                
+                if response.status_code == 200:
+                    self.scheduler.mark_sent('daily_comprehensive')
+                    print("✅ گزارش ارسال شد")
+            except Exception as e:
+                print(f"❌ خطا: {e}")
         else:
-            # ⚠️ اگر ارسال ناموفق بود، علامت نگذاریم (دوباره تلاش کنیم)
-            print("\n⚠️ گزارش ارسال نشد - دوباره تلاش خواهد شد")
-
-        return message
+            print("⚠️ تلگرام تنظیم نشده")
 
 def run():
-    """اجرای گزارش"""
-    reporter = DailyComprehensiveReport()
-    message = reporter.run()
-    return message
+    reporter = DailyComprehensiveReportReal()
+    reporter.send_report()
 
 if __name__ == "__main__":
     run()
