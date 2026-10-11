@@ -37,17 +37,35 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          cd stock-scanner
-          echo "📊 Running Daily Comprehensive Report..."
+          echo "🚀 Starting 5 Smart Reports (10 AM Tehran)..."
+          echo ""
+
+          echo "1️⃣  📊 Running Daily Comprehensive Report..."
           python3 daily_comprehensive_report.py
-          
+          echo "✅ Done"
+
           echo ""
-          echo "🐋 Running Smart Investors Report..."
+          echo "2️⃣  🐋 Running Smart Investors Whale Tracking..."
           python3 smart_investors_shared_stocks.py
-          
+          echo "✅ Done"
+
           echo ""
-          echo "📈 Running Daily Regime Signals..."
+          echo "3️⃣  📈 Running Daily Regime Signals..."
           python3 daily_regime_signals.py
+          echo "✅ Done"
+
+          echo ""
+          echo "4️⃣  🌍 Running Smart Macro Analysis..."
+          python3 smart_macro_report.py
+          echo "✅ Done"
+
+          echo ""
+          echo "5️⃣  🔥 Running Smart Signal Filter..."
+          python3 smart_signal_filter.py
+          echo "✅ Done"
+
+          echo ""
+          echo "🎉 All 5 reports completed!"
       
       - name: Commit and push if changed
         run: |
