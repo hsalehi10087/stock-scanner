@@ -1,0 +1,49 @@
+name: 📊 Send All Reports to Telegram
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send-reports:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install packages
+        run: pip install beautifulsoup4 requests
+
+      - name: Send Reports
+        env:
+          TELEGRAM_BOT_TOKEN: '8752723544:AAElnbyf_wIVDcpTlJJ-VoKsx7QHaaolZ54'
+          TELEGRAM_CHAT_ID: '-5408618772'
+        run: |
+          echo "🚀 ارسال تمام گزارش‌ها..."
+
+          # ۱. Daily Summary
+          echo "۱. Daily Summary..."
+          python3 daily_summary_report.py
+
+          # ۲. Comprehensive Report
+          echo "۲. Comprehensive Report..."
+          python3 daily_comprehensive_report.py
+
+          # ۳. Regime Signals
+          echo "۳. Regime Signals..."
+          python3 daily_regime_signals.py
+
+          # ۴. Macro Report
+          echo "۴. Macro Report..."
+          python3 smart_macro_report.py
+
+          # ۵. Codal Report
+          echo "۵. Codal Daily Report..."
+          python3 codal_daily_report.py
+
+          echo "✅ تمام پیام‌ها ارسال شدند!"
