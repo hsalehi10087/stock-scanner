@@ -45,8 +45,8 @@ jobs:
       - name: 📱 Send Telegram Report
         run: |
           echo "📢 ارسال گزارش به تلگرام..."
-          python3 codal_telegram_report.py
-          echo "✅ گزارش ارسال شد"
+          python3 -u codal_telegram_report.py 2>&1 || echo "⚠️ خطا در ارسال"
+          echo "✅ تکمیل شد"
 
       - name: 💾 Commit History
         run: |

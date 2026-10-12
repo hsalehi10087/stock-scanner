@@ -146,6 +146,9 @@ class CodalTelegramReport:
 
     def send_to_telegram(self, message: str) -> bool:
         """ارسال به تلگرام"""
+        logger.info(f"🔍 توکن موجود: {bool(self.telegram_token)}")
+        logger.info(f"🔍 Chat ID موجود: {bool(self.telegram_chat_id)}")
+
         if not self.telegram_token or not self.telegram_chat_id:
             logger.error("❌ توکن یا Chat ID موجود نیست")
             return False
@@ -158,17 +161,18 @@ class CodalTelegramReport:
                 'parse_mode': 'HTML'
             }
 
+            logger.info(f"📤 فرستادن به Telegram: {url[:50]}...")
             response = requests.post(url, data=data, timeout=10)
 
             if response.status_code == 200:
                 logger.info("✅ پیام ارسال شد")
                 return True
             else:
-                logger.error(f"❌ خطا: {response.status_code}")
+                logger.error(f"❌ خطا HTTP {response.status_code}: {response.text}")
                 return False
 
         except Exception as e:
-            logger.error(f"❌ خطا در ارسال: {e}")
+            logger.error(f"❌ خطا در ارسال: {type(e).__name__}: {e}")
             return False
 
     def run(self):
