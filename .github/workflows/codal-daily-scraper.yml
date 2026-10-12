@@ -1,0 +1,59 @@
+name: 📊 Codal Daily Scraper & Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'  # 10 AM Tehran = 6:30 UTC
+
+jobs:
+  scrape-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install packages
+        run: |
+          pip install beautifulsoup4 requests python-dotenv
+
+      - name: Create .env
+        run: |
+          cat > .env <<'EOF'
+          TELEGRAM_BOT_TOKEN=8752723544:AAElnbyf_wIVDcpTlJJ-VoKsx7QHaaolZ54
+          TELEGRAM_CHAT_ID=-5408618772
+          EOF
+
+      - name: 🌐 Scrape Codal.ir
+        run: |
+          echo "🚀 شروع scraping codal.ir..."
+          python3 codal_scraper_live.py
+          echo "✅ scraping تکمیل شد"
+
+      - name: 🔍 Analyze Reports
+        run: |
+          echo "📊 تحلیل گزارش‌ها..."
+          python3 codal_analyzer_live.py
+          echo "✅ تحلیل تکمیل شد"
+
+      - name: 📱 Send Telegram Report
+        run: |
+          echo "📢 ارسال گزارش به تلگرام..."
+          python3 codal_telegram_report.py
+          echo "✅ گزارش ارسال شد"
+
+      - name: 💾 Commit History
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Codal Scraper"
+
+          if [ -f "data/codal_history.csv" ]; then
+            git add data/codal_history.csv
+            git commit -m "📊 Update Codal history - $(date +%Y-%m-%d)" || true
+            git push
+          fi
