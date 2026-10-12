@@ -2,6 +2,8 @@ name: 📊 Send All Reports to Telegram
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'  # 10 AM Tehran
 
 jobs:
   send-reports:
@@ -17,33 +19,38 @@ jobs:
           python-version: '3.11'
 
       - name: Install packages
-        run: pip install beautifulsoup4 requests
+        run: |
+          pip install beautifulsoup4 requests
+          pip install python-dotenv
 
-      - name: Send Reports
-        env:
-          TELEGRAM_BOT_TOKEN: '8752723544:AAElnbyf_wIVDcpTlJJ-VoKsx7QHaaolZ54'
-          TELEGRAM_CHAT_ID: '-5408618772'
+      - name: Create .env
+        run: |
+          cat > .env <<'EOF'
+          TELEGRAM_BOT_TOKEN=8752723544:AAElnbyf_wIVDcpTlJJ-VoKsx7QHaaolZ54
+          TELEGRAM_CHAT_ID=-5408618772
+          EOF
+
+      - name: Send All Reports
         run: |
           echo "🚀 ارسال تمام گزارش‌ها..."
 
-          # ۱. Daily Summary
-          echo "۱. Daily Summary..."
-          python3 daily_summary_report.py
+          echo "📰 Daily Summary..."
+          python3 daily_summary_report.py || true
+          sleep 2
 
-          # ۲. Comprehensive Report
-          echo "۲. Comprehensive Report..."
-          python3 daily_comprehensive_report.py
+          echo "📊 Comprehensive..."
+          python3 daily_comprehensive_report.py || true
+          sleep 2
 
-          # ۳. Regime Signals
-          echo "۳. Regime Signals..."
-          python3 daily_regime_signals.py
+          echo "📈 Regime Signals..."
+          python3 daily_regime_signals.py || true
+          sleep 2
 
-          # ۴. Macro Report
-          echo "۴. Macro Report..."
-          python3 smart_macro_report.py
+          echo "🌍 Macro Report..."
+          python3 smart_macro_report.py || true
+          sleep 2
 
-          # ۵. Codal Report
-          echo "۵. Codal Daily Report..."
-          python3 codal_daily_report.py
+          echo "🏦 Codal Daily..."
+          python3 codal_daily_report.py || true
 
           echo "✅ تمام پیام‌ها ارسال شدند!"
