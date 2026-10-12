@@ -71,44 +71,6 @@ class CodalLiveScraper:
             logger.error(f"❌ خطا در دریافت: {e}")
             return []
 
-    def get_financial_metrics(self, symbol):
-        """دریافت متریک‌های مالی شرکت"""
-        try:
-            url = f"{self.base_url}/Company/{symbol}"
-            response = requests.get(url, headers=self.headers, timeout=3)
-            response.encoding = 'utf-8'
-
-            soup = BeautifulSoup(response.content, 'html.parser')
-
-            metrics = {
-                'symbol': symbol,
-                'sales_growth': None,
-                'profit_growth': None,
-                'profitability': None,
-            }
-
-            # جستجو برای اعداد
-            tables = soup.find_all('table')
-            for table in tables:
-                rows = table.find_all('tr')
-                for row in rows:
-                    cols = row.find_all('td')
-                    if len(cols) >= 2:
-                        label = cols[0].text.strip().lower()
-                        value = cols[1].text.strip()
-
-                        if 'فروش' in label or 'درآمد' in label:
-                            metrics['sales_growth'] = value
-                        elif 'سود' in label:
-                            metrics['profit_growth'] = value
-                        elif 'سودآوری' in label or 'حاشیه' in label:
-                            metrics['profitability'] = value
-
-            return metrics
-
-        except Exception as e:
-            logger.warning(f"⚠️ نتوانستم متریک‌های {symbol} را دریافت کنم: {e}")
-            return None
 
     def get_fallback_data(self):
         """داده‌های fallback - اگر live data نشود"""
@@ -123,24 +85,14 @@ class CodalLiveScraper:
         logger.info("🚀 شروع scraping codal.ir...")
 
         reports = self.get_latest_reports()
-        is_fallback = False
 
         if not reports:
             logger.warning("⚠️ گزارشی دریافت نشد - استفاده از fallback data")
             reports = self.get_fallback_data()
-            is_fallback = True
             logger.info("✅ Fallback data استفاده شد")
 
-        # اضافه کردن متریک‌های مالی (فقط اگر live data باشد)
-        enriched_reports = []
-        for report in reports[:20]:  # فقط ۲۰ تای اول برای سرعت
-            if not is_fallback:
-                metrics = self.get_financial_metrics(report['symbol'])
-                if metrics:
-                    report.update(metrics)
-            enriched_reports.append(report)
-
-        return enriched_reports
+        # Fallback data قبلاً metrics دارد
+        return reports
 
 
 def main():
