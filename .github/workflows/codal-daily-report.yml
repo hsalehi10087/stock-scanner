@@ -1,0 +1,44 @@
+name: 📊 Codal Daily Report (10 AM Tehran)
+
+on:
+  # ساعت 10 صبح تهران = 6:30 صبح UTC
+  schedule:
+    - cron: '30 6 * * *'  # هر روز ساعت 6:30 UTC
+  # دستی اجرا کردن (برای تست)
+  workflow_dispatch:
+
+jobs:
+  codal-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 requests
+
+      - name: Run Codal Daily Report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "🚀 شروع گزارش روزانهٔ کودال..."
+          echo ""
+          python3 codal_daily_report.py
+          echo ""
+          echo "✅ تکمیل شد!"
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Codal Daily Report - $(date +'%Y-%m-%d')" && git push)
