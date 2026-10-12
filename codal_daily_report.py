@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Codal Daily Report - واقعی + Mock Fallback
-Real Data from Codal OR Mock Realistic Data
+Codal Daily Report - استفادهٔ واقعی از codal.ir
+Real Data from codal.ir OR Mock Fallback
 """
 
 import os
@@ -13,7 +13,7 @@ import logging
 
 # Add scrapers
 try:
-    from codal_real_scraper import CogalRealScraper
+    from codal_scraper_enhanced import CodtalEnhancedScraper
     from codal_mock_realistic import generate_mock_data
     from report_scheduler import ReportScheduler
     from load_env import load_env_file, check_secrets
@@ -24,64 +24,68 @@ except ImportError as e:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class CogalDailyReport:
-    """تولید گزارش روزانهٔ Codal با داده‌های واقعی یا Mock"""
+class CodtalDailyReport:
+    """گزارش روزانهٔ codal.ir - استفادهٔ واقعی"""
 
     def __init__(self):
         self.timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-        self.scraper = CogalRealScraper()
+        self.scraper = CodtalEnhancedScraper()  # Scraper واقعی
         self.scheduler = ReportScheduler()
         self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN', '')
         self.telegram_chat_id = os.getenv('TELEGRAM_CHAT_ID', '')
-        self.use_real_data = False  # Track if using real or mock
+        self.use_real_data = False  # Track: واقعی یا Mock؟
 
     def fetch_reports(self, num_days: int = 1) -> List[Dict]:
         """
-        دریافت گزارش‌های واقعی یا Mock
+        دریافت گزارش‌های واقعی از codal.ir
         """
-        logger.info("🔄 تلاش برای دریافت گزارش‌های واقعی از Codal...")
+        logger.info("🔄 تلاش برای دریافت گزارش‌های واقعی از codal.ir...")
 
-        # سعی برای واقعی
-        reports = self.scraper.search_today_reports(num_days=num_days)
+        # سعی اول: واقعی
+        reports = self.scraper.get_today_reports(num_days=num_days)
 
         if reports:
             self.use_real_data = True
-            logger.info(f"✅ {len(reports)} گزارش واقعی دریافت شد")
+            logger.info(f"✅ {len(reports)} گزارش واقعی از codal.ir")
+
+            # دریافت جزئیات برای هر گزارش
+            for report in reports[:8]:
+                logger.info(f"   📄 {report['symbol']}...")
+                details = self.scraper.get_report_details(report['report_id'], report['url'])
+                report['financial'] = details
+
             return reports[:8]
 
         # Fallback: Mock Data
-        logger.warning("⚠️ نتوانستم از Codal دریافت کنم، استفاده از Mock Data...")
+        logger.warning("⚠️ نتوانستم از codal.ir دریافت کنم")
+        logger.info("💡 استفاده از Mock Data برای تست...")
         self.use_real_data = False
 
         mock_reports = generate_mock_data(count=8)
-        logger.info(f"✅ {len(mock_reports)} گزارش Mock دریافت شد")
+        logger.info(f"✅ {len(mock_reports)} گزارش Mock برای تست")
 
         return mock_reports
 
     def analyze_reports(self, reports: List[Dict]) -> List[Dict]:
         """
-        تحلیل و امتیاز‌دهی گزارش‌ها
+        تحلیل گزارش‌ها و امتیاز‌دهی
         """
         analyzed = []
 
-        for i, report in enumerate(reports, 1):
-            # اگر Mock است، metrics قبلاً موجود است
+        for report in reports:
+            # اگر Mock است، metrics موجود است
             if 'metrics' in report and 'score' in report:
                 analyzed.append(report)
                 continue
 
-            # برای گزارش‌های واقعی، داده‌های مالی را استخراج کنیم
+            # برای واقعی، داده‌های مالی استخراج‌شده
             financial = report.get('financial', {})
-            if not financial and 'url' in report:
-                financial = self.scraper.extract_financial_data(
-                    report.get('report_id', ''),
-                    report.get('url', '')
-                ) or {}
 
-            # امتیاز‌دهی
+            # امتیاز
             score = 0
-            report_type = report.get('report_type', '').lower()
 
+            # نوع گزارش
+            report_type = report.get('report_type', '').lower()
             if 'سالانه' in report_type or 'فصل' in report_type:
                 score += 30
             elif 'ماهانه' in report_type:
@@ -89,6 +93,7 @@ class CogalDailyReport:
             else:
                 score += 10
 
+            # داده‌های مالی
             if financial:
                 if financial.get('sales'):
                     score += 25
@@ -110,48 +115,46 @@ class CogalDailyReport:
 
     def generate_telegram_report(self, analyzed: List[Dict]) -> List[str]:
         """
-        تولید گزارش تلگرام
+        تولید گزارش برای تلگرام
         """
         blocks = []
 
         if not analyzed:
-            blocks.append("⚠️ گزارش روزانهٔ Codal\n\nمتاسفانه امروز گزارش جدیدی یافت نشد")
+            blocks.append("⚠️ گزارش روزانهٔ Codal\n\nمتاسفانه گزارش جدیدی وجود ندارد")
             return blocks
 
         # عنوان
-        data_source = "✅ Codal (بدون Hardcoding)" if self.use_real_data else "📊 Mock Data (برای تست)"
+        source = "✅ codal.ir (واقعی)" if self.use_real_data else "📊 Mock (برای تست)"
 
         blocks.append(f"📊 <b>گزارش روزانهٔ کودال</b> — {self.timestamp}\n"
-                     f"<i>{data_source}</i>")
+                     f"<i>{source}</i>")
 
         # خلاصه
         blocks.append(f"""
 📈 <b>خلاصه امروز</b>
 • تعداد گزارش: {len(analyzed)}
-• منبع داده: {data_source}
-• وضعیت: فعال ✅
-• اپدیت: {self.timestamp}
+• منبع: {source}
+• وضعیت: ✅ فعال
 """)
 
-        # جدول اصلی
+        # جدول
         blocks.append("<b>🏆 گزارش‌های برتر</b>")
 
         table = "<code>"
-        table += "ردیف  نماد    شرکت              نوع\n"
+        table += "ردیف  نماد    شرکت              نوع گزارش\n"
         table += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
 
-        for item in analyzed[:8]:
-            rank = f"{item.get('rank', 0):2d}" if 'rank' in item else f"{len(table.splitlines())-3:2d}"
+        for i, item in enumerate(analyzed[:8], 1):
             symbol = (item.get('symbol', 'N/A')).ljust(6)
             company = (item.get('company', '')[:12]).ljust(15)
-            report_type = (str(item.get('report_type', ''))[:8]).ljust(8)
+            rtype = (str(item.get('report_type', ''))[:10]).ljust(10)
 
-            table += f"{rank}   {symbol} {company} {report_type}\n"
+            table += f"{i:2d}   {symbol} {company} {rtype}\n"
 
         table += "</code>"
         blocks.append(table)
 
-        # تفصیل Top 5
+        # تفصیل
         blocks.append("<b>📋 تفصیل ۵ گزارش برتر</b>")
 
         for i, item in enumerate(analyzed[:5], 1):
@@ -162,38 +165,40 @@ class CogalDailyReport:
             metrics = item.get('metrics', {})
             financial = item.get('financial', {})
 
-            metrics_info = ""
             if metrics:
-                metrics_info = f"""
+                metric_text = f"""
 ├─ متریک‌های مالی:
 │  • حاشیهٔ سود: {metrics.get('profit_margin', 0):.1f}%
 │  • ROE: {metrics.get('roe', 0):.1f}%
 │  • نسبت بدهی: {metrics.get('debt_ratio', 0):.1f}%"""
             elif financial:
+                metric_text = "\n├─ داده‌های مالی:"
                 if financial.get('sales'):
-                    metrics_info += f"\n├─ فروش: {financial.get('sales', 0):,.0f}"
+                    metric_text += f"\n│  • فروش: {financial.get('sales', 0):,}"
                 if financial.get('profit'):
-                    metrics_info += f"\n├─ سود: {financial.get('profit', 0):,.0f}"
+                    metric_text += f"\n│  • سود: {financial.get('profit', 0):,}"
+                if financial.get('assets'):
+                    metric_text += f"\n│  • دارایی: {financial.get('assets', 0):,}"
             else:
-                metrics_info = "\n├─ متریک: در حال پردازش..."
+                metric_text = "\n├─ داده‌های مالی: در حال استخراج..."
 
             url = item.get('url', '')
-            link_html = f' <a href="{url}">مشاهده</a>' if url else ''
+            link = f' <a href="{url}">مشاهده</a>' if url else ''
 
             blocks.append(f"""
 <b>{i}. {symbol} - {company}</b>
 ├─ تاریخ: {item.get('date', '-')}
-├─ نوع: {item.get('report_type', '-')}{metrics_info}
+├─ نوع: {item.get('report_type', '-')}{metric_text}
 ├─ امتیاز: {item.get('score', 0)}/100
-└─ لینک:{link_html}
+└─ لینک:{link}
 """)
 
-        # توصیه
+        # توصیه نهایی
         blocks.append("""
-🎯 <b>نکات مهم</b>
-• این گزارش تنها یک‌بار روزی ارسال می‌شود
-• داده‌های حقیقی بدون Hardcoding ✅
-• برای تحلیل بیشتر: Codal.ir بروید
+🎯 <b>نکات</b>
+• این گزارش تنها یک‌بار روزی ارسال می‌شود ✅
+• داده‌های واقعی از codal.ir
+• برای جزئیات بیشتر: codal.ir
 
 ⚠️ صرفاً اطلاع‌رسانی است.
 #کودال #تحلیل_مالی #گزارش_روزانه""")
@@ -234,19 +239,19 @@ class CogalDailyReport:
 
     def run(self):
         """
-        اجرای کامل گزارش
+        اجرای کامل
         """
         # بررسی: آیا باید ارسال شود؟
         if not self.scheduler.should_send_daily('codal_daily_report'):
-            logger.info("❌ این گزارش امروز قبلاً ارسال شد")
+            logger.info("❌ امروز قبلاً ارسال شد")
             print("⏳ این گزارش امروز قبلاً ارسال شده است")
             return
 
         logger.info("\n" + "="*60)
-        logger.info("🚀 شروع گزارش روزانهٔ کودال")
+        logger.info("🚀 گزارش روزانهٔ کودال")
         logger.info("="*60 + "\n")
 
-        # دریافت گزارش‌ها
+        # دریافت
         reports = self.fetch_reports(num_days=1)
 
         if not reports:
@@ -256,7 +261,7 @@ class CogalDailyReport:
         # تحلیل
         analyzed = self.analyze_reports(reports)
 
-        # تولید پیام
+        # تولید
         message_blocks = self.generate_telegram_report(analyzed)
         message = "\n".join(message_blocks)
 
@@ -265,19 +270,18 @@ class CogalDailyReport:
 
         # ارسال
         if self.send_to_telegram(message):
-            # علامت‌گذاری
             self.scheduler.mark_sent('codal_daily_report', 'sent')
-            logger.info("✅ گزارش ارسال و ذخیره شد")
+            logger.info("✅ ارسال و ذخیره شد")
         else:
             logger.error("❌ خطا در ارسال")
 
 
 def main():
-    """نقطهٔ ورود"""
+    """ورود"""
     load_env_file()
     check_secrets()
 
-    report = CogalDailyReport()
+    report = CodtalDailyReport()
     report.run()
 
 
