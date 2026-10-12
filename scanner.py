@@ -1128,13 +1128,6 @@ def main():
     except Exception as e:
         print("watchlist failed:", e)
         warnings.append("هشدار سهم‌های شما امروز ساخته نشد.")
-    try:
-        import risk
-        rblocks = risk.block(df, pre, short, fmt_price)
-        if rblocks:
-            outbox.append((rblocks, b"", "risk", ()))
-    except Exception as e:
-        print("risk levels failed:", e)
     macro_hl, news_hl = [], []
     try:
         import macro
