@@ -1,0 +1,21 @@
+name: 🧪 Simple Test (Direct Telegram)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Telegram
+        run: |
+          TOKEN="8752723544"
+          CHAT_ID="-5408618772"
+          MESSAGE="✅ GitHub Actions Test - الآن کار می‌کند!"
+
+          curl -X POST \
+            https://api.telegram.org/bot${TOKEN}/sendMessage \
+            -d "chat_id=${CHAT_ID}" \
+            -d "text=${MESSAGE}"
+
+          echo "✅ درخواست ارسال شد!"
