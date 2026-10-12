@@ -54,7 +54,11 @@ jobs:
           git config --local user.name "Codal Scraper"
 
           if [ -f "data/codal_history.csv" ]; then
+            git status
             git add data/codal_history.csv
-            git commit -m "📊 Update Codal history - $(date +%Y-%m-%d)" || true
-            git push
+            if git diff --cached --quiet; then
+              echo "✅ کوئی تبدیلی نہیں - commit کی ضرورت نہیں"
+            else
+              git commit -m "📊 Update Codal history - $(date +%Y-%m-%d)" && git push || echo "⚠️ Push ناکام"
+            fi
           fi
