@@ -82,7 +82,18 @@ class CodalAnalyzer:
         return sorted(strong, key=lambda x: x.get('score', 0), reverse=True)
 
     def add_to_history(self, reports):
-        """اضافه کردن به تاریخچهٔ روزانه"""
+        """اضافه کردن به تاریخچهٔ روزانه (بدون تکرار)"""
+        # موجودہ entries پڑھیں
+        existing = set()
+        if os.path.exists(self.history_file):
+            with open(self.history_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row.get('date') == self.timestamp:
+                        key = f"{row['symbol']}|{row['company']}"
+                        existing.add(key)
+
+        # صرف نئے records add کریں
         with open(self.history_file, 'a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=[
                 'date', 'symbol', 'company', 'report_type',
@@ -90,17 +101,27 @@ class CodalAnalyzer:
                 'score'
             ])
 
+            added = 0
             for report in reports:
-                writer.writerow({
-                    'date': self.timestamp,
-                    'symbol': report.get('symbol', ''),
-                    'company': report.get('company', ''),
-                    'report_type': report.get('report_type', ''),
-                    'sales_growth': report.get('sales_growth', ''),
-                    'profit_growth': report.get('profit_growth', ''),
-                    'profitability': report.get('profitability', ''),
-                    'score': report.get('score', '')
-                })
+                key = f"{report.get('symbol', '')}|{report.get('company', '')}"
+                if key not in existing:
+                    writer.writerow({
+                        'date': self.timestamp,
+                        'symbol': report.get('symbol', ''),
+                        'company': report.get('company', ''),
+                        'report_type': report.get('report_type', ''),
+                        'sales_growth': report.get('sales_growth', ''),
+                        'profit_growth': report.get('profit_growth', ''),
+                        'profitability': report.get('profitability', ''),
+                        'score': report.get('score', '')
+                    })
+                    existing.add(key)
+                    added += 1
+
+            if added > 0:
+                logger.info(f"📝 {added} نئے records add ہوئے")
+            else:
+                logger.info("✅ کوئی نیا record نہیں (پہلے سے موجود ہیں)")
 
     def get_top_performers(self, reports, limit=10):
         """بهترین‌های امروز"""
