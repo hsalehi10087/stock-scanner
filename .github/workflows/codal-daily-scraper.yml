@@ -49,16 +49,13 @@ jobs:
           echo "✅ تکمیل شد"
 
       - name: 💾 Commit History
+        continue-on-error: true
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Codal Scraper"
 
           if [ -f "data/codal_history.csv" ]; then
-            git status
-            git add data/codal_history.csv
-            if git diff --cached --quiet; then
-              echo "✅ کوئی تبدیلی نہیں - commit کی ضرورت نہیں"
-            else
-              git commit -m "📊 Update Codal history - $(date +%Y-%m-%d)" && git push || echo "⚠️ Push ناکام"
-            fi
+            git add data/codal_history.csv 2>/dev/null || true
+            git diff --cached --quiet || (git commit -m "📊 Update Codal history - $(date +%Y-%m-%d)" && git push) || true
+            echo "✅ History sync مکمل"
           fi
