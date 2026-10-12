@@ -30,8 +30,14 @@ jobs:
           TELEGRAM_CHAT_ID=-5408618772
           EOF
 
-      - name: Send Hedge Fund Report (Filtered > 10%)
+      - name: Send Hedge Fund Report (Daily)
         run: |
-          echo "🚀 ارسال گزارش سرمایه‌گذاران بزرگ..."
+          echo "🐋 گزارش سرمایه‌گذاران بزرگ..."
           python3 hedge_fund_filtered_report.py
-          echo "✅ گزارش ارسال شد!"
+          sleep 2
+
+      - name: Send Monthly Digest (Strong Signals Only)
+        run: |
+          echo "📊 خلاصهٔ ماهانه..."
+          python3 monthly_digest_report.py
+          echo "✅ تمام گزارش‌ها ارسال شدند!"
