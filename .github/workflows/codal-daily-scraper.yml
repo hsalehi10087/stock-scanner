@@ -26,7 +26,7 @@ jobs:
       - name: Create .env
         run: |
           cat > .env <<'EOF'
-          TELEGRAM_BOT_TOKEN=8752723544:AAElnbyf_wIVDcpTlJJ-VoKsx7QHaaolZ54
+          TELEGRAM_BOT_TOKEN=8752723544:AAFNEhCH1TdkruGaUlxoQo10u7iRCsgqQAs
           TELEGRAM_CHAT_ID=-5408618772
           EOF
 
