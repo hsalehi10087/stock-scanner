@@ -29,7 +29,7 @@ class CodalLiveScraper:
         try:
             # صفحهٔ اصلی
             url = f"{self.base_url}/Home/Index"
-            response = requests.get(url, headers=self.headers, timeout=10)
+            response = requests.get(url, headers=self.headers, timeout=5)
             response.encoding = 'utf-8'
 
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -75,7 +75,7 @@ class CodalLiveScraper:
         """دریافت متریک‌های مالی شرکت"""
         try:
             url = f"{self.base_url}/Company/{symbol}"
-            response = requests.get(url, headers=self.headers, timeout=10)
+            response = requests.get(url, headers=self.headers, timeout=3)
             response.encoding = 'utf-8'
 
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -123,18 +123,21 @@ class CodalLiveScraper:
         logger.info("🚀 شروع scraping codal.ir...")
 
         reports = self.get_latest_reports()
+        is_fallback = False
 
         if not reports:
             logger.warning("⚠️ گزارشی دریافت نشد - استفاده از fallback data")
             reports = self.get_fallback_data()
+            is_fallback = True
             logger.info("✅ Fallback data استفاده شد")
 
-        # اضافه کردن متریک‌های مالی
+        # اضافه کردن متریک‌های مالی (فقط اگر live data باشد)
         enriched_reports = []
         for report in reports[:20]:  # فقط ۲۰ تای اول برای سرعت
-            metrics = self.get_financial_metrics(report['symbol'])
-            if metrics:
-                report.update(metrics)
+            if not is_fallback:
+                metrics = self.get_financial_metrics(report['symbol'])
+                if metrics:
+                    report.update(metrics)
             enriched_reports.append(report)
 
         return enriched_reports
