@@ -26,8 +26,8 @@ jobs:
       - name: Create .env
         run: |
           cat > .env <<'EOF'
-          TELEGRAM_BOT_TOKEN=8752723544:AAFNEhCH1TdkruGaUlxoQo10u7iRCsgqQAs
-          TELEGRAM_CHAT_ID=-5408618772
+          TELEGRAM_BOT_TOKEN=8948090039:AAHtYUFi0WONYPVurYwYmSwoC8e281A0GEc
+          TELEGRAM_CHAT_ID=-5382888333
           EOF
 
       - name: 🌐 Scrape Codal.ir
