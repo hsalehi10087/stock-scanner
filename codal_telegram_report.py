@@ -161,18 +161,40 @@ class CodalTelegramReport:
                 'parse_mode': 'HTML'
             }
 
-            logger.info(f"📤 فرستادن به Telegram: {url[:50]}...")
-            response = requests.post(url, data=data, timeout=10)
+            logger.info(f"📤 فرستادن به Telegram...")
+            logger.info(f"   URL: {url[:50]}...")
+            logger.info(f"   Chat ID: {self.telegram_chat_id}")
+            logger.info(f"   Message length: {len(message)}")
 
-            if response.status_code == 200:
-                logger.info("✅ پیام ارسال شد")
-                return True
-            else:
-                logger.error(f"❌ خطا HTTP {response.status_code}: {response.text}")
-                return False
+            # Try with retries
+            max_retries = 3
+            for attempt in range(1, max_retries + 1):
+                try:
+                    response = requests.post(url, data=data, timeout=15)
+
+                    if response.status_code == 200:
+                        logger.info("✅ پیام ارسال شد")
+                        return True
+                    else:
+                        logger.error(f"❌ HTTP {response.status_code}: {response.text[:100]}")
+                        if attempt < max_retries:
+                            logger.info(f"   تلاش دوباره {attempt}/{max_retries}...")
+                            continue
+                        return False
+
+                except requests.exceptions.Timeout:
+                    logger.warning(f"⏱️ Timeout (تلاش {attempt}/{max_retries})")
+                    if attempt < max_retries:
+                        continue
+                    raise
+                except requests.exceptions.ConnectionError as ce:
+                    logger.warning(f"🌐 Connection error (تلاش {attempt}/{max_retries}): {ce}")
+                    if attempt < max_retries:
+                        continue
+                    raise
 
         except Exception as e:
-            logger.error(f"❌ خطا در ارسال: {type(e).__name__}: {e}")
+            logger.error(f"❌ خطا نهایی: {type(e).__name__}: {str(e)[:200]}")
             return False
 
     def run(self):
