@@ -1,0 +1,65 @@
+name: 🏦 Superinvestors (Dataroma)
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # هر روز 10:00 تهران (06:30 UTC)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'fetch = دریافت امروز + تغییرات | first = گزارش اولیه | date = تغییرات یک تاریخ مشخص'
+        required: true
+        default: 'fetch'
+        type: choice
+        options: [fetch, first, date]
+      date:
+        description: 'تاریخ (YYYY-MM-DD) فقط برای mode=date'
+        required: false
+        default: ''
+      token:
+        description: 'توکن ربات (اختیاری؛ خالی = secret)'
+        required: false
+        default: ''
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+
+permissions:
+  contents: write
+
+jobs:
+  superinvestors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install requests
+        run: pip install -q requests
+
+      - name: Run
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+          MODE: ${{ github.event.inputs.mode || 'fetch' }}
+          DATE: ${{ github.event.inputs.date }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          case "$MODE" in
+            first) python3 superinvestors/run.py --fetch --first ;;
+            date)  python3 superinvestors/run.py --date "$DATE" ;;
+            *)     python3 superinvestors/run.py --fetch ;;
+          esac
+
+      - name: Save snapshots
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Superinvestors Bot"
+          git add data/superinvestors || true
+          git diff --cached --quiet || (git commit -m "🏦 snapshot $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)
