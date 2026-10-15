@@ -23,7 +23,7 @@ ASSETS = {
     '🟠 مس': ['copper'],
     '₿ بیت‌کوین': ['bitcoin', 'btc', 'crypto'],
     '🛢 نفت': ['oil', 'crude', 'brent', 'wti', 'opec'],
-    '🏦 اقتصاد و بانک مرکزی': ['fed', 'inflation', 'recession', 'interest rate', 'treasury', 'yield', 'tariff', 'gdp', 'jobs'],
+    '🏦 نرخ بهره و تورم': ['fed', 'inflation', 'recession', 'interest rate', 'treasury', 'yield', 'tariff', 'gdp', 'jobs'],
 }
 BULL = ['rally', 'surge', 'soar', 'jump', 'record', 'rise', 'gain', 'bullish', 'upgrade', 'boost', 'climb', 'demand', 'optimis']
 BEAR = ['fall', 'drop', 'slump', 'plunge', 'bearish', 'decline', 'selloff', 'sell-off', 'recession', 'slide', 'weak', 'crash', 'tumble', 'downgrade', 'fear']
@@ -138,7 +138,8 @@ def build_lines(prices, cls, news_count, view=None):
              f'<i>بر اساس {news_count} خبر ۷ روز گذشته</i>', '']
     if news_count == 0:
         lines += ['⚠️ کلید Finnhub تنظیم نشده یا خبری دریافت نشد؛ فقط قیمت‌ها و کلان آمده است.', '']
-    lines.append('<b>📣 نظر اخبار (شمارش مثبت/منفی/خنثی)</b>')
+    lines.append('<b>📣 نظر اخبار هفته</b>')
+    lines.append('<i>🟢 خبر مثبت برای قیمت  🔴 خبر منفی برای قیمت  ⚪ خبر خنثی</i>')
     for k, d in cls.items():
         total = d['bull'] + d['bear'] + d['neutral']
         if total == 0:
