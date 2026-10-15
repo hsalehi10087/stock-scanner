@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install packages
-        run: pip install -q yfinance pandas requests matplotlib deep-translator arabic-reshaper python-bidi
+        run: pip install -q yfinance pandas requests matplotlib deep-translator
       - name: Send market intel
         env:
           TELEGRAM_BOT_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
