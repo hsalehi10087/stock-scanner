@@ -2,6 +2,15 @@ name: 📊 Codal Daily Scraper & Report
 
 on:
   workflow_dispatch:
+    inputs:
+      token:
+        description: 'توکن ربات (اختیاری؛ خالی = secret)'
+        required: false
+        default: ''
+      chat_id:
+        description: 'شناسه چت'
+        required: false
+        default: '75439320'
   schedule:
     - cron: '30 6 * * *'  # 10 AM Tehran = 6:30 UTC
 
@@ -25,8 +34,8 @@ jobs:
 
       - name: Create .env
         env:
-          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TG_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TG_TOKEN"
           printf 'TELEGRAM_BOT_TOKEN=%s\nTELEGRAM_CHAT_ID=%s\n' "$TG_TOKEN" "$TG_CHAT" > .env
