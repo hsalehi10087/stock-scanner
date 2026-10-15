@@ -1,0 +1,40 @@
+name: 🇹🇼 Taiwan Price+Earnings Growth (daily)
+
+on:
+  schedule:
+    - cron: '30 6 * * 1-5'  # ۱۰:۰۰ تهران، بعد از بسته‌شدن بازار تایوان
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+
+permissions:
+  contents: write
+
+jobs:
+  tw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q yfinance pandas requests matplotlib deep-translator arabic-reshaper python-bidi xlrd openpyxl
+      - name: Scan and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/tw_growth.py
+      - name: Save history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Taiwan Bot"
+          git add -f data/tw_gainers || true
+          git diff --cached --quiet || (git commit -m "🇹🇼 taiwan $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)
