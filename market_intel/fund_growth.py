@@ -20,6 +20,8 @@ import summary as S  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fundamentals')
 THRESHOLD = 10.0
+MIN_PREV_USD = 1_000_000  # سود فصل قبل حداقل ۱ میلیون دلار؛ وگرنه درصد بی‌معناست
+EXCLUDE = re.compile(r'acquisition|\bspac\b|\betf\b|\btrust\b|\bfund\b|\bblank check\b', re.I)
 UA = {'User-Agent': 'stock-scanner-research mahdi.salehi.sichani@gmail.com'}
 
 
@@ -99,11 +101,13 @@ def _main():
             continue
         checked += 1
         prev_val = prev[cik]
-        if prev_val <= 0 or cur_val <= prev_val:
+        if prev_val < MIN_PREV_USD or cur_val <= prev_val:
             continue
         growth = (cur_val - prev_val) / prev_val * 100
         if growth > THRESHOLD:
             t, title = tickers[cik]
+            if EXCLUDE.search(title):
+                continue
             rows.append({'ticker': t, 'name': title, 'cur_ni_musd': cur_val / 1e6,
                          'prev_ni_musd': prev_val / 1e6, 'growth': growth, 'period': period})
     rows.sort(key=lambda r: -r['growth'])
