@@ -1,9 +1,7 @@
 name: 🗞 Market Summary
 
 on:
-  schedule:
-    - cron: '30 6 * * *'  # هر روز 10:00 تهران
-  workflow_dispatch:
+  workflow_dispatch:  # دیگر زمان‌بندی روزانه ندارد؛ گزارش یکپارچه در market_intel است
     inputs:
       token:
         description: 'توکن ربات (اختیاری؛ خالی = secret)'

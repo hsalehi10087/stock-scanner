@@ -78,9 +78,19 @@ def build_lines(prices, cls, news_count):
         lines.append(f"• <b>{k}</b>: 🟢{d['bull']} 🔴{d['bear']} ⚪{d['neutral']} (از {total})")
         if d['example']:
             lines.append(f"   ↳ <i>{html.escape(fa(d['example']))}</i>")
-    lines += ['', '<b>📊 قیمت‌ها</b>', '<i>(جدول در عکس بالای پیام)</i>', '']
-    lines += S.build_text(prices)
+    v = S.build_verdict(prices)
+    if v:
+        lines += ['', v]
     lines += ['', '<i>⚠️ شمارش بر اساس کلیدواژه‌ی تیتر است؛ نظر رسمی تحلیلگر نیست.</i>']
+    return lines
+
+
+def build_macro(prices):
+    lines = ['<b>🌍 خلاصه‌ی نرخ بهره و اقتصاد جهانی</b>', '']
+    try:
+        lines += ['• ' + x for x in S.macro_bullets()]
+    except Exception as e:
+        lines.append(f'⚠️ داده‌های کلان در دسترس نبود: {html.escape(str(e))}')
     return lines
 
 
@@ -101,14 +111,17 @@ def main():
     import tempfile
     png = os.path.join(tempfile.mkdtemp(), 'table.png')
     S.render_table_png(prices, png)
-    caption = '<b>🧭 گزارش هوشمند بازار</b>\n<i>جدول قیمت‌ها</i>'
-    text_chunks = S.chunks(build_lines(prices, cls, len(news)))
+    caption = '<b>🧭 گزارش هوشمند بازار</b>\n<i>قیمت‌ها و نگاه اخبار</i>'
+    macro_chunks = S.chunks(build_macro(prices))
+    smart_chunks = S.chunks(build_lines(prices, cls, len(news)))
     ok = True
     for cid in chat_ids:
+        for ch in macro_chunks:
+            ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
         with open(png, 'rb') as f:
             ok &= S.tg_post(token, cid, 'sendPhoto', data={'chat_id': cid, 'caption': caption, 'parse_mode': 'HTML'},
                             files={'photo': f})
-        for ch in text_chunks:
+        for ch in smart_chunks:
             ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
     return 0 if ok else 2
 
