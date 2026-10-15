@@ -5,6 +5,7 @@
 """
 import html
 import os
+import re
 import sys
 import time
 
@@ -14,6 +15,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 import summary as S  # noqa: E402
 
 KEY = os.getenv('FINNHUB_API_KEY', '')
+LLM_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+LLM_MODEL = 'claude-haiku-5-5'
+UA = {'User-Agent': 'Mozilla/5.0 (compatible; market-intel/1.0)'}
 
 ASSETS = {
     '🥇 طلا': ['gold', 'bullion', 'xau'],
@@ -68,7 +72,57 @@ def fa(text):
     return None
 
 
-def build_lines(prices, cls, news_count):
+def fetch_article(url):
+    """متن ساده‌ی مقاله؛ اگر باز نشد رشته‌ی خالی."""
+    try:
+        r = requests.get(url, headers=UA, timeout=15)
+        r.raise_for_status()
+        txt = re.sub(r'<script.*?</script>|<style.*?</style>', ' ', r.text, flags=re.S | re.I)
+        txt = re.sub(r'<[^>]+>', ' ', txt)
+        txt = html.unescape(re.sub(r'\s+', ' ', txt))
+        return txt[:3000]
+    except Exception:
+        return ''
+
+
+def investor_view(news):
+    """نظر کلی سرمایه‌گذاران به فارسی از روی مقالات مرتبط (با مدل زبانی). بدون کلید = None."""
+    if not LLM_KEY:
+        return None
+    rel = []
+    for n in news:
+        text = (n.get('headline', '') + ' ' + n.get('summary', '')).lower()
+        if n.get('url') and any(w in text for kws in ASSETS.values() for w in kws):
+            rel.append(n)
+    rel = rel[:8]
+    if not rel:
+        return None
+    parts = []
+    for n in rel:
+        body = fetch_article(n['url']) or n.get('summary', '')
+        if body:
+            parts.append(f"عنوان: {n.get('headline', '')}\nمتن: {body}")
+    if not parts:
+        return None
+    prompt = ("مقالات زیر مربوط به یک هفته‌ی اخیر اقتصاد و بازارهای کالایی‌اند. "
+              "به فارسی و در ۵ تا ۷ خط کوتاه بنویس: نظر کلی سرمایه‌گذاران درباره‌ی طلا، نقره، مس، بیت‌کوین و نفت، "
+              "و درباره‌ی نرخ بهره و اقتصاد جهانی. هر خط با یک برچسب دارایی شروع شود و آخرش بنویس «مثبت»، «منفی» یا «خنثی». "
+              "فقط بر اساس همین متن‌ها بنویس و اگر مطلبی نبود، صریح بگو.\n\n" + "\n\n---\n\n".join(parts))
+    try:
+        r = requests.post('https://api.anthropic.com/v1/messages',
+                          headers={'x-api-key': LLM_KEY, 'anthropic-version': '2023-06-01',
+                                   'content-type': 'application/json'},
+                          json={'model': LLM_MODEL, 'max_tokens': 700,
+                                'messages': [{'role': 'user', 'content': prompt}]},
+                          timeout=90)
+        r.raise_for_status()
+        return ''.join(b.get('text', '') for b in r.json().get('content', [])).strip() or None
+    except Exception as e:
+        print(f'⚠️ مدل زبانی: {e}', file=sys.stderr)
+        return None
+
+
+def build_lines(prices, cls, news_count, view=None):
     lines = ['<b>🧭 گزارش هوشمند بازار</b>',
              f'<i>بر اساس {news_count} خبر ۷ روز گذشته</i>', '']
     if news_count == 0:
@@ -83,6 +137,8 @@ def build_lines(prices, cls, news_count):
         tr = fa(d['example']) if d['example'] else None
         if tr:
             lines.append(f"   ↳ <i>{html.escape(tr)}</i>")
+    if view:
+        lines += ['', '<b>🧠 نظر کلی سرمایه‌گذاران (از مقالات هفته)</b>', html.escape(view)]
     lines += [''] + build_macro(prices)[1:]
     v = S.build_verdict(prices)
     if v:
@@ -113,12 +169,13 @@ def main():
         except Exception as e:
             print(f'⚠️ Finnhub: {e}', file=sys.stderr)
     cls = classify(news)
+    view = investor_view(news)
     prices = S.fetch_prices()
     import tempfile
     png = os.path.join(tempfile.mkdtemp(), 'table.png')
     S.render_table_png(prices, png)
     caption = '<b>🧭 گزارش هوشمند بازار</b>\n<i>قیمت‌ها و نگاه اخبار</i>'
-    smart_chunks = S.chunks(build_lines(prices, cls, len(news)))
+    smart_chunks = S.chunks(build_lines(prices, cls, len(news), view))
     ok = True
     for cid in chat_ids:
         with open(png, 'rb') as f:

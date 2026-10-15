@@ -33,7 +33,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
           FINNHUB_API_KEY: ${{ github.event.inputs.finnhub_key || secrets.FINNHUB_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
           echo "::add-mask::$FINNHUB_API_KEY"
+          echo "::add-mask::$ANTHROPIC_API_KEY"
           python3 market_intel/report.py
