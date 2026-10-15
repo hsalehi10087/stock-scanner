@@ -1,0 +1,28 @@
+name: 🧪 Iran data access probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests
+      - run: python3 tools/iran_probe.py
+      - name: Save result
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Probe Bot"
+          git add -f data/iran_probe || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🧪 iran probe result"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
