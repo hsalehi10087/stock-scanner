@@ -20,6 +20,7 @@ import requests
 
 sys.path.insert(0, os.path.dirname(__file__))
 from parse import parse_managers, parse_holdings  # noqa: E402
+from report_fa import FA_NAMES, build_daily, build_first  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SNAP_DIR = os.path.join(ROOT, 'data', 'superinvestors')
@@ -191,12 +192,14 @@ def main():
         snap = load_snapshot(date_str)
 
     if args.first:
-        lines = first_report_lines(snap)
+        lines = build_first(snap)
     else:
         prev_date = previous_snapshot_date(date_str)
         prev = load_snapshot(prev_date) if prev_date else None
         results = diff_snapshots(prev, snap)
-        lines = changes_lines(date_str, prev_date, results)
+        for r in results:
+            r['fa'] = FA_NAMES.get(r['code'], r['manager'])
+        lines = build_daily(date_str, prev_date, results, snap)
 
     return 0 if send(chunks(lines), token, chat_ids) else 2
 
