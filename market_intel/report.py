@@ -30,7 +30,7 @@ BEAR = ['fall', 'drop', 'slump', 'plunge', 'bearish', 'decline', 'selloff', 'sel
 def fetch_news():
     r = requests.get('https://finnhub.io/api/v1/news', params={'category': 'general', 'token': KEY}, timeout=30)
     r.raise_for_status()
-    cutoff = time.time() - 86400
+    cutoff = time.time() - 7 * 86400
     return [n for n in r.json() if n.get('datetime', 0) >= cutoff]
 
 
@@ -66,7 +66,7 @@ def fa(text):
 
 def build_lines(prices, cls, news_count):
     lines = ['<b>🧭 گزارش هوشمند بازار</b>',
-             f'<i>بر اساس {news_count} خبر ۲۴ ساعت گذشته</i>', '']
+             f'<i>بر اساس {news_count} خبر ۷ روز گذشته</i>', '']
     if news_count == 0:
         lines += ['⚠️ کلید Finnhub تنظیم نشده یا خبری دریافت نشد؛ فقط قیمت‌ها و کلان آمده است.', '']
     lines.append('<b>📣 نظر اخبار (شمارش مثبت/منفی/خنثی)</b>')
