@@ -40,7 +40,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install requests
-        run: pip install -q requests
+        run: pip install -q requests deep-translator
 
       - name: Run
         env:

@@ -43,16 +43,36 @@ def fa_name(m):
     return FA_NAMES.get(m['code'], m['name'])
 
 
+_FA_CACHE = {}
+
+
+def fa_company(name):
+    """ترجمه‌ی نام شرکت به فارسی با گوگل ترجمه (بدون کلید). در خطا، نام اصلی برمی‌گردد."""
+    if not name:
+        return ''
+    if name in _FA_CACHE:
+        return _FA_CACHE[name]
+    try:
+        from deep_translator import GoogleTranslator
+        out = GoogleTranslator(source='auto', target='fa').translate(name) or name
+    except Exception:
+        out = name
+    _FA_CACHE[name] = out
+    return out
+
+
 def consensus(snap, top=10):
-    """سهم‌هایی که بیشترین تعداد سرمایه‌گذار بزرگ دارند."""
+    """سهم‌هایی که بیشترین تعداد سرمایه‌گذار بزرگ دارند: [(ticker, name, count, avg_pct)]."""
     count = defaultdict(int)
     pct_sum = defaultdict(float)
+    names = {}
     for m in snap['managers']:
         for h in m['holdings']:
             count[h['ticker']] += 1
             pct_sum[h['ticker']] += h.get('pct') or 0
+            names.setdefault(h['ticker'], h.get('name', ''))
     ranked = sorted(count, key=lambda t: (-count[t], -pct_sum[t]))[:top]
-    return [(t, count[t], pct_sum[t] / count[t]) for t in ranked]
+    return [(t, names.get(t, ''), count[t], pct_sum[t] / count[t]) for t in ranked]
 
 
 def build_daily(date_str, prev_date, results, snap, top_changes=15):
@@ -79,8 +99,8 @@ def build_daily(date_str, prev_date, results, snap, top_changes=15):
         lines.append("امروز معامله‌ی بالای ۵٪ ثبت نشد.")
     lines.append("")
     lines.append("<b>🏆 محبوب‌ترین سهم‌ها بین سرمایه‌گذاران</b>")
-    for t, n, avg in consensus(snap):
-        lines.append(f"• <b>{t}</b>: {n} نفر، میانگین {avg:.1f}٪")
+    for t, name, n, avg in consensus(snap):
+        lines.append(f"• <b>{t}</b> ({html.escape(fa_company(name))}): {n} نفر، میانگین {avg:.1f}٪")
     return lines
 
 
@@ -88,8 +108,8 @@ def build_first(snap, top_per_manager=3):
     lines = [f"🏦 <b>گزارش اولیه: سرمایه‌گذاران بزرگ</b> — {snap['date']}",
              f"{len(snap['managers'])} سرمایه‌گذار برتر", ""]
     lines.append("<b>🏆 محبوب‌ترین سهم‌ها</b>")
-    for t, n, avg in consensus(snap):
-        lines.append(f"• <b>{t}</b>: {n} نفر، میانگین {avg:.1f}٪")
+    for t, name, n, avg in consensus(snap):
+        lines.append(f"• <b>{t}</b> ({html.escape(fa_company(name))}): {n} نفر، میانگین {avg:.1f}٪")
     lines.append("")
     lines.append("<b>👤 بزرگ‌ترین سهم‌های هر سرمایه‌گذار</b>")
     for m in snap['managers']:
