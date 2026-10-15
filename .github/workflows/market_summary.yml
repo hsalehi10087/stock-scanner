@@ -1,0 +1,38 @@
+name: 🗞 Market Summary
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # هر روز 10:00 تهران
+  workflow_dispatch:
+    inputs:
+      token:
+        description: 'توکن ربات (اختیاری؛ خالی = secret)'
+        required: false
+        default: ''
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install packages
+        run: pip install -q yfinance pandas requests
+
+      - name: Send market summary
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_summary/summary.py
