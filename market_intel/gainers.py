@@ -15,7 +15,6 @@ import yfinance as yf
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'market_summary'))
 import summary as S  # noqa: E402
-from report import fa  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'gainers')
@@ -64,20 +63,34 @@ def daily_changes(symbols, chunk=200):
     return res
 
 
+def fa_text(s):
+    try:
+        import arabic_reshaper
+        from bidi.algorithm import get_display
+        return get_display(arabic_reshaper.reshape(s))
+    except Exception:
+        return s
+
+
 def render_png(rows, path):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    cells = [[r['ticker'], fa(r['name'])[:28] if fa(r['name']) else r['name'][:28],
-              f"${r['price']:,.2f}", f"+{r['chg']:.1f}%"] for r in rows]
-    heads = [S.fa_text('نماد'), S.fa_text('شرکت'), S.fa_text('قیمت'), S.fa_text('تغییر')]
-    fig, ax = plt.subplots(figsize=(8, 0.45 * (len(cells) + 1) + 0.4))
+    cells = []
+    for r in rows:
+        name = (r['name'] or '')
+        name = name.split(' - ')[0].split(' Common')[0][:34]
+        cells.append([r['ticker'], name, f"${float(r['price']):,.2f}", f"+{float(r['chg']):.1f}%"])
+    heads = ['TICKER', 'COMPANY', 'PRICE', 'CHANGE']
+    fig, ax = plt.subplots(figsize=(9.5, 0.45 * (len(cells) + 1) + 0.4))
     ax.axis('off')
     t = ax.table(cellText=cells, colLabels=heads, loc='center', cellLoc='center')
     t.auto_set_font_size(False)
     t.set_fontsize(11)
     t.scale(1, 1.5)
+    widths = {0: 0.14, 1: 0.46, 2: 0.18, 3: 0.20}
     for (i, j), cell in t.get_celld().items():
+        cell.set_width(widths[j])
         cell.set_edgecolor('#9ca3af')
         txt = cell.get_text()
         txt.set_fontweight('bold')
