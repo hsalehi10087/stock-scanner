@@ -60,8 +60,18 @@ def fred_last_two(series_id):
     return float(df['value'].iloc[-1]), float(df['value'].iloc[-2])
 
 
-ASSET_CODE = {'طلا (انس)': 'GOLD', 'نقره (انس)': 'SILVER', 'مس (پوند)': 'COPPER',
-              'بیت‌کوین': 'BTC', 'نفت WTI (بشکه)': 'WTI'}
+ASSET_CODE = {'طلا (انس)': 'طلا', 'نقره (انس)': 'نقره', 'مس (پوند)': 'مس',
+              'بیت‌کوین': 'بیت‌کوین', 'نفت WTI (بشکه)': 'نفت'}
+
+
+def fa_text(s):
+    """متن فارسی را برای نمایش در تصویر (matplotlib) شکل‌دهی و راست‌به‌چپ می‌کند."""
+    try:
+        import arabic_reshaper
+        from bidi.algorithm import get_display
+        return get_display(arabic_reshaper.reshape(s))
+    except Exception:
+        return s
 
 
 def table_cells(rows):
@@ -83,10 +93,10 @@ def render_table_png(rows, path):
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     data = table_cells(rows)
-    cells = [[c, p, ch] for c, p, ch, _ in data]
+    cells = [[fa_text(c), p, ch] for c, p, ch, _ in data]
     fig, ax = plt.subplots(figsize=(6.4, 0.65 * (len(cells) + 1)))
     ax.axis('off')
-    t = ax.table(cellText=cells, colLabels=['ASSET', 'PRICE', 'CHANGE'], loc='center', cellLoc='center')
+    t = ax.table(cellText=cells, colLabels=[fa_text('دارایی'), fa_text('قیمت'), fa_text('تغییر')], loc='center', cellLoc='center')
     t.auto_set_font_size(False)
     t.set_fontsize(15)
     t.scale(1, 1.9)
