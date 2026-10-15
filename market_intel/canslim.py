@@ -187,11 +187,14 @@ def _eps_row(df):
 
 
 def fundamentals(sym, market):
-    res = {'C': False, 'A': False, 'I': None, 'c_growth': None, 'a_growth': None, 'inst': None}
+    res = {'C': False, 'A': False, 'I': None, 'c_growth': None, 'a_growth': None, 'inst': None,
+           'why_c': 'no_quarterly', 'why_a': 'no_annual', 'nq': 0}
     t = yf.Ticker(sym)
     try:
         row = _eps_row(t.quarterly_income_stmt)
+        res['nq'] = 0 if row is None else len(row)
         if row is not None and len(row) >= 5:
+            res['why_c'] = 'no_prev_year_q'
             cur_d, cur = row.index[0], float(row.iloc[0])
             target = cur_d - pd.Timedelta(days=365)
             near = [(abs((d - target).days), float(v)) for d, v in row.items() if abs((d - target).days) <= 25]
@@ -200,15 +203,24 @@ def fundamentals(sym, market):
                 if prev > 0:
                     g = (cur - prev) / prev * 100
                     res['c_growth'], res['C'] = g, g >= C_TH
+                    res['why_c'] = 'ok' if res['C'] else 'c_low'
+                else:
+                    res['why_c'] = 'prev_not_positive'
+        elif row is not None:
+            res['why_c'] = f'only_{len(row)}_quarters'
     except Exception as e:
         DIAG.append(f'C {sym}: {str(e)[:60]}')
     try:
         row = _eps_row(t.income_stmt)
         if row is not None and len(row) >= 3:
             y0, y1, y2 = float(row.iloc[0]), float(row.iloc[1]), float(row.iloc[2])
+            res['why_a'] = 'prev_not_positive'
             if y1 > 0 and y2 > 0:
                 g1 = (y0 - y1) / y1 * 100
                 res['a_growth'], res['A'] = g1, g1 >= A_TH and y1 > y2
+                res['why_a'] = 'ok' if res['A'] else 'a_low'
+        elif row is not None:
+            res['why_a'] = f'only_{len(row)}_years'
     except Exception as e:
         DIAG.append(f'A {sym}: {str(e)[:60]}')
     if market == 'US':
@@ -264,8 +276,13 @@ def main():
                  and st.get('rs', 0) >= RS_MIN and st['price'] >= NEAR_HIGH * st['hi52']
                  and st['price'] > st['ma50'] > st['ma200'] and st['ud'] >= 1.0]
         n_ok = 0
+        from collections import Counter
+        why_c, why_a, nq = Counter(), Counter(), Counter()
         for s in cands:
             f = fundamentals(s, m)
+            why_c[f['why_c']] += 1
+            why_a[f['why_a']] += 1
+            nq[f['nq']] += 1
             time.sleep(0.2)
             if f['C'] and f['A'] and f['I'] is not False:
                 st = stats[s]
@@ -276,6 +293,9 @@ def main():
                                   'inst': f['inst'], 'pivot': st['base_hi'], 'date': st['date']})
         DIAG.append(f'{m}: universe={len(names)} priced={len(stats)} tech_cands={len(cands)} '
                     f'canslim={n_ok} M={mdir[m][0]} ({time.time() - t0:.0f}s)')
+        DIAG.append(f'  {m} C reasons: {dict(why_c)}')
+        DIAG.append(f'  {m} A reasons: {dict(why_a)}')
+        DIAG.append(f'  {m} quarters available: {dict(sorted(nq.items()))}')
         for s, st in stats.items():
             all_stats[(m, s)] = st
         names_all.update({(m, s): n for s, n in names.items()})
@@ -325,12 +345,16 @@ def main():
                        'price_at_add': w['price_at_add']}
                 alerts.append(rec)
                 stops.append(rec)
-    watch.to_csv(os.path.join(OUT, 'watchlist.csv'), index=False, encoding='utf-8')
-    append_alerts(alerts)
+    if not dry:
+        watch.to_csv(os.path.join(OUT, 'watchlist.csv'), index=False, encoding='utf-8')
+        append_alerts(alerts)
 
     # ---------- پیام ----------
     def nm(n):
-        return html.escape(fa(str(n)) or str(n))
+        import re
+        n = str(n)
+        n = re.split(r' - | Common| Class [A-Z]| Ordinary| American Depositary', n)[0].strip().rstrip(',')
+        return html.escape(fa(n) or n)
 
     lines = [f'<b>📊 گزارش روزانه CAN SLIM</b> — {today}',
              '<b>جهت بازار (M):</b> ' + ' | '.join(f"{MARKETS[m]['flag']} {mdir[m][1]}" for m in markets), '']
