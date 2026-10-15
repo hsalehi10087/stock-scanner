@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install packages
-        run: pip install -q pandas requests matplotlib
+        run: pip install -q yfinance pandas requests matplotlib
       - name: Scan and send
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
