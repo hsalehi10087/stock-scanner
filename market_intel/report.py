@@ -83,9 +83,21 @@ def fetch_article(url):
         return ''
 
 
+JUNK = ['subscribe', 'click', 'sign up', 'cookie', 'advertis', 'newsletter', 'read more', 'copyright', 'all rights']
+VIEW_WORDS = ['forecast', 'outlook', 'expect', 'predict', 'target', 'analyst', 'expects', 'sees', 'says']
+
+
+def sentence_strength(sent):
+    sl = sent.lower()
+    b = sum(w in sl for w in BULL)
+    d = sum(w in sl for w in BEAR)
+    return abs(b - d) + (2 if any(w in sl for w in VIEW_WORDS) else 0)
+
+
 def investor_points(news, per_asset=2):
-    """جملات مرتبط و جهت‌دار از متن مقاله‌ها (بدون مدل زبانی)، ترجمه‌شده به فارسی."""
-    points = {k: [] for k in ASSETS}
+    """جملات مرتبط و جهت‌دار از متن مقاله‌ها (بدون مدل زبانی)، مرتب‌شده بر اساس قدرت و ترجمه‌شده."""
+    cands = {k: [] for k in ASSETS}
+    seen = set()
     for n in news[:40]:
         head = n.get('headline', '')
         text = (head + ' ' + n.get('summary', '')).lower()
@@ -93,19 +105,23 @@ def investor_points(news, per_asset=2):
             continue
         body = fetch_article(n['url']) or n.get('summary', '')
         for sent in re.split(r'(?<=[.!?])\s+', body):
-            if not 40 <= len(sent) <= 280:
+            sent = sent.strip()
+            if not 50 <= len(sent) <= 260:
                 continue
             sl = sent.lower()
-            sc = score(sent)
-            if sc == 0:
+            if any(j in sl for j in JUNK) or score(sent) == 0:
                 continue
+            key = sl[:60]
+            if key in seen:
+                continue
+            seen.add(key)
             for k, kws in ASSETS.items():
-                if any(w in sl for w in kws) and sent not in points[k]:
-                    points[k].append(sent)
+                if any(w in sl for w in kws):
+                    cands[k].append((sentence_strength(sent), sent))
     lines = []
-    for k, sents in points.items():
+    for k, items in cands.items():
         shown = 0
-        for sent in sents:
+        for _, sent in sorted(items, key=lambda x: -x[0]):
             if shown >= per_asset:
                 break
             tr = fa(sent)
