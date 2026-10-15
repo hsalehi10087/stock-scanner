@@ -1,0 +1,29 @@
+name: 📨 Send Telegram Test Message
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: 'متن پیام'
+        required: false
+        default: '✅ پیام تست: ارسال دستی از Claude به گروه انجام شد.'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_TEXT: ${{ github.event.inputs.text }}
+        run: |
+          if [ -z "$TG_TOKEN" ]; then
+            echo "❌ TELEGRAM_BOT_TOKEN secret is empty"
+            exit 1
+          fi
+          curl -sS -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=-1004378247138" \
+            --data-urlencode "text=${TG_TEXT}" \
+            -o resp.json -w "HTTP %{http_code}\n"
+          cat resp.json; echo
+          grep -q '"ok":true' resp.json
