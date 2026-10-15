@@ -78,6 +78,7 @@ def build_lines(prices, cls, news_count):
         lines.append(f"• <b>{k}</b>: 🟢{d['bull']} 🔴{d['bear']} ⚪{d['neutral']} (از {total})")
         if d['example']:
             lines.append(f"   ↳ <i>{html.escape(fa(d['example']))}</i>")
+    lines += [''] + build_macro(prices)[1:]
     v = S.build_verdict(prices)
     if v:
         lines += ['', v]
@@ -112,12 +113,9 @@ def main():
     png = os.path.join(tempfile.mkdtemp(), 'table.png')
     S.render_table_png(prices, png)
     caption = '<b>🧭 گزارش هوشمند بازار</b>\n<i>قیمت‌ها و نگاه اخبار</i>'
-    macro_chunks = S.chunks(build_macro(prices))
     smart_chunks = S.chunks(build_lines(prices, cls, len(news)))
     ok = True
     for cid in chat_ids:
-        for ch in macro_chunks:
-            ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
         with open(png, 'rb') as f:
             ok &= S.tg_post(token, cid, 'sendPhoto', data={'chat_id': cid, 'caption': caption, 'parse_mode': 'HTML'},
                             files={'photo': f})
