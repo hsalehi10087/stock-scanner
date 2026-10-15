@@ -20,7 +20,7 @@ import summary as S  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fundamentals')
 THRESHOLD = 10.0
-UA = {'User-Agent': 'stock-scanner-research/1.0 (github actions)'}
+UA = {'User-Agent': 'stock-scanner-research mahdi.salehi.sichani@gmail.com'}
 
 
 def get_json(url):
