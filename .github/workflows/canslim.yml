@@ -1,0 +1,56 @@
+name: 📊 CAN SLIM (US, JP, CN, TW)
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'  # ۱۲:۰۰ تهران: بعد از بسته‌شدن بازارهای آسیا؛ آمریکا = جلسه‌ی شب قبل
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+      markets:
+        description: 'بازارها (US,JP,CN,TW)'
+        required: false
+        default: 'US,JP,CN,TW'
+      dry_run:
+        description: 'true = بدون ارسال به تلگرام (فقط ذخیره‌ی پیام در ریپو)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: canslim
+  cancel-in-progress: false
+
+jobs:
+  canslim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q yfinance pandas numpy requests matplotlib deep-translator openpyxl xlrd
+      - name: Run CAN SLIM
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+          MARKETS: ${{ github.event.inputs.markets || 'US,JP,CN,TW' }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/canslim.py
+      - name: Save history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "CANSLIM Bot"
+          git add -f data/canslim || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "📊 canslim $(date +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
