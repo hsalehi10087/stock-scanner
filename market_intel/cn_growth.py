@@ -1,4 +1,4 @@
-"""بورس چین (شانگهای + شنژن): سهم‌هایی که امروز ≥۹.۹٪ رشد کرده‌اند (سقف بازار اصلی ۱۰٪ است)
+"""بورس چین (شانگهای + شنژن): سهم‌هایی که در یک هفته‌ی اخیر (۵ روز معاملاتی) بیش از ۸٪ رشد کرده‌اند
 و سود خالص فصلی‌شان نسبت به همان فصل سال قبل بیش از ۱۰٪ رشد داشته.
 
 منابع:
@@ -15,6 +15,7 @@ import sys
 
 import pandas as pd
 import requests
+import yfinance as yf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -26,7 +27,7 @@ from report import fa  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
 HIST_DIR = os.path.join(ROOT, 'data', 'cn_gainers')
-PRICE_TH = 9.9
+PRICE_TH = 8.0  # رشد هفتگی (۵ روز معاملاتی)
 GROWTH_TH = 10.0
 MIN_PRICE_CNY = 1.0
 MIN_VOLUME = 100_000
@@ -73,6 +74,32 @@ def szse_list():
     return out
 
 
+def weekly_changes(symbols, chunk=200):
+    """تغییر قیمت ۵ روز معاملاتی اخیر: آخرین بسته‌شدن نسبت به ۵ روز معاملاتی قبل."""
+    res = {}
+    for i in range(0, len(symbols), chunk):
+        part = symbols[i:i + chunk]
+        try:
+            df = yf.download(part, period='1mo', interval='1d', group_by='ticker',
+                             threads=True, progress=False, auto_adjust=False)
+        except Exception as e:
+            DIAG.append(f'ERR batch {i}: {str(e)[:120]}')
+            continue
+        for s in part:
+            try:
+                close = df[s]['Close'].dropna()
+                vol = df[s]['Volume'].dropna()
+                if len(close) < 6:
+                    continue
+                last, base = float(close.iloc[-1]), float(close.iloc[-6])
+                res[s] = {'price': last, 'chg': (last / base - 1) * 100,
+                          'volume': float(vol.tail(5).mean()) if len(vol) else 0.0,
+                          'date': str(close.index[-1].date()), 'from': str(close.index[-6].date())}
+            except Exception:
+                continue
+    return res
+
+
 def main():
     token = os.getenv('TELEGRAM_BOT_TOKEN', '')
     chat_ids = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip()]
@@ -88,9 +115,9 @@ def main():
     DIAG.append(f'tickers={len(names)}')
     if not names:
         raise RuntimeError('فهرست سهام چین دریافت نشد')
-    prices = gainers.daily_changes(sorted(names))
+    prices = weekly_changes(sorted(names))
     cands = [(s, d) for s, d in prices.items()
-             if d['chg'] >= PRICE_TH and d['price'] >= MIN_PRICE_CNY and d['volume'] >= MIN_VOLUME]
+             if d['chg'] > PRICE_TH and d['price'] >= MIN_PRICE_CNY and d['volume'] >= MIN_VOLUME]
     DIAG.append(f'priced={len(prices)} price_gainers={len(cands)}')
     rows, with_data = [], 0
     for s, d in cands:
@@ -106,12 +133,13 @@ def main():
     os.makedirs(HIST_DIR, exist_ok=True)
     pd.DataFrame(rows).to_csv(os.path.join(HIST_DIR, f'{date}.csv'), index=False, encoding='utf-8')
 
-    lines = [f'<b>🇨🇳 بورس چین: رشد قیمت ≥۹.۹٪ + رشد سود خالص بیش از ۱۰٪</b> — {date}',
-             f'<i>{len(rows)} سهم از {len(cands)} سهم با رشد قیمت ≥۹.۹٪ (از {len(prices)} سهم)</i>',
-             '<i>سقف رشد روزانه در بازار اصلی چین ۱۰٪ است.</i>', '']
+    week_from = cands[0][1]['from'] if cands else ''
+    lines = [f'<b>🇨🇳 بورس چین: رشد هفتگی قیمت بیش از ۸٪ + رشد سود خالص بیش از ۱۰٪</b> — {date}',
+             f'<i>{len(rows)} سهم از {len(cands)} سهم با رشد هفتگی بیش از ۸٪ (از {len(prices)} سهم بررسی‌شده)</i>',
+             f'<i>بازه‌ی قیمت: {week_from} تا {date} (۵ روز معاملاتی)</i>', '']
     for r in rows[:30]:
         nm = fa(r['name']) or r['name']
-        lines.append(f"• <b>{r['ticker']}</b> ({html.escape(nm)}): قیمت +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        lines.append(f"• <b>{r['ticker']}</b> ({html.escape(nm)}): قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
     if not rows:
         lines.append('امروز سهمی با هر دو شرط پیدا نشد.')
     ok = True
