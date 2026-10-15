@@ -27,7 +27,7 @@ GROWTH_TH = 10.0
 MIN_PRICE_JPY = 100
 MIN_VOLUME = 100_000
 MIN_PREV_JPY = 100_000_000
-JPX_URL = 'https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls'
+JPX_URL = 'https://www.jpx.co.jp/english/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_e.xlsx'
 UA = {'User-Agent': 'Mozilla/5.0'}
 DIAG = []
 
@@ -36,13 +36,14 @@ def tse_list():
     r = requests.get(JPX_URL, headers=UA, timeout=60)
     DIAG.append(f'JPX {r.status_code} len={len(r.content)}')
     r.raise_for_status()
-    df = pd.read_excel(io.BytesIO(r.content), dtype=str)
-    code_col = [c for c in df.columns if 'コード' in str(c)][0]
-    name_col = [c for c in df.columns if '銘柄名' in str(c)][0]
+    df = pd.read_excel(io.BytesIO(r.content), dtype=str, engine='openpyxl')
+    code_col = [c for c in df.columns if 'code' in str(c).lower()][0]
+    name_col = [c for c in df.columns if 'name' in str(c).lower() and 'english' in str(c).lower()][0]
     out = {}
     for code, name in zip(df[code_col], df[name_col]):
-        if isinstance(code, str) and code.strip().isdigit():
-            out[f'{code.strip()}.T'] = name
+        code = str(code).strip()
+        if code.isdigit() or (len(code) == 4 and code[:3].isdigit()):
+            out[f'{code}.T'] = name
     return out
 
 
