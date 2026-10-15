@@ -1,12 +1,22 @@
+universe us: 6949 (live)
+US: universe=6949 priced=6182 tech_cands=300 canslim=10 M=pressure (665s)
+  US C reasons: {'c_low': 94, 'ok': 131, 'prev_not_positive': 61, 'no_quarterly+no_yahoo': 7, 'no_prev_year_q+no_yahoo': 2, 'only_4_quarters+no_yahoo': 3, 'only_2_quarters+no_yahoo': 2}
+  US A reasons: {'a_low': 183, 'prev_not_positive': 94, 'ok': 22, 'only_1_years': 1}
+  US quarters available: {0: 7, 2: 2, 4: 3, 5: 288}
 universe jp: 4447 (live)
-JP: universe=4447 priced=4294 tech_cands=201 canslim=18 M=pressure (822s)
-  JP C reasons: {'no_quarterly+no_yahoo': 4, 'yahoo_ok': 98, 'yahoo_low': 70, 'only_1_quarters+no_yahoo': 7, 'only_2_quarters+no_yahoo': 22}
+JP: universe=4447 priced=4293 tech_cands=201 canslim=0 M=pressure (478s)
+  JP C reasons: {'no_quarterly+no_yahoo': 7, 'only_2_quarters+no_yahoo': 142, 'only_1_quarters+no_yahoo': 48, 'only_3_quarters+no_yahoo': 4}
   JP A reasons: {'no_annual': 5, 'ok': 36, 'a_low': 140, 'prev_not_positive': 19, 'only_2_years': 1}
   JP quarters available: {0: 7, 1: 48, 2: 142, 3: 4}
 universe sse: 2320 (live)
 universe szse: 2906 (live)
-CN: universe=5226 priced=5178 tech_cands=119 canslim=3 M=down (795s)
-  CN C reasons: {'yahoo_ok': 34, 'yahoo_low': 55, 'only_2_quarters+no_yahoo': 30}
+CN: universe=5226 priced=5178 tech_cands=119 canslim=0 M=down (460s)
+  CN C reasons: {'only_2_quarters+no_yahoo': 114, 'only_1_quarters+no_yahoo': 4, 'no_quarterly+no_yahoo': 1}
   CN A reasons: {'prev_not_positive': 27, 'a_low': 87, 'ok': 5}
   CN quarters available: {0: 1, 1: 4, 2: 114}
-dry run: message not sent
+universe twse: 1089 (live)
+universe tpex: 887 (live)
+TW: universe=1976 priced=1970 tech_cands=121 canslim=14 M=up (218s)
+  TW C reasons: {'prev_not_positive': 26, 'only_4_quarters+no_yahoo': 28, 'ok': 45, 'c_low': 10, 'only_2_quarters+no_yahoo': 2, 'only_3_quarters+no_yahoo': 10}
+  TW A reasons: {'prev_not_positive': 30, 'a_low': 71, 'ok': 19, 'only_2_years': 1}
+  TW quarters available: {2: 2, 3: 10, 4: 28, 5: 81}
