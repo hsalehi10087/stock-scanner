@@ -57,11 +57,15 @@ def classify(news):
 
 
 def fa(text):
+    """ترجمه‌ی فارسی؛ اگر ترجمه ممکن نباشد None برمی‌گرداند (تا متن انگلیسی نشان داده نشود)."""
     try:
         from deep_translator import GoogleTranslator
-        return GoogleTranslator(source='auto', target='fa').translate(text) or text
+        out = GoogleTranslator(source='auto', target='fa').translate(text)
+        if out and out.strip() and out.strip() != text.strip():
+            return out
     except Exception:
-        return text
+        pass
+    return None
 
 
 def build_lines(prices, cls, news_count):
@@ -76,8 +80,9 @@ def build_lines(prices, cls, news_count):
             lines.append(f'• <b>{k}</b>: خبری نبود')
             continue
         lines.append(f"• <b>{k}</b>: 🟢{d['bull']} 🔴{d['bear']} ⚪{d['neutral']} (از {total})")
-        if d['example']:
-            lines.append(f"   ↳ <i>{html.escape(fa(d['example']))}</i>")
+        tr = fa(d['example']) if d['example'] else None
+        if tr:
+            lines.append(f"   ↳ <i>{html.escape(tr)}</i>")
     lines += [''] + build_macro(prices)[1:]
     v = S.build_verdict(prices)
     if v:
