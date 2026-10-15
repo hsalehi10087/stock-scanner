@@ -36,6 +36,26 @@ UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 DIAG = []
 
 
+import re as _re
+CJK = _re.compile(r'[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]')
+
+
+def fa_name(sym):
+    """نام فارسی شرکت: نام انگلیسی از Yahoo، ترجمه به فارسی؛ هیچ حرف چینی نمی‌ماند.
+    اگر ترجمه ممکن نبود، نام انگلیسی؛ اگر آن هم نبود، رشته‌ی خالی."""
+    try:
+        info = yf.Ticker(sym).get_info()
+        en = info.get('shortName') or info.get('longName') or ''
+    except Exception:
+        en = ''
+    en = CJK.sub('', str(en)).strip(' -,')
+    if not en:
+        return ''
+    tr = fa(en)
+    tr = CJK.sub('', tr).strip() if tr else ''
+    return tr or en
+
+
 def sse_list():
     out = {}
     for stock_type in ('1', '8'):  # ۱ = بازار اصلی A، ۸ = STAR
@@ -198,8 +218,9 @@ def main():
              f'<i>{len(rows)} سهم از {len(cands)} سهم با رشد هفتگی بیش از ۸٪ (از {len(prices)} سهم بررسی‌شده)</i>',
              f'<i>بازه‌ی قیمت: {week_from} تا {date} (۵ روز معاملاتی)</i>', '']
     for r in rows[:30]:
-        nm = fa(r['name']) or r['name']
-        lines.append(f"• <b>{r['ticker']}</b> ({html.escape(nm)}): قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        nm = fa_name(r['ticker'])
+        label = f" ({html.escape(nm)})" if nm else ''
+        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
     if not rows:
         lines.append('امروز سهمی با هر دو شرط پیدا نشد.')
     ok = True

@@ -367,6 +367,9 @@ def main():
         if market == 'TW':
             e = tw_growth.en_name(ticker)
             return html.escape(e) if e else html.escape(str(ticker))
+        if market == 'CN':
+            f = cn_growth.fa_name(ticker)
+            return html.escape(f) if f else html.escape(str(ticker))
         n = str(n)
         n = re.split(r' - | Common| Class [A-Z]| Ordinary| American Depositary', n)[0].strip().rstrip(',')
         return html.escape(fa(n) or n)
