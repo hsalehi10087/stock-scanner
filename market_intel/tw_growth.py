@@ -14,7 +14,10 @@ import sys
 import time
 
 import pandas as pd
+import re
+
 import requests
+import yfinance as yf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -48,6 +51,20 @@ def _get_json(url, tries=4):
             last = e
             time.sleep(3 * (k + 1))
     raise last
+
+
+CJK = re.compile(r'[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]')
+
+
+def en_name(sym):
+    """نام انگلیسی شرکت از Yahoo، بدون هیچ حرف چینی؛ اگر نبود رشته‌ی خالی."""
+    try:
+        info = yf.Ticker(sym).get_info()
+        n = info.get('shortName') or info.get('longName') or ''
+    except Exception:
+        n = ''
+    n = CJK.sub('', str(n)).strip(' -,')
+    return n
 
 
 def twse_list():
@@ -120,8 +137,9 @@ def main():
              f'<i>{len(rows)} سهم از {len(cands)} سهم با رشد هفتگی بیش از ۱۰٪ (از {len(prices)} سهم بررسی‌شده)</i>',
              f'<i>بازه‌ی قیمت: {week_from} تا {date} (۵ روز معاملاتی)</i>', '']
     for r in rows[:30]:
-        nm = fa(r['name']) or r['name']
-        lines.append(f"• <b>{r['ticker']}</b> ({html.escape(nm)}): قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        nm = en_name(r['ticker'])
+        label = f" ({html.escape(nm)})" if nm else ''
+        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
     if not rows:
         lines.append('سهمی با هر دو شرط پیدا نشد.')
     ok = True

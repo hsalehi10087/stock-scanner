@@ -362,8 +362,11 @@ def main():
         append_alerts(alerts)
 
     # ---------- پیام ----------
-    def nm(n):
+    def nm(n, market=None, ticker=None):
         import re
+        if market == 'TW':
+            e = tw_growth.en_name(ticker)
+            return html.escape(e) if e else html.escape(str(ticker))
         n = str(n)
         n = re.split(r' - | Common| Class [A-Z]| Ordinary| American Depositary', n)[0].strip().rstrip(',')
         return html.escape(fa(n) or n)
@@ -374,7 +377,7 @@ def main():
     if breakouts:
         for b in breakouts:
             cur = MARKETS[b['market']]['cur']
-            lines.append(f"• {MARKETS[b['market']]['flag']} <b>{b['ticker']}</b> ({nm(b['name'])}): "
+            lines.append(f"• {MARKETS[b['market']]['flag']} <b>{b['ticker']}</b> ({nm(b['name'], b['market'], b['ticker'])}): "
                          f"{money(cur, b['price'])} | سقف {money(cur, b['pivot'])} | حجم {b['vol_ratio']:.1f}× | "
                          f"قیمت ورود به فهرست {money(cur, float(b['price_at_add']))}")
     else:
@@ -390,7 +393,7 @@ def main():
     for r in sorted(new_rows, key=lambda r: -q_by[(r['market'], r['ticker'])]['rs'])[:25]:
         q = q_by[(r['market'], r['ticker'])]
         cur = MARKETS[r['market']]['cur']
-        lines.append(f"• {MARKETS[r['market']]['flag']} <b>{r['ticker']}</b> ({nm(r['name'])}): "
+        lines.append(f"• {MARKETS[r['market']]['flag']} <b>{r['ticker']}</b> ({nm(r['name'], r['market'], r['ticker'])}): "
                      f"{money(cur, r['price_at_add'])} | C +{q['c_growth']:.0f}٪ | A +{q['a_growth']:.0f}٪ | RS {q['rs']:.0f}")
     if not new_rows:
         lines.append('سهم جدیدی اضافه نشد.')
