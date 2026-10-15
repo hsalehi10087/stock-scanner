@@ -44,9 +44,18 @@ def sse_list():
                   'type': 'inParams', 'isPagination': 'true', 'pageHelp.cacheSize': '1',
                   'pageHelp.beginPage': '1', 'pageHelp.pageSize': '10000', 'pageHelp.pageNo': '1',
                   'pageHelp.endPage': '1'}
-        r = requests.get('https://query.sse.com.cn/sseQuery/commonQuery.do', params=params, timeout=60,
-                         headers={'User-Agent': UA, 'Referer': 'https://www.sse.com.cn/'})
-        DIAG.append(f'SSE type={stock_type} {r.status_code} len={len(r.text)}')
+        import time
+        r = None
+        for k in range(4):
+            try:
+                r = requests.get('https://query.sse.com.cn/sseQuery/commonQuery.do', params=params, timeout=60,
+                                 headers={'User-Agent': UA, 'Referer': 'https://www.sse.com.cn/'})
+                DIAG.append(f'SSE type={stock_type} try{k + 1} {r.status_code} len={len(r.text)}')
+                if r.status_code == 200:
+                    break
+            except Exception as e:
+                DIAG.append(f'SSE type={stock_type} try{k + 1} ERR {str(e)[:80]}')
+            time.sleep(4 * (k + 1))
         r.raise_for_status()
         for row in r.json().get('result', []):
             code = str(row.get('A_STOCK_CODE') or row.get('COMPANY_CODE') or '').strip()
@@ -147,11 +156,22 @@ def main():
         print('❌ توکن یا شناسه‌ی چت تنظیم نشده', file=sys.stderr)
         return 1
     names = {}
-    for fn in (sse_list, szse_list):
+    for fn, cache_name in ((sse_list, 'universe_sse.csv'), (szse_list, 'universe_szse.csv')):
+        cache = os.path.join(HIST_DIR, cache_name)
         try:
-            names.update(fn())
+            got = fn()
+            if len(got) > 500:
+                os.makedirs(HIST_DIR, exist_ok=True)
+                pd.DataFrame({'ticker': list(got), 'name': list(got.values())}).to_csv(cache, index=False, encoding='utf-8')
+            names.update(got)
         except Exception as e:
             DIAG.append(f'ERR {fn.__name__}: {str(e)[:200]}')
+            if os.path.exists(cache):
+                df = pd.read_csv(cache, dtype=str)
+                names.update(dict(zip(df['ticker'], df['name'])))
+                DIAG.append(f'used cached {cache_name}: {len(df)} rows')
+            else:
+                DIAG.append(f'no cache for {cache_name}')
     DIAG.append(f'tickers={len(names)}')
     if not names:
         raise RuntimeError('فهرست سهام چین دریافت نشد')
