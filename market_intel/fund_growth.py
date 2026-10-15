@@ -23,8 +23,12 @@ THRESHOLD = 10.0
 UA = {'User-Agent': 'stock-scanner-research mahdi.salehi.sichani@gmail.com'}
 
 
+DIAG = []
+
+
 def get_json(url):
     r = requests.get(url, headers=UA, timeout=60)
+    DIAG.append(f'{r.status_code} {url[-60:]} len={len(r.text)}')
     r.raise_for_status()
     return r.json()
 
@@ -38,7 +42,8 @@ def cik_map():
 def frame(period):
     try:
         js = get_json(f'https://data.sec.gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/{period}.json')
-    except requests.HTTPError:
+    except Exception as e:
+        DIAG.append(f'ERR {period}: {str(e)[:200]}')
         return None
     return {str(d['cik']).zfill(10): float(d['val']) for d in js.get('data', [])}
 
@@ -57,7 +62,20 @@ def latest_quarter(today):
     return None, None, None
 
 
+def write_diag(extra=''):
+    os.makedirs(HIST_DIR, exist_ok=True)
+    with open(os.path.join(HIST_DIR, 'diagnostics.txt'), 'w', encoding='utf-8') as f:
+        f.write('\n'.join(DIAG[-60:]) + '\n' + extra)
+
+
 def main():
+    try:
+        return _main()
+    finally:
+        write_diag()
+
+
+def _main():
     token = os.getenv('TELEGRAM_BOT_TOKEN', '')
     chat_ids = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip()]
     if not token or not chat_ids:
