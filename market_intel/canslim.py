@@ -223,13 +223,25 @@ def fundamentals(sym, market):
             res['why_a'] = f'only_{len(row)}_years'
     except Exception as e:
         DIAG.append(f'A {sym}: {str(e)[:60]}')
-    if market == 'US':
+    need_info = market == 'US' or res['why_c'] not in ('ok', 'c_low', 'prev_not_positive')
+    if need_info:
         try:
-            hp = t.get_info().get('heldPercentInstitutions')
+            info = t.get_info()
+        except Exception:
+            info = {}
+        if market == 'US':
+            hp = info.get('heldPercentInstitutions')
             if hp is not None:
                 res['inst'], res['I'] = float(hp), float(hp) >= INST_MIN
-        except Exception:
-            pass
+        # داده‌ی فصلی کافی نیست (رایج در ژاپن و چین): رشد سود فصلی سالانه‌ی محاسبه‌شده‌ی Yahoo
+        if res['why_c'] not in ('ok', 'c_low', 'prev_not_positive'):
+            eqg = info.get('earningsQuarterlyGrowth')
+            if eqg is not None:
+                g = float(eqg) * 100
+                res['c_growth'], res['C'] = g, g >= C_TH
+                res['why_c'] = 'yahoo_ok' if res['C'] else 'yahoo_low'
+            else:
+                res['why_c'] += '+no_yahoo'
     return res
 
 
