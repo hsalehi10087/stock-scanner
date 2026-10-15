@@ -59,22 +59,33 @@ def fred_last_two(series_id):
     return float(df['value'].iloc[-1]), float(df['value'].iloc[-2])
 
 
+ASSET_CODE = {'طلا (انس)': 'GOLD', 'نقره (انس)': 'SILVER', 'مس (پوند)': 'COPPER',
+              'بیت‌کوین': 'BTC', 'نفت WTI (بشکه)': 'WTI'}
+
+
 def build_table(rows):
-    """جدول با خطوط کادر برای نمایش در <pre> تلگرام."""
-    w1 = max(len(r['label']) for r in rows) + 1
-    header = f"{'دارایی':<{w1}}│{'قیمت':>12}│{'تغییر':>9}"
-    sep = '─' * w1 + '┼' + '─' * 12 + '┼' + '─' * 9
-    lines = ['┌' + '─' * w1 + '┬' + '─' * 12 + '┬' + '─' * 9 + '┐', '│' + header.replace('│', '│') + '│', '├' + sep.replace('┼', '┼') + '┤']
+    """جدول شبکه‌ای (خانه‌بندی‌شده) با عرض ثابت در <pre>."""
+    data = []
     for r in rows:
+        code = ASSET_CODE.get(r['label'], r['label'])
         if r['price'] is None:
-            price, chg = 'ندارد', '-'
+            price, chg = 'N/A', 'N/A'
         else:
             price = f"{r['unit']}{r['price']:,.2f}"
-            chg = f"{r['chg']:+.2f}%"
-        arrow = '▲' if (r['chg'] or 0) > 0 else ('▼' if (r['chg'] or 0) < 0 else '•')
-        lines.append(f"│{r['label']:<{w1}}│{price:>12}│{arrow}{chg:>8}│")
-    lines.append('└' + '─' * w1 + '┴' + '─' * 12 + '┴' + '─' * 9 + '┘')
-    return '\n'.join(lines)
+            chg = f"{'+' if r['chg'] >= 0 else ''}{r['chg']:.2f}%"
+        arrow = '▲' if (r['chg'] or 0) > 0 else ('▼' if (r['chg'] or 0) < 0 else '■')
+        data.append((code, price, arrow + ' ' + chg))
+    head = ('ASSET', 'PRICE', 'CHANGE')
+    w = [max(len(x[i]) for x in [head] + data) + 2 for i in range(3)]
+    def line(l, m, r_, fill='─'):
+        return l + m.join(fill * wi for wi in w) + r_
+    def row(cells):
+        return '│' + '│'.join(c.center(wi) if i == 0 else (c.center(wi)) for i, (c, wi) in enumerate(zip(cells, w))) + '│'
+    out = [line('┌', '┬', '┐'), row(head), line('╞', '╪', '╡', '═')]
+    for i, d in enumerate(data):
+        out.append(row(d))
+        out.append(line('├', '┼', '┤') if i < len(data) - 1 else line('└', '┴', '┘'))
+    return '\n'.join(out)
 
 
 def macro_bullets():
@@ -100,21 +111,26 @@ def macro_bullets():
 
 
 def build_message(prices):
-    lines = ['<b>🗞 خلاصه‌ی بازار</b>', '', f'<pre>{html.escape(build_table(prices))}</pre>', '',
+    lines = ['<b>🗞 خلاصه‌ی بازار</b>', '<i>داده‌های لحظه‌ی آخر بازار</i>', '',
+             '<b>📊 قیمت‌ها</b>', f'<pre>{html.escape(build_table(prices))}</pre>',
+             '<i>GOLD=طلا  SILVER=نقره  COPPER=مس  BTC=بیت‌کوین  WTI=نفت</i>', '',
              '<b>🌍 نرخ بهره و اقتصاد جهانی</b>']
     try:
         lines += ['• ' + x for x in macro_bullets()]
     except Exception as e:
-        lines.append(f'⚠️ داده‌های کلان در دسترس نبود: {e}')
+        lines.append(f'⚠️ داده‌های کلان در دسترس نبود: {html.escape(str(e))}')
     gold = next((p for p in prices if p['label'].startswith('طلا') and p['chg'] is not None), None)
     copper = next((p for p in prices if p['label'].startswith('مس') and p['chg'] is not None), None)
     if gold and copper:
         if copper['chg'] > 0 and gold['chg'] > 0:
-            lines.append('• طلا و مس هر دو بالا رفته‌اند: هم تقاضای امن هم انتظار رشد اقتصادی.')
+            view = 'طلا و مس هر دو بالا: هم تقاضای امن و هم امید به رشد.'
         elif copper['chg'] > 0:
-            lines.append('• مس بالا و طلا پایین است: نشانه‌ی امیدواری به رشد اقتصادی.')
+            view = 'مس بالا و طلا پایین: امید به رشد اقتصادی.'
         elif gold['chg'] > 0:
-            lines.append('• طلا بالا و مس پایین است: نشانه‌ی احتیاط و نگرانی از رشد.')
+            view = 'طلا بالا و مس پایین: احتیاط و نگرانی از رشد.'
+        else:
+            view = 'طلا و مس هر دو پایین: ریسک‌گریزی کمتر از نگرانی رشد.'
+        lines += ['', f'<b>🧭 جمع‌بندی:</b> {view}']
     return lines
 
 
