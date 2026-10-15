@@ -1,0 +1,6 @@
+SSE type=1 200 len=1726891
+SSE type=8 200 len=631098
+ERR szse_list: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+tickers=2320
+priced=2320 price_gainers=19
+qualified=3 (growth computed for 4 of 19)
