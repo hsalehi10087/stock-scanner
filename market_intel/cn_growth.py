@@ -56,22 +56,62 @@ def sse_list():
     return out
 
 
-def szse_list():
+SZSE_HEADERS = {'User-Agent': UA, 'Referer': 'https://www.szse.cn/market/product/stock/list/index.html'}
+
+
+def _szse_get(url, params, tries=4):
+    import time
+    last = None
+    for k in range(tries):
+        try:
+            r = requests.get(url, params=params, timeout=60, headers=SZSE_HEADERS)
+            r.raise_for_status()
+            return r
+        except Exception as e:
+            last = e
+            DIAG.append(f'SZSE retry {k + 1}: {str(e)[:100]}')
+            time.sleep(3 * (k + 1))
+    raise last
+
+
+def _szse_xlsx():
     params = {'SHOWTYPE': 'xlsx', 'CATALOGID': '1110', 'TABKEY': 'tab1', 'random': str(random.random())}
-    r = requests.get('https://www.szse.cn/api/report/ShowReport', params=params, timeout=60,
-                     headers={'User-Agent': UA, 'Referer': 'https://www.szse.cn/market/product/stock/list/index.html'})
-    DIAG.append(f'SZSE {r.status_code} len={len(r.content)}')
-    r.raise_for_status()
+    r = _szse_get('https://www.szse.cn/api/report/ShowReport', params)
+    DIAG.append(f'SZSE xlsx {r.status_code} len={len(r.content)}')
     df = pd.read_excel(io.BytesIO(r.content), dtype=str, engine='openpyxl')
-    DIAG.append('SZSE cols=' + '|'.join(map(str, df.columns)))
     code_col = next(c for c in df.columns if 'A股代码' in str(c))
     name_col = next((c for c in df.columns if 'A股简称' in str(c)), None) or next(c for c in df.columns if '简称' in str(c))
-    out = {}
-    for code, name in zip(df[code_col], df[name_col]):
-        code = str(code).strip().zfill(6)
-        if code.isdigit():
-            out[f'{code}.SZ'] = str(name).strip()
+    return {f'{str(c).strip().zfill(6)}.SZ': str(n).strip() for c, n in zip(df[code_col], df[name_col])
+            if str(c).strip().isdigit()}
+
+
+def _szse_json():
+    import re
+    import time
+    out, page, pages = {}, 1, 1
+    while page <= pages:
+        params = {'SHOWTYPE': 'JSON', 'CATALOGID': '1110', 'TABKEY': 'tab1', 'PAGENO': str(page),
+                  'random': str(random.random())}
+        r = _szse_get('https://www.szse.cn/api/report/ShowReport/data', params)
+        block = r.json()[0]
+        pages = int(block.get('metadata', {}).get('pagecount', 1) or 1)
+        for row in block.get('data', []):
+            code = re.sub(r'<[^>]+>', '', str(row.get('agdm', ''))).strip()
+            name = re.sub(r'<[^>]+>', '', str(row.get('agjc', ''))).strip()
+            if code.isdigit() and len(code) == 6:
+                out[f'{code}.SZ'] = name
+        page += 1
+        time.sleep(0.3)
+    DIAG.append(f'SZSE json pages={pages} rows={len(out)}')
     return out
+
+
+def szse_list():
+    try:
+        return _szse_xlsx()
+    except Exception as e:
+        DIAG.append(f'SZSE xlsx failed: {str(e)[:120]} -> trying JSON')
+        return _szse_json()
 
 
 def weekly_changes(symbols, chunk=200):
