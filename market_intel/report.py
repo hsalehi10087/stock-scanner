@@ -15,8 +15,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 import summary as S  # noqa: E402
 
 KEY = os.getenv('FINNHUB_API_KEY', '')
-LLM_KEY = os.getenv('ANTHROPIC_API_KEY', '')
-LLM_MODEL = 'claude-haiku-5-5'
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; market-intel/1.0)'}
 
 ASSETS = {
@@ -85,41 +83,38 @@ def fetch_article(url):
         return ''
 
 
-def investor_view(news):
-    """نظر کلی سرمایه‌گذاران به فارسی از روی مقالات مرتبط (با مدل زبانی). بدون کلید = None."""
-    if not LLM_KEY:
-        return None
-    rel = []
-    for n in news:
-        text = (n.get('headline', '') + ' ' + n.get('summary', '')).lower()
-        if n.get('url') and any(w in text for kws in ASSETS.values() for w in kws):
-            rel.append(n)
-    rel = rel[:8]
-    if not rel:
-        return None
-    parts = []
-    for n in rel:
+def investor_points(news, per_asset=2):
+    """جملات مرتبط و جهت‌دار از متن مقاله‌ها (بدون مدل زبانی)، ترجمه‌شده به فارسی."""
+    points = {k: [] for k in ASSETS}
+    for n in news[:40]:
+        head = n.get('headline', '')
+        text = (head + ' ' + n.get('summary', '')).lower()
+        if not n.get('url') or not any(w in text for kws in ASSETS.values() for w in kws):
+            continue
         body = fetch_article(n['url']) or n.get('summary', '')
-        if body:
-            parts.append(f"عنوان: {n.get('headline', '')}\nمتن: {body}")
-    if not parts:
-        return None
-    prompt = ("مقالات زیر مربوط به یک هفته‌ی اخیر اقتصاد و بازارهای کالایی‌اند. "
-              "به فارسی و در ۵ تا ۷ خط کوتاه بنویس: نظر کلی سرمایه‌گذاران درباره‌ی طلا، نقره، مس، بیت‌کوین و نفت، "
-              "و درباره‌ی نرخ بهره و اقتصاد جهانی. هر خط با یک برچسب دارایی شروع شود و آخرش بنویس «مثبت»، «منفی» یا «خنثی». "
-              "فقط بر اساس همین متن‌ها بنویس و اگر مطلبی نبود، صریح بگو.\n\n" + "\n\n---\n\n".join(parts))
-    try:
-        r = requests.post('https://api.anthropic.com/v1/messages',
-                          headers={'x-api-key': LLM_KEY, 'anthropic-version': '2023-06-01',
-                                   'content-type': 'application/json'},
-                          json={'model': LLM_MODEL, 'max_tokens': 700,
-                                'messages': [{'role': 'user', 'content': prompt}]},
-                          timeout=90)
-        r.raise_for_status()
-        return ''.join(b.get('text', '') for b in r.json().get('content', [])).strip() or None
-    except Exception as e:
-        print(f'⚠️ مدل زبانی: {e}', file=sys.stderr)
-        return None
+        for sent in re.split(r'(?<=[.!?])\s+', body):
+            if not 40 <= len(sent) <= 280:
+                continue
+            sl = sent.lower()
+            sc = score(sent)
+            if sc == 0:
+                continue
+            for k, kws in ASSETS.items():
+                if any(w in sl for w in kws) and sent not in points[k]:
+                    points[k].append(sent)
+    lines = []
+    for k, sents in points.items():
+        shown = 0
+        for sent in sents:
+            if shown >= per_asset:
+                break
+            tr = fa(sent)
+            if not tr:
+                continue
+            label = 'مثبت' if score(sent) > 0 else 'منفی'
+            lines.append(f"• <b>{k}</b> ({label}): {html.escape(tr)}")
+            shown += 1
+    return lines
 
 
 def build_lines(prices, cls, news_count, view=None):
@@ -138,7 +133,7 @@ def build_lines(prices, cls, news_count, view=None):
         if tr:
             lines.append(f"   ↳ <i>{html.escape(tr)}</i>")
     if view:
-        lines += ['', '<b>🧠 نظر کلی سرمایه‌گذاران (از مقالات هفته)</b>', html.escape(view)]
+        lines += ['', '<b>🧠 نکات کلیدی از مقاله‌های هفته</b>'] + view
     lines += [''] + build_macro(prices)[1:]
     v = S.build_verdict(prices)
     if v:
@@ -169,7 +164,7 @@ def main():
         except Exception as e:
             print(f'⚠️ Finnhub: {e}', file=sys.stderr)
     cls = classify(news)
-    view = investor_view(news)
+    view = investor_points(news)
     prices = S.fetch_prices()
     import tempfile
     png = os.path.join(tempfile.mkdtemp(), 'table.png')
