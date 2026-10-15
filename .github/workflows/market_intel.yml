@@ -1,0 +1,39 @@
+name: 🧭 Market Intel (Finnhub)
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # هر روز 10:00 تهران
+  workflow_dispatch:
+    inputs:
+      token:
+        description: 'توکن ربات (اختیاری؛ خالی = secret)'
+        required: false
+        default: ''
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+      finnhub_key:
+        description: 'کلید Finnhub (اختیاری؛ خالی = secret FINNHUB_API_KEY)'
+        required: false
+        default: ''
+
+jobs:
+  intel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q yfinance pandas requests matplotlib deep-translator
+      - name: Send market intel
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+          FINNHUB_API_KEY: ${{ github.event.inputs.finnhub_key || secrets.FINNHUB_API_KEY }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          echo "::add-mask::$FINNHUB_API_KEY"
+          python3 market_intel/report.py
