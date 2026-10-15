@@ -1,0 +1,40 @@
+name: 📈 US Net Income Growth >10% (daily)
+
+on:
+  schedule:
+    - cron: '30 6 * * 1-5'  # ۱۰:۳۰ تهران، بعد از بسته‌شدن بازار
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+
+permissions:
+  contents: write
+
+jobs:
+  growth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q pandas requests matplotlib
+      - name: Scan and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/fund_growth.py
+      - name: Save history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Fundamentals Bot"
+          git add -f data/fundamentals || true
+          git diff --cached --quiet || (git commit -m "📈 fundamentals $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)
