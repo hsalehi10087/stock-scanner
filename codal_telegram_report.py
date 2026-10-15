@@ -145,18 +145,21 @@ class CodalTelegramReport:
         return msg
 
     def send_to_telegram(self, message: str) -> bool:
-        """ارسال به تلگرام"""
-        logger.info(f"🔍 توکن موجود: {bool(self.telegram_token)}")
-        logger.info(f"🔍 Chat ID موجود: {bool(self.telegram_chat_id)}")
-
+        """ارسال به یک یا چند چت (با کاما جدا شوند در TELEGRAM_CHAT_ID)"""
         if not self.telegram_token or not self.telegram_chat_id:
             logger.error("❌ توکن یا Chat ID موجود نیست")
             return False
+        chat_ids = [c.strip() for c in self.telegram_chat_id.split(',') if c.strip()]
+        results = [self._send_one(cid, message) for cid in chat_ids]
+        return all(results)
 
+    def _send_one(self, chat_id: str, message: str) -> bool:
+        """ارسال به یک چت مشخص"""
+        logger.info(f"📤 ارسال به Chat ID: {chat_id}")
         try:
             url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
             data = {
-                'chat_id': self.telegram_chat_id,
+                'chat_id': chat_id,
                 'text': message,
                 'parse_mode': 'HTML'
             }
