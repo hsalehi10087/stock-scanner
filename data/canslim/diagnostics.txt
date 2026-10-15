@@ -1,0 +1,11 @@
+universe us: 6949 (live)
+US: universe=6949 priced=6182 tech_cands=306 canslim=13 M=up (1202s)
+universe jp: 4447 (live)
+JP: universe=4447 priced=4293 tech_cands=201 canslim=0 M=pressure (753s)
+universe sse: 2320 (live)
+universe szse: 2906 (live)
+CN: universe=5226 priced=5178 tech_cands=119 canslim=0 M=down (746s)
+universe twse: 1089 (live)
+universe tpex: 887 (live)
+TW: universe=1976 priced=1970 tech_cands=121 canslim=14 M=up (346s)
+dry run: message not sent
