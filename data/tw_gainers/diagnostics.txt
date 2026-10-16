@@ -1,7 +1,7 @@
-openapi.twse.com.tw try1 200 len=774886
+openapi.twse.com.tw try1 200 len=774882
 twse_list: 1089
-ERR tpex_list: Response ended prematurely
-used cached universe_tpex.csv: 887 rows
-tickers=1976
-priced=1976 price_gainers=49
-qualified=10 (growth computed for 10 of 49)
+www.tpex.org.tw try3 200 len=4793898
+tpex_list: 886
+tickers=1975
+priced=1975 price_gainers=65
+qualified=11 (growth computed for 11 of 65)
