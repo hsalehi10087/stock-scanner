@@ -2,7 +2,7 @@ name: 🚀 US Gainers >10% (daily)
 
 on:
   schedule:
-    - cron: '30 6 * * 1-5'  # ۱۰:۳۰ به وقت تهران، بعد از بسته‌شدن بازار آمریکا
+    - cron: '30 1 * * *'  # هر روز ساعت ۵:۰۰ صبح تهران (۰۱:۳۰ UTC)
   workflow_dispatch:
     inputs:
       chat_id:

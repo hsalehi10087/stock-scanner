@@ -2,7 +2,7 @@ name: 🇯🇵 Tokyo Price+Earnings Growth (daily)
 
 on:
   schedule:
-    - cron: '0 8 * * 1-5'  # ۱۱:۳۰ تهران، بعد از بسته‌شدن بازار توکیو
+    - cron: '30 1 * * *'  # هر روز ساعت ۵:۰۰ صبح تهران (۰۱:۳۰ UTC)
   workflow_dispatch:
     inputs:
       chat_id:

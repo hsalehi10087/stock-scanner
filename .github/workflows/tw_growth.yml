@@ -2,7 +2,7 @@ name: 🇹🇼 Taiwan Price+Earnings Growth (daily)
 
 on:
   schedule:
-    - cron: '30 6 * * 1-5'  # ۱۰:۰۰ تهران، بعد از بسته‌شدن بازار تایوان
+    - cron: '30 1 * * *'  # هر روز ساعت ۵:۰۰ صبح تهران (۰۱:۳۰ UTC)
   workflow_dispatch:
     inputs:
       chat_id:
