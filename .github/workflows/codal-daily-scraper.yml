@@ -11,8 +11,10 @@ on:
         description: 'شناسه چت'
         required: false
         default: '75439320'
-  schedule:
-    - cron: '30 6 * * *'  # 10 AM Tehran = 6:30 UTC
+  # زمان‌بندی خودکار غیرفعال شد: این گردش‌کار روی سرور آمریکا به کدال دسترسی ندارد و قبلاً
+  # داده‌ی نمونه‌ی ساختگی می‌فرستاد. گزارش واقعی: iran/codal_daily.py (روی کامپیوتر داخل ایران).
+  # schedule:
+  #   - cron: '30 6 * * *'  # 10 AM Tehran = 6:30 UTC
 
 jobs:
   scrape-and-report:
