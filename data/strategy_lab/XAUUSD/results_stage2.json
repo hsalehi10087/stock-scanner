@@ -1,0 +1,280 @@
+{
+ "daily": {
+  "best_on_is": {
+   "n": 40,
+   "m": 10,
+   "atr_k": 2,
+   "vol_sized": true,
+   "is": {
+    "cagr": 3.83,
+    "sharpe": 0.64,
+    "max_dd": -12.14,
+    "trades": 34,
+    "exposure": 20.8
+   },
+   "oos": {
+    "cagr": 4.28,
+    "sharpe": 0.56,
+    "max_dd": -8.22,
+    "trades": 18,
+    "exposure": 27.8
+   }
+  },
+  "buy_hold": {
+   "is": {
+    "cagr": 4.2,
+    "sharpe": 0.33,
+    "max_dd": -44.36,
+    "trades": 1,
+    "exposure": 100.0
+   },
+   "oos": {
+    "cagr": 19.27,
+    "sharpe": 1.01,
+    "max_dd": -24.94,
+    "trades": 1,
+    "exposure": 100.0
+   }
+  },
+  "stability": {
+   "combos": 72,
+   "median_oos_sharpe": 0.52,
+   "share_oos_sharpe_gt_0_5": 51.4,
+   "share_oos_cagr_positive": 100.0
+  },
+  "sizing": {
+   "fixed_median_oos_dd": -16.18,
+   "sized_median_oos_dd": -10.91,
+   "fixed_median_oos_sharpe": 0.42,
+   "sized_median_oos_sharpe": 0.56
+  },
+  "walk_forward": {
+   "strategy": {
+    "cagr": 5.56,
+    "sharpe": 0.72,
+    "max_dd": -12.79,
+    "trades": 32,
+    "exposure": 34.9
+   },
+   "buy_hold": {
+    "cagr": 13.45,
+    "sharpe": 0.83,
+    "max_dd": -24.94,
+    "trades": 1,
+    "exposure": 100.0
+   },
+   "picks": [
+    {
+     "year": 2016,
+     "n": 30,
+     "m": 10,
+     "atr_k": 2,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 2.59,
+      "sharpe": 0.4,
+      "max_dd": -4.43,
+      "trades": 4,
+      "exposure": 30.4
+     }
+    },
+    {
+     "year": 2017,
+     "n": 30,
+     "m": 10,
+     "atr_k": 2,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": -1.01,
+      "sharpe": -0.18,
+      "max_dd": -5.89,
+      "trades": 6,
+      "exposure": 25.9
+     }
+    },
+    {
+     "year": 2018,
+     "n": 30,
+     "m": 10,
+     "atr_k": 2,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 1.23,
+      "sharpe": 0.31,
+      "max_dd": -5.55,
+      "trades": 4,
+      "exposure": 23.2
+     }
+    },
+    {
+     "year": 2019,
+     "n": 40,
+     "m": 10,
+     "atr_k": 0,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 13.96,
+      "sharpe": 1.7,
+      "max_dd": -3.55,
+      "trades": 3,
+      "exposure": 44.4
+     }
+    },
+    {
+     "year": 2020,
+     "n": 40,
+     "m": 10,
+     "atr_k": 3,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 11.07,
+      "sharpe": 1.09,
+      "max_dd": -7.89,
+      "trades": 3,
+      "exposure": 48.2
+     }
+    },
+    {
+     "year": 2021,
+     "n": 40,
+     "m": 10,
+     "atr_k": 3,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": -3.33,
+      "sharpe": -0.48,
+      "max_dd": -7.99,
+      "trades": 2,
+      "exposure": 15.9
+     }
+    },
+    {
+     "year": 2022,
+     "n": 40,
+     "m": 10,
+     "atr_k": 3,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 3.24,
+      "sharpe": 0.5,
+      "max_dd": -4.72,
+      "trades": 3,
+      "exposure": 23.1
+     }
+    },
+    {
+     "year": 2023,
+     "n": 40,
+     "m": 10,
+     "atr_k": 2,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": -2.44,
+      "sharpe": -0.4,
+      "max_dd": -6.43,
+      "trades": 4,
+      "exposure": 24.7
+     }
+    },
+    {
+     "year": 2024,
+     "n": 40,
+     "m": 10,
+     "atr_k": 2,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 7.35,
+      "sharpe": 0.88,
+      "max_dd": -8.22,
+      "trades": 4,
+      "exposure": 38.5
+     }
+    },
+    {
+     "year": 2025,
+     "n": 40,
+     "m": 20,
+     "atr_k": 0,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": 34.45,
+      "sharpe": 2.46,
+      "max_dd": -5.6,
+      "trades": 2,
+      "exposure": 71.0
+     }
+    },
+    {
+     "year": 2026,
+     "n": 40,
+     "m": 20,
+     "atr_k": 0,
+     "vol_sized": true,
+     "year_metrics": {
+      "cagr": -4.81,
+      "sharpe": -0.44,
+      "max_dd": -12.79,
+      "trades": 2,
+      "exposure": 39.7
+     }
+    }
+   ]
+  },
+  "now": {
+   "signal": 0.0,
+   "entry_level_close_above": 4755.0,
+   "exit_level_close_below": 4091.2,
+   "atr14": 83.75
+  },
+  "last_date": "2026-10-16"
+ },
+ "hourly": {
+  "bars": 13651,
+  "from": "2024-05-26 18:00:00-04:00",
+  "to": "2026-10-16 16:00:00-04:00",
+  "split_at": "2025-10-28 10:00:00-04:00",
+  "best_on_is": {
+   "n": 20,
+   "m": 20,
+   "atr_k": 3,
+   "vol_sized": false,
+   "is": {
+    "cagr": 27.89,
+    "sharpe": 2.13,
+    "max_dd": -11.58,
+    "trades": 101,
+    "exposure": 54.4
+   },
+   "oos": {
+    "cagr": 8.14,
+    "sharpe": 0.53,
+    "max_dd": -11.35,
+    "trades": 65,
+    "exposure": 45.2
+   }
+  },
+  "buy_hold": {
+   "is": {
+    "cagr": 44.42,
+    "sharpe": 2.24,
+    "max_dd": -10.98,
+    "trades": 1,
+    "exposure": 100.0
+   },
+   "oos": {
+    "cagr": 5.72,
+    "sharpe": 0.34,
+    "max_dd": -28.99,
+    "trades": 1,
+    "exposure": 100.0
+   }
+  },
+  "stability": {
+   "combos": 72,
+   "median_oos_sharpe": 0.29,
+   "share_oos_sharpe_gt_0_5": 34.7
+  }
+ },
+ "cost_per_side_pct": 0.03,
+ "target_vol": 0.12
+}
