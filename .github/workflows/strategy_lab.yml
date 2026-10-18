@@ -1,0 +1,37 @@
+name: 🧪 Strategy Lab (backtest, no Telegram)
+
+on:
+  workflow_dispatch:
+    inputs:
+      symbol:
+        description: 'Yahoo symbol'
+        required: false
+        default: 'GC=F'
+      name:
+        description: 'نام پوشه‌ی خروجی'
+        required: false
+        default: 'XAUUSD'
+
+permissions:
+  contents: write
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy
+      - run: python3 strategy_lab/lab.py "${{ github.event.inputs.symbol }}" "${{ github.event.inputs.name }}"
+      - name: Save results
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Strategy Lab Bot"
+          git add -f data/strategy_lab || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🧪 strategy lab ${{ github.event.inputs.name }}"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
