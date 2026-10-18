@@ -11,6 +11,10 @@ on:
         description: 'نام پوشه‌ی خروجی'
         required: false
         default: 'XAUUSD'
+      script:
+        description: 'lab یا lab2'
+        required: false
+        default: 'lab'
 
 permissions:
   contents: write
@@ -25,7 +29,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q yfinance pandas numpy
-      - run: python3 strategy_lab/lab.py "${{ github.event.inputs.symbol }}" "${{ github.event.inputs.name }}"
+      - run: python3 "strategy_lab/${{ github.event.inputs.script || 'lab' }}.py" "${{ github.event.inputs.symbol }}" "${{ github.event.inputs.name }}"
       - name: Save results
         if: always()
         run: |
