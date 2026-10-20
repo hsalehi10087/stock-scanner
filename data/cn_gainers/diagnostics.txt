@@ -1,7 +1,7 @@
-SSE type=1 try1 200 len=1724785
-SSE type=8 try1 200 len=631104
+SSE type=1 try1 200 len=1724737
+SSE type=8 try1 200 len=631092
 SZSE retry 1: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-SZSE xlsx 200 len=545407
+SZSE xlsx 200 len=545422
 tickers=5224
-priced=5222 price_gainers=156
-qualified=29 (growth computed for 34 of 156)
+priced=5222 price_gainers=125
+qualified=27 (growth computed for 32 of 125)
