@@ -15,6 +15,7 @@ import yfinance as yf
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'market_summary'))
 import summary as S  # noqa: E402
+import signal_tracker as T  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'gainers')
@@ -80,15 +81,16 @@ def render_png(rows, path):
     for r in rows:
         name = (r['name'] or '')
         name = name.split(' - ')[0].split(' Common')[0][:34]
-        cells.append([r['ticker'], name, f"${float(r['price']):,.2f}", f"+{float(r['chg']):.1f}%"])
-    heads = ['TICKER', 'COMPANY', 'PRICE', 'CHANGE']
-    fig, ax = plt.subplots(figsize=(9.5, 0.45 * (len(cells) + 1) + 0.4))
+        cells.append([r['ticker'], name[:28], f"${float(r['price']):,.2f}", f"+{float(r['chg']):.1f}%",
+                      f"{int(r.get('count', 1))}x", f"{float(r.get('ret', 0)):+.1f}%"])
+    heads = ['TICKER', 'COMPANY', 'PRICE', 'CHANGE', 'SIGNALS', 'SINCE 1ST']
+    fig, ax = plt.subplots(figsize=(11.5, 0.45 * (len(cells) + 1) + 0.4))
     ax.axis('off')
     t = ax.table(cellText=cells, colLabels=heads, loc='center', cellLoc='center')
     t.auto_set_font_size(False)
     t.set_fontsize(11)
     t.scale(1, 1.5)
-    widths = {0: 0.14, 1: 0.46, 2: 0.18, 3: 0.20}
+    widths = {0: 0.12, 1: 0.36, 2: 0.14, 3: 0.14, 4: 0.11, 5: 0.14}
     for (i, j), cell in t.get_celld().items():
         cell.set_width(widths[j])
         cell.set_edgecolor('#9ca3af')
@@ -101,6 +103,8 @@ def render_png(rows, path):
             cell.set_facecolor('#f3f4f6' if i % 2 else 'white')
             if j == 3:
                 txt.set_color('#15803d')
+            if j == 5:
+                txt.set_color('#15803d' if not txt.get_text().startswith('-') else '#b91c1c')
     fig.savefig(path, dpi=160, bbox_inches='tight', facecolor='white')
     plt.close(fig)
 
@@ -127,6 +131,20 @@ def main():
     os.makedirs(HIST_DIR, exist_ok=True)
     pd.DataFrame(rows).to_csv(os.path.join(HIST_DIR, f'{date}.csv'), index=False, encoding='utf-8')
 
+    # پیگیری: چند بار سیگنال شده و بازده از اولین سیگنال
+    state = T.load('gainers')
+    if state is None:
+        state = T.bootstrap('gainers', HIST_DIR, price_col='price')
+    for r in rows:
+        T.add(state, r['ticker'], date, date, r['price'])
+    T.save('gainers', state)
+    trk = {x['ticker']: x for x in T.returns(state, {s: d['price'] for s, d in prices.items()})}
+    for r in rows:
+        r['count'] = trk.get(r['ticker'], {}).get('count', 1)
+        r['ret'] = trk.get(r['ticker'], {}).get('ret', 0.0)
+    since = min((v['first_date'] for v in state.values()), default=date)
+    track_msg = T.summary_text('رشد قیمت بیش از ۱۰٪', list(trk.values()), since, 'بار')
+
     head = [f'<b>🚀 سهام آمریکا با رشد بیش از ۱۰٪</b> — {date}',
             f'<i>{len(rows)} سهم از {checked} سهم بررسی‌شده</i>']
     if rows:
@@ -143,6 +161,10 @@ def main():
         for cid in chat_ids:
             ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'parse_mode': 'HTML',
                                                             'text': '\n'.join(head) + '\nامروز سهمی بیش از ۱۰٪ رشد نکرد.'})
+    if track_msg:
+        for cid in chat_ids:
+            for part in S.chunks(track_msg.split('\n')):
+                ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'parse_mode': 'HTML', 'text': part})
     return 0 if ok else 2
 
 

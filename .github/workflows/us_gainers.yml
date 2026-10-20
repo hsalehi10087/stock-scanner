@@ -36,5 +36,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Gainers Bot"
-          git add -f data/gainers || true
+          git add -f data/gainers data/signal_tracker || true
           git diff --cached --quiet || (git commit -m "🚀 gainers $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)

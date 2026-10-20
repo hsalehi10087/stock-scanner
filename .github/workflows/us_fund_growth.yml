@@ -36,5 +36,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Fundamentals Bot"
-          git add -f data/fundamentals || true
+          git add -f data/fundamentals data/signal_tracker || true
           git diff --cached --quiet || (git commit -m "📈 fundamentals $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)

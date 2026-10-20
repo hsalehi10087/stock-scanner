@@ -16,6 +16,8 @@ import requests
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'market_summary'))
 import summary as S  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import signal_tracker as T  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fundamentals')
@@ -116,6 +118,26 @@ def _main():
     stamp = today.isoformat()
     pd.DataFrame(rows).to_csv(os.path.join(HIST_DIR, f'{stamp}.csv'), index=False, encoding='utf-8')
 
+    # پیگیری: چند فصل سیگنال شده و بازده از اولین سیگنال
+    track_msg = ''
+    try:
+        state = T.load('fundamentals')
+        if state is None:
+            state = T.bootstrap('fundamentals', HIST_DIR, event_col='period')
+        cur_px = T.last_prices(set(state) | {r['ticker'] for r in rows})
+        for r in rows:
+            T.add(state, r['ticker'], stamp, r['period'], cur_px.get(r['ticker']))
+        T.save('fundamentals', state)
+        trk = {x['ticker']: x for x in T.returns(state, cur_px)}
+        for r in rows:
+            r['count'] = trk.get(r['ticker'], {}).get('count', 1)
+            r['ret'] = trk.get(r['ticker'], {}).get('ret', 0.0)
+        since = min((v['first_date'] for v in state.values()), default=stamp)
+        track_msg = T.summary_text('رشد سود بیش از ۱۰٪', list(trk.values()), since, 'فصل')
+        DIAG.append(f'tracker: {len(state)} tracked, {len(trk)} priced')
+    except Exception as e:
+        DIAG.append(f'tracker error: {e!r}')
+
     head = [f'<b>📈 سهام آمریکا با رشد بیش از ۱۰٪ سود خالص</b> — {period}',
             f'<i>{len(rows)} شرکت از {checked} شرکت با داده‌ی مقایسه‌پذیر ({period} در برابر {prev_period})</i>',
             '<i>سود خالص فصل آخر گزارش‌شده نسبت به همان فصل سال قبل</i>']
@@ -134,6 +156,10 @@ def _main():
         with open(png, 'rb') as f:
             ok &= S.tg_post(token, cid, 'sendPhoto', data={'chat_id': cid, 'caption': '\n'.join(head) + more,
                                                           'parse_mode': 'HTML'}, files={'photo': f})
+    if track_msg:
+        for cid in chat_ids:
+            for part in S.chunks(track_msg.split('\n')):
+                ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'parse_mode': 'HTML', 'text': part})
     return 0 if ok else 2
 
 
@@ -141,16 +167,17 @@ def render_png(rows, path):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    cells = [[r['ticker'], r['name'].split(' Common')[0][:34], f"{r['prev_ni_musd']:,.1f}",
-              f"{r['cur_ni_musd']:,.1f}", f"+{r['growth']:.1f}%"] for r in rows]
-    heads = ['TICKER', 'COMPANY', 'PREV Q (M$)', 'LATEST Q (M$)', 'GROWTH']
-    fig, ax = plt.subplots(figsize=(10.5, 0.45 * (len(cells) + 1) + 0.4))
+    cells = [[r['ticker'], r['name'].split(' Common')[0][:28], f"{r['prev_ni_musd']:,.1f}",
+              f"{r['cur_ni_musd']:,.1f}", f"+{r['growth']:.1f}%", f"{int(r.get('count', 1))}Q",
+              f"{float(r.get('ret', 0)):+.1f}%"] for r in rows]
+    heads = ['TICKER', 'COMPANY', 'PREV Q (M$)', 'LATEST Q (M$)', 'GROWTH', 'SIGNALS', 'SINCE 1ST']
+    fig, ax = plt.subplots(figsize=(12.5, 0.45 * (len(cells) + 1) + 0.4))
     ax.axis('off')
     t = ax.table(cellText=cells, colLabels=heads, loc='center', cellLoc='center')
     t.auto_set_font_size(False)
     t.set_fontsize(10)
     t.scale(1, 1.5)
-    widths = {0: 0.12, 1: 0.38, 2: 0.15, 3: 0.18, 4: 0.17}
+    widths = {0: 0.10, 1: 0.30, 2: 0.13, 3: 0.14, 4: 0.13, 5: 0.10, 6: 0.12}
     for (i, j), cell in t.get_celld().items():
         cell.set_width(widths[j])
         cell.set_edgecolor('#9ca3af')
@@ -163,6 +190,8 @@ def render_png(rows, path):
             cell.set_facecolor('#f3f4f6' if i % 2 else 'white')
             if j == 4:
                 txt.set_color('#15803d')
+            if j == 6:
+                txt.set_color('#15803d' if not txt.get_text().startswith('-') else '#b91c1c')
     fig.savefig(path, dpi=160, bbox_inches='tight', facecolor='white')
     plt.close(fig)
 
