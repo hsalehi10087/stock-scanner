@@ -6,56 +6,59 @@
    "scored": 1488,
    "picks": [
     {
-     "ticker": "LQDA",
-     "name": "Liquidia Corporation",
-     "price": 38.86,
-     "prob": 0.98,
+     "ticker": "P",
+     "name": "Everpure",
+     "price": 130.93,
+     "prob": 0.865,
      "rank": 1,
-     "r6m": 4.9,
-     "from_hi": -57.3,
-     "volu_ratio": 2.68
+     "r6m": 88.8,
+     "from_hi": -16.6,
+     "volu_ratio": 1.13,
+     "passed": [
+      "صورت مالی",
+      "کن‌اسلیم"
+     ],
+     "health": "5/5",
+     "canslim": "5/7",
+     "buffett": "3/5"
     },
     {
-     "ticker": "FUN",
-     "name": "Six Flags",
-     "price": 7.07,
-     "prob": 0.962,
+     "ticker": "KLAC",
+     "name": "KLA Corporation",
+     "price": 163.43,
+     "prob": 0.858,
      "rank": 2,
-     "r6m": -63.1,
-     "from_hi": -73.6,
-     "volu_ratio": 1.91
+     "r6m": -9.6,
+     "from_hi": -45.8,
+     "volu_ratio": 0.83,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "4/5"
     },
     {
-     "ticker": "FMC",
-     "name": "FMC Corporation",
-     "price": 5.03,
-     "prob": 0.96,
+     "ticker": "QCOM",
+     "name": "Qualcomm",
+     "price": 177.96,
+     "prob": 0.855,
      "rank": 3,
-     "r6m": -65.2,
-     "from_hi": -83.1,
-     "volu_ratio": 1.72
-    },
-    {
-     "ticker": "ALHC",
-     "name": "Alignment Healthcare, Inc.",
-     "price": 8.44,
-     "prob": 0.943,
-     "rank": 4,
-     "r6m": -59.8,
-     "from_hi": -65.6,
-     "volu_ratio": 1.32
-    },
-    {
-     "ticker": "DFH",
-     "name": "Dream Finders Homes, Inc.",
-     "price": 9.02,
-     "prob": 0.932,
-     "rank": 5,
-     "r6m": -42.4,
-     "from_hi": -61.3,
-     "volu_ratio": 1.85
+     "r6m": 32.0,
+     "from_hi": -28.5,
+     "volu_ratio": 0.61,
+     "passed": [
+      "بافت"
+     ],
+     "health": "3/5",
+     "canslim": "3/7",
+     "buffett": "4/5"
     }
    ],
+   "checked": 40,
+   "dropped": 37,
+   "market_up": true,
    "median_prob": 0.38
   },
   "cn": {
@@ -63,228 +66,314 @@
    "scored": 1499,
    "picks": [
     {
-     "ticker": "301165.SZ",
-     "name": "RJWL",
-     "price": 77.59,
-     "prob": 0.732,
-     "rank": 1,
-     "r6m": 17.0,
-     "from_hi": -47.6,
-     "volu_ratio": 0.53
-    },
-    {
-     "ticker": "688141.SS",
-     "name": "JOULWATT TECHNOLOGY CO LTD",
-     "price": 72.87,
-     "prob": 0.726,
-     "rank": 2,
-     "r6m": 7.9,
-     "from_hi": -58.8,
-     "volu_ratio": 0.82
-    },
-    {
      "ticker": "605376.SS",
      "name": "JIANGSU BOQIAN NEW MATERIALS ST",
-     "price": 85.14,
-     "prob": 0.726,
-     "rank": 3,
-     "r6m": -20.2,
-     "from_hi": -69.5,
-     "volu_ratio": 0.81
-    },
-    {
-     "ticker": "688521.SS",
-     "name": "VERISILICON MICROELECTRONICS (S",
-     "price": 124.61,
-     "prob": 0.713,
-     "rank": 4,
-     "r6m": -51.0,
-     "from_hi": -66.4,
-     "volu_ratio": 0.85
+     "price": 85.42,
+     "prob": 0.734,
+     "rank": 1,
+     "r6m": -20.0,
+     "from_hi": -69.4,
+     "volu_ratio": 0.81,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "1/7",
+     "buffett": "2/5"
     },
     {
      "ticker": "002409.SZ",
      "name": "YOKE TECHNOLOGY",
-     "price": 93.8,
-     "prob": 0.712,
+     "price": 93.17,
+     "prob": 0.72,
+     "rank": 2,
+     "r6m": 8.8,
+     "from_hi": -60.4,
+     "volu_ratio": 0.46,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "1/7",
+     "buffett": "4/5"
+    },
+    {
+     "ticker": "300475.SZ",
+     "name": "SHANNON SEMI",
+     "price": 112.82,
+     "prob": 0.685,
+     "rank": 3,
+     "r6m": -26.7,
+     "from_hi": -63.1,
+     "volu_ratio": 0.62,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "3/7",
+     "buffett": "3/5"
+    },
+    {
+     "ticker": "300390.SZ",
+     "name": "THXN",
+     "price": 37.49,
+     "prob": 0.671,
+     "rank": 4,
+     "r6m": -51.3,
+     "from_hi": -67.3,
+     "volu_ratio": 0.5,
+     "passed": [
+      "بافت"
+     ],
+     "health": "3/5",
+     "canslim": "1/7",
+     "buffett": "4/5"
+    },
+    {
+     "ticker": "301200.SZ",
+     "name": "HAN'S CNC",
+     "price": 164.21,
+     "prob": 0.67,
      "rank": 5,
-     "r6m": 9.5,
-     "from_hi": -60.2,
-     "volu_ratio": 0.46
+     "r6m": -12.8,
+     "from_hi": -57.6,
+     "volu_ratio": 0.68,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "4/5"
     }
    ],
-   "median_prob": 0.313
+   "checked": 16,
+   "dropped": 11,
+   "market_up": false,
+   "median_prob": 0.314
   },
   "in": {
    "data_date": "2026-10-22",
    "scored": 705,
    "picks": [
     {
-     "ticker": "EMBDL.NS",
-     "name": "Embassy Developments Ltd.",
-     "price": 51.71,
-     "prob": 0.772,
+     "ticker": "MMTC.NS",
+     "name": "MMTC Ltd.",
+     "price": 52.25,
+     "prob": 0.663,
      "rank": 1,
-     "r6m": 8.4,
-     "from_hi": -45.1,
-     "volu_ratio": 0.68
+     "r6m": -20.1,
+     "from_hi": -31.3,
+     "volu_ratio": 0.7,
+     "passed": [
+      "بافت"
+     ],
+     "health": "2/5",
+     "canslim": "2/7",
+     "buffett": "4/5"
     },
     {
-     "ticker": "LXCHEM.NS",
-     "name": "Laxmi Organic Industries Ltd.",
-     "price": 154.85,
-     "prob": 0.763,
+     "ticker": "LOTUSDEV.NS",
+     "name": "SRI LOTUS DEVELOPERS AND REALTY Ltd.",
+     "price": 231.5,
+     "prob": 0.648,
      "rank": 2,
-     "r6m": 10.1,
-     "from_hi": -25.3,
-     "volu_ratio": 0.86
+     "r6m": 59.9,
+     "from_hi": -6.0,
+     "volu_ratio": 0.58,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "3/7",
+     "buffett": "4/5"
     },
     {
-     "ticker": "SHAREINDIA.NS",
-     "name": "Share India Securities Ltd.",
-     "price": 178.87,
-     "prob": 0.745,
+     "ticker": "MANYAVAR.NS",
+     "name": "Vedant Fashions Ltd.",
+     "price": 488.55,
+     "prob": 0.569,
      "rank": 3,
-     "r6m": 24.5,
-     "from_hi": -21.6,
-     "volu_ratio": 0.39
+     "r6m": 10.5,
+     "from_hi": -28.7,
+     "volu_ratio": 0.24,
+     "passed": [
+      "بافت"
+     ],
+     "health": "2/5",
+     "canslim": "0/7",
+     "buffett": "4/5"
     },
     {
-     "ticker": "LLOYDSENT.NS",
-     "name": "Lloyds Enterprises Ltd.",
-     "price": 64.59,
-     "prob": 0.731,
+     "ticker": "HEXT.NS",
+     "name": "Hexaware Technologies Ltd.",
+     "price": 600.0,
+     "prob": 0.567,
      "rank": 4,
-     "r6m": -1.9,
-     "from_hi": -22.6,
-     "volu_ratio": 1.1
-    },
-    {
-     "ticker": "EMIL.NS",
-     "name": "Electronics Mart India Ltd.",
-     "price": 158.56,
-     "prob": 0.728,
-     "rank": 5,
-     "r6m": 50.6,
-     "from_hi": -25.0,
-     "volu_ratio": 0.97
+     "r6m": 24.6,
+     "from_hi": -22.9,
+     "volu_ratio": 1.92,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "4/5"
     }
    ],
-   "median_prob": 0.196
+   "checked": 40,
+   "dropped": 36,
+   "market_up": false,
+   "median_prob": 0.194
   },
   "jp": {
    "data_date": "2026-10-22",
    "scored": 1499,
    "picks": [
     {
-     "ticker": "7318.T",
-     "name": "SERENDIP HOLDINGS CO LTD",
-     "price": 1115.0,
-     "prob": 0.847,
-     "rank": 1,
-     "r6m": -46.3,
-     "from_hi": -54.9,
-     "volu_ratio": 0.57
-    },
-    {
      "ticker": "3997.T",
      "name": "TRADE WORKS CO LTD",
-     "price": 375.0,
-     "prob": 0.846,
-     "rank": 2,
-     "r6m": -1.6,
-     "from_hi": -34.3,
-     "volu_ratio": 0.81
-    },
-    {
-     "ticker": "6619.T",
-     "name": "W-SCOPE CORPORATION",
-     "price": 118.0,
-     "prob": 0.841,
-     "rank": 3,
-     "r6m": -48.9,
-     "from_hi": -65.4,
-     "volu_ratio": 0.92
-    },
-    {
-     "ticker": "7779.T",
-     "name": "CYBERDYNE INC",
-     "price": 203.0,
-     "prob": 0.839,
-     "rank": 4,
-     "r6m": -29.8,
-     "from_hi": -48.5,
-     "volu_ratio": 0.53
+     "price": 372.0,
+     "prob": 0.843,
+     "rank": 1,
+     "r6m": -2.4,
+     "from_hi": -34.9,
+     "volu_ratio": 0.81,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "1/7",
+     "buffett": "2/5"
     },
     {
      "ticker": "6574.T",
      "name": "CONVANO INC",
      "price": 103.0,
      "prob": 0.831,
-     "rank": 5,
+     "rank": 2,
      "r6m": -5.5,
      "from_hi": -47.8,
-     "volu_ratio": 0.71
+     "volu_ratio": 0.71,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "1/5"
+    },
+    {
+     "ticker": "6356.T",
+     "name": "NIPPON GEAR CO LTD",
+     "price": 1108.0,
+     "prob": 0.809,
+     "rank": 3,
+     "r6m": -12.9,
+     "from_hi": -49.2,
+     "volu_ratio": 0.39,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "3/5"
+    },
+    {
+     "ticker": "5802.T",
+     "name": "SUMITOMO ELECTRIC INDUSTRIES",
+     "price": 1878.0,
+     "prob": 0.793,
+     "rank": 4,
+     "r6m": -20.7,
+     "from_hi": -45.7,
+     "volu_ratio": 0.87,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "4/7",
+     "buffett": "3/5"
+    },
+    {
+     "ticker": "3444.T",
+     "name": "KIKUCHI SEISAKUSHO CO LTD",
+     "price": 886.0,
+     "prob": 0.77,
+     "rank": 5,
+     "r6m": 5.0,
+     "from_hi": -47.0,
+     "volu_ratio": 0.37,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "1/5"
     }
    ],
-   "median_prob": 0.27
+   "checked": 35,
+   "dropped": 30,
+   "market_up": true,
+   "median_prob": 0.269
   },
   "tw": {
    "data_date": "2026-10-22",
-   "scored": 1200,
+   "scored": 1199,
    "picks": [
     {
-     "ticker": "1718.TW",
-     "name": "CHINA MANMADE FIBERS",
-     "price": 11.2,
-     "prob": 0.693,
+     "ticker": "6933.TW",
+     "name": "AMAX-KY",
+     "price": 378.0,
+     "prob": 0.613,
      "rank": 1,
-     "r6m": 63.7,
-     "from_hi": -26.3,
-     "volu_ratio": 1.01
+     "r6m": 104.2,
+     "from_hi": -16.3,
+     "volu_ratio": 2.79,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "3/5",
+     "canslim": "5/7",
+     "buffett": "2/5"
     },
     {
-     "ticker": "5321.TWO",
-     "name": "UNITED RECOMMEND INTERNATIONAL",
-     "price": 56.4,
-     "prob": 0.677,
+     "ticker": "2546.TW",
+     "name": "根基",
+     "price": 102.5,
+     "prob": 0.593,
      "rank": 2,
-     "r6m": 137.5,
-     "from_hi": -34.9,
-     "volu_ratio": 0.64
+     "r6m": 41.3,
+     "from_hi": -12.0,
+     "volu_ratio": 0.55,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "4/5",
+     "canslim": "5/7",
+     "buffett": "3/5"
     },
     {
-     "ticker": "3230.TWO",
-     "name": "JIIN MING INDUSTRY CO",
-     "price": 27.15,
-     "prob": 0.672,
+     "ticker": "6870.TWO",
+     "name": "騰雲",
+     "price": 346.0,
+     "prob": 0.588,
      "rank": 3,
-     "r6m": -33.2,
-     "from_hi": -51.0,
-     "volu_ratio": 0.74
-    },
-    {
-     "ticker": "6526.TW",
-     "name": "AIROHA TECHNOLOGY CORP",
-     "price": 778.0,
-     "prob": 0.658,
-     "rank": 4,
-     "r6m": 43.0,
-     "from_hi": -7.6,
-     "volu_ratio": 1.58
-    },
-    {
-     "ticker": "3346.TW",
-     "name": "LASTER TECH CORPORATION LTD",
-     "price": 21.0,
-     "prob": 0.656,
-     "rank": 5,
-     "r6m": 13.8,
-     "from_hi": -27.9,
-     "volu_ratio": 0.63
+     "r6m": 105.6,
+     "from_hi": 0.0,
+     "volu_ratio": 1.12,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "3/5",
+     "canslim": "5/7",
+     "buffett": "1/5"
     }
    ],
-   "median_prob": 0.38
+   "checked": 40,
+   "dropped": 37,
+   "market_up": true,
+   "median_prob": 0.381
   }
  }
 }

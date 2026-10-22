@@ -2,7 +2,7 @@
  "date": "2026-10-22",
  "markets": {
   "us": {
-   "picks_total": 5,
+   "picks_total": 3,
    "evaluated": 0,
    "avg_ret_pct": null,
    "avg_index_pct": null,
@@ -10,38 +10,24 @@
    "best": null,
    "items": [
     {
-     "ticker": "LQDA",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "DFH",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "ALHC",
+     "ticker": "P",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": -0.0,
      "index_ret_pct": 0.0
     },
     {
-     "ticker": "FMC",
+     "ticker": "QCOM",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
      "index_ret_pct": 0.0
     },
     {
-     "ticker": "FUN",
+     "ticker": "KLAC",
      "since": "2026-10-22",
      "days": 0,
-     "ret_pct": 0.0,
+     "ret_pct": -0.0,
      "index_ret_pct": 0.0
     }
    ]
@@ -55,17 +41,31 @@
    "best": null,
    "items": [
     {
-     "ticker": "002409.SZ",
+     "ticker": "301200.SZ",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
      "index_ret_pct": 0.0
     },
     {
-     "ticker": "688521.SS",
+     "ticker": "300390.SZ",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "300475.SZ",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "002409.SZ",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
      "index_ret_pct": 0.0
     },
     {
@@ -74,25 +74,11 @@
      "days": 0,
      "ret_pct": -0.0,
      "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "688141.SS",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "301165.SZ",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
     }
    ]
   },
   "in": {
-   "picks_total": 5,
+   "picks_total": 4,
    "evaluated": 0,
    "avg_ret_pct": null,
    "avg_index_pct": null,
@@ -100,39 +86,32 @@
    "best": null,
    "items": [
     {
-     "ticker": "EMIL.NS",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "LLOYDSENT.NS",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "SHAREINDIA.NS",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "EMBDL.NS",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "LXCHEM.NS",
+     "ticker": "HEXT.NS",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
-     "index_ret_pct": 0.0
+     "index_ret_pct": -0.0
+    },
+    {
+     "ticker": "MANYAVAR.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": -0.0
+    },
+    {
+     "ticker": "LOTUSDEV.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": -0.0
+    },
+    {
+     "ticker": "MMTC.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": -0.0
     }
    ]
   },
@@ -145,21 +124,28 @@
    "best": null,
    "items": [
     {
+     "ticker": "3444.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "5802.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "6356.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
      "ticker": "6574.T",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "7779.T",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "6619.T",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
@@ -171,18 +157,11 @@
      "days": 0,
      "ret_pct": 0.0,
      "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "7318.T",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": 0.0,
-     "index_ret_pct": 0.0
     }
    ]
   },
   "tw": {
-   "picks_total": 5,
+   "picks_total": 3,
    "evaluated": 0,
    "avg_ret_pct": null,
    "avg_index_pct": null,
@@ -190,35 +169,21 @@
    "best": null,
    "items": [
     {
-     "ticker": "3230.TWO",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "5321.TWO",
+     "ticker": "6933.TW",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
      "index_ret_pct": 0.0
     },
     {
-     "ticker": "1718.TW",
-     "since": "2026-10-22",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
-    },
-    {
-     "ticker": "6526.TW",
+     "ticker": "2546.TW",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
      "index_ret_pct": 0.0
     },
     {
-     "ticker": "3346.TW",
+     "ticker": "6870.TWO",
      "since": "2026-10-22",
      "days": 0,
      "ret_pct": 0.0,
