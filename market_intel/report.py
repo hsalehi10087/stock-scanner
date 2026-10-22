@@ -153,7 +153,7 @@ def analyst_section():
         return None
     if age > 1:
         return None
-    lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {v.get('articles_read', '؟')} خبر و تحلیل ۲۴ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
+    lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {str(v.get('articles_read', '؟')).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))} خبر و تحلیل ۲۴ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
     for key, label in AI_ASSETS:
         a = (v.get('assets') or {}).get(key)
         if not a:
