@@ -1,0 +1,17 @@
+2026-10-22 06:04 new=140 per_asset={'gold': 14, 'silver': 2, 'bitcoin': 52, 'copper': 7, 'oil': 43, 'rates': 47}
+200 finnhub/general n=100
+200 finnhub/forex n=1
+200 finnhub/crypto n=93
+403 fxstreet len=5483
+200 forexlive len=132832
+200 oilprice len=16055
+200 coindesk len=30641
+200 cointelegraph len=52814
+200 mining.com len=243370
+200 kitco len=233182
+ERR kitco ParseError('not well-formed (invalid token): line 3, column 42')
+200 investing-commodities len=4901
+200 investing-economy len=4605
+200 cnbc-markets len=20350
+200 marketwatch len=8560
+200 fed-press len=14813
