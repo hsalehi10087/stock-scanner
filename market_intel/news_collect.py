@@ -28,19 +28,23 @@ ASSETS = {
     'rates': r'\b(fed|fomc|powell|rate cut|rate hike|interest rates?|treasury yields?|bond yields?|inflation|cpi|ecb|boj)\b',
 }
 FEEDS = {
-    'fxstreet': 'https://www.fxstreet.com/rss/news',
     'forexlive': 'https://www.forexlive.com/feed/news',
     'oilprice': 'https://oilprice.com/rss/main',
     'coindesk': 'https://www.coindesk.com/arc/outboundfeeds/rss/',
     'cointelegraph': 'https://cointelegraph.com/rss',
     'mining.com': 'https://www.mining.com/feed/',
-    'kitco': 'https://www.kitco.com/news/rss',
     'investing-commodities': 'https://www.investing.com/rss/news_11.rss',
     'investing-economy': 'https://www.investing.com/rss/news_14.rss',
     'cnbc-markets': 'https://www.cnbc.com/id/20910258/device/rss/rss.html',
     'marketwatch': 'https://feeds.content.dowjones.io/public/rss/mw_topstories',
     'fed-press': 'https://www.federalreserve.gov/feeds/press_all.xml',
 }
+GQ = {'gold': 'gold price analysts forecast', 'silver': 'silver price analysts forecast',
+      'bitcoin': 'bitcoin price analysts forecast', 'copper': 'copper price analysts outlook',
+      'oil': 'oil price analysts forecast brent', 'rates': 'Fed interest rate outlook economists'}
+for _a, _q in GQ.items():
+    FEEDS[f'googlenews-{_a}'] = ('https://news.google.com/rss/search?q=' + _q.replace(' ', '+') +
+                                 '+when:2d&hl=en-US&gl=US&ceid=US:en')
 DIAG = []
 
 

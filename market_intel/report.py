@@ -3,7 +3,9 @@
 شمارش نظرات بر اساس کلیدواژه‌ی تیتر و خلاصه‌ی خبر است؛ نظر رسمی تحلیلگر نیست.
 متغیرهای لازم: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, FINNHUB_API_KEY (اختیاری؛ بدونش فقط قیمت‌ها می‌آید).
 """
+import datetime as dt
 import html
+import json
 import os
 import re
 import sys
@@ -133,7 +135,58 @@ def investor_points(news, per_asset=2):
     return lines
 
 
+VIEWS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'analyst_views', 'latest.json')
+AI_ASSETS = [('gold', '🥇 طلا'), ('silver', '🥈 نقره'), ('bitcoin', '₿ بیت‌کوین'), ('copper', '🟠 مس'),
+             ('oil', '🛢 نفت'), ('rates', '🏦 نرخ بهره')]
+STANCE = {'صعودی': '🟢', 'نزولی': '🔴', 'خنثی': '⚪', 'دوگانه': '🟡'}
+
+
+def analyst_section():
+    """نظر تحلیلگران که کار روزانه‌ی Claude از متن خبرها درک و خلاصه کرده (اگر تازه باشد)."""
+    try:
+        v = json.load(open(VIEWS, encoding='utf-8'))
+    except Exception:
+        return None
+    try:
+        age = (dt.datetime.now(dt.timezone.utc).date() - dt.date.fromisoformat(v['date'])).days
+    except Exception:
+        return None
+    if age > 1:
+        return None
+    lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {v.get('articles_read', '؟')} خبر و تحلیل ۲۴ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
+    for key, label in AI_ASSETS:
+        a = (v.get('assets') or {}).get(key)
+        if not a:
+            continue
+        st = a.get('stance', 'خنثی')
+        cnt = a.get('counts') or {}
+        lines.append(f"• <b>{label}</b> — {STANCE.get(st, '⚪')} {st} "
+                     f"(صعودی {cnt.get('bull', 0)}، نزولی {cnt.get('bear', 0)}، خنثی {cnt.get('neutral', 0)}): "
+                     f"{html.escape(a.get('summary_fa', ''))}")
+        for w in (a.get('views') or [])[:2]:
+            who = html.escape(w.get('who', ''))
+            url = w.get('url', '')
+            txt = html.escape(w.get('view_fa', ''))
+            lines.append(f'   ↳ <a href="{html.escape(url)}">{who}</a>: {txt}' if url else f'   ↳ {who}: {txt}')
+    if v.get('watch_fa'):
+        lines += ['', '<b>👀 مهم برای روزهای آینده:</b> ' + html.escape(v['watch_fa'])]
+    return lines
+
+
 def build_lines(prices, cls, news_count, view=None):
+    ai = analyst_section()
+    if ai:
+        lines = ['<b>🧭 گزارش هوشمند بازار</b>', ''] + ai
+        lines += [''] + build_macro(prices)[1:]
+        v = S.build_verdict(prices)
+        if v:
+            lines += ['', v]
+        lines += ['', '<i>⚠️ خلاصه‌ی نظر تحلیلگران از خبرهاست، نه توصیه‌ی سرمایه‌گذاری.</i>']
+        return lines
+    return build_lines_keywords(prices, cls, news_count, view)
+
+
+def build_lines_keywords(prices, cls, news_count, view=None):
     lines = ['<b>🧭 گزارش هوشمند بازار</b>',
              f'<i>بر اساس {news_count} خبر ۷ روز گذشته</i>', '']
     if news_count == 0:
@@ -181,7 +234,7 @@ def main():
         except Exception as e:
             print(f'⚠️ Finnhub: {e}', file=sys.stderr)
     cls = classify(news)
-    view = investor_points(news)
+    view = None if analyst_section() else investor_points(news)
     prices = S.fetch_prices()
     import tempfile
     png = os.path.join(tempfile.mkdtemp(), 'table.png')
