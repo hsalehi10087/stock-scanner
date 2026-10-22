@@ -160,8 +160,14 @@ def analyst_section():
             continue
         st = a.get('stance', 'خنثی')
         cnt = a.get('counts') or {}
-        lines.append(f"• <b>{label}</b> — {STANCE.get(st, '⚪')} {st} "
-                     f"(صعودی {cnt.get('bull', 0)}، نزولی {cnt.get('bear', 0)}، خنثی {cnt.get('neutral', 0)}): "
+        d = lambda x: str(x).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
+        if key == 'rates':
+            tag = {'صعودی': '🔺 احتمال افزایش نرخ', 'نزولی': '🔻 احتمال کاهش نرخ'}.get(st, '⚪ ثابت ماندن نرخ')
+            cnt_txt = f"افزایش {d(cnt.get('bull', 0))}، کاهش {d(cnt.get('bear', 0))}، ثابت {d(cnt.get('neutral', 0))}"
+        else:
+            tag = f"{STANCE.get(st, '⚪')} {st}"
+            cnt_txt = f"صعودی {d(cnt.get('bull', 0))}، نزولی {d(cnt.get('bear', 0))}، خنثی {d(cnt.get('neutral', 0))}"
+        lines.append(f"• <b>{label}</b> — {tag} ({cnt_txt}): "
                      f"{html.escape(a.get('summary_fa', ''))}")
         for w in (a.get('views') or [])[:2]:
             who = html.escape(w.get('who', ''))

@@ -1,0 +1,134 @@
+{
+ "date": "2026-10-22",
+ "articles_read": 328,
+ "method": "خواندن تیتر و خلاصه‌ی خبرها و تحلیل‌ها؛ فقط نظرهایی که منبع دارند",
+ "assets": {
+  "gold": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 4,
+    "bear": 5,
+    "neutral": 3
+   },
+   "summary_fa": "کوتاه‌مدت زیر فشار است، به‌خاطر بازدهی بالای اوراق و احتمال افزایش نرخ بهره. بانک‌ها برای بلندمدت هنوز صعودی‌اند.",
+   "views": [
+    {
+     "who": "CIBC",
+     "view_fa": "پیش‌بینی پایان ۲۰۲۶ را به ۴٬۵۰۰ دلار کم کرد، ولی برای ۲۰۲۷ برگشت به ۵٬۲۰۰ دلار را می‌بیند (خرید بانک‌های مرکزی).",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOajZTbWtYRkNIRkVvR0RzWHlPRjA0dmhybmVTVndycXR5Q2txZXBVZFp3QzhLWVpBV25ldUlOUk9XR3A1d28td3NEekczRzZRQzIzZDUwUVNHSUUwUXZNS08tU2RaaFAzc2VTWkRIWVdwOGJQNWNZZl9DLUhLbXgxblVpb1p2LTFOY1g1cWpHWWlLQW9rTVV0enhrMXkxN0ZPTmpBd0I1UW8wT3d4Vkx6YWtLWmlWRHM?oc=5"
+    },
+    {
+     "who": "FXStreet (۳ تحلیلگر)",
+     "view_fa": "دو نفر افت بیشتر را پیش‌بینی می‌کنند و یک نفر خرید فعلی را کم‌ریسک و پرسود می‌داند.",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOLTQyamtlbHFkejQ2OUxINVBidHNjNDAxaTVKOS1sMHptTVUxVmtRVk1yTlQtS2JzT3VzaENEU3l4MXB3dDBwdkFvcTd6d2FySjl1ZGpJWHktTGUzbF9wVEhmSm83T205cTNyUjlydUdDdGdMcEdnMzVvY25zajRxM0M3b3E5Sm52OFExdUhWS2NBalR6QkJHRkt2amhRQWJCckU0NEx0bnRZbnBSdmpSanNvclNTR1R4X3ZRbnNIQlhjbHdnT1dka2t1bFVmRTV3?oc=5"
+    }
+   ]
+  },
+  "silver": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 2,
+    "bear": 4,
+    "neutral": 3
+   },
+   "summary_fa": "بین ۵۵ تا ۶۰ دلار نوسان می‌کند. بالا رفتن بازدهی اوراق و تورم ناشی از نفت گران فشار آورده است.",
+   "views": [
+    {
+     "who": "FXStreet",
+     "view_fa": "برگشت قیمت شکست خورد و حمایت ۵۷ دلار در خطر است.",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdGRoUnBjYWt1eXVqNXd4TnpHb1prdVFxbWUzVE9hdG5QLVRKdmQ1eGNFVnBnV0Z4NkptN3ZVaE9icnBha09JbWd5ME92dTFYdUdOSlVkb1ZQMDhFV09pN3lIOWd5aUhOcjRPMjZMVno0ODZQQzB2RDhSaTdfTHVmZWdpUWxTNkFaTUplbXRSb2VMbVd4MlBWMkVrOXlidw?oc=5"
+    },
+    {
+     "who": "Exchange Rates UK",
+     "view_fa": "با وجود ریسک تقاضای صنعت خورشیدی، ۷۵ دلار را برای ۲۰۲۷ پیش‌بینی می‌کند.",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeUdfZjl0VEp3cU91SlM0dzBEVTlsVTFoZ3B2M3ppaVByMUVzYXhQWHFLN05kMDExSnNlLVJ6cWE0cXU2WHpLTHl5OVRNN3NWR2x3Z1duWEF3UjZuRWExRjlncXFGRFZSNjc1Skh1UVhaXzRQYXJIZjlSOU1wUVhwS0FBTGI0ajkwTXVkallTVU9CTGpPTzhJZWFJMnBTN1NfMkItYk5mbWxvUXB4UzBMNXhIV0RiNS1Od2pmTjVZSGhmcTBidnNKMWxIX1pEdw?oc=5"
+    }
+   ]
+  },
+  "bitcoin": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 3,
+    "bear": 4,
+    "neutral": 2
+   },
+   "summary_fa": "ورود پول به صندوق‌های ETF قوی است، ولی محدوده‌ی ۸۷٬۷۰۰ دلار (قیمت خرید خریداران سقف قبلی) جلوی رشد را گرفته است.",
+   "views": [
+    {
+     "who": "Glassnode",
+     "view_fa": "خریداران اواخر ۲۰۲۵ نزدیک ۸۷٬۷۰۰ دلار می‌فروشند و این سطح کلیدی است.",
+     "url": "https://cointelegraph.com/markets/bitcoin-top-buyers-halt-btc-price-upside-with-877k-now-key-glassnode?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+    },
+    {
+     "who": "JPMorgan",
+     "view_fa": "برای ده سال آینده بازده سالانه حدود ۱۰٪ پیش‌بینی می‌کند؛ بیشتر از سهام، اوراق و طلا.",
+     "url": "https://www.coindesk.com/markets/2026/10/20/jpmorgan-sees-10-annual-bitcoin-returns-topping-stocks-bonds-and-gold-over-next-decade"
+    }
+   ]
+  },
+  "copper": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 5,
+    "bear": 2,
+    "neutral": 2
+   },
+   "summary_fa": "بانک‌ها به‌خاطر کمبود ساختاری معدن دیدشان را بالا برده‌اند. افزایش موجودی انبارهای آمریکا فشار کوتاه‌مدت است.",
+   "views": [
+    {
+     "who": "Goldman Sachs",
+     "view_fa": "چشم‌انداز صعودی برای مس.",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZTJ0bHVDOUJNVkhIT0s3NlJhWGxxS0lza0FISkJONFFWT2tpYmEteVAwTWZiNHVNWE04aDhjb3REcGhXN0MxRWtwVE9DemJJMkdKQ216MXR2OFJQSVdIR3dUSWZUcWZqWmh1LWpDdGsyRmFFdFJydHZ6M3l0aUUtQXg0VWJpMVNvUk41Vnd5RE5TRHBZT0RqaHZlNl8tVVVjeGJrX3pNMzVRcW12NUZvUTdLdnNLVGtkYWR4QWVqOGFWcnRBZmZ2MXFOWTNPbXFO?oc=5"
+    },
+    {
+     "who": "Standard Chartered",
+     "view_fa": "پیش‌بینی مس را بالا برد و پیش‌بینی آلومینیوم را پایین آورد.",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQWZnMHM3cEMtUHlScGlCV3hYSmpiRVRrd2Z4aVFFUkJFa2ZsTnVSaG5oTXZpcHppRFNxay1yWm11QTNSanhTVnNndXZKeGtpZXI2dDQ1aWstOEhHc1RNOTlidmR5X2FiYzlCVHhVN3NmU2tRUlQzeXF3SHpNYkVteEpHWGMtVzQ3VldnQVd1SFNmUmdxZ1RhMVJ6OHhHRzlQdzM1VGZpMWZkVnpqblZ5WVhzQWM?oc=5"
+    }
+   ]
+  },
+  "oil": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 5,
+    "bear": 3,
+    "neutral": 3
+   },
+   "summary_fa": "برنت بالای ۱۱۱ دلار است، به‌خاطر حمله‌های حوثی‌ها به عربستان و تنش در تنگه‌ی هرمز. خطر افت تقاضا و توافق احتمالی، فشار نزولی است.",
+   "views": [
+    {
+     "who": "Goldman Sachs",
+     "view_fa": "هزینه‌ی حمل نفت هفت برابر شده و به بیش از ۲۰ دلار در هر بشکه رسیده است؛ هشدار شوک قیمتی تازه.",
+     "url": "https://www.bloomberg.com/news/articles/2026-10-21/goldman-sachs-says-war-spurs-sevenfold-jump-in-oil-freight-rates"
+    },
+    {
+     "who": "MarketWatch",
+     "view_fa": "جریان نفت از خلیج فارس تقریباً به قبل از جنگ برگشته، ولی قیمت‌ها احتمالاً زود پایین نمی‌آیند.",
+     "url": "https://www.marketwatch.com/story/oil-is-now-flowing-out-of-the-persian-gulf-like-before-the-iran-war-why-prices-may-still-not-come-down-anytime-soon-56df2f48?mod=mw_rss_topstories"
+    }
+   ]
+  },
+  "rates": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 4,
+    "bear": 0,
+    "neutral": 2
+   },
+   "summary_fa": "بیشتر انتظار دارند فدرال رزرو در اکتبر نرخ را ثابت نگه دارد، ولی تورم تولیدکننده‌ی داغ احتمال افزایش دوباره را زنده نگه داشته است.",
+   "views": [
+    {
+     "who": "CNBC (اقتصاددانان)",
+     "view_fa": "تورم تولیدکننده نشان می‌دهد کار فدرال رزرو تمام نشده؛ خطر افزایش نرخ در جلسه‌ی آینده واقعی است.",
+     "url": "https://www.cnbc.com/2026/10/15/pce-ppi-september-fed-reserve-rate-hike.html"
+    },
+    {
+     "who": "CNBC (تحلیل)",
+     "view_fa": "همه انتظار ثابت ماندن نرخ را دارند، ولی کوین وارش ممکن است غافلگیر کند.",
+     "url": "https://www.cnbc.com/2026/10/16/kevin-warsh-fed-october-rate-hike-interest-rates-markets.html"
+    }
+   ]
+  }
+ },
+ "watch_fa": "جلسه‌ی آینده‌ی فدرال رزرو، تنش‌های خاورمیانه و تنگه‌ی هرمز (برای نفت)، و داده‌ی تورم آمریکا."
+}
