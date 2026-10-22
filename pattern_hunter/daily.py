@@ -75,7 +75,7 @@ def main():
                 continue
             nm = names.get(t, '')
             if m in ('cn', 'jp', 'tw') or not nm:
-                nm = en_name(t) or nm
+                nm = en_name(t)   # فقط نام انگلیسی؛ بدون حروف چینی و ژاپنی
             price = round(float(C[t].dropna().iloc[-1]), 3)
             lst.append({'ticker': t, 'name': nm, 'price': price, 'prob': round(float(r.p), 3), 'rank': len(lst) + 1,
                         'r6m': round(float(r.r6m) * 100, 1), 'from_hi': round(float(r.from_hi) * 100, 1),

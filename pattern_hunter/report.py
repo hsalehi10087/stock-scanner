@@ -1,6 +1,7 @@
 """الگویاب — گزارش روزانه به تلگرام: پیشنهادهای امروز هر بازار، سنجش گذشته‌ی الگو، و نتیجه‌ی پیشنهادهای قبلی."""
 import datetime as dt
 import html
+import re
 import json
 import os
 import sys
@@ -33,12 +34,13 @@ def main():
             prof = json.load(open(os.path.join(OUT, f'profile_{m}.json'), encoding='utf-8'))
         except Exception:
             pass
-        L.append(f"{FLAG[m]} <b>{cfg['fa']}</b> (از {fa(d['scored'])} سهم؛ {fa(d.get('checked', 0))} نامزد الگو از صافی بنیادی گذشتند، "
-                 f"{fa(d.get('dropped', 0))} حذف شدند)")
+        L.append(f"{FLAG[m]} <b>{cfg['fa']}</b> (از {fa(d['scored'])} سهم؛ {fa(d.get('checked', 0))} نامزد الگو بررسی بنیادی شد، "
+                 f"{fa(d.get('dropped', 0))} حذف شد)")
         if not d['picks']:
             L.append('امروز هیچ نامزد الگو با صورت مالی، کن‌اسلیم یا روش بافت همخوانی نداشت.')
         for p in d['picks']:
-            nm = f" — {e(p['name'])}" if p.get('name') else ''
+            clean = re.sub(r'[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]', '', p.get('name') or '').strip(' -,')
+            nm = f" — {e(clean)}" if clean else ''
             ok = '، '.join(p.get('passed', []))
             L.append(f"{fa(p['rank'])}. <b>{e(p['ticker'])}</b>{nm} | قیمت {fa(p['price'])} | امتیاز الگو {fa(round(p['prob'] * 100))}")
             L.append(f"   ✅ {ok} | صورت مالی {fa(p.get('health', '?'))}، کن‌اسلیم {fa(p.get('canslim', '?'))}، بافت {fa(p.get('buffett', '?'))}")
