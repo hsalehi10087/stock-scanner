@@ -1,0 +1,10 @@
+id: 6e5773fb3d-nq-15min-orb
+name: NQ 15-minute opening range breakout
+name_fa: شکست محدوده‌ی ۱۵ دقیقه‌ی اول بازار روی نزدک آتی (NQ)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xcdlfd/the_nq_opening_range_breakout_that_lost_99_from/
+claim: "«همان قانون شکست محدوده‌ی ۱۵ دقیقه‌ی اول روی NQ از ۲۰۱۶ تا ۲۰۲۰ ‎-۹۸.۸٪ داد و از ژانویه ۲۰۲۲ تا مارس ۲۰۲۶ ‎+۳۱۵.۸٪ (۵۸٪ برد، ضریب سود ۱.۱۹، بیشترین افت ۵۹٪)»"
+claimed_return: "+315.8%"
+added: 2026-10-22
+status: not_testable
+reason_not_testable: "روی کندل ۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم"
