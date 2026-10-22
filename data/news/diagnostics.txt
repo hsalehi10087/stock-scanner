@@ -1,4 +1,4 @@
-2026-10-22 06:05 new=188 per_asset={'gold': 43, 'silver': 25, 'bitcoin': 35, 'copper': 19, 'oil': 59, 'rates': 49}
+2026-10-22 06:19 new=46 per_asset={'gold': 1, 'silver': 0, 'bitcoin': 0, 'copper': 3, 'oil': 1, 'ai': 40, 'rates': 2}
 200 finnhub/general n=100
 200 finnhub/forex n=1
 200 finnhub/crypto n=93
@@ -8,13 +8,17 @@
 200 cointelegraph len=52814
 200 mining.com len=243370
 200 investing-commodities len=4901
-200 investing-economy len=4605
+200 investing-economy len=4601
 200 cnbc-markets len=20350
 200 marketwatch len=8560
 200 fed-press len=14813
-200 googlenews-gold len=59776
-200 googlenews-silver len=59915
+200 googlenews-gold len=61394
+200 googlenews-silver len=56911
 200 googlenews-bitcoin len=70137
-200 googlenews-copper len=68159
-200 googlenews-oil len=76648
-200 googlenews-rates len=73846
+200 googlenews-copper len=70776
+200 googlenews-oil len=36393
+200 googlenews-rates len=73182
+200 googlenews-ai len=63905
+200 googlenews-ai-small len=104225
+200 googlenews-ai-infra len=53439
+200 googlenews-ai-chips len=58699
