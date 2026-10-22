@@ -1,0 +1,10 @@
+id: 6ff5ad075b-spx-0dte-credit-spreads
+name: SPX 0DTE credit spreads
+name_fa: اسپرد اعتباری همان‌روزه SPX
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xc5ylx/spx_0dte_credit_spreads_patience_on_the_put_side/
+claim: "«+۴۳۵ دلار در یک روز با اسپرد اعتباری 0DTE»"
+claimed_return: "+$435/day"
+added: 2026-10-22
+status: not_testable
+reason_not_testable: "آپشن همان‌روزه به داده‌ی دقیقه‌ای آپشن نیاز دارد؛ پژوهش‌ها زیان میانگین معامله‌گران خرد را نشان می‌دهند"

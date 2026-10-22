@@ -1,0 +1,34 @@
+name: 🧪 Strategy Hunter — test methods
+
+on:
+  push:
+    paths: ['strategy_hunter/specs/**', 'strategy_hunter/engine.py']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hunter-data
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy pyyaml
+      - run: python3 strategy_hunter/evaluate.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Strategy Hunter"
+          git add -f data/strategy_hunter || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🧪 hunter results $(date -u +%F_%H%M)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done

@@ -1,0 +1,10 @@
+id: f7e1f24aa0-claude-renko-pnf-crypto
+name: Renko + Point&Figure crypto (1-min)
+name_fa: رنکو و نقطه‌ونمودار کریپتو
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xbq5rb/using_claude_to_trade_crypto/
+claim: "ورود روی الگوی تله‌ی خرسی در نمودار یک‌دقیقه‌ای"
+claimed_return: "-"
+added: 2026-10-22
+status: not_testable
+reason_not_testable: "کندل یک‌دقیقه‌ای و قضاوت تصویری الگو؛ قانون عددی ثابت ندارد"

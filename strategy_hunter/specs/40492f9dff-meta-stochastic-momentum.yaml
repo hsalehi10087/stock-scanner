@@ -1,0 +1,23 @@
+id: 40492f9dff-meta-stochastic-momentum
+name: META stochastic momentum (Medium claim 420%)
+name_fa: مومنتوم استوکاستیک روی META
+source: medium/backtesting
+source_url: https://medium.com/@bubble_analytics/meta-platforms-meta-backtested-investment-strategy-stochastic-momentum-index-fc40ecb0b884
+claim: "۱۰۰ هزار دلار به ۵۲۰ هزار دلار در معامله‌ی META با شاخص مومنتوم استوکاستیک"
+claimed_return: "+420%"
+added: 2026-10-22
+status: implemented
+asset_class: stock
+symbols: [META]
+timeframe: 1d
+start: '2013-01-01'
+notes: >-
+  جزئیات دقیق قانون در خلاصه‌ی پست نیامده؛ نسخه‌ی استاندارد پیاده شد: خرید وقتی استوکاستیک ۱۴ روزه از ۲۰ به بالا
+  عبور کند، فروش وقتی از ۸۰ به پایین برگردد. هشدار: انتخاب META بعد از رشد بزرگش سوگیری انتخاب دارد.
+indicators:
+  stoch: {fn: stoch_k, n: 14}
+  stoch_prev: {fn: prev, col: stoch, k: 1}
+entry: stoch > 20 and stoch_prev <= 20
+exit: stoch < 80 and stoch_prev >= 80
+side: long
+max_hold_bars: 60

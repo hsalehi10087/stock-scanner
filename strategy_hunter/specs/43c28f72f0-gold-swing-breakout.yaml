@@ -1,0 +1,25 @@
+id: 43c28f72f0-gold-swing-breakout
+name: Gold swing breakout (Gold Reaper rebuild, daily engine)
+name_fa: شکست سقف نوسانی طلا (بازسازی Gold Reaper)
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xbjo8j/i_studied_how_gold_reaper_trades_gold_for_weeks/
+claim: "بازسازی ربات پولی محبوب طلا؛ خرید با شکست سقف نوسانی شکسته‌نشده، با حد ضرر و حد سود ثابت"
+claimed_return: "EA پولی محبوب"
+added: 2026-10-22
+status: implemented
+asset_class: etf
+symbols: [GC=F]
+timeframe: 1d
+start: '2010-01-01'
+notes: >-
+  فقط موتورِ روزانه آزموده می‌شود (موتورهای ساعتی به داده‌ی ۱ ساعته‌ی بیش از ۲ سال نیاز دارند).
+  سفارش stop بالای سقف با «بسته‌شدن بالای سقف ۱۰ روزه و خرید در بازگشایی بعد» تقریب زده شده.
+  حد ضرر ۲٪ و حد سود ۴٪ (نسبت ۱ به ۲)، حداکثر ۲۰ روز نگه‌داری.
+indicators:
+  swing_high: {fn: highest, n: 10, col: high}
+entry: close > swing_high
+exit: ''
+side: long
+stop_loss_pct: 0.02
+take_profit_pct: 0.04
+max_hold_bars: 20
