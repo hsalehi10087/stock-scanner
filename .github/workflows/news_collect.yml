@@ -1,0 +1,38 @@
+name: 📰 Market news collector (gold, silver, BTC, copper, oil, rates)
+
+on:
+  schedule:
+    - cron: '40 */4 * * *'   # هر ۴ ساعت
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests
+      - env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: |
+          echo "::add-mask::$FINNHUB_API_KEY"
+          python3 market_intel/news_collect.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "News Collector"
+          git add -A -f data/news || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "📰 news $(date -u +%F_%H%M)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
