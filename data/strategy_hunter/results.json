@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T06:00:58+00:00",
+ "updated": "2026-10-22T14:00:29+00:00",
  "results": {
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
@@ -16,41 +16,41 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 11.5,
-    "sharpe": 0.53,
+    "cagr": 10.88,
+    "sharpe": 0.51,
     "max_dd": -66.12,
-    "total": 347.94
+    "total": 315.27
    },
    "in_sample": {
-    "cagr": 8.22,
-    "sharpe": 0.43,
+    "cagr": 7.85,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 114.34
+    "total": 107.42
    },
    "out_sample": {
-    "cagr": 18.33,
-    "sharpe": 0.7,
+    "cagr": 17.82,
+    "sharpe": 0.68,
     "max_dd": -42.23,
-    "total": 100.57
+    "total": 96.98
    },
    "buyhold_full": {
-    "cagr": 26.37,
-    "sharpe": 0.8,
+    "cagr": 25.82,
+    "sharpe": 0.79,
     "max_dd": -76.74,
-    "total": 2415.0
+    "total": 2270.56
    },
    "buyhold_out_sample": {
-    "cagr": 41.26,
-    "sharpe": 1.03,
+    "cagr": 40.69,
+    "sharpe": 1.02,
     "max_dd": -47.44,
-    "total": 317.23
+    "total": 310.28
    },
    "trades": 94,
    "win_rate": 71.3,
-   "avg_trade_pct": 2.0,
+   "avg_trade_pct": 1.99,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-21",
-   "oos_start": "2022-08-26",
+   "period": "2013-01-02 → 2026-10-22",
+   "oos_start": "2022-08-29",
    "forward_days": 0,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
@@ -88,16 +88,16 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 8.04,
-    "sharpe": 0.54,
+    "cagr": 8.02,
+    "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 265.63
+    "total": 264.7
    },
    "buyhold_out_sample": {
-    "cagr": 18.19,
+    "cagr": 18.13,
     "sharpe": 0.97,
     "max_dd": -24.94,
-    "total": 131.96
+    "total": 131.37
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -108,6 +108,34 @@
    "forward_days": 0,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
+  },
+  "47be355ba2-1432-backtests-winner": {
+   "name": "Winner of 1,432 backtests (Medium)",
+   "name_fa": "برنده‌ی ۱۴۳۲ بک‌تست (مقاله‌ی مدیوم)",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/bulls-bears-brainpower/i-ran-1-432-backtests-the-winner-beat-buy-and-hold-can-we-trust-it-126abaae6756",
+   "claim": "«برنده ۱۱.۵٪ در سال با افت ۲۱.۱٪ ساخت و از خرید و نگه‌داری بهتر بود؛ آمار می‌گوید امیدوارکننده است، نه اثبات‌شده»",
+   "claimed_return": "11.5%/yr",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست",
+   "verdict": "غیرقابل آزمون: در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست"
+  },
+  "6e5773fb3d-nq-15min-orb": {
+   "name": "NQ 15-minute opening range breakout",
+   "name_fa": "شکست محدوده‌ی ۱۵ دقیقه‌ی اول بازار روی نزدک آتی (NQ)",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xcdlfd/the_nq_opening_range_breakout_that_lost_99_from/",
+   "claim": "«همان قانون شکست محدوده‌ی ۱۵ دقیقه‌ی اول روی NQ از ۲۰۱۶ تا ۲۰۲۰ ‎-۹۸.۸٪ داد و از ژانویه ۲۰۲۲ تا مارس ۲۰۲۶ ‎+۳۱۵.۸٪ (۵۸٪ برد، ضریب سود ۱.۱۹، بیشترین افت ۵۹٪)»",
+   "claimed_return": "+315.8%",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم"
   },
   "6ff5ad075b-spx-0dte-credit-spreads": {
    "name": "SPX 0DTE credit spreads",
