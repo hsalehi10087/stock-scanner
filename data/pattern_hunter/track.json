@@ -1,0 +1,230 @@
+{
+ "date": "2026-10-22",
+ "markets": {
+  "us": {
+   "picks_total": 5,
+   "evaluated": 0,
+   "avg_ret_pct": null,
+   "avg_index_pct": null,
+   "beat_index_pct": null,
+   "best": null,
+   "items": [
+    {
+     "ticker": "LQDA",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "DFH",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "ALHC",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "FMC",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "FUN",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    }
+   ]
+  },
+  "cn": {
+   "picks_total": 5,
+   "evaluated": 0,
+   "avg_ret_pct": null,
+   "avg_index_pct": null,
+   "beat_index_pct": null,
+   "best": null,
+   "items": [
+    {
+     "ticker": "002409.SZ",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "688521.SS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "605376.SS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "688141.SS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "301165.SZ",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    }
+   ]
+  },
+  "in": {
+   "picks_total": 5,
+   "evaluated": 0,
+   "avg_ret_pct": null,
+   "avg_index_pct": null,
+   "beat_index_pct": null,
+   "best": null,
+   "items": [
+    {
+     "ticker": "EMIL.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "LLOYDSENT.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "SHAREINDIA.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "EMBDL.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "LXCHEM.NS",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    }
+   ]
+  },
+  "jp": {
+   "picks_total": 5,
+   "evaluated": 0,
+   "avg_ret_pct": null,
+   "avg_index_pct": null,
+   "beat_index_pct": null,
+   "best": null,
+   "items": [
+    {
+     "ticker": "6574.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "7779.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "6619.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "3997.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "7318.T",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    }
+   ]
+  },
+  "tw": {
+   "picks_total": 5,
+   "evaluated": 0,
+   "avg_ret_pct": null,
+   "avg_index_pct": null,
+   "beat_index_pct": null,
+   "best": null,
+   "items": [
+    {
+     "ticker": "3230.TWO",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "5321.TWO",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "1718.TW",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": -0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "6526.TW",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    },
+    {
+     "ticker": "3346.TW",
+     "since": "2026-10-22",
+     "days": 0,
+     "ret_pct": 0.0,
+     "index_ret_pct": 0.0
+    }
+   ]
+  }
+ }
+}
