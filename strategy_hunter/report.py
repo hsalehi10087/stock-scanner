@@ -79,21 +79,26 @@ def main():
     tested = [r for r in rows if r.get('out_sample')]
     passed = [r for r in tested if r.get('verdict') == 'قبول']
 
-    l1 = f'🔎 <b>شکارچی روش</b> — {fa(today)}: {fa(new_claims)} ادعای تازه پیدا شد و {fa(len(fresh))} روش امروز آزموده شد.'
-    if fresh:
-        l2 = '🧪 امروز: ' + '؛ '.join(f"{r.get('name_fa') or r.get('name')} ← {r.get('verdict', '')}" for r in fresh[:3])
-    else:
-        l2 = '🧪 امروز روش تازه‌ی قابل آزمونی نبود.'
+    tested_new = [r for r in fresh if r.get('out_sample')]
+    l1 = (f"🔎 <b>شکارچی روش</b> — {fa(str(today).replace('-', '/'))}: {fa(new_claims)} ادعای تازه پیدا شد؛ "
+          f"{fa(len(fresh))} مورد بررسی شد ({fa(len(tested_new))} آزموده، {fa(len(fresh) - len(tested_new))} غیرقابل آزمون).")
+
+    def short(r):
+        v = r.get('verdict', '')
+        return '✅ قبول' if v == 'قبول' else '❌ ' + v.replace('رد: ', '')
+    l2 = ('🧪 نتیجه‌ی امروز: ' + '؛ '.join(f"{r.get('name_fa') or r.get('name')} {short(r)}" for r in tested_new[:3])
+          if tested_new else '🧪 امروز ادعای تازه‌ای با قانون عددی قابل آزمون نبود.')
     if passed:
         b = passed[0]
-        l3 = (f"🏆 بهترین: {b.get('name_fa') or b.get('name')} — سالانه {pct(b['out_sample']['cagr'])} در آزمون، "
+        l3 = (f"🏆 بهترین روش: {b.get('name_fa') or b.get('name')} — سالانه {pct(b['out_sample']['cagr'])}، "
               f"ریزش {pct(b['out_sample']['max_dd'])}؛ ۱٬۰۰۰ دلار زنده ← {fa(round(b['forward_usd']))} دلار")
     else:
         l3 = '🏆 هنوز هیچ روشی آزمون واقعی را قبول نشده است.'
     if tested:
-        brag = max(tested, key=lambda r: (r.get('out_sample') or {}).get('cagr', -999))
-        l4 = (f"📊 جمع: {fa(len(tested))} روش آزموده، {fa(len(passed))} قبول، {fa(len(tested) - len(passed))} رد. "
-              f"«{brag.get('name_fa') or brag.get('name')}» ادعای {brag.get('claimed_return') or '؟'} داشت؛ واقعی {pct(brag['out_sample']['cagr'])} در سال.")
+        ex = max(tested, key=lambda r: (r.get('full') or {}).get('total', -999))
+        l4 = (f"📊 جدول: {fa(len(tested))} آزموده، {fa(len(passed))} قبول | نمونه: «{ex.get('name_fa') or ex.get('name')}» "
+              f"ادعا {ex.get('claimed_return') or '؟'}، واقعی {pct(ex['full']['total'])} کل دوره، "
+              f"نگه‌داشتن ساده {pct(ex['buyhold_full']['total'])}.")
     else:
         l4 = '📊 هنوز روشی در جدول نیست.'
     l5 = '👉 تصمیم با شماست: برای اجرای یک روش قبول‌شده در حساب آزمایشی، اسمش را در گفتگو بنویسید.'
