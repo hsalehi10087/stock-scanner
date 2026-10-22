@@ -13,8 +13,10 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import FEATURES, MARKETS, OUT, download, features, log  # noqa: E402
+import fundamentals as FU  # noqa: E402
 
-TOP = 5
+TOP = 5          # حداکثر سهم ارسالی در هر بازار
+POOL = 40        # چند نامزد برتر الگو، به ترتیب، از صافی بنیادی می‌گذرند
 HIST = os.path.join(OUT, 'history.csv')
 
 
@@ -33,6 +35,7 @@ def main():
     today = str(dt.date.today())
     hist = pd.read_csv(HIST) if os.path.exists(HIST) else pd.DataFrame(
         columns=['date', 'market', 'ticker', 'name', 'price', 'prob', 'rank', 'index_price'])
+    hist = hist[hist.date != today]   # اجرای دوباره در همان روز، پیشنهادهای امروز را جایگزین می‌کند
     picks, prices_now = {}, {}
     for m, cfg in MARKETS.items():
         mp = os.path.join(OUT, f'model_{m}.joblib')
@@ -57,18 +60,30 @@ def main():
                 rows[t] = f[FEATURES]
         X = pd.DataFrame(rows).T.astype(float)
         X['p'] = clf.predict_proba(X[FEATURES])[:, 1]
-        best = X.nlargest(TOP, 'p')
-        lst = []
-        for rank, (t, r) in enumerate(best.iterrows(), 1):
+        mkt_up = bool(idx.dropna().iloc[-1] > idx.dropna().rolling(200).mean().iloc[-1])
+        lst, dropped, checked = [], [], []
+        for t, r in X.nlargest(POOL, 'p').iterrows():
+            if len(lst) >= TOP:
+                break
+            try:
+                fu = FU.check(t, {'from_hi': float(r.from_hi), 'rs6m': float(r.rs6m), 'volu_ratio': float(r.volu_ratio)}, mkt_up)
+            except Exception as ex:
+                fu = {'passed': [], 'health': '?', 'canslim': '?', 'buffett': '?', 'error': repr(ex)[:80]}
+            checked.append({'ticker': t, 'prob': round(float(r.p), 3), **{k: fu.get(k) for k in ('passed', 'health', 'canslim', 'buffett')}})
+            if not fu['passed']:
+                dropped.append(t)
+                continue
             nm = names.get(t, '')
             if m in ('cn', 'jp', 'tw') or not nm:
                 nm = en_name(t) or nm
-            lst.append({'ticker': t, 'name': nm, 'price': round(float(C[t].dropna().iloc[-1]), 3), 'prob': round(float(r.p), 3),
-                        'rank': rank, 'r6m': round(float(r.r6m) * 100, 1), 'from_hi': round(float(r.from_hi) * 100, 1),
-                        'volu_ratio': round(float(r.volu_ratio), 2)})
-            hist.loc[len(hist)] = [today, m, t, nm, round(float(C[t].dropna().iloc[-1]), 4), round(float(r.p), 4), rank,
-                                   round(float(idx.dropna().iloc[-1]), 4)]
-        picks[m] = {'data_date': str(last_day.date()), 'scored': int(len(X)), 'picks': lst,
+            price = round(float(C[t].dropna().iloc[-1]), 3)
+            lst.append({'ticker': t, 'name': nm, 'price': price, 'prob': round(float(r.p), 3), 'rank': len(lst) + 1,
+                        'r6m': round(float(r.r6m) * 100, 1), 'from_hi': round(float(r.from_hi) * 100, 1),
+                        'volu_ratio': round(float(r.volu_ratio), 2), 'passed': fu['passed'], 'health': fu['health'],
+                        'canslim': fu['canslim'], 'buffett': fu['buffett']})
+            hist.loc[len(hist)] = [today, m, t, nm, price, round(float(r.p), 4), len(lst), round(float(idx.dropna().iloc[-1]), 4)]
+        picks[m] = {'data_date': str(last_day.date()), 'scored': int(len(X)), 'picks': lst, 'checked': len(checked),
+                    'dropped': len(dropped), 'market_up': mkt_up,
                     'median_prob': round(float(X.p.median()), 3)}
         prices_now[m] = ({t: float(C[t].dropna().iloc[-1]) for t in C.columns if C[t].notna().any()},
                          float(idx.dropna().iloc[-1]))
@@ -92,6 +107,10 @@ def main():
                     'beat_index_pct': round(float(np.mean([x['ret_pct'] > (x['index_ret_pct'] or 0) for x in old])) * 100, 0) if old else None,
                     'best': max(old, key=lambda x: x['ret_pct']) if old else None,
                     'items': sorted(res, key=lambda x: x['since'])}
+    with open(os.path.join(OUT, 'fundamental_checks.jsonl'), 'a', encoding='utf-8') as fh:
+        for m, v in picks.items():
+            fh.write(json.dumps({'date': today, 'market': m, 'checked': v.get('checked'), 'dropped': v.get('dropped')},
+                                ensure_ascii=False) + '\n')
     json.dump({'date': today, 'markets': picks}, open(os.path.join(OUT, 'today.json'), 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)
     json.dump({'date': today, 'markets': track}, open(os.path.join(OUT, 'track.json'), 'w', encoding='utf-8'),

@@ -22,7 +22,7 @@ def main():
     track = json.load(open(os.path.join(OUT, 'track.json'), encoding='utf-8'))['markets']
     e = html.escape
     L = [f"<b>🔍 الگویاب</b> — {fa(today['date'].replace('-', '/'))}",
-         '<i>سهم‌هایی که امروز بیشترین شباهت را به الگوی «قبل از دو برابر شدن در ۱۲ ماه» دارند (الگو از ۱۰ سال گذشته)</i>', '']
+         '<i>سهم‌هایی که هم به الگوی «قبل از دو برابر شدن در ۱۲ ماه» (۱۰ سال گذشته) شبیه‌اند و هم دست‌کم با یکی از روش‌های صورت مالی سالم، کن‌اسلیم یا وارن بافت همخوانی دارند</i>', '']
     weekly = dt.date.today().weekday() == 5   # شنبه‌ها: توضیح الگو
     for m, cfg in MARKETS.items():
         d = today['markets'].get(m)
@@ -33,11 +33,15 @@ def main():
             prof = json.load(open(os.path.join(OUT, f'profile_{m}.json'), encoding='utf-8'))
         except Exception:
             pass
-        L.append(f"{FLAG[m]} <b>{cfg['fa']}</b> (از {fa(d['scored'])} سهم، داده‌ی {fa(d['data_date'].replace('-', '/'))})")
+        L.append(f"{FLAG[m]} <b>{cfg['fa']}</b> (از {fa(d['scored'])} سهم؛ {fa(d.get('checked', 0))} نامزد الگو از صافی بنیادی گذشتند، "
+                 f"{fa(d.get('dropped', 0))} حذف شدند)")
+        if not d['picks']:
+            L.append('امروز هیچ نامزد الگو با صورت مالی، کن‌اسلیم یا روش بافت همخوانی نداشت.')
         for p in d['picks']:
             nm = f" — {e(p['name'])}" if p.get('name') else ''
-            L.append(f"{fa(p['rank'])}. <b>{e(p['ticker'])}</b>{nm} | قیمت {fa(p['price'])} | امتیاز الگو {fa(round(p['prob'] * 100))} "
-                     f"| ۶ ماه {pct(p['r6m'])}")
+            ok = '، '.join(p.get('passed', []))
+            L.append(f"{fa(p['rank'])}. <b>{e(p['ticker'])}</b>{nm} | قیمت {fa(p['price'])} | امتیاز الگو {fa(round(p['prob'] * 100))}")
+            L.append(f"   ✅ {ok} | صورت مالی {fa(p.get('health', '?'))}، کن‌اسلیم {fa(p.get('canslim', '?'))}، بافت {fa(p.get('buffett', '?'))}")
         o = prof.get('out_of_sample')
         if o:
             L.append(f"🧪 سنجش گذشته ({fa(o['period'].replace('-', '/'))}): از ۱۰ انتخاب هر هفته {fa(o['top10_hit_rate_pct'])}٪ "
