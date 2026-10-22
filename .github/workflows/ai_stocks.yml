@@ -1,0 +1,54 @@
+name: 🤖 AI stocks — metrics (07:10) and report (08:30 Tehran)
+
+on:
+  schedule:
+    - cron: '40 3 * * *'   # ۰۷:۱۰ تهران: داده‌ی بنیادی و قیمتی
+    - cron: '0 5 * * *'    # ۰۸:۳۰ تهران: ارسال گزارش (بعد از تحلیل روزانه‌ی Claude در ۰۷:۴۸)
+  workflow_dispatch:
+    inputs:
+      step:
+        description: 'metrics یا report'
+        required: false
+        default: 'metrics'
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-stocks
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests
+      - name: Metrics
+        if: github.event.schedule == '40 3 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'metrics')
+        run: python3 market_intel/ai_metrics.py
+      - name: Report
+        if: github.event.schedule == '0 5 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'report')
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/ai_report.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "AI Stocks Bot"
+          git add -f data/ai_stocks || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🤖 ai stocks $(date -u +%F_%H%M)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done

@@ -25,6 +25,7 @@ ASSETS = {
     'bitcoin': r'\b(bitcoin|btc|crypto(?:currency|currencies)?)\b',
     'copper': r'\b(copper)\b',
     'oil': r'\b(oil|crude|brent|wti|opec\+?)\b',
+    'ai': r'\b(artificial intelligence|a\.?i\.? (?:chips?|stocks?|models?|infrastructure|startups?|agents?|demand|spending|capex)|genai|generative ai|llms?|data ?cent(?:er|re)s?|gpus?|nvidia|openai|anthropic|hyperscalers?)\b',
     'rates': r'\b(fed|fomc|powell|rate cut|rate hike|interest rates?|treasury yields?|bond yields?|inflation|cpi|ecb|boj)\b',
 }
 FEEDS = {
@@ -41,7 +42,9 @@ FEEDS = {
 }
 GQ = {'gold': 'gold price analysts forecast', 'silver': 'silver price analysts forecast',
       'bitcoin': 'bitcoin price analysts forecast', 'copper': 'copper price analysts outlook',
-      'oil': 'oil price analysts forecast brent', 'rates': 'Fed interest rate outlook economists'}
+      'oil': 'oil price analysts forecast brent', 'rates': 'Fed interest rate outlook economists',
+      'ai': 'AI stock analyst upgrade price target', 'ai-small': 'AI small cap stock revenue growth',
+      'ai-infra': 'AI data center stock earnings guidance', 'ai-chips': 'AI chip stock outlook analysts'}
 for _a, _q in GQ.items():
     FEEDS[f'googlenews-{_a}'] = ('https://news.google.com/rss/search?q=' + _q.replace(' ', '+') +
                                  '+when:2d&hl=en-US&gl=US&ceid=US:en')
