@@ -19,10 +19,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'strategy_hunter')
 INBOX = os.path.join(OUT, 'inbox.jsonl')
 UA = {'User-Agent': 'strategy-hunter/1.0 (research; contact mahdi.salehi.sichani@gmail.com)'}
-SUBS = ['algotrading', 'Daytrading', 'Forex', 'options', 'thetagang', 'swingtrading', 'CryptoMarkets',
-        'BitcoinMarkets', 'StockMarket', 'quant', 'pennystocks', 'Trading']
+SUBS = ['algotrading', 'Daytrading', 'Forex', 'options', 'thetagang', 'swingtrading', 'CryptoMarkets', 'Trading']
 MEDIUM_TAGS = ['trading-strategy', 'algorithmic-trading', 'forex-trading', 'crypto-trading', 'options-trading',
                'day-trading', 'backtesting']
+MARKET = re.compile(r'\b(trad\w*|stocks?|forex|fx|crypto|bitcoin|btc|eth|options?|futures|spy|qqq|s&p|nasdaq|'
+                    r'portfolio|backtest\w*|scalp\w*|swing|day ?trad\w*|pips?|candles?)\b', re.I)
 STRAT = re.compile(r'\b(strateg\w*|setup|system|indicator|rsi|macd|ema|sma|moving average|breakout|bollinger|'
                    r'scalp\w*|grid|martingale|dca|wheel|iron condor|credit spread|covered call|mean reversion|'
                    r'momentum|backtest\w*|ichimoku|fibonacci|vwap|supertrend|orb|opening range)\b', re.I)
@@ -48,32 +49,56 @@ def clean(s):
 
 def score(title, text):
     t = f'{title} {text}'
+    if not MARKET.search(t):
+        return 0
     s = len(set(m.lower() for m in STRAT.findall(t)))
     c = len(CLAIM.findall(t))
     return (min(s, 4) + min(c, 4)) if s and c else 0
 
 
 def reddit():
+    """JSON از سرورهای GitHub مسدود است (403)؛ RSS با فاصله‌ی زمانی کار می‌کند ولی سقف درخواست دارد (429)."""
     out = []
+    ns = {'a': 'http://www.w3.org/2005/Atom'}
     for sub in SUBS:
-        r = get(f'https://www.reddit.com/r/{sub}/top.json', params={'t': 'day', 'limit': 50})
-        if r:
-            for c in r.json().get('data', {}).get('children', []):
-                d = c['data']
-                out.append(('reddit/' + sub, d.get('title', ''), d.get('selftext', ''),
-                            'https://www.reddit.com' + d.get('permalink', ''), d.get('score', 0)))
-        else:
-            r = get(f'https://www.reddit.com/r/{sub}/top/.rss', params={'t': 'day'})
+        r = None
+        for wait in (0, 20):
+            time.sleep(wait or 7)
+            r = get(f'https://www.reddit.com/r/{sub}/top/.rss', params={'t': 'day', 'limit': 25})
             if r:
-                try:
-                    ns = {'a': 'http://www.w3.org/2005/Atom'}
-                    for e in ET.fromstring(r.content).findall('a:entry', ns):
-                        link = e.find('a:link', ns).get('href')
-                        out.append(('reddit/' + sub, e.findtext('a:title', '', ns),
-                                    clean(e.findtext('a:content', '', ns)), link, 0))
-                except ET.ParseError:
-                    pass
-        time.sleep(1.5)
+                break
+        if not r:
+            continue
+        try:
+            for e in ET.fromstring(r.content).findall('a:entry', ns):
+                out.append(('reddit/' + sub, e.findtext('a:title', '', ns), clean(e.findtext('a:content', '', ns)),
+                            e.find('a:link', ns).get('href'), 0))
+        except ET.ParseError:
+            pass
+    return out
+
+
+def rss_sites():
+    """وبلاگ‌ها و فروم‌های معامله‌گری با RSS عمومی."""
+    feeds = {'quantifiedstrategies': 'https://www.quantifiedstrategies.com/feed/',
+             'quantpedia': 'https://quantpedia.com/feed/',
+             'babypips-forum': 'https://forums.babypips.com/latest.rss',
+             'elitetrader': 'https://www.elitetrader.com/et/forums/-/index.rss',
+             'tradingview-ideas': 'https://www.tradingview.com/feed/?sort=recent',
+             'robotwealth': 'https://robotwealth.com/feed/',
+             'forexfactory': 'https://www.forexfactory.com/rss.php'}
+    out = []
+    for name, url in feeds.items():
+        r = get(url)
+        if not r:
+            continue
+        try:
+            root = ET.fromstring(r.content)
+        except ET.ParseError:
+            continue
+        for it in root.iter('item'):
+            body = it.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or it.findtext('description') or ''
+            out.append((name, it.findtext('title', ''), clean(body)[:4000], it.findtext('link', ''), 0))
     return out
 
 
@@ -140,7 +165,7 @@ def main():
                 pass
     found = []
     counts = {}
-    for fn in (reddit, hackernews, stackexchange, medium, devto):
+    for fn in (reddit, rss_sites, hackernews, stackexchange, medium, devto):
         try:
             items = fn()
         except Exception as e:
