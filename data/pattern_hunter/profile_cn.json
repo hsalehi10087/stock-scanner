@@ -1,0 +1,185 @@
+{
+ "market": "cn",
+ "trained": "2026-10-22",
+ "stocks": 1500,
+ "decade_doublers": 547,
+ "decade_measured": 1499,
+ "decade_doublers_pct": 36.5,
+ "top_decade_gainers": {
+  "300604.SZ": 81.8,
+  "300502.SZ": 34.0,
+  "300620.SZ": 32.6,
+  "300857.SZ": 30.1,
+  "300308.SZ": 29.8,
+  "300394.SZ": 28.9,
+  "603186.SS": 26.5,
+  "300666.SZ": 26.0,
+  "300757.SZ": 25.4,
+  "002463.SZ": 25.2,
+  "002916.SZ": 24.6,
+  "001309.SZ": 23.3,
+  "002837.SZ": 22.5,
+  "300684.SZ": 22.5,
+  "002371.SZ": 20.6
+ },
+ "samples": 513506,
+ "winner_events": 48418,
+ "out_of_sample": {
+  "period": "2022-10-10 → 2025-09-30",
+  "base_rate_pct": 13.22,
+  "top10_hit_rate_pct": 22.12,
+  "lift": 1.67,
+  "top10_avg_fwd_12m_pct": 64.9,
+  "all_avg_fwd_12m_pct": 36.1,
+  "top10_median_fwd_12m_pct": 26.5,
+  "all_median_fwd_12m_pct": 13.4
+ },
+ "importance": [
+  [
+   "log_dollar_vol",
+   0.0342
+  ],
+  [
+   "dd12m",
+   0.0219
+  ],
+  [
+   "vol20",
+   0.0211
+  ],
+  [
+   "log_price",
+   0.0103
+  ],
+  [
+   "vol_ratio",
+   0.0083
+  ],
+  [
+   "from_lo",
+   0.0065
+  ],
+  [
+   "rs6m",
+   0.0058
+  ],
+  [
+   "above50",
+   0.0034
+  ],
+  [
+   "range_pos",
+   0.0022
+  ],
+  [
+   "from_hi",
+   0.0014
+  ],
+  [
+   "up_days_ratio",
+   0.001
+  ],
+  [
+   "r1m",
+   0.0003
+  ],
+  [
+   "r3m",
+   0.0003
+  ],
+  [
+   "volu_ratio",
+   0.0003
+  ],
+  [
+   "slope50",
+   -0.0003
+  ],
+  [
+   "above200",
+   -0.0004
+  ],
+  [
+   "r12m",
+   -0.001
+  ],
+  [
+   "r6m",
+   -0.0018
+  ]
+ ],
+ "profile": {
+  "r1m": {
+   "winners_median": 0.003,
+   "others_median": -0.0019
+  },
+  "r3m": {
+   "winners_median": 0.0026,
+   "others_median": -0.0068
+  },
+  "r6m": {
+   "winners_median": 0.044,
+   "others_median": -0.008
+  },
+  "r12m": {
+   "winners_median": 0.0338,
+   "others_median": -0.0058
+  },
+  "from_hi": {
+   "winners_median": -0.2378,
+   "others_median": -0.2462
+  },
+  "from_lo": {
+   "winners_median": 0.3969,
+   "others_median": 0.2822
+  },
+  "above50": {
+   "winners_median": -0.0005,
+   "others_median": -0.0047
+  },
+  "above200": {
+   "winners_median": 0.0241,
+   "others_median": -0.0114
+  },
+  "slope50": {
+   "winners_median": -0.0009,
+   "others_median": -0.0028
+  },
+  "vol20": {
+   "winners_median": 0.4259,
+   "others_median": 0.3792
+  },
+  "vol_ratio": {
+   "winners_median": 0.8788,
+   "others_median": 0.914
+  },
+  "volu_ratio": {
+   "winners_median": 0.9092,
+   "others_median": 0.9372
+  },
+  "dd12m": {
+   "winners_median": -0.4851,
+   "others_median": -0.4484
+  },
+  "log_price": {
+   "winners_median": 2.4766,
+   "others_median": 2.4318
+  },
+  "log_dollar_vol": {
+   "winners_median": 18.564,
+   "others_median": 18.7886
+  },
+  "rs6m": {
+   "winners_median": -0.0154,
+   "others_median": -0.0298
+  },
+  "up_days_ratio": {
+   "winners_median": 0.4762,
+   "others_median": 0.4762
+  },
+  "range_pos": {
+   "winners_median": 0.4602,
+   "others_median": 0.437
+  }
+ }
+}
