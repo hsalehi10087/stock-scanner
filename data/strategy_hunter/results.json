@@ -1,0 +1,169 @@
+{
+ "updated": "2026-10-22T06:00:58+00:00",
+ "results": {
+  "40492f9dff-meta-stochastic-momentum": {
+   "name": "META stochastic momentum (Medium claim 420%)",
+   "name_fa": "مومنتوم استوکاستیک روی META",
+   "source": "medium/backtesting",
+   "source_url": "https://medium.com/@bubble_analytics/meta-platforms-meta-backtested-investment-strategy-stochastic-momentum-index-fc40ecb0b884",
+   "claim": "۱۰۰ هزار دلار به ۵۲۰ هزار دلار در معامله‌ی META با شاخص مومنتوم استوکاستیک",
+   "claimed_return": "+420%",
+   "asset_class": "stock",
+   "symbols": [
+    "META"
+   ],
+   "added": "2026-10-22",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 11.5,
+    "sharpe": 0.53,
+    "max_dd": -66.12,
+    "total": 347.94
+   },
+   "in_sample": {
+    "cagr": 8.22,
+    "sharpe": 0.43,
+    "max_dd": -49.5,
+    "total": 114.34
+   },
+   "out_sample": {
+    "cagr": 18.33,
+    "sharpe": 0.7,
+    "max_dd": -42.23,
+    "total": 100.57
+   },
+   "buyhold_full": {
+    "cagr": 26.37,
+    "sharpe": 0.8,
+    "max_dd": -76.74,
+    "total": 2415.0
+   },
+   "buyhold_out_sample": {
+    "cagr": 41.26,
+    "sharpe": 1.03,
+    "max_dd": -47.44,
+    "total": 317.23
+   },
+   "trades": 94,
+   "win_rate": 71.3,
+   "avg_trade_pct": 2.0,
+   "exposure": 0.46,
+   "period": "2013-01-02 → 2026-10-21",
+   "oos_start": "2022-08-26",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
+  },
+  "43c28f72f0-gold-swing-breakout": {
+   "name": "Gold swing breakout (Gold Reaper rebuild, daily engine)",
+   "name_fa": "شکست سقف نوسانی طلا (بازسازی Gold Reaper)",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xbjo8j/i_studied_how_gold_reaper_trades_gold_for_weeks/",
+   "claim": "بازسازی ربات پولی محبوب طلا؛ خرید با شکست سقف نوسانی شکسته‌نشده، با حد ضرر و حد سود ثابت",
+   "claimed_return": "EA پولی محبوب",
+   "asset_class": "etf",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-10-22",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 2.42,
+    "sharpe": 0.31,
+    "max_dd": -28.05,
+    "total": 49.32
+   },
+   "in_sample": {
+    "cagr": 1.07,
+    "sharpe": 0.17,
+    "max_dd": -28.05,
+    "total": 13.26
+   },
+   "out_sample": {
+    "cagr": 5.64,
+    "sharpe": 0.59,
+    "max_dd": -14.57,
+    "total": 31.84
+   },
+   "buyhold_full": {
+    "cagr": 8.04,
+    "sharpe": 0.54,
+    "max_dd": -44.36,
+    "total": 265.63
+   },
+   "buyhold_out_sample": {
+    "cagr": 18.19,
+    "sharpe": 0.97,
+    "max_dd": -24.94,
+    "total": 131.96
+   },
+   "trades": 186,
+   "win_rate": 40.9,
+   "avg_trade_pct": 0.26,
+   "exposure": 0.39,
+   "period": "2010-01-04 → 2026-10-22",
+   "oos_start": "2021-10-07",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
+  },
+  "6ff5ad075b-spx-0dte-credit-spreads": {
+   "name": "SPX 0DTE credit spreads",
+   "name_fa": "اسپرد اعتباری همان‌روزه SPX",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xc5ylx/spx_0dte_credit_spreads_patience_on_the_put_side/",
+   "claim": "«+۴۳۵ دلار در یک روز با اسپرد اعتباری 0DTE»",
+   "claimed_return": "+$435/day",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "آپشن همان‌روزه به داده‌ی دقیقه‌ای آپشن نیاز دارد؛ پژوهش‌ها زیان میانگین معامله‌گران خرد را نشان می‌دهند",
+   "verdict": "غیرقابل آزمون: آپشن همان‌روزه به داده‌ی دقیقه‌ای آپشن نیاز دارد؛ پژوهش‌ها زیان میانگین معامله‌گران خرد را نشان می‌دهند"
+  },
+  "700e496f15-fvg-vs-ifvg": {
+   "name": "FVG vs IFVG (5-15 min)",
+   "name_fa": "شکاف ارزش منصفانه (FVG)",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xbvt7d/fvg_vs_ifvg_which_is_better_i_backtested_both/",
+   "claim": "«ادعای ۸۳٪ برد در یوتیوب»؛ خود نویسنده با ۱۰ هزار آزمون نشان داد بهتر از ورود تصادفی نیست",
+   "claimed_return": "83% win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد"
+  },
+  "caf9306398-weekly-wheel-soxl-rddt": {
+   "name": "Weekly options wheel (RDDT, SOXL)",
+   "name_fa": "چرخه‌ی هفتگی آپشن (wheel)",
+   "source": "reddit/thetagang",
+   "source_url": "https://www.reddit.com/r/thetagang/comments/1xbtkvf/weekly_options_wheel_week_2_results/",
+   "claim": "«۲٬۰۷۲ دلار سود در یک هفته با فروش آپشن روی RDDT و SOXL»",
+   "claimed_return": "+2.9% در یک هفته",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است",
+   "verdict": "غیرقابل آزمون: نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است"
+  },
+  "f7e1f24aa0-claude-renko-pnf-crypto": {
+   "name": "Renko + Point&Figure crypto (1-min)",
+   "name_fa": "رنکو و نقطه‌ونمودار کریپتو",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xbq5rb/using_claude_to_trade_crypto/",
+   "claim": "ورود روی الگوی تله‌ی خرسی در نمودار یک‌دقیقه‌ای",
+   "claimed_return": "-",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-22",
+   "status": "not_testable",
+   "reason_not_testable": "کندل یک‌دقیقه‌ای و قضاوت تصویری الگو؛ قانون عددی ثابت ندارد",
+   "verdict": "غیرقابل آزمون: کندل یک‌دقیقه‌ای و قضاوت تصویری الگو؛ قانون عددی ثابت ندارد"
+  }
+ }
+}
