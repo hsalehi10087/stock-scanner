@@ -1,0 +1,46 @@
+name: 🔍 Pattern Hunter — daily picks and report (≈07:00 Tehran)
+
+on:
+  schedule:
+    - cron: '0 3 * * 2-6'   # ۰۶:۳۰ تهران، سه‌شنبه تا شنبه (بعد از جلسه‌های دوشنبه تا جمعه)
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pattern-daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy scikit-learn joblib requests matplotlib
+      - run: python3 pattern_hunter/daily.py
+      - name: Report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 pattern_hunter/report.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Pattern Hunter"
+          git add -f data/pattern_hunter || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🔍 pattern picks $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
