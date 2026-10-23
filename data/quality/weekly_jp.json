@@ -1,329 +1,370 @@
 {
  "market": "jp",
  "date": "2026-10-23",
- "scored": 2000,
- "universe": 3988,
+ "scored": 1991,
+ "no_data": 9,
+ "universe": 3609,
  "liquid": 2000,
  "distribution": {
-  "0": 2000,
-  "1": 0,
-  "2": 0,
-  "3": 0,
-  "4": 0,
-  "5": 0
+  "0": 230,
+  "1": 643,
+  "2": 649,
+  "3": 346,
+  "4": 110,
+  "5": 13
  },
  "top": [
   {
-   "ticker": "6857.T",
-   "name": "ADVANTEST CORPORATION",
+   "ticker": "9962.T",
+   "name": "MISUMI Group Inc.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
-    "dilution_pct": -1.1
+    "dilution_pct": -3.5,
+    "peg": 0.35
    }
   },
   {
-   "ticker": "9984.T",
-   "name": "SoftBank Group Corp.",
+   "ticker": "4503.T",
+   "name": "Astellas Pharma Inc.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
-    "dilution_pct": -0.9
+    "dilution_pct": 0.1,
+    "peg": 0.37
    }
   },
   {
-   "ticker": "6976.T",
-   "name": "TAIYO YUDEN CO.,LTD.",
+   "ticker": "4021.T",
+   "name": "Nissan Chemical Corporation",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.3
+    "dilution_pct": -1.6,
+    "peg": 0.67
    }
   },
   {
-   "ticker": "5803.T",
-   "name": "Fujikura Ltd.",
+   "ticker": "2371.T",
+   "name": "Kakaku.com,Inc.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": false,
-    "profit": null,
-    "momentum": null,
-    "analysts": null
-   },
-   "badges": {}
-  },
-  {
-   "ticker": "1570.T",
-   "name": "NEXT FUNDS Nikkei 225 Leveraged Index Ex",
-   "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
-   "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
-   },
-   "badges": {}
-  },
-  {
-   "ticker": "6981.T",
-   "name": "Murata Manufacturing Co.,Ltd.",
-   "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
-   "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
-    "dilution_pct": -2.3
+    "dilution_pct": 0.1,
+    "peg": 1.33
    }
   },
   {
-   "ticker": "6471.T",
-   "name": "NSK Ltd.",
+   "ticker": "6448.T",
+   "name": "BROTHER INDUSTRIES,LTD.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.7,
+    "peg": 3.17
+   }
+  },
+  {
+   "ticker": "7846.T",
+   "name": "PILOT CORPORATION",
+   "date": "2026-10-23",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -3.5
+   }
+  },
+  {
+   "ticker": "3964.T",
+   "name": "AUCNET INC.",
+   "date": "2026-10-23",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -5.1
+   }
+  },
+  {
+   "ticker": "2384.T",
+   "name": "SBS Holdings,Inc.",
+   "date": "2026-10-23",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "3091.T",
+   "name": "BRONCO BILLY Co.,LTD.",
+   "date": "2026-10-23",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
     "dilution_pct": 0.1
    }
   },
   {
-   "ticker": "4732.T",
-   "name": "USS Co.,Ltd.",
+   "ticker": "6570.T",
+   "name": "Kyowa Corporation",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
    "badges": {
-    "dilution_pct": -1.9
+    "dilution_pct": 0.3
    }
   },
   {
-   "ticker": "3445.T",
-   "name": "RS Technologies Co.,Ltd.",
+   "ticker": "6191.T",
+   "name": "AirTrip Corp.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": 0.2
+   }
   },
   {
-   "ticker": "1459.T",
-   "name": "Rakuten ETF - Nikkei 225 Double Inverse ",
+   "ticker": "6238.T",
+   "name": "FURYU CORPORATION",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": 0.0
+   }
   },
   {
-   "ticker": "7313.T",
-   "name": "TS TECH CO.,LTD.",
+   "ticker": "2820.T",
+   "name": "Yamami Company",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 5,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": -0.0
+   }
   },
   {
-   "ticker": "2986.T",
-   "name": "LA Holdings Co.,Ltd.",
+   "ticker": "9104.T",
+   "name": "Mitsui O.S.K.Lines,Ltd.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": -1.7,
+    "peg": 0.14
+   }
   },
   {
-   "ticker": "4290.T",
-   "name": "Prestige International Inc.",
+   "ticker": "6724.T",
+   "name": "SEIKO EPSON CORPORATION",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": false
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.17
+   }
   },
   {
-   "ticker": "9757.T",
-   "name": "Funai Soken Holdings Incorporated",
+   "ticker": "5020.T",
+   "name": "ENEOS Holdings,Inc.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": false,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.3
+   }
   },
   {
-   "ticker": "1934.T",
-   "name": "YURTEC CORPORATION",
+   "ticker": "5975.T",
+   "name": "Topre Corporation",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": -2.4,
+    "peg": 0.47
+   }
   },
   {
-   "ticker": "8337.T",
-   "name": "The Chiba Kogyo Bank,Ltd.",
+   "ticker": "7269.T",
+   "name": "SUZUKI MOTOR CORPORATION",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
+    "growth": true,
+    "cash": true,
+    "profit": true,
     "momentum": false,
-    "analysts": null
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.56
+   }
   },
   {
-   "ticker": "4765.T",
-   "name": "SBI Global Asset Management Co.,Ltd.",
+   "ticker": "4507.T",
+   "name": "Shionogi & Co.,Ltd.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
+    "growth": true,
+    "cash": true,
+    "profit": true,
     "momentum": false,
-    "analysts": null
+    "analysts": true
    },
-   "badges": {}
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.66
+   }
   },
   {
-   "ticker": "1301.T",
-   "name": "KYOKUYO CO.,LTD.",
+   "ticker": "9956.T",
+   "name": "VALOR HOLDINGS CO.,LTD.",
    "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
+    "growth": true,
+    "cash": true,
+    "profit": true,
     "momentum": false,
-    "analysts": null
+    "analysts": true
    },
-   "badges": {}
-  },
-  {
-   "ticker": "3472.T",
-   "name": "Nippon Hotel & Residential Investment Co",
-   "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
-   "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
-   },
-   "badges": {}
-  },
-  {
-   "ticker": "2216.T",
-   "name": "Kanro Inc.",
-   "date": "2026-10-23",
-   "score": 0,
-   "known": 1,
-   "flags": {
-    "growth": null,
-    "cash": null,
-    "profit": null,
-    "momentum": false,
-    "analysts": null
-   },
-   "badges": {}
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.8
+   }
   }
  ]
 }
