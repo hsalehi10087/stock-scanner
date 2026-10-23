@@ -84,10 +84,10 @@
  "jp": {
   "6857.T": {
    "date": "2026-10-23",
-   "score": 2,
-   "known": 4,
+   "score": 3,
+   "known": 5,
    "flags": {
-    "growth": null,
+    "growth": true,
     "cash": false,
     "profit": true,
     "momentum": false,
@@ -100,10 +100,10 @@
   },
   "7318.T": {
    "date": "2026-10-23",
-   "score": 3,
-   "known": 4,
+   "score": 4,
+   "known": 5,
    "flags": {
-    "growth": null,
+    "growth": true,
     "cash": true,
     "profit": true,
     "momentum": false,
@@ -111,6 +111,69 @@
    },
    "badges": {
     "dilution_pct": 0.6
+   }
+  },
+  "8035.T": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": false,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.7,
+    "peg": 1.46
+   }
+  },
+  "5802.T": {
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 4.18
+   }
+  },
+  "3997.T": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 13.3
+   }
+  },
+  "4063.T": {
+   "date": "2026-10-23",
+   "score": 1,
+   "known": 5,
+   "flags": {
+    "growth": false,
+    "cash": true,
+    "profit": false,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": -5.3,
+    "peg": 1.62
    }
   }
  },
