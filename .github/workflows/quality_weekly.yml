@@ -9,12 +9,17 @@ on:
         description: 'شناسه چت (none = بدون ارسال)'
         required: false
         default: ''
+      only_report:
+        description: 'true = فقط ارسال گزارش از داده‌ی موجود'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
 
 jobs:
   scan:
+    if: github.event.inputs.only_report != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
