@@ -3257,6 +3257,15 @@
 "first_price": 8.71,
 "last_date": "2026-10-15"
 },
+"FMCCT": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-23",
+"first_price": 12.19,
+"last_date": "2026-10-23"
+},
 "FMFG": {
 "count": 1,
 "events": [
@@ -4346,6 +4355,15 @@
 "first_price": 5.7,
 "last_date": "2026-10-15"
 },
+"IIPBP": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-23",
+"first_price": 24.3,
+"last_date": "2026-10-23"
+},
 "IIPR": {
 "count": 1,
 "events": [
@@ -4903,6 +4921,15 @@
 "first_date": "2026-10-15",
 "first_price": 0.035,
 "last_date": "2026-10-15"
+},
+"LESLQ": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-23",
+"first_price": 0.075,
+"last_date": "2026-10-23"
 },
 "LFUS": {
 "count": 1,
@@ -7325,6 +7352,15 @@
 "first_price": 5.97,
 "last_date": "2026-10-15"
 },
+"RWAYI": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-23",
+"first_price": 24.75,
+"last_date": "2026-10-23"
+},
 "RWAYL": {
 "count": 1,
 "events": [
@@ -7504,6 +7540,15 @@
 "first_date": "2026-10-15",
 "first_price": 27.5,
 "last_date": "2026-10-15"
+},
+"SENEM": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-23",
+"first_price": 178.0,
+"last_date": "2026-10-23"
 },
 "SEZL": {
 "count": 1,
