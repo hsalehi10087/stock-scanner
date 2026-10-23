@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T19:21:22+00:00",
+ "updated": "2026-10-23T13:54:01+00:00",
  "results": {
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
@@ -16,43 +16,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.81,
-    "sharpe": 0.51,
+    "cagr": 10.68,
+    "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 311.6
+    "total": 305.08
    },
    "in_sample": {
-    "cagr": 8.04,
-    "sharpe": 0.43,
+    "cagr": 7.79,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 110.88
+    "total": 106.28
    },
    "out_sample": {
-    "cagr": 17.09,
-    "sharpe": 0.66,
+    "cagr": 17.25,
+    "sharpe": 0.67,
     "max_dd": -42.23,
-    "total": 92.03
+    "total": 93.2
    },
    "buyhold_full": {
-    "cagr": 25.59,
-    "sharpe": 0.78,
+    "cagr": 25.64,
+    "sharpe": 0.79,
     "max_dd": -76.74,
-    "total": 2210.96
+    "total": 2225.06
    },
    "buyhold_out_sample": {
-    "cagr": 39.83,
-    "sharpe": 1.0,
+    "cagr": 39.99,
+    "sharpe": 1.01,
     "max_dd": -47.44,
-    "total": 299.97
+    "total": 302.41
    },
-   "trades": 94,
-   "win_rate": 71.3,
+   "trades": 93,
+   "win_rate": 71.0,
    "avg_trade_pct": 2.0,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-22",
+   "period": "2013-01-02 → 2026-10-23",
    "oos_start": "2022-08-29",
-   "forward_days": 0,
-   "forward_usd": 1000.0,
+   "forward_days": 1,
+   "forward_usd": 993.82,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -88,24 +88,24 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.97,
+    "cagr": 7.96,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 261.65
+    "total": 261.36
    },
    "buyhold_out_sample": {
-    "cagr": 17.93,
+    "cagr": 17.94,
     "sharpe": 0.96,
     "max_dd": -24.94,
-    "total": 129.44
+    "total": 129.59
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-22",
-   "oos_start": "2021-10-07",
-   "forward_days": 0,
+   "period": "2010-01-04 → 2026-10-23",
+   "oos_start": "2021-10-08",
+   "forward_days": 1,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -164,6 +164,20 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد",
    "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد"
+  },
+  "7d5d0b9e01-es-nq-vwap-delta-reversion": {
+   "name": "ES/NQ VWAP 2SD delta-divergence mean reversion",
+   "name_fa": "بازگشت به میانگین ES و NQ با باند دوم VWAP و واگرایی دلتا",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xcgb79/quit_software_engineering_to_trade_futures_a_year/",
+   "claim": "«نرخ برد ۴۷٪؛ میانگین سود به میانگین زیان حدود ۳ به ۱؛ ضریب سود ۲٫۵ تا ۳ در ماه‌های سودده؛ بیشترین افت بک‌تست ۶ ساله ۲۸٪»",
+   "claimed_return": "47% win rate, ~3:1 R, PF 2.5-3.0",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-23",
+   "status": "not_testable",
+   "reason_not_testable": "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست",
+   "verdict": "غیرقابل آزمون: به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
   },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
