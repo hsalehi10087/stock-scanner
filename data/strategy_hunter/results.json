@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T13:54:01+00:00",
+ "updated": "2026-10-23T19:27:10+00:00",
  "results": {
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
@@ -16,43 +16,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.68,
-    "sharpe": 0.5,
+    "cagr": 10.73,
+    "sharpe": 0.51,
     "max_dd": -66.12,
-    "total": 305.08
+    "total": 307.78
    },
    "in_sample": {
-    "cagr": 7.79,
+    "cagr": 7.85,
     "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 106.28
+    "total": 107.42
    },
    "out_sample": {
-    "cagr": 17.25,
+    "cagr": 17.28,
     "sharpe": 0.67,
     "max_dd": -42.23,
-    "total": 93.2
+    "total": 93.43
    },
    "buyhold_full": {
-    "cagr": 25.64,
+    "cagr": 25.65,
     "sharpe": 0.79,
     "max_dd": -76.74,
-    "total": 2225.06
+    "total": 2227.76
    },
    "buyhold_out_sample": {
-    "cagr": 39.99,
+    "cagr": 40.03,
     "sharpe": 1.01,
     "max_dd": -47.44,
-    "total": 302.41
+    "total": 302.88
    },
-   "trades": 93,
-   "win_rate": 71.0,
-   "avg_trade_pct": 2.0,
+   "trades": 94,
+   "win_rate": 71.3,
+   "avg_trade_pct": 1.99,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-23",
    "oos_start": "2022-08-29",
    "forward_days": 1,
-   "forward_usd": 993.82,
+   "forward_usd": 994.98,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -88,16 +88,16 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.96,
+    "cagr": 7.91,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 261.36
+    "total": 258.74
    },
    "buyhold_out_sample": {
-    "cagr": 17.94,
-    "sharpe": 0.96,
+    "cagr": 17.77,
+    "sharpe": 0.95,
     "max_dd": -24.94,
-    "total": 129.59
+    "total": 127.92
    },
    "trades": 186,
    "win_rate": 40.9,
