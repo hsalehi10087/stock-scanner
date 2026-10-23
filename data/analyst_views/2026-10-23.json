@@ -1,0 +1,134 @@
+{
+ "date": "2026-10-23",
+ "articles_read": 550,
+ "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر؛ متن کامل خبرها در این اجرا در دسترس نبود؛ فقط نظرهایی که منبع دارند",
+ "assets": {
+  "gold": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 6,
+    "bear": 8,
+    "neutral": 4
+   },
+   "summary_fa": "طلا به پایین‌ترین سطح دو ماه اخیر (حدود ۴٬۰۵۰ تا ۴٬۱۰۰ دلار) افت کرده، چون نفت گران ترس از تورم و افزایش نرخ بهره‌ی فدرال رزرو در دسامبر را زنده نگه داشته است. با این حال بانک‌ها و برخی تحلیلگران چشم‌انداز بلندمدت را هنوز صعودی می‌دانند.",
+   "views": [
+    {
+     "who": "CIBC",
+     "view_fa": "پیش‌بینی سه‌ماهه‌ی چهارم را به ۴٬۵۰۰ دلار کاهش داد، اما به‌خاطر خرید بانک‌های مرکزی برای ۲۰۲۷ برگشت به ۵٬۲۰۰ دلار را می‌بیند.",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOajZTbWtYRkNIRkVvR0RzWHlPRjA0dmhybmVTVndycXR5Q2txZXBVZFp3QzhLWVpBV25ldUlOUk9XR3A1d28td3NEekczRzZRQzIzZDUwUVNHSUUwUXZNS08tU2RaaFAzc2VTWkRIWVdwOGJQNWNZZl9DLUhLbXgxblVpb1p2LTFOY1g1cWpHWWlLQW9rTVV0enhrMXkxN0ZPTmpBd0I1UW8wT3d4Vkx6YWtLWmlWRHM?oc=5"
+    },
+    {
+     "who": "StoneX",
+     "view_fa": "طلا بعد از ریزش اخیر به‌شدت فروخته شده و در معرض یک برگشت تند است، هرچند شکست حمایت‌ها خطر افت عمیق‌تر را هم دارد.",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQV0RvbFRMOHNvMDNYanZ6OWo5MEprb1BESzNtZnpmU3RRVjlwdTl3NEFSWHExd1RzcGQ3aHJYMWtwbU9UWEEzQW9tbXJCZzZtZ21aNUU2cWFRb3hubVJESDBVaFRjak9EallsTko1YU83enVwQXpiY09yckJVT1NLRmxINUdiVDhNQVlZcmhNZVlPOVprcFlnZ19kLUxTRFQxWTQ5S2NrOG83SUYxTHlncmpKQTJrN3RWRXV5UjNB?oc=5"
+    }
+   ]
+  },
+  "silver": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 3,
+    "bear": 7,
+    "neutral": 2
+   },
+   "summary_fa": "نقره به پایین‌ترین سطح امسال رسیده و زیر ۵۵ دلار رفته است؛ بالا رفتن بازدهی اوراق و ترس از تورم ناشی از نفت گران فشار فروش را بیشتر کرده است.",
+   "views": [
+    {
+     "who": "FXStreet",
+     "view_fa": "نقره حمایت ۵۵ دلار را شکست و فروشندگان هدف ۵۰ دلار را دنبال می‌کنند.",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa3JaeUZ3T3RjdWFVLVNYem1TRVJaaThIWEgyZ3JnN041ZXhmaE5PWXJuaTliNHUzOVI5N3o4SWJWNnVpZnpORkkwbGdsd1RVR0E1V3V2UDlMb05UTnMtSkdfSGJEY0ZVY0FpaWxzTVpXV202VGdxT2tCTWx0Xy0zMTB1UEM3TDdjSUVfeEt2STBRbE9SWXpJVHh5UmEzbTJfd0Mw?oc=5"
+    },
+    {
+     "who": "CPM Group",
+     "view_fa": "قیمت طلا و نقره می‌تواند بدون نیاز به سقوط دلار هم بالا برود.",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWTBKQmJzOERuYTRDeHlxdC1QX3otczUyaEJrc0lsSTlUQktjclJkSzh6VmJLcUFkWjBTaWZ1SEJTSHkzaEFVVnFIcUZ2Ql9wa3VEYkRHSzR2TzZzU2Q1NzdxV1c0UURGd1doUkhkMVlCNzFfYlFFTmxnM3JzNV9YdllGU3EzdnhXUEF4ZWsxckdQN1VaY3c?oc=5"
+    }
+   ]
+  },
+  "bitcoin": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 6,
+    "bear": 7,
+    "neutral": 2
+   },
+   "summary_fa": "بیت‌کوین بعد از نزدیک شدن به ۸۵ هزار دلار به حدود ۸۱ تا ۸۲ هزار دلار برگشت، چون نگرانی از سهام هوش مصنوعی و تنش با ایران بازار را ریسک‌گریز کرد. ورود بیش از یک میلیارد دلار به ETFها و پیش‌بینی بلندمدت جی‌پی‌مورگان طرف مثبت ماجراست.",
+   "views": [
+    {
+     "who": "JPMorgan",
+     "view_fa": "در اولین پیش‌بینی بلندمدت خود، بازدهی سالانه‌ی حدود ۱۰ درصد برای بیت‌کوین پیش‌بینی کرد و انتظار دارد از سهام و طلا بهتر عمل کند.",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbHlreXRlYXYzRXVGQlEwUzkzMExEbDNTVEVUUVg4TUx4SlVsMlRFUFFORl9xdFRISlh6T1VxSFBPUV9SbWNLMkd5RzNjTjFUcjdWd2RLR3ZaRDhHeEFWU2F6Rmk2Nl9zREtZWGNHbWZRbVdLMi1OdDY2M3JScGtLcHFiWjdlLUtoejl4YVBwZXhVdDQya0lKRmthS0R2N21ldGVB?oc=5"
+    },
+    {
+     "who": "CoinDesk",
+     "view_fa": "ETFهای بیت‌کوین در سه روز ۱٫۰۸ میلیارد دلار جذب کردند، اما این شاید برای یک رالی تند کافی نباشد.",
+     "url": "https://www.coindesk.com/markets/2026/10/22/bitcoin-etfs-attract-usd1-08-billion-in-3-days-but-it-may-not-be-enough-for-a-steep-rally"
+    }
+   ]
+  },
+  "copper": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 6,
+    "bear": 4,
+    "neutral": 2
+   },
+   "summary_fa": "در کوتاه‌مدت بالا رفتن موجودی انبارهای آمریکا و فشار فروش قیمت مس را به حمایت‌های کلیدی رسانده است. اما بانک‌ها و مؤسسه‌ها به‌خاطر کمبود عرضه‌ی معادن و تقاضای هوش مصنوعی و شبکه‌ی برق، چشم‌انداز میان‌مدت و بلندمدت را مثبت می‌بینند.",
+   "views": [
+    {
+     "who": "Standard Chartered",
+     "view_fa": "پیش‌بینی آلومینیوم را کاهش داد و چشم‌انداز مس را بالا برد.",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQWZnMHM3cEMtUHlScGlCV3hYSmpiRVRrd2Z4aVFFUkJFa2ZsTnVSaG5oTXZpcHppRFNxay1yWm11QTNSanhTVnNndXZKeGtpZXI2dDQ1aWstOEhHc1RNOTlidmR5X2FiYzlCVHhVN3NmU2tRUlQzeXF3SHpNYkVteEpHWGMtVzQ3VldnQVd1SFNmUmdxZ1RhMVJ6OHhHRzlQdzM1VGZpMWZkVnpqblZ5WVhzQWM?oc=5"
+    },
+    {
+     "who": "BNEF",
+     "view_fa": "تا ۲۰۲۷ فلز تصفیه‌شده‌ی کافی وجود دارد، اما برای جلوگیری از کمبود مس در آینده ۳۳۲ میلیارد دلار سرمایه‌گذاری در معادن لازم است.",
+     "url": "https://www.mining.com/copper-surplus-masks-looming-332b-mine-shortfall/"
+    }
+   ]
+  },
+  "oil": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 9,
+    "bear": 5,
+    "neutral": 1
+   },
+   "summary_fa": "برنت با حمله‌های حوثی‌ها به اهداف عربستان، خروج دیپلمات‌های آمریکا از عربستان و جهش کرایه‌ی نفتکش‌ها به بالای ۱۱۱ دلار و بالاترین سطح پنج ماه اخیر رسید. پیش‌بینی مازاد عرضه از سوی آژانس بین‌المللی انرژی و برگشت صادرات خلیج فارس تنها عامل مهار رشد است.",
+   "views": [
+    {
+     "who": "Citi",
+     "view_fa": "با وجود برگشت صادرات خلیج فارس، ریسک قیمت نفت را رو به بالا می‌بیند؛ چون رساندن نفت به خریداران با هزینه‌ی معقول دشوار شده است.",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Citis-60-Oil-Call-Meets-112-Brent.html"
+    },
+    {
+     "who": "Goldman Sachs",
+     "view_fa": "اگر اختلال عرضه در خلیج فارس ادامه پیدا کند، برنت ممکن است در اوایل ۲۰۲۷ به ۱۴۰ دلار برسد.",
+     "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPbF85anB1T2x1M3pyamhYd0tuVzRTVExWYXR5Yk9Hbm9sdnhXa1lHeDQ2S1Qyemt0SXdfVWVEZFo1MUxnZ1lBaVBlLTJwOEtBbVRXWWpxMDFOU3o5cXQxY2V6UUs2Y1VSSXRBRE02WXI2YnBqRTVHR25oWnAwWW9yS0VycFA2dHZHSVZlUDMzY2dkNXZfcllvTFJQUWdLaG9uamtWcnZ2TlZEVDlEZU1ndnIzZTdPRndiMDZXYXlhVHg5MVF3YTFFSVZhOU5UVmc2UDF3VVlnWUo0b0lfc01XaVBJeFc4SFAzNUFUREFVeDBValFjUWRPS0RaZnlGbUYzT19kRtIBigJBVV95cUxPbGd0WWxFdUw1aXBnS1pMbzQySU9KcVlhYmxXaUFOaElEX2ZvUmMtNENoR2xTbmNrN1BSdGFJczV5dmtPWlktamdNMF9uMVNHVmljeUQzSVNaclVGVTdFd2c0cTh5T2xoalNCeGdGZnVpVEJjZWxDejFvYlIzT2tibVdsOHFzc2lVWlpabFM4eW16VXhfdTdMay1mNEJIc2NIWjVRMGxBVmFUMzFMRVJWcV8wd2tZUi1HYlVTNW94MGxUWGd2U2FmV2hXU1F4TUdNRmh0RFV1SG9UaU5hY0Iyb3J5MzFYUkZRcW9fNWFqQWcxbTZueWhEeXQ2TFhRbTJSTldlZzVtcjV1Zw?oc=5"
+    }
+   ]
+  },
+  "rates": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 7,
+    "bear": 3,
+    "neutral": 2
+   },
+   "summary_fa": "تقریباً همه‌ی اقتصاددانان انتظار دارند فدرال رزرو در اکتبر نرخ را ثابت نگه دارد و در دسامبر دوباره افزایش دهد؛ تورم بالا در انگلیس و استرالیا هم انتظار افزایش نرخ را تقویت کرده است. در مقابل، بازدهی اوراق آمریکا به‌خاطر فرار به سمت دارایی امن بیشترین افت از ۲۰۲۳ را داشت.",
+   "views": [
+    {
+     "who": "Reuters",
+     "view_fa": "در نظرسنجی رویترز، تقریباً همه‌ی اقتصاددانان می‌گویند فدرال رزرو در اکتبر نرخ را تغییر نمی‌دهد ولی در دسامبر دوباره افزایش می‌دهد.",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZUFYOUZFZXZ4UWJSN1J6RkRxM1lkdGJsUFZRZ2puQkFnRk9rczVQZF9iUS12amVsUl9ESnA4MmNlUmFuVnBVY3BoeVZoVWx1dmwtSWdCa2tGUUlXeXdWR0o0U2o5NHdUend5d2o3c1NoUlZTQUNyWFFEalBHY25QMVptcnFoRnZiSk1JVDFyb1VFYkg0NGRJaXhWemlUY3gxX3YxeVh0YkNMSHNQU21pWkc0OVQ?oc=5"
+    },
+    {
+     "who": "MarketWatch (PGIM)",
+     "view_fa": "افت شدید بازدهی اوراق بیشتر به‌خاطر بسته شدن معاملات قبلی است، نه ترس جدی از رکود.",
+     "url": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66?mod=mw_rss_topstories"
+    }
+   ]
+  }
+ },
+ "watch_fa": "تصمیم نرخ بهره‌ی فدرال رزرو در ۲۸ اکتبر، تصمیم بانک مرکزی کانادا در همین ماه، احتمال افزایش نرخ بانک ژاپن در دسامبر و تحولات تنش آمریکا و ایران و حمله‌های حوثی‌ها در خلیج فارس."
+}
