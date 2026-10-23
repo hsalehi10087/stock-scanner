@@ -298,6 +298,7 @@ APUR,Aperture AC - Class A Ordinary Shares
 APURR,Aperture AC - Rights
 APVO,Aptevo Therapeutics Inc. - Common Stock
 APWC,"Asia Pacific Wire & Cable Corporation Limited  - Common shares, Par value .01 per share"
+APXC,Apex Critical Metals Corp. - American Depositary Shares
 APXT,Apex Treasury Corporation - Class A Ordinary Share
 APXTU,Apex Treasury Corporation - Units
 APXTW,Apex Treasury Corporation - Warrants
@@ -2366,6 +2367,7 @@ LX,LexinFintech Holdings Ltd. - American Depositary Shares
 LXEH,"Lixiang Education Holding Co., Ltd. - American Depositary Shares"
 LXEO,"Lexeo Therapeutics, Inc. - Common Stock"
 LXRX,"Lexicon Pharmaceuticals, Inc. - Common Stock"
+LYCA,"Lycia Therapeutics, Inc. - Common Stock"
 LYEL,"Lyell Immunopharma, Inc. - Common Stock"
 LYFT,"Lyft, Inc. - Class A Common Stock"
 LYTS,LSI Industries Inc. - Common Stock
@@ -2987,6 +2989,8 @@ PATK,"Patrick Industries, Inc. - Common Stock"
 PAVM,PAVmed Inc. - Common Stock
 PAVS,Paranovus Entertainment Technology Ltd. - Class A Ordinary Shares
 PAX,Patria Investments Limited - Class A Common Shares
+PAXG,Pine Tree Acquisition Corp. - Class A Ordinary Shares
+PAXGR,Pine Tree Acquisition Corp. - Rights
 PAXGU,Pine Tree Acquisition Corp. - Units
 PAYO,Payoneer Global Inc. - Common Stock
 PAYP,PayPay Corporation - American Depository Shares
@@ -3423,7 +3427,6 @@ SAAQU,Space Asset Acquisition Corp. - Units
 SAAQW,Space Asset Acquisition Corp. - Warrants
 SABR,Sabre Corporation - Common Stock
 SABS,"SAB Biotherapeutics, Inc. - Common Stock"
-SABSW,"SAB Biotherapeutics, Inc. - Warrant"
 SAFT,"Safety Insurance Group, Inc. - Common Stock"
 SAFX,"XCF Global, Inc. - Class A Common Stock"
 SAGT,SAGTEC GLOBAL LIMITED - Class A Ordinary shares
@@ -3484,8 +3487,6 @@ SDHI,Siddhi Acquisition Corp - Class A Common stock
 SDHIR,Siddhi Acquisition Corp - Right
 SDHIU,Siddhi Acquisition Corp - Unit
 SDOT,Sadot Group Inc. - Common Stock
-SDST,Stardust Power Inc. - Common Stock
-SDSTW,Stardust Power Inc. - Warrant
 SEAT,Vivid Seats Inc. - Class A common stock
 SEDG,"SolarEdge Technologies, Inc. - Common Stock"
 SEED,Origin Agritech Limited - Ordinary Shares
@@ -5608,7 +5609,7 @@ JHI,John Hancock Investors Trust Common Stock
 JHS,John Hancock Income Securities Trust Common Stock
 JHX,James Hardie Industries plc. Ordinary Shares
 JILL,"J. Jill, Inc. Common Stock"
-JKS,JinkoSolar Holding Company Limited American Depositary Shares (each representing 4 Common Shares)
+JKS,Jinko Holdings Limited American Depositary Shares (each representing 4 Ordinary Shares)
 JLL,Jones Lang LaSalle Incorporated Common Stock
 JLS,Nuveen Mortgage and Income Fund
 JMIA,"Jumia Technologies AG American Depositary Shares, each representing two Ordinary Shares"
@@ -5743,7 +5744,7 @@ LSPD,Lightspeed Commerce Inc. Subordinate Voting Shares
 LTC,"LTC Properties, Inc. Common Stock"
 LTH,"Life Time Group Holdings, Inc. Common Stock"
 LTM,"LATAM Airlines Group S.A. American Depositary Shares (each representing two thousand (2,000) shares of Common Stock)"
-LU,"Lufax Holding Ltd American Depositary Shares, each representing two (2) Ordinary Shares"
+LU,Lufax Holding Ltd American Depositary Shares (each representing twenty (20) Ordinary Shares)
 LUCK,Lucky Strike Entertainment Corporation Class A Common Stock
 LUD,Luda Technology Group Limited Ordinary Shares
 LUV,Southwest Airlines Company Common Stock
@@ -6156,7 +6157,6 @@ PED,Pedevco Corp. Common Stock
 PEG,Public Service Enterprise Group Incorporated Common Stock
 PEN,"Penumbra, Inc. Common Stock"
 PEO,"Adams Natural Resources Fund, Inc. Common Stock"
-PERF,Perfect Corp. Class A Ordinary Share
 PEW,GrabAGun Digital Holdings Inc. Common Stock
 PFD,Flaherty & Crumrine Preferred and Income Fund Incorporated
 PFE,"Pfizer, Inc. Common Stock"
