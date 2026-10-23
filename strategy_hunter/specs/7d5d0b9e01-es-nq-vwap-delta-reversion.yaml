@@ -1,0 +1,10 @@
+id: 7d5d0b9e01-es-nq-vwap-delta-reversion
+name: ES/NQ VWAP 2SD delta-divergence mean reversion
+name_fa: بازگشت به میانگین ES و NQ با باند دوم VWAP و واگرایی دلتا
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xcgb79/quit_software_engineering_to_trade_futures_a_year/
+claim: "«نرخ برد ۴۷٪؛ میانگین سود به میانگین زیان حدود ۳ به ۱؛ ضریب سود ۲٫۵ تا ۳ در ماه‌های سودده؛ بیشترین افت بک‌تست ۶ ساله ۲۸٪»"
+claimed_return: "47% win rate, ~3:1 R, PF 2.5-3.0"
+added: 2026-10-23
+status: not_testable
+reason_not_testable: "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
