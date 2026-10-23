@@ -1,0 +1,366 @@
+{
+ "market": "cn",
+ "date": "2026-10-23",
+ "scored": 2000,
+ "universe": 5224,
+ "liquid": 2000,
+ "distribution": {
+  "0": 1735,
+  "1": 58,
+  "2": 96,
+  "3": 78,
+  "4": 32,
+  "5": 1
+ },
+ "top": [
+  {
+   "ticker": "603893.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.5
+   }
+  },
+  {
+   "ticker": "601872.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.9,
+    "peg": 0.42
+   }
+  },
+  {
+   "ticker": "002475.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.7,
+    "peg": 0.62
+   }
+  },
+  {
+   "ticker": "002415.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.7,
+    "peg": 0.75
+   }
+  },
+  {
+   "ticker": "600183.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.85
+   }
+  },
+  {
+   "ticker": "601168.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.32
+   }
+  },
+  {
+   "ticker": "601939.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 4.6,
+    "peg": 1.4
+   }
+  },
+  {
+   "ticker": "600026.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 14.6,
+    "peg": 1.54
+   }
+  },
+  {
+   "ticker": "601600.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 1.6
+   }
+  },
+  {
+   "ticker": "601088.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 14.94
+   }
+  },
+  {
+   "ticker": "300308.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.9
+   }
+  },
+  {
+   "ticker": "603986.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.6
+   }
+  },
+  {
+   "ticker": "600176.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "300408.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "002463.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.3
+   }
+  },
+  {
+   "ticker": "002156.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "300475.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 1.6
+   }
+  },
+  {
+   "ticker": "002916.SZ",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "603256.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "600309.SS",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  }
+ ]
+}
