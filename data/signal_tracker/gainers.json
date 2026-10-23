@@ -100,13 +100,14 @@
 "last_date": "2026-10-19"
 },
 "AHT": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-21"
+"2026-10-21",
+"2026-10-22"
 ],
 "first_date": "2026-10-21",
 "first_price": 2.47,
-"last_date": "2026-10-21"
+"last_date": "2026-10-22"
 },
 "AIBZ": {
 "count": 1,
@@ -125,6 +126,15 @@
 "first_date": "2026-10-20",
 "first_price": 3.1,
 "last_date": "2026-10-20"
+},
+"ALLE": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 176.52,
+"last_date": "2026-10-22"
 },
 "ALMR": {
 "count": 1,
@@ -172,13 +182,14 @@
 "last_date": "2026-10-20"
 },
 "AMRO": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-19"
+"2026-10-19",
+"2026-10-22"
 ],
 "first_date": "2026-10-19",
 "first_price": 5.61,
-"last_date": "2026-10-19"
+"last_date": "2026-10-22"
 },
 "ANL": {
 "count": 1,
@@ -235,13 +246,14 @@
 "last_date": "2026-10-15"
 },
 "ARMP": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-22"
 ],
 "first_date": "2026-10-15",
 "first_price": 3.09,
-"last_date": "2026-10-15"
+"last_date": "2026-10-22"
 },
 "ARQT": {
 "count": 2,
@@ -272,14 +284,15 @@
 "last_date": "2026-10-21"
 },
 "ATGL": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-20",
-"2026-10-21"
+"2026-10-21",
+"2026-10-22"
 ],
 "first_date": "2026-10-20",
 "first_price": 6.93,
-"last_date": "2026-10-21"
+"last_date": "2026-10-22"
 },
 "ATII": {
 "count": 1,
@@ -300,13 +313,14 @@
 "last_date": "2026-10-15"
 },
 "ATNM": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-19"
+"2026-10-19",
+"2026-10-22"
 ],
 "first_date": "2026-10-19",
 "first_price": 1.32,
-"last_date": "2026-10-19"
+"last_date": "2026-10-22"
 },
 "AVAT": {
 "count": 1,
@@ -325,6 +339,15 @@
 "first_date": "2026-10-15",
 "first_price": 1.25,
 "last_date": "2026-10-15"
+},
+"AVEX": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 10.96,
+"last_date": "2026-10-22"
 },
 "AXTI": {
 "count": 1,
@@ -400,6 +423,15 @@
 "first_price": 5.4,
 "last_date": "2026-10-15"
 },
+"BHVN": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 14.69,
+"last_date": "2026-10-22"
+},
 "BIAF": {
 "count": 1,
 "events": [
@@ -426,6 +458,24 @@
 "first_date": "2026-10-19",
 "first_price": 1.37,
 "last_date": "2026-10-19"
+},
+"BKYI": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 2.74,
+"last_date": "2026-10-22"
+},
+"BMI": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 149.64,
+"last_date": "2026-10-22"
 },
 "BMMX": {
 "count": 1,
@@ -464,13 +514,14 @@
 "last_date": "2026-10-14"
 },
 "BRCB": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-15"
+"2026-10-15",
+"2026-10-22"
 ],
 "first_date": "2026-10-15",
 "first_price": 8.27,
-"last_date": "2026-10-15"
+"last_date": "2026-10-22"
 },
 "BRZE": {
 "count": 1,
@@ -489,6 +540,15 @@
 "first_date": "2026-10-14",
 "first_price": 53.46,
 "last_date": "2026-10-14"
+},
+"BUR": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 3.37,
+"last_date": "2026-10-22"
 },
 "CAPR": {
 "count": 1,
@@ -562,6 +622,15 @@
 "first_price": 14.1,
 "last_date": "2026-10-19"
 },
+"CLIK": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.29,
+"last_date": "2026-10-22"
+},
 "CLNE": {
 "count": 1,
 "events": [
@@ -624,6 +693,15 @@
 "first_date": "2026-10-21",
 "first_price": 1.93,
 "last_date": "2026-10-21"
+},
+"CNXC": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 34.25,
+"last_date": "2026-10-22"
 },
 "CNXU": {
 "count": 2,
@@ -730,14 +808,15 @@
 "last_date": "2026-10-21"
 },
 "DFH": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-15",
-"2026-10-20"
+"2026-10-20",
+"2026-10-22"
 ],
 "first_date": "2026-10-15",
 "first_price": 8.44,
-"last_date": "2026-10-20"
+"last_date": "2026-10-22"
 },
 "DFNS": {
 "count": 1,
@@ -793,6 +872,15 @@
 "first_price": 176.54,
 "last_date": "2026-10-20"
 },
+"EGBN": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 32.97,
+"last_date": "2026-10-22"
+},
 "EHGO": {
 "count": 1,
 "events": [
@@ -810,6 +898,15 @@
 "first_date": "2026-10-21",
 "first_price": 21.23,
 "last_date": "2026-10-21"
+},
+"ELTX": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.94,
+"last_date": "2026-10-22"
 },
 "ENTX": {
 "count": 1,
@@ -956,6 +1053,15 @@
 "first_price": 2.56,
 "last_date": "2026-10-15"
 },
+"FLO": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 6.42,
+"last_date": "2026-10-22"
+},
 "FMFC": {
 "count": 1,
 "events": [
@@ -1010,6 +1116,15 @@
 "first_price": 1.32,
 "last_date": "2026-10-19"
 },
+"GNSS": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.45,
+"last_date": "2026-10-22"
+},
 "GOSS": {
 "count": 1,
 "events": [
@@ -1037,6 +1152,15 @@
 "first_price": 1.52,
 "last_date": "2026-10-20"
 },
+"GRDX": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 5.49,
+"last_date": "2026-10-22"
+},
 "GRML": {
 "count": 2,
 "events": [
@@ -1056,6 +1180,15 @@
 "first_price": 8.21,
 "last_date": "2026-10-21"
 },
+"GSHD": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 50.62,
+"last_date": "2026-10-22"
+},
 "GURE": {
 "count": 1,
 "events": [
@@ -1074,6 +1207,15 @@
 "first_price": 109.52,
 "last_date": "2026-10-20"
 },
+"HCSG": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 24.79,
+"last_date": "2026-10-22"
+},
 "HOST": {
 "count": 1,
 "events": [
@@ -1082,6 +1224,15 @@
 "first_date": "2026-10-20",
 "first_price": 2.83,
 "last_date": "2026-10-20"
+},
+"HPP": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 10.58,
+"last_date": "2026-10-22"
 },
 "HQ": {
 "count": 1,
@@ -1147,6 +1298,15 @@
 "first_date": "2026-10-16",
 "first_price": 1.03,
 "last_date": "2026-10-16"
+},
+"IHRT": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.72,
+"last_date": "2026-10-22"
 },
 "IMNN": {
 "count": 1,
@@ -1229,6 +1389,15 @@
 "first_price": 2.59,
 "last_date": "2026-10-16"
 },
+"JELD": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.42,
+"last_date": "2026-10-22"
+},
 "KD": {
 "count": 1,
 "events": [
@@ -1285,6 +1454,24 @@
 "first_date": "2026-10-15",
 "first_price": 33.9,
 "last_date": "2026-10-15"
+},
+"KRRO": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 12.05,
+"last_date": "2026-10-22"
+},
+"KSS": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 24.78,
+"last_date": "2026-10-22"
 },
 "KVYO": {
 "count": 1,
@@ -1377,6 +1564,15 @@
 "first_price": 8.85,
 "last_date": "2026-10-15"
 },
+"MLTX": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 12.34,
+"last_date": "2026-10-22"
+},
 "MNTN": {
 "count": 1,
 "events": [
@@ -1404,6 +1600,15 @@
 "first_date": "2026-10-16",
 "first_price": 1.04,
 "last_date": "2026-10-19"
+},
+"MTEN": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.02,
+"last_date": "2026-10-22"
 },
 "MWYN": {
 "count": 3,
@@ -1454,24 +1659,26 @@
 "last_date": "2026-10-19"
 },
 "NBTX": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-20"
+"2026-10-20",
+"2026-10-22"
 ],
 "first_date": "2026-10-20",
 "first_price": 24.14,
-"last_date": "2026-10-20"
+"last_date": "2026-10-22"
 },
 "NCPL": {
-"count": 3,
+"count": 4,
 "events": [
 "2026-10-14",
 "2026-10-15",
-"2026-10-20"
+"2026-10-20",
+"2026-10-22"
 ],
 "first_date": "2026-10-14",
 "first_price": 1.59,
-"last_date": "2026-10-20"
+"last_date": "2026-10-22"
 },
 "NESR": {
 "count": 1,
@@ -1519,13 +1726,14 @@
 "last_date": "2026-10-15"
 },
 "NSTR": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-14"
+"2026-10-14",
+"2026-10-22"
 ],
 "first_date": "2026-10-14",
 "first_price": 3.78,
-"last_date": "2026-10-14"
+"last_date": "2026-10-22"
 },
 "NTRP": {
 "count": 1,
@@ -1544,6 +1752,15 @@
 "first_date": "2026-10-21",
 "first_price": 21.81,
 "last_date": "2026-10-21"
+},
+"NTWK": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 7.75,
+"last_date": "2026-10-22"
 },
 "NUAI": {
 "count": 1,
@@ -1580,6 +1797,15 @@
 "first_date": "2026-10-20",
 "first_price": 13.25,
 "last_date": "2026-10-20"
+},
+"OKUR": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 2.58,
+"last_date": "2026-10-22"
 },
 "OKYO": {
 "count": 1,
@@ -1653,6 +1879,15 @@
 "first_price": 12.77,
 "last_date": "2026-10-15"
 },
+"PASW": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 5.404,
+"last_date": "2026-10-22"
+},
 "PBLS": {
 "count": 1,
 "events": [
@@ -1662,6 +1897,15 @@
 "first_price": 25.35,
 "last_date": "2026-10-19"
 },
+"PDC": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 3.02,
+"last_date": "2026-10-22"
+},
 "PDSB": {
 "count": 1,
 "events": [
@@ -1670,6 +1914,15 @@
 "first_date": "2026-10-21",
 "first_price": 1.24,
 "last_date": "2026-10-21"
+},
+"PFSA": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.02,
+"last_date": "2026-10-22"
 },
 "PLAY": {
 "count": 1,
@@ -1725,6 +1978,15 @@
 "first_date": "2026-10-21",
 "first_price": 3.01,
 "last_date": "2026-10-21"
+},
+"POOL": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 197.21,
+"last_date": "2026-10-22"
 },
 "PRME": {
 "count": 2,
@@ -1789,6 +2051,15 @@
 "first_date": "2026-10-16",
 "first_price": 4.41,
 "last_date": "2026-10-16"
+},
+"R": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 265.53,
+"last_date": "2026-10-22"
 },
 "RBBN": {
 "count": 1,
@@ -1981,6 +2252,15 @@
 "first_price": 3.54,
 "last_date": "2026-10-21"
 },
+"SPOT": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 583.66,
+"last_date": "2026-10-22"
+},
 "SSTK": {
 "count": 1,
 "events": [
@@ -1989,6 +2269,15 @@
 "first_date": "2026-10-15",
 "first_price": 4.59,
 "last_date": "2026-10-15"
+},
+"STAK": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.67,
+"last_date": "2026-10-22"
 },
 "SVRE": {
 "count": 1,
@@ -2017,6 +2306,15 @@
 "first_price": 2.63,
 "last_date": "2026-10-21"
 },
+"TANH": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 24.83,
+"last_date": "2026-10-22"
+},
 "TBCH": {
 "count": 1,
 "events": [
@@ -2035,6 +2333,15 @@
 "first_date": "2026-10-16",
 "first_price": 2.63,
 "last_date": "2026-10-19"
+},
+"TCX": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 11.91,
+"last_date": "2026-10-22"
 },
 "TDIC": {
 "count": 1,
@@ -2100,13 +2407,23 @@
 "last_date": "2026-10-19"
 },
 "TRON": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-20"
+"2026-10-20",
+"2026-10-22"
 ],
 "first_date": "2026-10-20",
 "first_price": 1.22,
-"last_date": "2026-10-20"
+"last_date": "2026-10-22"
+},
+"TROO": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 2.32,
+"last_date": "2026-10-22"
 },
 "TRU": {
 "count": 1,
@@ -2180,6 +2497,15 @@
 "first_price": 2.67,
 "last_date": "2026-10-19"
 },
+"VCRE": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 10.32,
+"last_date": "2026-10-22"
+},
 "VENU": {
 "count": 1,
 "events": [
@@ -2197,6 +2523,24 @@
 "first_date": "2026-10-15",
 "first_price": 2.44,
 "last_date": "2026-10-15"
+},
+"VITL": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 9.41,
+"last_date": "2026-10-22"
+},
+"VIVK": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.63,
+"last_date": "2026-10-22"
 },
 "VNCE": {
 "count": 1,
@@ -2226,13 +2570,14 @@
 "last_date": "2026-10-15"
 },
 "WGO": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-21"
+"2026-10-21",
+"2026-10-22"
 ],
 "first_date": "2026-10-21",
 "first_price": 25.64,
-"last_date": "2026-10-21"
+"last_date": "2026-10-22"
 },
 "WORX": {
 "count": 2,
@@ -2244,14 +2589,33 @@
 "first_price": 2.68,
 "last_date": "2026-10-20"
 },
-"XCH": {
+"WPRT": {
 "count": 1,
 "events": [
-"2026-10-14"
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 2.24,
+"last_date": "2026-10-22"
+},
+"XCH": {
+"count": 2,
+"events": [
+"2026-10-14",
+"2026-10-22"
 ],
 "first_date": "2026-10-14",
 "first_price": 2.21,
-"last_date": "2026-10-14"
+"last_date": "2026-10-22"
+},
+"XCUR": {
+"count": 1,
+"events": [
+"2026-10-22"
+],
+"first_date": "2026-10-22",
+"first_price": 1.13,
+"last_date": "2026-10-22"
 },
 "XHG": {
 "count": 2,
@@ -2264,24 +2628,26 @@
 "last_date": "2026-10-19"
 },
 "XLAB": {
-"count": 3,
+"count": 4,
 "events": [
 "2026-10-15",
 "2026-10-16",
-"2026-10-19"
+"2026-10-19",
+"2026-10-22"
 ],
 "first_date": "2026-10-15",
 "first_price": 1.36,
-"last_date": "2026-10-19"
+"last_date": "2026-10-22"
 },
 "YHC": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-19"
+"2026-10-19",
+"2026-10-22"
 ],
 "first_date": "2026-10-19",
 "first_price": 1.98,
-"last_date": "2026-10-19"
+"last_date": "2026-10-22"
 },
 "YMAT": {
 "count": 2,
