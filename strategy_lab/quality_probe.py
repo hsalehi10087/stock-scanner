@@ -6,7 +6,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'market_intel'))
 import quality as Q  # noqa: E402
 
-T = {'us': ['NVDA', 'KLAC', 'INOD', 'FMC', 'APLD'], 'jp': ['6857.T', '7318.T'], 'cn': ['300308.SZ', '600519.SS'],
+T = {'us': ['NVDA', 'KLAC', 'INOD', 'FMC', 'APLD'], 'jp': ['6857.T', '7318.T', '8035.T', '5802.T', '3997.T', '4063.T'], 'cn': ['300308.SZ', '600519.SS'],
      'tw': ['2330.TW', '3017.TW'], 'in': ['TCS.NS', 'HEXT.NS']}
 out = {m: {t: Q.score(t, m) for t in ts} for m, ts in T.items()}
 os.makedirs('data/strategy_lab', exist_ok=True)

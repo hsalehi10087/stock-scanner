@@ -1,6 +1,7 @@
 """امتیاز کیفیت رشد (۰ تا ۵) برای هر سهم — مشترک بین همه‌ی گزارش‌ها.
 
 ۱. رشد پیوسته: فروش فصل آخر نسبت به همان فصل سال قبل ≥۱۰٪، و فروش در دست‌کم ۲ از ۳ فصل اخیر نسبت به فصل قبلش بالا رفته
+   (اگر گزارش فصلی نبود، مثل بیشتر سهام ژاپن: رشد فصل آخر ≥۱۰٪ و رشد فروش سالانه در هر دو سال اخیر)
 ۲. پشتوانه‌ی نقدی سود: جریان نقد عملیاتی سال آخر مثبت و دست‌کم برابر سود خالص
 ۳. سودآوری: ROE ≥ ۱۵٪ یا سود ناخالص ÷ کل دارایی‌ها ≥ ۳۰٪
 ۴. مومنتوم نزدیک سقف: بازده ۱۲ ماه (بدون ماه آخر) دست‌کم ۱۰٪ بهتر از شاخص بازار و قیمت حداکثر ۱۵٪ زیر سقف ۵۲ هفته
@@ -98,6 +99,13 @@ def score(sym, market='us'):
         pass
     try:
         inc, cf, bs = tk.income_stmt, tk.cashflow, tk.balance_sheet
+        if f['growth'] is None:
+            # جایگزین وقتی گزارش فصلی در Yahoo نیست (بیشتر سهام ژاپن): رشد فروش فصل آخر نسبت به سال قبل ≥۱۰٪
+            # و فروش سالانه در هر دو سال اخیر بالا رفته باشد
+            rev_a = _row(inc, ['Total Revenue', 'Operating Revenue'])
+            yoy = info.get('revenueGrowth')
+            if yoy is not None and rev_a is not None and len(rev_a) >= 3:
+                f['growth'] = bool(yoy >= 0.10 and rev_a.iloc[0] > rev_a.iloc[1] > rev_a.iloc[2])
         ni = _row(inc, ['Net Income', 'Net Income Common Stockholders'])
         ocf = _row(cf, ['Operating Cash Flow', 'Cash Flow From Continuing Operating Activities'])
         if ni is not None and ocf is not None:
