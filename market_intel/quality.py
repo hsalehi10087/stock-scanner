@@ -19,7 +19,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import sys
 # هر گزارش فایل نهان خودش را دارد تا گزارش‌هایی که هم‌زمان اجرا می‌شوند هنگام ذخیره با هم تداخل نکنند
 CACHE = os.path.join(ROOT, 'data', 'quality',
-                     'cache_' + os.path.splitext(os.path.basename(sys.argv[0] or 'x'))[0] + '.json')
+                     'cache_' + os.path.splitext(os.path.basename(sys.argv[0] or 'x'))[0]
+                     + ('_' + os.environ['QUALITY_CACHE_TAG'] if os.getenv('QUALITY_CACHE_TAG') else '') + '.json')
 TTL_DAYS = 7
 INDEX = {'us': 'SPY', 'jp': '1306.T', 'cn': '000300.SS', 'tw': '0050.TW', 'in': '^NSEI'}
 NAMES_FA = {'growth': 'رشد پیوسته', 'cash': 'پشتوانه‌ی نقدی', 'profit': 'سودآوری', 'momentum': 'مومنتوم نزدیک سقف',
@@ -41,7 +42,7 @@ def save():
     if _cache is not None:
         os.makedirs(os.path.dirname(CACHE), exist_ok=True)
         cut = str(dt.date.today() - dt.timedelta(days=60))
-        keep = {k: v for k, v in _cache.items() if v.get('date', '') >= cut}
+        keep = {k: v for k, v in list(_cache.items()) if v.get('date', '') >= cut}   # list(): امن هنگام کار چندرشته‌ای
         json.dump(keep, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
 
 

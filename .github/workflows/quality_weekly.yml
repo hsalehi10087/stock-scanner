@@ -1,0 +1,60 @@
+name: ⭐ Quality score — whole market (weekly, Saturday ~08:00 Tehran)
+
+on:
+  schedule:
+    - cron: '0 3 * * 6'   # شنبه ۰۶:۳۰ تهران، بعد از بسته‌شدن جمعه‌ی آمریکا
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        market: [jp, us, cn, tw]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests openpyxl deep-translator
+      - run: python3 market_intel/quality_weekly.py ${{ matrix.market }}
+        env:
+          QUALITY_CACHE_TAG: ${{ matrix.market }}
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Quality Bot"
+          git add -f data/quality || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "⭐ quality weekly ${{ matrix.market }} $(date -u +%F)"
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break; sleep $((RANDOM % 20 + 10)); done
+  report:
+    needs: scan
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: git pull -q
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests pandas yfinance
+      - env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/quality_weekly.py report
