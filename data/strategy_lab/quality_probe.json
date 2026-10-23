@@ -1,0 +1,216 @@
+{
+ "us": {
+  "NVDA": {
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": false,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.7,
+    "peg": 0.48
+   }
+  },
+  "KLAC": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": false,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.0,
+    "peg": 1.8
+   }
+  },
+  "INOD": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": 3.3,
+    "peg": 0.87
+   }
+  },
+  "FMC": {
+   "date": "2026-10-23",
+   "score": 0,
+   "known": 5,
+   "flags": {
+    "growth": false,
+    "cash": false,
+    "profit": false,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": 0.1,
+    "peg": 1.55
+   }
+  },
+  "APLD": {
+   "date": "2026-10-23",
+   "score": 2,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": 28.0,
+    "peg": 1.83
+   }
+  }
+ },
+ "jp": {
+  "6857.T": {
+   "date": "2026-10-23",
+   "score": 2,
+   "known": 4,
+   "flags": {
+    "growth": null,
+    "cash": false,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.1,
+    "peg": 1.48
+   }
+  },
+  "7318.T": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": null,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.6
+   }
+  }
+ },
+ "cn": {
+  "300308.SZ": {
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.9
+   }
+  },
+  "600519.SS": {
+   "date": "2026-10-23",
+   "score": 1,
+   "known": 5,
+   "flags": {
+    "growth": false,
+    "cash": false,
+    "profit": true,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": -0.3,
+    "peg": 2.08
+   }
+  }
+ },
+ "tw": {
+  "2330.TW": {
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.75
+   }
+  },
+  "3017.TW": {
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.8
+   }
+  }
+ },
+ "in": {
+  "TCS.NS": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 2.73
+   }
+  },
+  "HEXT.NS": {
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": false
+   },
+   "badges": {
+    "dilution_pct": 0.3
+   }
+  }
+ }
+}
