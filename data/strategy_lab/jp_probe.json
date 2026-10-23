@@ -1,0 +1,464 @@
+{
+ "6857.T": {
+  "quarterly_income_stmt": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 1128610000000.0,
+    "2025-03-31": 779707000000.0,
+    "2024-03-31": 486507000000.0,
+    "2023-03-31": 560191000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.393,
+   "earningsQuarterlyGrowth": 0.938,
+   "totalRevenue": 1232306962432,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "7203.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-06-30",
+    "2026-03-31",
+    "2025-12-31",
+    "2025-09-30",
+    "2025-06-30"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-06-30": 13525400000000.0,
+    "2026-03-31": 12597347000000.0,
+    "2025-12-31": 13456852000000.0,
+    "2025-09-30": 12377427000000.0,
+    "2025-06-30": 12253326000000.0
+   }
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 50684952000000.0,
+    "2025-03-31": 48036704000000.0,
+    "2024-03-31": 45095325000000.0,
+    "2023-03-31": 37154298000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [
+    "2026-06-30",
+    "2026-03-31",
+    "2025-12-31",
+    "2025-09-30",
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.104,
+   "earningsQuarterlyGrowth": 0.756,
+   "totalRevenue": 51957024686080,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "6758.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-06-30",
+    "2026-03-31",
+    "2025-12-31",
+    "2025-09-30",
+    "2025-06-30"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-06-30": 2837771000000.0,
+    "2026-03-31": 3036417000000.0,
+    "2025-12-31": 3713681000000.0,
+    "2025-09-30": 3107907000000.0,
+    "2025-06-30": 2621615000000.0
+   }
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 12479620000000.0,
+    "2025-03-31": 12034917000000.0,
+    "2024-03-31": 11260037000000.0,
+    "2023-03-31": 10974373000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [
+    "2026-06-30",
+    "2026-03-31",
+    "2025-12-31",
+    "2025-09-30",
+    "2025-06-30",
+    "2025-03-31"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.082,
+   "earningsQuarterlyGrowth": 0.444,
+   "totalRevenue": 12695775477760,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "7318.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-06-30",
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 51163634000.0,
+    "2025-03-31": 25124596000.0,
+    "2024-03-31": 19787230000.0,
+    "2023-03-31": 15195426000.0
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.698,
+   "earningsQuarterlyGrowth": -0.101,
+   "totalRevenue": 57690001408,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "3997.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-09-30",
+    "2025-06-30",
+    "2025-03-31"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2025-12-31",
+    "2024-12-31",
+    "2023-12-31",
+    "2022-12-31",
+    "2021-12-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2025-12-31": 5052458000.0,
+    "2024-12-31": 4591524000.0,
+    "2023-12-31": 3753841000.0,
+    "2022-12-31": 3270911000.0,
+    "2021-12-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.193,
+   "earningsQuarterlyGrowth": null,
+   "totalRevenue": 5625999872,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "6356.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 9883658000.0,
+    "2025-03-31": 9555548000.0,
+    "2024-03-31": 9622022000.0,
+    "2023-03-31": 7520229000.0
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.119,
+   "earningsQuarterlyGrowth": 1.304,
+   "totalRevenue": 10265433088,
+   "mostRecentQuarter": 1293753600
+  }
+ },
+ "5802.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 5110171000000.0,
+    "2025-03-31": 4679789000000.0,
+    "2024-03-31": 4402814000000.0,
+    "2023-03-31": 4005561000000.0
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.159,
+   "earningsQuarterlyGrowth": 0.891,
+   "totalRevenue": 5292326125568,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "8035.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2026-06-30",
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 2443533000000.0,
+    "2025-03-31": 2431568000000.0,
+    "2024-03-31": 1830527000000.0,
+    "2023-03-31": 2209025000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.333,
+   "earningsQuarterlyGrowth": 0.395,
+   "totalRevenue": 2626335014912,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "9984.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2025-12-31",
+    "2025-09-30",
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 7798650000000.0,
+    "2025-03-31": 7243752000000.0,
+    "2024-03-31": 6756500000000.0,
+    "2023-03-31": 6570439000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.109,
+   "earningsQuarterlyGrowth": -0.177,
+   "totalRevenue": 7997900193792,
+   "mostRecentQuarter": 1782777600
+  }
+ },
+ "4063.T": {
+  "quarterly_income_stmt": {
+   "cols": [
+    "2025-06-30"
+   ],
+   "has_rev": [],
+   "rev": {}
+  },
+  "income_stmt": {
+   "cols": [
+    "2026-03-31",
+    "2025-03-31",
+    "2024-03-31",
+    "2023-03-31",
+    "2022-03-31"
+   ],
+   "has_rev": [
+    "Reconciled Cost Of Revenue",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue"
+   ],
+   "rev": {
+    "2026-03-31": 2573969000000.0,
+    "2025-03-31": 2561249000000.0,
+    "2024-03-31": 2414937000000.0,
+    "2023-03-31": 2808824000000.0,
+    "2022-03-31": null
+   }
+  },
+  "quarterly_cashflow": {
+   "cols": [],
+   "has_rev": [],
+   "rev": {}
+  },
+  "info": {
+   "revenueGrowth": 0.054,
+   "earningsQuarterlyGrowth": 0.035,
+   "totalRevenue": 2607843901440,
+   "mostRecentQuarter": 1782777600
+  }
+ }
+}
