@@ -1,0 +1,360 @@
+{
+ "market": "tw",
+ "date": "2026-10-23",
+ "scored": 1904,
+ "universe": 1983,
+ "liquid": 1904,
+ "distribution": {
+  "0": 1757,
+  "1": 59,
+  "2": 70,
+  "3": 18,
+  "4": 0,
+  "5": 0
+ },
+ "top": [
+  {
+   "ticker": "2395.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": false,
+    "profit": true,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.3,
+    "peg": 1.6
+   }
+  },
+  {
+   "ticker": "1303.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "4958.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 12.1
+   }
+  },
+  {
+   "ticker": "3189.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "3711.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.7
+   }
+  },
+  {
+   "ticker": "6213.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.1
+   }
+  },
+  {
+   "ticker": "2345.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "2059.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "5274.TWO",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.0
+   }
+  },
+  {
+   "ticker": "6187.TWO",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.4
+   }
+  },
+  {
+   "ticker": "6446.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 3.7
+   }
+  },
+  {
+   "ticker": "6442.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 2.5
+   }
+  },
+  {
+   "ticker": "3529.TWO",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "6515.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.6
+   }
+  },
+  {
+   "ticker": "2379.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.5
+   }
+  },
+  {
+   "ticker": "3533.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.5
+   }
+  },
+  {
+   "ticker": "3605.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 14.4
+   }
+  },
+  {
+   "ticker": "3293.TWO",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "2317.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 2,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.5,
+    "peg": 0.69
+   }
+  },
+  {
+   "ticker": "2330.TW",
+   "name": "",
+   "date": "2026-10-23",
+   "score": 2,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.75
+   }
+  }
+ ]
+}
