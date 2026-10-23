@@ -1,0 +1,377 @@
+{
+ "market": "us",
+ "date": "2026-10-23",
+ "scored": 2000,
+ "universe": 6944,
+ "liquid": 2000,
+ "distribution": {
+  "0": 1840,
+  "1": 49,
+  "2": 62,
+  "3": 46,
+  "4": 3,
+  "5": 0
+ },
+ "top": [
+  {
+   "ticker": "DDOG",
+   "name": "Datadog, Inc. - Class A Common Stock",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 3.0,
+    "peg": 1.27
+   }
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -3.1,
+    "peg": 1.92
+   }
+  },
+  {
+   "ticker": "GILD",
+   "name": "Gilead Sciences, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 4,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.4,
+    "peg": 2.27
+   }
+  },
+  {
+   "ticker": "NVDA",
+   "name": "NVIDIA Corporation - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": false,
+    "profit": true,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.7,
+    "peg": 0.48
+   }
+  },
+  {
+   "ticker": "STX",
+   "name": "Seagate Technology Holdings PLC - Ordina",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 6.7,
+    "peg": 0.53
+   }
+  },
+  {
+   "ticker": "ABBV",
+   "name": "AbbVie Inc. Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.1,
+    "peg": 0.54
+   }
+  },
+  {
+   "ticker": "CIEN",
+   "name": "Ciena Corporation Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -1.1,
+    "peg": 0.57
+   }
+  },
+  {
+   "ticker": "ADI",
+   "name": "Analog Devices, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -1.3,
+    "peg": 0.58
+   }
+  },
+  {
+   "ticker": "ADBE",
+   "name": "Adobe Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -6.3,
+    "peg": 0.58
+   }
+  },
+  {
+   "ticker": "BSX",
+   "name": "Boston Scientific Corporation Common Sto",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.6,
+    "peg": 0.63
+   }
+  },
+  {
+   "ticker": "APP",
+   "name": "Applovin Corporation - Class A Common St",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.5,
+    "peg": 0.68
+   }
+  },
+  {
+   "ticker": "TER",
+   "name": "Teradyne, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -3.5,
+    "peg": 0.73
+   }
+  },
+  {
+   "ticker": "RDDT",
+   "name": "Reddit, Inc. Class A Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 5.9,
+    "peg": 0.76
+   }
+  },
+  {
+   "ticker": "AMAT",
+   "name": "Applied Materials, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -3.1,
+    "peg": 0.83
+   }
+  },
+  {
+   "ticker": "VRT",
+   "name": "Vertiv Holdings, LLC Class A Common Stoc",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 0.5,
+    "peg": 0.84
+   }
+  },
+  {
+   "ticker": "CVX",
+   "name": "Chevron Corporation Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": 11.9,
+    "peg": 0.9
+   }
+  },
+  {
+   "ticker": "MPC",
+   "name": "Marathon Petroleum Corporation Common St",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -6.8,
+    "peg": 0.9
+   }
+  },
+  {
+   "ticker": "INTU",
+   "name": "Intuit Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -3.8,
+    "peg": 0.93
+   }
+  },
+  {
+   "ticker": "META",
+   "name": "Meta Platforms, Inc. - Class A Common St",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.2,
+    "peg": 0.98
+   }
+  },
+  {
+   "ticker": "CSCO",
+   "name": "Cisco Systems, Inc. - Common Stock",
+   "date": "2026-10-23",
+   "score": 3,
+   "known": 4,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": null
+   },
+   "badges": {
+    "dilution_pct": -0.4,
+    "peg": 0.98
+   }
+  }
+ ]
+}
