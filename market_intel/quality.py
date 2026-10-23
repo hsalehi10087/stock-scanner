@@ -149,6 +149,9 @@ def score(sym, market='us'):
         badges['peg'] = round(float(peg), 2)
     res = {'date': str(dt.date.today()), 'score': sum(1 for v in f.values() if v),
            'known': sum(1 for v in f.values() if v is not None), 'flags': f, 'badges': badges}
+    if res['known'] == 0 or not info:
+        # هیچ داده‌ای نیامد (معمولاً محدودیت درخواست Yahoo): امتیاز صفر حساب نکن و ذخیره هم نکن
+        raise RuntimeError('no data from Yahoo')
     c[sym] = res
     return res
 

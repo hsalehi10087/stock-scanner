@@ -32,7 +32,9 @@ def universe(m):
         return gainers.universe()
     if m == 'jp':
         import jp_growth
-        return {k: v for k, v in jp_growth.tse_list().items() if k[:4].isdigit() and 1300 <= int(k[:4]) <= 9999}
+        bad = re.compile(r'ETF|ETN|FUND|REIT|INVESTMENT CORP|TRUST', re.I)
+        return {k: v for k, v in jp_growth.tse_list().items()
+                if k[:4].isdigit() and 1300 <= int(k[:4]) <= 9999 and not bad.search(str(v))}
     if m == 'cn':
         import pandas as pd
         u = {}
@@ -73,17 +75,22 @@ def scan(m):
     pool = liquid(names, m)
     print(f'{m}: universe {len(names)} liquid {len(pool)}', flush=True)
     res = {}
+    import time
 
     def one(t):
-        try:
-            return t, Q.score(t, m)
-        except Exception as e:
-            return t, {'error': repr(e)[:80]}
-    with cf.ThreadPoolExecutor(max_workers=6) as ex:
+        for wait in (0, 20, 60):          # در صورت محدودیت Yahoo صبر و تلاش دوباره
+            time.sleep(wait + 0.3)
+            try:
+                return t, Q.score(t, m)
+            except Exception as e:
+                err = repr(e)[:80]
+        return t, {'error': err}
+    with cf.ThreadPoolExecutor(max_workers=3) as ex:
         for k, (t, r) in enumerate(ex.map(one, pool), 1):
             res[t] = r
             if k % 200 == 0:
-                print(f'{m}: scored {k}/{len(pool)}', flush=True)
+                bad = sum(1 for x in res.values() if 'error' in x)
+                print(f'{m}: scored {k}/{len(pool)} errors {bad}', flush=True)
                 Q.save()
     Q.save()
     ok = {t: r for t, r in res.items() if 'score' in r}
@@ -101,7 +108,7 @@ def scan(m):
         labels[t] = CJK.sub('', str(n)).strip(' -,')[:40]
     dist = {s: sum(1 for r in ok.values() if r['score'] == s) for s in range(6)}
     os.makedirs(OUT, exist_ok=True)
-    json.dump({'market': m, 'date': str(dt.date.today()), 'scored': len(ok), 'universe': len(names), 'liquid': len(pool),
+    json.dump({'market': m, 'date': str(dt.date.today()), 'scored': len(ok), 'no_data': len(res) - len(ok), 'universe': len(names), 'liquid': len(pool),
                'distribution': dist, 'top': [{'ticker': t, 'name': labels[t], **ok[t]} for t in top]},
               open(os.path.join(OUT, f'weekly_{m}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(m, 'distribution', dist)
@@ -119,6 +126,9 @@ def report():
             L += [f"{FA[m]}: داده‌ی این هفته آماده نشد.", '']
             continue
         d5, d4 = v['distribution'].get('5', 0), v['distribution'].get('4', 0)
+        if v['scored'] < 0.5 * v['liquid']:
+            L += [f"{FA[m]}: داده‌ی کافی از Yahoo نرسید ({str(v['scored']).translate(D)} از {str(v['liquid']).translate(D)})؛ هفته‌ی بعد دوباره.", '']
+            continue
         L.append(f"<b>{FA[m]}</b> — {str(v['scored']).translate(D)} سهم امتیاز گرفتند؛ "
                  f"⭐۵: {str(d5).translate(D)} سهم، ⭐۴: {str(d4).translate(D)} سهم")
         for i, r in enumerate(v['top'], 1):
