@@ -43,7 +43,7 @@ def main():
             nm = f" — {e(clean)}" if clean else ''
             ok = '، '.join(p.get('passed', []))
             L.append(f"{fa(p['rank'])}. <b>{e(p['ticker'])}</b>{nm} | قیمت {fa(p['price'])} | امتیاز الگو {fa(round(p['prob'] * 100))}")
-            L.append(f"   ✅ {ok} | صورت مالی {fa(p.get('health', '?'))}، کن‌اسلیم {fa(p.get('canslim', '?'))}، بافت {fa(p.get('buffett', '?'))}")
+            L.append(f"   ✅ {ok} | صورت مالی {fa(p.get('health', '?'))}، کن‌اسلیم {fa(p.get('canslim', '?'))}، بافت {fa(p.get('buffett', '?'))} | {p.get('quality', '')}")
         o = prof.get('out_of_sample')
         if o:
             L.append(f"🧪 سنجش گذشته ({fa(o['period'].replace('-', '/'))}): از ۱۰ انتخاب هر هفته {fa(o['top10_hit_rate_pct'])}٪ "

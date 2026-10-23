@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 import summary as S  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import signal_tracker as T  # noqa: E402
+import quality as Q  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fundamentals')
@@ -113,6 +114,7 @@ def _main():
             rows.append({'ticker': t, 'name': title, 'cur_ni_musd': cur_val / 1e6,
                          'prev_ni_musd': prev_val / 1e6, 'growth': growth, 'period': period})
     rows.sort(key=lambda r: -r['growth'])
+    Q.annotate(rows, 'us', limit=60)
 
     os.makedirs(HIST_DIR, exist_ok=True)
     stamp = today.isoformat()
@@ -126,7 +128,8 @@ def _main():
             state = T.bootstrap('fundamentals', HIST_DIR, event_col='period')
         cur_px = T.last_prices(set(state) | {r['ticker'] for r in rows})
         for r in rows:
-            T.add(state, r['ticker'], stamp, r['period'], cur_px.get(r['ticker']))
+            T.add(state, r['ticker'], stamp, r['period'], cur_px.get(r['ticker']),
+                  {'qs': r.get('qs'), 'qs_flags': r.get('qs_flags')} if r.get('qs') is not None else None)
         T.save('fundamentals', state)
         trk = {x['ticker']: x for x in T.returns(state, cur_px)}
         for r in rows:
@@ -134,6 +137,7 @@ def _main():
             r['ret'] = trk.get(r['ticker'], {}).get('ret', 0.0)
         since = min((v['first_date'] for v in state.values()), default=stamp)
         track_msg = T.summary_text('رشد سود بیش از ۱۰٪', list(trk.values()), since, 'فصل')
+        track_msg = '\n'.join([Q.best_line(rows), Q.LEGEND, '', track_msg])
         DIAG.append(f'tracker: {len(state)} tracked, {len(trk)} priced')
     except Exception as e:
         DIAG.append(f'tracker error: {e!r}')
@@ -169,15 +173,15 @@ def render_png(rows, path):
     import matplotlib.pyplot as plt
     cells = [[r['ticker'], r['name'].split(' Common')[0][:28], f"{r['prev_ni_musd']:,.1f}",
               f"{r['cur_ni_musd']:,.1f}", f"+{r['growth']:.1f}%", f"{int(r.get('count', 1))}Q",
-              f"{float(r.get('ret', 0)):+.1f}%"] for r in rows]
-    heads = ['TICKER', 'COMPANY', 'PREV Q (M$)', 'LATEST Q (M$)', 'GROWTH', 'SIGNALS', 'SINCE 1ST']
-    fig, ax = plt.subplots(figsize=(12.5, 0.45 * (len(cells) + 1) + 0.4))
+              f"{float(r.get('ret', 0)):+.1f}%", f"{r['qs']}/5" if r.get('qs') is not None else '-'] for r in rows]
+    heads = ['TICKER', 'COMPANY', 'PREV Q (M$)', 'LATEST Q (M$)', 'GROWTH', 'SIGNALS', 'SINCE 1ST', 'QUALITY']
+    fig, ax = plt.subplots(figsize=(13.5, 0.45 * (len(cells) + 1) + 0.4))
     ax.axis('off')
     t = ax.table(cellText=cells, colLabels=heads, loc='center', cellLoc='center')
     t.auto_set_font_size(False)
     t.set_fontsize(10)
     t.scale(1, 1.5)
-    widths = {0: 0.10, 1: 0.30, 2: 0.13, 3: 0.14, 4: 0.13, 5: 0.10, 6: 0.12}
+    widths = {0: 0.09, 1: 0.27, 2: 0.12, 3: 0.13, 4: 0.12, 5: 0.09, 6: 0.1, 7: 0.09}
     for (i, j), cell in t.get_celld().items():
         cell.set_width(widths[j])
         cell.set_edgecolor('#9ca3af')

@@ -48,7 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "AI Stocks Bot"
-          git add -f data/ai_stocks || true
+          git add -f data/ai_stocks data/quality || true
           git diff --cached --quiet && exit 0
           git commit -q -m "🤖 ai stocks $(date -u +%F_%H%M)"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done

@@ -37,13 +37,15 @@ def save(kind, state):
     json.dump(state, open(_path(kind), 'w', encoding='utf-8'), ensure_ascii=False, indent=0, sort_keys=True)
 
 
-def add(state, ticker, date, event, price):
+def add(state, ticker, date, event, price, extra=None):
     s = state.get(ticker)
     if s is None:
         if price is None or not price > 0:
             return
         state[ticker] = {'first_date': date, 'first_price': round(float(price), 4), 'count': 1,
                          'last_date': date, 'events': [event]}
+        if extra:
+            state[ticker].update(extra)   # مثلاً امتیاز کیفیت روز اولین سیگنال، برای سنجش بعدی معیارها
     elif event not in s['events']:
         s['events'].append(event)
         s['count'] = len(s['events'])

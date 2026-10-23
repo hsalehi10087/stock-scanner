@@ -40,6 +40,9 @@ import re as _re
 CJK = _re.compile(r'[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef]')
 
 
+import quality as Q  # noqa: E402
+
+
 def fa_name(sym):
     """نام فارسی شرکت: نام انگلیسی از Yahoo، ترجمه به فارسی؛ هیچ حرف چینی نمی‌ماند.
     اگر ترجمه ممکن نبود، نام انگلیسی؛ اگر آن هم نبود، رشته‌ی خالی."""
@@ -209,6 +212,7 @@ def main():
                          'ni_cur_m_cny': g[1] / 1e6, 'ni_prev_m_cny': g[2] / 1e6, 'date': d['date']})
     DIAG.append(f'qualified={len(rows)} (growth computed for {with_data} of {len(cands)})')
     rows.sort(key=lambda r: -r['ni_growth'])
+    Q.annotate(rows, 'cn')
     date = rows[0]['date'] if rows else (cands[0][1]['date'] if cands else str(dt.date.today()))
     os.makedirs(HIST_DIR, exist_ok=True)
     pd.DataFrame(rows).to_csv(os.path.join(HIST_DIR, f'{date}.csv'), index=False, encoding='utf-8')
@@ -220,9 +224,11 @@ def main():
     for r in rows[:30]:
         nm = fa_name(r['ticker'])
         label = f" ({html.escape(nm)})" if nm else ''
-        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪ {r.get('qs_label', '')}")
     if not rows:
         lines.append('امروز سهمی با هر دو شرط پیدا نشد.')
+    else:
+        lines += ['', Q.best_line(rows), Q.LEGEND]
     ok = True
     for cid in chat_ids:
         for ch in S.chunks(lines):

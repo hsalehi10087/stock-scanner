@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Pattern Hunter"
-          git add -f data/pattern_hunter || true
+          git add -f data/pattern_hunter data/quality || true
           git diff --cached --quiet && exit 0
           git commit -q -m "🔍 pattern picks $(date -u +%F)"
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done

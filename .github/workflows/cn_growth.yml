@@ -36,5 +36,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "China Bot"
-          git add -f data/cn_gainers || true
+          git add -f data/cn_gainers data/quality || true
           git diff --cached --quiet || (git commit -m "🇨🇳 china $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)

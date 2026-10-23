@@ -14,6 +14,8 @@ import time
 
 import yfinance as yf
 
+import quality as Q
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'ai_stocks')
 # فهرست پایه: سهام کوچک و متوسط مرتبط با هوش مصنوعی در لایه‌های مختلف (تراشه، شبکه، دیتاسنتر و انرژی، نرم‌افزار، کاربرد)
@@ -92,10 +94,14 @@ def main():
             if row['cash_b'] is not None and row['debt_b'] is not None:
                 sc += 0.5 if row['cash_b'] >= row['debt_b'] else -0.5
             row['quant_score'] = round(sc, 2)
+            qq = Q.score(t, 'us')
+            row['quality_score'] = qq['score']
+            row['quality_flags'] = qq['flags']
             out[t] = row
         except Exception as e:
             out[t] = {'segment': s, 'error': repr(e)[:120]}
         time.sleep(0.4)
+    Q.save()
     json.dump({'date': str(dt.date.today()), 'count': len(out), 'from_news': extra, 'stocks': out},
               open(os.path.join(OUT, 'metrics.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     ok = [t for t, r in out.items() if 'error' not in r]

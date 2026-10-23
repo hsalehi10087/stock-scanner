@@ -39,6 +39,9 @@ UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 DIAG = cn_growth.DIAG  # یک فهرست تشخیص مشترک
 
 
+import quality as Q  # noqa: E402
+
+
 def _get_json(url, tries=4):
     last = None
     for k in range(tries):
@@ -128,6 +131,7 @@ def main():
                          'ni_cur_m_twd': g[1] / 1e6, 'ni_prev_m_twd': g[2] / 1e6, 'date': d['date']})
     DIAG.append(f'qualified={len(rows)} (growth computed for {with_data} of {len(cands)})')
     rows.sort(key=lambda r: -r['ni_growth'])
+    Q.annotate(rows, 'tw')
     date = rows[0]['date'] if rows else (cands[0][1]['date'] if cands else str(dt.date.today()))
     week_from = cands[0][1]['from'] if cands else ''
     os.makedirs(HIST_DIR, exist_ok=True)
@@ -139,9 +143,11 @@ def main():
     for r in rows[:30]:
         nm = en_name(r['ticker'])
         label = f" ({html.escape(nm)})" if nm else ''
-        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        lines.append(f"• <b>{r['ticker']}</b>{label}: قیمت هفتگی +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪ {r.get('qs_label', '')}")
     if not rows:
         lines.append('سهمی با هر دو شرط پیدا نشد.')
+    else:
+        lines += ['', Q.best_line(rows), Q.LEGEND]
     ok = True
     for cid in chat_ids:
         for ch in S.chunks(lines):

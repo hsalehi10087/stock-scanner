@@ -14,6 +14,8 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import FEATURES, MARKETS, OUT, download, features, log  # noqa: E402
 import fundamentals as FU  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'market_intel'))
+import quality as Q  # noqa: E402
 
 TOP = 5          # حداکثر سهم ارسالی در هر بازار
 POOL = 40        # چند نامزد برتر الگو، به ترتیب، از صافی بنیادی می‌گذرند
@@ -80,13 +82,14 @@ def main():
             lst.append({'ticker': t, 'name': nm, 'price': price, 'prob': round(float(r.p), 3), 'rank': len(lst) + 1,
                         'r6m': round(float(r.r6m) * 100, 1), 'from_hi': round(float(r.from_hi) * 100, 1),
                         'volu_ratio': round(float(r.volu_ratio), 2), 'passed': fu['passed'], 'health': fu['health'],
-                        'canslim': fu['canslim'], 'buffett': fu['buffett']})
+                        'canslim': fu['canslim'], 'buffett': fu['buffett'], 'quality': Q.label(Q.score(t, m))})
             hist.loc[len(hist)] = [today, m, t, nm, price, round(float(r.p), 4), len(lst), round(float(idx.dropna().iloc[-1]), 4)]
         picks[m] = {'data_date': str(last_day.date()), 'scored': int(len(X)), 'picks': lst, 'checked': len(checked),
                     'dropped': len(dropped), 'market_up': mkt_up,
                     'median_prob': round(float(X.p.median()), 3)}
         prices_now[m] = ({t: float(C[t].dropna().iloc[-1]) for t in C.columns if C[t].notna().any()},
                          float(idx.dropna().iloc[-1]))
+    Q.save()
     hist = hist.drop_duplicates(subset=['date', 'market', 'ticker'], keep='last')
     hist.to_csv(HIST, index=False)
     # سنجش: بازده هر پیشنهاد از روز اولین پیشنهاد تا امروز، در برابر شاخص همان بازار

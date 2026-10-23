@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.join(HERE, '..', 'market_summary'))
 import gainers  # noqa: E402
 import summary as S  # noqa: E402
 from report import fa  # noqa: E402
+import quality as Q  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
 HIST_DIR = os.path.join(ROOT, 'data', 'jp_gainers')
@@ -93,6 +94,7 @@ def main():
                          'ni_growth': g[0], 'ni_cur_m': g[1] / 1e6, 'ni_prev_m': g[2] / 1e6,
                          'date': d['date']})
     rows.sort(key=lambda r: -r['price_chg'])
+    Q.annotate(rows, 'jp', sym_of=lambda r: r['ticker'] + '.T')
     date = rows[0]['date'] if rows else (cands[0][1]['date'] if cands else str(dt.date.today()))
     os.makedirs(HIST_DIR, exist_ok=True)
     pd.DataFrame(rows).to_csv(os.path.join(HIST_DIR, f'{date}.csv'), index=False, encoding='utf-8')
@@ -103,9 +105,11 @@ def main():
              f'<i>{len(rows)} سهم از {len(cands)} سهم با رشد قیمت بیش از ۱۰٪</i>', '']
     for r in rows[:30]:
         nm = fa(r['name']) or r['name']
-        lines.append(f"• <b>{r['ticker']}</b> ({html_escape(nm)}): قیمت +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪")
+        lines.append(f"• <b>{r['ticker']}</b> ({html_escape(nm)}): قیمت +{r['price_chg']:.1f}٪ | سود +{r['ni_growth']:.1f}٪ {r.get('qs_label', '')}")
     if not rows:
         lines.append('امروز سهمی با هر دو شرط پیدا نشد.')
+    else:
+        lines += ['', Q.best_line(rows), Q.LEGEND]
     text_chunks = S.chunks(lines)
     ok = True
     for cid in chat_ids:
