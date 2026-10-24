@@ -1,0 +1,22 @@
+id: 277a1cce48-fxi-ibs-short
+name: FXI IBS short (Medium)
+name_fa: فروش استقراضی FXI با نسبت IBS
+source: medium/algorithmic-trading
+source_url: https://medium.com/@Kryptera/the-short-that-almost-broke-me-betting-against-chinas-etf-with-a-single-candle-ratio-82ead07282b9
+claim: "«بک‌تست ۲۲ ساله‌ی فروش استقراضی IBS روی FXI: از خرید و نگه‌داری عقب ماند، در شارپ برابر بود و از افت ۵۴٪ جان سالم به در برد»"
+claimed_return: "Sharpe ≈ buy&hold, max DD -54%"
+added: 2026-10-24
+status: implemented
+asset_class: etf
+symbols: [FXI]
+timeframe: 1d
+start: '2004-10-01'
+notes: >-
+  متن کامل مقاله قابل خواندن نبود و آستانه‌های دقیق IBS در خلاصه نیامده؛ نسخه‌ی رایج پیاده شد:
+  فروش استقراضی وقتی بسته‌شدن در ۲۰٪ بالای دامنه‌ی روز است (IBS > 0.8)، خروج وقتی بسته‌شدن در ۲۰٪ پایین
+  دامنه است (IBS < 0.2). شروع از آغاز داده‌ی FXI (حدود ۲۲ سال). خود نویسنده هم می‌گوید از نگه‌داری عقب ماند.
+indicators:
+  ibs: {fn: ibs}
+entry: ibs > 0.8
+exit: ibs < 0.2
+side: short

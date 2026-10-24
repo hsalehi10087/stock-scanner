@@ -1,0 +1,10 @@
+id: cc42c45e99-spxw-1dte-5delta-put-selling
+name: SPXW 1DTE 5-delta put selling
+name_fa: فروش پوت ۵ دلتای یک‌روزه SPX
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xdp8c3/low_delta_spxw_1dte_put_selling_back_tests/
+claim: "«۱۵ دقیقه قبل از بسته‌شدن، فروش پوت برهنه‌ی SPXW با سررسید روز بعد و دلتای حدود ۵؛ بک‌تست از ۲۰۱۶: بازده سالانه ۱۰٫۶٪ (با حد ضرر گسترده ۱۰٫۸٪)»"
+claimed_return: "10.6% CAGR"
+added: 2026-10-24
+status: not_testable
+reason_not_testable: "فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند"
