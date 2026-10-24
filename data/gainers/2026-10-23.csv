@@ -1,0 +1,37 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+AIOK,AI OKTO CORP. - Common Stock,12.020000457763672,182.82354018267463,42564200.0,2026-10-23,1.0,2.0,⭐۱/۵ (۳ نامعلوم),"{'growth': None, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+CLRO,"ClearOne, Inc. - Common Stock",3.25,69.27083711683137,36089700.0,2026-10-23,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+BOLT,"Bolt Biotherapeutics, Inc. - Common Stock",6.269999980926514,49.64200227447908,12784300.0,2026-10-23,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+JYD,Jayud Global Logistics Limited - Class A Ordinary Shares,1.8300000429153442,32.60869922018983,3623900.0,2026-10-23,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+HTCO,High-Trend International Group - Class A Ordinary Shares,1.5299999713897705,30.769233120498885,3550500.0,2026-10-23,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+VSME,VS Media Holdings Limited - Class A Ordinary Shares,1.0499999523162842,28.0487757896398,310000.0,2026-10-23,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+UWMC,UWM Holdings Corporation Class A Common Stock,1.4500000476837158,26.086963282190467,25449500.0,2026-10-23,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+XTIA,"XTI Aerospace, Inc. Common Stock  - Common Stock",1.0700000524520874,25.882355581105298,4394500.0,2026-10-23,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+BKHA,Black Hawk Acquisition Corporation - Class A Ordinary Shares,5.400000095367432,25.87412921642427,200700.0,2026-10-23,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+NAUT,"Nautilus Biotechnology, Inc. - Common Stock",3.240000009536743,24.615389553047674,13582300.0,2026-10-23,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+BKYI,"BIO-key International, Inc. - Common Stock",3.390000104904175,23.72263113522135,35209900.0,2026-10-23,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+NIVF,NewGenIvf Group Limited - Class A Ordinary Shares,1.4600000381469727,22.48322144295041,1083500.0,2026-10-23,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+QSI,Quantum-Si Incorporated - Class A Common Stock,1.399999976158142,21.739130885479362,11414800.0,2026-10-23,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+RHI,Robert Half Inc. Common Stock,45.869998931884766,21.7356649691534,6894100.0,2026-10-23,4.0,5.0,⭐۴/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': True, 'analysts': True}"
+CNDT,Conduent Incorporated - Common Stock,1.7899999618530273,20.13422485880101,2609100.0,2026-10-23,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+YHC,LQR House Inc. - Common Stock,3.0,19.999999999999996,307100.0,2026-10-23,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+AIXI,XIAO-I Corporation - American Depositary Shares,2.9600000381469727,19.35483932991304,16823600.0,2026-10-23,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+TORO,Toro Corp. - Common Shares,4.349999904632568,18.85245362351611,335900.0,2026-10-23,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+VEEA,Veea Inc. - Common Stock,4.929999828338623,17.661092148267453,2346600.0,2026-10-23,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+YDES,YD Bio Limited - Ordinary Shares,4.949999809265137,16.745284822497354,105100.0,2026-10-23,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+SAIQ,WISeSat.Space Holdings Corp. - Ordinary Shares,6.119999885559082,15.909084135836093,7448300.0,2026-10-23,0.0,2.0,⭐۰/۵ (۳ نامعلوم),"{'growth': None, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+HLP,Hongli Group Inc. - Class A Ordinary Shares,3.509999990463257,15.081968699626746,277700.0,2026-10-23,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': True, 'analysts': None}"
+EAF,GrafTech International Ltd. Common Stock,8.510000228881836,14.22819391617216,805000.0,2026-10-23,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+CAST,"FreeCast, Inc. - Class A common stock",1.090000033378601,13.541672681458428,564400.0,2026-10-23,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+SID,Companhia Siderurgica Nacional S.A. Common Stock,1.1799999475479126,13.461537579812921,7592600.0,2026-10-23,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+FMFC,Kandal M Venture Limited - Class A ordinary Shares,4.070000171661377,13.370481029750447,110600.0,2026-10-23,,,,
+TPET,Trio Petroleum Corp. Common Stock,1.7200000286102295,13.157898039038528,764100.0,2026-10-23,,,,
+LZM,Lifezone Metals Limited Ordinary Shares,3.4700000286102295,13.029319350665824,1138600.0,2026-10-23,,,,
+FFR,FF EAI Robotics Ecosystem Inc. - Common Stock,1.1299999952316284,12.999999523162842,471400.0,2026-10-23,,,,
+BUUU,BUUU Group Limited - Class A Ordinary Share,53.900001525878906,12.526095634377764,188200.0,2026-10-23,,,,
+DGNX,Diginex Limited - Ordinary Shares,1.399999976158142,11.999998092651376,361900.0,2026-10-23,,,,
+TYGO,"Tigo Energy, Inc. - Common Stock",1.0299999713897705,11.231098536776773,908300.0,2026-10-23,,,,
+NTHI,"NeOnc Technologies Holdings, Inc. - Common Stock",3.2699999809265137,10.847455188824684,379900.0,2026-10-23,,,,
+NXH,"Neighborhood Intelligence, Inc.  - Common Stock",1.6399999856948853,10.810808416175743,7708700.0,2026-10-23,,,,
+LHAI,Linkhome Holdings Inc. - Common stock,1.0499999523162842,10.526312157057616,213700.0,2026-10-23,,,,
+DTCX,"Datacentrex, Inc. - Common Stock",1.2799999713897705,10.3448282949423,211500.0,2026-10-23,,,,
