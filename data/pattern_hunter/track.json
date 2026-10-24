@@ -1,5 +1,5 @@
 {
- "date": "2026-10-23",
+ "date": "2026-10-24",
  "markets": {
   "us": {
    "picks_total": 5,
@@ -12,37 +12,37 @@
     {
      "ticker": "P",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -7.4,
-     "index_ret_pct": -1.2
+     "days": 2,
+     "ret_pct": -5.8,
+     "index_ret_pct": -1.7
     },
     {
      "ticker": "QCOM",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -2.9,
-     "index_ret_pct": -1.2
+     "days": 2,
+     "ret_pct": -1.2,
+     "index_ret_pct": -1.7
     },
     {
      "ticker": "KLAC",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -9.5,
-     "index_ret_pct": -1.2
+     "days": 2,
+     "ret_pct": -10.9,
+     "index_ret_pct": -1.7
     },
     {
      "ticker": "TTMI",
      "since": "2026-10-23",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
+     "days": 1,
+     "ret_pct": 8.4,
+     "index_ret_pct": -0.5
     },
     {
      "ticker": "ADEA",
      "since": "2026-10-23",
-     "days": 0,
-     "ret_pct": -0.0,
-     "index_ret_pct": 0.0
+     "days": 1,
+     "ret_pct": -0.3,
+     "index_ret_pct": -0.5
     }
    ]
   },
@@ -57,37 +57,37 @@
     {
      "ticker": "301200.SZ",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 1.2,
-     "index_ret_pct": 2.0
+     "index_ret_pct": 2.1
     },
     {
      "ticker": "300390.SZ",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 3.0,
-     "index_ret_pct": 2.0
+     "index_ret_pct": 2.1
     },
     {
      "ticker": "300475.SZ",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 1.6,
-     "index_ret_pct": 2.0
+     "index_ret_pct": 2.1
     },
     {
      "ticker": "002409.SZ",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 1.4,
-     "index_ret_pct": 2.0
+     "index_ret_pct": 2.1
     },
     {
      "ticker": "605376.SS",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": -0.5,
-     "index_ret_pct": 2.0
+     "index_ret_pct": 2.1
     }
    ]
   },
@@ -102,30 +102,30 @@
     {
      "ticker": "HEXT.NS",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -1.2,
-     "index_ret_pct": -0.2
+     "days": 2,
+     "ret_pct": -1.4,
+     "index_ret_pct": 0.0
     },
     {
      "ticker": "MANYAVAR.NS",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -1.8,
-     "index_ret_pct": -0.2
+     "days": 2,
+     "ret_pct": 0.3,
+     "index_ret_pct": 0.0
     },
     {
      "ticker": "MMTC.NS",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -3.5,
-     "index_ret_pct": -0.2
+     "days": 2,
+     "ret_pct": -3.2,
+     "index_ret_pct": 0.0
     },
     {
      "ticker": "LOTUSDEV.NS",
      "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -2.4,
-     "index_ret_pct": -0.2
+     "days": 2,
+     "ret_pct": 2.5,
+     "index_ret_pct": 0.0
     }
    ]
   },
@@ -140,36 +140,36 @@
     {
      "ticker": "3444.T",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": -0.5,
-     "index_ret_pct": -1.0
-    },
-    {
-     "ticker": "5802.T",
-     "since": "2026-10-22",
-     "days": 1,
-     "ret_pct": -2.4,
      "index_ret_pct": -1.0
     },
     {
      "ticker": "6356.T",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": -1.1,
      "index_ret_pct": -1.0
     },
     {
      "ticker": "6574.T",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": -5.8,
      "index_ret_pct": -1.0
     },
     {
      "ticker": "3997.T",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": -12.4,
+     "index_ret_pct": -1.0
+    },
+    {
+     "ticker": "5802.T",
+     "since": "2026-10-22",
+     "days": 2,
+     "ret_pct": -2.4,
      "index_ret_pct": -1.0
     }
    ]
@@ -185,23 +185,23 @@
     {
      "ticker": "6870.TWO",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 0.0,
-     "index_ret_pct": 0.4
+     "index_ret_pct": -0.1
     },
     {
      "ticker": "2546.TW",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 0.0,
-     "index_ret_pct": 0.4
+     "index_ret_pct": -0.1
     },
     {
      "ticker": "6933.TW",
      "since": "2026-10-22",
-     "days": 1,
+     "days": 2,
      "ret_pct": 0.0,
-     "index_ret_pct": 0.4
+     "index_ret_pct": -0.1
     }
    ]
   }
