@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T14:00:24+00:00",
+ "updated": "2026-10-24T18:18:23+00:00",
  "results": {
   "277a1cce48-fxi-ibs-short": {
    "name": "FXI IBS short (Medium)",
@@ -70,16 +70,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.83,
-    "sharpe": 0.51,
+    "cagr": 10.65,
+    "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 312.68
+    "total": 303.69
    },
    "in_sample": {
-    "cagr": 8.04,
-    "sharpe": 0.43,
+    "cagr": 7.79,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 110.88
+    "total": 106.28
    },
    "out_sample": {
     "cagr": 17.15,
@@ -99,8 +99,8 @@
     "max_dd": -47.44,
     "total": 301.02
    },
-   "trades": 94,
-   "win_rate": 71.3,
+   "trades": 93,
+   "win_rate": 71.0,
    "avg_trade_pct": 2.0,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-23",
