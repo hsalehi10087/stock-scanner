@@ -1,22 +1,22 @@
 {
  "market": "cn",
- "date": "2026-10-23",
- "scored": 1959,
- "no_data": 41,
+ "date": "2026-10-24",
+ "scored": 2000,
+ "no_data": 0,
  "universe": 5224,
  "liquid": 2000,
  "distribution": {
-  "0": 196,
-  "1": 815,
-  "2": 716,
-  "3": 194,
+  "0": 198,
+  "1": 838,
+  "2": 730,
+  "3": 196,
   "4": 37,
   "5": 1
  },
  "top": [
   {
    "ticker": "603129.SS",
-   "name": "ZHEJIANG CF MOTO POWER CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 5,
    "known": 5,
@@ -33,7 +33,7 @@
   },
   {
    "ticker": "600233.SS",
-   "name": "YTO EXPRESS GROUP CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -51,7 +51,7 @@
   },
   {
    "ticker": "600801.SS",
-   "name": "HUAXIN BLDG MATL S GP CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -69,7 +69,7 @@
   },
   {
    "ticker": "002468.SZ",
-   "name": "STO",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -87,7 +87,7 @@
   },
   {
    "ticker": "600499.SS",
-   "name": "KEDA INDUSTRIAL GROUP CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -105,7 +105,7 @@
   },
   {
    "ticker": "002315.SZ",
-   "name": "FOCUS TECH.",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -123,7 +123,7 @@
   },
   {
    "ticker": "600267.SS",
-   "name": "ZHEJIANG HISUN PHARMACEUTICAL C",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -141,7 +141,7 @@
   },
   {
    "ticker": "000893.SZ",
-   "name": "ASIA-POTASH",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -159,7 +159,7 @@
   },
   {
    "ticker": "600428.SS",
-   "name": "COSCO SHIPPING SPECIALIZED CARR",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -177,7 +177,7 @@
   },
   {
    "ticker": "600961.SS",
-   "name": "ZHUZHOU SMELTER GROUP CO. LTD.",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -194,7 +194,7 @@
   },
   {
    "ticker": "002379.SZ",
-   "name": "HONGQIAO HOLDINGS",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -211,7 +211,7 @@
   },
   {
    "ticker": "300369.SZ",
-   "name": "NSFOCUS",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -228,7 +228,7 @@
   },
   {
    "ticker": "603606.SS",
-   "name": "NINGBO ORIENT WIRES AND CABLES",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -245,7 +245,7 @@
   },
   {
    "ticker": "688127.SS",
-   "name": "ZHEJIANG LANTE OPTICS CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -262,7 +262,7 @@
   },
   {
    "ticker": "603979.SS",
-   "name": "JCHX MINING MANAGEMENT CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -279,7 +279,7 @@
   },
   {
    "ticker": "002920.SZ",
-   "name": "DESAY SV",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -296,7 +296,7 @@
   },
   {
    "ticker": "688449.SS",
-   "name": "MAXIO TECHNOLOGY (HANGZHOU) CO",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -313,7 +313,7 @@
   },
   {
    "ticker": "300001.SZ",
-   "name": "TGOOD ELECTRIC",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -330,7 +330,7 @@
   },
   {
    "ticker": "600885.SS",
-   "name": "HONGFA TECHNOLOGY CO LTD",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
@@ -347,7 +347,7 @@
   },
   {
    "ticker": "600563.SS",
-   "name": "XIAMEN FARATRONIC CO.LTD.",
+   "name": "",
    "date": "2026-10-23",
    "score": 4,
    "known": 5,
