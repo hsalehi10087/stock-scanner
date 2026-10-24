@@ -1,6 +1,60 @@
 {
- "updated": "2026-10-23T19:27:10+00:00",
+ "updated": "2026-10-24T14:00:24+00:00",
  "results": {
+  "277a1cce48-fxi-ibs-short": {
+   "name": "FXI IBS short (Medium)",
+   "name_fa": "فروش استقراضی FXI با نسبت IBS",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/the-short-that-almost-broke-me-betting-against-chinas-etf-with-a-single-candle-ratio-82ead07282b9",
+   "claim": "«بک‌تست ۲۲ ساله‌ی فروش استقراضی IBS روی FXI: از خرید و نگه‌داری عقب ماند، در شارپ برابر بود و از افت ۵۴٪ جان سالم به در برد»",
+   "claimed_return": "Sharpe ≈ buy&hold, max DD -54%",
+   "asset_class": "etf",
+   "symbols": [
+    "FXI"
+   ],
+   "added": "2026-10-24",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": -4.84,
+    "sharpe": -0.1,
+    "max_dd": -83.3,
+    "total": -66.42
+   },
+   "in_sample": {
+    "cagr": -8.66,
+    "sharpe": -0.27,
+    "max_dd": -78.72,
+    "total": -75.24
+   },
+   "out_sample": {
+    "cagr": 5.91,
+    "sharpe": 0.38,
+    "max_dd": -33.97,
+    "total": 46.12
+   },
+   "buyhold_full": {
+    "cagr": 4.95,
+    "sharpe": 0.31,
+    "max_dd": -72.68,
+    "total": 189.77
+   },
+   "buyhold_out_sample": {
+    "cagr": -0.59,
+    "sharpe": 0.13,
+    "max_dd": -60.81,
+    "total": -3.81
+   },
+   "trades": 634,
+   "win_rate": 53.9,
+   "avg_trade_pct": -0.06,
+   "exposure": 0.7,
+   "period": "2004-10-08 → 2026-10-23",
+   "oos_start": "2020-03-12",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
    "name_fa": "مومنتوم استوکاستیک روی META",
@@ -16,43 +70,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.73,
+    "cagr": 10.83,
     "sharpe": 0.51,
     "max_dd": -66.12,
-    "total": 307.78
+    "total": 312.68
    },
    "in_sample": {
-    "cagr": 7.85,
-    "sharpe": 0.42,
+    "cagr": 8.04,
+    "sharpe": 0.43,
     "max_dd": -49.5,
-    "total": 107.42
+    "total": 110.88
    },
    "out_sample": {
-    "cagr": 17.28,
-    "sharpe": 0.67,
+    "cagr": 17.15,
+    "sharpe": 0.66,
     "max_dd": -42.23,
-    "total": 93.43
+    "total": 92.54
    },
    "buyhold_full": {
-    "cagr": 25.65,
-    "sharpe": 0.79,
+    "cagr": 25.61,
+    "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2227.76
+    "total": 2217.05
    },
    "buyhold_out_sample": {
-    "cagr": 40.03,
-    "sharpe": 1.01,
+    "cagr": 39.87,
+    "sharpe": 1.0,
     "max_dd": -47.44,
-    "total": 302.88
+    "total": 301.02
    },
    "trades": 94,
    "win_rate": 71.3,
-   "avg_trade_pct": 1.99,
+   "avg_trade_pct": 2.0,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-23",
    "oos_start": "2022-08-29",
    "forward_days": 1,
-   "forward_usd": 994.98,
+   "forward_usd": 990.4,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -91,13 +145,13 @@
     "cagr": 7.91,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 258.74
+    "total": 258.58
    },
    "buyhold_out_sample": {
-    "cagr": 17.77,
+    "cagr": 17.76,
     "sharpe": 0.95,
     "max_dd": -24.94,
-    "total": 127.92
+    "total": 127.83
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -122,6 +176,20 @@
    "status": "not_testable",
    "reason_not_testable": "در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست",
    "verdict": "غیرقابل آزمون: در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست"
+  },
+  "4e5794da7c-spy-qqq-gex-option-selling": {
+   "name": "SPY/QQQ option selling with GEX filter",
+   "name_fa": "فروش آپشن SPY و QQQ با فیلتر گامای دیلرها",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xdjrjk/i_backtested_17100_optionselling_strategies_on/",
+   "claim": "«بالاترین شارپ: فروش پوت ۰٫۱۰ دلتا یک‌ماهه‌ی SPY هر روز، نگه‌داری تا سررسید؛ شارپ +4.08، ۹۷٪ برنده و افت ۵۷٬۷۳۹ دلار» و «استرنگل 0DTE روی QQQ فقط در روزهای GEX مثبت شارپ +1.38»",
+   "claimed_return": "Sharpe +4.08, 97% win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-24",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست",
+   "verdict": "غیرقابل آزمون: فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست"
   },
   "6e5773fb3d-nq-15min-orb": {
    "name": "NQ 15-minute opening range breakout",
@@ -192,6 +260,34 @@
    "status": "not_testable",
    "reason_not_testable": "نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است",
    "verdict": "غیرقابل آزمون: نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است"
+  },
+  "cc42c45e99-spxw-1dte-5delta-put-selling": {
+   "name": "SPXW 1DTE 5-delta put selling",
+   "name_fa": "فروش پوت ۵ دلتای یک‌روزه SPX",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xdp8c3/low_delta_spxw_1dte_put_selling_back_tests/",
+   "claim": "«۱۵ دقیقه قبل از بسته‌شدن، فروش پوت برهنه‌ی SPXW با سررسید روز بعد و دلتای حدود ۵؛ بک‌تست از ۲۰۱۶: بازده سالانه ۱۰٫۶٪ (با حد ضرر گسترده ۱۰٫۸٪)»",
+   "claimed_return": "10.6% CAGR",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-24",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند",
+   "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند"
+  },
+  "d6ef4faa25-weekly-wheel-1pct": {
+   "name": "Weekly wheel 1% target",
+   "name_fa": "چرخه‌ی هفتگی فروش پوت و کال با هدف ۱٪",
+   "source": "reddit/thetagang",
+   "source_url": "https://www.reddit.com/r/thetagang/comments/1xdhbs7/1_weekly_returns_from_options_week_34_worst_two/",
+   "claim": "«هدف ۱٪ بازده هفتگی از فروش آپشن»؛ گزارش هفته‌ی ۳۴: مجموع پریمیوم ۲۹٬۹۱۳ دلار، زیان واگذاری ۲۰٬۰۵۸ دلار، سود کل ۸۶- دلار",
+   "claimed_return": "1%/week target (actual -0.17%/yr)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-24",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست",
+   "verdict": "غیرقابل آزمون: فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست"
   },
   "f7e1f24aa0-claude-renko-pnf-crypto": {
    "name": "Renko + Point&Figure crypto (1-min)",
