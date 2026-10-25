@@ -1,0 +1,22 @@
+id: b651b12620-crypto-ts-momentum-28d
+name: Crypto own-asset momentum 28d
+name_fa: مومنتوم خودِ دارایی ۲۸ روزه در کریپتو
+source: reddit/CryptoMarkets
+source_url: https://www.reddit.com/r/CryptoMarkets/comments/1xe9x9g/momentum_signal_is_real_but_eaten_by_costs_is_the/
+claim: "«مومنتوم خودِ دارایی (۱۴ تا ۲۸ روز) پایدارترین بود و در خارج از نمونه با شارپ متوسط دوام آورد، ولی سود خالص پس از هزینه کم است»"
+claimed_return: "modest Sharpe out-of-sample (~8 bps/trade gross)"
+added: 2026-10-25
+status: implemented
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1d
+start: '2014-09-17'
+notes: >-
+  نویسنده ۱۲ نماد فیوچرز بایننس را ۳ سال آزموده و جزئیات قانون را نگفته. نسخه‌ی ساده پیاده شد:
+  خرید BTC-USD وقتی بازده ۲۸ روز گذشته مثبت است، خروج وقتی منفی شود. فقط خرید (بدون فروش استقراضی).
+  پنجره‌ی ۲۸ روز همان سقف بازه‌ی گفته‌شده است. نماد خاصی گفته نشده، نماد اصلی بازار گذاشته شد.
+indicators:
+  roc28: {fn: roc, n: 28}
+entry: roc28 > 0
+exit: roc28 < 0
+side: long

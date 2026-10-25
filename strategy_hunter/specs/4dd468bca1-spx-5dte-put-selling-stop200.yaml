@@ -1,0 +1,10 @@
+id: 4dd468bca1-spx-5dte-put-selling-stop200
+name: SPX 5DTE 47-delta put selling, 200% stop
+name_fa: فروش پوت ۵ روزه‌ی SPX با دلتای ۰٫۴۷ و حد ضرر ۲۰۰٪
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xen4l7/spx_5dte_stops_and_spx_gap_resolution_community/
+claim: "«بک‌تست تستی‌ترید دو برابر خرید و نگه‌داری بازده داد: فروش پوت ۵ روزه‌ی SPX با دلتای ۰٫۴۷-، حد ضرر ۲۰۰٪ پریمیوم، فقط یک معامله در هر زمان، ۵ سال اخیر»"
+claimed_return: "2x buy&hold (5y)"
+added: 2026-10-25
+status: not_testable
+reason_not_testable: "فروش آپشن است؛ داده‌ی تاریخی آپشن SPX برای سنجیدن پریمیوم و حد ضرر در دسترس نیست"

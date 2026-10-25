@@ -1,0 +1,10 @@
+id: 7699b1cc47-gold-weekly-open-value-area
+name: Gold weekly open vs prior value area
+name_fa: بازگشایی هفتگی طلا نسبت به ناحیه‌ی ارزش هفته‌ی قبل
+source: tradingview-ideas
+source_url: https://www.tradingview.com/chart/GC1!/mhQ8lj7b-Gold-s-weekly-open-25-weeks-of-first-hour-vs-first-day/
+claim: "«وقتی هفته بیرون از ناحیه‌ی ارزش هفته‌ی قبل باز شد، در ۱۰ هفته از ۱۲ هفته قیمت به آن ناحیه برگشت و ۹ بار از ۱۰ بار در ۲۴ ساعت اول»"
+claimed_return: "10/12 return to value"
+added: 2026-10-25
+status: not_testable
+reason_not_testable: "به پروفایل حجم (ناحیه‌ی ارزش ۷۰٪) نیاز دارد که در اندیکاتورهای موتور نیست؛ نمونه فقط ۲۵ هفته"

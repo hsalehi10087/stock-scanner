@@ -1,0 +1,10 @@
+id: dec4bea894-polymarket-wallet-score
+name: Polymarket wallet score
+name_fa: امتیاز کیف‌پول‌های پالی‌مارکت
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xebwht/preregistered_a_wallet_score_on_polymarket_355k/
+claim: "«۱۰٪ برتر کیف‌پول‌ها تا تسویه پس از کارمزد ‎+1.17‎ سنت در هر ورود (t=2.9)؛ ۱۰٪ پایین ‎-0.96‎ سنت»"
+claimed_return: "+1.17c per entry (top 10%)"
+added: 2026-10-25
+status: not_testable
+reason_not_testable: "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
