@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T13:54:53+00:00",
+ "updated": "2026-10-25T18:31:36+00:00",
  "results": {
   "06da43d5d6-expiredoptions-csp-cc-leaps": {
    "name": "CSP + covered calls + LEAPS portfolio",
@@ -59,7 +59,7 @@
     "cagr": 5.91,
     "sharpe": 0.38,
     "max_dd": -33.97,
-    "total": 46.11
+    "total": 46.12
    },
    "buyhold_full": {
     "cagr": 4.95,
@@ -336,16 +336,16 @@
     "total": 212.05
    },
    "buyhold_full": {
-    "cagr": 53.2,
+    "cagr": 53.24,
     "sharpe": 0.98,
     "max_dd": -83.4,
-    "total": 17455.46
+    "total": 17516.18
    },
    "buyhold_out_sample": {
-    "cagr": 43.28,
+    "cagr": 43.42,
     "sharpe": 1.01,
     "max_dd": -53.06,
-    "total": 269.68
+    "total": 270.96
    },
    "trades": 170,
    "win_rate": 40.0,
