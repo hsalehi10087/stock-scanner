@@ -1,6 +1,34 @@
 {
- "updated": "2026-10-24T18:18:23+00:00",
+ "updated": "2026-10-25T13:54:53+00:00",
  "results": {
+  "06da43d5d6-expiredoptions-csp-cc-leaps": {
+   "name": "CSP + covered calls + LEAPS portfolio",
+   "name_fa": "سبد فروش پوت، کال پوشش‌دار و لیپس",
+   "source": "reddit/thetagang",
+   "source_url": "https://www.reddit.com/r/thetagang/comments/1xdvlz1/week_43_404_in_premium/",
+   "claim": "«۳ سال ۲۰۲۳ تا ۲۰۲۵: ‎+146.6%‎ در برابر ‎+86.1%‎ اس‌اند‌پی؛ امسال ‎+3.26%‎ و یک سال اخیر ‎-5.39%‎»",
+   "claimed_return": "+146.6% (2023-2025)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن روی ۹۹ سهم با انتخاب دستی و واریز هفتگی؛ قانون عددی و داده‌ی آپشن در دسترس نیست",
+   "verdict": "غیرقابل آزمون: فروش آپشن روی ۹۹ سهم با انتخاب دستی و واریز هفتگی؛ قانون عددی و داده‌ی آپشن در دسترس نیست"
+  },
+  "143c5c2124-morning-momentum-pop": {
+   "name": "Morning Momentum Pop (AI day-trading)",
+   "name_fa": "جهش مومنتوم صبحگاهی (معامله‌ی روزانه با هوش مصنوعی)",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xe6pvu/day_1_of_aialgo_trading_paper_posting_for/",
+   "claim": "«امروز ‎+674‎ دلار در ۵ حساب آزمایشی؛ بهترین الگو: Morning Momentum Pop با ‎+650‎ دلار (جزئیات در تصویر)»",
+   "claimed_return": "+$674 in one paper day",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست"
+  },
   "277a1cce48-fxi-ibs-short": {
    "name": "FXI IBS short (Medium)",
    "name_fa": "فروش استقراضی FXI با نسبت IBS",
@@ -16,22 +44,22 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.84,
+    "cagr": -4.82,
     "sharpe": -0.1,
-    "max_dd": -83.3,
-    "total": -66.42
+    "max_dd": -83.22,
+    "total": -66.26
    },
    "in_sample": {
-    "cagr": -8.66,
+    "cagr": -8.63,
     "sharpe": -0.27,
-    "max_dd": -78.72,
-    "total": -75.24
+    "max_dd": -78.62,
+    "total": -75.12
    },
    "out_sample": {
     "cagr": 5.91,
     "sharpe": 0.38,
     "max_dd": -33.97,
-    "total": 46.12
+    "total": 46.11
    },
    "buyhold_full": {
     "cagr": 4.95,
@@ -45,8 +73,8 @@
     "max_dd": -60.81,
     "total": -3.81
    },
-   "trades": 634,
-   "win_rate": 53.9,
+   "trades": 633,
+   "win_rate": 54.0,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
    "period": "2004-10-08 → 2026-10-23",
@@ -70,16 +98,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.65,
+    "cagr": 10.52,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 303.69
+    "total": 297.05
    },
    "in_sample": {
-    "cagr": 7.79,
-    "sharpe": 0.42,
+    "cagr": 7.61,
+    "sharpe": 0.41,
     "max_dd": -49.5,
-    "total": 106.28
+    "total": 102.89
    },
    "out_sample": {
     "cagr": 17.15,
@@ -101,7 +129,7 @@
    },
    "trades": 93,
    "win_rate": 71.0,
-   "avg_trade_pct": 2.0,
+   "avg_trade_pct": 1.98,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-23",
    "oos_start": "2022-08-29",
@@ -177,6 +205,20 @@
    "reason_not_testable": "در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست",
    "verdict": "غیرقابل آزمون: در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست"
   },
+  "4dd468bca1-spx-5dte-put-selling-stop200": {
+   "name": "SPX 5DTE 47-delta put selling, 200% stop",
+   "name_fa": "فروش پوت ۵ روزه‌ی SPX با دلتای ۰٫۴۷ و حد ضرر ۲۰۰٪",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xen4l7/spx_5dte_stops_and_spx_gap_resolution_community/",
+   "claim": "«بک‌تست تستی‌ترید دو برابر خرید و نگه‌داری بازده داد: فروش پوت ۵ روزه‌ی SPX با دلتای ۰٫۴۷-، حد ضرر ۲۰۰٪ پریمیوم، فقط یک معامله در هر زمان، ۵ سال اخیر»",
+   "claimed_return": "2x buy&hold (5y)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن است؛ داده‌ی تاریخی آپشن SPX برای سنجیدن پریمیوم و حد ضرر در دسترس نیست",
+   "verdict": "غیرقابل آزمون: فروش آپشن است؛ داده‌ی تاریخی آپشن SPX برای سنجیدن پریمیوم و حد ضرر در دسترس نیست"
+  },
   "4e5794da7c-spy-qqq-gex-option-selling": {
    "name": "SPY/QQQ option selling with GEX filter",
    "name_fa": "فروش آپشن SPY و QQQ با فیلتر گامای دیلرها",
@@ -233,6 +275,20 @@
    "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد",
    "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد"
   },
+  "7699b1cc47-gold-weekly-open-value-area": {
+   "name": "Gold weekly open vs prior value area",
+   "name_fa": "بازگشایی هفتگی طلا نسبت به ناحیه‌ی ارزش هفته‌ی قبل",
+   "source": "tradingview-ideas",
+   "source_url": "https://www.tradingview.com/chart/GC1!/mhQ8lj7b-Gold-s-weekly-open-25-weeks-of-first-hour-vs-first-day/",
+   "claim": "«وقتی هفته بیرون از ناحیه‌ی ارزش هفته‌ی قبل باز شد، در ۱۰ هفته از ۱۲ هفته قیمت به آن ناحیه برگشت و ۹ بار از ۱۰ بار در ۲۴ ساعت اول»",
+   "claimed_return": "10/12 return to value",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "به پروفایل حجم (ناحیه‌ی ارزش ۷۰٪) نیاز دارد که در اندیکاتورهای موتور نیست؛ نمونه فقط ۲۵ هفته",
+   "verdict": "غیرقابل آزمون: به پروفایل حجم (ناحیه‌ی ارزش ۷۰٪) نیاز دارد که در اندیکاتورهای موتور نیست؛ نمونه فقط ۲۵ هفته"
+  },
   "7d5d0b9e01-es-nq-vwap-delta-reversion": {
    "name": "ES/NQ VWAP 2SD delta-divergence mean reversion",
    "name_fa": "بازگشت به میانگین ES و NQ با باند دوم VWAP و واگرایی دلتا",
@@ -246,6 +302,60 @@
    "status": "not_testable",
    "reason_not_testable": "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست",
    "verdict": "غیرقابل آزمون: به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
+  },
+  "b651b12620-crypto-ts-momentum-28d": {
+   "name": "Crypto own-asset momentum 28d",
+   "name_fa": "مومنتوم خودِ دارایی ۲۸ روزه در کریپتو",
+   "source": "reddit/CryptoMarkets",
+   "source_url": "https://www.reddit.com/r/CryptoMarkets/comments/1xe9x9g/momentum_signal_is_real_but_eaten_by_costs_is_the/",
+   "claim": "«مومنتوم خودِ دارایی (۱۴ تا ۲۸ روز) پایدارترین بود و در خارج از نمونه با شارپ متوسط دوام آورد، ولی سود خالص پس از هزینه کم است»",
+   "claimed_return": "modest Sharpe out-of-sample (~8 bps/trade gross)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-10-25",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 67.01,
+    "sharpe": 1.32,
+    "max_dd": -74.38,
+    "total": 49834.37
+   },
+   "in_sample": {
+    "cagr": 81.91,
+    "sharpe": 1.41,
+    "max_dd": -74.38,
+    "total": 15901.87
+   },
+   "out_sample": {
+    "cagr": 36.75,
+    "sharpe": 1.1,
+    "max_dd": -35.7,
+    "total": 212.05
+   },
+   "buyhold_full": {
+    "cagr": 53.2,
+    "sharpe": 0.98,
+    "max_dd": -83.4,
+    "total": 17455.46
+   },
+   "buyhold_out_sample": {
+    "cagr": 43.28,
+    "sharpe": 1.01,
+    "max_dd": -53.06,
+    "total": 269.68
+   },
+   "trades": 170,
+   "win_rate": 40.0,
+   "avg_trade_pct": 6.24,
+   "exposure": 0.61,
+   "period": "2014-09-17 → 2026-10-25",
+   "oos_start": "2023-03-09",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "قبول"
   },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
@@ -289,6 +399,20 @@
    "reason_not_testable": "فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست"
   },
+  "dec4bea894-polymarket-wallet-score": {
+   "name": "Polymarket wallet score",
+   "name_fa": "امتیاز کیف‌پول‌های پالی‌مارکت",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xebwht/preregistered_a_wallet_score_on_polymarket_355k/",
+   "claim": "«۱۰٪ برتر کیف‌پول‌ها تا تسویه پس از کارمزد ‎+1.17‎ سنت در هر ورود (t=2.9)؛ ۱۰٪ پایین ‎-0.96‎ سنت»",
+   "claimed_return": "+1.17c per entry (top 10%)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست",
+   "verdict": "غیرقابل آزمون: به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
+  },
   "f7e1f24aa0-claude-renko-pnf-crypto": {
    "name": "Renko + Point&Figure crypto (1-min)",
    "name_fa": "رنکو و نقطه‌ونمودار کریپتو",
@@ -302,6 +426,20 @@
    "status": "not_testable",
    "reason_not_testable": "کندل یک‌دقیقه‌ای و قضاوت تصویری الگو؛ قانون عددی ثابت ندارد",
    "verdict": "غیرقابل آزمون: کندل یک‌دقیقه‌ای و قضاوت تصویری الگو؛ قانون عددی ثابت ندارد"
+  },
+  "f8a0b4a3b4-nvda-dg-wmt-wheel": {
+   "name": "Low-beta wheel 0.20-0.30 delta",
+   "name_fa": "چرخه‌ی فروش پوت و کال روی سهام کم‌نوسان",
+   "source": "reddit/thetagang",
+   "source_url": "https://www.reddit.com/r/thetagang/comments/1xeejda/trade_log_for_the_week_of_october_19_14421_in/",
+   "claim": "«سود از ابتدای سال ‎+16,093‎ دلار (‎+20.77%‎)، بیشترین افت ‎-9.92%‎؛ فروش پوت و کال با دلتای ۰٫۲۰ تا ۰٫۳۰ روی سهام کم‌نوسان در روند صعودی»",
+   "claimed_return": "+20.77% YTD",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-25",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن با انتخاب دستی سهام؛ داده‌ی تاریخی آپشن در دسترس نیست",
+   "verdict": "غیرقابل آزمون: فروش آپشن با انتخاب دستی سهام؛ داده‌ی تاریخی آپشن در دسترس نیست"
   }
  }
 }
