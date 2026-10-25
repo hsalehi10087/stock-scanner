@@ -1,6 +1,7 @@
 """شکارچی روش — جمع‌آوری ادعاهای سود از فروم‌ها و سایت‌ها (بدون کلید API).
 
-منابع: Reddit (JSON/RSS)، Hacker News (Algolia)، StackExchange Quant، Medium (RSS برچسب‌ها)، dev.to.
+منابع: Reddit (JSON/RSS)، Hacker News (Algolia)، StackExchange Quant، Medium (RSS برچسب‌ها)، dev.to،
+و بخش ویژه‌ی فارکس (جستجوی Reddit، ساب‌ردیت‌های فارکس، Medium، ایده‌های فارکس TradingView، مقاله‌های MQL5).
 هر پست با واژه‌های «روش + ادعای عددی سود» امتیاز می‌گیرد؛ پست‌های بالای آستانه در inbox.jsonl ذخیره می‌شوند.
 خروجی: data/strategy_hunter/inbox.jsonl (بدون تکرار، بر اساس url) و diagnostics.txt
 """
@@ -23,10 +24,13 @@ SUBS = ['algotrading', 'Daytrading', 'Forex', 'options', 'thetagang', 'swingtrad
 MEDIUM_TAGS = ['trading-strategy', 'algorithmic-trading', 'forex-trading', 'crypto-trading', 'options-trading',
                'day-trading', 'backtesting']
 MARKET = re.compile(r'\b(trad\w*|stocks?|forex|fx|crypto|bitcoin|btc|eth|options?|futures|spy|qqq|s&p|nasdaq|'
-                    r'portfolio|backtest\w*|scalp\w*|swing|day ?trad\w*|pips?|candles?)\b', re.I)
+                    r'portfolio|backtest\w*|scalp\w*|swing|day ?trad\w*|pips?|candles?|'
+                    r'(?:eur|gbp|usd|aud|nzd|cad|chf|jpy|xau){2}|gold|currenc\w*|expert advisor)\b', re.I)
 STRAT = re.compile(r'\b(strateg\w*|setup|system|indicator|rsi|macd|ema|sma|moving average|breakout|bollinger|'
                    r'scalp\w*|grid|martingale|dca|wheel|iron condor|credit spread|covered call|mean reversion|'
-                   r'momentum|backtest\w*|ichimoku|fibonacci|vwap|supertrend|orb|opening range)\b', re.I)
+                   r'momentum|backtest\w*|ichimoku|fibonacci|vwap|supertrend|orb|opening range|'
+                   r'london breakout|asian (?:session|range)|carry trade|pivot points?|expert advisor|\bea\b|'
+                   r'donchian|turtle|keltner|stochastic|parabolic sar|adx)\b', re.I)
 CLAIM = re.compile(r'(\d{2,5}(?:\.\d+)?\s?%|\bwin ?rate\b|\bprofit factor\b|\bsharpe\b|\bcagr\b|'
                    r'\bx\d{1,3}\b|\b\d+x\b|\bdoubled?\b|\bper (?:day|week|month)\b|\$\d{3,}[kK]?)', re.I)
 DIAG = []
@@ -154,6 +158,59 @@ def devto():
     return out
 
 
+def forex():
+    """بخش ویژه‌ی فارکس: جستجوی Reddit (یک درخواست برای همه‌ی ساب‌ها)، ساب‌ردیت‌های فارکس، Medium،
+    ایده‌های فارکس TradingView و مقاله‌های MQL5. هر منبعی که جواب ندهد در diagnostics ثبت می‌شود و رد می‌شود."""
+    out = []
+    ns = {'a': 'http://www.w3.org/2005/Atom'}
+
+    def atom(src, r):
+        try:
+            for e in ET.fromstring(r.content).findall('a:entry', ns):
+                link = e.find('a:link', ns)
+                out.append((src, e.findtext('a:title', '', ns), clean(e.findtext('a:content', '', ns)),
+                            link.get('href') if link is not None else '', 0))
+        except ET.ParseError:
+            pass
+
+    for q in ('forex strategy backtest', 'forex strategy win rate', 'EURUSD strategy'):
+        for wait in (7, 20):
+            time.sleep(wait)
+            r = get('https://www.reddit.com/search.rss', params={'q': q, 'sort': 'top', 't': 'week', 'limit': 25})
+            if r:
+                atom('reddit/search-forex', r)
+                break
+    for sub in ('ForexTrading', 'Forexstrategy', 'Forex_Trading'):
+        for wait in (7, 20):
+            time.sleep(wait)
+            r = get(f'https://www.reddit.com/r/{sub}/top/.rss', params={'t': 'day', 'limit': 25})
+            if r:
+                atom('reddit/' + sub, r)
+                break
+    feeds = {'medium/forex': 'https://medium.com/feed/tag/forex',
+             'medium/forex-strategy': 'https://medium.com/feed/tag/forex-strategy',
+             'tradingview-forex': 'https://www.tradingview.com/feed/?stream=forex&sort=recent',
+             'mql5-articles': 'https://www.mql5.com/en/articles/rss'}
+    for name, url in feeds.items():
+        r = get(url)
+        if not r:
+            continue
+        try:
+            root = ET.fromstring(r.content)
+        except ET.ParseError:
+            continue
+        for it in root.iter('item'):
+            body = it.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or it.findtext('description') or ''
+            out.append((name, it.findtext('title', ''), clean(body)[:4000], it.findtext('link', ''), 0))
+    r = get('https://api.stackexchange.com/2.3/search/excerpts',
+            params={'site': 'quant', 'q': 'forex strategy', 'sort': 'creation', 'order': 'desc', 'pagesize': 30})
+    if r:
+        for it in r.json().get('items', []):
+            out.append(('stackexchange/quant', clean(it.get('title', '')), clean(it.get('excerpt', '')),
+                        f"https://quant.stackexchange.com/q/{it.get('question_id')}", it.get('score', 0)))
+    return out
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     seen = set()
@@ -165,7 +222,7 @@ def main():
                 pass
     found = []
     counts = {}
-    for fn in (reddit, rss_sites, hackernews, stackexchange, medium, devto):
+    for fn in (reddit, rss_sites, hackernews, stackexchange, medium, devto, forex):
         try:
             items = fn()
         except Exception as e:
