@@ -1,7 +1,7 @@
 """شکارچی روش — جمع‌آوری ادعاهای سود از فروم‌ها و سایت‌ها (بدون کلید API).
 
 منابع: Reddit (JSON/RSS)، Hacker News (Algolia)، StackExchange Quant، Medium (RSS برچسب‌ها)، dev.to،
-و بخش ویژه‌ی فارکس (جستجوی Reddit، ساب‌ردیت‌های فارکس، Medium، ایده‌های فارکس TradingView، مقاله‌های MQL5).
+و بخش ویژه‌ی فارکس (جستجوی Reddit، ساب‌ردیت‌های فارکس، Medium، مقاله‌های MQL5).
 هر پست با واژه‌های «روش + ادعای عددی سود» امتیاز می‌گیرد؛ پست‌های بالای آستانه در inbox.jsonl ذخیره می‌شوند.
 خروجی: data/strategy_hunter/inbox.jsonl (بدون تکرار، بر اساس url) و diagnostics.txt
 """
@@ -159,8 +159,8 @@ def devto():
 
 
 def forex():
-    """بخش ویژه‌ی فارکس: جستجوی Reddit (یک درخواست برای همه‌ی ساب‌ها)، ساب‌ردیت‌های فارکس، Medium،
-    ایده‌های فارکس TradingView و مقاله‌های MQL5. هر منبعی که جواب ندهد در diagnostics ثبت می‌شود و رد می‌شود."""
+    """بخش ویژه‌ی فارکس: جستجوی Reddit (یک درخواست برای همه‌ی ساب‌ها)، ساب‌ردیت‌های فارکس، Medium
+    و مقاله‌های MQL5 (ایده‌های فارکس TradingView در خوراک عمومی TradingView می‌آیند). هر منبعی که جواب ندهد در diagnostics ثبت می‌شود و رد می‌شود."""
     out = []
     ns = {'a': 'http://www.w3.org/2005/Atom'}
 
@@ -174,7 +174,7 @@ def forex():
             pass
 
     for q in ('forex strategy backtest', 'forex strategy win rate', 'EURUSD strategy'):
-        for wait in (7, 20):
+        for wait in (15, 40):
             time.sleep(wait)
             r = get('https://www.reddit.com/search.rss', params={'q': q, 'sort': 'top', 't': 'week', 'limit': 25})
             if r:
@@ -189,7 +189,6 @@ def forex():
                 break
     feeds = {'medium/forex': 'https://medium.com/feed/tag/forex',
              'medium/forex-strategy': 'https://medium.com/feed/tag/forex-strategy',
-             'tradingview-forex': 'https://www.tradingview.com/feed/?stream=forex&sort=recent',
              'mql5-articles': 'https://www.mql5.com/en/articles/rss'}
     for name, url in feeds.items():
         r = get(url)
