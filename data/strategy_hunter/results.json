@@ -1,6 +1,20 @@
 {
- "updated": "2026-10-25T18:31:36+00:00",
+ "updated": "2026-10-26T14:03:56+00:00",
  "results": {
+  "03cdd17a5a-eurusd-ma-cross-1-5r": {
+   "name": "EURUSD/EURJPY MA cross 1.5R",
+   "name_fa": "تقاطع میانگین متحرک EURUSD با هدف 1.5R",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1x9f0dv/i_ran_about_1500_backtest_trades_on_a_simple/",
+   "claim": "«تقاطع ساده‌ی میانگین متحرک روی EURUSD و EURJPY، ۲۰۱۷ تا ۲۰۲۶، ۱٬۴۷۶ معامله: نرخ برد ۴۰٫۲٪ در برابر نقطه‌ی سربه‌سر ۴۲٫۴٪ با هزینه»",
+   "claimed_return": "40.2% win rate (below 42.4% breakeven)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "طول میانگین‌ها، تایم‌فریم و تعریف حد ضرر (1R) گفته نشده؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: طول میانگین‌ها، تایم‌فریم و تعریف حد ضرر (1R) گفته نشده؛ اطلاعات کافی نیست"
+  },
   "06da43d5d6-expiredoptions-csp-cc-leaps": {
    "name": "CSP + covered calls + LEAPS portfolio",
    "name_fa": "سبد فروش پوت، کال پوشش‌دار و لیپس",
@@ -29,6 +43,34 @@
    "reason_not_testable": "معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست"
   },
+  "18da1bc880-spy-stochastic-grid-search": {
+   "name": "SPY stochastic (grid search)",
+   "name_fa": "استوکاستیک روی SPY با جست‌وجوی پارامتر",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/my-stochastic-strategy-lost-to-buy-hold-on-spy-then-i-ran-a-grid-search-8d7d74a4dd29?source=rss------algorithmic_trading-5",
+   "claim": "«فقط ۲۵٪ زمان در بازار، با افت حداکثر حدود ۲۶٪ به جای ۵۵٪»",
+   "claimed_return": "max DD ~26% vs 55%, 25% time in market",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست"
+  },
+  "1f8924004e-hyperliquid-52-strategy-basket": {
+   "name": "52 uncorrelated strategies basket",
+   "name_fa": "سبد ۵۲ استراتژی ناهمبسته در هایپرلیکوئید",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/ai_trading/comments/1x9z1br/after_a_year_of_failing_to_find_one_good_ai/",
+   "claim": "«بک‌تست ۳۶ ماهه: ‎+87.1%‎ با شارپ ۲؛ با کارمزد و فاندینگ ‎+72.4%‎؛ ۵۵ روز واقعی ‎+1.8%‎»",
+   "claimed_return": "+87.1% (36m backtest)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست"
+  },
   "277a1cce48-fxi-ibs-short": {
    "name": "FXI IBS short (Medium)",
    "name_fa": "فروش استقراضی FXI با نسبت IBS",
@@ -44,44 +86,86 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.82,
+    "cagr": -4.86,
     "sharpe": -0.1,
-    "max_dd": -83.22,
-    "total": -66.26
+    "max_dd": -83.3,
+    "total": -66.61
    },
    "in_sample": {
-    "cagr": -8.63,
+    "cagr": -8.66,
     "sharpe": -0.27,
-    "max_dd": -78.62,
-    "total": -75.12
+    "max_dd": -78.72,
+    "total": -75.24
    },
    "out_sample": {
-    "cagr": 5.91,
-    "sharpe": 0.38,
+    "cagr": 5.81,
+    "sharpe": 0.37,
     "max_dd": -33.97,
-    "total": 46.12
+    "total": 45.26
    },
    "buyhold_full": {
-    "cagr": 4.95,
+    "cagr": 4.98,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 189.77
+    "total": 191.47
    },
    "buyhold_out_sample": {
-    "cagr": -0.59,
-    "sharpe": 0.13,
+    "cagr": -0.5,
+    "sharpe": 0.14,
     "max_dd": -60.81,
-    "total": -3.81
+    "total": -3.24
    },
-   "trades": 633,
-   "win_rate": 54.0,
+   "trades": 634,
+   "win_rate": 53.9,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
-   "period": "2004-10-08 → 2026-10-23",
+   "period": "2004-10-08 → 2026-10-26",
    "oos_start": "2020-03-12",
-   "forward_days": 0,
-   "forward_usd": 1000.0,
+   "forward_days": 1,
+   "forward_usd": 994.12,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
+  "32bed65cff-nifty-intraday-option-buying": {
+   "name": "NIFTY intraday option buying",
+   "name_fa": "خرید آپشن درون‌روزی نیفتی",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/IndiaAlgoTrading/comments/1xebjqi/i_promised_to_share_algo_strategy_backtested_on/",
+   "claim": "«در ۱۱ سال و ۱٬۳۹۶ معامله، فقط ۴۵٪ برد داشت و باز هم سود داد چون معامله‌های برنده بسیار بزرگ‌تر بودند؛ هدف ۸ تا ۱۰٪ در ماه»",
+   "claimed_return": "45% win rate, profitable over 1,396 trades",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "خرید آپشن درون‌روزی نیفتی با کندل یک‌دقیقه‌ای؛ قانون ورود کامل گفته نشده و داده‌ی آپشن هند در دسترس نیست",
+   "verdict": "غیرقابل آزمون: خرید آپشن درون‌روزی نیفتی با کندل یک‌دقیقه‌ای؛ قانون ورود کامل گفته نشده و داده‌ی آپشن هند در دسترس نیست"
+  },
+  "3632e0e58f-gold-binary-scalper-80wr": {
+   "name": "Gold & binary options scalper",
+   "name_fa": "اسکالپر طلا و آپشن باینری",
+   "source": "reddit/Forexstrategy",
+   "source_url": "https://www.reddit.com/r/Forexstrategy/comments/1xek7ck/how_i_built_a_dualengine_gold_xauusd_binary/",
+   "claim": "«اسکالپر دوموتوره‌ی طلا و آپشن باینری با ۸۰٪ نرخ برد روی MT5»",
+   "claimed_return": "80% win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "فقط عنوان در دسترس است؛ اسکالپ و آپشن باینری با داده‌ی روزانه قابل آزمون نیست",
+   "verdict": "غیرقابل آزمون: فقط عنوان در دسترس است؛ اسکالپ و آپشن باینری با داده‌ی روزانه قابل آزمون نیست"
+  },
+  "36fd3d3ec7-zain-scalping-v6-xauusd": {
+   "name": "Zain Scalping V6 XAUUSD",
+   "name_fa": "اسکالپ طلا Zain V6",
+   "source": "reddit/Forexstrategy",
+   "source_url": "https://www.reddit.com/r/Forexstrategy/comments/1xf1lvo/engineering_a_clean_equity_curve_how_the_zain/",
+   "claim": "«بیش از ۸۰٪ معامله‌ی برنده و افت کمتر از ۱٪ در بک‌تست»",
+   "claimed_return": "80%+ win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده",
+   "verdict": "غیرقابل آزمون: اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده"
   },
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
@@ -98,43 +182,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.52,
+    "cagr": 10.51,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 297.05
+    "total": 296.61
    },
    "in_sample": {
-    "cagr": 7.61,
+    "cagr": 7.65,
     "sharpe": 0.41,
     "max_dd": -49.5,
-    "total": 102.89
+    "total": 103.68
    },
    "out_sample": {
-    "cagr": 17.15,
+    "cagr": 17.11,
     "sharpe": 0.66,
     "max_dd": -42.23,
-    "total": 92.54
+    "total": 92.27
    },
    "buyhold_full": {
-    "cagr": 25.61,
+    "cagr": 25.44,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2217.05
+    "total": 2176.46
    },
    "buyhold_out_sample": {
-    "cagr": 39.87,
+    "cagr": 39.82,
     "sharpe": 1.0,
     "max_dd": -47.44,
-    "total": 301.02
+    "total": 300.46
    },
    "trades": 93,
    "win_rate": 71.0,
-   "avg_trade_pct": 1.98,
+   "avg_trade_pct": 2.0,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-23",
-   "oos_start": "2022-08-29",
-   "forward_days": 1,
-   "forward_usd": 990.4,
+   "period": "2013-01-02 → 2026-10-26",
+   "oos_start": "2022-08-30",
+   "forward_days": 2,
+   "forward_usd": 973.05,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -170,24 +254,24 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.91,
+    "cagr": 7.9,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 258.58
+    "total": 258.47
    },
    "buyhold_out_sample": {
-    "cagr": 17.76,
+    "cagr": 17.78,
     "sharpe": 0.95,
     "max_dd": -24.94,
-    "total": 127.83
+    "total": 127.98
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-23",
-   "oos_start": "2021-10-08",
-   "forward_days": 1,
+   "period": "2010-01-04 → 2026-10-26",
+   "oos_start": "2021-10-11",
+   "forward_days": 2,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -219,6 +303,60 @@
    "reason_not_testable": "فروش آپشن است؛ داده‌ی تاریخی آپشن SPX برای سنجیدن پریمیوم و حد ضرر در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن است؛ داده‌ی تاریخی آپشن SPX برای سنجیدن پریمیوم و حد ضرر در دسترس نیست"
   },
+  "4de4edd9c2-spy-10month-ma": {
+   "name": "10-month moving average timing",
+   "name_fa": "زمان‌بندی با میانگین متحرک ۱۰ ماهه",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@abhinav.neo/the-10-month-moving-average-is-the-most-famous-rule-in-tactical-investing-bb1be03b679c?source=rss------algorithmic_trading-5",
+   "claim": "«میانگین متحرک ۱۰ ماهه مشهورترین قانون سرمایه‌گذاری تاکتیکی است؛ ۸۸٪ مواقع با فیلتر مومنتوم هم‌نظر است و دو برابر بیشتر معامله می‌کند»",
+   "claimed_return": "agrees with momentum filter 88% of the time",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-26",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 8.05,
+    "sharpe": 0.7,
+    "max_dd": -25.39,
+    "total": 1260.73
+   },
+   "in_sample": {
+    "cagr": 6.84,
+    "sharpe": 0.61,
+    "max_dd": -25.39,
+    "total": 376.06
+   },
+   "out_sample": {
+    "cagr": 10.94,
+    "sharpe": 0.91,
+    "max_dd": -24.43,
+    "total": 185.81
+   },
+   "buyhold_full": {
+    "cagr": 10.78,
+    "sharpe": 0.65,
+    "max_dd": -55.19,
+    "total": 3049.73
+   },
+   "buyhold_out_sample": {
+    "cagr": 14.97,
+    "sharpe": 0.87,
+    "max_dd": -33.72,
+    "total": 309.98
+   },
+   "trades": 102,
+   "win_rate": 25.5,
+   "avg_trade_pct": 3.34,
+   "exposure": 0.76,
+   "period": "1993-02-01 → 2026-10-26",
+   "oos_start": "2016-09-07",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "قبول"
+  },
   "4e5794da7c-spy-qqq-gex-option-selling": {
    "name": "SPY/QQQ option selling with GEX filter",
    "name_fa": "فروش آپشن SPY و QQQ با فیلتر گامای دیلرها",
@@ -233,6 +371,20 @@
    "reason_not_testable": "فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست"
   },
+  "604f020263-return-stacking-rsst-gde-zroz": {
+   "name": "Return stacking ETF mix",
+   "name_fa": "سبد ثابت ETFهای انباشت بازده",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/LETFs/comments/1xejrbz/return_stacking_backtest_10626_mixes_of_rsst_gde/",
+   "claim": "«۴۰٪ RSST / ۳۵٪ GDE / ۲۵٪ ZROZ سالانه ۱۲٫۵٪ با افت حداکثر ‎−31.5%‎، در برابر ۸٫۳٪ و ‎−55.1%‎ برای SPY (دسامبر ۱۹۹۹ تا سپتامبر ۲۰۲۶، بیشتر شبیه‌سازی‌شده)»",
+   "claimed_return": "12.5%/yr, max DD -31.5%",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است",
+   "verdict": "غیرقابل آزمون: سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است"
+  },
   "6e5773fb3d-nq-15min-orb": {
    "name": "NQ 15-minute opening range breakout",
    "name_fa": "شکست محدوده‌ی ۱۵ دقیقه‌ی اول بازار روی نزدک آتی (NQ)",
@@ -246,6 +398,20 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم",
    "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم"
+  },
+  "6fae5adca6-us-eu-stock-recommender": {
+   "name": "US+EU stock recommender",
+   "name_fa": "سیستم امتیازدهی سهام آمریکا و اروپا",
+   "source": "elitetrader",
+   "source_url": "https://www.elitetrader.com/et/threads/walk-forward-tested-us-eu-stock-recommender-18-yr-oos-but-survivorship-biased-critique-welcome.391774/",
+   "claim": "«خارج از نمونه، ژانویه ۲۰۱۴ تا اکتبر ۲۰۲۶، پس از کارمزد: ‎+18.4%‎ در سال»",
+   "claimed_return": "+18.4%/yr OOS",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "قانون امتیازدهی ۵۰ سهم و چهار تنظیم گفته نشده؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: قانون امتیازدهی ۵۰ سهم و چهار تنظیم گفته نشده؛ اطلاعات کافی نیست"
   },
   "6ff5ad075b-spx-0dte-credit-spreads": {
    "name": "SPX 0DTE credit spreads",
@@ -275,6 +441,20 @@
    "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد",
    "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد"
   },
+  "767a34abe8-signal-driver-retrace": {
+   "name": "Signal Driver retrace strategy",
+   "name_fa": "استراتژی بازگشت Signal Driver",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xf3njs/73_trading_days_live_validation_1634_broker/",
+   "claim": "«بین ۱۳ ژوئیه و ۲۳ اکتبر، ‎+16.34%‎ بازده گزارش‌شده‌ی کارگزار در ۷۳ روز معاملاتی»",
+   "claimed_return": "+16.34% in 73 trading days",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "معامله‌ی درون‌روزی با قضاوت شخصی و نرم‌افزار تجاری؛ قانون عددی گفته نشده",
+   "verdict": "غیرقابل آزمون: معامله‌ی درون‌روزی با قضاوت شخصی و نرم‌افزار تجاری؛ قانون عددی گفته نشده"
+  },
   "7699b1cc47-gold-weekly-open-value-area": {
    "name": "Gold weekly open vs prior value area",
    "name_fa": "بازگشایی هفتگی طلا نسبت به ناحیه‌ی ارزش هفته‌ی قبل",
@@ -288,6 +468,20 @@
    "status": "not_testable",
    "reason_not_testable": "به پروفایل حجم (ناحیه‌ی ارزش ۷۰٪) نیاز دارد که در اندیکاتورهای موتور نیست؛ نمونه فقط ۲۵ هفته",
    "verdict": "غیرقابل آزمون: به پروفایل حجم (ناحیه‌ی ارزش ۷۰٪) نیاز دارد که در اندیکاتورهای موتور نیست؛ نمونه فقط ۲۵ هفته"
+  },
+  "79d0ef52b6-xauusd-private-ctrader-bot": {
+   "name": "Private XAUUSD cTrader bot",
+   "name_fa": "ربات خصوصی طلا در cTrader",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/ai_trading/comments/1xb49sp/i_think_i_have_actually_created_a_automated/",
+   "claim": "«ژانویه تا اکتبر ۲۰۲۶ با ۵٬۰۰۰ حساب و ریسک ۱٪: سود خالص ‎+1,974‎، فاکتور سود ۱٫۸۱، افت حداکثر ۴٫۵۲٪، ۱۸۶ معامله»",
+   "claimed_return": "+39.5% (1% risk, Jan-Oct 2026)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-26",
+   "status": "not_testable",
+   "reason_not_testable": "نویسنده قانون را خصوصی نگه داشته و بک‌تست با داده‌ی تیک است؛ اطلاعات کافی نیست",
+   "verdict": "غیرقابل آزمون: نویسنده قانون را خصوصی نگه داشته و بک‌تست با داده‌ی تیک است؛ اطلاعات کافی نیست"
   },
   "7d5d0b9e01-es-nq-vwap-delta-reversion": {
    "name": "ES/NQ VWAP 2SD delta-divergence mean reversion",
@@ -318,13 +512,13 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 67.01,
+    "cagr": 66.99,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 81.91,
+    "cagr": 81.88,
     "sharpe": 1.41,
     "max_dd": -74.38,
     "total": 15901.87
@@ -336,24 +530,24 @@
     "total": 212.05
    },
    "buyhold_full": {
-    "cagr": 53.24,
+    "cagr": 53.05,
     "sharpe": 0.98,
     "max_dd": -83.4,
-    "total": 17516.18
+    "total": 17272.52
    },
    "buyhold_out_sample": {
-    "cagr": 43.42,
-    "sharpe": 1.01,
+    "cagr": 45.42,
+    "sharpe": 1.04,
     "max_dd": -53.06,
-    "total": 270.96
+    "total": 290.17
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-25",
-   "oos_start": "2023-03-09",
-   "forward_days": 0,
+   "period": "2014-09-17 → 2026-10-26",
+   "oos_start": "2023-03-10",
+   "forward_days": 1,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
