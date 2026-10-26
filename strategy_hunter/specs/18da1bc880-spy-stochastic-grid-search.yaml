@@ -1,0 +1,10 @@
+id: 18da1bc880-spy-stochastic-grid-search
+name: SPY stochastic (grid search)
+name_fa: استوکاستیک روی SPY با جست‌وجوی پارامتر
+source: medium/algorithmic-trading
+source_url: https://medium.com/@Kryptera/my-stochastic-strategy-lost-to-buy-hold-on-spy-then-i-ran-a-grid-search-8d7d74a4dd29?source=rss------algorithmic_trading-5
+claim: "«فقط ۲۵٪ زمان در بازار، با افت حداکثر حدود ۲۶٪ به جای ۵۵٪»"
+claimed_return: "max DD ~26% vs 55%, 25% time in market"
+added: 2026-10-26
+status: not_testable
+reason_not_testable: "متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست"

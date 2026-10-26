@@ -1,0 +1,10 @@
+id: 767a34abe8-signal-driver-retrace
+name: Signal Driver retrace strategy
+name_fa: استراتژی بازگشت Signal Driver
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xf3njs/73_trading_days_live_validation_1634_broker/
+claim: "«بین ۱۳ ژوئیه و ۲۳ اکتبر، ‎+16.34%‎ بازده گزارش‌شده‌ی کارگزار در ۷۳ روز معاملاتی»"
+claimed_return: "+16.34% in 73 trading days"
+added: 2026-10-26
+status: not_testable
+reason_not_testable: "معامله‌ی درون‌روزی با قضاوت شخصی و نرم‌افزار تجاری؛ قانون عددی گفته نشده"

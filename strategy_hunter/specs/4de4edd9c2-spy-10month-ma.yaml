@@ -1,0 +1,22 @@
+id: 4de4edd9c2-spy-10month-ma
+name: 10-month moving average timing
+name_fa: زمان‌بندی با میانگین متحرک ۱۰ ماهه
+source: medium/algorithmic-trading
+source_url: https://medium.com/@abhinav.neo/the-10-month-moving-average-is-the-most-famous-rule-in-tactical-investing-bb1be03b679c?source=rss------algorithmic_trading-5
+claim: "«میانگین متحرک ۱۰ ماهه مشهورترین قانون سرمایه‌گذاری تاکتیکی است؛ ۸۸٪ مواقع با فیلتر مومنتوم هم‌نظر است و دو برابر بیشتر معامله می‌کند»"
+claimed_return: "agrees with momentum filter 88% of the time"
+added: 2026-10-26
+status: implemented
+asset_class: etf
+symbols: [SPY]
+timeframe: 1d
+start: '1993-02-01'
+notes: >-
+  متن کامل مقاله در دسترس نبود؛ قانون مشهور ۱۰ ماهه پیاده شد: در بازار بمان وقتی قیمت بالای میانگین ۱۰ ماهه است،
+  وگرنه نقد. ۱۰ ماه ≈ ۲۱۰ روز معاملاتی (تقریب). قانون اصلی فقط آخر هر ماه بررسی می‌شود، اینجا هر روز بررسی می‌شود،
+  پس تعداد معاملات بیشتر از نسخه‌ی ماهانه است. نماد گفته نشده، SPY گذاشته شد. فقط خرید.
+indicators:
+  sma210: {fn: sma, n: 210}
+entry: close > sma210
+exit: close < sma210
+side: long

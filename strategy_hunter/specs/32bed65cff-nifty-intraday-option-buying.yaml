@@ -1,0 +1,10 @@
+id: 32bed65cff-nifty-intraday-option-buying
+name: NIFTY intraday option buying
+name_fa: خرید آپشن درون‌روزی نیفتی
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/IndiaAlgoTrading/comments/1xebjqi/i_promised_to_share_algo_strategy_backtested_on/
+claim: "«در ۱۱ سال و ۱٬۳۹۶ معامله، فقط ۴۵٪ برد داشت و باز هم سود داد چون معامله‌های برنده بسیار بزرگ‌تر بودند؛ هدف ۸ تا ۱۰٪ در ماه»"
+claimed_return: "45% win rate, profitable over 1,396 trades"
+added: 2026-10-26
+status: not_testable
+reason_not_testable: "خرید آپشن درون‌روزی نیفتی با کندل یک‌دقیقه‌ای؛ قانون ورود کامل گفته نشده و داده‌ی آپشن هند در دسترس نیست"

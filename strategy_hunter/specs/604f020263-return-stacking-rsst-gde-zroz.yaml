@@ -1,0 +1,10 @@
+id: 604f020263-return-stacking-rsst-gde-zroz
+name: Return stacking ETF mix
+name_fa: سبد ثابت ETFهای انباشت بازده
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/LETFs/comments/1xejrbz/return_stacking_backtest_10626_mixes_of_rsst_gde/
+claim: "«۴۰٪ RSST / ۳۵٪ GDE / ۲۵٪ ZROZ سالانه ۱۲٫۵٪ با افت حداکثر ‎−31.5%‎، در برابر ۸٫۳٪ و ‎−55.1%‎ برای SPY (دسامبر ۱۹۹۹ تا سپتامبر ۲۰۲۶، بیشتر شبیه‌سازی‌شده)»"
+claimed_return: "12.5%/yr, max DD -31.5%"
+added: 2026-10-26
+status: not_testable
+reason_not_testable: "سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است"
