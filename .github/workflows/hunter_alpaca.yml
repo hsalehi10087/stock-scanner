@@ -1,0 +1,36 @@
+name: 🦙 Strategy Hunter — backtest on Alpaca data
+
+on:
+  workflow_dispatch:
+    inputs:
+      specs:
+        description: 'شناسه‌ی روش‌ها (با فاصله)'
+        required: true
+        default: '4de4edd9c2-spy-10month-ma b651b12620-crypto-ts-momentum-28d'
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q pandas numpy pyyaml requests
+      - name: Backtest on Alpaca data + Telegram
+        env:
+          ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
+          ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 strategy_hunter/alpaca_test.py ${{ github.event.inputs.specs }}
