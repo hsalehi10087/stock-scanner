@@ -1,22 +1,22 @@
-universe us: 6946 (live)
-US: universe=6946 priced=6176 tech_cands=363 canslim=10 M=pressure (580s)
-  US C reasons: {'c_low': 115, 'ok': 154, 'prev_not_positive': 75, 'only_4_quarters+no_yahoo': 3, 'yahoo_ok': 5, 'yahoo_low': 7, 'no_prev_year_q+no_yahoo': 2, 'no_quarterly+no_yahoo': 1, 'only_2_quarters+no_yahoo': 1}
-  US A reasons: {'a_low': 223, 'ok': 25, 'prev_not_positive': 113, 'only_1_years': 2}
-  US quarters available: {0: 5, 1: 1, 2: 3, 4: 4, 5: 350}
+universe us: 6947 (live)
+US: universe=6947 priced=6197 tech_cands=375 canslim=11 M=up (1008s)
+  US C reasons: {'c_low': 118, 'ok': 153, 'prev_not_positive': 84, 'only_4_quarters+no_yahoo': 4, 'no_prev_year_q+no_yahoo': 3, 'yahoo_low': 8, 'yahoo_ok': 4, 'no_quarterly+no_yahoo': 1}
+  US A reasons: {'a_low': 224, 'prev_not_positive': 119, 'ok': 29, 'only_2_years': 1, 'only_1_years': 2}
+  US quarters available: {0: 6, 1: 1, 2: 2, 4: 5, 5: 361}
 universe jp: 4447 (live)
-JP: universe=4447 priced=4287 tech_cands=185 canslim=0 M=pressure (482s)
-  JP C reasons: {'only_2_quarters+no_yahoo': 135, 'no_quarterly+no_yahoo': 4, 'only_1_quarters+no_yahoo': 37, 'c_low': 1, 'only_3_quarters+no_yahoo': 6, 'ok': 2}
-  JP A reasons: {'a_low': 127, 'no_annual': 4, 'ok': 39, 'prev_not_positive': 15}
-  JP quarters available: {0: 4, 1: 37, 2: 135, 3: 6, 5: 3}
+JP: universe=4447 priced=4287 tech_cands=204 canslim=0 M=pressure (744s)
+  JP C reasons: {'only_2_quarters+no_yahoo': 144, 'no_quarterly+no_yahoo': 5, 'only_1_quarters+no_yahoo': 47, 'c_low': 1, 'only_3_quarters+no_yahoo': 5, 'ok': 2}
+  JP A reasons: {'a_low': 143, 'no_annual': 4, 'ok': 40, 'prev_not_positive': 17}
+  JP quarters available: {0: 5, 1: 47, 2: 144, 3: 5, 5: 3}
 universe sse: 2318 (live)
 universe szse: 2906 (live)
-CN: universe=5224 priced=5178 tech_cands=108 canslim=0 M=down (416s)
-  CN C reasons: {'only_2_quarters+no_yahoo': 105, 'only_1_quarters+no_yahoo': 1, 'no_quarterly+no_yahoo': 2}
-  CN A reasons: {'a_low': 77, 'prev_not_positive': 25, 'ok': 6}
-  CN quarters available: {0: 2, 1: 1, 2: 105}
+CN: universe=5224 priced=5178 tech_cands=83 canslim=0 M=down (589s)
+  CN C reasons: {'only_2_quarters+no_yahoo': 78, 'only_1_quarters+no_yahoo': 3, 'no_quarterly+no_yahoo': 2}
+  CN A reasons: {'a_low': 64, 'prev_not_positive': 16, 'ok': 3}
+  CN quarters available: {0: 2, 1: 3, 2: 78}
 universe twse: 1091 (live)
-universe tpex: 892 (live)
-TW: universe=1983 priced=1977 tech_cands=109 canslim=8 M=pressure (192s)
-  TW C reasons: {'prev_not_positive': 22, 'ok': 41, 'only_4_quarters+no_yahoo': 19, 'c_low': 13, 'only_2_quarters+no_yahoo': 2, 'only_3_quarters+no_yahoo': 12}
-  TW A reasons: {'a_low': 68, 'prev_not_positive': 27, 'ok': 13, 'only_2_years': 1}
-  TW quarters available: {2: 2, 3: 12, 4: 19, 5: 76}
+universe tpex: 895 (live)
+TW: universe=1986 priced=1980 tech_cands=105 canslim=7 M=pressure (369s)
+  TW C reasons: {'prev_not_positive': 22, 'ok': 39, 'only_4_quarters+no_yahoo': 20, 'c_low': 10, 'only_2_quarters+no_yahoo': 2, 'only_3_quarters+no_yahoo': 12}
+  TW A reasons: {'a_low': 71, 'prev_not_positive': 21, 'ok': 12, 'only_2_years': 1}
+  TW quarters available: {2: 2, 3: 12, 4: 20, 5: 71}
