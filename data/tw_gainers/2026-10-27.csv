@@ -1,0 +1,5 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+3406.TW,玉晶光,15.789473684210531,185.87551085874262,686.207,240.037,2026-10-27,3,5,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': True, 'analysts': False}"
+6277.TW,宏正,13.738734829920363,167.55270538556078,169.805,63.466,2026-10-27,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+6221.TWO,晉泰,14.28571428571428,35.57641569694782,146.451,108.021,2026-10-27,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6690.TWO,安碁資訊,10.393258426966302,13.191529060546692,84.931,75.033,2026-10-27,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
