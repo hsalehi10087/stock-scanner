@@ -3086,6 +3086,15 @@
 "first_price": 22.96,
 "last_date": "2026-10-15"
 },
+"FCNCP": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-27",
+"first_price": 18.08,
+"last_date": "2026-10-27"
+},
 "FCX": {
 "count": 1,
 "events": [
@@ -5262,6 +5271,15 @@
 "first_date": "2026-10-15",
 "first_price": 236.86,
 "last_date": "2026-10-15"
+},
+"MBINL": {
+"count": 1,
+"events": [
+"CY2026Q2"
+],
+"first_date": "2026-10-27",
+"first_price": 22.982,
+"last_date": "2026-10-27"
 },
 "MBINN": {
 "count": 1,
