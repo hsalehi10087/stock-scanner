@@ -1,0 +1,39 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+AZTR,Azitra Inc Common Stock,1.5299999713897705,112.49998758236615,147345600.0,2026-10-26,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+GCTK,"GlucoTrack, Inc. - Common Stock",1.6100000143051147,99.75186423511266,34121700.0,2026-10-26,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+CLRO,"ClearOne, Inc. - Common Stock",4.96999979019165,52.92307046743541,82809200.0,2026-10-26,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+SGRY,"Surgery Partners, Inc. - Common Stock",23.25,47.61904761904763,58815500.0,2026-10-26,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+RFAI,RF Acquisition Corp II - Ordinary Shares,35.83000183105469,37.01721741389634,106800.0,2026-10-26,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+EFOI,"Energy Focus, Inc. - Common Stock",3.7699999809265137,28.66893839695326,352300.0,2026-10-26,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+MSGY,Masonglory Limited - Class A Ordinary Shares,3.490000009536743,27.838827294997138,659000.0,2026-10-26,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+EAF,GrafTech International Ltd. Common Stock,10.649999618530273,25.146878167941257,2151900.0,2026-10-26,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+RPGL,Republic Power Group Limited - Class A Ordinary Shares,8.319999694824219,25.112775571539526,339300.0,2026-10-26,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': None, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+VEEA,Veea Inc. - Common Stock,6.079999923706055,23.3265747547698,1825200.0,2026-10-26,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+XTND,"Xtend AI Robotics, Inc. Common Stock",2.180000066757202,23.163846906714227,41042900.0,2026-10-26,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': None, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+NWTG,"Newton Golf Company, Inc. - Common Stock",1.1299999952316284,22.826084210088492,413400.0,2026-10-26,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+RENT,"Rent the Runway, Inc. - Class A Common Stock",2.819999933242798,22.60869529161651,26051400.0,2026-10-26,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+SWRD,Stewards Inc - Common Stock,3.0399999618530273,21.599998474121087,638000.0,2026-10-26,0.0,1.0,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': False, 'momentum': None, 'analysts': None}"
+RPD,"Rapid7, Inc. - Common Stock",17.93000030517578,20.254865785849386,5144100.0,2026-10-26,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+IPW,iPower Inc. - Common Stock,2.890000104904175,18.637109028047938,373200.0,2026-10-26,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+SPRC,SciSparc Ltd. - Ordinary Shares,1.2899999618530273,18.348616729349978,38158600.0,2026-10-26,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+BUUU,BUUU Group Limited - Class A Ordinary Share,6.369999885559082,18.181818986063703,422500.0,2026-10-26,2.0,3.0,⭐۲/۵ (۲ نامعلوم),"{'growth': None, 'cash': False, 'profit': True, 'momentum': True, 'analysts': None}"
+HOST,Host Digital Inc. Class A Common Stock,2.8399999141693115,17.8423158931303,504300.0,2026-10-26,0.0,1.0,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+RRC,Range Resources Corporation Common Stock,53.560001373291016,17.662567738740176,26471100.0,2026-10-26,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+NCT,Intercont (Cayman) Limited - Class A Ordinary shares,1.4800000190734863,17.46031986312502,301300.0,2026-10-26,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+JAGX,"Jaguar Health, Inc. - Common Stock",2.369999885559082,16.17646715082781,2338800.0,2026-10-26,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+XNCR,"Xencor, Inc. - Common Stock",29.18000030517578,15.88562331819272,8896500.0,2026-10-26,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': True, 'analysts': True}"
+XRTX,XORTX Therapeutics Inc. - Common Shares,1.059999942779541,15.217382994626716,119100.0,2026-10-26,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+ABOS,"Acumen Pharmaceuticals, Inc. - Common Stock",2.2699999809265137,14.646462578759412,1646800.0,2026-10-26,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+YMAT,"J-Star Holding Co., Ltd. - Class A Ordinary Shares",2.3399999141693115,14.146339931635499,6088700.0,2026-10-26,,,,
+MYPS,"PLAYSTUDIOS, Inc.  - Class A Common Stock",4.320000171661377,13.684216470269362,315000.0,2026-10-26,,,,
+PLUR,Pluri Inc. - Common Stock,1.1200000047683716,13.131312523164528,488700.0,2026-10-26,,,,
+IMC,IMC Rare Earths Ltd Ordinary Shares,10.149999618530273,12.90322443765568,106700.0,2026-10-26,,,,
+CENN,Cenntro Inc. - Common Stock,2.640000104904175,12.82052144182928,935400.0,2026-10-26,,,,
+AMOD,"Alpha Modus Holdings, Inc. - Class A Common Stock",1.059999942779541,12.765951645541573,5099600.0,2026-10-26,,,,
+ORKA,"Oruka Therapeutics, Inc. - Common Stock",90.33000183105469,12.701185416557802,1942700.0,2026-10-26,,,,
+BLSM,"BlossomHill Therapeutics, Inc. - Common Stock",16.389999389648438,12.030070139714265,204400.0,2026-10-26,,,,
+NN,NextNav Inc. - Common stock,11.279999732971191,11.904760102656219,12702900.0,2026-10-26,,,,
+CD,Chaince Digital Holdings Inc. - American Ordinary Shares,9.770000457763672,11.529682676854879,327100.0,2026-10-26,,,,
+EPOW,E-Power Inc. - Class A Ordinary Shares,3.9200000762939453,10.734466625304862,205600.0,2026-10-26,,,,
+VICR,Vicor Corporation - Common Stock,194.77000427246094,10.63963400400989,909800.0,2026-10-26,,,,
+INM,InMed Pharmaceuticals Inc. - Common Shares,1.590000033378601,10.416664597061033,294300.0,2026-10-26,,,,
