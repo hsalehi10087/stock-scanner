@@ -1,0 +1,10 @@
+id: ab0d637a16-ml-midday-intraday
+name: ML midday-to-close intraday long
+name_fa: خرید درون‌روزی سهام با یادگیری ماشین (ورود نیمروز، خروج ۳:۵۵)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xg8blg/intraday_strategy_looked_promising_in_backtests/
+claim: "«بک‌تست ۲۰۲۰ تا ۲۰۲۴: ‎+۱۵۷.۴٪ (SPY ‎+۹۶.۴٪)، شارپ ۰.۹۰، بیشترین افت ۲۰.۲٪. اعتبارسنجی ۲۰۲۵: ‎+۶.۸٪ (SPY ‎+۱۷.۷٪). ۲۰۲۶ تا امروز: ‎-۰.۴٪ (SPY ‎+۱۳.۷٪)»"
+claimed_return: "+157.4% (2020-2024 backtest)"
+added: 2026-10-27
+status: not_testable
+reason_not_testable: "با داده‌ی ۱ دقیقه‌ای و مدل یادگیری ماشین منتشرنشده کار می‌کند؛ قانون عددی قابل بازسازی ندارد"

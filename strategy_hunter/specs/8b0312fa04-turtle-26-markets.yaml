@@ -1,0 +1,10 @@
+id: 8b0312fa04-turtle-26-markets
+name: Original Turtle rules on 26 markets
+name_fa: قوانین اصلی لاک‌پشت‌ها روی ۲۶ بازار
+source: dev.to/trading
+source_url: https://dev.to/moonthetrain/turtle-trading-backtest-results-26-markets-577-55b1
+claim: "«قوانین اصلی لاک‌پشت‌ها روی داده‌ی Exness از ۲۰۲۰ تا ۲۰۲۶: ‎-۳۷.۹٪ روی ۱۱ بازار و ‎-۵۷.۷٪ روی ۲۶ بازار. خریدها در همه‌ی گروه‌ها سود دادند، فروش‌ها زیان.»"
+claimed_return: "-57.7%"
+added: 2026-10-27
+status: not_testable
+reason_not_testable: "متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد"

@@ -1,0 +1,26 @@
+id: c2271322da-qqq-acceleration-bands-dip
+name: QQQ acceleration bands dip buy
+name_fa: خرید QQQ زیر باند پایینی «باندهای شتاب» و فروش در اولین برگشت
+source: medium/algorithmic-trading
+source_url: https://medium.com/@Kryptera/acceleration-bands-on-qqq-buy-the-close-below-the-lower-band-sell-the-first-bounce-24101b8eb47f?source=rss------algorithmic_trading-5
+claim: "«باندهای شتاب روی QQQ: با بسته‌شدن زیر باند پایینی بخر، در اولین برگشت بفروش. بک‌تست ۲۷ ساله: فقط ۷.۷٪ زمان در بازار، ۷۶٪ برد در ۱۳۵ معامله، و کاهش بیشترین افت سرمایه از ۸۳٪…»"
+claimed_return: "76% win rate (135 trades)"
+added: 2026-10-27
+status: implemented
+asset_class: etf
+symbols: [QQQ]
+timeframe: 1d
+start: '1999-03-10'
+notes: >-
+  متن کامل مقاله در دسترس نبود؛ فقط عنوان و خلاصه. باند پایینی به روش رایج (Price Headley) با دوره‌ی ۲۰ فرض شد:
+  میانگین ۲۰ روزه‌ی low×(1−4×(high−low)/(high+low)). چون موتور این فرمول را مستقیم ندارد، تقریب زده شد:
+  ۳×میانگین۲۰ low − ۲×میانگین۲۰ high (یعنی میانگین low منهای ۲ برابر میانگین دامنه‌ی روز؛ خطای تقریب ناچیز).
+  «اولین برگشت» = اولین روزی که بسته‌شدن بالاتر از بسته‌شدن روز قبل است. حد ضرر گفته نشده، گذاشته نشد.
+  شروع از آغاز داده‌ی QQQ (۱۹۹۹، حدود ۲۷ سال). فقط خرید.
+indicators:
+  sma_low20: {fn: sma, col: low, n: 20}
+  sma_high20: {fn: sma, col: high, n: 20}
+  prev_close: {fn: prev, col: close, k: 1}
+entry: close < 3 * sma_low20 - 2 * sma_high20
+exit: close > prev_close
+side: long

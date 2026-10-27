@@ -1,0 +1,10 @@
+id: ee02d103c4-spy-vwap-band-fade
+name: SPY VWAP band fade (5-min)
+name_fa: معامله‌ی خلاف جهت بیرون‌زدن از باندهای VWAP روی SPY
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xfv8hn/backtested_fading_vwap_on_spy_for_36_years_6_in/
+claim: "«از مارس ۲۰۲۳ تا اکتبر ۲۰۲۶ روی کندل ۵ دقیقه‌ای SPY: باند ۱ انحراف معیار ۲۷.۵ هزار دلار زیان در ۳٬۳۱۷ معامله، ۲ انحراف ۲۳.۹ هزار دلار زیان، ۳ انحراف ۳ هزار دلار زیان در ۲۷۵ معامله؛ با ۶۲ تا ۶۵٪ برد»"
+claimed_return: "-$27.5k (62-65% win rate)"
+added: 2026-10-27
+status: not_testable
+reason_not_testable: "روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم"
