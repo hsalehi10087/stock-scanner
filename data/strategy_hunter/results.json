@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T20:40:23+00:00",
+ "updated": "2026-10-27T14:03:17+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -86,43 +86,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.89,
-    "sharpe": -0.11,
-    "max_dd": -83.41,
-    "total": -66.84
+    "cagr": -4.82,
+    "sharpe": -0.1,
+    "max_dd": -83.22,
+    "total": -66.32
    },
    "in_sample": {
-    "cagr": -8.7,
-    "sharpe": -0.27,
-    "max_dd": -78.86,
-    "total": -75.4
+    "cagr": -8.97,
+    "sharpe": -0.28,
+    "max_dd": -78.62,
+    "total": -76.51
    },
    "out_sample": {
-    "cagr": 5.81,
-    "sharpe": 0.37,
+    "cagr": 4.69,
+    "sharpe": 0.32,
     "max_dd": -33.97,
-    "total": 45.21
+    "total": 35.35
    },
    "buyhold_full": {
-    "cagr": 4.98,
+    "cagr": 4.96,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 191.56
+    "total": 190.35
    },
    "buyhold_out_sample": {
-    "cagr": -0.49,
-    "sharpe": 0.14,
+    "cagr": 0.66,
+    "sharpe": 0.17,
     "max_dd": -60.81,
-    "total": -3.21
+    "total": 4.46
    },
    "trades": 633,
    "win_rate": 54.0,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
-   "period": "2004-10-08 → 2026-10-26",
-   "oos_start": "2020-03-12",
-   "forward_days": 1,
-   "forward_usd": 993.81,
+   "period": "2004-10-08 → 2026-10-27",
+   "oos_start": "2020-03-13",
+   "forward_days": 2,
+   "forward_usd": 997.94,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
   },
   "32bed65cff-nifty-intraday-option-buying": {
@@ -182,43 +182,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.54,
+    "cagr": 10.45,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 298.28
+    "total": 293.96
    },
    "in_sample": {
-    "cagr": 7.71,
-    "sharpe": 0.42,
+    "cagr": 8.11,
+    "sharpe": 0.43,
     "max_dd": -49.5,
-    "total": 104.8
+    "total": 112.32
    },
    "out_sample": {
-    "cagr": 17.07,
+    "cagr": 17.12,
     "sharpe": 0.66,
     "max_dd": -42.23,
-    "total": 92.02
+    "total": 92.37
    },
    "buyhold_full": {
-    "cagr": 25.43,
+    "cagr": 25.32,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2173.57
+    "total": 2148.87
    },
    "buyhold_out_sample": {
-    "cagr": 39.78,
+    "cagr": 39.84,
     "sharpe": 1.0,
     "max_dd": -47.44,
-    "total": 299.95
+    "total": 300.66
    },
    "trades": 94,
    "win_rate": 71.3,
    "avg_trade_pct": 1.99,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-26",
-   "oos_start": "2022-08-30",
-   "forward_days": 2,
-   "forward_usd": 971.81,
+   "period": "2013-01-02 → 2026-10-27",
+   "oos_start": "2022-08-31",
+   "forward_days": 3,
+   "forward_usd": 961.25,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -254,24 +254,24 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.94,
+    "cagr": 7.95,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 260.22
+    "total": 261.15
    },
    "buyhold_out_sample": {
-    "cagr": 17.89,
+    "cagr": 17.98,
     "sharpe": 0.96,
     "max_dd": -24.94,
-    "total": 129.1
+    "total": 129.91
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-26",
-   "oos_start": "2021-10-11",
-   "forward_days": 2,
+   "period": "2010-01-04 → 2026-10-27",
+   "oos_start": "2021-10-12",
+   "forward_days": 3,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -318,43 +318,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 8.06,
+    "cagr": 8.07,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1264.95
+    "total": 1265.84
    },
    "in_sample": {
-    "cagr": 6.84,
+    "cagr": 6.83,
     "sharpe": 0.61,
     "max_dd": -25.39,
-    "total": 376.06
+    "total": 374.97
    },
    "out_sample": {
-    "cagr": 10.98,
+    "cagr": 10.99,
     "sharpe": 0.91,
     "max_dd": -24.43,
-    "total": 186.69
+    "total": 186.9
    },
    "buyhold_full": {
     "cagr": 10.79,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3059.47
+    "total": 3061.54
    },
    "buyhold_out_sample": {
-    "cagr": 15.01,
+    "cagr": 15.02,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 311.24
+    "total": 311.55
    },
    "trades": 102,
    "win_rate": 25.5,
    "avg_trade_pct": 3.34,
    "exposure": 0.76,
-   "period": "1993-02-01 → 2026-10-26",
-   "oos_start": "2016-09-07",
-   "forward_days": 0,
-   "forward_usd": 1000.0,
+   "period": "1993-02-01 → 2026-10-27",
+   "oos_start": "2016-09-08",
+   "forward_days": 1,
+   "forward_usd": 1000.65,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -497,6 +497,34 @@
    "reason_not_testable": "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست",
    "verdict": "غیرقابل آزمون: به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
   },
+  "8b0312fa04-turtle-26-markets": {
+   "name": "Original Turtle rules on 26 markets",
+   "name_fa": "قوانین اصلی لاک‌پشت‌ها روی ۲۶ بازار",
+   "source": "dev.to/trading",
+   "source_url": "https://dev.to/moonthetrain/turtle-trading-backtest-results-26-markets-577-55b1",
+   "claim": "«قوانین اصلی لاک‌پشت‌ها روی داده‌ی Exness از ۲۰۲۰ تا ۲۰۲۶: ‎-۳۷.۹٪ روی ۱۱ بازار و ‎-۵۷.۷٪ روی ۲۶ بازار. خریدها در همه‌ی گروه‌ها سود دادند، فروش‌ها زیان.»",
+   "claimed_return": "-57.7%",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-27",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد",
+   "verdict": "غیرقابل آزمون: متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد"
+  },
+  "ab0d637a16-ml-midday-intraday": {
+   "name": "ML midday-to-close intraday long",
+   "name_fa": "خرید درون‌روزی سهام با یادگیری ماشین (ورود نیمروز، خروج ۳:۵۵)",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xg8blg/intraday_strategy_looked_promising_in_backtests/",
+   "claim": "«بک‌تست ۲۰۲۰ تا ۲۰۲۴: ‎+۱۵۷.۴٪ (SPY ‎+۹۶.۴٪)، شارپ ۰.۹۰، بیشترین افت ۲۰.۲٪. اعتبارسنجی ۲۰۲۵: ‎+۶.۸٪ (SPY ‎+۱۷.۷٪). ۲۰۲۶ تا امروز: ‎-۰.۴٪ (SPY ‎+۱۳.۷٪)»",
+   "claimed_return": "+157.4% (2020-2024 backtest)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-27",
+   "status": "not_testable",
+   "reason_not_testable": "با داده‌ی ۱ دقیقه‌ای و مدل یادگیری ماشین منتشرنشده کار می‌کند؛ قانون عددی قابل بازسازی ندارد",
+   "verdict": "غیرقابل آزمون: با داده‌ی ۱ دقیقه‌ای و مدل یادگیری ماشین منتشرنشده کار می‌کند؛ قانون عددی قابل بازسازی ندارد"
+  },
   "b651b12620-crypto-ts-momentum-28d": {
    "name": "Crypto own-asset momentum 28d",
    "name_fa": "مومنتوم خودِ دارایی ۲۸ روزه در کریپتو",
@@ -512,7 +540,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.99,
+    "cagr": 66.97,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -524,7 +552,7 @@
     "total": 15901.87
    },
    "out_sample": {
-    "cagr": 36.75,
+    "cagr": 36.72,
     "sharpe": 1.1,
     "max_dd": -35.7,
     "total": 212.05
@@ -533,23 +561,91 @@
     "cagr": 53.1,
     "sharpe": 0.98,
     "max_dd": -83.4,
-    "total": 17340.09
+    "total": 17355.88
    },
    "buyhold_out_sample": {
-    "cagr": 45.58,
+    "cagr": 45.57,
     "sharpe": 1.04,
     "max_dd": -53.06,
-    "total": 291.69
+    "total": 292.04
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-26",
+   "period": "2014-09-17 → 2026-10-27",
    "oos_start": "2023-03-10",
-   "forward_days": 1,
+   "forward_days": 2,
    "forward_usd": 1000.0,
    "verdict": "قبول"
+  },
+  "bd9d38fbb8-nq-orb-fvg-irl-erl": {
+   "name": "15-min ORB + FVG and IRL to ERL",
+   "name_fa": "شکست محدوده‌ی ۱۵ دقیقه‌ی اول با تأیید FVG و ستاپ IRL به ERL",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/tradingmillionaires/comments/1xghw61/i_made_65k_trading_this_year_with_a_52_win_rate/",
+   "claim": "«امسال حدود ۶۵ هزار دلار سود کردم. سود خالص ‎+۴۳٬۰۰۸ دلار، ۲۷۰ معامله، ۵۱.۹۵٪ برد، ضریب سود ۱.۶۸. یکی از بک‌تست‌های ORB پانزده دقیقه‌ای روی NQ با ۱٬۵۱۷ معامله ‎+۶۵٬۰۴۰ دلار سود شبیه‌سازی‌شده داشت.»",
+   "claimed_return": "+$43,008 (51.95% win rate, PF 1.68)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-27",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۱ و ۱۵ دقیقه‌ای است و شرط‌ها (جهت کلی بازار، جابه‌جایی، هدف نقدینگی) قضاوت تصویری است؛ داده‌ی دقیقه‌ای چندساله نداریم",
+   "verdict": "غیرقابل آزمون: روی کندل ۱ و ۱۵ دقیقه‌ای است و شرط‌ها (جهت کلی بازار، جابه‌جایی، هدف نقدینگی) قضاوت تصویری است؛ داده‌ی دقیقه‌ای چندساله نداریم"
+  },
+  "c2271322da-qqq-acceleration-bands-dip": {
+   "name": "QQQ acceleration bands dip buy",
+   "name_fa": "خرید QQQ زیر باند پایینی «باندهای شتاب» و فروش در اولین برگشت",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/acceleration-bands-on-qqq-buy-the-close-below-the-lower-band-sell-the-first-bounce-24101b8eb47f?source=rss------algorithmic_trading-5",
+   "claim": "«باندهای شتاب روی QQQ: با بسته‌شدن زیر باند پایینی بخر، در اولین برگشت بفروش. بک‌تست ۲۷ ساله: فقط ۷.۷٪ زمان در بازار، ۷۶٪ برد در ۱۳۵ معامله، و کاهش بیشترین افت سرمایه از ۸۳٪…»",
+   "claimed_return": "76% win rate (135 trades)",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-27",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 5.96,
+    "sharpe": 0.6,
+    "max_dd": -19.5,
+    "total": 393.85
+   },
+   "in_sample": {
+    "cagr": 6.1,
+    "sharpe": 0.61,
+    "max_dd": -19.5,
+    "total": 213.62
+   },
+   "out_sample": {
+    "cagr": 5.64,
+    "sharpe": 0.58,
+    "max_dd": -11.59,
+    "total": 57.47
+   },
+   "buyhold_full": {
+    "cagr": 10.73,
+    "sharpe": 0.51,
+    "max_dd": -82.96,
+    "total": 1563.76
+   },
+   "buyhold_out_sample": {
+    "cagr": 19.09,
+    "sharpe": 0.85,
+    "max_dd": -35.12,
+    "total": 324.8
+   },
+   "trades": 194,
+   "win_rate": 64.4,
+   "avg_trade_pct": 0.86,
+   "exposure": 0.08,
+   "period": "1999-03-10 → 2026-10-27",
+   "oos_start": "2018-07-11",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
@@ -606,6 +702,20 @@
    "status": "not_testable",
    "reason_not_testable": "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست",
    "verdict": "غیرقابل آزمون: به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
+  },
+  "ee02d103c4-spy-vwap-band-fade": {
+   "name": "SPY VWAP band fade (5-min)",
+   "name_fa": "معامله‌ی خلاف جهت بیرون‌زدن از باندهای VWAP روی SPY",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xfv8hn/backtested_fading_vwap_on_spy_for_36_years_6_in/",
+   "claim": "«از مارس ۲۰۲۳ تا اکتبر ۲۰۲۶ روی کندل ۵ دقیقه‌ای SPY: باند ۱ انحراف معیار ۲۷.۵ هزار دلار زیان در ۳٬۳۱۷ معامله، ۲ انحراف ۲۳.۹ هزار دلار زیان، ۳ انحراف ۳ هزار دلار زیان در ۲۷۵ معامله؛ با ۶۲ تا ۶۵٪ برد»",
+   "claimed_return": "-$27.5k (62-65% win rate)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-27",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم"
   },
   "f7e1f24aa0-claude-renko-pnf-crypto": {
    "name": "Renko + Point&Figure crypto (1-min)",
