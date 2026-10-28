@@ -1,0 +1,3 @@
+ticker,name,price_chg,ni_growth,ni_cur_m,ni_prev_m,date,qs,qs_known,qs_label,qs_flags
+5344,"MARUWA CO.,LTD.",14.893617021276606,15.162454873646208,4466.0,3878.0,2026-10-28,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+285A,Kioxia Holdings Corporation,13.764379214597389,4506.021658280463,842165.0,18284.0,2026-10-28,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
