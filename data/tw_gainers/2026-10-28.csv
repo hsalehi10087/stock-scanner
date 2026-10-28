@@ -1,0 +1,9 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+8299.TWO,群聯,10.569105691056912,3421.0922726491317,26217.208,744.576,2026-10-28,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+2049.TW,上銀,14.309484193011656,526.7549081228972,847.592,135.235,2026-10-28,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+9933.TW,中鼎,10.360886342007358,515.9063472027244,1566.256,254.301,2026-10-28,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+3374.TWO,精材,16.82242990654206,512.5295581348623,396.325,64.703,2026-10-28,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': True, 'analysts': None}"
+3406.TW,玉晶光,27.884615384615373,185.87551085874262,686.207,240.037,2026-10-28,3,5,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': True, 'analysts': False}"
+6415.TW,矽力*-KY,13.513513513513509,149.369670533407,1570.999,629.988,2026-10-28,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+6245.TWO,立端,12.652610120912788,42.63015705847337,155.745,109.195,2026-10-28,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6221.TWO,晉泰,20.715352968658873,35.57641569694782,146.451,108.021,2026-10-28,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
