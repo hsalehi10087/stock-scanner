@@ -167,7 +167,7 @@ def universe(m):
 
 
 # ---------------- قیمت ----------------
-def download(tickers, period=None, start=None, chunk=150):
+def download(tickers, period=None, start=None, chunk=150, _retry=False):
     import yfinance as yf
     closes, vols = {}, {}
     tl = list(tickers)
@@ -193,6 +193,14 @@ def download(tickers, period=None, start=None, chunk=150):
             except Exception:
                 pass
         log(f'downloaded {i + len(part)}/{len(tl)} ok={len(closes)}')
+    missing = [t for t in tl if t not in closes]
+    if missing and len(missing) > 0.2 * len(tl) and not _retry:
+        # Yahoo گاهی بخش بزرگی را خالی برمی‌گرداند (محدودیت درخواست)؛ یک بار دیگر با دسته‌های کوچک‌تر و مکث
+        log(f'retrying {len(missing)} missing tickers after pause')
+        time.sleep(90)
+        C2, V2 = download(missing, period=period, start=start, chunk=50, _retry=True)
+        for t in C2.columns:
+            closes[t], vols[t] = C2[t].dropna(), V2[t].reindex(C2[t].dropna().index).fillna(0)
     C = pd.DataFrame(closes).sort_index()
     V = pd.DataFrame(vols).reindex(C.index)
     return C, V
