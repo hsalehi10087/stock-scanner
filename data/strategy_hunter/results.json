@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T20:10:35+00:00",
+ "updated": "2026-10-28T13:57:06+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -43,6 +43,20 @@
    "reason_not_testable": "معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: معامله‌ی درون‌روزی با کندل دقیقه‌ای و قانون فقط در تصویر آمده؛ اطلاعات کافی نیست"
   },
+  "145356d431-nq-8-strategy-system": {
+   "name": "NQ 8-strategy futures system",
+   "name_fa": "سیستم ۸ استراتژی روی نزدک آتی (NQ)",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xhceyh/my_8strategy_system_looked_amazing_until_i_tested/",
+   "claim": "«مه ۲۰۱۹ تا اکتبر ۲۰۲۶ با یک قرارداد میکرو: هر ۸ استراتژی با هم ‎+$109K‎ سود با بیشترین افت ‎−$3.9K‎؛ ولی ۲۰۱۱–۲۰۱۹ ضریب سود فقط ۱٫۱۷ و استراتژی‌های ۱ تا ۴ به‌تنهایی ۱٫۵۹»",
+   "claimed_return": "+$109K (MNQ, 2019–2026), PF 1.17 on 2011–2019",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-28",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌ها را نویسنده منتشر نکرده و اجرا روی داده‌ی ۱ دقیقه‌ای است",
+   "verdict": "غیرقابل آزمون: قانون‌ها را نویسنده منتشر نکرده و اجرا روی داده‌ی ۱ دقیقه‌ای است"
+  },
   "18da1bc880-spy-stochastic-grid-search": {
    "name": "SPY stochastic (grid search)",
    "name_fa": "استوکاستیک روی SPY با جست‌وجوی پارامتر",
@@ -71,6 +85,20 @@
    "reason_not_testable": "ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست"
   },
+  "276555f346-0dte-quick-scalp": {
+   "name": "0DTE options quick scalping",
+   "name_fa": "نوسان‌گیری سریع آپشن روز انقضا (0DTE)",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xheef7/trading_0dte_with_quick_entry_and_exit/",
+   "claim": "«۴۰۰ دلار را در حدود دو ماه به نزدیک ۸۰۰۰ دلار رساندم با معامله‌ی 0DTE و ورود و خروج در ۱ تا ۲ دقیقه؛ حالا نزدیک نصف سود را پس داده‌ام و حدود ۴۰۰۰ دلار سودم»",
+   "claimed_return": "$400 → ~$8000 (now ~+$4000)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-28",
+   "status": "not_testable",
+   "reason_not_testable": "قضاوت روی حرکت قیمت آپشن با نگه‌داری ۱–۲ دقیقه‌ای؛ قانون مشخص و داده‌ی تاریخی آپشن دقیقه‌ای نداریم",
+   "verdict": "غیرقابل آزمون: قضاوت روی حرکت قیمت آپشن با نگه‌داری ۱–۲ دقیقه‌ای؛ قانون مشخص و داده‌ی تاریخی آپشن دقیقه‌ای نداریم"
+  },
   "277a1cce48-fxi-ibs-short": {
    "name": "FXI IBS short (Medium)",
    "name_fa": "فروش استقراضی FXI با نسبت IBS",
@@ -86,43 +114,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.84,
-    "sharpe": -0.1,
-    "max_dd": -83.22,
-    "total": -66.43
+    "cagr": -4.9,
+    "sharpe": -0.11,
+    "max_dd": -83.49,
+    "total": -66.9
    },
    "in_sample": {
-    "cagr": -8.97,
-    "sharpe": -0.28,
-    "max_dd": -78.62,
-    "total": -76.51
+    "cagr": -8.48,
+    "sharpe": -0.26,
+    "max_dd": -78.96,
+    "total": -74.51
    },
    "out_sample": {
-    "cagr": 4.64,
-    "sharpe": 0.32,
+    "cagr": 5.59,
+    "sharpe": 0.36,
     "max_dd": -33.97,
-    "total": 34.91
+    "total": 43.2
    },
    "buyhold_full": {
-    "cagr": 4.98,
+    "cagr": 4.96,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 191.29
+    "total": 190.66
    },
    "buyhold_out_sample": {
-    "cagr": 0.71,
-    "sharpe": 0.17,
+    "cagr": -0.15,
+    "sharpe": 0.15,
     "max_dd": -60.81,
-    "total": 4.8
+    "total": -0.96
    },
-   "trades": 633,
-   "win_rate": 54.0,
+   "trades": 634,
+   "win_rate": 53.9,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
-   "period": "2004-10-08 → 2026-10-27",
-   "oos_start": "2020-03-13",
-   "forward_days": 2,
-   "forward_usd": 994.73,
+   "period": "2004-10-08 → 2026-10-28",
+   "oos_start": "2020-03-16",
+   "forward_days": 3,
+   "forward_usd": 996.87,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
   },
   "32bed65cff-nifty-intraday-option-buying": {
@@ -182,10 +210,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.23,
+    "cagr": 10.15,
     "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 283.19
+    "total": 279.62
    },
    "in_sample": {
     "cagr": 7.86,
@@ -194,31 +222,31 @@
     "total": 107.69
    },
    "out_sample": {
-    "cagr": 16.96,
-    "sharpe": 0.66,
+    "cagr": 16.68,
+    "sharpe": 0.65,
     "max_dd": -42.23,
-    "total": 91.28
+    "total": 89.49
    },
    "buyhold_full": {
-    "cagr": 25.27,
+    "cagr": 25.17,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2136.18
+    "total": 2115.3
    },
    "buyhold_out_sample": {
-    "cagr": 39.65,
-    "sharpe": 1.0,
+    "cagr": 39.29,
+    "sharpe": 0.99,
     "max_dd": -47.44,
-    "total": 298.4
+    "total": 294.68
    },
    "trades": 93,
    "win_rate": 71.0,
    "avg_trade_pct": 1.98,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-27",
+   "period": "2013-01-02 → 2026-10-28",
    "oos_start": "2022-08-31",
-   "forward_days": 3,
-   "forward_usd": 955.83,
+   "forward_days": 4,
+   "forward_usd": 946.91,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -254,24 +282,24 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 8.01,
+    "cagr": 7.99,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 264.55
+    "total": 263.49
    },
    "buyhold_out_sample": {
-    "cagr": 18.2,
+    "cagr": 18.11,
     "sharpe": 0.97,
     "max_dd": -24.94,
-    "total": 132.08
+    "total": 131.4
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-27",
+   "period": "2010-01-04 → 2026-10-28",
    "oos_start": "2021-10-12",
-   "forward_days": 3,
+   "forward_days": 4,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -321,7 +349,7 @@
     "cagr": 8.08,
     "sharpe": 0.71,
     "max_dd": -25.39,
-    "total": 1272.68
+    "total": 1273.91
    },
    "in_sample": {
     "cagr": 6.83,
@@ -330,31 +358,31 @@
     "total": 374.97
    },
    "out_sample": {
-    "cagr": 11.04,
+    "cagr": 11.05,
     "sharpe": 0.91,
     "max_dd": -24.43,
-    "total": 188.34
+    "total": 188.6
    },
    "buyhold_full": {
     "cagr": 10.81,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3077.39
+    "total": 3080.24
    },
    "buyhold_out_sample": {
     "cagr": 15.08,
-    "sharpe": 0.87,
+    "sharpe": 0.88,
     "max_dd": -33.72,
-    "total": 313.61
+    "total": 313.99
    },
    "trades": 102,
    "win_rate": 25.5,
    "avg_trade_pct": 3.34,
    "exposure": 0.76,
-   "period": "1993-02-01 → 2026-10-27",
+   "period": "1993-02-01 → 2026-10-28",
    "oos_start": "2016-09-08",
-   "forward_days": 1,
-   "forward_usd": 1005.67,
+   "forward_days": 2,
+   "forward_usd": 1006.57,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -497,6 +525,60 @@
    "reason_not_testable": "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست",
    "verdict": "غیرقابل آزمون: به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
   },
+  "80b25d437a-spy-sma200-band-4-3": {
+   "name": "SPY 200SMA +4%/-3% band timing",
+   "name_fa": "زمان‌بندی با باند ‎+۴٪/−۳٪‎ دور میانگین ۲۰۰ روزه‌ی SPY",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/LETFs/comments/1xgux66/the_spy_200sma_43_tqqq_rule_isnt_special_i_tested/",
+   "claim": "«قانون +۴/−۳: وقتی SPY ۴٪ بالای میانگین ۲۰۰ روزه رفت TQQQ بخر، وقتی ۳٪ زیر آن رفت بفروش. ۲۰۱۰–۲۰۲۵ سالانه ۴۲٫۱٪ (مثل نگه‌داشتن TQQQ) ولی بیشترین افت از ‎−82%‎ به ‎−60%‎ رسید. انتظار واقعی برای SPY → UPRO حدود ۱۱–۱۲٪ در سال»",
+   "claimed_return": "42.1%/yr (TQQQ, 2010–2025), max DD -60%",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-28",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 9.52,
+    "sharpe": 0.81,
+    "max_dd": -20.16,
+    "total": 2044.71
+   },
+   "in_sample": {
+    "cagr": 8.83,
+    "sharpe": 0.76,
+    "max_dd": -19.44,
+    "total": 636.49
+   },
+   "out_sample": {
+    "cagr": 11.12,
+    "sharpe": 0.92,
+    "max_dd": -20.16,
+    "total": 190.54
+   },
+   "buyhold_full": {
+    "cagr": 10.81,
+    "sharpe": 0.65,
+    "max_dd": -55.19,
+    "total": 3080.24
+   },
+   "buyhold_out_sample": {
+    "cagr": 15.08,
+    "sharpe": 0.88,
+    "max_dd": -33.72,
+    "total": 313.99
+   },
+   "trades": 14,
+   "win_rate": 92.9,
+   "avg_trade_pct": 26.4,
+   "exposure": 0.73,
+   "period": "1993-02-01 → 2026-10-28",
+   "oos_start": "2016-09-08",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: معامله‌ی کافی نیست"
+  },
   "8b0312fa04-turtle-26-markets": {
    "name": "Original Turtle rules on 26 markets",
    "name_fa": "قوانین اصلی لاک‌پشت‌ها روی ۲۶ بازار",
@@ -510,6 +592,20 @@
    "status": "not_testable",
    "reason_not_testable": "متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد",
    "verdict": "غیرقابل آزمون: متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد"
+  },
+  "9925527b2f-spy-fear-in-uptrend": {
+   "name": "Buy SPY fear inside uptrend",
+   "name_fa": "خرید ترس SPY فقط در روند صعودی",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/the-quiet-signal-what-happens-when-you-only-buy-spy-fear-inside-an-uptrend-406e1f884b40",
+   "claim": "«یک استراتژی SPY با ۷٫۷۵٪ زمان حضور در بازار و شارپ بالاتر از نگه‌داشتن ساده، ولی جایگزین داشتن شاخص نیست»",
+   "claimed_return": "Sharpe above buy & hold, 7.75% exposure",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-28",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست"
   },
   "ab0d637a16-ml-midday-intraday": {
    "name": "ML midday-to-close intraday long",
@@ -540,13 +636,13 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.97,
+    "cagr": 66.95,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 81.88,
+    "cagr": 81.84,
     "sharpe": 1.41,
     "max_dd": -74.38,
     "total": 15901.87
@@ -558,24 +654,24 @@
     "total": 212.05
    },
    "buyhold_full": {
-    "cagr": 53.23,
+    "cagr": 53.21,
     "sharpe": 0.98,
     "max_dd": -83.4,
-    "total": 17532.84
+    "total": 17528.5
    },
    "buyhold_out_sample": {
-    "cagr": 45.98,
+    "cagr": 46.31,
     "sharpe": 1.05,
     "max_dd": -53.06,
-    "total": 296.02
+    "total": 299.37
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-27",
-   "oos_start": "2023-03-10",
-   "forward_days": 2,
+   "period": "2014-09-17 → 2026-10-28",
+   "oos_start": "2023-03-11",
+   "forward_days": 3,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -611,7 +707,7 @@
     "cagr": 5.96,
     "sharpe": 0.6,
     "max_dd": -19.5,
-    "total": 393.85
+    "total": 393.87
    },
    "in_sample": {
     "cagr": 6.1,
@@ -626,24 +722,24 @@
     "total": 57.47
    },
    "buyhold_full": {
-    "cagr": 10.76,
+    "cagr": 10.77,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1578.02
+    "total": 1579.58
    },
    "buyhold_out_sample": {
-    "cagr": 19.22,
-    "sharpe": 0.85,
+    "cagr": 19.3,
+    "sharpe": 0.86,
     "max_dd": -35.12,
-    "total": 328.44
+    "total": 331.03
    },
    "trades": 194,
    "win_rate": 64.4,
    "avg_trade_pct": 0.86,
    "exposure": 0.08,
-   "period": "1999-03-10 → 2026-10-27",
-   "oos_start": "2018-07-11",
-   "forward_days": 0,
+   "period": "1999-03-10 → 2026-10-28",
+   "oos_start": "2018-07-12",
+   "forward_days": 1,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
