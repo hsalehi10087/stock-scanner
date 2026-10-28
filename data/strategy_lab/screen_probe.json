@@ -1,0 +1,567 @@
+{
+ "version": "1.7.0",
+ "kr": {
+  "n": 2642,
+  "err": null,
+  "sample": [
+   [
+    "005930.KS",
+    "SamsungElec",
+    "KSC"
+   ],
+   [
+    "005935.KS",
+    "SamsungElec(1P)",
+    "KSC"
+   ],
+   [
+    "000660.KS",
+    "SK hynix",
+    "KSC"
+   ],
+   [
+    "402340.KS",
+    "SKSQUARE",
+    "KSC"
+   ],
+   [
+    "009150.KS",
+    "SamsungElecMech",
+    "KSC"
+   ],
+   [
+    "373220.KS",
+    "LG Energy Solution",
+    "KSC"
+   ],
+   [
+    "005380.KS",
+    "HyundaiMtr",
+    "KSC"
+   ],
+   [
+    "207940.KS",
+    "SAMSUNG BIOLOGICS",
+    "KSC"
+   ]
+  ],
+  "exchanges": [
+   "KOE",
+   "KSC"
+  ]
+ },
+ "hk": {
+  "n": 1729,
+  "err": null,
+  "sample": [
+   [
+    "0700.HK",
+    "TENCENT",
+    "HKG"
+   ],
+   [
+    "1398.HK",
+    "ICBC",
+    "HKG"
+   ],
+   [
+    "0939.HK",
+    "CCB",
+    "HKG"
+   ],
+   [
+    "1288.HK",
+    "ABC",
+    "HKG"
+   ],
+   [
+    "0005.HK",
+    "HSBC HOLDINGS",
+    "HKG"
+   ],
+   [
+    "9988.HK",
+    "BABA-W",
+    "HKG"
+   ],
+   [
+    "3988.HK",
+    "BANK OF CHINA",
+    "HKG"
+   ],
+   [
+    "0857.HK",
+    "PETROCHINA",
+    "HKG"
+   ]
+  ],
+  "exchanges": [
+   "HKG"
+  ]
+ },
+ "gb": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "TYT.L",
+    "TOYOTA MOTOR CORPORATION Y50",
+    "LSE"
+   ],
+   [
+    "SHEL.L",
+    "SHELL PLC ORD EUR0.07",
+    "LSE"
+   ],
+   [
+    "SHELL.XC",
+    "Shell PLC",
+    "CXE"
+   ],
+   [
+    "HSBAL.XC",
+    "HSBC Holdings PLC",
+    "CXE"
+   ],
+   [
+    "HSBA.L",
+    "HSBC HOLDINGS PLC ORD $0.50 (UK",
+    "LSE"
+   ],
+   [
+    "AZNL.XC",
+    "AstraZeneca PLC",
+    "CXE"
+   ],
+   [
+    "AZN.L",
+    "ASTRAZENECA PLC ORD SHS $0.25",
+    "LSE"
+   ],
+   [
+    "BHPL.XC",
+    "BHP Group Ltd",
+    "CXE"
+   ]
+  ],
+  "exchanges": [
+   "AQS",
+   "CXE",
+   "IOB",
+   "LSE"
+  ]
+ },
+ "de": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "NVD.DE",
+    "NVIDIA CORP.                  R",
+    "GER"
+   ],
+   [
+    "NVD.F",
+    "NVIDIA CORP.                  R",
+    "FRA"
+   ],
+   [
+    "APC.DE",
+    "Apple Inc.                    R",
+    "GER"
+   ],
+   [
+    "APC.F",
+    "Apple Inc.                    R",
+    "FRA"
+   ],
+   [
+    "NVDG.F",
+    "NVIDIA Corp.                  R",
+    "FRA"
+   ],
+   [
+    "APC8.F",
+    "Apple Inc.                    R",
+    "FRA"
+   ],
+   [
+    "ABEA.F",
+    "Alphabet Inc.                 R",
+    "FRA"
+   ],
+   [
+    "ABEA.DE",
+    "Alphabet Inc.                 R",
+    "GER"
+   ]
+  ],
+  "exchanges": [
+   "DUS",
+   "FRA",
+   "GER",
+   "HAM",
+   "MUN",
+   "STU"
+  ]
+ },
+ "ca": {
+  "n": 830,
+  "err": null,
+  "sample": [
+   [
+    "NVDA.NE",
+    "NVIDIA CDR (CAD HEDGED)",
+    "NEO"
+   ],
+   [
+    "AAPL.NE",
+    "APPLE CDR (CAD HEDGED)",
+    "NEO"
+   ],
+   [
+    "NVDA.TO",
+    "NVIDIA CDR (CAD HEDGED)",
+    "TOR"
+   ],
+   [
+    "AAPL.TO",
+    "APPLE CDR (CAD HEDGED)",
+    "TOR"
+   ],
+   [
+    "MSFT.NE",
+    "MICROSOFT CDR (CAD HEDGED)",
+    "NEO"
+   ],
+   [
+    "MSFT.TO",
+    "MICROSOFT CDR (CAD HEDGED)",
+    "TOR"
+   ],
+   [
+    "GOOG.TO",
+    "ALPHABET CDR (CAD HEDGED)",
+    "TOR"
+   ],
+   [
+    "GOOG.NE",
+    "ALPHABET INC. CDR (CAD HEDGED)",
+    "NEO"
+   ]
+  ],
+  "exchanges": [
+   "CNQ",
+   "NEO",
+   "TOR",
+   "VAN"
+  ]
+ },
+ "au": {
+  "n": 465,
+  "err": null,
+  "sample": [
+   [
+    "BHP.AX",
+    "BHP GROUP FPO [BHP]",
+    "ASX"
+   ],
+   [
+    "CBA.AX",
+    "CWLTH BANK FPO [CBA]",
+    "ASX"
+   ],
+   [
+    "RIO.AX",
+    "RIO TINTO FPO [RIO]",
+    "ASX"
+   ],
+   [
+    "NEM.AX",
+    "NEWMONT CDI 1:1 [NEM]",
+    "ASX"
+   ],
+   [
+    "WBC.AX",
+    "WESTPAC FPO [WBC]",
+    "ASX"
+   ],
+   [
+    "NAB.AX",
+    "NAT. BANK FPO [NAB]",
+    "ASX"
+   ],
+   [
+    "GLC.AX",
+    "GLENCORE CDI 1:1 [GLC]",
+    "ASX"
+   ],
+   [
+    "ANZ.AX",
+    "ANZ GROUP FPO [ANZ]",
+    "ASX"
+   ]
+  ],
+  "exchanges": [
+   "ASX"
+  ]
+ },
+ "us": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "NVDA",
+    "NVIDIA Corporation",
+    "NMS"
+   ],
+   [
+    "AAPL",
+    "Apple Inc.",
+    "NMS"
+   ],
+   [
+    "GOOGL",
+    "Alphabet Inc.",
+    "NMS"
+   ],
+   [
+    "MSFT",
+    "Microsoft Corporation",
+    "NMS"
+   ],
+   [
+    "GOOG",
+    "Alphabet Inc.",
+    "NMS"
+   ],
+   [
+    "AMZN",
+    "Amazon.com, Inc.",
+    "NMS"
+   ],
+   [
+    "TSM",
+    "Taiwan Semiconductor Manufactur",
+    "NYQ"
+   ],
+   [
+    "SPCX",
+    "Space Exploration Technologies ",
+    "NMS"
+   ]
+  ],
+  "exchanges": [
+   "ASE",
+   "BTS",
+   "NCM",
+   "NGM",
+   "NMS",
+   "NYQ",
+   "OID",
+   "OQB",
+   "OQX",
+   "PNK",
+   "TEX"
+  ]
+ },
+ "in": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "RELIANCE.BO",
+    "RELIANCE INDUSTRIES LTD.",
+    "BSE"
+   ],
+   [
+    "RELIANCE.NS",
+    "RELIANCE INDUSTRIES LTD",
+    "NSI"
+   ],
+   [
+    "BHARTIARTL.BO",
+    "BHARTI AIRTEL LTD.",
+    "BSE"
+   ],
+   [
+    "BHARTIARTL.NS",
+    "BHARTI AIRTEL LIMITED",
+    "NSI"
+   ],
+   [
+    "HDFCBANK.NS",
+    "HDFC BANK LTD",
+    "NSI"
+   ],
+   [
+    "HDFCBANK.BO",
+    "HDFC BANK LTD.",
+    "BSE"
+   ],
+   [
+    "ICICIBANK.NS",
+    "ICICI BANK LTD.",
+    "NSI"
+   ],
+   [
+    "ICICIBANK.BO",
+    "ICICI BANK LTD.",
+    "BSE"
+   ]
+  ],
+  "exchanges": [
+   "BSE",
+   "NSI"
+  ]
+ },
+ "jp": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "8306.T",
+    "MITSUBISHI UFJ FINANCIAL GROUP ",
+    "JPX"
+   ],
+   [
+    "7203.T",
+    "TOYOTA MOTOR CORP",
+    "JPX"
+   ],
+   [
+    "9984.T",
+    "SOFTBANK GROUP CORP",
+    "JPX"
+   ],
+   [
+    "6098.T",
+    "RECRUIT HOLDINGS CO LTD",
+    "JPX"
+   ],
+   [
+    "6857.T",
+    "ADVANTEST CORP",
+    "JPX"
+   ],
+   [
+    "6501.T",
+    "HITACHI",
+    "JPX"
+   ],
+   [
+    "8316.T",
+    "SUMITOMO MITSUI FINANCIAL GROUP",
+    "JPX"
+   ],
+   [
+    "6758.T",
+    "SONY GROUP CORPORATION",
+    "JPX"
+   ]
+  ],
+  "exchanges": [
+   "JPX"
+  ]
+ },
+ "tw": {
+  "n": 2252,
+  "err": null,
+  "sample": [
+   [
+    "2330.TW",
+    "TAIWAN SEMICONDUCTOR MANUFACTUR",
+    "TAI"
+   ],
+   [
+    "2454.TW",
+    "MEDIATEK INC",
+    "TAI"
+   ],
+   [
+    "2308.TW",
+    "DELTA ELECTRONIC",
+    "TAI"
+   ],
+   [
+    "2317.TW",
+    "HON HAI PRECISION INDUSTRY",
+    "TAI"
+   ],
+   [
+    "3711.TW",
+    "ASE TECHNOLOGY HOLDING CO LTD",
+    "TAI"
+   ],
+   [
+    "1303.TW",
+    "NAN YA PLASTIC",
+    "TAI"
+   ],
+   [
+    "2881.TW",
+    "FUBON FINANCIAL HLDG CO LTD",
+    "TAI"
+   ],
+   [
+    "3037.TW",
+    "UNIMICRON TECHNOLOGY",
+    "TAI"
+   ]
+  ],
+  "exchanges": [
+   "TAI",
+   "TWO"
+  ]
+ },
+ "cn": {
+  "n": 3000,
+  "err": null,
+  "sample": [
+   [
+    "601939.SS",
+    "CHINA CONSTRUCTION BANK",
+    "SHH"
+   ],
+   [
+    "601398.SS",
+    "INDUSTRIAL & COMMERCIAL BK OF C",
+    "SHH"
+   ],
+   [
+    "688825.SS",
+    "CXMT CORPORATION",
+    "SHH"
+   ],
+   [
+    "601288.SS",
+    "AGRICULTURAL BANK OF CHINA",
+    "SHH"
+   ],
+   [
+    "601857.SS",
+    "PETROCHINA CO",
+    "SHH"
+   ],
+   [
+    "601988.SS",
+    "BANK OF CHINA LTD",
+    "SHH"
+   ],
+   [
+    "600941.SS",
+    "CHINA MOBILE LTD",
+    "SHH"
+   ],
+   [
+    "600519.SS",
+    "KWEICHOW MOUTAI",
+    "SHH"
+   ]
+  ],
+  "exchanges": [
+   "SHH",
+   "SHZ"
+  ]
+ }
+}
