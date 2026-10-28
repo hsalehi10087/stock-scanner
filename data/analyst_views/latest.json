@@ -1,134 +1,134 @@
 {
- "date": "2026-10-27",
- "articles_read": 426,
- "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر (فایل‌های ۲۵ و ۲۶ اکتبر؛ فایل امروز هنوز ساخته نشده بود)؛ متن کامل خبرها در این اجرا باز نشد؛ پیش‌بینی‌های خودکار، ادعاهای تبلیغاتی و خبرهای سهام شرکت‌ها کنار گذاشته شد؛ فقط نظرهایی که منبع دارند",
+ "date": "2026-10-28",
+ "articles_read": 316,
+ "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر (فایل‌های ۲۶ و ۲۷ اکتبر؛ فایل امروز هنوز ساخته نشده بود)؛ متن کامل خبرها در این اجرا باز نشد؛ پیش‌بینی‌های خودکار، ادعاهای تبلیغاتی و خبرهای سهام شرکت‌ها کنار گذاشته شد؛ فقط نظرهایی که منبع دارند",
  "assets": {
   "gold": {
    "stance": "نزولی",
    "counts": {
     "bull": 4,
-    "bear": 14,
-    "neutral": 10
+    "bear": 13,
+    "neutral": 11
    },
-   "summary_fa": "طلا نزدیک کف سه‌ماهه و حوالی ۴٬۰۰۰ دلار است و بیشتر خبرها از ادامه‌ی فشار می‌گویند، چون نفت گران ترس از تورم و افزایش نرخ بهره‌ی فدرال رزرو را بالا برده است. با عقب‌نشینی نفت در روز دوشنبه طلا کمی برگشت، ولی وال‌استریت هنوز به قدرت کوتاه‌مدت آن شک دارد.",
+   "summary_fa": "طلا حوالی ۴٬۰۰۰ دلار نوسان می‌کند و بیشتر تحلیل‌ها نزولی‌اند، چون دلار قوی، بازده بالای اوراق و احتمال افزایش نرخ بهره‌ی فدرال رزرو فشار می‌آورد. آرام شدن نفت و خرید بانک‌های مرکزی فقط حمایت محدودی ایجاد کرده است.",
    "views": [
     {
-     "who": "Heraeus",
-     "view_fa": "هرائوس می‌گوید طلا بین نفت رو به افزایش (فشار تورم و نرخ بهره) و بازده‌های رو به کاهش اوراق قرضه گیر افتاده است.",
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcVNMQnZQS3ZmcmtSNElycE9ZX21HblVQbGlDdTI3czFYaGcydnFqV0lmbG9sYTBxMzdXbFlmV01oVUg3alZxcE5UZl9lVVZUN25idXNPNGxWekZPenktaTNiR0xKVW5PT2djQVdsX3hMQUc4TWhhZEtqa0szQjU3aVNJaVVtV05JN1o3UmdkcWhoY2Z2bmdnVl9SY2NfaUxwakJhSDRtZkZVYWNkVV9UaFg4WktLVFItRllRM2NB?oc=5"
+     "who": "Reuters poll",
+     "view_fa": "در نظرسنجی رویترز، تحلیلگران می‌گویند دلار قوی و بازده بالای اوراق چشم‌انداز طلا را ضعیف کرده، ولی خرید بانک‌های مرکزی از آن حمایت می‌کند.",
+     "url": "https://www.investing.com/news/economy-news/strong-dollar-high-yields-drag-on-gold-outlook-but-centralbank-demand-lends-support-4975805"
     },
     {
-     "who": "Gold Eagle",
-     "view_fa": "در نظرسنجی هفتگی، وال‌استریت به قدرت کوتاه‌مدت طلا شک دارد و فقط اقلیتی از سرمایه‌گذاران خرد هنوز صعودی‌اند؛ تمرکز روی تصمیم بانک‌های مرکزی است.",
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamh2UEZ6dXltNFZOcGVJOUpnc1lsU0FWdU1QQlEtTHlIYmNFTkdjVmJWWGlJNXZ0WThpTk80Z3VvaEtJLU1NVEtZb0NzMjlPd3N5UkNUdEpDaDZDLVpvVmgtbnMydjk2b2tNSG5aMnVTUXI0SmZIWDhkYVA3RnJOY0Q3UW9mSHM3UDdnT1cwNFpXLXRSYnUxVElrYVdscGZMcFZlOHVacGdua0JzNDNUUE1jeW01NWxVQUFua1RJVGlxeGMzUHZES0ZTc20?oc=5"
+     "who": "Heraeus",
+     "view_fa": "هرائوس می‌گوید طلا بین نفت رو به افزایش و بازده‌های رو به کاهش اوراق قرضه گیر افتاده است.",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcVNMQnZQS3ZmcmtSNElycE9ZX21HblVQbGlDdTI3czFYaGcydnFqV0lmbG9sYTBxMzdXbFlmV01oVUg3alZxcE5UZl9lVVZUN25idXNPNGxWekZPenktaTNiR0xKVW5PT2djQVdsX3hMQUc4TWhhZEtqa0szQjU3aVNJaVVtV05JN1o3UmdkcWhoY2Z2bmdnVl9SY2NfaUxwakJhSDRtZkZVYWNkVV9UaFg4WktLVFItRllRM2NB?oc=5"
     }
    ]
   },
   "silver": {
-   "stance": "دوگانه",
+   "stance": "نزولی",
    "counts": {
     "bull": 2,
-    "bear": 18,
-    "neutral": 4
+    "bear": 20,
+    "neutral": 5
    },
-   "summary_fa": "نقره به پایین‌ترین سطح سال ۲۰۲۶ و زیر ۵۵ دلار رسیده و تحلیلگران کوتاه‌مدت هدف ۵۰ دلار را مطرح می‌کنند، چون ترس از افزایش نرخ بهره و فروش فلزات فشار آورده است. در مقابل، UBS در افق بلندمدت تا ۸۰ دلار را پیش‌بینی کرده است.",
+   "summary_fa": "نقره زیر ۵۵ دلار به پایین‌ترین سطح ۱۱ ماه اخیر رسیده و تقریباً همه‌ی تحلیل‌ها از ادامه‌ی فشار فروش و احتمال رسیدن به ۵۰ دلار می‌گویند. انتظار سخت‌گیری فدرال رزرو و کم شدن تقاضای پناهگاه امن عامل اصلی است.",
    "views": [
     {
-     "who": "UBS",
-     "view_fa": "یو‌بی‌اس پیش‌بینی می‌کند نقره تا سپتامبر ۲۰۲۷ به ۸۰ دلار در هر اونس برسد.",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOWlZmTjhCaVdsdmxYYmotVGtiNjNBdkhMaFhubklHZHgxYWVERi0wdXlhLTlIejJSamgtNzZRSUlNTnJIcXozc1Q4NG9aSGhTR0xPTGVISnI4Z2s5bHNMZ1NoR0RjWU4zTzdMNmFTLXZXMFZkbWJqMVRpNTdpcGJrMjlVSkczcHhocnVtSldUSTJOSzZz?oc=5"
+     "who": "FXEmpire",
+     "view_fa": "اف‌ایکس‌امپایر می‌گوید پس از شکستن حمایت کلیدی ۵۵ دلار، خطر افت نقره تا ۵۰ دلار وجود دارد.",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVl9fTmREal9sdWhHX3hvbERZN2gwRnZBY3VZR1pac2tlWDdydTNIZjNJZGxJZEZua01jSV9DeGwwMmcwbjlpUW1kSy1hSW0xVkY3Rk11V3JleXUteW5iMXI1cTNmUzVaVkJud1VvU29ib3c1a1MzRHY2SHZPWnlHUWRaeFlqZUU1RXlGZElVdk5pdk5RY2hGWmhxazRxMl9GSkFRSWVLVjRuVVU?oc=5"
     },
     {
-     "who": "FXEmpire",
-     "view_fa": "اف‌اکس‌امپایر می‌گوید با بالا رفتن ترس از افزایش نرخ بهره به‌خاطر نفت، سطح ۵۰ دلار در دید است.",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQY3BtX2lDMENRLVpOOF9JUFQtVDFKRG1QaW9GVUtQU3NXdDVUSG05cWNKdTE4bDQ5cGdWejEzQXRQY0Y3VTNHeUVfOVRVSExWZERpc2QtNlN5QkNJZTBWTElrRFRwT0o5VHgwUlpuZTB4T25CN3ZBSi1vUFg5YmJPUUFCeVh6UFhaVkV1bU9mRmZSQTVWRWFJZUxVcEhaLTBIbnphZVZyUnFJbW8tVng5UVV2U3BveWc?oc=5"
+     "who": "FXStreet",
+     "view_fa": "اف‌ایکس‌استریت می‌گوید نقره پس از از دست دادن ۵۴ دلار به سمت کف ۱۱ ماهه می‌رود.",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeE5TTUZRUTlHd1JwbS13N1dUWUxpU2NCRjRWMjY2RTZJNjJaWkNibmhvX0hpUUUyQ0F0aW5RTU40YzlyNHlkZjdKRHBYc1h0R1pkakVSMkRJZ0RSYWozRG9VbThrUUJ3RklwQVlySDdEN3NPRXJsa1pDSzc1STNhM3duYlktZ2ZJUEY1WXJ5STRjWW1lbXQ3Z0ItN1J5a1ByNDhPcGNGaGkydk1lblVYdzlvZmJxMmRocWtFZE91RmgzTFU?oc=5"
     }
    ]
   },
   "bitcoin": {
    "stance": "دوگانه",
    "counts": {
-    "bull": 4,
-    "bear": 15,
-    "neutral": 8
+    "bull": 5,
+    "bear": 22,
+    "neutral": 6
    },
-   "summary_fa": "بیت‌کوین پنج روز پیاپی افت کرده و پیش از جلسه‌ی فدرال رزرو زیر ۸۰ هزار دلار رفته و تحلیل‌های کوتاه‌مدت از احتمال ۷۵ تا ۷۷ هزار دلار می‌گویند. در مقابل، گلکسی ریسرچ و برنستاین معتقدند کف بازار نزولی شکل گرفته و زمان خرید است.",
+   "summary_fa": "بیت‌کوین پیش از نشست فدرال رزرو و با خروج پول از صندوق‌ها زیر ۸۰ هزار دلار رفته و بیشتر تحلیلگران کوتاه‌مدت از خطر افت تا ۷۵ تا ۷۷ هزار دلار می‌گویند. در مقابل، گلکسی و برخی تحلیل‌های زنجیره‌ای معتقدند بازار نزولی تمام شده و زمان خوبی برای خرید است.",
    "views": [
     {
-     "who": "Galaxy Research",
-     "view_fa": "گلکسی ریسرچ می‌گوید بازار نزولی بیت‌کوین تمام شده و اکنون زمان جذابی برای خرید است.",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQmE2V0R3bFhuWEpKd0FzV0J0OTFoYU1LRDlmSkZvSmxnZ3ViTEY4U1JaWHp4Z29FdmcxZFJteE92RDFLQ1ZSY29lcEx2NXJtLWp6T2dlT2lRWU1ZSUhyUHZaVUZpeUcyNE5iR3lRVHV4Nkl3bVpBSTlRYWo1dURtcmN5elVBMUlIckJpZUxOMWpuR2xnZzRYRTNVaE8?oc=5"
+     "who": "Galaxy",
+     "view_fa": "گلکسی می‌گوید بازار نزولی بیت‌کوین تمام شده و اکنون زمان مناسبی برای جمع کردن آن است.",
+     "url": "https://www.coindesk.com/markets/2026/10/27/now-is-the-time-to-accumulate-bitcoin-galaxy-says"
     },
     {
-     "who": "Bernstein",
-     "view_fa": "برنستاین کف بیت‌کوین را اعلام کرده و برای سهام Strategy ۲۲۶ درصد رشد می‌بیند.",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWFRfNVZaSFdXZlppS19hZUxWSW9YOF9aM2ZWNVBjaEJ4N2hOMkVyOUVHUThkRWVTY0o1cmc0MzdHZC0yN0p4alhaeFZTc2VUcml6U2ZZTUgydFdPWjJjNTNaeFVrdUxnYklPeXRFVDNBa3ZVOHpFVE9NdmYzZjFUbTdORncxOTUxalhPUGpScGtaYTlQMk12cUlXdXVhdnNzQTBndGU3Zm1PNDByQjByaFlfWU0?oc=5"
+     "who": "Moody's",
+     "view_fa": "مودیز هشدار داده که سقوط بازار کریپتو یکی از محتمل‌ترین ریسک‌های اقتصادی است.",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZzZHYnk0U3lCb0h6N0RjTlVKN3NUaGkwOWxBUV9pa3BHS05fbnZaZzRyMFlLZzhVUk0yeGFzQjk1R0dqYzJMSHNjWE5pTVNGY2NjMGYwTUpZOHRQQ0J6d2pkYzVqUmRfMHRNdEVVejEzWVRUY1drMXFqOFZSS0ZjSmRudThRZTFiY2pMeW9tNzFEdUhTVHBSYVAzTQ?oc=5"
     }
    ]
   },
   "copper": {
    "stance": "صعودی",
    "counts": {
-    "bull": 4,
-    "bear": 2,
+    "bull": 7,
+    "bear": 1,
     "neutral": 3
    },
-   "summary_fa": "مس با رشد فعالیت کارخانه‌های چین، احتمال تعرفه‌ی آمریکا بر واردات مس و اعتصاب در بزرگ‌ترین معدن مس کانادا حمایت می‌شود و سطح ۷ دلار هدف بعدی است. با این حال حل اعتصاب معدن شیلی قیمت را زیر مقاومت در حالت تثبیت نگه داشته است.",
+   "summary_fa": "بیشتر خبرها مثبت‌اند، چون اعتصاب و توقف تولید در معادن شیلی و کانادا عرضه را کم کرده و رشد کارخانه‌های چین تقاضا را بالا برده است. مدیران بزرگ‌ترین شرکت‌های معدنی هم از کمبود عرضه‌ی مس هشدار می‌دهند.",
    "views": [
     {
-     "who": "FXEmpire",
-     "view_fa": "اف‌اکس‌امپایر می‌گوید با رشد فعالیت کارخانه‌های چین، سطح ۷ دلار در کانون توجه است و شکست ۶٫۹۵ دلار راه را به سمت ۷٫۵۰ باز می‌کند.",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdWx4ZjFHOXd0eVQ3Mmt1WjBubm1DOFBKOHRJcVhQcXZfeWw3WVJZT0RfWDh3VkdhNWFuLThXbFdvaklicERhMjRrVVJCamtXai1BWEh2alY3TFpJUE9TUlNQWW5CTFBpQ2RuMTJ4Qk5VeXhBOVVRZExRQmYtNzhUQ201Wm5qd1lvM295UjhoRWNjWC1YNDFMelR4dXZiU2ljeS1pU2JuQ3FLZFFkdVlneXAwMnMzM3d0dEFXd1Q5QnZJdw?oc=5"
+     "who": "Freeport-McMoRan",
+     "view_fa": "رئیس هیئت‌مدیره‌ی فری‌پورت-مک‌موران هشدار داده که عرضه‌ی مس تنگ است و جهان به مس خیلی بیشتری نیاز دارد.",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdG5GQlhvSEppRDBoRjYteWNWaEJfTDlDbDVwcE9tNG1BcHBEbF9ra0phNWlZcDBHWWtERVdQSmpWeldRbGFhODhoTmNtNXNtZFFWUm9Ea2JzR3pUWWx4SzJIVG95MlFZeWQtd2VlQmFOcS1JZU9OdV8wOWFUOUlBT2k2VFpVNXFaTHBadmNUdG0yQjctdzJCd081RjN5YTFJNmNmUGZxYXZKeUpNa3k3UExTZGgzMmNWblZjQV9xMnUzeUN4a3NocnNfYkhMZzVWaVAtdnoxa1JCR0s4Y1FGRUw4TDI?oc=5"
     },
     {
-     "who": "Teck",
-     "view_fa": "تک می‌گوید اعتصاب، تولید بزرگ‌ترین معدن مس کانادا را کاهش داده و اثرش بر کل تولید به طول اعتصاب بستگی دارد.",
-     "url": "https://www.mining.com/strike-curbs-output-at-canadas-largest-copper-mine/"
+     "who": "Kedia Advisory",
+     "view_fa": "کدیا ادوایزری می‌گوید مس به دلیل تقاضای قوی‌تر چین و اختلال‌های پیاپی در معادن بالا رفته است.",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLXlSaTRoUWFNZ0hqRFkzMEctei1waEZIbUk2WXpmb2xXUTBQT05fWGp6NEtodkV3MlNUUFNyUmlfdDZmazlTM1lIQ0poRTVXWDlJeXJsTmh4UzVvdklSbHQ1bUNGUkdjMmFRSWlwakVjcGo5X0QycUdHUzFuSlc3d25uMmRpTTRPcGVxbkFXSWxOTktTdUJkdFdVVFhralJpcERjRERidGR3MDBSR2tNejJvVmVyTTBkaWVvWlBVcVB4cnVVbGhQSzRPNWRjUQ?oc=5"
     }
    ]
   },
   "oil": {
    "stance": "دوگانه",
    "counts": {
-    "bull": 24,
-    "bear": 17,
-    "neutral": 5
+    "bull": 13,
+    "bear": 28,
+    "neutral": 11
    },
-   "summary_fa": "برنت به نزدیک بالاترین سطح شش‌ماهه (حدود ۱۱۶ تا ۱۲۰ دلار) رسید و سپس با امید به کاهش درگیری با ایران و میانجی‌گری‌ها به زیر ۱۱۰ دلار برگشت. در کوتاه‌مدت امید به آتش‌بس قیمت را پایین می‌آورد، ولی حملات به تأسیسات عربستان و کاهش ذخایر، چشم‌انداز بلندمدت را بالا نگه داشته است.",
+   "summary_fa": "نفت در کوتاه‌مدت با امید به میانجی‌گری و مذاکرات با ایران از سقف شش‌ماهه عقب نشسته و برنت حدود ۱۱۰ تا ۱۱۵ دلار است؛ چند تحلیل تکنیکال هم از پایان موج صعود می‌گویند. اما حملات حوثی‌ها به تأسیسات عربستان و کمبود عرضه باعث شده آژانس بین‌المللی انرژی بازگشت قیمت‌ها به سطح پیش از جنگ را بعید بداند.",
    "views": [
     {
-     "who": "Societe Generale",
-     "view_fa": "سوسیته ژنرال می‌گوید روند صعودی تازه‌ی برنت به هدف ۱۲۷ دلار اشاره دارد.",
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeTc5TkkxU1RTZm11M1pJaHJoa254SXpkTmtxazIzYjZCUFl1bFREamdtS05VTDdMdkxLa2lUQUVEYXFkNU1OM1JkSmU4RkRGYldXTnpBRTI1SmdZa3k2QmRwN2dTVTIwZTRyMjhPNURwN18tTjBZUWV5aTVaUGZ0OEdxa0ZmNXpoMDNmdnFiVTYtYmZYLVE4SzMwT1pIanpjWlotdHJHa3dwRVJOaEtXZmFmZWkzZ2FBdjc0T3ZmbHo?oc=5"
+     "who": "IEA",
+     "view_fa": "فاتح بیرول، رئیس آژانس بین‌المللی انرژی، می‌گوید قیمت نفت، سوخت و گاز در سال ۲۰۲۷ به سطح پیش از جنگ برنمی‌گردد.",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/IEAs-Birol-Energy-Prices-Wont-Return-to-Pre-War-Levels-in-2027.html"
     },
     {
-     "who": "IEA",
-     "view_fa": "فاتح بیرول، رئیس آژانس بین‌المللی انرژی، می‌گوید قیمت نفت و گاز در سال ۲۰۲۷ به سطح پیش از جنگ برنمی‌گردد.",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/IEAs-Birol-Energy-Prices-Wont-Return-to-Pre-War-Levels-in-2027.html"
+     "who": "Reuters",
+     "view_fa": "تحلیل رویترز می‌گوید نفت ممکن است وارد یک دوره‌ی افت شود.",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAzREVRR01MNnJBRXNPSk1udk5yNnU5VjZjTGowVW94NGZsdVd5YW00REE1Q013QWpGTWtQT184cWJJNlNScWduTWVGdmFHc3Q5MlVFVU5yWloyNjhvc1UzV0toeThrUWhvN21wdWpLVDdlQ1E0ZmtzMQ?oc=5"
     }
    ]
   },
   "rates": {
    "stance": "صعودی",
    "counts": {
-    "bull": 12,
-    "bear": 1,
-    "neutral": 13
+    "bull": 18,
+    "bear": 0,
+    "neutral": 14
    },
-   "summary_fa": "انتظار عمومی این است که فدرال رزرو در جلسه‌ی این هفته نرخ را (حدود ۳٫۸۸٪) ثابت نگه دارد، ولی با لحنی سخت‌گیرانه و احتمال افزایش در دسامبر، چون جهش نفت تورم را بالا برده است. بانک مرکزی اروپا و کانادا هم به سمت افزایش نرخ می‌روند.",
+   "summary_fa": "تقریباً همه انتظار دارند فدرال رزرو این هفته نرخ را ثابت نگه دارد، ولی به دلیل تورم ناشی از نفت گران، افزایش دوباره‌ی نرخ در دسامبر محتمل دانسته می‌شود. بانک‌های مرکزی کانادا، ژاپن، استرالیا و انگلیس هم به سمت سخت‌گیری بیشتر می‌روند.",
    "views": [
     {
-     "who": "Goldman Sachs",
-     "view_fa": "گلدمن ساکس انتظار دارد فدرال رزرو در اکتبر از افزایش نرخ بگذرد.",
-     "url": "https://www.investing.com/news/economy-news/why-goldman-sachs-expects-fed-to-skip-october-rate-hike-4972616"
+     "who": "CNBC Fed Survey",
+     "view_fa": "در نظرسنجی سی‌ان‌بی‌سی ۹۳ درصد پاسخ‌دهندگان انتظار توقف در این نشست را دارند، ولی می‌گویند افزایش نرخ در راه است.",
+     "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rate-hike-timing-expectations.html"
     },
     {
-     "who": "Seoul Economic Daily",
-     "view_fa": "به گزارش این روزنامه، اقتصاددانان آمریکایی انتظار دارند فدرال رزرو در ۲۸ اکتبر نرخ را ثابت نگه دارد و در دسامبر افزایش دهد.",
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRXM1NTN0QXA4dHVBMDJiNXgyREl1SzdYd2VwdmlLVUwxbDhBR05JbHZGUEdGbTVPTXl6YlNSQTllZ085SmhQaDBJV1RMMVoyMHAxT1lvT012blFqZkVvRFVhWVJSSmNDS3pvNGd0d2pYaHFqQkxFX3QxTEVqbDlaZW1peDgxRkp5aTBwSl9KbUxJaHo2aTNEaWNJTXdnRktNNi1oeU1GcDU?oc=5"
+     "who": "TS Lombard",
+     "view_fa": "تی‌اس لومبارد هشدار می‌دهد اوج نرخ بهره‌ی فدرال رزرو ممکن است به سقف‌های ۲۰۲۳-۲۰۲۴ برسد یا از آن بالاتر برود.",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdzYtV1lVRWhrcVp5dC03dnZMTUhZVlljWU16MU9ZdGR2Z1ZZdGRoQ2JjdjA0S3k1R18tel9LMlV6cFJzdWUzcTJGQnJHNk01MjBpNURoU01iZXVGSlppZEI3cjctUkVjeW9ZWGFVOVFsTmRwUjdtUEthV3J0NHp0Qy1CYTFQdWFnRlB1MkVnZE9hVVM2RHR4LVZNVkpXOHpQTjJMa2Y3aC00eHdVUjJkOU0xcjZDU0pBMUVhdEx0TFc3YUR1Z0JB?oc=5"
     }
    ]
   }
  },
- "watch_fa": "تصمیم نرخ بهره‌ی فدرال رزرو (۲۸ اکتبر)، بانک مرکزی کانادا، بانک مرکزی اروپا و بانک ژاپن (جمعه)، داده‌های تولید ناخالص و تورم PCE آمریکا، گزارش سود غول‌های فناوری و انتخابات میان‌دوره‌ای آمریکا."
+ "watch_fa": "تصمیم نرخ بهره‌ی فدرال رزرو و بانک مرکزی کانادا و بودجه‌ی انگلیس (چهارشنبه)، داده‌ی تورم PCE و تولید ناخالص آمریکا و نشست بانک مرکزی اروپا، تصمیم بانک مرکزی ژاپن (جمعه)، نشست اوپک‌پلاس (یکشنبه) و انتخابات میان‌دوره‌ای آمریکا مهم‌ترین رویدادهای پیش رو هستند."
 }

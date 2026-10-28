@@ -1,0 +1,134 @@
+{
+ "date": "2026-10-28",
+ "articles_read": 316,
+ "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر (فایل‌های ۲۶ و ۲۷ اکتبر؛ فایل امروز هنوز ساخته نشده بود)؛ متن کامل خبرها در این اجرا باز نشد؛ پیش‌بینی‌های خودکار، ادعاهای تبلیغاتی و خبرهای سهام شرکت‌ها کنار گذاشته شد؛ فقط نظرهایی که منبع دارند",
+ "assets": {
+  "gold": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 4,
+    "bear": 13,
+    "neutral": 11
+   },
+   "summary_fa": "طلا حوالی ۴٬۰۰۰ دلار نوسان می‌کند و بیشتر تحلیل‌ها نزولی‌اند، چون دلار قوی، بازده بالای اوراق و احتمال افزایش نرخ بهره‌ی فدرال رزرو فشار می‌آورد. آرام شدن نفت و خرید بانک‌های مرکزی فقط حمایت محدودی ایجاد کرده است.",
+   "views": [
+    {
+     "who": "Reuters poll",
+     "view_fa": "در نظرسنجی رویترز، تحلیلگران می‌گویند دلار قوی و بازده بالای اوراق چشم‌انداز طلا را ضعیف کرده، ولی خرید بانک‌های مرکزی از آن حمایت می‌کند.",
+     "url": "https://www.investing.com/news/economy-news/strong-dollar-high-yields-drag-on-gold-outlook-but-centralbank-demand-lends-support-4975805"
+    },
+    {
+     "who": "Heraeus",
+     "view_fa": "هرائوس می‌گوید طلا بین نفت رو به افزایش و بازده‌های رو به کاهش اوراق قرضه گیر افتاده است.",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcVNMQnZQS3ZmcmtSNElycE9ZX21HblVQbGlDdTI3czFYaGcydnFqV0lmbG9sYTBxMzdXbFlmV01oVUg3alZxcE5UZl9lVVZUN25idXNPNGxWekZPenktaTNiR0xKVW5PT2djQVdsX3hMQUc4TWhhZEtqa0szQjU3aVNJaVVtV05JN1o3UmdkcWhoY2Z2bmdnVl9SY2NfaUxwakJhSDRtZkZVYWNkVV9UaFg4WktLVFItRllRM2NB?oc=5"
+    }
+   ]
+  },
+  "silver": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 2,
+    "bear": 20,
+    "neutral": 5
+   },
+   "summary_fa": "نقره زیر ۵۵ دلار به پایین‌ترین سطح ۱۱ ماه اخیر رسیده و تقریباً همه‌ی تحلیل‌ها از ادامه‌ی فشار فروش و احتمال رسیدن به ۵۰ دلار می‌گویند. انتظار سخت‌گیری فدرال رزرو و کم شدن تقاضای پناهگاه امن عامل اصلی است.",
+   "views": [
+    {
+     "who": "FXEmpire",
+     "view_fa": "اف‌ایکس‌امپایر می‌گوید پس از شکستن حمایت کلیدی ۵۵ دلار، خطر افت نقره تا ۵۰ دلار وجود دارد.",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVl9fTmREal9sdWhHX3hvbERZN2gwRnZBY3VZR1pac2tlWDdydTNIZjNJZGxJZEZua01jSV9DeGwwMmcwbjlpUW1kSy1hSW0xVkY3Rk11V3JleXUteW5iMXI1cTNmUzVaVkJud1VvU29ib3c1a1MzRHY2SHZPWnlHUWRaeFlqZUU1RXlGZElVdk5pdk5RY2hGWmhxazRxMl9GSkFRSWVLVjRuVVU?oc=5"
+    },
+    {
+     "who": "FXStreet",
+     "view_fa": "اف‌ایکس‌استریت می‌گوید نقره پس از از دست دادن ۵۴ دلار به سمت کف ۱۱ ماهه می‌رود.",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeE5TTUZRUTlHd1JwbS13N1dUWUxpU2NCRjRWMjY2RTZJNjJaWkNibmhvX0hpUUUyQ0F0aW5RTU40YzlyNHlkZjdKRHBYc1h0R1pkakVSMkRJZ0RSYWozRG9VbThrUUJ3RklwQVlySDdEN3NPRXJsa1pDSzc1STNhM3duYlktZ2ZJUEY1WXJ5STRjWW1lbXQ3Z0ItN1J5a1ByNDhPcGNGaGkydk1lblVYdzlvZmJxMmRocWtFZE91RmgzTFU?oc=5"
+    }
+   ]
+  },
+  "bitcoin": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 5,
+    "bear": 22,
+    "neutral": 6
+   },
+   "summary_fa": "بیت‌کوین پیش از نشست فدرال رزرو و با خروج پول از صندوق‌ها زیر ۸۰ هزار دلار رفته و بیشتر تحلیلگران کوتاه‌مدت از خطر افت تا ۷۵ تا ۷۷ هزار دلار می‌گویند. در مقابل، گلکسی و برخی تحلیل‌های زنجیره‌ای معتقدند بازار نزولی تمام شده و زمان خوبی برای خرید است.",
+   "views": [
+    {
+     "who": "Galaxy",
+     "view_fa": "گلکسی می‌گوید بازار نزولی بیت‌کوین تمام شده و اکنون زمان مناسبی برای جمع کردن آن است.",
+     "url": "https://www.coindesk.com/markets/2026/10/27/now-is-the-time-to-accumulate-bitcoin-galaxy-says"
+    },
+    {
+     "who": "Moody's",
+     "view_fa": "مودیز هشدار داده که سقوط بازار کریپتو یکی از محتمل‌ترین ریسک‌های اقتصادی است.",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZzZHYnk0U3lCb0h6N0RjTlVKN3NUaGkwOWxBUV9pa3BHS05fbnZaZzRyMFlLZzhVUk0yeGFzQjk1R0dqYzJMSHNjWE5pTVNGY2NjMGYwTUpZOHRQQ0J6d2pkYzVqUmRfMHRNdEVVejEzWVRUY1drMXFqOFZSS0ZjSmRudThRZTFiY2pMeW9tNzFEdUhTVHBSYVAzTQ?oc=5"
+    }
+   ]
+  },
+  "copper": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 7,
+    "bear": 1,
+    "neutral": 3
+   },
+   "summary_fa": "بیشتر خبرها مثبت‌اند، چون اعتصاب و توقف تولید در معادن شیلی و کانادا عرضه را کم کرده و رشد کارخانه‌های چین تقاضا را بالا برده است. مدیران بزرگ‌ترین شرکت‌های معدنی هم از کمبود عرضه‌ی مس هشدار می‌دهند.",
+   "views": [
+    {
+     "who": "Freeport-McMoRan",
+     "view_fa": "رئیس هیئت‌مدیره‌ی فری‌پورت-مک‌موران هشدار داده که عرضه‌ی مس تنگ است و جهان به مس خیلی بیشتری نیاز دارد.",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPdG5GQlhvSEppRDBoRjYteWNWaEJfTDlDbDVwcE9tNG1BcHBEbF9ra0phNWlZcDBHWWtERVdQSmpWeldRbGFhODhoTmNtNXNtZFFWUm9Ea2JzR3pUWWx4SzJIVG95MlFZeWQtd2VlQmFOcS1JZU9OdV8wOWFUOUlBT2k2VFpVNXFaTHBadmNUdG0yQjctdzJCd081RjN5YTFJNmNmUGZxYXZKeUpNa3k3UExTZGgzMmNWblZjQV9xMnUzeUN4a3NocnNfYkhMZzVWaVAtdnoxa1JCR0s4Y1FGRUw4TDI?oc=5"
+    },
+    {
+     "who": "Kedia Advisory",
+     "view_fa": "کدیا ادوایزری می‌گوید مس به دلیل تقاضای قوی‌تر چین و اختلال‌های پیاپی در معادن بالا رفته است.",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLXlSaTRoUWFNZ0hqRFkzMEctei1waEZIbUk2WXpmb2xXUTBQT05fWGp6NEtodkV3MlNUUFNyUmlfdDZmazlTM1lIQ0poRTVXWDlJeXJsTmh4UzVvdklSbHQ1bUNGUkdjMmFRSWlwakVjcGo5X0QycUdHUzFuSlc3d25uMmRpTTRPcGVxbkFXSWxOTktTdUJkdFdVVFhralJpcERjRERidGR3MDBSR2tNejJvVmVyTTBkaWVvWlBVcVB4cnVVbGhQSzRPNWRjUQ?oc=5"
+    }
+   ]
+  },
+  "oil": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 13,
+    "bear": 28,
+    "neutral": 11
+   },
+   "summary_fa": "نفت در کوتاه‌مدت با امید به میانجی‌گری و مذاکرات با ایران از سقف شش‌ماهه عقب نشسته و برنت حدود ۱۱۰ تا ۱۱۵ دلار است؛ چند تحلیل تکنیکال هم از پایان موج صعود می‌گویند. اما حملات حوثی‌ها به تأسیسات عربستان و کمبود عرضه باعث شده آژانس بین‌المللی انرژی بازگشت قیمت‌ها به سطح پیش از جنگ را بعید بداند.",
+   "views": [
+    {
+     "who": "IEA",
+     "view_fa": "فاتح بیرول، رئیس آژانس بین‌المللی انرژی، می‌گوید قیمت نفت، سوخت و گاز در سال ۲۰۲۷ به سطح پیش از جنگ برنمی‌گردد.",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/IEAs-Birol-Energy-Prices-Wont-Return-to-Pre-War-Levels-in-2027.html"
+    },
+    {
+     "who": "Reuters",
+     "view_fa": "تحلیل رویترز می‌گوید نفت ممکن است وارد یک دوره‌ی افت شود.",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAzREVRR01MNnJBRXNPSk1udk5yNnU5VjZjTGowVW94NGZsdVd5YW00REE1Q013QWpGTWtQT184cWJJNlNScWduTWVGdmFHc3Q5MlVFVU5yWloyNjhvc1UzV0toeThrUWhvN21wdWpLVDdlQ1E0ZmtzMQ?oc=5"
+    }
+   ]
+  },
+  "rates": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 18,
+    "bear": 0,
+    "neutral": 14
+   },
+   "summary_fa": "تقریباً همه انتظار دارند فدرال رزرو این هفته نرخ را ثابت نگه دارد، ولی به دلیل تورم ناشی از نفت گران، افزایش دوباره‌ی نرخ در دسامبر محتمل دانسته می‌شود. بانک‌های مرکزی کانادا، ژاپن، استرالیا و انگلیس هم به سمت سخت‌گیری بیشتر می‌روند.",
+   "views": [
+    {
+     "who": "CNBC Fed Survey",
+     "view_fa": "در نظرسنجی سی‌ان‌بی‌سی ۹۳ درصد پاسخ‌دهندگان انتظار توقف در این نشست را دارند، ولی می‌گویند افزایش نرخ در راه است.",
+     "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rate-hike-timing-expectations.html"
+    },
+    {
+     "who": "TS Lombard",
+     "view_fa": "تی‌اس لومبارد هشدار می‌دهد اوج نرخ بهره‌ی فدرال رزرو ممکن است به سقف‌های ۲۰۲۳-۲۰۲۴ برسد یا از آن بالاتر برود.",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdzYtV1lVRWhrcVp5dC03dnZMTUhZVlljWU16MU9ZdGR2Z1ZZdGRoQ2JjdjA0S3k1R18tel9LMlV6cFJzdWUzcTJGQnJHNk01MjBpNURoU01iZXVGSlppZEI3cjctUkVjeW9ZWGFVOVFsTmRwUjdtUEthV3J0NHp0Qy1CYTFQdWFnRlB1MkVnZE9hVVM2RHR4LVZNVkpXOHpQTjJMa2Y3aC00eHdVUjJkOU0xcjZDU0pBMUVhdEx0TFc3YUR1Z0JB?oc=5"
+    }
+   ]
+  }
+ },
+ "watch_fa": "تصمیم نرخ بهره‌ی فدرال رزرو و بانک مرکزی کانادا و بودجه‌ی انگلیس (چهارشنبه)، داده‌ی تورم PCE و تولید ناخالص آمریکا و نشست بانک مرکزی اروپا، تصمیم بانک مرکزی ژاپن (جمعه)، نشست اوپک‌پلاس (یکشنبه) و انتخابات میان‌دوره‌ای آمریکا مهم‌ترین رویدادهای پیش رو هستند."
+}
