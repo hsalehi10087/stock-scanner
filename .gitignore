@@ -9,3 +9,10 @@ __pycache__/
 *.json
 signal_*.txt
 report_*.txt
+
+# کلیدها هرگز در مخزن نباشند (مخزن عمومی است)
+config.txt
+.env
+.env.*
+setup-secrets.sh
+*.key
