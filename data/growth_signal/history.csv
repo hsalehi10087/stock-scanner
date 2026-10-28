@@ -1,0 +1,27 @@
+date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank
+2026-10-28,us,ANF,Abercrombie & Fitch,162.59,770.93,trend|vcp,بافت,3,0.969
+2026-10-28,us,MRVL,Marvell Technology,248.5,770.93,trend|pullback,صورت مالی,3,0.907
+2026-10-28,us,RAL,Ralliant Corp,69.42,770.93,trend|pullback,کیفیت رشد,4,0.849
+2026-10-28,us,RELY,Remitly,24.265,770.93,trend|pullback,صورت مالی|کیفیت رشد,4,0.812
+2026-10-28,us,HRB,H&R Block,47.17,770.93,trend|pullback,بافت,2,0.744
+2026-10-28,us,LPG,Dorian LPG Ltd.,54.285,770.93,trend|pullback,صورت مالی|کن‌اسلیم|کیفیت رشد,5,0.729
+2026-10-28,us,DAL,Delta Air Lines,80.88,770.93,trend|pullback,کیفیت رشد,4,0.701
+2026-10-28,us,SCSC,"ScanSource, Inc.",58.435,770.93,trend|pullback,صورت مالی|کیفیت رشد,4,0.69
+2026-10-28,cn,301529.SZ,Foresight Technology,169.0,21.35,breakout|trend,کیفیت رشد,4,0.358
+2026-10-28,cn,002979.SZ,LEADSHINE,57.03,21.35,trend,صورت مالی|بافت,2,0.855
+2026-10-28,in,HFCL.NS,HFCL Ltd.,242.81,22698.8496,trend|pullback,بافت|کیفیت رشد,4,0.881
+2026-10-28,in,TIPSMUSIC.NS,Tips Music Ltd.,793.9,22698.8496,breakout|trend,صورت مالی|بافت|کیفیت رشد,4,0.826
+2026-10-28,in,WELCORP.NS,Welspun Corp Ltd.,2564.3,22698.8496,trend|pullback,بافت,3,0.752
+2026-10-28,in,SONACOMS.NS,Sona BLW Precision Forgings Ltd.,879.45,22698.8496,breakout|trend,صورت مالی|کیفیت رشد,4,0.484
+2026-10-28,in,AARTIPHARM.NS,Aarti Pharmalabs Ltd.,881.95,22698.8496,trend|pullback,کیفیت رشد,4,0.452
+2026-10-28,in,SHRIPISTON.NS,SPR Auto Technologies Ltd.,4497.7998,22698.8496,trend|pullback,کیفیت رشد,4,0.369
+2026-10-28,in,BOSCHLTD.NS,Bosch Ltd.,47625.0,22698.8496,trend|pullback,بافت,3,0.007
+2026-10-28,in,LOTUSDEV.NS,SRI LOTUS DEVELOPERS AND REALTY Ltd.,245.93,22698.8496,trend,بافت,3,0.994
+2026-10-28,tw,3147.TWO,,316.0,68.95,breakout|trend,کیفیت رشد,4,1.0
+2026-10-28,tw,6870.TWO,,391.5,68.95,breakout|trend,کن‌اسلیم,1,0.983
+2026-10-28,tw,2357.TW,,988.0,68.95,trend|pullback,کن‌اسلیم,1,0.879
+2026-10-28,kr,077500.KS,,11860.0,11855.0,breakout|trend,کن‌اسلیم,2,0.912
+2026-10-28,kr,425420.KQ,,76200.0,11855.0,breakout|trend,کن‌اسلیم,1,0.584
+2026-10-28,ca,DBO.TO,DBOX TECHNOLOGIES INC,1.12,36192.5312,trend|pullback,کن‌اسلیم,1,0.914
+2026-10-28,ca,CGY.TO,CALIAN GROUP LTD,81.43,36192.5312,trend|pullback,کیفیت رشد,4,0.895
+2026-10-28,ca,CVVY.TO,CAVVY ENERGY LTD,2.61,36192.5312,trend,کیفیت رشد,4,0.996
