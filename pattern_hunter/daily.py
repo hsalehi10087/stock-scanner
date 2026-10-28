@@ -16,6 +16,7 @@ from common import FEATURES, MARKETS, OUT, download, features, log  # noqa: E402
 import fundamentals as FU  # noqa: E402
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'market_intel'))
 import quality as Q  # noqa: E402
+import growth_signal as GS  # noqa: E402
 
 TOP = 5          # حداکثر سهم ارسالی در هر بازار
 POOL = 40        # چند نامزد برتر الگو، به ترتیب، از صافی بنیادی می‌گذرند
@@ -39,6 +40,8 @@ def main():
         columns=['date', 'market', 'ticker', 'name', 'price', 'prob', 'rank', 'index_price'])
     hist = hist[hist.date != today]   # اجرای دوباره در همان روز، پیشنهادهای امروز را جایگزین می‌کند
     picks, prices_now = {}, {}
+    gs = GS.Collector()
+    gs_hist = GS.history_tickers()
     for m, cfg in MARKETS.items():
         mp = os.path.join(OUT, f'model_{m}.joblib')
         if not os.path.exists(mp):
@@ -46,7 +49,7 @@ def main():
             continue
         clf = joblib.load(mp)
         names = json.load(open(os.path.join(OUT, f'universe_{m}.json'), encoding='utf-8'))
-        extra = list(set(hist[hist.market == m].ticker))
+        extra = list(set(hist[hist.market == m].ticker) | gs_hist.get(m, set()))
         C, V = download(sorted(set(names) | set(extra)) + [cfg['index']], period='2y')
         if C.empty:
             continue
@@ -62,6 +65,10 @@ def main():
                 rows[t] = f[FEATURES]
         X = pd.DataFrame(rows).T.astype(float)
         X['p'] = clf.predict_proba(X[FEATURES])[:, 1]
+        try:   # «احتمال رشد تکنیکال و بنیادی» روی همان داده
+            gs.process(m, C, V, idx, X, names, en_name)
+        except Exception as ex:
+            log('growth_signal failed', m, repr(ex)[:200])
         mkt_up = bool(idx.dropna().iloc[-1] > idx.dropna().rolling(200).mean().iloc[-1])
         lst, dropped, checked = [], [], []
         for t, r in X.nlargest(POOL, 'p').iterrows():
@@ -90,6 +97,7 @@ def main():
         prices_now[m] = ({t: float(C[t].dropna().iloc[-1]) for t in C.columns if C[t].notna().any()},
                          float(idx.dropna().iloc[-1]))
     Q.save()
+    gs.finish()
     hist = hist.drop_duplicates(subset=['date', 'market', 'ticker'], keep='last')
     hist.to_csv(HIST, index=False)
     # سنجش: بازده هر پیشنهاد از روز اولین پیشنهاد تا امروز، در برابر شاخص همان بازار

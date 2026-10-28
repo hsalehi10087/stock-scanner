@@ -11,7 +11,8 @@ from common import FA_FEAT, MARKETS, OUT, ROOT, fa_digits as fa  # noqa: E402
 sys.path.insert(0, os.path.join(ROOT, 'market_summary'))
 import summary as S  # noqa: E402
 
-FLAG = {'us': '🇺🇸', 'cn': '🇨🇳', 'in': '🇮🇳', 'jp': '🇯🇵', 'tw': '🇹🇼'}
+FLAG = {'us': '🇺🇸', 'cn': '🇨🇳', 'in': '🇮🇳', 'jp': '🇯🇵', 'tw': '🇹🇼', 'kr': '🇰🇷', 'hk': '🇭🇰', 'gb': '🇬🇧',
+        'de': '🇩🇪', 'ca': '🇨🇦', 'au': '🇦🇺'}
 
 
 def pct(x):
