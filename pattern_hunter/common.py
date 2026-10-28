@@ -22,6 +22,12 @@ MARKETS = {
     'in': {'fa': 'هند', 'index': '^NSEI', 'cap': 1000},
     'jp': {'fa': 'ژاپن', 'index': '1306.T', 'cap': 1500},
     'tw': {'fa': 'تایوان', 'index': '0050.TW', 'cap': 1200},
+    'kr': {'fa': 'کره جنوبی', 'index': '^KS11', 'cap': 1200},
+    'hk': {'fa': 'هنگ‌کنگ', 'index': '^HSI', 'cap': 1000},
+    'gb': {'fa': 'انگلیس', 'index': '^FTSE', 'cap': 400},
+    'de': {'fa': 'آلمان', 'index': '^GDAXI', 'cap': 200},
+    'ca': {'fa': 'کانادا', 'index': '^GSPTSE', 'cap': 700},
+    'au': {'fa': 'استرالیا', 'index': '^AXJO', 'cap': 465},
 }
 FEATURES = ['r1m', 'r3m', 'r6m', 'r12m', 'from_hi', 'from_lo', 'above50', 'above200', 'slope50', 'vol20',
             'vol_ratio', 'volu_ratio', 'dd12m', 'log_price', 'log_dollar_vol', 'rs6m', 'up_days_ratio', 'range_pos']
@@ -43,6 +49,43 @@ def _wiki(url, col):
     r.raise_for_status()
     t = [x for x in pd.read_html(io.StringIO(r.text)) if col in x.columns][0]
     return {str(s).replace('.', '-'): str(n) for s, n in zip(t[col], t[t.columns[1]])}
+
+
+def _screen(region, exchanges=None, min_cap=200_000_000, limit=3000):
+    """فهرست سهام یک کشور از Yahoo screener، به ترتیب ارزش بازار."""
+    import yfinance as yf
+    from yfinance import EquityQuery as EQ
+    q = EQ('and', [EQ('eq', ['region', region]), EQ('gt', ['intradaymarketcap', min_cap])])
+    out = {}
+    for off in range(0, limit, 250):
+        r = yf.screen(q, size=250, offset=off, sortField='intradaymarketcap', sortAsc=False)
+        qs = r.get('quotes', [])
+        for x in qs:
+            if exchanges and x.get('exchange') not in exchanges:
+                continue
+            out[x['symbol']] = x.get('shortName') or x.get('longName') or ''
+        if len(qs) < 250:
+            break
+        time.sleep(1)
+    return out
+
+
+def _wiki_tickers(url, suffix):
+    """نماد شرکت‌های یک شاخص از جدول ویکی‌پدیا (ستون Ticker / EPIC / Symbol)."""
+    r = requests.get(url, headers=UA, timeout=40)
+    r.raise_for_status()
+    out = {}
+    for t in pd.read_html(io.StringIO(r.text)):
+        cols = [c for c in t.columns if any(k in str(c).lower() for k in ('ticker', 'epic', 'symbol'))]
+        if not cols:
+            continue
+        name_col = next((c for c in t.columns if any(k in str(c).lower() for k in ('company', 'name'))), cols[0])
+        for sym, nm in zip(t[cols[0]], t[name_col]):
+            sym = str(sym).strip().split()[0].rstrip('.') if str(sym).strip() else ''
+            if not sym or sym.lower() == 'nan' or len(sym) > 8:
+                continue
+            out[sym if '.' in sym else sym + suffix] = str(nm)
+    return out
 
 
 def universe(m):
@@ -90,6 +133,29 @@ def universe(m):
             sys.path.insert(0, os.path.join(ROOT, 'market_summary'))
             from tw_growth import tpex_list, twse_list
             u = {**twse_list(), **tpex_list()}
+        elif m == 'kr':
+            u = _screen('kr', {'KSC', 'KOE'})
+        elif m == 'hk':
+            u = _screen('hk', {'HKG'})
+        elif m == 'au':
+            u = _screen('au', {'ASX'}, min_cap=100_000_000)
+        elif m == 'ca':
+            u = {k: v for k, v in _screen('ca', {'TOR'}).items() if 'CDR' not in v.upper()}
+        elif m == 'gb':
+            u = {}
+            for url in ('https://en.wikipedia.org/wiki/FTSE_100_Index', 'https://en.wikipedia.org/wiki/FTSE_250_Index'):
+                try:
+                    u.update(_wiki_tickers(url, '.L'))
+                except Exception as e:
+                    log('wiki', url, e)
+        elif m == 'de':
+            u = {}
+            for url in ('https://en.wikipedia.org/wiki/DAX', 'https://en.wikipedia.org/wiki/MDAX',
+                        'https://en.wikipedia.org/wiki/SDAX', 'https://en.wikipedia.org/wiki/TecDAX'):
+                try:
+                    u.update(_wiki_tickers(url, '.DE'))
+                except Exception as e:
+                    log('wiki', url, e)
         if len(u) < 50:
             raise ValueError(f'universe too small: {len(u)}')
         os.makedirs(OUT, exist_ok=True)
