@@ -1,0 +1,23 @@
+id: 80b25d437a-spy-sma200-band-4-3
+name: SPY 200SMA +4%/-3% band timing
+name_fa: زمان‌بندی با باند ‎+۴٪/−۳٪‎ دور میانگین ۲۰۰ روزه‌ی SPY
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/LETFs/comments/1xgux66/the_spy_200sma_43_tqqq_rule_isnt_special_i_tested/
+claim: "«قانون +۴/−۳: وقتی SPY ۴٪ بالای میانگین ۲۰۰ روزه رفت TQQQ بخر، وقتی ۳٪ زیر آن رفت بفروش. ۲۰۱۰–۲۰۲۵ سالانه ۴۲٫۱٪ (مثل نگه‌داشتن TQQQ) ولی بیشترین افت از ‎−82%‎ به ‎−60%‎ رسید. انتظار واقعی برای SPY → UPRO حدود ۱۱–۱۲٪ در سال»"
+claimed_return: "42.1%/yr (TQQQ, 2010–2025), max DD -60%"
+added: 2026-10-28
+status: implemented
+asset_class: etf
+symbols: [SPY]
+timeframe: 1d
+start: '1993-02-01'
+notes: >-
+  نویسنده خودش می‌گوید این قانون برتری آماری بر میانگین ۲۰۰ ساده ندارد. موتور فقط یک دارایی را می‌آزماید،
+  پس هم سیگنال و هم معامله روی خود SPY است (بدون اهرم؛ در اصل TQQQ یا UPRO معامله می‌شود و هنگام خروج به QQQ یا نقد می‌رود،
+  اینجا خروج = نقد). اهرم ۳ برابر بازده و افت را بزرگ می‌کند ولی شارپ را تقریباً تغییر نمی‌دهد، پس این آزمون
+  کیفیت زمان‌بندی را می‌سنجد نه عدد ۴۲٪. ورود: بسته‌شدن ۴٪ بالای SMA200؛ خروج: بسته‌شدن ۳٪ زیر SMA200. فقط خرید.
+indicators:
+  sma200: {fn: sma, n: 200}
+entry: close > sma200 * 1.04
+exit: close < sma200 * 0.97
+side: long
