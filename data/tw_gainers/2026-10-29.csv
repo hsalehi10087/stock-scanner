@@ -1,0 +1,4 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+7750.TW,新代,10.582010582010582,216.65502793296088,1895.421,598.576,2026-10-29,3,5,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+2352.TW,佳世達,11.3752067481669,66.71251564947424,593.9,356.242,2026-10-29,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+6221.TWO,晉泰,16.163149653922805,35.57641569694782,146.451,108.021,2026-10-29,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
