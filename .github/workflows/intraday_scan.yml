@@ -1,0 +1,50 @@
+name: ⚡ US intraday scan — hourly while the market is open
+
+on:
+  schedule:
+    - cron: '50 13-20 * * 1-5'   # هر ساعت؛ خود اسکریپت فقط بین ۹:۴۵ تا ۱۶:۱۰ نیویورک کار می‌کند (تابستان و زمستان)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'اجرا حتی وقتی بازار بسته است (آزمایش)'
+        required: false
+        default: 'no'
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: intraday-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q pandas numpy requests yfinance
+      - name: Scan and alert
+        env:
+          ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
+          ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          if [ "${{ github.event.inputs.force }}" = "yes" ]; then python3 market_intel/intraday_scan.py --force; else python3 market_intel/intraday_scan.py; fi
+      - name: Save state
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Intraday Bot"
+          git add -f data/intraday || true
+          git diff --cached --quiet || (git commit -m "⚡ intraday $(date -u +%Y-%m-%d_%H%M)" && git pull --rebase -q && git push -q)
