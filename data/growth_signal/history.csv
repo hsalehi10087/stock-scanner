@@ -25,3 +25,24 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank
 2026-10-28,ca,DBO.TO,DBOX TECHNOLOGIES INC,1.12,36192.5312,trend|pullback,کن‌اسلیم,1,0.914
 2026-10-28,ca,CGY.TO,CALIAN GROUP LTD,81.43,36192.5312,trend|pullback,کیفیت رشد,4,0.895
 2026-10-28,ca,CVVY.TO,CAVVY ENERGY LTD,2.61,36192.5312,trend,کیفیت رشد,4,0.996
+2026-10-29,us,VCTR,"Victory Capital Holdings, Inc.",111.87,772.31,trend|pullback,صورت مالی|بافت|کیفیت رشد,5,0.656
+2026-10-29,us,AR,Antero Resources,42.11,772.31,breakout|trend,کن‌اسلیم,3,0.633
+2026-10-29,us,NTCT,"NETSCOUT Systems, Inc.",39.53,772.31,trend|pullback,صورت مالی,3,0.617
+2026-10-29,us,SCL,Stepan Company,68.41,772.31,breakout|trend,کیفیت رشد,4,0.557
+2026-10-29,us,LIVN,LivaNova,80.66,772.31,trend|pullback,کیفیت رشد,5,0.525
+2026-10-29,us,MNST,Monster Beverage,45.66,772.31,trend|pullback,صورت مالی|بافت,3,0.445
+2026-10-29,us,FIVE,Five Below,234.47,772.31,trend|pullback,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد,4,0.435
+2026-10-29,us,WKC,World Kinect Corporation,36.61,772.31,trend|pullback,کیفیت رشد,4,0.353
+2026-10-29,in,ICIL.NS,Indo Count Industries Ltd.,446.85,22934.0996,trend|pullback,کیفیت رشد,4,0.962
+2026-10-29,in,THELEELA.NS,Leela Palaces Hotels & Resorts Ltd.,631.85,22934.0996,breakout|trend,کن‌اسلیم,3,0.648
+2026-10-29,in,VIJAYA.NS,Vijaya Diagnostic Centre Ltd.,1465.9,22934.0996,trend|pullback,کیفیت رشد,4,0.4
+2026-10-29,in,ACUTAAS.NS,Acutaas Chemicals Ltd.,3990.0,22934.0996,breakout|trend,کن‌اسلیم,3,0.339
+2026-10-29,in,STLTECH.NS,Sterlite Technologies Ltd.,877.85,22934.0996,trend,کیفیت رشد,4,0.966
+2026-10-29,in,WESTLIFE.NS,Westlife Foodworld Ltd.,612.65,22934.0996,trend,کیفیت رشد,4,0.904
+2026-10-29,jp,4933.T,,2478.0,2524.0,trend|vcp,کیفیت رشد,4,0.836
+2026-10-29,jp,7199.T,,2251.0,2524.0,breakout|trend,کن‌اسلیم,0,0.534
+2026-10-29,jp,6098.T,,18890.0,2524.0,trend|vcp,کیفیت رشد,4,0.309
+2026-10-29,tw,3231.TW,,188.5,67.95,trend|pullback,کن‌اسلیم,1,0.812
+2026-10-29,de,BNR.DE,Brenntag,62.5,25895.2305,trend|pullback,کیفیت رشد,4,0.523
+2026-10-29,ca,CFW.TO,CALFRAC WELL SERVICES LTD.,7.91,36265.1016,breakout|trend,کن‌اسلیم,2,0.978
+2026-10-29,ca,PD.TO,PRECISION DRILLING CORPORATION,147.65,36265.1016,breakout|trend,کیفیت رشد,4,0.435

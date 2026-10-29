@@ -1,124 +1,126 @@
 {
- "date": "2026-10-28",
+ "date": "2026-10-29",
  "markets": {
   "us": {
    "data_date": "2026-10-28",
-   "scored": 1486,
-   "technical": 97,
-   "checked": 16,
+   "scored": 1487,
+   "technical": 81,
+   "checked": 23,
    "signals": [
     {
-     "ticker": "ANF",
-     "name": "Abercrombie & Fitch",
-     "price": 162.59,
-     "setups": [
-      "trend",
-      "vcp"
-     ],
-     "tech_rank": 0.969,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "MRVL",
-     "name": "Marvell Technology",
-     "price": 248.5,
+     "ticker": "VCTR",
+     "name": "Victory Capital Holdings, Inc.",
+     "price": 111.87,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.907,
+     "tech_rank": 0.656,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵"
+    },
+    {
+     "ticker": "AR",
+     "name": "Antero Resources",
+     "price": 42.11,
+     "setups": [
+      "breakout",
+      "trend"
+     ],
+     "tech_rank": 0.633,
+     "fundamentals": [
+      "کن‌اسلیم"
+     ],
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "NTCT",
+     "name": "NETSCOUT Systems, Inc.",
+     "price": 39.53,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.617,
      "fundamentals": [
       "صورت مالی"
      ],
      "quality": "⭐۳/۵"
     },
     {
-     "ticker": "RAL",
-     "name": "Ralliant Corp",
-     "price": 69.42,
+     "ticker": "SCL",
+     "name": "Stepan Company",
+     "price": 68.41,
      "setups": [
-      "trend",
-      "pullback"
+      "breakout",
+      "trend"
      ],
-     "tech_rank": 0.849,
+     "tech_rank": 0.557,
      "fundamentals": [
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵"
     },
     {
-     "ticker": "RELY",
-     "name": "Remitly",
-     "price": 24.265,
+     "ticker": "LIVN",
+     "name": "LivaNova",
+     "price": 80.66,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.812,
+     "tech_rank": 0.525,
      "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ ⚠️رقیق‌شدن"
-    },
-    {
-     "ticker": "HRB",
-     "name": "H&R Block",
-     "price": 47.17,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.744,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "LPG",
-     "name": "Dorian LPG Ltd.",
-     "price": 54.285,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.729,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
       "کیفیت رشد"
      ],
      "quality": "⭐۵/۵"
     },
     {
-     "ticker": "DAL",
-     "name": "Delta Air Lines",
-     "price": 80.88,
+     "ticker": "MNST",
+     "name": "Monster Beverage",
+     "price": 45.66,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.701,
+     "tech_rank": 0.445,
      "fundamentals": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "FIVE",
+     "name": "Five Below",
+     "price": 234.47,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.435,
+     "fundamentals": [
+      "صورت مالی",
+      "کن‌اسلیم",
+      "بافت",
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵"
     },
     {
-     "ticker": "SCSC",
-     "name": "ScanSource, Inc.",
-     "price": 58.435,
+     "ticker": "WKC",
+     "name": "World Kinect Corporation",
+     "price": 36.61,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.69,
+     "tech_rank": 0.353,
      "fundamentals": [
-      "صورت مالی",
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵"
@@ -126,250 +128,167 @@
    ]
   },
   "cn": {
-   "data_date": "2026-10-28",
+   "data_date": "2026-10-29",
    "scored": 1499,
    "technical": 6,
    "checked": 6,
-   "signals": [
-    {
-     "ticker": "301529.SZ",
-     "name": "Foresight Technology",
-     "price": 169.0,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.358,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "002979.SZ",
-     "name": "LEADSHINE",
-     "price": 57.03,
-     "setups": [
-      "trend"
-     ],
-     "tech_rank": 0.855,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "quality": "⭐۲/۵"
-    }
-   ]
+   "signals": []
   },
   "in": {
-   "data_date": "2026-10-28",
+   "data_date": "2026-10-29",
    "scored": 705,
-   "technical": 23,
-   "checked": 16,
+   "technical": 29,
+   "checked": 24,
    "signals": [
     {
-     "ticker": "HFCL.NS",
-     "name": "HFCL Ltd.",
-     "price": 242.81,
+     "ticker": "ICIL.NS",
+     "name": "Indo Count Industries Ltd.",
+     "price": 446.85,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.881,
+     "tech_rank": 0.962,
      "fundamentals": [
-      "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ ⚠️رقیق‌شدن"
+     "quality": "⭐۴/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "TIPSMUSIC.NS",
-     "name": "Tips Music Ltd.",
-     "price": 793.9,
+     "ticker": "THELEELA.NS",
+     "name": "Leela Palaces Hotels & Resorts Ltd.",
+     "price": 631.85,
      "setups": [
       "breakout",
       "trend"
      ],
-     "tech_rank": 0.826,
+     "tech_rank": 0.648,
      "fundamentals": [
-      "صورت مالی",
-      "بافت",
-      "کیفیت رشد"
+      "کن‌اسلیم"
      ],
-     "quality": "⭐۴/۵"
+     "quality": "⭐۳/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "WELCORP.NS",
-     "name": "Welspun Corp Ltd.",
-     "price": 2564.3,
+     "ticker": "VIJAYA.NS",
+     "name": "Vijaya Diagnostic Centre Ltd.",
+     "price": 1465.9,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.752,
+     "tech_rank": 0.4,
      "fundamentals": [
-      "بافت"
+      "کیفیت رشد"
      ],
-     "quality": "⭐۳/۵"
+     "quality": "⭐۴/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "SONACOMS.NS",
-     "name": "Sona BLW Precision Forgings Ltd.",
-     "price": 879.45,
+     "ticker": "ACUTAAS.NS",
+     "name": "Acutaas Chemicals Ltd.",
+     "price": 3990.0,
      "setups": [
       "breakout",
       "trend"
      ],
-     "tech_rank": 0.484,
+     "tech_rank": 0.339,
      "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
+      "کن‌اسلیم"
      ],
-     "quality": "⭐۴/۵"
+     "quality": "⭐۳/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "AARTIPHARM.NS",
-     "name": "Aarti Pharmalabs Ltd.",
-     "price": 881.95,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.452,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "SHRIPISTON.NS",
-     "name": "SPR Auto Technologies Ltd.",
-     "price": 4497.8,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.369,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "BOSCHLTD.NS",
-     "name": "Bosch Ltd.",
-     "price": 47625.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.007,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "LOTUSDEV.NS",
-     "name": "SRI LOTUS DEVELOPERS AND REALTY Ltd.",
-     "price": 245.93,
+     "ticker": "STLTECH.NS",
+     "name": "Sterlite Technologies Ltd.",
+     "price": 877.85,
      "setups": [
       "trend"
      ],
-     "tech_rank": 0.994,
+     "tech_rank": 0.966,
      "fundamentals": [
-      "بافت"
+      "کیفیت رشد"
      ],
-     "quality": "⭐۳/۵"
+     "quality": "⭐۴/۵"
+    },
+    {
+     "ticker": "WESTLIFE.NS",
+     "name": "Westlife Foodworld Ltd.",
+     "price": 612.65,
+     "setups": [
+      "trend"
+     ],
+     "tech_rank": 0.904,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)"
     }
    ]
   },
   "jp": {
-   "data_date": "2026-10-28",
-   "scored": 59,
-   "technical": 1,
-   "checked": 1,
-   "signals": []
-  },
-  "tw": {
-   "data_date": "2026-10-28",
-   "scored": 1200,
-   "technical": 128,
+   "data_date": "2026-10-29",
+   "scored": 1499,
+   "technical": 61,
    "checked": 30,
    "signals": [
     {
-     "ticker": "3147.TWO",
+     "ticker": "4933.T",
      "name": "",
-     "price": 316.0,
+     "price": 2478.0,
      "setups": [
-      "breakout",
-      "trend"
+      "trend",
+      "vcp"
      ],
-     "tech_rank": 1.0,
+     "tech_rank": 0.836,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵"
+     "quality": "⭐۴/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "6870.TWO",
+     "ticker": "7199.T",
      "name": "",
-     "price": 391.5,
+     "price": 2251.0,
      "setups": [
       "breakout",
       "trend"
      ],
-     "tech_rank": 0.983,
+     "tech_rank": 0.534,
      "fundamentals": [
       "کن‌اسلیم"
      ],
-     "quality": "⭐۱/۵ (۱ نامعلوم)"
+     "quality": "⭐۰/۵ (۲ نامعلوم)"
     },
     {
-     "ticker": "2357.TW",
+     "ticker": "6098.T",
      "name": "",
-     "price": 988.0,
+     "price": 18890.0,
+     "setups": [
+      "trend",
+      "vcp"
+     ],
+     "tech_rank": 0.309,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)"
+    }
+   ]
+  },
+  "tw": {
+   "data_date": "2026-10-29",
+   "scored": 1200,
+   "technical": 101,
+   "checked": 29,
+   "signals": [
+    {
+     "ticker": "3231.TW",
+     "name": "",
+     "price": 188.5,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.879,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۱/۵ (۱ نامعلوم)"
-    }
-   ]
-  },
-  "kr": {
-   "data_date": "2026-10-27",
-   "scored": 1200,
-   "technical": 14,
-   "checked": 14,
-   "signals": [
-    {
-     "ticker": "077500.KS",
-     "name": "",
-     "price": 11860.0,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.912,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "425420.KQ",
-     "name": "",
-     "price": 76200.0,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.584,
+     "tech_rank": 0.812,
      "fundamentals": [
       "کن‌اسلیم"
      ],
@@ -377,69 +296,78 @@
     }
    ]
   },
-  "hk": {
-   "data_date": "2026-10-28",
-   "scored": 992,
-   "technical": 30,
-   "checked": 30,
+  "kr": {
+   "data_date": "2026-10-29",
+   "scored": 1198,
+   "technical": 11,
+   "checked": 9,
    "signals": []
   },
-  "gb": {
-   "data_date": "2026-10-28",
-   "scored": 346,
+  "hk": {
+   "data_date": "2026-10-29",
+   "scored": 985,
    "technical": 33,
    "checked": 30,
    "signals": []
   },
-  "de": {
-   "data_date": "2026-10-28",
-   "scored": 86,
-   "technical": 5,
-   "checked": 5,
+  "gb": {
+   "data_date": "2026-10-29",
+   "scored": 346,
+   "technical": 35,
+   "checked": 30,
    "signals": []
   },
-  "ca": {
-   "data_date": "2026-10-28",
-   "scored": 533,
-   "technical": 49,
-   "checked": 30,
+  "de": {
+   "data_date": "2026-10-29",
+   "scored": 86,
+   "technical": 8,
+   "checked": 8,
    "signals": [
     {
-     "ticker": "DBO.TO",
-     "name": "DBOX TECHNOLOGIES INC",
-     "price": 1.12,
+     "ticker": "BNR.DE",
+     "name": "Brenntag",
+     "price": 62.5,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.914,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۱/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "CGY.TO",
-     "name": "CALIAN GROUP LTD",
-     "price": 81.43,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.895,
+     "tech_rank": 0.523,
      "fundamentals": [
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵ (۱ نامعلوم)"
-    },
+    }
+   ]
+  },
+  "ca": {
+   "data_date": "2026-10-28",
+   "scored": 596,
+   "technical": 44,
+   "checked": 28,
+   "signals": [
     {
-     "ticker": "CVVY.TO",
-     "name": "CAVVY ENERGY LTD",
-     "price": 2.61,
+     "ticker": "CFW.TO",
+     "name": "CALFRAC WELL SERVICES LTD.",
+     "price": 7.91,
      "setups": [
+      "breakout",
       "trend"
      ],
-     "tech_rank": 0.996,
+     "tech_rank": 0.978,
+     "fundamentals": [
+      "کن‌اسلیم"
+     ],
+     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "PD.TO",
+     "name": "PRECISION DRILLING CORPORATION",
+     "price": 147.65,
+     "setups": [
+      "breakout",
+      "trend"
+     ],
+     "tech_rank": 0.435,
      "fundamentals": [
       "کیفیت رشد"
      ],
@@ -448,7 +376,7 @@
    ]
   },
   "au": {
-   "data_date": "2026-10-28",
+   "data_date": "2026-10-29",
    "scored": 465,
    "technical": 14,
    "checked": 14,
