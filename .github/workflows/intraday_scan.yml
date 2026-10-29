@@ -38,6 +38,7 @@ jobs:
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+          PYTHONWARNINGS: ignore
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
           if [ "${{ github.event.inputs.force }}" = "yes" ]; then python3 market_intel/intraday_scan.py --force; else python3 market_intel/intraday_scan.py; fi

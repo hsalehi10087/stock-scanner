@@ -123,30 +123,39 @@ def bars_alpaca(symbols, start):
     if not h['APCA-API-KEY-ID']:
         raise RuntimeError('no Alpaca keys')
     end = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=16)).strftime('%Y-%m-%dT%H:%M:%SZ')
-    out = {}
+    to_alp = {s: s.replace('-', '.') for s in symbols}            # BRK-B (Yahoo) → BRK.B (Alpaca)
+    back = {v: k for k, v in to_alp.items()}
+
+    def chunk(part, feed):
+        rows_by, token = {}, None
+        while True:
+            p = {'symbols': ','.join(to_alp[s] for s in part), 'timeframe': '1Day', 'start': start, 'end': end,
+                 'adjustment': 'split', 'feed': feed, 'limit': 10000}
+            if token:
+                p['page_token'] = token
+            r = requests.get(f'{DATA}/v2/stocks/bars', params=p, headers=h, timeout=60)
+            if not r.ok:
+                raise requests.HTTPError(f'{r.status_code} {r.text[:200]}')
+            j = r.json()
+            for s, rows in (j.get('bars') or {}).items():
+                rows_by.setdefault(back.get(s, s), []).extend(rows)
+            token = j.get('next_page_token')
+            if not token:
+                return rows_by
+
     for feed in ('sip', 'iex'):
-        try:
-            for i in range(0, len(symbols), 200):
-                part = symbols[i:i + 200]
-                token = None
-                while True:
-                    p = {'symbols': ','.join(part), 'timeframe': '1Day', 'start': start, 'end': end,
-                         'adjustment': 'split', 'feed': feed, 'limit': 10000}
-                    if token:
-                        p['page_token'] = token
-                    r = requests.get(f'{DATA}/v2/stocks/bars', params=p, headers=h, timeout=60)
-                    r.raise_for_status()
-                    j = r.json()
-                    for s, rows in (j.get('bars') or {}).items():
-                        out.setdefault(s, []).extend(rows)
-                    token = j.get('next_page_token')
-                    if not token:
-                        break
-            return {s: _df(rows) for s, rows in out.items()}, f'Alpaca {feed.upper()}'
-        except requests.HTTPError as e:
-            print(f'Alpaca feed={feed}: {e}', file=sys.stderr)
-            out = {}
-    raise RuntimeError('Alpaca failed')
+        out, errors = {}, 0
+        for i in range(0, len(symbols), 200):
+            try:
+                out.update(chunk(symbols[i:i + 200], feed))
+            except Exception as e:
+                errors += 1
+                print(f'⚠️ Alpaca feed={feed} chunk {i}: {e}')
+                if errors >= 2 and not out:                     # کل feed کار نمی‌کند (مثلاً ۴۰۳) → feed بعدی
+                    break
+        if out:
+            return {s: _df(rows) for s, rows in out.items() if rows}, f'Alpaca {feed.upper()}'
+    raise RuntimeError('Alpaca failed on all feeds')
 
 
 def _df(rows):
@@ -254,8 +263,13 @@ def main():
     try:
         data, src = bars_alpaca(syms, start)
     except Exception as e:
-        print(f'Alpaca unavailable ({e}); falling back to Yahoo', file=sys.stderr)
+        print(f'⚠️ Alpaca unavailable ({e}); falling back to Yahoo')
         data, src = bars_yahoo(syms)
+    missing = [s for s in syms if s not in data]
+    if missing and src.startswith('Alpaca') and len(missing) < len(syms):
+        extra, _ = bars_yahoo(missing)                            # نمادهایی که Alpaca نداد
+        data.update(extra)
+        src += f' + Yahoo({len(extra)})'
     fresh = sum(1 for d in data.values() if len(d) and d.index[-1] == today)
     print(f'{src}: {len(data)}/{len(syms)} symbols, {fresh} with today bar')
     if fresh == 0:
