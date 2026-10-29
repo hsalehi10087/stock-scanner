@@ -9,14 +9,15 @@
 "last_date": "2026-10-19"
 },
 "AARD": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-21",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 4.41,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "ABAT": {
 "count": 1,
@@ -58,14 +59,15 @@
 "last_date": "2026-10-26"
 },
 "ABSI": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-21",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 10.04,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "ABTC": {
 "count": 1,
@@ -77,13 +79,14 @@
 "last_date": "2026-10-21"
 },
 "ACCV": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-21"
+"2026-10-21",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 13.93,
-"last_date": "2026-10-21"
+"last_date": "2026-10-28"
 },
 "ADAG": {
 "count": 1,
@@ -113,14 +116,15 @@
 "last_date": "2026-10-27"
 },
 "AEYE": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-20",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-20",
 "first_price": 8.19,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "AGIO": {
 "count": 1,
@@ -150,25 +154,36 @@
 "first_price": 2.47,
 "last_date": "2026-10-22"
 },
+"AIB": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.11,
+"last_date": "2026-10-28"
+},
 "AIBZ": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-19",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-19",
 "first_price": 2.95,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "AIOK": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-23",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-23",
 "first_price": 12.02,
-"last_date": "2026-10-27",
+"last_date": "2026-10-28",
 "qs": 1,
 "qs_flags": {
 "analysts": null,
@@ -177,6 +192,15 @@
 "momentum": null,
 "profit": false
 }
+},
+"AIRS": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.44,
+"last_date": "2026-10-28"
 },
 "AIXI": {
 "count": 2,
@@ -316,6 +340,15 @@
 "first_date": "2026-10-15",
 "first_price": 1.93,
 "last_date": "2026-10-15"
+},
+"ANTX": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 4.52,
+"last_date": "2026-10-28"
 },
 "AOSL": {
 "count": 1,
@@ -475,14 +508,32 @@
 "first_price": 10.96,
 "last_date": "2026-10-22"
 },
-"AXTI": {
+"AXGN": {
 "count": 1,
 "events": [
-"2026-10-19"
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 49.25,
+"last_date": "2026-10-28",
+"qs": 4,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": true,
+"momentum": true,
+"profit": true
+}
+},
+"AXTI": {
+"count": 2,
+"events": [
+"2026-10-19",
+"2026-10-28"
 ],
 "first_date": "2026-10-19",
 "first_price": 56.79,
-"last_date": "2026-10-19"
+"last_date": "2026-10-28"
 },
 "AZTR": {
 "count": 1,
@@ -537,14 +588,15 @@
 "last_date": "2026-10-27"
 },
 "BBCI": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-15",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-15",
 "first_price": 3.16,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "BCDA": {
 "count": 1,
@@ -555,6 +607,15 @@
 "first_price": 1.04,
 "last_date": "2026-10-20"
 },
+"BDAI": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.51,
+"last_date": "2026-10-28"
+},
 "BDTX": {
 "count": 1,
 "events": [
@@ -564,6 +625,15 @@
 "first_price": 2.07,
 "last_date": "2026-10-20"
 },
+"BEAM": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 28.78,
+"last_date": "2026-10-28"
+},
 "BENF": {
 "count": 1,
 "events": [
@@ -572,6 +642,15 @@
 "first_date": "2026-10-15",
 "first_price": 1.09,
 "last_date": "2026-10-15"
+},
+"BESS": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.12,
+"last_date": "2026-10-28"
 },
 "BETR": {
 "count": 4,
@@ -657,14 +736,33 @@
 }
 },
 "BKYI": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-22",
-"2026-10-23"
+"2026-10-23",
+"2026-10-28"
 ],
 "first_date": "2026-10-22",
 "first_price": 2.74,
-"last_date": "2026-10-23"
+"last_date": "2026-10-28"
+},
+"BLCO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 20.4,
+"last_date": "2026-10-28"
+},
+"BLMN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 9.99,
+"last_date": "2026-10-28"
 },
 "BLSM": {
 "count": 1,
@@ -724,6 +822,23 @@
 "analysts": true,
 "cash": false,
 "growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"BOOM": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 7.73,
+"last_date": "2026-10-28",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": true,
 "momentum": false,
 "profit": false
 }
@@ -809,6 +924,23 @@
 "first_date": "2026-10-27",
 "first_price": 5.09,
 "last_date": "2026-10-27"
+},
+"CALC": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.66,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": null
+}
 },
 "CAMP": {
 "count": 1,
@@ -927,6 +1059,23 @@
 "profit": false
 }
 },
+"CHSN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.46,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": null,
+"momentum": false,
+"profit": false
+}
+},
 "CJMB": {
 "count": 1,
 "events": [
@@ -954,6 +1103,15 @@
 "first_price": 1.29,
 "last_date": "2026-10-22"
 },
+"CLLS": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.26,
+"last_date": "2026-10-28"
+},
 "CLNE": {
 "count": 1,
 "events": [
@@ -973,14 +1131,15 @@
 "last_date": "2026-10-20"
 },
 "CLRO": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-23",
-"2026-10-26"
+"2026-10-26",
+"2026-10-28"
 ],
 "first_date": "2026-10-23",
 "first_price": 3.25,
-"last_date": "2026-10-26",
+"last_date": "2026-10-28",
 "qs": 0,
 "qs_flags": {
 "analysts": false,
@@ -1009,13 +1168,14 @@
 "last_date": "2026-10-20"
 },
 "CMCT": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-14"
+"2026-10-14",
+"2026-10-28"
 ],
 "first_date": "2026-10-14",
 "first_price": 4.61,
-"last_date": "2026-10-14"
+"last_date": "2026-10-28"
 },
 "CMTL": {
 "count": 1,
@@ -1158,13 +1318,14 @@
 "last_date": "2026-10-19"
 },
 "CUE": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-21"
+"2026-10-21",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 18.95,
-"last_date": "2026-10-21"
+"last_date": "2026-10-28"
 },
 "CVKD": {
 "count": 1,
@@ -1236,22 +1397,24 @@
 "last_date": "2026-10-19"
 },
 "DMAC": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-20"
+"2026-10-20",
+"2026-10-28"
 ],
 "first_date": "2026-10-20",
 "first_price": 8.67,
-"last_date": "2026-10-20"
+"last_date": "2026-10-28"
 },
 "DNA": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 11.27,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "DPC": {
 "count": 1,
@@ -1289,6 +1452,15 @@
 "first_price": 1.86,
 "last_date": "2026-10-16"
 },
+"DTIL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 7.47,
+"last_date": "2026-10-28"
+},
 "EAF": {
 "count": 3,
 "events": [
@@ -1307,6 +1479,24 @@
 "momentum": false,
 "profit": false
 }
+},
+"EAT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 220.74,
+"last_date": "2026-10-28"
+},
+"EDIT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.95,
+"last_date": "2026-10-28"
 },
 "EFOI": {
 "count": 2,
@@ -1353,6 +1543,15 @@
 "first_price": 2.91,
 "last_date": "2026-10-21"
 },
+"ELDN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.76,
+"last_date": "2026-10-28"
+},
 "ELMT": {
 "count": 1,
 "events": [
@@ -1362,6 +1561,23 @@
 "first_price": 21.23,
 "last_date": "2026-10-21"
 },
+"ELPW": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 3.0,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": null,
+"momentum": false,
+"profit": false
+}
+},
 "ELTX": {
 "count": 1,
 "events": [
@@ -1370,6 +1586,24 @@
 "first_date": "2026-10-22",
 "first_price": 1.94,
 "last_date": "2026-10-22"
+},
+"ELVA": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 5.75,
+"last_date": "2026-10-28"
+},
+"EMAT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.68,
+"last_date": "2026-10-28"
 },
 "ENTX": {
 "count": 1,
@@ -1473,6 +1707,32 @@
 "first_price": 1.18,
 "last_date": "2026-10-27"
 },
+"EVMN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 6.31,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": null,
+"profit": null
+}
+},
+"EVR": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 292.38,
+"last_date": "2026-10-28"
+},
 "EXYN": {
 "count": 1,
 "events": [
@@ -1546,13 +1806,14 @@
 "last_date": "2026-10-15"
 },
 "FISN": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 2.69,
-"last_date": "2026-10-27",
+"last_date": "2026-10-28",
 "qs": 0,
 "qs_flags": {
 "analysts": null,
@@ -1561,6 +1822,15 @@
 "momentum": null,
 "profit": null
 }
+},
+"FLEX": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 93.03,
+"last_date": "2026-10-28"
 },
 "FLO": {
 "count": 1,
@@ -1590,6 +1860,15 @@
 "first_price": 1.16,
 "last_date": "2026-10-27"
 },
+"FRMI": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 3.02,
+"last_date": "2026-10-28"
+},
 "FRNM": {
 "count": 1,
 "events": [
@@ -1598,6 +1877,23 @@
 "first_date": "2026-10-20",
 "first_price": 14.06,
 "last_date": "2026-10-20"
+},
+"FTFT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.89,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
 },
 "FTH": {
 "count": 1,
@@ -1617,14 +1913,24 @@
 "first_price": 1.19,
 "last_date": "2026-10-19"
 },
-"GCTK": {
+"FWRD": {
 "count": 1,
 "events": [
-"2026-10-26"
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 17.54,
+"last_date": "2026-10-28"
+},
+"GCTK": {
+"count": 2,
+"events": [
+"2026-10-26",
+"2026-10-28"
 ],
 "first_date": "2026-10-26",
 "first_price": 1.61,
-"last_date": "2026-10-26",
+"last_date": "2026-10-28",
 "qs": 0,
 "qs_flags": {
 "analysts": null,
@@ -1633,6 +1939,24 @@
 "momentum": false,
 "profit": false
 }
+},
+"GDC": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.27,
+"last_date": "2026-10-28"
+},
+"GENB": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 15.38,
+"last_date": "2026-10-28"
 },
 "GENK": {
 "count": 1,
@@ -1651,6 +1975,32 @@
 "first_date": "2026-10-14",
 "first_price": 3.9,
 "last_date": "2026-10-14"
+},
+"GLXY": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 19.09,
+"last_date": "2026-10-28"
+},
+"GMAB": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 57.29,
+"last_date": "2026-10-28",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
+}
 },
 "GMEX": {
 "count": 1,
@@ -1770,6 +2120,23 @@
 "first_price": 3.33,
 "last_date": "2026-10-20"
 },
+"HAO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.02,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": null,
+"momentum": false,
+"profit": false
+}
+},
 "HAS": {
 "count": 1,
 "events": [
@@ -1778,6 +2145,24 @@
 "first_date": "2026-10-20",
 "first_price": 109.52,
 "last_date": "2026-10-20"
+},
+"HAYW": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 14.79,
+"last_date": "2026-10-28"
+},
+"HCAT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.8,
+"last_date": "2026-10-28"
 },
 "HCSG": {
 "count": 1,
@@ -1789,13 +2174,14 @@
 "last_date": "2026-10-22"
 },
 "HLP": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-23"
+"2026-10-23",
+"2026-10-28"
 ],
 "first_date": "2026-10-23",
 "first_price": 3.51,
-"last_date": "2026-10-23",
+"last_date": "2026-10-28",
 "qs": 1,
 "qs_flags": {
 "analysts": null,
@@ -1941,6 +2327,15 @@
 "first_date": "2026-10-15",
 "first_price": 48.93,
 "last_date": "2026-10-15"
+},
+"ICLR": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 214.16,
+"last_date": "2026-10-28"
 },
 "ICON": {
 "count": 1,
@@ -2172,6 +2567,15 @@
 "first_price": 1.42,
 "last_date": "2026-10-22"
 },
+"JLL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 333.34,
+"last_date": "2026-10-28"
+},
 "JYD": {
 "count": 1,
 "events": [
@@ -2206,6 +2610,32 @@
 "first_date": "2026-10-15",
 "first_price": 13.19,
 "last_date": "2026-10-15"
+},
+"KDK": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.31,
+"last_date": "2026-10-28"
+},
+"KIDS": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 30.8,
+"last_date": "2026-10-28",
+"qs": 3,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": true,
+"momentum": true,
+"profit": true
+}
 },
 "KLRA": {
 "count": 1,
@@ -2381,6 +2811,23 @@
 "first_price": 3.15,
 "last_date": "2026-10-20"
 },
+"LUNG": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.52,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "LUNR": {
 "count": 1,
 "events": [
@@ -2389,6 +2836,15 @@
 "first_date": "2026-10-27",
 "first_price": 11.56,
 "last_date": "2026-10-27"
+},
+"LVO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 3.16,
+"last_date": "2026-10-28"
 },
 "LVWR": {
 "count": 1,
@@ -2516,13 +2972,14 @@
 }
 },
 "MGN": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 3.06,
-"last_date": "2026-10-27",
+"last_date": "2026-10-28",
 "qs": 0,
 "qs_flags": {
 "analysts": null,
@@ -2634,14 +3091,15 @@
 "last_date": "2026-10-20"
 },
 "MXCT": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-14",
-"2026-10-20"
+"2026-10-20",
+"2026-10-28"
 ],
 "first_date": "2026-10-14",
 "first_price": 1.25,
-"last_date": "2026-10-20"
+"last_date": "2026-10-28"
 },
 "MXL": {
 "count": 1,
@@ -2689,15 +3147,16 @@
 "last_date": "2026-10-21"
 },
 "NAUT": {
-"count": 3,
+"count": 4,
 "events": [
 "2026-10-19",
 "2026-10-23",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-19",
 "first_price": 2.63,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "NB": {
 "count": 1,
@@ -2716,6 +3175,15 @@
 "first_date": "2026-10-27",
 "first_price": 170.47,
 "last_date": "2026-10-27"
+},
+"NBR": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 89.87,
+"last_date": "2026-10-28"
 },
 "NBTX": {
 "count": 2,
@@ -2776,13 +3244,14 @@
 "last_date": "2026-10-27"
 },
 "NGNE": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 26.99,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "NIVF": {
 "count": 1,
@@ -2800,6 +3269,15 @@
 "momentum": false,
 "profit": false
 }
+},
+"NKLR": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.39,
+"last_date": "2026-10-28"
 },
 "NMG": {
 "count": 1,
@@ -3017,6 +3495,15 @@
 "first_price": 3.18,
 "last_date": "2026-10-20"
 },
+"ONEN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.49,
+"last_date": "2026-10-28"
+},
 "ONL": {
 "count": 1,
 "events": [
@@ -3053,6 +3540,15 @@
 "first_price": 1.61,
 "last_date": "2026-10-15"
 },
+"ORCL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 144.54,
+"last_date": "2026-10-28"
+},
 "ORIC": {
 "count": 1,
 "events": [
@@ -3080,6 +3576,15 @@
 "first_price": 6.76,
 "last_date": "2026-10-27"
 },
+"OSW": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 28.07,
+"last_date": "2026-10-28"
+},
 "OUST": {
 "count": 1,
 "events": [
@@ -3104,6 +3609,32 @@
 "growth": null,
 "momentum": false,
 "profit": false
+}
+},
+"PACB": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.83,
+"last_date": "2026-10-28"
+},
+"PARA": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 3.36,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
 }
 },
 "PASW": {
@@ -3134,23 +3665,25 @@
 "last_date": "2026-10-27"
 },
 "PDC": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-22"
+"2026-10-22",
+"2026-10-28"
 ],
 "first_date": "2026-10-22",
 "first_price": 3.02,
-"last_date": "2026-10-22"
+"last_date": "2026-10-28"
 },
 "PDSB": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-21",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 1.24,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "PFSA": {
 "count": 1,
@@ -3199,14 +3732,15 @@
 "last_date": "2026-10-19"
 },
 "PMVP": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-20",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-20",
 "first_price": 1.39,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "PNR": {
 "count": 1,
@@ -3226,15 +3760,33 @@
 "first_price": 2.65,
 "last_date": "2026-10-16"
 },
+"PODC": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.45,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "POM": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-21",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 3.01,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "POOL": {
 "count": 1,
@@ -3255,15 +3807,16 @@
 "last_date": "2026-10-27"
 },
 "PRME": {
-"count": 3,
+"count": 4,
 "events": [
 "2026-10-15",
 "2026-10-19",
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-15",
 "first_price": 3.61,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "PROK": {
 "count": 1,
@@ -3291,6 +3844,15 @@
 "first_date": "2026-10-15",
 "first_price": 9.05,
 "last_date": "2026-10-15"
+},
+"PVLA": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 147.47,
+"last_date": "2026-10-28"
 },
 "QDEL": {
 "count": 1,
@@ -3365,13 +3927,14 @@
 "last_date": "2026-10-22"
 },
 "RBBN": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-19"
+"2026-10-19",
+"2026-10-28"
 ],
 "first_date": "2026-10-19",
 "first_price": 1.51,
-"last_date": "2026-10-19"
+"last_date": "2026-10-28"
 },
 "RCAT": {
 "count": 1,
@@ -3390,6 +3953,15 @@
 "first_date": "2026-10-21",
 "first_price": 15.29,
 "last_date": "2026-10-21"
+},
+"RCKY": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 49.69,
+"last_date": "2026-10-28"
 },
 "RCON": {
 "count": 1,
@@ -3445,6 +4017,23 @@
 "profit": true
 }
 },
+"REPL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 16.06,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": null
+}
+},
 "RFAI": {
 "count": 1,
 "events": [
@@ -3490,13 +4079,14 @@
 }
 },
 "RIBBU": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-27"
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 18.9,
-"last_date": "2026-10-27",
+"last_date": "2026-10-28",
 "qs": 0,
 "qs_flags": {
 "analysts": null,
@@ -3504,6 +4094,23 @@
 "growth": false,
 "momentum": false,
 "profit": null
+}
+},
+"ROMA": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 7.0,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": null,
+"momentum": false,
+"profit": false
 }
 },
 "RPD": {
@@ -3609,14 +4216,24 @@
 "first_price": 1.1,
 "last_date": "2026-10-27"
 },
-"SENS": {
+"SDGR": {
 "count": 1,
 "events": [
-"2026-10-27"
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 30.87,
+"last_date": "2026-10-28"
+},
+"SENS": {
+"count": 2,
+"events": [
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 8.33,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "SERV": {
 "count": 1,
@@ -3653,6 +4270,15 @@
 "profit": false
 }
 },
+"SHAZ": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 28.47,
+"last_date": "2026-10-28"
+},
 "SID": {
 "count": 1,
 "events": [
@@ -3678,6 +4304,15 @@
 "first_date": "2026-10-16",
 "first_price": 3.43,
 "last_date": "2026-10-16"
+},
+"SKHY": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 164.7,
+"last_date": "2026-10-28"
 },
 "SKYD": {
 "count": 1,
@@ -3706,6 +4341,15 @@
 "first_price": 5.45,
 "last_date": "2026-10-20"
 },
+"SLMT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 3.8,
+"last_date": "2026-10-28"
+},
 "SLN": {
 "count": 1,
 "events": [
@@ -3723,6 +4367,15 @@
 "first_date": "2026-10-20",
 "first_price": 11.98,
 "last_date": "2026-10-20"
+},
+"SMPL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 10.84,
+"last_date": "2026-10-28"
 },
 "SOFI": {
 "count": 1,
@@ -3768,6 +4421,15 @@
 "profit": false
 }
 },
+"SSP": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.41,
+"last_date": "2026-10-28"
+},
 "SSTK": {
 "count": 1,
 "events": [
@@ -3785,6 +4447,15 @@
 "first_date": "2026-10-22",
 "first_price": 1.67,
 "last_date": "2026-10-22"
+},
+"STLA": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 4.68,
+"last_date": "2026-10-28"
 },
 "SVRE": {
 "count": 1,
@@ -3805,14 +4476,15 @@
 "last_date": "2026-10-21"
 },
 "SWRD": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-21",
-"2026-10-26"
+"2026-10-26",
+"2026-10-28"
 ],
 "first_date": "2026-10-21",
 "first_price": 2.63,
-"last_date": "2026-10-26"
+"last_date": "2026-10-28"
 },
 "TANH": {
 "count": 1,
@@ -3888,6 +4560,15 @@
 "first_price": 1.52,
 "last_date": "2026-10-19"
 },
+"TGEN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.33,
+"last_date": "2026-10-28"
+},
 "THRM": {
 "count": 1,
 "events": [
@@ -3896,6 +4577,24 @@
 "first_date": "2026-10-27",
 "first_price": 31.82,
 "last_date": "2026-10-27"
+},
+"TIL": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 6.79,
+"last_date": "2026-10-28"
+},
+"TKNO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 7.86,
+"last_date": "2026-10-28"
 },
 "TLK": {
 "count": 1,
@@ -3986,6 +4685,23 @@
 "first_price": 4.82,
 "last_date": "2026-10-19"
 },
+"TREO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 1.98,
+"last_date": "2026-10-28",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": null,
+"profit": false
+}
+},
 "TRON": {
 "count": 3,
 "events": [
@@ -4051,14 +4767,32 @@
 "first_price": 51.48,
 "last_date": "2026-10-27"
 },
-"ULCC": {
+"ULBI": {
 "count": 1,
 "events": [
-"2026-10-27"
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 15.61,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"ULCC": {
+"count": 2,
+"events": [
+"2026-10-27",
+"2026-10-28"
 ],
 "first_date": "2026-10-27",
 "first_price": 5.53,
-"last_date": "2026-10-27"
+"last_date": "2026-10-28"
 },
 "UPC": {
 "count": 1,
@@ -4224,6 +4958,24 @@
 "first_price": 27.61,
 "last_date": "2026-10-27"
 },
+"VRT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 242.94,
+"last_date": "2026-10-28"
+},
+"VSAT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 78.26,
+"last_date": "2026-10-28"
+},
 "VSH": {
 "count": 1,
 "events": [
@@ -4259,6 +5011,32 @@
 "first_price": 9.23,
 "last_date": "2026-10-15"
 },
+"WATT": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 10.9,
+"last_date": "2026-10-28",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": false
+}
+},
+"WEN": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 7.07,
+"last_date": "2026-10-28"
+},
 "WETO": {
 "count": 1,
 "events": [
@@ -4277,6 +5055,15 @@
 "first_date": "2026-10-21",
 "first_price": 25.64,
 "last_date": "2026-10-22"
+},
+"WING": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 138.57,
+"last_date": "2026-10-28"
 },
 "WORX": {
 "count": 2,
@@ -4306,15 +5093,25 @@
 "first_price": 10.99,
 "last_date": "2026-10-27"
 },
+"XBIO": {
+"count": 1,
+"events": [
+"2026-10-28"
+],
+"first_date": "2026-10-28",
+"first_price": 2.1,
+"last_date": "2026-10-28"
+},
 "XCH": {
-"count": 2,
+"count": 3,
 "events": [
 "2026-10-14",
-"2026-10-22"
+"2026-10-22",
+"2026-10-28"
 ],
 "first_date": "2026-10-14",
 "first_price": 2.21,
-"last_date": "2026-10-22"
+"last_date": "2026-10-28"
 },
 "XCUR": {
 "count": 1,
@@ -4391,13 +5188,14 @@
 }
 },
 "XTIA": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-10-23"
+"2026-10-23",
+"2026-10-28"
 ],
 "first_date": "2026-10-23",
 "first_price": 1.07,
-"last_date": "2026-10-23",
+"last_date": "2026-10-28",
 "qs": 2,
 "qs_flags": {
 "analysts": true,
