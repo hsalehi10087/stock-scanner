@@ -1,0 +1,10 @@
+id: ea05e61257-spy-candle-dna-rsi-scalp
+name: SPY candle-DNA + RSI scalp bot
+name_fa: ربات نوسان‌گیری SPY با «DNA کندل» و RSI
+source: elitetrader
+source_url: https://www.elitetrader.com/et/threads/my-profitable-spy-backtest.391824/
+claim: "«بک‌تست سودده‌ی من روی SPY: وقتی DNA کندل (سبز، ۶۰٪ بدنه، ۱۰٪ سایه‌ی بالا، ۳۰٪ سایه‌ی پایین، ±۱۰ درصد) و شرط صعودی RSI جور شد ۱۰۰ سهم بخر؛ خروج بعد از ۵ کندل (۲۵ دقیقه) یا حد ضرر متحرک ۲٪»"
+claimed_return: "profitable (عدد در بخش در دسترس متن نبود)"
+added: 2026-10-29
+status: not_testable
+reason_not_testable: "روی کندل ۵ دقیقه‌ای است (خروج بعد از ۲۵ دقیقه)؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم و «شرط صعودی RSI با ۲۰٪ تحمل» دقیق تعریف نشده"

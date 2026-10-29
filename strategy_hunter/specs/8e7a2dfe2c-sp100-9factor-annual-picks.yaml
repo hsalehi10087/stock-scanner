@@ -1,0 +1,10 @@
+id: 8e7a2dfe2c-sp100-9factor-annual-picks
+name: S&P 100 nine-factor annual stock picks
+name_fa: انتخاب سالانه‌ی سهام S&P 100 با ۹ عامل (۸ بنیادی + ۱ مومنتوم)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xhoqt9/systematic_stock_picking_backtesting_a_rulesbased/
+claim: "«سیستمی با ۹ عامل (۸ عامل بنیادی و ۱ اندیکاتور فنی) که در پایان هر سال سبدی از سهام را انتخاب می‌کند و تمام سال بعد نگه می‌دارد»"
+claimed_return: "نامشخص (عدد در بخش در دسترس متن نبود)"
+added: 2026-10-29
+status: not_testable
+reason_not_testable: "به داده‌ی بنیادی از گزارش‌های SEC (ROA، حاشیه‌ی عملیاتی، جریان نقد و...) و فهرست تاریخی اعضای S&P 100 نیاز دارد؛ موتور فقط قیمت یک نماد را می‌آزماید"
