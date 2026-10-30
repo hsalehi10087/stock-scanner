@@ -1,385 +1,771 @@
 {
- "date": "2026-10-29",
+ "date": "2026-10-30",
  "markets": {
   "us": {
-   "data_date": "2026-10-28",
+   "data_date": "2026-10-29",
    "scored": 1487,
-   "technical": 81,
-   "checked": 23,
+   "technical": 239,
+   "checked": 13,
    "signals": [
     {
-     "ticker": "VCTR",
-     "name": "Victory Capital Holdings, Inc.",
-     "price": 111.87,
+     "ticker": "CROX",
+     "name": "Crocs",
+     "price": 150.26,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.921,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "HALO",
+     "name": "Halozyme",
+     "price": 131.18,
      "setups": [
       "trend",
-      "pullback"
+      "vcp",
+      "longpat"
      ],
-     "tech_rank": 0.656,
+     "tech_rank": 0.92,
      "fundamentals": [
-      "صورت مالی",
       "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۵/۵"
+     "quality": "⭐۵/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     },
     {
-     "ticker": "AR",
-     "name": "Antero Resources",
-     "price": 42.11,
+     "ticker": "GKOS",
+     "name": "Glaukos Corp.",
+     "price": 242.48,
      "setups": [
       "breakout",
-      "trend"
+      "trend",
+      "longpat"
      ],
-     "tech_rank": 0.633,
+     "tech_rank": 0.769,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "NTNX",
+     "name": "Nutanix",
+     "price": 70.71,
+     "setups": [
+      "trend",
+      "pullback",
+      "longpat"
+     ],
+     "tech_rank": 0.634,
      "fundamentals": [
       "کن‌اسلیم"
      ],
-     "quality": "⭐۳/۵"
+     "quality": "⭐۳/۵",
+     "chart": "سرووشانه معکوس (شکست)",
+     "chart_score": 3.0
     },
     {
-     "ticker": "NTCT",
-     "name": "NETSCOUT Systems, Inc.",
-     "price": 39.53,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.617,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "SCL",
-     "name": "Stepan Company",
-     "price": 68.41,
+     "ticker": "LLY",
+     "name": "Lilly (Eli)",
+     "price": 1373.7,
      "setups": [
       "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.557,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "LIVN",
-     "name": "LivaNova",
-     "price": 80.66,
-     "setups": [
       "trend",
-      "pullback"
+      "longpat"
      ],
-     "tech_rank": 0.525,
+     "tech_rank": 0.449,
      "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۵/۵"
-    },
-    {
-     "ticker": "MNST",
-     "name": "Monster Beverage",
-     "price": 45.66,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.445,
-     "fundamentals": [
-      "صورت مالی",
+      "کن‌اسلیم",
       "بافت"
      ],
-     "quality": "⭐۳/۵"
+     "quality": "⭐۳/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     },
     {
-     "ticker": "FIVE",
-     "name": "Five Below",
-     "price": 234.47,
+     "ticker": "WST",
+     "name": "West Pharmaceutical Services",
+     "price": 416.67,
      "setups": [
+      "breakout",
       "trend",
-      "pullback"
+      "longpat"
      ],
-     "tech_rank": 0.435,
+     "tech_rank": 0.423,
      "fundamentals": [
       "صورت مالی",
-      "کن‌اسلیم",
       "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵"
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     },
     {
-     "ticker": "WKC",
-     "name": "World Kinect Corporation",
-     "price": 36.61,
+     "ticker": "EHC",
+     "name": "Encompass Health",
+     "price": 131.49,
      "setups": [
+      "breakout",
       "trend",
-      "pullback"
+      "longpat"
      ],
-     "tech_rank": 0.353,
+     "tech_rank": 0.328,
      "fundamentals": [
+      "بافت"
+     ],
+     "quality": "⭐۳/۵",
+     "chart": "کف دوقلو (شکست خط گردن)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "MA",
+     "name": "Mastercard",
+     "price": 635.7,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.234,
+     "fundamentals": [
+      "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵"
+     "quality": "⭐۴/۵",
+     "chart": "سرووشانه معکوس (شکست)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
     }
    ]
   },
   "cn": {
-   "data_date": "2026-10-29",
-   "scored": 1499,
-   "technical": 6,
-   "checked": 6,
+   "data_date": "2026-10-30",
+   "scored": 1500,
+   "technical": 19,
+   "checked": 18,
    "signals": []
   },
   "in": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 705,
-   "technical": 29,
-   "checked": 24,
+   "technical": 46,
+   "checked": 23,
    "signals": [
     {
-     "ticker": "ICIL.NS",
-     "name": "Indo Count Industries Ltd.",
-     "price": 446.85,
+     "ticker": "LAURUSLABS.NS",
+     "name": "Laurus Labs Ltd.",
+     "price": 2380.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.41,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "COFORGE.NS",
+     "name": "Coforge Ltd.",
+     "price": 2052.6,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.328,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "DIVISLAB.NS",
+     "name": "Divi's Laboratories Ltd.",
+     "price": 9808.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.01,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "ABDL.NS",
+     "name": "Allied Blenders and Distillers Ltd.",
+     "price": 696.0,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.728,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "فنجان‌ودسته (شکست سقف)",
+     "chart_score": 2.5
+    },
+    {
+     "ticker": "GLAND.NS",
+     "name": "Gland Pharma Ltd.",
+     "price": 3100.2,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.562,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "SANSERA.NS",
+     "name": "Sansera Engineering Ltd.",
+     "price": 4150.0,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.962,
+     "tech_rank": 0.506,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
     },
     {
-     "ticker": "THELEELA.NS",
-     "name": "Leela Palaces Hotels & Resorts Ltd.",
-     "price": 631.85,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.648,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "VIJAYA.NS",
-     "name": "Vijaya Diagnostic Centre Ltd.",
-     "price": 1465.9,
+     "ticker": "NAZARA.NS",
+     "name": "Nazara Technologies Ltd.",
+     "price": 399.2,
      "setups": [
       "trend",
-      "pullback"
+      "longpat"
      ],
-     "tech_rank": 0.4,
+     "tech_rank": 0.461,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "ACUTAAS.NS",
-     "name": "Acutaas Chemicals Ltd.",
-     "price": 3990.0,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.339,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "STLTECH.NS",
-     "name": "Sterlite Technologies Ltd.",
-     "price": 877.85,
-     "setups": [
-      "trend"
-     ],
-     "tech_rank": 0.966,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "WESTLIFE.NS",
-     "name": "Westlife Foodworld Ltd.",
-     "price": 612.65,
-     "setups": [
-      "trend"
-     ],
-     "tech_rank": 0.904,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۴/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
+     "chart": "سرووشانه معکوس (شکست)",
+     "chart_score": 3.0
     }
    ]
   },
   "jp": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 1499,
-   "technical": 61,
-   "checked": 30,
+   "technical": 129,
+   "checked": 27,
    "signals": [
     {
-     "ticker": "4933.T",
+     "ticker": "7453.T",
      "name": "",
-     "price": 2478.0,
+     "price": 4836.0,
      "setups": [
+      "breakout",
       "trend",
-      "vcp"
+      "longpat"
      ],
-     "tech_rank": 0.836,
+     "tech_rank": 0.702,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     },
     {
-     "ticker": "7199.T",
+     "ticker": "9766.T",
      "name": "",
-     "price": 2251.0,
+     "price": 26385.0,
      "setups": [
       "breakout",
-      "trend"
+      "trend",
+      "longpat"
      ],
-     "tech_rank": 0.534,
+     "tech_rank": 0.621,
      "fundamentals": [
       "کن‌اسلیم"
      ],
-     "quality": "⭐۰/۵ (۲ نامعلوم)"
-    },
-    {
-     "ticker": "6098.T",
-     "name": "",
-     "price": 18890.0,
-     "setups": [
-      "trend",
-      "vcp"
-     ],
-     "tech_rank": 0.309,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۲/۵ (۱ نامعلوم)",
+     "chart": "سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
     }
    ]
   },
   "tw": {
-   "data_date": "2026-10-29",
-   "scored": 1200,
-   "technical": 101,
+   "data_date": "2026-10-30",
+   "scored": 1199,
+   "technical": 108,
    "checked": 29,
    "signals": [
     {
-     "ticker": "3231.TW",
+     "ticker": "6526.TW",
      "name": "",
-     "price": 188.5,
+     "price": 765.0,
      "setups": [
       "trend",
-      "pullback"
+      "longpat"
      ],
-     "tech_rank": 0.812,
+     "tech_rank": 0.938,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف)",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "6021.TWO",
+     "name": "",
+     "price": 56.7,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.827,
      "fundamentals": [
       "کن‌اسلیم"
      ],
-     "quality": "⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+     "quality": "⭐۱/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     }
    ]
   },
   "kr": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 1198,
-   "technical": 11,
-   "checked": 9,
-   "signals": []
+   "technical": 23,
+   "checked": 21,
+   "signals": [
+    {
+     "ticker": "053800.KQ",
+     "name": "",
+     "price": 118100.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.328,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ]
   },
   "hk": {
-   "data_date": "2026-10-29",
-   "scored": 985,
-   "technical": 33,
+   "data_date": "2026-10-30",
+   "scored": 992,
+   "technical": 61,
    "checked": 30,
    "signals": []
   },
   "gb": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 346,
-   "technical": 35,
-   "checked": 30,
-   "signals": []
-  },
-  "de": {
-   "data_date": "2026-10-29",
-   "scored": 86,
-   "technical": 8,
-   "checked": 8,
+   "technical": 52,
+   "checked": 28,
    "signals": [
     {
-     "ticker": "BNR.DE",
-     "name": "Brenntag",
-     "price": 62.5,
+     "ticker": "ROR.L",
+     "name": "Rotork",
+     "price": 492.8,
+     "setups": [
+      "trend",
+      "pullback",
+      "longpat"
+     ],
+     "tech_rank": 0.509,
+     "fundamentals": [
+      "بافت"
+     ],
+     "quality": "⭐۳/۵ (۲ نامعلوم)",
+     "chart": "کف دوقلو (شکست خط گردن)",
+     "chart_score": 2.5
+    },
+    {
+     "ticker": "AVON.L",
+     "name": "Avon Technologies",
+     "price": 2530.0,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.91,
+     "fundamentals": [
+      "کن‌اسلیم"
+     ],
+     "quality": "⭐۲/۵ (۲ نامعلوم)",
+     "chart": "کف دوقلو (شکست خط گردن)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "FOUR.L",
+     "name": "4imprint",
+     "price": 4508.0,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.523,
+     "tech_rank": 0.893,
+     "fundamentals": [
+      "بافت"
+     ],
+     "quality": "⭐۳/۵ (۲ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "APN.L",
+     "name": "Applied Nutrition",
+     "price": 293.68,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.705,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "quality": "⭐۱/۵ (۲ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "HBR.L",
+     "name": "Harbour Energy",
+     "price": 306.8,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.694,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۴/۵",
+     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "KNOS.L",
+     "name": "Kainos",
+     "price": 1295.0,
+     "setups": [
+      "trend",
+      "vcp"
+     ],
+     "tech_rank": 0.561,
+     "fundamentals": [
+      "بافت"
+     ],
+     "quality": "⭐۳/۵ (۲ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "IHG.L",
+     "name": "IHG Hotels & Resorts",
+     "price": 167.9,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.549,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "سقف دوقلو (هشدار)، مثلث صعودی",
+     "chart_score": 1.5
+    },
+    {
+     "ticker": "ATG.L",
+     "name": "Auction Technology Group",
+     "price": 482.2,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.546,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ]
+  },
+  "de": {
+   "data_date": "2026-10-30",
+   "scored": 86,
+   "technical": 13,
+   "checked": 13,
+   "signals": [
+    {
+     "ticker": "FPE3.DE",
+     "name": "Fuchs Petrolub",
+     "price": 44.64,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.442,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵",
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
+     "chart_score": 2.0
+    },
+    {
+     "ticker": "EVK.DE",
+     "name": "Evonik",
+     "price": 20.96,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.36,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۳/۵",
+     "chart": "فنجان‌ودسته (شکست سقف)",
+     "chart_score": 2.5
+    },
+    {
+     "ticker": "ALV.DE",
+     "name": "Allianz",
+     "price": 439.8,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.326,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۲/۵ (۲ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "TLX.DE",
+     "name": "Talanx",
+     "price": 128.2,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.279,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "BAS.DE",
+     "name": "BASF",
+     "price": 53.47,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.244,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۲/۵ (۱ نامعلوم)",
+     "chart": "سقف دوقلو (هشدار)، مثلث صعودی، شکست سقف ۵۲ هفته",
+     "chart_score": 2.2
     }
    ]
   },
   "ca": {
-   "data_date": "2026-10-28",
+   "data_date": "2026-10-29",
    "scored": 596,
-   "technical": 44,
-   "checked": 28,
+   "technical": 80,
+   "checked": 16,
    "signals": [
     {
-     "ticker": "CFW.TO",
-     "name": "CALFRAC WELL SERVICES LTD.",
-     "price": 7.91,
+     "ticker": "ACX.TO",
+     "name": "ACT ENERGY TECHNOLOGIES LTD",
+     "price": 9.23,
      "setups": [
       "breakout",
-      "trend"
+      "trend",
+      "longpat"
      ],
-     "tech_rank": 0.978,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
-    },
-    {
-     "ticker": "PD.TO",
-     "name": "PRECISION DRILLING CORPORATION",
-     "price": 147.65,
-     "setups": [
-      "breakout",
-      "trend"
-     ],
-     "tech_rank": 0.435,
+     "tech_rank": 0.866,
      "fundamentals": [
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
+     "quality": "⭐۴/۵",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "JWEL.TO",
+     "name": "JAMIESON WELLNESS INC",
+     "price": 45.56,
+     "setups": [
+      "trend",
+      "vcp",
+      "longpat"
+     ],
+     "tech_rank": 0.26,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۳/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "HMM-A.TO",
+     "name": "HAMMOND MANUFACTURING CO. LTD, ",
+     "price": 26.28,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.982,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "TOT.TO",
+     "name": "TOTAL ENERGY SERVICES INC.",
+     "price": 40.01,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.98,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۳/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "MATR.TO",
+     "name": "MATTR CORP",
+     "price": 20.67,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.975,
+     "fundamentals": [
+      "صورت مالی"
+     ],
+     "quality": "⭐۳/۵ (۱ نامعلوم)",
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "KEL.TO",
+     "name": "KELT EXPLORATION LTD",
+     "price": 11.84,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.966,
+     "fundamentals": [
+      "کن‌اسلیم"
+     ],
+     "quality": "⭐۳/۵ (۱ نامعلوم)",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "VLE.TO",
+     "name": "VALEURA ENERGY INC",
+     "price": 17.22,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.96,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵",
+     "chart": "فنجان‌ودسته (شکست سقف)",
+     "chart_score": 2.5
+    },
+    {
+     "ticker": "MTL.TO",
+     "name": "MULLEN GROUP LTD.",
+     "price": 29.86,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.936,
+     "fundamentals": [
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ ⚠️رقیق‌شدن",
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
     }
    ]
   },
   "au": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 465,
-   "technical": 14,
-   "checked": 14,
+   "technical": 31,
+   "checked": 30,
    "signals": []
   }
  }
