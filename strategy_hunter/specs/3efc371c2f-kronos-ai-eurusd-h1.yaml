@@ -1,0 +1,10 @@
+id: 3efc371c2f-kronos-ai-eurusd-h1
+name: Kronos AI candle forecast strategy EURUSD H1
+name_fa: استراتژی پیش‌بینی کندل با مدل هوش مصنوعی Kronos روی EURUSD یک‌ساعته
+source: reddit/Forex
+source_url: https://www.reddit.com/r/Forex/comments/1xj3sqw/i_found_an_interesting_ai_trading_experiment_on/
+claim: "«روی EURUSD یک‌ساعته در ۹۴۷ پیش‌بینی، دقت جهت ۵۱.۸۳٪ بود. استراتژی ساخته‌شده بر پایه‌ی این پیش‌بینی‌ها با ۱۳۳ معامله و ضریب سود ۱.۰۵ در سود تمام کرد، ولی EURUSD در همان دوره حدود ۳.۷٪ بالا رفته بود.»"
+claimed_return: "Profit Factor 1.05 (133 trades)"
+added: 2026-10-30
+status: not_testable
+reason_not_testable: "سیگنال از خروجی یک مدل یادگیری عمیق (Kronos) می‌آید که با اندیکاتورهای مجاز قابل بازسازی نیست و قانون ورود و خروج گفته نشده"
