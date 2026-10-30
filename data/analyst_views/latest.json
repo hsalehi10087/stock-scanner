@@ -1,26 +1,27 @@
 {
- "date": "2026-10-30",
- "articles_read": 323,
- "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر (فایل‌های ۲۸ و ۲۹ اکتبر؛ فایل امروز هنوز ساخته نشده بود)؛ متن کامل خبرها در این اجرا باز نشد؛ پیش‌بینی‌های خودکار، ادعاهای تبلیغاتی و خبرهای سهام شرکت‌ها کنار گذاشته شد؛ فقط نظرهایی که منبع دارند",
+ "date": "2026-10-31",
+ "generated_at": "2026-10-30T23:50:36+00:00",
+ "articles_read": 297,
+ "method": "خواندن تیتر و خلاصه‌ی خبرهای ۳۶ ساعت اخیر از سه فایل آخر خبر (۲۸ تا ۳۰ اکتبر) و حذف تیترهای تکراری؛ خبرهای تبلیغاتی، پیش‌بینی‌های خودکار و خبرهای شرکتی کنار گذاشته شد؛ فقط نظرهایی که جمله‌ی کاملشان در خبر آمده بود نقل شد",
  "assets": {
   "gold": {
    "stance": "نزولی",
    "counts": {
     "bull": 4,
-    "bear": 13,
-    "neutral": 8
+    "bear": 15,
+    "neutral": 9
    },
-   "summary_fa": "طلا بعد از نگه‌داشتن نرخ بهره با لحن سخت‌گیرانه‌ی فدرال رزرو و رشد قوی اقتصاد آمریکا حوالی ۴٬۰۴۰ دلار ضعیف ماند و بیشتر تحلیل‌ها از خطر افت بیشتر می‌گویند، چون احتمال افزایش نرخ در دسامبر بالاست و بازده اوراق و دلار قوی‌اند. در مقابل، خرید خریداران آسیایی در قیمت‌های پایین‌تر و پیش‌بینی برگشت قیمت در ۲۰۲۷ حمایت محدودی ایجاد کرده است.",
+   "summary_fa": "طلا زیر ۴٬۰۰۰ دلار رفت و به پایین‌ترین سطح یک سال اخیر رسید؛ تورم داغ PCE آمریکا احتمال افزایش نرخ بهره در دسامبر را تقویت کرد و ریزش سهام فناوری هم باعث فروش اجباری طلا شد. ماه اکتبر در مسیر بدترین عملکرد از ۲۰۰۸ است، هرچند چند تحلیل بلندمدت هنوز چشم‌انداز طلا را مثبت می‌دانند.",
    "views": [
     {
-     "who": "Sucden Financial",
-     "view_fa": "به گفته‌ی Sucden، سخت‌گیری فدرال رزرو می‌تواند طلا را تا ۳٬۹۰۰ دلار پایین بیاورد و تا پایان سال افت ادامه پیدا کند.",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWnF0bG92emZOM0VGZEhBbjRnLXkwTGpvbm9mU3ZHcXBqeVpkUmMxb2cxcVd6UWc1dENEMUtXaGphakxjTmtQY3lBVUFsZDdRY3E0UHBna1BYdl9QajFQLXJndzl5ZUttaWtISTZIbGhORE1kMGJ4UVZfQ19Ya1FHZVkxTU1rRXZiVEdvMUtBdGl5Q0ZMWFZRcEQwTGRkT09VbmQ5MjI0TEs1V0NXZUZ5eldURXBpenpr?oc=5"
+     "who": "TradingKey",
+     "view_fa": "با شتاب گرفتن تورم PCE سپتامبر و افت طلا زیر ۴٬۰۰۰ دلار، خطر ریزش تا حوالی ۳٬۹۰۰ دلار وجود دارد.",
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZ0ZlUVJYbjRMUjdtZzc3M1RJcEdMSl9nYVhVNHZ3c0QyaEJJNS00c2gzY0k3ZnBWVUVoaTlQOGRxLXNhTmNpaDFKVl9UMkEycnJieFppNlRKMU80Z0E3SlNybGJwX2FTdzhnWkNiNUR0TVRBRVBOUlBfOUk3LUltdDdzMkJIbUZtejBXcnZVR2lpSy11RXVoMXRCMUNKVzVMQzdSOTE0RF9meDhTOUVydEx2RVRYNUpQWGE3Y2dPZzVCY0xoa2RDdmxJTDNQd19tRnhSSEJlOGxKWkVVMG1vdVVwZw?oc=5"
     },
     {
-     "who": "mining.com",
-     "view_fa": "افت قیمت، خریداران هند و چین را به بازار آورده و پریمیوم هند به ۱۵ دلار در هر اونس رسیده، در حالی که صندوق‌های آمریکای شمالی در حال خروج‌اند.",
-     "url": "https://www.mining.com/gold-dip-draws-asian-buyers-as-north-american-funds-lose-cash/"
+     "who": "investingLive",
+     "view_fa": "طلا با گسترش ضرر در بازار سهام دوباره زیر فشار فروش اجباری رفت، اما چشم‌انداز بنیادی آن رو به مثبت‌تر شدن است.",
+     "url": "https://investinglive.com/news/investinglive-european-session-wrap-ai-spending-fears-spook-tech-stocks-dollar-falls-alongside-yields-gold/"
     }
    ]
   },
@@ -28,102 +29,107 @@
    "stance": "نزولی",
    "counts": {
     "bull": 2,
-    "bear": 10,
+    "bear": 11,
     "neutral": 4
    },
-   "summary_fa": "نقره پس از تصمیم فدرال رزرو به پایین‌ترین سطح ۱۱ ماه اخیر رسید و زیر ۵۳٫۵ دلار معامله شد؛ بیشتر تحلیل‌ها هدف ۵۰ دلار را مطرح می‌کنند. عامل اصلی، خطر افزایش دوباره‌ی نرخ بهره است، هرچند تقاضای صنعتی هنوز قوی توصیف می‌شود.",
+   "summary_fa": "نقره همراه طلا سقوط کرد، به پایین‌ترین سطح ۱۱ ماه اخیر رسید و سطح ۵۰ دلار را از دست داد؛ ریسک افزایش نرخ بهره‌ی فدرال رزرو فشار فروش را ادامه داده است. با این حال برخی بانک‌ها هنوز برای سال آینده قیمت‌های بسیار بالاتر پیش‌بینی می‌کنند.",
    "views": [
     {
-     "who": "Sucden Financial",
-     "view_fa": "Sucden می‌گوید فشار سیاست انقباضی فدرال رزرو می‌تواند نقره را تا ۵۰ دلار پایین بیاورد و ریسک نقره از طلا بیشتر است.",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWnF0bG92emZOM0VGZEhBbjRnLXkwTGpvbm9mU3ZHcXBqeVpkUmMxb2cxcVd6UWc1dENEMUtXaGphakxjTmtQY3lBVUFsZDdRY3E0UHBna1BYdl9QajFQLXJndzl5ZUttaWtISTZIbGhORE1kMGJ4UVZfQ19Ya1FHZVkxTU1rRXZiVEdvMUtBdGl5Q0ZMWFZRcEQwTGRkT09VbmQ5MjI0TEs1V0NXZUZ5eldURXBpenpr?oc=5"
+     "who": "Bank of America",
+     "view_fa": "بانک آمریکا با وجود افت قیمت، پیش‌بینی میانگین ۷۵ دلاری نقره تا میانه‌ی ۲۰۲۷ را حفظ کرده است.",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUzg2MEtFSUplWTRsbllOclUwOENZMEJmRHFOelNia1hIN29PZkFFWTJ2YmQ5OTVxZkdfRVh4bUpfem1NTEVKZ0oydnA5Ukp4OHFadFVTeUZJczJiTWRMTlYxUVRfanRfRnVWZ2pianhNMGR0QUFwOTZfb0JEUk1nZTQ4VXFoTTNsdWMxcUNnWFZlX2MtSWFvaVlaVHp2czI1QkZfOHBFbzVzbkk5OHMxa2ZwVW1GQnJxQU5aU3g3WVljZ3E4WHZpVA?oc=5"
+    },
+    {
+     "who": "FXEmpire",
+     "view_fa": "روند نزولی نقره ادامه دارد، چون خطر افزایش نرخ بهره از سوی فدرال رزرو هنوز پابرجاست.",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWWJVZDVsYmd3NWxqMC1pcUg3cnhQbGtvWDNCQnplVm1sTlhfd3lNdVRyejB1dDFEcTJVZVJ5cGdRVHU3WE1YWW4yZS0wZjBpYUk1OVMwdWxtZi16YjlXb0FJYkJFb3hiUHAzcjE5RDZnZXc2cU5hRXRkQTMwNjR1aWFFcFpHT2paZU1uWGp2MGNZS1ExVXB5NENpdXhkbXYtdWNmZFpVdGlNTW1OU1kyOGFub0d1akRs?oc=5"
     }
    ]
   },
   "bitcoin": {
-   "stance": "دوگانه",
+   "stance": "نزولی",
    "counts": {
     "bull": 7,
-    "bear": 12,
+    "bear": 14,
     "neutral": 10
    },
-   "summary_fa": "بیت‌کوین بعد از لحن سخت‌گیرانه‌ی فدرال رزرو، نتایج ضعیف آلفابت و خبر هک بایننس زیر ۸۰ هزار دلار رفت و بعد با آمار قوی تولید ناخالص آمریکا تا ۸۱٫۵ هزار برگشت. ورود دوباره‌ی پول به ETFها حمایت می‌کند، اما تحلیلگران محدوده‌ی ۸۵ هزار دلار را مقاومت و ۷۳ هزار دلار را هدف احتمالی افت می‌دانند.",
+   "summary_fa": "هک ۶٫۳ میلیارد دلاری صرافی بایننس، بزرگ‌ترین هک تاریخ رمزارزها، همراه با ریزش سهام فناوری بیت‌کوین را به حدود ۷۷ هزار دلار رساند و حدود ۱٫۶ میلیارد دلار موقعیت اهرمی را بست. بایننس قول جبران کامل زیان‌ها را داده و برخی تحلیلگران وال‌استریت می‌گویند این اتفاق روند بهبود بازار را از مسیر خارج نمی‌کند.",
    "views": [
     {
-     "who": "Glassnode",
-     "view_fa": "به گفته‌ی Glassnode، ۸۵ هزار دلار مرز پایین قیمت تمام‌شده‌ی دارندگان بلندمدت است و بالای آن خطر فروش وجود دارد.",
-     "url": "https://cointelegraph.com/markets/bitcoin-long-term-resistance-in-focus-as-analysis-sees-selling-risk-above-85k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+     "who": "Standard Chartered",
+     "view_fa": "پس از هک بایننس و افت بیت‌کوین و اتریوم، استاندارد چارترد انتظار فشار و افت بیشتری دارد.",
+     "url": "https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead"
     },
     {
-     "who": "Cointelegraph",
-     "view_fa": "ETFهای بیت‌کوین در سه روز ۴۲۴ میلیون دلار جذب کردند و ورودی خالص اکتبر را با وجود لحن سخت فدرال رزرو مثبت کردند.",
-     "url": "https://cointelegraph.com/markets/bitcoin-etf-137-million-october-back-green?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+     "who": "Cantor Fitzgerald، TD Cowen و Compass Point",
+     "view_fa": "به گفته‌ی تحلیلگران این سه مؤسسه، هک ۶٫۳ میلیارد دلاری بایننس احتمالاً روند بهبود بازار رمزارز را متوقف نمی‌کند.",
+     "url": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack"
     }
    ]
   },
   "copper": {
-   "stance": "صعودی",
+   "stance": "دوگانه",
    "counts": {
-    "bull": 7,
-    "bear": 2,
-    "neutral": 4
+    "bull": 5,
+    "bear": 3,
+    "neutral": 2
    },
-   "summary_fa": "مس نزدیک رکورد قیمتی است چون عرضه تنگ شده: صادرات اویو تولگوی به چین ۷۰٪ افت کرده، فری‌پورت پیش‌بینی فروش را کم کرده و ال‌نینو تولید را تهدید می‌کند. بانک جهانی هم پیش‌بینی قیمت مس را بالا برده، هرچند نشانه‌های ضعف تقاضا در چین و نگرانی درباره‌ی تقاضای هوش مصنوعی هشدار داده می‌شود.",
+   "summary_fa": "قیمت مس به‌خاطر بالا رفتن نفت و تردید درباره‌ی تقاضای هوش مصنوعی کمی پایین آمد. در مقابل، خبرهای عرضه مثبت‌اند: کاهش ۷۰ درصدی صادرات اویو تولگوی به چین، خطر اختلال تولید به‌خاطر ال‌نینو و کمبود فیزیکی در بازار جهانی.",
    "views": [
     {
-     "who": "World Bank",
-     "view_fa": "بانک جهانی پیش‌بینی قیمت مس را ۱۸٪ بالا برده است.",
-     "url": "https://www.mining.com/world-bank-lifts-copper-price-outlook-by-18/"
+     "who": "mining.com",
+     "view_fa": "انبارهای بزرگ مس در آمریکا کمبود رو به رشد عرضه در جهان را پنهان کرده‌اند؛ پریمیوم چین و ریسک‌های آفریقا این فاصله را نشان می‌دهد.",
+     "url": "https://www.mining.com/us-copper-stockpiles-conceal-growing-global-supply-crunch/"
     },
     {
      "who": "BMI",
-     "view_fa": "به گفته‌ی BMI، پدیده‌ی ال‌نینو می‌تواند تا اوایل ۲۰۲۷ تولید مس و نیکل را مختل کند.",
+     "view_fa": "پدیده‌ی ال‌نینو ممکن است تا اوایل ۲۰۲۷ تولید مس و نیکل را مختل کند.",
      "url": "https://www.mining.com/copper-nickel-at-risk-due-to-el-ninos-disruptions/"
     }
    ]
   },
   "oil": {
-   "stance": "دوگانه",
+   "stance": "صعودی",
    "counts": {
-    "bull": 11,
-    "bear": 11,
-    "neutral": 6
+    "bull": 18,
+    "bear": 4,
+    "neutral": 5
    },
-   "summary_fa": "در کوتاه‌مدت امید به مذاکره‌ی آمریکا و ایران (نامه‌ی ونس و گفت‌وگو برای توافق موقت) و آزادسازی ذخایر اروپا قیمت نفت را پایین آورد، اما بانک‌ها به‌خاطر کم بودن جریان نفت خلیج فارس هنوز نفت بالای ۱۰۰ دلار را پیش‌بینی می‌کنند. برخی تحلیلگران هشدار می‌دهند با توافق بر سر تنگه‌ی هرمز، صرف ریسک جنگ می‌تواند سریع از بین برود.",
+   "summary_fa": "برنت با آتش گرفتن یک نفتکش در تنگه‌ی هرمز و حملات حوثی‌ها به تأسیسات آرامکو تا حدود ۱۱۸ دلار بالا رفت و نفت در مسیر چهارمین ماه پیاپی رشد است. آزادسازی ذخایر اضطراری آمریکا و اروپا تنها عامل مهار قیمت است و بانک‌ها پیش‌بینی‌های خود را بالا برده‌اند.",
    "views": [
     {
-     "who": "UBS",
-     "view_fa": "UBS پیش‌بینی برنت برای پایان ۲۰۲۶ را از ۱۰۰ به ۱۱۰ دلار بالا برد و برای ۲۰۲۷ به‌تدریج ۹۵، ۹۰ و ۸۵ دلار انتظار دارد.",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/UBS-Sees-110-Brent-by-Year-End-as-Gulf-Flows-Stay-Below-Prewar-Levels.html"
+     "who": "ANZ",
+     "view_fa": "ANZ پیش‌بینی برنت برای پایان سال را ۱۰ دلار بالا برد و به حدود ۱۰۵ دلار رساند، با این فرض که محدودیت صادرات، حمل‌ونقل و سوخت در خاورمیانه تا دسامبر ادامه پیدا کند.",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Wall-Street-Banks-Raise-Oil-Price-Forecasts-as-Supply-Fears-Deepen.html"
     },
     {
-     "who": "Oilprice.com",
-     "view_fa": "به نوشته‌ی Oilprice، حتی با از سرگیری تلاش‌های دیپلماتیک در منطقه، خریداران از نفت بالای ۱۰۰ دلار در امان نخواهند بود.",
-     "url": "https://oilprice.com/Energy/Crude-Oil/Peace-Talks-Wont-Save-Oil-Buyers-From-100-Plus-Oil.html"
+     "who": "OilPrice.com",
+     "view_fa": "با وجود میانجی‌گری قطر و پاکستان، همه‌ی نشانه‌ها از ازسرگیری درگیری آمریکا و ایران در هفته‌های آینده خبر می‌دهد و برنت به ۱۲۰ دلار نزدیک می‌شود.",
+     "url": "https://oilprice.com/Energy/Oil-Prices/Oil-Traders-Brace-for-a-Wild-Week-as-Brent-Approaches-120.html"
     }
    ]
   },
   "rates": {
    "stance": "صعودی",
    "counts": {
-    "bull": 25,
-    "bear": 3,
-    "neutral": 30
+    "bull": 14,
+    "bear": 4,
+    "neutral": 5
    },
-   "summary_fa": "فدرال رزرو نرخ را در ۳٫۷۵ تا ۴ درصد ثابت نگه داشت ولی دو عضو خواهان افزایش بودند و تورم PCE سپتامبر بالاتر از انتظار آمد؛ بازار حدود ۸۰٪ احتمال افزایش نرخ در دسامبر می‌دهد (یعنی احتمال افزایش نرخ بالاست). بانک مرکزی کانادا نرخ را بالا برد و بانک مرکزی اروپا با لحن سخت‌گیرانه نرخ را ثابت نگه داشت.",
+   "summary_fa": "تورم هسته‌ای PCE سپتامبر آمریکا ۰٫۵ درصد ماهانه و بالاتر از انتظار بود و رشد اقتصادی فصل سوم هم قوی آمد؛ چند عضو فدرال رزرو آشکارا از افزایش نرخ در آینده‌ی نزدیک حرف می‌زنند. در اروپا هم بانک مرکزی اروپا نرخ را ثابت نگه داشت اما بحث افزایش نرخ در دسامبر جدی شده است.",
    "views": [
     {
-     "who": "BofA",
-     "view_fa": "بانک آمریکا دو افزایش دیگر نرخ بهره‌ی فدرال رزرو را پیش‌بینی می‌کند تا نرخ تا مارس به ۴٫۵٪ برسد.",
+     "who": "Bank of America",
+     "view_fa": "بانک آمریکا دو افزایش دیگر برای نرخ فدرال رزرو پیش‌بینی می‌کند تا نرخ تا ماه مارس به ۴٫۵ درصد برسد.",
      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNcHV2LTIxMndGVkpHUWFuUUo2ampRUHUzSW9OcVdWQlpncUp3LTVTRnFZaWZYMWxRbUVmVVVmTFNSeENZOUlLRGc4a1hEcmozUGIzUzl1SlhhUFpDQ3djVlJRTUxvbnI0NXRHb2Q5YXVRcnpGVXdlbEVoQUc1VjR6eXdOXzZaTUlxLXNlS1J4YnNVdldTUVg5TVk2Y2dVQnFvYTlYOHo1a3ZEb1hSQWt5RXNBcDB6RGM?oc=5"
     },
     {
-     "who": "MarketWatch",
-     "view_fa": "به نوشته‌ی MarketWatch، جهش تورم در PCE نشان می‌دهد توقف افزایش نرخ فدرال رزرو احتمالاً طولانی نخواهد بود.",
-     "url": "https://www.marketwatch.com/story/inflation-surges-pce-shows-fed-pause-on-rate-hikes-unlikely-to-last-long-with-prices-still-rising-79128886?mod=mw_rss_topstories"
+     "who": "Dallas Fed (Lorie Logan)",
+     "view_fa": "لوری لوگان، رئیس فدرال رزرو دالاس، دست‌کم ۵۰ واحد پایه افزایش دیگر در نرخ بهره را لازم می‌داند.",
+     "url": "https://www.marketwatch.com/story/the-fed-held-interest-rates-steady-but-these-officials-see-more-hikes-coming-soon-2098bbd8?mod=mw_rss_topstories"
     }
    ]
   }
  },
- "watch_fa": "تصمیم نرخ بهره‌ی بانک مرکزی ژاپن، روند مذاکرات آمریکا و ایران، سررسید ۱۰ میلیارد دلار اختیار معامله‌ی بیت‌کوین و نشست دسامبر فدرال رزرو که بازار برای آن افزایش نرخ را انتظار دارد."
+ "watch_fa": "انتخابات میان‌دوره‌ای آمریکا، تصمیم نرخ بهره‌ی بانک مرکزی استرالیا و انگلیس، گزارش اشتغال جمعه‌ی آمریکا و تنش‌ها در تنگه‌ی هرمز در هفته‌ی آینده تعیین‌کننده‌اند."
 }
