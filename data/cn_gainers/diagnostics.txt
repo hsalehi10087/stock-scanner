@@ -1,11 +1,7 @@
-SSE type=1 try1 403 len=769
-SSE type=1 try2 403 len=769
-SSE type=1 try3 403 len=769
-SSE type=1 try4 403 len=769
-ERR sse_list: 403 Client Error: Forbidden for url: https://query.sse.com.cn/sseQuery/commonQuery.do?STOCK_TYPE=1&REG_PROVINCE=&CSRC_CODE=&STOCK_CODE=&sqlId=COMMON_SSE_CP_GPJCTPZ_GPLB_GP_L&COMPANY_STATUS=2%2C4%2C5%2
-used cached universe_sse.csv: 2318 rows
+SSE type=1 try1 200 len=1724717
+SSE type=8 try1 200 len=631092
 SZSE retry 1: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-SZSE xlsx 200 len=545201
+SZSE xlsx 200 len=545190
 tickers=5223
-priced=5221 price_gainers=277
-qualified=24 (growth computed for 31 of 277)
+priced=5222 price_gainers=150
+qualified=12 (growth computed for 18 of 150)

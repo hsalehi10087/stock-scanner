@@ -1,0 +1,13 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+002365.SZ,永安药业,8.518181415080006,111.53882337957504,35.67159074,16.86290496,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+605169.SS,洪通燃气,9.511565119284482,87.81623955050044,94.56852042,50.35162063,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+002277.SZ,友阿股份,11.041660664810315,68.72415589509696,28.42969922,16.84980972,2026-10-30,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+605118.SS,力鼎光电,22.86219574250119,47.452282743167714,106.32525032,72.10824298,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+688087.SS,英科再生,8.317929994309692,39.536698866287324,102.56290793000001,73.50246118999999,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+688073.SS,毕得医药,13.90683500104739,32.21946669467589,56.474856409999994,42.71296642,2026-10-30,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+688818.SS,电科蓝天,20.71409650312741,25.90356407653645,60.53951879,48.08403895,2026-10-30,0,3,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+603233.SS,大参林,11.563878849751141,22.88556364768361,415.55863327,338.16717028,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+002149.SZ,西部材料,17.009407702776457,22.71247377294857,35.594197539999996,29.00617716,2026-10-30,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+601857.SS,中国石油,8.549020804610908,21.553684901634345,51839.0,42647.0,2026-10-30,3,4,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': True, 'analysts': None}"
+603369.SS,今世缘,11.590826280387724,19.17440158270187,696.7641869400001,584.65927052,2026-10-30,0,4,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+688131.SS,皓元医药,9.644003667269008,15.644685299790773,103.35983435,89.37707261,2026-10-30,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
