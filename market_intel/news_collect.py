@@ -11,6 +11,8 @@ import html
 import json
 import os
 import re
+import time
+import urllib.parse
 import xml.etree.ElementTree as ET
 
 import requests
@@ -99,6 +101,33 @@ def rss():
     return out
 
 
+def gnews_source(url, deadline):
+    """لینک واسط news.google.com را به لینک اصلی خبر تبدیل می‌کند (تا Claude بتواند متن کامل را بخواند).
+    روش: امضا و زمان را از صفحه‌ی مقاله‌ی Google News می‌خواند و از batchexecute لینک اصلی را می‌گیرد.
+    اگر نشد (تغییر ساختار Google، محدودیت، تمام شدن وقت) None برمی‌گرداند و لینک واسط باقی می‌ماند."""
+    if 'news.google.com' not in url or time.time() > deadline:
+        return None
+    try:
+        aid = url.split('/articles/')[1].split('?')[0]
+        r = requests.get(f'https://news.google.com/articles/{aid}', headers=UA, timeout=10)
+        sg = re.search(r'data-n-a-sg="([^"]+)"', r.text)
+        ts = re.search(r'data-n-a-ts="([^"]+)"', r.text)
+        if not (sg and ts):
+            return None
+        inner = ['garturlreq', [['X', 'X', ['X', 'X'], None, None, 1, 1, 'US:en', None, 1, None, None, None, None,
+                                 None, 0, 1], 'X', 'X', 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0],
+                 aid, int(ts.group(1)), sg.group(1)]
+        req = [[['Fbv4je', json.dumps(inner), None, 'generic']]]
+        r2 = requests.post('https://news.google.com/_/DotsSplashUi/data/batchexecute', timeout=10,
+                           data='f.req=' + urllib.parse.quote(json.dumps(req)),
+                           headers={**UA, 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'})
+        body = r2.text.split('\n\n', 1)[1]
+        src = json.loads(json.loads(body)[0][2])[1]
+        return src if isinstance(src, str) and src.startswith('http') else None
+    except Exception:
+        return None
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     seen = set()
@@ -119,6 +148,18 @@ def main():
             continue
         seen.add(nid)
         new.append({'id': nid, 'assets': t, 'collected': now.isoformat(timespec='seconds'), **n})
+    # لینک اصلی برای خبرهای Google News (اول خبرهای AI؛ حداکثر ۱۲۰ خبر یا ۴ دقیقه در هر اجرا)
+    deadline, tried, okn = time.time() + 240, 0, 0
+    for n in sorted(new, key=lambda n: 'ai' not in n['assets']):
+        if 'news.google.com' not in n['url'] or tried >= 120:
+            continue
+        tried += 1
+        src = gnews_source(n['url'], deadline)
+        if src:
+            n['source_url'] = src
+            okn += 1
+        time.sleep(0.5)
+    DIAG.append(f'google-news source urls: {okn}/{tried}')
     with open(os.path.join(OUT, f'{now.date()}.jsonl'), 'a', encoding='utf-8') as f:
         for n in new:
             f.write(json.dumps(n, ensure_ascii=False) + '\n')
