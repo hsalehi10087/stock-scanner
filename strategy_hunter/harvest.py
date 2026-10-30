@@ -46,6 +46,46 @@ def get(url, **kw):
         return None
 
 
+# Reddit به درخواست‌های پشت‌سرهم خطای 429 (درخواست زیاد) می‌دهد. همه‌ی درخواست‌های Reddit از این تابع می‌گذرند:
+# قبل از هر درخواست ۲۵ ثانیه صبر، و اگر 429 آمد صبر بیشتر (۶۰ و بعد ۱۲۰ ثانیه، یا Retry-After خود Reddit).
+# سقف زمان صبر برای Reddit در هر اجرا جداگانه برای ساب‌ردیت‌های اصلی و بخش فارکس است (جمعاً ۸ دقیقه)
+# تا گردش‌کار از ۱۵ دقیقه رد نشود و اگر بخش اول سقف را مصرف کرد، بخش فارکس هم شانس داشته باشد.
+REDDIT_WAITS = (25, 60, 120)
+REDDIT_BUDGET = {'subs': 300, 'forex': 180}
+_reddit_spent = {'subs': 0.0, 'forex': 0.0}
+
+
+def reddit_get(url, params, section):
+    waits = list(REDDIT_WAITS)
+    for i in range(len(waits)):
+        wait = waits[i]
+        if _reddit_spent[section] + wait > REDDIT_BUDGET[section]:
+            DIAG.append(f'SKIP {url[:90]} (Reddit time budget used)')
+            return None
+        time.sleep(wait)
+        _reddit_spent[section] += wait
+        try:
+            r = requests.get(url, headers=UA, timeout=25, params=params)
+        except Exception as e:
+            DIAG.append(f'ERR {url[:90]} {e!r}'[:200])
+            continue
+        DIAG.append(f'{r.status_code} {url[:90]} len={len(r.content)} try={i + 1}')
+        if r.status_code == 200:
+            return r
+        if r.status_code != 429:
+            return None
+        ra = r.headers.get('Retry-After', '')
+        if ra.isdigit() and i + 1 < len(waits):
+            waits[i + 1] = min(max(int(ra), waits[i + 1]), 120)
+    return None
+
+
+def rotated(items):
+    """ترتیب را در هر اجرا (هر ۶ ساعت) می‌چرخاند تا اگر سقف زمان تمام شد، هر بار ساب‌ردیت‌های متفاوتی جا بمانند."""
+    k = int(time.time() // 21600) % len(items)
+    return items[k:] + items[:k]
+
+
 def clean(s):
     s = html.unescape(re.sub(r'<[^>]+>', ' ', s or ''))
     return re.sub(r'\s+', ' ', s).strip()
@@ -64,13 +104,8 @@ def reddit():
     """JSON از سرورهای GitHub مسدود است (403)؛ RSS با فاصله‌ی زمانی کار می‌کند ولی سقف درخواست دارد (429)."""
     out = []
     ns = {'a': 'http://www.w3.org/2005/Atom'}
-    for sub in SUBS:
-        r = None
-        for wait in (0, 20):
-            time.sleep(wait or 7)
-            r = get(f'https://www.reddit.com/r/{sub}/top/.rss', params={'t': 'day', 'limit': 25})
-            if r:
-                break
+    for sub in rotated(SUBS):
+        r = reddit_get(f'https://www.reddit.com/r/{sub}/top/.rss', {'t': 'day', 'limit': 25}, 'subs')
         if not r:
             continue
         try:
@@ -173,20 +208,14 @@ def forex():
         except ET.ParseError:
             pass
 
-    for q in ('forex strategy backtest', 'forex strategy win rate', 'EURUSD strategy'):
-        for wait in (15, 40):
-            time.sleep(wait)
-            r = get('https://www.reddit.com/search.rss', params={'q': q, 'sort': 'top', 't': 'week', 'limit': 25})
-            if r:
-                atom('reddit/search-forex', r)
-                break
-    for sub in ('ForexTrading', 'Forexstrategy', 'Forex_Trading'):
-        for wait in (7, 20):
-            time.sleep(wait)
-            r = get(f'https://www.reddit.com/r/{sub}/top/.rss', params={'t': 'day', 'limit': 25})
-            if r:
-                atom('reddit/' + sub, r)
-                break
+    for q in rotated(['forex strategy backtest', 'forex strategy win rate', 'EURUSD strategy']):
+        r = reddit_get('https://www.reddit.com/search.rss', {'q': q, 'sort': 'top', 't': 'week', 'limit': 25}, 'forex')
+        if r:
+            atom('reddit/search-forex', r)
+    for sub in rotated(['ForexTrading', 'Forexstrategy', 'Forex_Trading']):
+        r = reddit_get(f'https://www.reddit.com/r/{sub}/top/.rss', {'t': 'day', 'limit': 25}, 'forex')
+        if r:
+            atom('reddit/' + sub, r)
     feeds = {'medium/forex': 'https://medium.com/feed/tag/forex',
              'medium/forex-strategy': 'https://medium.com/feed/tag/forex-strategy',
              'mql5-articles': 'https://www.mql5.com/en/articles/rss'}
