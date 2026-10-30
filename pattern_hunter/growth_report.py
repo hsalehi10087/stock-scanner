@@ -45,6 +45,8 @@ def main():
         L.append('')
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
+    else:
+        L += ['🖼 <i>نمودار و تحلیل تکنیکال هر سهم (حمایت، مقاومت، سطح ابطال، RSI و حجم) در پیام‌های بعدی آمده است.</i>', '']
     # پیگیری سیگنال‌های قبلی
     items = [dict(x, market=m) for m, xs in track.items() for x in xs]
     if items:
@@ -77,10 +79,52 @@ def main():
     tok = os.getenv('TELEGRAM_BOT_TOKEN', '')
     chats = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip() and c.strip() != 'none']
     ok = True
+    charts = build_charts(today)
     for cid in chats:
         for ch in S.chunks(msg.split('\n')):
             ok &= S.tg_post(tok, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
+        for i in range(0, len(charts), 10):          # آلبوم‌های حداکثر ۱۰ تایی
+            part = charts[i:i + 10]
+            media, files = [], {}
+            for k, (png, cap) in enumerate(part):
+                media.append({'type': 'photo', 'media': f'attach://p{k}', 'caption': cap[:1024], 'parse_mode': 'HTML'})
+                files[f'p{k}'] = open(png, 'rb')
+            if len(part) == 1:
+                ok &= S.tg_post(tok, cid, 'sendPhoto', data={'chat_id': cid, 'caption': part[0][1][:1024],
+                                                             'parse_mode': 'HTML'}, files={'photo': files['p0']})
+            else:
+                ok &= S.tg_post(tok, cid, 'sendMediaGroup', data={'chat_id': cid, 'media': json.dumps(media, ensure_ascii=False)},
+                                files=files)
+            for f in files.values():
+                f.close()
     return 0 if ok else 2
+
+
+def build_charts(today):
+    """برای هر سیگنال امروز: نمودار PNG + کپشن تحلیل تکنیکال."""
+    import tempfile
+    import tech_chart as TC
+    sig = [(m, s) for m in MARKETS for s in (today['markets'].get(m) or {}).get('signals', [])]
+    if not sig:
+        return []
+    try:
+        data = TC.download([s['ticker'] for _, s in sig])
+    except Exception as ex:
+        print('⚠️ chart download', ex, file=sys.stderr)
+        return []
+    tmp, out = tempfile.mkdtemp(), []
+    for m, s in sig:
+        d = data.get(s['ticker'])
+        if d is None:
+            continue
+        try:
+            a = TC.analyze(d)
+            png = os.path.join(tmp, s['ticker'].replace('.', '_') + '.png')
+            TC.render(d, s, a, png)
+            out.append((png, TC.caption(s, a, FLAG.get(m, ''))))
+        except Exception as ex:
+            print('⚠️ chart', s['ticker'], ex, file=sys.stderr)
+    return out
 
 
 if __name__ == '__main__':

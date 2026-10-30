@@ -9,6 +9,10 @@ on:
         description: 'شناسه چت (none = بدون ارسال)'
         required: false
         default: ''
+      only_report:
+        description: 'فقط گزارش احتمال رشد (بدون اسکن دوباره)'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -27,14 +31,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q yfinance pandas numpy scikit-learn joblib requests matplotlib scipy
-      - run: python3 pattern_hunter/daily.py
+      - if: github.event.inputs.only_report != 'true'
+        run: python3 pattern_hunter/daily.py
       - name: Report
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
-          python3 pattern_hunter/report.py || echo "pattern report failed"
+          if [ "${{ github.event.inputs.only_report }}" != "true" ]; then python3 pattern_hunter/report.py || echo "pattern report failed"; fi
           python3 pattern_hunter/growth_report.py
       - name: Save
         if: always()
