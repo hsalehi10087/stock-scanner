@@ -1,0 +1,78 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+PCLA,PicoCELA Inc. - American Depositary Shares,11.100000381469727,86.08550037763263,29659700.0,2026-10-29,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+GENVR,Gen Digital Inc. - Contingent Value Rights,1.75,65.09434853469283,178900.0,2026-10-29,1.0,2.0,⭐۱/۵ (۳ نامعلوم),"{'growth': None, 'cash': None, 'profit': True, 'momentum': False, 'analysts': None}"
+NCPL,Netcapital Inc. - Common Stock,1.7799999713897705,61.81817570993737,52039500.0,2026-10-29,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+XCH,XCHG Limited - ADS,3.4600000381469727,41.80327692649535,555300.0,2026-10-29,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+JFIN,Jiayin Group Inc. - American Depositary Shares,1.7200000286102295,37.60000228881837,10908100.0,2026-10-29,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+KPLT,"Katapult Holdings, Inc. - Common Stock",12.520000457763672,37.58241684536705,1048600.0,2026-10-29,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+GKOS,Glaukos Corporation Common Stock,242.47999572753906,33.6493443842305,5415700.0,2026-10-29,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': True, 'analysts': True}"
+ADT,ADT Inc. Common Stock,9.869999885559082,33.198381765231886,163851500.0,2026-10-29,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+BHC,Bausch Health Companies Inc. Common Stock,8.90999984741211,28.75722180893272,33762800.0,2026-10-29,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+PRCH,"Porch Group, Inc. - Common Stock",20.889999389648438,28.159511456612975,7521800.0,2026-10-29,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+PARA,"Parabolic Technologies, Inc. - Class A Common Stock",4.28000020980835,27.380962602270742,885000.0,2026-10-29,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+TDOC,"Teladoc Health, Inc. Common Stock",8.729999542236328,26.889526119517292,20111500.0,2026-10-29,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+CLMB,"Climb Global Solutions, Inc. - Common Stock",41.84000015258789,26.290367653671098,558500.0,2026-10-29,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+LUNG,Pulmonx Corporation - Common Stock,3.1649999618530273,25.595237532080063,5350300.0,2026-10-29,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+CROX,"Crocs, Inc. - Common Stock",150.25999450683594,25.54097371699453,4897000.0,2026-10-29,4.0,5.0,⭐۴/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': True, 'analysts': True}"
+MWYN,"Marwynn Holdings, Inc. - Common stock",1.7599999904632568,24.822697313994823,306800.0,2026-10-29,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+PURR,Hyperliquid Strategies Inc - Common Stock,12.289999961853027,23.269805744103643,59686900.0,2026-10-29,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': None, 'analysts': True}"
+TOYO,"TOYO Co., Ltd - Ordinary Shares",4.699999809265137,23.036646371752866,1960600.0,2026-10-29,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+CRMT,"America's Car-Mart, Inc. - Common Stock",1.059999942779541,21.83907321491969,1318700.0,2026-10-29,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+LHAI,Linkhome Holdings Inc. - Common stock,1.0299999713897705,21.17646382341767,537800.0,2026-10-29,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+ITG,"ITG, Inc. - Class A Common Stock",5.679999828338623,20.594475208821272,1234300.0,2026-10-29,3.0,4.0,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': None, 'analysts': True}"
+MAX,"MediaAlpha, Inc. Class A Common Stock",14.130000114440918,20.563138161285032,2964200.0,2026-10-29,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+LGHL,Lion Group Holding Ltd. - American Depositary Share,2.6500000953674316,19.369372126827944,107600.0,2026-10-29,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+AEYE,"AudioEye, Inc. - Common Stock",14.119999885559082,18.257959646475964,929600.0,2026-10-29,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+UPBD,"Upbound Group, Inc. - Common Stock",19.979999542236328,18.154936265679787,3153000.0,2026-10-29,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+FTAI,FTAI Aviation Ltd. - Common Stock,196.00999450683594,17.272941978349387,3433400.0,2026-10-29,,,,
+MESO,Mesoblast Limited - American Depositary Shares,15.670000076293945,17.027630130780146,696500.0,2026-10-29,,,,
+HYPD,"Hyperion DeFi, Inc. - Common Stock",3.505000114440918,16.83333714803059,544100.0,2026-10-29,,,,
+MSGR,MSG Rangers Corp. Class A Common Stock,217.0,16.260384192858666,260400.0,2026-10-29,,,,
+AIRS,"AirSculpt Technologies, Inc. - Common Stock",1.6699999570846558,15.972214633668202,1548400.0,2026-10-29,,,,
+GEN,Gen Digital Inc. - Common Stock,28.200000762939453,15.811089614600427,11215700.0,2026-10-29,,,,
+SPOK,"Spok Holdings, Inc. - Common Stock",11.779999732971191,15.71708624588084,625600.0,2026-10-29,,,,
+CVNA,Carvana Co. Class A Common Stock,68.30999755859375,15.681623101057562,23205900.0,2026-10-29,,,,
+DKI,DarkIris Inc. - Class A Ordinary Shares,2.140000104904175,15.675679855402347,4313000.0,2026-10-29,,,,
+VRXA,Veraxa Biotech AG - Ordinary Shares,1.1299999952316284,15.306119718237898,363000.0,2026-10-29,,,,
+BOOT,"Boot Barn Holdings, Inc. Common Stock",130.47999572753906,15.163276445750018,1911200.0,2026-10-29,,,,
+INSM,Insmed Incorporated - Common Stock,111.58999633789062,15.064954088715732,11219400.0,2026-10-29,,,,
+DFIN,"Donnelley Financial Solutions, Inc. Common Stock ",61.06999969482422,14.966116195020373,709800.0,2026-10-29,,,,
+FCN,"FTI Consulting, Inc. Common Stock",181.24000549316406,14.282117206822754,1263900.0,2026-10-29,,,,
+STAK,STAK Inc. - Class A Ordinary Shares,1.6200000047683716,14.08451082592479,383200.0,2026-10-29,,,,
+WFF,WF Holding Limited - Ordinary Shares,1.5112500190734863,14.05660110845741,12316279.0,2026-10-29,,,,
+BRTX,"BioRestorative Therapies, Inc. - Common Stock",1.5800000429153442,13.669069005455746,233400.0,2026-10-29,,,,
+NCLH,Norwegian Cruise Line Holdings Ltd. Ordinary Shares,18.219999313354492,13.449563631634675,67947200.0,2026-10-29,,,,
+GMTL,Guardian Metal Resources PLC ADS,5.440000057220459,13.333330021964308,621400.0,2026-10-29,,,,
+HII,"Huntington Ingalls Industries, Inc. Common Stock",316.2099914550781,13.231390244691399,1706900.0,2026-10-29,,,,
+BLDR,"Builders FirstSource, Inc. Common Stock",63.060001373291016,12.848962362086723,5711500.0,2026-10-29,,,,
+SWMR,"Swarmer, Inc - common stock",10.460000038146973,12.837103793092798,855900.0,2026-10-29,,,,
+IHRT,"iHeartMedia, Inc. - Class A Common Stock",1.7599999904632568,12.820516347415012,691400.0,2026-10-29,,,,
+STGW,Stagwell Inc. - Class A Common Stock,9.949999809265137,12.68403052362661,4430200.0,2026-10-29,,,,
+UFI,"Unifi, Inc. New Common Stock",6.360000133514404,12.367496554303825,316200.0,2026-10-29,,,,
+DAIC,"CID HoldCo, Inc. - Common Stock",1.190000057220459,12.264162401747924,4376700.0,2026-10-29,,,,
+FVRR,"Fiverr International Ltd. Ordinary Shares, no par value",9.050000190734863,12.004953913216099,3045600.0,2026-10-29,,,,
+MF,MindForge Inc. - Class A Ordinary Shares,6.539999961853027,11.986297790676325,185000.0,2026-10-29,,,,
+FLS,Flowserve Corporation Common Stock,80.3499984741211,11.892495760857091,3722000.0,2026-10-29,,,,
+HAPN,"Happen, Inc. - Common Stock",16.040000915527344,11.854956379708682,5394900.0,2026-10-29,,,,
+TXT,Textron Inc. Common Stock,87.45999908447266,11.670070767700036,4283600.0,2026-10-29,,,,
+DRS,"Leonardo DRS, Inc. - Common Stock",39.63999938964844,11.661970111685749,2302000.0,2026-10-29,,,,
+NAVI,"Navient Holdings, Inc. - Common Stock",9.079999923706055,11.547905905856414,1333500.0,2026-10-29,,,,
+AVX,Avax One Technology Ltd. - Common Shares,4.829999923706055,11.547344314316966,248300.0,2026-10-29,,,,
+NEXT,NextDecade Corporation - Common Stock,7.260000228881836,11.52073692213711,8580800.0,2026-10-29,,,,
+MIR,"Mirion Technologies, Inc. Class A Common Stock",18.670000076293945,11.462687022650432,8723300.0,2026-10-29,,,,
+CLGN,CollPlant Biotechnologies Ltd. - Ordinary Shares,4.400000095367432,11.392406132946675,167100.0,2026-10-29,,,,
+CHDN,"Churchill Downs, Incorporated - Common Stock",91.16000366210938,11.238568708774977,2162200.0,2026-10-29,,,,
+PTLO,Portillo's Inc. - Class A Common Stock,4.960000038146973,10.961974741710524,2385400.0,2026-10-29,,,,
+ATNM,"Actinium Pharmaceuticals, Inc. (Delaware) Common Stock",1.5299999713897705,10.869563527278503,181700.0,2026-10-29,,,,
+TRN,"Trinity Industries, Inc. Common Stock",28.31999969482422,10.798123186815477,1601000.0,2026-10-29,,,,
+MVIS,"MicroVision, Inc. - Common Stock",1.440000057220459,10.769239233796025,2141800.0,2026-10-29,,,,
+VWAV,"VisionWave Holdings, Inc. - Common Stock",2.890000104904175,10.727977818484536,154900.0,2026-10-29,,,,
+LYCA,"Lycia Therapeutics, Inc. - Common Stock",27.729999542236328,10.698604338521566,173100.0,2026-10-29,,,,
+JZXN,"Jiuzi Holdings, Inc. - Ordinary Shares",1.149999976158142,10.57692484037418,407300.0,2026-10-29,,,,
+POM,POMDOCTOR LIMITED - Class A Ordinary Shares,1.9900000095367432,10.555559014096772,1638900.0,2026-10-29,,,,
+KMPR,Kemper Corporation,32.56999969482422,10.481683176964829,1033500.0,2026-10-29,,,,
+EPAC,Enerpac Tool Group Corp. Common Stock,39.41999816894531,10.420160578449146,1081200.0,2026-10-29,,,,
+ARHS,"Arhaus, Inc. - Class A Common Stock",12.710000038146973,10.329857058133406,3630700.0,2026-10-29,,,,
+AVEX,AEVEX Corp. Class A Common Stock,13.430000305175781,10.172278650345046,2161400.0,2026-10-29,,,,
+ELDN,"Eledon Pharmaceuticals, Inc. - Common Stock",3.0399999618530273,10.144926534683552,3101400.0,2026-10-29,,,,
+SMHI,SEACOR Marine Holdings Inc. Common Stock ,9.829999923706055,10.078382841808398,225000.0,2026-10-29,,,,
