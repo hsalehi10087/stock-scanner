@@ -34,6 +34,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 pattern_hunter/report.py || echo "pattern report failed"
           python3 pattern_hunter/growth_report.py
       - name: Save
         if: always()
