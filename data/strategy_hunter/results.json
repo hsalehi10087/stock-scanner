@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T20:26:23+00:00",
+ "updated": "2026-10-30T13:54:48+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -42,6 +42,20 @@
    "status": "not_testable",
    "reason_not_testable": "ورود دستی و بر اساس قضاوت روی نمودار، نگه‌داری چنددقیقه‌ای آپشن؛ قانون مشخص و داده‌ی تاریخی دقیقه‌ای آپشن نداریم",
    "verdict": "غیرقابل آزمون: ورود دستی و بر اساس قضاوت روی نمودار، نگه‌داری چنددقیقه‌ای آپشن؛ قانون مشخص و داده‌ی تاریخی دقیقه‌ای آپشن نداریم"
+  },
+  "101b4bc443-index-930-orb-plain": {
+   "name": "Plain 9:30 opening range breakout on NQ/ES/YM",
+   "name_fa": "شکست ساده‌ی محدوده‌ی ۱۵ دقیقه‌ی اول بازار روی NQ، ES و YM",
+   "source": "reddit/Forexstrategy",
+   "source_url": "https://www.reddit.com/r/Forexstrategy/comments/1xiusat/i_backtested_the_930_opening_range_breakout_on_nq/",
+   "claim": "«شکست محدوده‌ی ۹:۳۰ تا ۹:۴۵ را روی NQ، ES و YM با داده‌ی ۱ دقیقه‌ای ۲۰۱۹ تا ۲۰۲۱ آزمودم (۲٬۱۲۵ شکست). روش رایج روی NQ (حد ضرر سمت دیگر محدوده، هدف ۲ برابر محدوده): ۴۹.۸٪ برد و حدود ‎+۲.۶۹ دلار به ازای هر ۱۰۰ دلار ریسک پیش از کمیسیون؛ با کمیسیون معمولی ضررده بود.»",
+   "claimed_return": "+$2.69 per $100 risked before commission (49.8% win rate)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-30",
+   "status": "not_testable",
+   "reason_not_testable": "روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم",
+   "verdict": "غیرقابل آزمون: روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم"
   },
   "143c5c2124-morning-momentum-pop": {
    "name": "Morning Momentum Pop (AI day-trading)",
@@ -128,43 +142,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.86,
+    "cagr": -4.95,
     "sharpe": -0.11,
-    "max_dd": -83.22,
-    "total": -66.65
+    "max_dd": -83.41,
+    "total": -67.33
    },
    "in_sample": {
-    "cagr": -8.39,
-    "sharpe": -0.25,
-    "max_dd": -78.62,
-    "total": -74.09
+    "cagr": -8.63,
+    "sharpe": -0.26,
+    "max_dd": -78.86,
+    "total": -75.15
    },
    "out_sample": {
-    "cagr": 5.44,
-    "sharpe": 0.36,
-    "max_dd": -33.97,
-    "total": 41.97
+    "cagr": 3.75,
+    "sharpe": 0.28,
+    "max_dd": -33.52,
+    "total": 27.54
    },
    "buyhold_full": {
-    "cagr": 5.0,
+    "cagr": 5.05,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 193.17
+    "total": 195.86
    },
    "buyhold_out_sample": {
-    "cagr": -0.02,
-    "sharpe": 0.15,
+    "cagr": 1.78,
+    "sharpe": 0.21,
     "max_dd": -60.81,
-    "total": -0.1
+    "total": 12.38
    },
    "trades": 633,
    "win_rate": 54.0,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
-   "period": "2004-10-08 → 2026-10-29",
-   "oos_start": "2020-03-16",
-   "forward_days": 4,
-   "forward_usd": 988.29,
+   "period": "2004-10-08 → 2026-10-30",
+   "oos_start": "2020-03-17",
+   "forward_days": 5,
+   "forward_usd": 979.22,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
   },
   "32bed65cff-nifty-intraday-option-buying": {
@@ -209,6 +223,20 @@
    "reason_not_testable": "اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده",
    "verdict": "غیرقابل آزمون: اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده"
   },
+  "3efc371c2f-kronos-ai-eurusd-h1": {
+   "name": "Kronos AI candle forecast strategy EURUSD H1",
+   "name_fa": "استراتژی پیش‌بینی کندل با مدل هوش مصنوعی Kronos روی EURUSD یک‌ساعته",
+   "source": "reddit/Forex",
+   "source_url": "https://www.reddit.com/r/Forex/comments/1xj3sqw/i_found_an_interesting_ai_trading_experiment_on/",
+   "claim": "«روی EURUSD یک‌ساعته در ۹۴۷ پیش‌بینی، دقت جهت ۵۱.۸۳٪ بود. استراتژی ساخته‌شده بر پایه‌ی این پیش‌بینی‌ها با ۱۳۳ معامله و ضریب سود ۱.۰۵ در سود تمام کرد، ولی EURUSD در همان دوره حدود ۳.۷٪ بالا رفته بود.»",
+   "claimed_return": "Profit Factor 1.05 (133 trades)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-10-30",
+   "status": "not_testable",
+   "reason_not_testable": "سیگنال از خروجی یک مدل یادگیری عمیق (Kronos) می‌آید که با اندیکاتورهای مجاز قابل بازسازی نیست و قانون ورود و خروج گفته نشده",
+   "verdict": "غیرقابل آزمون: سیگنال از خروجی یک مدل یادگیری عمیق (Kronos) می‌آید که با اندیکاتورهای مجاز قابل بازسازی نیست و قانون ورود و خروج گفته نشده"
+  },
   "40492f9dff-meta-stochastic-momentum": {
    "name": "META stochastic momentum (Medium claim 420%)",
    "name_fa": "مومنتوم استوکاستیک روی META",
@@ -224,43 +252,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.45,
-    "sharpe": 0.5,
+    "cagr": 10.33,
+    "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 294.47
+    "total": 288.57
    },
    "in_sample": {
-    "cagr": 8.27,
-    "sharpe": 0.43,
+    "cagr": 7.86,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 115.48
+    "total": 107.77
    },
    "out_sample": {
-    "cagr": 16.13,
-    "sharpe": 0.64,
+    "cagr": 15.45,
+    "sharpe": 0.62,
     "max_dd": -42.23,
-    "total": 85.79
+    "total": 81.31
    },
    "buyhold_full": {
-    "cagr": 25.31,
+    "cagr": 25.22,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2151.79
+    "total": 2130.27
    },
    "buyhold_out_sample": {
-    "cagr": 38.63,
-    "sharpe": 0.98,
+    "cagr": 37.81,
+    "sharpe": 0.97,
     "max_dd": -47.44,
-    "total": 286.98
+    "total": 277.65
    },
-   "trades": 94,
-   "win_rate": 71.3,
-   "avg_trade_pct": 1.99,
+   "trades": 93,
+   "win_rate": 71.0,
+   "avg_trade_pct": 2.0,
    "exposure": 0.46,
-   "period": "2013-01-02 → 2026-10-29",
-   "oos_start": "2022-09-01",
-   "forward_days": 5,
-   "forward_usd": 962.5,
+   "period": "2013-01-02 → 2026-10-30",
+   "oos_start": "2022-09-02",
+   "forward_days": 6,
+   "forward_usd": 953.3,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "43c28f72f0-gold-swing-breakout": {
@@ -284,10 +312,10 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.06,
+    "cagr": 1.08,
     "sharpe": 0.17,
     "max_dd": -28.05,
-    "total": 13.26
+    "total": 13.48
    },
    "out_sample": {
     "cagr": 5.64,
@@ -296,24 +324,24 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.95,
-    "sharpe": 0.53,
+    "cagr": 7.78,
+    "sharpe": 0.52,
     "max_dd": -44.36,
-    "total": 261.19
+    "total": 252.22
    },
    "buyhold_out_sample": {
-    "cagr": 17.92,
-    "sharpe": 0.96,
-    "max_dd": -24.94,
-    "total": 129.47
+    "cagr": 16.87,
+    "sharpe": 0.91,
+    "max_dd": -25.98,
+    "total": 119.36
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-29",
-   "oos_start": "2021-10-13",
-   "forward_days": 5,
+   "period": "2010-01-04 → 2026-10-30",
+   "oos_start": "2021-10-14",
+   "forward_days": 6,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -374,43 +402,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 8.08,
-    "sharpe": 0.71,
+    "cagr": 8.04,
+    "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1272.07
+    "total": 1256.2
    },
    "in_sample": {
-    "cagr": 6.72,
-    "sharpe": 0.6,
+    "cagr": 6.78,
+    "sharpe": 0.61,
     "max_dd": -25.39,
-    "total": 363.61
+    "total": 370.25
    },
    "out_sample": {
-    "cagr": 11.06,
-    "sharpe": 0.91,
+    "cagr": 11.2,
+    "sharpe": 0.93,
     "max_dd": -24.43,
-    "total": 188.87
+    "total": 192.54
    },
    "buyhold_full": {
-    "cagr": 10.8,
-    "sharpe": 0.65,
+    "cagr": 10.76,
+    "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3075.94
+    "total": 3039.24
    },
    "buyhold_out_sample": {
-    "cagr": 15.09,
+    "cagr": 15.23,
     "sharpe": 0.88,
     "max_dd": -33.72,
-    "total": 314.37
+    "total": 319.63
    },
    "trades": 102,
    "win_rate": 25.5,
    "avg_trade_pct": 3.34,
    "exposure": 0.76,
-   "period": "1993-02-01 → 2026-10-29",
-   "oos_start": "2016-09-09",
-   "forward_days": 3,
-   "forward_usd": 1005.21,
+   "period": "1993-02-01 → 2026-10-30",
+   "oos_start": "2016-09-12",
+   "forward_days": 4,
+   "forward_usd": 993.6,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -568,43 +596,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 9.52,
-    "sharpe": 0.81,
+    "cagr": 9.48,
+    "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 2041.81
+    "total": 2017.06
    },
    "in_sample": {
-    "cagr": 8.72,
-    "sharpe": 0.75,
+    "cagr": 8.78,
+    "sharpe": 0.76,
     "max_dd": -19.44,
-    "total": 618.86
+    "total": 629.17
    },
    "out_sample": {
-    "cagr": 11.13,
-    "sharpe": 0.92,
+    "cagr": 11.27,
+    "sharpe": 0.93,
     "max_dd": -20.16,
-    "total": 190.81
+    "total": 194.5
    },
    "buyhold_full": {
-    "cagr": 10.8,
-    "sharpe": 0.65,
+    "cagr": 10.76,
+    "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3075.94
+    "total": 3039.24
    },
    "buyhold_out_sample": {
-    "cagr": 15.09,
+    "cagr": 15.23,
     "sharpe": 0.88,
     "max_dd": -33.72,
-    "total": 314.37
+    "total": 319.63
    },
    "trades": 14,
    "win_rate": 92.9,
    "avg_trade_pct": 26.4,
    "exposure": 0.73,
-   "period": "1993-02-01 → 2026-10-29",
-   "oos_start": "2016-09-09",
-   "forward_days": 1,
-   "forward_usd": 996.18,
+   "period": "1993-02-01 → 2026-10-30",
+   "oos_start": "2016-09-12",
+   "forward_days": 2,
+   "forward_usd": 984.67,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -678,7 +706,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.93,
+    "cagr": 66.91,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -690,30 +718,30 @@
     "total": 15901.87
    },
    "out_sample": {
-    "cagr": 36.72,
-    "sharpe": 1.1,
+    "cagr": 36.69,
+    "sharpe": 1.09,
     "max_dd": -35.7,
     "total": 212.05
    },
    "buyhold_full": {
-    "cagr": 53.14,
-    "sharpe": 0.98,
+    "cagr": 52.55,
+    "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 17448.02
+    "total": 16674.92
    },
    "buyhold_out_sample": {
-    "cagr": 45.26,
-    "sharpe": 1.04,
+    "cagr": 43.43,
+    "sharpe": 1.01,
     "max_dd": -53.06,
-    "total": 288.97
+    "total": 271.83
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-29",
+   "period": "2014-09-17 → 2026-10-30",
    "oos_start": "2023-03-12",
-   "forward_days": 4,
+   "forward_days": 5,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -752,7 +780,7 @@
     "total": 393.87
    },
    "in_sample": {
-    "cagr": 6.1,
+    "cagr": 6.09,
     "sharpe": 0.61,
     "max_dd": -19.5,
     "total": 213.62
@@ -764,24 +792,24 @@
     "total": 57.47
    },
    "buyhold_full": {
-    "cagr": 10.73,
+    "cagr": 10.62,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1564.27
+    "total": 1521.42
    },
    "buyhold_out_sample": {
-    "cagr": 19.16,
-    "sharpe": 0.85,
+    "cagr": 18.54,
+    "sharpe": 0.83,
     "max_dd": -35.12,
-    "total": 327.1
+    "total": 309.05
    },
    "trades": 194,
    "win_rate": 64.4,
    "avg_trade_pct": 0.86,
    "exposure": 0.08,
-   "period": "1999-03-10 → 2026-10-29",
-   "oos_start": "2018-07-12",
-   "forward_days": 2,
+   "period": "1999-03-10 → 2026-10-30",
+   "oos_start": "2018-07-13",
+   "forward_days": 3,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
