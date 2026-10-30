@@ -38,7 +38,7 @@ def main():
         for i, s in enumerate(d['signals'], 1):
             nm = CJK.sub('', s.get('name') or '').strip(' -,')
             L.append(f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}")
-            L.append(f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: {fa(round(s['tech_rank'] * 100))}٪ بالای بازار")
+            L.append(f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار")
             L.append(f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}")
             if s.get('chart'):
                 L.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
