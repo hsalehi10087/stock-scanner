@@ -21,6 +21,7 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fundamentals as FU  # noqa: E402
+import chart_patterns as CP  # noqa: E402
 from common import OUT as PH_OUT  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,8 +33,9 @@ HIST = os.path.join(OUT, 'history.csv')
 POOL = 30        # چند نامزد تکنیکال برتر به صافی بنیادی می‌روند
 MAX_SEND = 8     # حداکثر سیگنال در هر بازار در روز
 COOLDOWN = 20    # سهمی که در ۲۰ روز اخیر سیگنال شده، دوباره سیگنال تازه حساب نمی‌شود
-SETUP_FA = {'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم', 'vcp': 'فشردگی نزدیک سقف', 'pullback': 'برگشت به میانگین ۵۰'}
-COLS = ['date', 'market', 'ticker', 'name', 'price', 'index_price', 'setups', 'fundamentals', 'quality', 'tech_rank']
+SETUP_FA = {'longpat': 'الگوی نموداری بلندمدت', 'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم', 'vcp': 'فشردگی نزدیک سقف', 'pullback': 'برگشت به میانگین ۵۰'}
+COLS = ['date', 'market', 'ticker', 'name', 'price', 'index_price', 'setups', 'fundamentals', 'quality', 'tech_rank',
+        'chart', 'chart_score']
 
 
 def history_tickers():
@@ -71,16 +73,26 @@ class Collector:
     def __init__(self):
         self.today = str(dt.date.today())
         self.hist = pd.read_csv(HIST) if os.path.exists(HIST) else pd.DataFrame(columns=COLS)
+        for col in COLS:
+            if col not in self.hist:
+                self.hist[col] = None
+        self.hist = self.hist[COLS]
         self.hist = self.hist[self.hist.date != self.today]   # اجرای دوباره در همان روز جایگزین می‌شود
         self.markets, self.track = {}, {}
 
     def process(self, m, C, V, idx, X, names, en_name):
         """X: ویژگی‌ها و احتمال مدل (ستون p) برای سهم‌های امروز این بازار."""
         rank = X['p'].rank(pct=True)
-        tech = []
+        tech, charts = [], {}
         for t in X.index:
             c = C[t].dropna()
             st = setups(c, V[t].reindex(c.index).fillna(0))
+            cp = CP.detect(c)                       # الگوهای نموداری بلندمدت (scipy.find_peaks)
+            if cp['score'] <= -1:                   # الگوی نزولی فعال ← کنار گذاشته می‌شود
+                continue
+            if cp['score'] >= 1.5:
+                st = st + ['longpat']
+            charts[t] = cp
             ok = len(st) >= 2 or (len(st) >= 1 and rank[t] >= 0.80)
             if ok:
                 tech.append((t, st, float(rank[t])))
@@ -114,9 +126,11 @@ class Collector:
                 nm = en_name(t) or ''
             price = float(C[t].dropna().iloc[-1])
             sent.append({'ticker': t, 'name': nm, 'price': round(price, 3), 'setups': st, 'tech_rank': round(rk, 3),
-                         'fundamentals': passed, 'quality': Q.label(qs) if qs else ''})
+                         'fundamentals': passed, 'quality': Q.label(qs) if qs else '',
+                         'chart': CP.label(charts[t]), 'chart_score': charts[t]['score']})
             self.hist.loc[len(self.hist)] = [self.today, m, t, nm, round(price, 4), round(float(idx.dropna().iloc[-1]), 4),
-                                             '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3)]
+                                             '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),
+                                             CP.label(charts[t]), charts[t]['score']]
         self.markets[m] = {'data_date': str(C.index[-1].date()), 'scored': int(len(X)), 'technical': len(tech),
                            'checked': checked, 'signals': sent}
         # پیگیری: همه‌ی سیگنال‌های قبلی این بازار

@@ -17,7 +17,6 @@ import fundamentals as FU  # noqa: E402
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'market_intel'))
 import quality as Q  # noqa: E402
 import growth_signal as GS  # noqa: E402
-import chart_patterns as CP  # noqa: E402
 
 TOP = 5          # حداکثر سهم ارسالی در هر بازار
 POOL = 40        # چند نامزد برتر الگو، به ترتیب، از صافی بنیادی می‌گذرند
@@ -90,8 +89,7 @@ def main():
             lst.append({'ticker': t, 'name': nm, 'price': price, 'prob': round(float(r.p), 3), 'rank': len(lst) + 1,
                         'r6m': round(float(r.r6m) * 100, 1), 'from_hi': round(float(r.from_hi) * 100, 1),
                         'volu_ratio': round(float(r.volu_ratio), 2), 'passed': fu['passed'], 'health': fu['health'],
-                        'canslim': fu['canslim'], 'buffett': fu['buffett'], 'quality': Q.label(Q.score(t, m)),
-                        'chart': CP.label(_cp := CP.detect(C[t])), 'chart_score': _cp['score'], 'chart_trend': _cp['trend']})
+                        'canslim': fu['canslim'], 'buffett': fu['buffett'], 'quality': Q.label(Q.score(t, m))})
             hist.loc[len(hist)] = [today, m, t, nm, price, round(float(r.p), 4), len(lst), round(float(idx.dropna().iloc[-1]), 4)]
         picks[m] = {'data_date': str(last_day.date()), 'scored': int(len(X)), 'picks': lst, 'checked': len(checked),
                     'dropped': len(dropped), 'market_up': mkt_up,

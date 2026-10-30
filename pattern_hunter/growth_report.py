@@ -40,6 +40,8 @@ def main():
             L.append(f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}")
             L.append(f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: {fa(round(s['tech_rank'] * 100))}٪ بالای بازار")
             L.append(f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}")
+            if s.get('chart'):
+                L.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
         L.append('')
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
@@ -52,7 +54,19 @@ def main():
         L.append('<b>📒 پیگیری سیگنال‌های قبلی</b>')
         L.append(f"{fa(len(items))} سیگنال | میانگین بازده {pct(avg)} | بهتر از شاخص: {fa(round(len(beat) / len(items) * 100))}٪ | "
                  f"رشد ≥۱۰٪ شروع شد: {fa(len(started))} سهم")
-        for x in sorted(items, key=lambda x: x['date'], reverse=True)[:40]:
+        ranked = sorted(items, key=lambda x: x['ret_pct'], reverse=True)
+        k = min(5, len(ranked))
+        def line(x):
+            return (f"{FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
+                    f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، کمترین {pct(x['min_pct'])}، شاخص {pct(x['index_pct'])})")
+        L.append('')
+        L.append('<b>🏆 بهترین سیگنال‌ها از روز سیگنال تا امروز</b>')
+        L += [f"{fa(i)}. {line(x)}" for i, x in enumerate(ranked[:k], 1)]
+        L.append('<b>⚠️ بدترین سیگنال‌ها از روز سیگنال تا امروز</b>')
+        L += [f"{fa(i)}. {line(x)}" for i, x in enumerate(reversed(ranked[-k:]), 1)]
+        L.append('')
+        L.append('<b>فهرست تازه‌ترین سیگنال‌ها</b>')
+        for x in sorted(items, key=lambda x: x['date'], reverse=True)[:25]:
             st = '🚀' if x['max_pct'] >= 10 else ('🔻' if x['ret_pct'] <= -8 else '⏳')
             L.append(f"{st} {FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
                      f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، شاخص {pct(x['index_pct'])})")

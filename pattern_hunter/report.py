@@ -45,8 +45,6 @@ def main():
             ok = '، '.join(p.get('passed', []))
             L.append(f"{fa(p['rank'])}. <b>{e(p['ticker'])}</b>{nm} | قیمت {fa(p['price'])} | امتیاز الگو {fa(round(p['prob'] * 100))}")
             L.append(f"   ✅ {ok} | صورت مالی {fa(p.get('health', '?'))}، کن‌اسلیم {fa(p.get('canslim', '?'))}، بافت {fa(p.get('buffett', '?'))} | {p.get('quality', '')}")
-            if p.get('chart'):
-                L.append(f"   📈 نمودار بلندمدت: {e(p['chart'])} (امتیاز {fa(p.get('chart_score', 0))}، روند {e(p.get('chart_trend', ''))})")
         o = prof.get('out_of_sample')
         if o:
             L.append(f"🧪 سنجش گذشته ({fa(o['period'].replace('-', '/'))}): از ۱۰ انتخاب هر هفته {fa(o['top10_hit_rate_pct'])}٪ "
