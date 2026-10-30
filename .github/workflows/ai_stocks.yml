@@ -1,13 +1,15 @@
-name: 🤖 AI stocks — metrics (07:10) and report (08:30 Tehran)
+name: 🤖 AI stocks — metrics (after US close) and report (08:30 Tehran)
 
 on:
   schedule:
-    - cron: '40 3 * * *'   # ۰۷:۱۰ تهران: داده‌ی بنیادی و قیمتی
-    - cron: '0 5 * * *'    # ۰۸:۳۰ تهران: ارسال گزارش (بعد از تحلیل روزانه‌ی Claude در ۰۷:۴۸)
+    # زمان‌بندی GitHub گاهی چند ساعت دیر اجرا می‌شود؛ پس داده بعد از بسته شدن بازار آمریکا ساخته می‌شود (قیمت‌ها نهایی‌اند)
+    # و کار روزانه‌ی Claude اگر داده کهنه بود، خودش metrics را با workflow_dispatch اجرا می‌کند و بعد از push گزارش را می‌فرستد.
+    - cron: '23 21 * * *'  # ۰۰:۵۳ تهران: داده‌ی بنیادی و قیمتی + کارنامه
+    - cron: '7 5 * * *'      # ۰۸:۳۷ تهران: پشتیبان ارسال گزارش (اگر Claude قبلاً فرستاده باشد، دوباره نمی‌فرستد)
   workflow_dispatch:
     inputs:
       step:
-        description: 'metrics یا report'
+        description: 'metrics یا report یا scorecard'
         required: false
         default: 'metrics'
       chat_id:
@@ -33,10 +35,18 @@ jobs:
           python-version: '3.12'
       - run: pip install -q yfinance pandas requests
       - name: Metrics
-        if: github.event.schedule == '40 3 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'metrics')
-        run: python3 market_intel/ai_metrics.py
+        if: github.event.schedule == '23 21 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'metrics')
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: |
+          echo "::add-mask::$FINNHUB_API_KEY"
+          python3 market_intel/ai_metrics.py
+      - name: Scorecard
+        if: github.event.schedule == '23 21 * * *' || (github.event_name == 'workflow_dispatch' && (github.event.inputs.step == 'metrics' || github.event.inputs.step == 'scorecard'))
+        continue-on-error: true
+        run: python3 market_intel/ai_scorecard.py
       - name: Report
-        if: github.event.schedule == '0 5 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'report')
+        if: github.event.schedule == '7 5 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.step == 'report')
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}

@@ -4,7 +4,8 @@
 نظر تحلیلگران را کار زمان‌بندی‌شده‌ی Claude انجام می‌دهد و در data/analyst_views/latest.json می‌نویسد.
 خروجی: data/news/YYYY-MM-DD.jsonl (۱۰ روز آخر نگه داشته می‌شود) و data/news/diagnostics.txt
 
-هر خبر: id, assets, primary, collected, source, publisher, title, summary, url, gnews_url, body, published
+هر خبر: id, assets, primary, collected, source, publisher, title, summary, url, gnews_url, source_url, body, published
+ (برای خبرهای Google News: url و source_url = نشانی اصلی خبر، gnews_url = لینک واسط Google)
  - تکراری‌ها (همان نشانی یا همان تیتر از چند رسانه) حذف می‌شوند.
  - منابع فهرست market_intel/news_blocklist.txt کنار گذاشته می‌شوند.
  - primary = دارایی‌هایی که در خود تیتر آمده‌اند (برای شمارش)، assets = همه‌ی دارایی‌های مرتبط.
@@ -244,7 +245,7 @@ def enrich(item):
         real = gnews_decode(url, s)
         if not real:
             return 'gnews_fail'
-        item['gnews_url'], item['url'] = url, real
+        item['gnews_url'], item['url'], item['source_url'] = url, real, real
     try:
         r = s.get(item['url'], headers=BROWSER, timeout=15)
     except requests.RequestException:
@@ -259,7 +260,8 @@ def enrich(item):
 
 
 def enrich_all(items):
-    todo = [n for n in items if set(n['assets']) - {'ai'}][:ENRICH_MAX]
+    # همه‌ی خبرها (کالاها و AI)؛ اگر بیش از سقف بود، خبرهای Google News که بدون باز کردن لینک قابل‌استفاده نیستند اول
+    todo = sorted(items, key=lambda n: 'news.google.com' not in n['url'])[:ENRICH_MAX]
     stats, deadline = {}, time.time() + ENRICH_SECONDS
     with cf.ThreadPoolExecutor(6) as ex:
         futs = {ex.submit(enrich, n): n for n in todo}

@@ -1,24 +1,25 @@
-2026-10-30 06:23 new=75 per_asset={'gold': 13, 'silver': 8, 'bitcoin': 18, 'copper': 15, 'oil': 9, 'ai': 11, 'rates': 22}
+2026-10-30 13:17 new=95 per_asset={'gold': 24, 'silver': 6, 'bitcoin': 16, 'copper': 2, 'oil': 30, 'ai': 13, 'rates': 28}
 200 finnhub/general n=100
 200 finnhub/forex n=1
 200 finnhub/crypto n=89
-200 forexlive len=120833
-200 oilprice len=16115
-200 coindesk len=30964
-200 cointelegraph len=53013
-200 mining.com len=244790
-200 investing-commodities len=4860
-200 investing-economy len=4619
-200 cnbc-markets len=20099
-200 marketwatch len=8370
+200 forexlive len=106908
+200 oilprice len=16213
+200 coindesk len=30590
+200 cointelegraph len=52632
+200 mining.com len=246164
+200 investing-commodities len=4677
+200 investing-economy len=4691
+200 cnbc-markets len=20103
+200 marketwatch len=8507
 200 fed-press len=14507
-200 googlenews-gold len=39380
-200 googlenews-silver len=64859
-200 googlenews-bitcoin len=73896
-200 googlenews-copper len=68169
-200 googlenews-oil len=35974
-200 googlenews-rates len=24516
-200 googlenews-ai len=76572
-200 googlenews-ai-small len=70766
-200 googlenews-ai-infra len=36673
-200 googlenews-ai-chips len=44635
+200 googlenews-gold len=77083
+200 googlenews-silver len=62977
+200 googlenews-bitcoin len=38931
+200 googlenews-copper len=31143
+200 googlenews-oil len=65393
+200 googlenews-rates len=12462
+200 googlenews-ai len=79831
+200 googlenews-ai-small len=47878
+200 googlenews-ai-infra len=40070
+200 googlenews-ai-chips len=67074
+google-news source urls: 61/61
