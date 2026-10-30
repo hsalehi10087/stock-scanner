@@ -20,6 +20,18 @@ def pct(x):
     return '—' if x is None else fa(f'{x:+.1f}') + '٪'
 
 
+def entry_lines(i, s):
+    """شرح هر سهم برگزیده؛ هم در پیام متنی و هم در کپشن نمودارش."""
+    e = html.escape
+    nm = CJK.sub('', s.get('name') or '').strip(' -,')
+    out = [f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}",
+           f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار",
+           f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}"]
+    if s.get('chart'):
+        out.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
+    return out
+
+
 def main():
     today = json.load(open(os.path.join(OUT, 'today.json'), encoding='utf-8'))
     track = json.load(open(os.path.join(OUT, 'track.json'), encoding='utf-8'))['markets']
@@ -40,17 +52,12 @@ def main():
             continue
         L.append(f"{FLAG.get(m, '')} <b>{cfg['fa']}</b> (تکنیکال: {fa(d['technical'])} سهم، بنیادی: {fa(len(d['signals']))} سهم)")
         for i, s in enumerate(d['signals'], 1):
-            nm = CJK.sub('', s.get('name') or '').strip(' -,')
-            L.append(f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}")
-            L.append(f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار")
-            L.append(f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}")
-            if s.get('chart'):
-                L.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
+            L += entry_lines(i, s)
         L.append('')
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
     else:
-        L += ['🖼 <i>نمودار و تحلیل تکنیکال هر سهم (حمایت، مقاومت، سطح ابطال، RSI و حجم) در پیام‌های بعدی آمده است.</i>', '']
+        L += ['🖼 <i>نمودار و تحلیل تکنیکال هر سهم (حمایت، مقاومت، سطح ابطال، RSI و حجم) در پیام‌های بعدی آمده است؛ هر نمودار با شرح همان سهم و به همین ترتیب.</i>', '']
     # پیگیری سیگنال‌های قبلی
     items = [dict(x, market=m) for m, xs in track.items() for x in xs]
     if items:
@@ -87,20 +94,10 @@ def main():
     for cid in chats:
         for ch in S.chunks(msg.split('\n')):
             ok &= S.tg_post(tok, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
-        for i in range(0, len(charts), 10):          # آلبوم‌های حداکثر ۱۰ تایی
-            part = charts[i:i + 10]
-            media, files = [], {}
-            for k, (png, cap) in enumerate(part):
-                media.append({'type': 'photo', 'media': f'attach://p{k}', 'caption': cap[:1024], 'parse_mode': 'HTML'})
-                files[f'p{k}'] = open(png, 'rb')
-            if len(part) == 1:
-                ok &= S.tg_post(tok, cid, 'sendPhoto', data={'chat_id': cid, 'caption': part[0][1][:1024],
-                                                             'parse_mode': 'HTML'}, files={'photo': files['p0']})
-            else:
-                ok &= S.tg_post(tok, cid, 'sendMediaGroup', data={'chat_id': cid, 'media': json.dumps(media, ensure_ascii=False)},
-                                files=files)
-            for f in files.values():
-                f.close()
+        for png, cap in charts:                     # هر نمودار جدا، با شرح کامل همان سهم در کپشن، به ترتیب فهرست
+            with open(png, 'rb') as f:
+                ok &= S.tg_post(tok, cid, 'sendPhoto', data={'chat_id': cid, 'caption': cap, 'parse_mode': 'HTML'},
+                                files={'photo': f})
     return 0 if ok else 2
 
 
@@ -108,16 +105,16 @@ def build_charts(today):
     """برای هر سیگنال امروز: نمودار PNG + کپشن تحلیل تکنیکال."""
     import tempfile
     import tech_chart as TC
-    sig = [(m, s) for m in MARKETS for s in (today['markets'].get(m) or {}).get('signals', [])]
+    sig = [(m, i, s) for m in MARKETS for i, s in enumerate((today['markets'].get(m) or {}).get('signals', []), 1)]
     if not sig:
         return []
     try:
-        data = TC.download([s['ticker'] for _, s in sig])
+        data = TC.download([s['ticker'] for _, _, s in sig])
     except Exception as ex:
         print('⚠️ chart download', ex, file=sys.stderr)
         return []
     tmp, out = tempfile.mkdtemp(), []
-    for m, s in sig:
+    for m, i, s in sig:
         d = data.get(s['ticker'])
         if d is None:
             continue
@@ -125,7 +122,13 @@ def build_charts(today):
             a = TC.analyze(d)
             png = os.path.join(tmp, s['ticker'].replace('.', '_') + '.png')
             TC.render(d, s, a, png)
-            out.append((png, TC.caption(s, a, FLAG.get(m, ''))))
+            n = len(today['markets'][m]['signals'])
+            head = [f"{FLAG.get(m, '')} <b>{MARKETS[m]['fa']}</b> — سهم برتر {fa(i)} از {fa(n)}"] + entry_lines(i, s)
+            tech = ['', '<b>🔍 تحلیل تکنیکال</b>'] + TC.caption(s, a).split('\n')[1:]
+            lines = head + tech
+            while len('\n'.join(lines)) > 1024 and len(lines) > len(head) + 2:   # سقف کپشن تلگرام
+                lines.pop()
+            out.append((png, '\n'.join(lines)))
         except Exception as ex:
             print('⚠️ chart', s['ticker'], ex, file=sys.stderr)
     return out
