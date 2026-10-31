@@ -1,0 +1,12 @@
+id: d5f29306af-nasdaq-stocks-rsi-17dd
+name: RSI strategy for Nasdaq 100 stocks
+name_fa: استراتژی RSI روی سهام نزدک ۱۰۰
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/rsi-trading-strategy-for-nasdaq-stocks/
+claim: "«استراتژی RSI برای سهام نزدک (فقط ۱۷٪ افت سرمایه)»"
+claimed_return: "max DD 17%"
+added: 2026-10-31
+status: not_testable
+asset_class: stock
+symbols: [QQQ]
+reason_not_testable: "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ روی سبد سهام نزدک ۱۰۰ اجرا می‌شود"

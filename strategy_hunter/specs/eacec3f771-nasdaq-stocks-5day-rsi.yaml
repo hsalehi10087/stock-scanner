@@ -1,0 +1,12 @@
+id: eacec3f771-nasdaq-stocks-5day-rsi
+name: 5-day RSI on Nasdaq stocks
+name_fa: RSI پنج‌روزه روی سهام نزدک
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/5-day-rsi-strategy-for-nasdaq-stocks/
+claim: "«استراتژی RSI پنج‌روزه برای سهام نزدک (بازده ۱۸٪)» — ۱٬۴۷۷ معامله، ۶۹٪ برد، ضریب سود ۱٫۸، بازده سالانه ۱۸٪، بیشترین افت ۲۸٪"
+claimed_return: "18%/yr, 69% win rate"
+added: 2026-10-31
+status: not_testable
+asset_class: stock
+symbols: [QQQ]
+reason_not_testable: "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ روی سبدی از سهام نزدک با حداکثر ۳ معامله‌ی هم‌زمان اجرا می‌شود"

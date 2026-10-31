@@ -1,0 +1,12 @@
+id: 40f0082a54-sp500-2x-golden-cross
+name: S&P 500 2x leveraged golden cross
+name_fa: استراتژی اهرم ۲ برابر S&P 500 با تقاطع طلایی
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/sp-500-2x-leveraged-strategy/
+claim: "«یک استراتژی ساده با اهرم ۲ برابر که با همان افت سرمایه، از نگه‌داشتن ساده بهتر است» — بازده سالانه ۱۹٫۶٪ در برابر ۱۰٫۸٪، بیشترین افت ۵۵٪ در برابر ۵۸٪؛ جابه‌جایی بین SPY و SSO"
+claimed_return: "19.6%/yr, max DD 55%"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [SPY]
+reason_not_testable: "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ فقط گفته شده بر پایه‌ی تقاطع طلایی و جابه‌جایی SPY/SSO است"

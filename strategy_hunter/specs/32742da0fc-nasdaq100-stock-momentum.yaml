@@ -1,0 +1,12 @@
+id: 32742da0fc-nasdaq100-stock-momentum
+name: Nasdaq-100 stock momentum
+name_fa: مومنتوم سهام نزدک ۱۰۰
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/momentum-strategy-for-nasdaq-100-stocks/
+claim: "«استراتژی مومنتوم برای سهام نزدک ۱۰۰ (بازده سالانه ۱۶٪)»"
+claimed_return: "16%/yr"
+added: 2026-10-31
+status: not_testable
+asset_class: stock
+symbols: [QQQ]
+reason_not_testable: "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ رتبه‌بندی سهام یک سبد با موتور تک‌دارایی قابل اجرا نیست"

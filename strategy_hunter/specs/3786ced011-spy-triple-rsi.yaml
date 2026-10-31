@@ -1,0 +1,30 @@
+id: 3786ced011-spy-triple-rsi
+name: SPY Triple RSI
+name_fa: استراتژی سه‌گانه‌ی RSI روی SPY
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/triple-rsi-strategy-for-stocks/
+claim: "«استراتژی Triple RSI برای سهام (۱۲٪ در سال)» — «حدود ده سال پیش این استراتژی را روی SPY معرفی کردیم و از آن موقع خوب کار کرده، ولی کم معامله می‌کند»؛ در نسخه‌ی قبلی همین نویسنده ادعای ۹۰٪ نرخ برد"
+claimed_return: "12%/yr, 90% win rate (SPY version)"
+added: 2026-10-31
+status: implemented
+asset_class: etf
+symbols: [SPY]
+timeframe: 1d
+start: '1993-02-01'
+notes: >-
+  صفحه‌ی مقاله‌ی جدید در دسترس نبود؛ قانون‌ها از نسخه‌ی عمومی همین نویسنده در سابستک برداشته شده
+  (https://quantifiedstrategies.substack.com/p/triple-rsi-trading-strategy-enhance):
+  RSI پنج‌روزه زیر ۳۰، سه روز پشت سر هم پایین آمده، سه روز قبل زیر ۶۰ بوده، و بسته‌شدن بالای میانگین ۲۰۰ روزه → خرید؛
+  خروج وقتی RSI پنج‌روزه از ۵۰ بالاتر رفت. «سه روز پشت سر هم پایین آمده» = rsi5 < rsi5 دیروز < rsi5 پریروز < rsi5 سه روز قبل.
+  در اصل خرید و فروش در بسته‌شدن همان روز است؛ موتور در بازگشایی روز بعد معامله می‌کند (تقریب).
+  نسخه‌ی جدید روی سبد سهام اجرا می‌شود و قانون‌های آن معلوم نیست؛ اینجا فقط نسخه‌ی SPY آزموده می‌شود.
+  روش RSI در منبع (وایلدر یا ساده) گفته نشده؛ RSI موتور (وایلدر) استفاده شده.
+indicators:
+  rsi5: {fn: rsi, n: 5}
+  rsi5_p1: {fn: prev, col: rsi5, k: 1}
+  rsi5_p2: {fn: prev, col: rsi5, k: 2}
+  rsi5_p3: {fn: prev, col: rsi5, k: 3}
+  sma200: {fn: sma, n: 200}
+entry: rsi5 < 30 and rsi5 < rsi5_p1 and rsi5_p1 < rsi5_p2 and rsi5_p2 < rsi5_p3 and rsi5_p3 < 60 and close > sma200
+exit: rsi5 > 50
+side: long

@@ -1,0 +1,12 @@
+id: c59688fc4a-qqq-mean-reversion-plus-trend
+name: QQQ mean reversion + trend following
+name_fa: ترکیب بازگشت به میانگین و دنبال‌کردن روند روی QQQ
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/combining-mean-reversion-and-trend-following/
+claim: "«ترکیب دو استراتژی بازگشت به میانگین و دنبال روند، بازده ۱۲٪ در سال» — در نسخه‌ی سابستک: QQQ سالانه ۱۴٫۸٪ در برابر ۷٫۷٪، بیشترین افت ۲۸٪، ۱۰۹ معامله، ۶۷٪ برد"
+claimed_return: "12%/yr (title); 14.8% CAGR, max DD 28%"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [QQQ]
+reason_not_testable: "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده (سایت و سابستک هر دو پشت اشتراک)"

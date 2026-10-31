@@ -1,0 +1,12 @@
+id: 1ed322a1b6-gld-pre-holiday-3day
+name: GLD 3 days before holiday
+name_fa: خرید طلا (GLD) سه روز قبل از تعطیلی
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/a-3-day-gold-strategy-with-less-than-10-max-drawdown/
+claim: "«استراتژی ۳ روزه‌ی طلا با کمتر از ۱۰٪ افت» — ۲۰۳ معامله، ۶۲٪ برد، ضریب سود ۱٫۹۷، بازده سالانه ۳٫۲٪، بیشترین افت ۹٫۸۵٪"
+claimed_return: "3.2%/yr, 62% win rate, max DD 9.85%"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [GLD]
+reason_not_testable: "قانون بر اساس تقویم تعطیلات بازار است (ورود ۳ روز قبل از تعطیلی، خروج روز قبل از آن)؛ موتور اندیکاتور «تعطیلی» ندارد و قانون کامل ورود هم فقط برای اعضاست"
