@@ -1,23 +1,41 @@
 {
  "market": "cn",
- "date": "2026-10-24",
- "scored": 2000,
- "no_data": 0,
- "universe": 5224,
+ "date": "2026-10-31",
+ "scored": 1969,
+ "no_data": 31,
+ "universe": 5223,
  "liquid": 2000,
  "distribution": {
-  "0": 198,
-  "1": 838,
-  "2": 730,
-  "3": 196,
-  "4": 37,
-  "5": 1
+  "0": 216,
+  "1": 756,
+  "2": 675,
+  "3": 264,
+  "4": 55,
+  "5": 3
  },
  "top": [
   {
+   "ticker": "600428.SS",
+   "name": "COSCO SHIPPING SPECIALIZED CARR",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 27.8,
+    "peg": 14.83
+   }
+  },
+  {
    "ticker": "603129.SS",
-   "name": "",
-   "date": "2026-10-23",
+   "name": "ZHEJIANG CF MOTO POWER CO LTD",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -32,9 +50,98 @@
    }
   },
   {
-   "ticker": "600233.SS",
-   "name": "",
-   "date": "2026-10-23",
+   "ticker": "002832.SZ",
+   "name": "BIEM",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
+   }
+  },
+  {
+   "ticker": "601857.SS",
+   "name": "PETROCHINA CO",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.28
+   }
+  },
+  {
+   "ticker": "000933.SZ",
+   "name": "SHENHUO CO.LTD",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.36
+   }
+  },
+  {
+   "ticker": "601872.SS",
+   "name": "CHINA MERCHANTS ENERGY SHIPPING",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.9,
+    "peg": 0.42
+   }
+  },
+  {
+   "ticker": "002475.SZ",
+   "name": "LXJM",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.7,
+    "peg": 0.52
+   }
+  },
+  {
+   "ticker": "002415.SZ",
+   "name": "HIKVISION",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -46,13 +153,103 @@
    },
    "badges": {
     "dilution_pct": -0.7,
-    "peg": 0.45
+    "peg": 0.75
    }
   },
   {
-   "ticker": "600801.SS",
-   "name": "",
-   "date": "2026-10-23",
+   "ticker": "000973.SZ",
+   "name": "FSPG",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.75
+   }
+  },
+  {
+   "ticker": "600183.SS",
+   "name": "SHENGYI TECHNOLOGY CO LTD",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.85
+   }
+  },
+  {
+   "ticker": "600346.SS",
+   "name": "HENGLI PETROCHEMICAL CO LTD",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.01
+   }
+  },
+  {
+   "ticker": "688235.SS",
+   "name": "BEIGENE LTD",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 4.1,
+    "peg": 1.03
+   }
+  },
+  {
+   "ticker": "601168.SS",
+   "name": "WESTERN MINING CO. LTD.",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.32
+   }
+  },
+  {
+   "ticker": "601398.SS",
+   "name": "INDUSTRIAL & COMMERCIAL BK OF C",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -64,155 +261,13 @@
    },
    "badges": {
     "dilution_pct": 0.0,
-    "peg": 0.62
+    "peg": 1.49
    }
   },
   {
-   "ticker": "002468.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.84
-   }
-  },
-  {
-   "ticker": "600499.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.94
-   }
-  },
-  {
-   "ticker": "002315.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.63
-   }
-  },
-  {
-   "ticker": "600267.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": false,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.84
-   }
-  },
-  {
-   "ticker": "000893.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.5,
-    "peg": 2.08
-   }
-  },
-  {
-   "ticker": "600428.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 27.8,
-    "peg": 14.83
-   }
-  },
-  {
-   "ticker": "600961.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "002379.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "300369.SZ",
-   "name": "",
-   "date": "2026-10-23",
+   "ticker": "601939.SS",
+   "name": "CHINA CONSTRUCTION BANK",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -223,13 +278,66 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 1.4
+    "dilution_pct": 4.6,
+    "peg": 1.54
    }
   },
   {
-   "ticker": "603606.SS",
-   "name": "",
-   "date": "2026-10-23",
+   "ticker": "600026.SS",
+   "name": "COSCO SHIPPING ENGY TPT CO LTD",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 14.6,
+    "peg": 1.54
+   }
+  },
+  {
+   "ticker": "603986.SS",
+   "name": "GIGA DEVICE SEMICONDUCTOR INC",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.6
+   }
+  },
+  {
+   "ticker": "002463.SZ",
+   "name": "HDGF",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.3
+   }
+  },
+  {
+   "ticker": "300408.SZ",
+   "name": "CCTC",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -244,111 +352,9 @@
    }
   },
   {
-   "ticker": "688127.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.7
-   }
-  },
-  {
-   "ticker": "603979.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "002920.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 7.5
-   }
-  },
-  {
-   "ticker": "688449.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "300001.SZ",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0
-   }
-  },
-  {
-   "ticker": "600885.SS",
-   "name": "",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 6.0
-   }
-  },
-  {
-   "ticker": "600563.SS",
-   "name": "",
-   "date": "2026-10-23",
+   "ticker": "002156.SZ",
+   "name": "TFME",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
