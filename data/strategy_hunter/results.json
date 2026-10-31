@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T19:59:23+00:00",
+ "updated": "2026-10-31T13:57:35+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -99,6 +99,22 @@
    "reason_not_testable": "متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست"
   },
+  "1ed322a1b6-gld-pre-holiday-3day": {
+   "name": "GLD 3 days before holiday",
+   "name_fa": "خرید طلا (GLD) سه روز قبل از تعطیلی",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/a-3-day-gold-strategy-with-less-than-10-max-drawdown/",
+   "claim": "«استراتژی ۳ روزه‌ی طلا با کمتر از ۱۰٪ افت» — ۲۰۳ معامله، ۶۲٪ برد، ضریب سود ۱٫۹۷، بازده سالانه ۳٫۲٪، بیشترین افت ۹٫۸۵٪",
+   "claimed_return": "3.2%/yr, 62% win rate, max DD 9.85%",
+   "asset_class": "etf",
+   "symbols": [
+    "GLD"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون بر اساس تقویم تعطیلات بازار است (ورود ۳ روز قبل از تعطیلی، خروج روز قبل از آن)؛ موتور اندیکاتور «تعطیلی» ندارد و قانون کامل ورود هم فقط برای اعضاست",
+   "verdict": "غیرقابل آزمون: قانون بر اساس تقویم تعطیلات بازار است (ورود ۳ روز قبل از تعطیلی، خروج روز قبل از آن)؛ موتور اندیکاتور «تعطیلی» ندارد و قانون کامل ورود هم فقط برای اعضاست"
+  },
   "1f8924004e-hyperliquid-52-strategy-basket": {
    "name": "52 uncorrelated strategies basket",
    "name_fa": "سبد ۵۲ استراتژی ناهمبسته در هایپرلیکوئید",
@@ -142,34 +158,34 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.96,
+    "cagr": -4.91,
     "sharpe": -0.11,
-    "max_dd": -83.41,
-    "total": -67.42
+    "max_dd": -83.22,
+    "total": -67.05
    },
    "in_sample": {
-    "cagr": -8.63,
+    "cagr": -8.56,
     "sharpe": -0.26,
-    "max_dd": -78.86,
-    "total": -75.15
+    "max_dd": -78.62,
+    "total": -74.86
    },
    "out_sample": {
-    "cagr": 3.71,
+    "cagr": 3.7,
     "sharpe": 0.28,
     "max_dd": -33.52,
-    "total": 27.21
+    "total": 27.19
    },
    "buyhold_full": {
     "cagr": 5.06,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 196.63
+    "total": 196.67
    },
    "buyhold_out_sample": {
     "cagr": 1.82,
     "sharpe": 0.21,
     "max_dd": -60.81,
-    "total": 12.67
+    "total": 12.69
    },
    "trades": 633,
    "win_rate": 54.0,
@@ -178,8 +194,24 @@
    "period": "2004-10-08 → 2026-10-30",
    "oos_start": "2020-03-17",
    "forward_days": 5,
-   "forward_usd": 976.65,
+   "forward_usd": 976.5,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
+  "32742da0fc-nasdaq100-stock-momentum": {
+   "name": "Nasdaq-100 stock momentum",
+   "name_fa": "مومنتوم سهام نزدک ۱۰۰",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/momentum-strategy-for-nasdaq-100-stocks/",
+   "claim": "«استراتژی مومنتوم برای سهام نزدک ۱۰۰ (بازده سالانه ۱۶٪)»",
+   "claimed_return": "16%/yr",
+   "asset_class": "stock",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ رتبه‌بندی سهام یک سبد با موتور تک‌دارایی قابل اجرا نیست",
+   "verdict": "غیرقابل آزمون: صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ رتبه‌بندی سهام یک سبد با موتور تک‌دارایی قابل اجرا نیست"
   },
   "32bed65cff-nifty-intraday-option-buying": {
    "name": "NIFTY intraday option buying",
@@ -223,6 +255,60 @@
    "reason_not_testable": "اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده",
    "verdict": "غیرقابل آزمون: اسکالپ در تایم‌فریم پایین با ربات تجاری؛ قانون گفته نشده"
   },
+  "3786ced011-spy-triple-rsi": {
+   "name": "SPY Triple RSI",
+   "name_fa": "استراتژی سه‌گانه‌ی RSI روی SPY",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/triple-rsi-strategy-for-stocks/",
+   "claim": "«استراتژی Triple RSI برای سهام (۱۲٪ در سال)» — «حدود ده سال پیش این استراتژی را روی SPY معرفی کردیم و از آن موقع خوب کار کرده، ولی کم معامله می‌کند»؛ در نسخه‌ی قبلی همین نویسنده ادعای ۹۰٪ نرخ برد",
+   "claimed_return": "12%/yr, 90% win rate (SPY version)",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-31",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 3.05,
+    "sharpe": 0.6,
+    "max_dd": -13.27,
+    "total": 175.41
+   },
+   "in_sample": {
+    "cagr": 3.54,
+    "sharpe": 0.69,
+    "max_dd": -13.27,
+    "total": 127.32
+   },
+   "out_sample": {
+    "cagr": 1.92,
+    "sharpe": 0.38,
+    "max_dd": -8.4,
+    "total": 21.15
+   },
+   "buyhold_full": {
+    "cagr": 10.74,
+    "sharpe": 0.64,
+    "max_dd": -55.19,
+    "total": 3019.64
+   },
+   "buyhold_out_sample": {
+    "cagr": 15.16,
+    "sharpe": 0.88,
+    "max_dd": -33.72,
+    "total": 317.01
+   },
+   "trades": 92,
+   "win_rate": 80.4,
+   "avg_trade_pct": 1.13,
+   "exposure": 0.06,
+   "period": "1993-02-01 → 2026-10-30",
+   "oos_start": "2016-09-12",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
   "3efc371c2f-kronos-ai-eurusd-h1": {
    "name": "Kronos AI candle forecast strategy EURUSD H1",
    "name_fa": "استراتژی پیش‌بینی کندل با مدل هوش مصنوعی Kronos روی EURUSD یک‌ساعته",
@@ -252,44 +338,60 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.15,
+    "cagr": 10.28,
     "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 279.89
+    "total": 286.33
    },
    "in_sample": {
-    "cagr": 7.67,
-    "sharpe": 0.41,
+    "cagr": 7.86,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 104.36
+    "total": 107.77
    },
    "out_sample": {
-    "cagr": 15.28,
+    "cagr": 15.29,
     "sharpe": 0.61,
     "max_dd": -42.23,
-    "total": 80.23
+    "total": 80.27
    },
    "buyhold_full": {
-    "cagr": 25.16,
+    "cagr": 25.17,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2116.92
+    "total": 2117.43
    },
    "buyhold_out_sample": {
     "cagr": 37.62,
     "sharpe": 0.97,
     "max_dd": -47.44,
-    "total": 275.39
+    "total": 275.47
    },
    "trades": 93,
    "win_rate": 71.0,
-   "avg_trade_pct": 1.98,
+   "avg_trade_pct": 2.0,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-30",
    "oos_start": "2022-09-02",
    "forward_days": 6,
-   "forward_usd": 947.6,
+   "forward_usd": 947.82,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
+  },
+  "40f0082a54-sp500-2x-golden-cross": {
+   "name": "S&P 500 2x leveraged golden cross",
+   "name_fa": "استراتژی اهرم ۲ برابر S&P 500 با تقاطع طلایی",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/sp-500-2x-leveraged-strategy/",
+   "claim": "«یک استراتژی ساده با اهرم ۲ برابر که با همان افت سرمایه، از نگه‌داشتن ساده بهتر است» — بازده سالانه ۱۹٫۶٪ در برابر ۱۰٫۸٪، بیشترین افت ۵۵٪ در برابر ۵۸٪؛ جابه‌جایی بین SPY و SSO",
+   "claimed_return": "19.6%/yr, max DD 55%",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ فقط گفته شده بر پایه‌ی تقاطع طلایی و جابه‌جایی SPY/SSO است",
+   "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ فقط گفته شده بر پایه‌ی تقاطع طلایی و جابه‌جایی SPY/SSO است"
   },
   "43c28f72f0-gold-swing-breakout": {
    "name": "Gold swing breakout (Gold Reaper rebuild, daily engine)",
@@ -324,16 +426,16 @@
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.7,
+    "cagr": 7.72,
     "sharpe": 0.52,
     "max_dd": -44.36,
-    "total": 247.52
+    "total": 248.83
    },
    "buyhold_out_sample": {
-    "cagr": 16.56,
+    "cagr": 16.64,
     "sharpe": 0.9,
-    "max_dd": -26.97,
-    "total": 116.43
+    "max_dd": -26.69,
+    "total": 117.25
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -405,7 +507,7 @@
     "cagr": 8.02,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1247.28
+    "total": 1247.73
    },
    "in_sample": {
     "cagr": 6.78,
@@ -414,22 +516,22 @@
     "total": 370.25
    },
    "out_sample": {
-    "cagr": 11.12,
+    "cagr": 11.13,
     "sharpe": 0.92,
     "max_dd": -24.43,
-    "total": 190.61
+    "total": 190.71
    },
    "buyhold_full": {
     "cagr": 10.74,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3018.61
+    "total": 3019.64
    },
    "buyhold_out_sample": {
     "cagr": 15.16,
     "sharpe": 0.88,
     "max_dd": -33.72,
-    "total": 316.87
+    "total": 317.01
    },
    "trades": 102,
    "win_rate": 25.5,
@@ -438,7 +540,7 @@
    "period": "1993-02-01 → 2026-10-30",
    "oos_start": "2016-09-12",
    "forward_days": 4,
-   "forward_usd": 987.07,
+   "forward_usd": 987.39,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -581,6 +683,22 @@
    "reason_not_testable": "به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست",
    "verdict": "غیرقابل آزمون: به VWAP جلسه، پروفایل حجم و دلتای تجمعی از کندل‌های ۱ دقیقه‌ای نیاز دارد؛ با داده‌ی روزانه یا ساعتی قابل ساخت نیست"
   },
+  "7da15904b8-crypto-short-after-pump": {
+   "name": "Short coins after sudden pumps",
+   "name_fa": "فروش استقراضی رمزارز بعد از پامپ ناگهانی",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xj8vv2/i_think_ive_finally_found_my_edge_in_crypto/",
+   "claim": "«سکه‌ها را بعد از پامپ ناگهانی پیدا کن و شورت کن… معاملات ۲۰۲۵–۲۰۲۶ با ۱۰ دلار مارجین و اهرم ۲ تقریباً ۵۰۰ دلار سود داده»",
+   "claimed_return": "~$500 profit (2025–2026, $10 margin, 2x)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "اندازه‌ی «پامپ»، قانون ورود و خروج و فهرست سکه‌ها گفته نشده؛ اطلاعات ناکافی",
+   "verdict": "غیرقابل آزمون: اندازه‌ی «پامپ»، قانون ورود و خروج و فهرست سکه‌ها گفته نشده؛ اطلاعات ناکافی"
+  },
   "80b25d437a-spy-sma200-band-4-3": {
    "name": "SPY 200SMA +4%/-3% band timing",
    "name_fa": "زمان‌بندی با باند ‎+۴٪/−۳٪‎ دور میانگین ۲۰۰ روزه‌ی SPY",
@@ -599,7 +717,7 @@
     "cagr": 9.46,
     "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 2003.15
+    "total": 2003.84
    },
    "in_sample": {
     "cagr": 8.78,
@@ -611,19 +729,19 @@
     "cagr": 11.2,
     "sharpe": 0.92,
     "max_dd": -20.16,
-    "total": 192.57
+    "total": 192.66
    },
    "buyhold_full": {
     "cagr": 10.74,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3018.61
+    "total": 3019.64
    },
    "buyhold_out_sample": {
     "cagr": 15.16,
     "sharpe": 0.88,
     "max_dd": -33.72,
-    "total": 316.87
+    "total": 317.01
    },
    "trades": 14,
    "win_rate": 92.9,
@@ -632,7 +750,7 @@
    "period": "1993-02-01 → 2026-10-30",
    "oos_start": "2016-09-12",
    "forward_days": 2,
-   "forward_usd": 978.2,
+   "forward_usd": 978.52,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -649,6 +767,22 @@
    "reason_not_testable": "متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد",
    "verdict": "غیرقابل آزمون: متن کامل در دسترس نبود: فهرست ۲۶ بازار و نسخه‌ی دقیق قانون (سیستم ۱ یا ۲، اندازه‌ی پوزیشن) معلوم نیست؛ موتور هم حد ضرر ۲ برابر ATR و خرید و فروش هم‌زمان را در یک قانون ندارد"
   },
+  "8d628bcaa5-qs-rsi-strategy": {
+   "name": "QS RSI strategy",
+   "name_fa": "استراتژی QS RSI",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/qs-rsi-strategy/",
+   "claim": "«استراتژی QS RSI (۷۸٪ نرخ برد)»",
+   "claimed_return": "78% win rate",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست",
+   "verdict": "غیرقابل آزمون: صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست"
+  },
   "8e7a2dfe2c-sp100-9factor-annual-picks": {
    "name": "S&P 100 nine-factor annual stock picks",
    "name_fa": "انتخاب سالانه‌ی سهام S&P 100 با ۹ عامل (۸ بنیادی + ۱ مومنتوم)",
@@ -663,6 +797,38 @@
    "reason_not_testable": "به داده‌ی بنیادی از گزارش‌های SEC (ROA، حاشیه‌ی عملیاتی، جریان نقد و...) و فهرست تاریخی اعضای S&P 100 نیاز دارد؛ موتور فقط قیمت یک نماد را می‌آزماید",
    "verdict": "غیرقابل آزمون: به داده‌ی بنیادی از گزارش‌های SEC (ROA، حاشیه‌ی عملیاتی، جریان نقد و...) و فهرست تاریخی اعضای S&P 100 نیاز دارد؛ موتور فقط قیمت یک نماد را می‌آزماید"
   },
+  "94a3d9a5f8-gold-asian-15m-ifvg": {
+   "name": "Gold Asian session 15m IFVG",
+   "name_fa": "طلا با اولین IFVG پانزده‌دقیقه‌ای جلسه‌ی آسیا",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xj8v0z/how_i_finished_my_second_month_as_a_full_time/",
+   "claim": "«ماه دوم معامله‌ی تمام‌وقت را با ‎+۱۰٬۰۱۱‎ دلار تمام کردم… طلا را با اولین IFVG تازه‌ی ۱۵ دقیقه‌ای در جلسه‌ی آسیا معامله می‌کنم، هدف ۱:۱ و انتقال حد ضرر به سربه‌سر در ۶۸٪ مسیر»",
+   "claimed_return": "+$10,011 in October",
+   "asset_class": "forex",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "به کندل ۱۵ دقیقه‌ای و تشخیص الگوی IFVG نیاز دارد که با داده‌ی روزانه یا ساعتی و اندیکاتورهای مجاز ساخته نمی‌شود",
+   "verdict": "غیرقابل آزمون: به کندل ۱۵ دقیقه‌ای و تشخیص الگوی IFVG نیاز دارد که با داده‌ی روزانه یا ساعتی و اندیکاتورهای مجاز ساخته نمی‌شود"
+  },
+  "97d13133e7-spy-deep-pullback": {
+   "name": "SPY deep pullback",
+   "name_fa": "خرید اصلاح عمیق SPY",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/deep-pullback-strategy-only-14-drawdown/",
+   "claim": "«استراتژی اصلاح عمیق (فقط ۱۴٪ افت)» — ۱۲۸ معامله، ۷۸٪ برد، ضریب سود ۳، بازده سالانه ۳٪، ۵٪ زمان در بازار، بیشترین افت ۱۴٪",
+   "claimed_return": "3%/yr, 78% win rate, max DD 14%",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده",
+   "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده"
+  },
   "9925527b2f-spy-fear-in-uptrend": {
    "name": "Buy SPY fear inside uptrend",
    "name_fa": "خرید ترس SPY فقط در روند صعودی",
@@ -676,6 +842,24 @@
    "status": "not_testable",
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست"
+  },
+  "9f6727445a-vix-momentum-spy-gld-efa": {
+   "name": "VIX momentum rotation SPY/GLD/EFA",
+   "name_fa": "چرخش مومنتوم با رژیم VIX بین SPY و GLD و EFA",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/does-this-vix-momentum-strategy-still-work/",
+   "claim": "«آیا این استراتژی مومنتوم VIX هنوز کار می‌کند؟ (بازده ۱۴٪)» — ۶۴ معامله، ۷۳٪ برد، بازده سالانه ۱۴٫۶٪، بیشترین افت ۳۵٪",
+   "claimed_return": "14.6%/yr, max DD 35%",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY",
+    "GLD",
+    "EFA"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست",
+   "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست"
   },
   "ab0d637a16-ml-midday-intraday": {
    "name": "ML midday-to-close intraday long",
@@ -706,16 +890,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.91,
+    "cagr": 66.89,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 81.81,
-    "sharpe": 1.41,
+    "cagr": 83.65,
+    "sharpe": 1.43,
     "max_dd": -74.38,
-    "total": 15901.87
+    "total": 17360.01
    },
    "out_sample": {
     "cagr": 36.69,
@@ -724,24 +908,24 @@
     "total": 212.05
    },
    "buyhold_full": {
-    "cagr": 52.55,
+    "cagr": 52.64,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16673.69
+    "total": 16815.53
    },
    "buyhold_out_sample": {
-    "cagr": 43.43,
-    "sharpe": 1.01,
+    "cagr": 40.96,
+    "sharpe": 0.97,
     "max_dd": -53.06,
-    "total": 271.8
+    "total": 249.04
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-30",
-   "oos_start": "2023-03-12",
-   "forward_days": 5,
+   "period": "2014-09-17 → 2026-10-31",
+   "oos_start": "2023-03-13",
+   "forward_days": 6,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -777,7 +961,7 @@
     "cagr": 5.96,
     "sharpe": 0.6,
     "max_dd": -19.5,
-    "total": 393.86
+    "total": 393.87
    },
    "in_sample": {
     "cagr": 6.09,
@@ -795,13 +979,13 @@
     "cagr": 10.58,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1505.55
+    "total": 1506.45
    },
    "buyhold_out_sample": {
-    "cagr": 18.4,
-    "sharpe": 0.82,
+    "cagr": 18.41,
+    "sharpe": 0.83,
     "max_dd": -35.12,
-    "total": 305.05
+    "total": 305.28
    },
    "trades": 194,
    "win_rate": 64.4,
@@ -812,6 +996,22 @@
    "forward_days": 3,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
+  },
+  "c59688fc4a-qqq-mean-reversion-plus-trend": {
+   "name": "QQQ mean reversion + trend following",
+   "name_fa": "ترکیب بازگشت به میانگین و دنبال‌کردن روند روی QQQ",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/combining-mean-reversion-and-trend-following/",
+   "claim": "«ترکیب دو استراتژی بازگشت به میانگین و دنبال روند، بازده ۱۲٪ در سال» — در نسخه‌ی سابستک: QQQ سالانه ۱۴٫۸٪ در برابر ۷٫۷٪، بیشترین افت ۲۸٪، ۱۰۹ معامله، ۶۷٪ برد",
+   "claimed_return": "12%/yr (title); 14.8% CAGR, max DD 28%",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده (سایت و سابستک هر دو پشت اشتراک)",
+   "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده (سایت و سابستک هر دو پشت اشتراک)"
   },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
@@ -841,6 +1041,22 @@
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند"
   },
+  "d5f29306af-nasdaq-stocks-rsi-17dd": {
+   "name": "RSI strategy for Nasdaq 100 stocks",
+   "name_fa": "استراتژی RSI روی سهام نزدک ۱۰۰",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/rsi-trading-strategy-for-nasdaq-stocks/",
+   "claim": "«استراتژی RSI برای سهام نزدک (فقط ۱۷٪ افت سرمایه)»",
+   "claimed_return": "max DD 17%",
+   "asset_class": "stock",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ روی سبد سهام نزدک ۱۰۰ اجرا می‌شود",
+   "verdict": "غیرقابل آزمون: صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ روی سبد سهام نزدک ۱۰۰ اجرا می‌شود"
+  },
   "d6ef4faa25-weekly-wheel-1pct": {
    "name": "Weekly wheel 1% target",
    "name_fa": "چرخه‌ی هفتگی فروش پوت و کال با هدف ۱٪",
@@ -854,6 +1070,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست"
+  },
+  "dcc3f9155e-qqq-rsi-ema-vwap": {
+   "name": "QQQ RSI + EMA + VWAP",
+   "name_fa": "ترکیب RSI و EMA و VWAP روی QQQ",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/we-combined-rsi-ema-and-vwap-on-qqq-3-54-profit-factor/",
+   "claim": "«RSI، EMA و VWAP را روی QQQ ترکیب کردیم — ضریب سود ۳٫۵۴»",
+   "claimed_return": "3.54 profit factor",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ VWAP هم به داده‌ی درون‌روزی نیاز دارد",
+   "verdict": "غیرقابل آزمون: صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ VWAP هم به داده‌ی درون‌روزی نیاز دارد"
   },
   "dec4bea894-polymarket-wallet-score": {
    "name": "Polymarket wallet score",
@@ -869,6 +1101,22 @@
    "reason_not_testable": "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست",
    "verdict": "غیرقابل آزمون: به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
   },
+  "e4d9322c8f-dividend-stock-naked-puts": {
+   "name": "Naked puts on dividend stocks",
+   "name_fa": "فروش پوت بدون پوشش روی سهام سود‌ده",
+   "source": "elitetrader",
+   "source_url": "https://www.elitetrader.com/et/threads/20-30-return-journal.387413/",
+   "claim": "«ژورنال بازده ۲۰ تا ۳۰ درصد: فروش پوت بدون پوشش روی سهامی که سود نقدی خوب می‌دهند»",
+   "claimed_return": "20–30% target",
+   "asset_class": "option",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است",
+   "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است"
+  },
   "ea05e61257-spy-candle-dna-rsi-scalp": {
    "name": "SPY candle-DNA + RSI scalp bot",
    "name_fa": "ربات نوسان‌گیری SPY با «DNA کندل» و RSI",
@@ -882,6 +1130,22 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ دقیقه‌ای است (خروج بعد از ۲۵ دقیقه)؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم و «شرط صعودی RSI با ۲۰٪ تحمل» دقیق تعریف نشده",
    "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای است (خروج بعد از ۲۵ دقیقه)؛ داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم و «شرط صعودی RSI با ۲۰٪ تحمل» دقیق تعریف نشده"
+  },
+  "eacec3f771-nasdaq-stocks-5day-rsi": {
+   "name": "5-day RSI on Nasdaq stocks",
+   "name_fa": "RSI پنج‌روزه روی سهام نزدک",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/5-day-rsi-strategy-for-nasdaq-stocks/",
+   "claim": "«استراتژی RSI پنج‌روزه برای سهام نزدک (بازده ۱۸٪)» — ۱٬۴۷۷ معامله، ۶۹٪ برد، ضریب سود ۱٫۸، بازده سالانه ۱۸٪، بیشترین افت ۲۸٪",
+   "claimed_return": "18%/yr, 69% win rate",
+   "asset_class": "stock",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-10-31",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ روی سبدی از سهام نزدک با حداکثر ۳ معامله‌ی هم‌زمان اجرا می‌شود",
+   "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ روی سبدی از سهام نزدک با حداکثر ۳ معامله‌ی هم‌زمان اجرا می‌شود"
   },
   "ee02d103c4-spy-vwap-band-fade": {
    "name": "SPY VWAP band fade (5-min)",
