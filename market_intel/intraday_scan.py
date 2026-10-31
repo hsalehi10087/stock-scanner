@@ -22,6 +22,9 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import requests
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import intrinsic as IV  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(ROOT, 'data', 'intraday')
 STATE = os.path.join(OUT_DIR, 'state.json')
@@ -59,7 +62,7 @@ def tg(text):
     ok = True
     for c in chats:
         r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage',
-                          data={'chat_id': c, 'text': text, 'disable_web_page_preview': 'true'}, timeout=20)
+                          data={'chat_id': c, 'text': text, 'parse_mode': 'HTML', 'disable_web_page_preview': 'true'}, timeout=20)
         print('telegram', c[-4:], r.status_code)
         ok = ok and r.ok
     return ok
@@ -308,14 +311,20 @@ def main():
             continue
         msg.append(LABELS[code])
         for score, rvol, s, d, tag in items:
-            msg.append(f'{s} {fa(round(d["price"], 2))}$ {pct(d["chg"])} | حجم {fa(round(rvol, 1))} برابر{tag}')
+            try:
+                ivr = IV.label(IV.value(s, d['price']))
+            except Exception:
+                ivr = IV.label(None)
+            msg.append(f'{s} {fa(round(d["price"], 2))}$ {pct(d["chg"])} | حجم {fa(round(rvol, 1))} برابر{tag}\n   💎 {ivr}')
             sent_now.append((s, code))
         msg.append('')
     skipped = len(new) - len(sent_now)
     if skipped > 0:
         msg.append(f'(+{fa(skipped)} هشدار دیگر با اولویت کمتر)')
     msg.append('⭐ = رشد فروش/سود یا تأیید شکارچی الگو. حجم = حجم پیش‌بینی‌شده‌ی امروز نسبت به میانگین ۲۰ روزه.')
+    msg.append(IV.LEGEND)
     msg.append('هشدار است، نه توصیه‌ی خرید. داده با حدود ۱۵ دقیقه تأخیر.')
+    IV.save()
 
     if sent_now and tg('\n'.join(msg)):
         for s, code in sent_now:

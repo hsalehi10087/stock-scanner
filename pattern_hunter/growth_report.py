@@ -10,6 +10,8 @@ from common import MARKETS, ROOT, fa_digits as fa  # noqa: E402
 from growth_signal import OUT, SETUP_FA  # noqa: E402
 sys.path.insert(0, os.path.join(ROOT, 'market_summary'))
 import summary as S  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, 'market_intel'))
+import intrinsic as IV  # noqa: E402
 
 FLAG = {'us': '🇺🇸', 'cn': '🇨🇳', 'in': '🇮🇳', 'jp': '🇯🇵', 'tw': '🇹🇼', 'kr': '🇰🇷', 'hk': '🇭🇰', 'gb': '🇬🇧',
         'de': '🇩🇪', 'ca': '🇨🇦', 'au': '🇦🇺'}
@@ -26,7 +28,8 @@ def entry_lines(i, s):
     nm = CJK.sub('', s.get('name') or '').strip(' -,')
     out = [f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}",
            f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار",
-           f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}"]
+           f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}",
+           f"   💎 {IV.label(s.get('iv'))}"]
     if s.get('chart'):
         out.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
     return out
@@ -36,6 +39,13 @@ def main():
     today = json.load(open(os.path.join(OUT, 'today.json'), encoding='utf-8'))
     track = json.load(open(os.path.join(OUT, 'track.json'), encoding='utf-8'))['markets']
     e = html.escape
+    for v in today['markets'].values():                 # ارزش ذاتی هر سیگنال
+        for sg in v['signals']:
+            try:
+                sg['iv'] = IV.value(sg['ticker'], sg['price'])
+            except Exception:
+                sg['iv'] = None
+    IV.save()
     total = sum(len(v['signals']) for v in today['markets'].values())
     scored = sum(v['scored'] for v in today['markets'].values())
     L = [f"<b>📈 احتمال رشد تکنیکال و بنیادی</b> — {fa(today['date'].replace('-', '/'))}",
@@ -45,7 +55,7 @@ def main():
          '<i>«الگوی آماری: جزو ۸٪ برتر بازار» یعنی امتیاز این سهم از ۹۲٪ سهم‌های همان بورس در همان روز بیشتر است؛ '
          'یعنی بیشتر از بقیه شبیه سهم‌هایی است که در ۱۰ سال گذشته ظرف ۱۲ ماه دو برابر شده‌اند. '
          'عدد کوچک‌تر بهتر است (جزو ۱٪ برتر = شبیه‌ترین). این عدد احتمال رشد نیست و نسبی است: '
-         'در روزی که کل بازار ضعیف است، سهم برتر هم فقط از بقیه بهتر است.</i>', '']
+         'در روزی که کل بازار ضعیف است، سهم برتر هم فقط از بقیه بهتر است.</i>', IV.LEGEND, '']
     for m, cfg in MARKETS.items():
         d = today['markets'].get(m)
         if not d or not d['signals']:

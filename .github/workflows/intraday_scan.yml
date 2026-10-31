@@ -47,5 +47,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Intraday Bot"
-          git add -f data/intraday || true
+          git add -f data/intraday data/quality/iv_cache.json || true
           git diff --cached --quiet || (git commit -m "⚡ intraday $(date -u +%Y-%m-%d_%H%M)" && git pull --rebase -q && git push -q)
