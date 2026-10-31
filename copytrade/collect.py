@@ -160,10 +160,44 @@ def congress_universe():
     return [t for t in u if TICKER.match(t)][:250] or ['AAPL', 'MSFT', 'NVDA', 'AMZN', 'GOOGL', 'META', 'TSLA', 'AVGO']
 
 
+def congress_s3(days):
+    """House/Senate Stock Watcher (فایل‌های عمومی افشای معاملات) → همان قالب Finnhub."""
+    cut = str(dt.date.today() - dt.timedelta(days=days))
+    rows = []
+    srcs = [('https://house-stock-watcher-data.s3-us-west-2.amazonaws.com/data/all_transactions.json', 'representative'),
+            ('https://senate-stock-watcher-data.s3-us-west-2.amazonaws.com/aggregate/all_transactions.json', 'senator')]
+    for url, who in srcs:
+        try:
+            r = requests.get(url, headers=UA, timeout=60)
+            r.raise_for_status()
+            js = r.json()
+        except Exception as e:
+            log(f'Congress S3 {who}: {type(e).__name__} {str(e)[:60]}')
+            continue
+        n0 = len(rows)
+        for x in js:
+            d = str(x.get('transaction_date') or '')
+            if '/' in d:
+                try:
+                    d = str(dt.datetime.strptime(d, '%m/%d/%Y').date())
+                except ValueError:
+                    continue
+            t = str(x.get('ticker') or '').strip().upper()
+            if d >= cut and TICKER.match(t) and x.get(who):
+                rows.append({'name': x[who], 'symbol': t, 'transactionDate': d, 'transactionType': x.get('type', '')})
+        log(f'Congress S3 {who}: {len(rows) - n0} rows (latest {max((r["transactionDate"] for r in rows[n0:]), default="-")})')
+    return rows
+
+
 def congress_trades(days):
+    rows = congress_s3(days)
     key = os.getenv('FINNHUB_API_KEY', '')
-    if not key:
-        log('Congress: no FINNHUB_API_KEY')
+    if rows or not key:
+        return rows
+    probe = requests.get('https://finnhub.io/api/v1/stock/congressional-trading',
+                         params={'symbol': 'AAPL', 'from': '2024-01-01', 'to': TODAY, 'token': key}, timeout=20)
+    log(f'Congress Finnhub probe: {probe.status_code} {probe.text[:80]}')
+    if probe.status_code != 200:
         return []
     frm = str(dt.date.today() - dt.timedelta(days=days))
     rows = []
