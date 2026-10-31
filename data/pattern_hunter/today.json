@@ -1,19 +1,19 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "markets": {
   "us": {
-   "data_date": "2026-10-29",
+   "data_date": "2026-10-30",
    "scored": 1487,
    "picks": [
     {
      "ticker": "PENG",
      "name": "Penguin Solutions, Inc.",
-     "price": 58.79,
-     "prob": 0.926,
+     "price": 51.93,
+     "prob": 0.905,
      "rank": 1,
-     "r6m": 93.3,
-     "from_hi": -27.8,
-     "volu_ratio": 1.62,
+     "r6m": 66.2,
+     "from_hi": -36.2,
+     "volu_ratio": 1.61,
      "passed": [
       "کن‌اسلیم"
      ],
@@ -23,387 +23,561 @@
      "quality": "⭐۳/۵"
     },
     {
-     "ticker": "P",
-     "name": "Everpure",
-     "price": 137.2,
-     "prob": 0.887,
+     "ticker": "SEI",
+     "name": "Solaris Energy Infrastructure, Inc.",
+     "price": 70.7,
+     "prob": 0.876,
      "rank": 2,
-     "r6m": 92.0,
-     "from_hi": -12.6,
-     "volu_ratio": 0.91,
+     "r6m": -1.9,
+     "from_hi": -14.5,
+     "volu_ratio": 1.04,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "4/5",
+     "canslim": "5/7",
+     "buffett": "1/5",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "MRVL",
+     "name": "Marvell Technology",
+     "price": 196.4,
+     "prob": 0.875,
+     "rank": 3,
+     "r6m": 19.1,
+     "from_hi": -37.9,
+     "volu_ratio": 0.72,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "3/7",
+     "buffett": "4/5",
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "RSI",
+     "name": "Rush Street Interactive, Inc.",
+     "price": 12.12,
+     "prob": 0.874,
+     "rank": 4,
+     "r6m": -57.2,
+     "from_hi": -64.9,
+     "volu_ratio": 1.32,
      "passed": [
       "صورت مالی",
       "کن‌اسلیم"
      ],
      "health": "5/5",
-     "canslim": "6/7",
-     "buffett": "3/5",
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "ANF",
-     "name": "Abercrombie & Fitch",
-     "price": 165.77,
-     "prob": 0.859,
-     "rank": 3,
-     "r6m": 94.2,
-     "from_hi": 0.0,
-     "volu_ratio": 0.84,
-     "passed": [
-      "بافت"
-     ],
-     "health": "3/5",
      "canslim": "5/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
+     "buffett": "3/5",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
     },
     {
-     "ticker": "HL",
-     "name": "Hecla Mining",
-     "price": 14.45,
-     "prob": 0.853,
-     "rank": 4,
-     "r6m": -19.8,
-     "from_hi": -54.5,
-     "volu_ratio": 0.93,
+     "ticker": "P",
+     "name": "Everpure",
+     "price": 126.98,
+     "prob": 0.86,
+     "rank": 5,
+     "r6m": 77.3,
+     "from_hi": -19.1,
+     "volu_ratio": 0.9,
      "passed": [
-      "صورت مالی"
+      "صورت مالی",
+      "کن‌اسلیم"
      ],
      "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵ ⚠️رقیق‌شدن"
+     "canslim": "5/7",
+     "buffett": "3/5",
+     "quality": "⭐۴/۵"
     }
    ],
-   "checked": 40,
-   "dropped": 36,
+   "checked": 36,
+   "dropped": 31,
    "market_up": true,
-   "median_prob": 0.377
+   "median_prob": 0.379
   },
   "cn": {
    "data_date": "2026-10-30",
    "scored": 1500,
-   "picks": [],
-   "checked": 40,
-   "dropped": 40,
-   "market_up": false,
-   "median_prob": 0.343
-  },
-  "in": {
-   "data_date": "2026-10-30",
-   "scored": 705,
-   "picks": [],
-   "checked": 40,
-   "dropped": 40,
-   "market_up": false,
-   "median_prob": 0.2
-  },
-  "jp": {
-   "data_date": "2026-10-30",
-   "scored": 1499,
-   "picks": [],
-   "checked": 40,
-   "dropped": 40,
-   "market_up": true,
-   "median_prob": 0.276
-  },
-  "tw": {
-   "data_date": "2026-10-30",
-   "scored": 1199,
-   "picks": [],
-   "checked": 40,
-   "dropped": 40,
-   "market_up": false,
-   "median_prob": 0.355
-  },
-  "kr": {
-   "data_date": "2026-10-30",
-   "scored": 1198,
-   "picks": [],
-   "checked": 40,
-   "dropped": 40,
-   "market_up": false,
-   "median_prob": 0.547
-  },
-  "hk": {
-   "data_date": "2026-10-30",
-   "scored": 992,
    "picks": [
     {
-     "ticker": "0917.HK",
-     "name": "QUNABOX GROUP",
-     "price": 5.455,
-     "prob": 0.658,
+     "ticker": "688059.SS",
+     "name": "ZHUZHOU HUARUI PRECISION CUTTIN",
+     "price": 66.68,
+     "prob": 0.742,
      "rank": 1,
-     "r6m": -63.4,
-     "from_hi": -86.7,
-     "volu_ratio": 0.68,
+     "r6m": -20.4,
+     "from_hi": -56.9,
+     "volu_ratio": 0.72,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "4/5",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "300731.SZ",
+     "name": "KCXY",
+     "price": 27.16,
+     "prob": 0.712,
+     "rank": 2,
+     "r6m": -47.0,
+     "from_hi": -60.4,
+     "volu_ratio": 0.63,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "1/7",
-     "buffett": "4/5",
+     "buffett": "0/5",
      "quality": "⭐۳/۵"
     },
     {
-     "ticker": "2510.HK",
-     "name": "TS LINES",
-     "price": 12.82,
-     "prob": 0.649,
-     "rank": 2,
-     "r6m": 72.5,
-     "from_hi": -12.7,
-     "volu_ratio": 0.73,
-     "passed": [
-      "بافت"
-     ],
-     "health": "3/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
-    }
-   ],
-   "checked": 40,
-   "dropped": 38,
-   "market_up": false,
-   "median_prob": 0.32
-  },
-  "gb": {
-   "data_date": "2026-10-30",
-   "scored": 346,
-   "picks": [
-    {
-     "ticker": "BCG.L",
-     "name": "Baltic Classifieds",
-     "price": 2.278,
-     "prob": 0.873,
-     "rank": 1,
-     "r6m": -98.8,
-     "from_hi": -99.2,
-     "volu_ratio": 0.56,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "MEGP.L",
-     "name": "ME Group International",
-     "price": 113.2,
-     "prob": 0.712,
-     "rank": 2,
-     "r6m": -24.0,
-     "from_hi": -41.7,
-     "volu_ratio": 0.75,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "PAF.L",
-     "name": "Pan African Resources",
-     "price": 106.945,
-     "prob": 0.544,
+     "ticker": "688711.SS",
+     "name": "MACMIC SCIENCE & TECHNOLOGY CO",
+     "price": 18.7,
+     "prob": 0.696,
      "rank": 3,
-     "r6m": -22.5,
-     "from_hi": -41.7,
-     "volu_ratio": 0.8,
-     "passed": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "FCH.L",
-     "name": "Funding Circle",
-     "price": 211.0,
-     "prob": 0.53,
-     "rank": 4,
-     "r6m": 62.1,
-     "from_hi": -14.1,
-     "volu_ratio": 0.8,
-     "passed": [
-      "کن‌اسلیم"
-     ],
-     "health": "3/5",
-     "canslim": "6/7",
-     "buffett": "2/5",
-     "quality": "⭐۱/۵ (۲ نامعلوم)"
-    },
-    {
-     "ticker": "ATYM.L",
-     "name": "Atalaya Mining",
-     "price": 833.953,
-     "prob": 0.51,
-     "rank": 5,
-     "r6m": 12.6,
-     "from_hi": -24.8,
-     "volu_ratio": 0.88,
-     "passed": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "5/5",
-     "quality": "⭐۳/۵"
-    }
-   ],
-   "checked": 17,
-   "dropped": 12,
-   "market_up": true,
-   "median_prob": 0.023
-  },
-  "de": {
-   "data_date": "2026-10-30",
-   "scored": 86,
-   "picks": [
-    {
-     "ticker": "TMV.DE",
-     "name": "TeamViewer",
-     "price": 7.43,
-     "prob": 0.545,
-     "rank": 1,
-     "r6m": 30.4,
-     "from_hi": -2.7,
-     "volu_ratio": 0.81,
-     "passed": [
-      "بافت"
-     ],
-     "health": "1/5",
-     "canslim": "5/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "NEM.DE",
-     "name": "Nemetschek",
-     "price": 75.05,
-     "prob": 0.013,
-     "rank": 2,
-     "r6m": 17.6,
-     "from_hi": -24.1,
-     "volu_ratio": 0.82,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "3/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
-    }
-   ],
-   "checked": 40,
-   "dropped": 38,
-   "market_up": true,
-   "median_prob": 0.006
-  },
-  "ca": {
-   "data_date": "2026-10-29",
-   "scored": 596,
-   "picks": [
-    {
-     "ticker": "TRX.TO",
-     "name": "TRX GOLD CORPORATION",
-     "price": 1.39,
-     "prob": 0.801,
-     "rank": 1,
-     "r6m": -6.1,
-     "from_hi": -52.9,
-     "volu_ratio": 0.85,
+     "r6m": -32.0,
+     "from_hi": -58.9,
+     "volu_ratio": 0.59,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "1/7",
      "buffett": "1/5",
+     "quality": "⭐۱/۵ (۱ نامعلوم)"
+    },
+    {
+     "ticker": "688150.SS",
+     "name": "SHAANXI LIGHTE OPTOELECTRONICS",
+     "price": 27.47,
+     "prob": 0.689,
+     "rank": 4,
+     "r6m": -48.4,
+     "from_hi": -61.5,
+     "volu_ratio": 0.6,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "1/7",
+     "buffett": "3/5",
      "quality": "⭐۲/۵"
     },
     {
-     "ticker": "ECOR.TO",
-     "name": "ECORA ROYALTIES PLC",
-     "price": 2.93,
-     "prob": 0.801,
+     "ticker": "688313.SS",
+     "name": "HENAN SHIJIA PHOTONS TECHNOLOGY",
+     "price": 92.53,
+     "prob": 0.688,
+     "rank": 5,
+     "r6m": -33.4,
+     "from_hi": -54.5,
+     "volu_ratio": 0.8,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "3/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم)"
+    }
+   ],
+   "checked": 12,
+   "dropped": 7,
+   "market_up": false,
+   "median_prob": 0.343
+  },
+  "in": {
+   "data_date": "2026-10-30",
+   "scored": 707,
+   "picks": [
+    {
+     "ticker": "LOTUSDEV.NS",
+     "name": "SRI LOTUS DEVELOPERS AND REALTY Ltd.",
+     "price": 245.98,
+     "prob": 0.655,
+     "rank": 1,
+     "r6m": 68.7,
+     "from_hi": -0.1,
+     "volu_ratio": 1.0,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "3/7",
+     "buffett": "4/5",
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "STLTECH.NS",
+     "name": "Sterlite Technologies Ltd.",
+     "price": 824.5,
+     "prob": 0.591,
      "rank": 2,
-     "r6m": 21.0,
-     "from_hi": -13.1,
-     "volu_ratio": 0.68,
+     "r6m": 176.5,
+     "from_hi": -18.9,
+     "volu_ratio": 0.94,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "3/7",
-     "buffett": "3/5",
+     "buffett": "4/5",
+     "quality": "⭐۴/۵"
+    },
+    {
+     "ticker": "VAIBHAVGBL.NS",
+     "name": "Vaibhav Global Ltd.",
+     "price": 156.95,
+     "prob": 0.588,
+     "rank": 3,
+     "r6m": -27.7,
+     "from_hi": -42.8,
+     "volu_ratio": 1.35,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "2/7",
+     "buffett": "4/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم)"
+    },
+    {
+     "ticker": "BLUEJET.NS",
+     "name": "Blue Jet Healthcare Ltd.",
+     "price": 504.55,
+     "prob": 0.58,
+     "rank": 4,
+     "r6m": 13.4,
+     "from_hi": -25.0,
+     "volu_ratio": 0.38,
+     "passed": [
+      "بافت"
+     ],
+     "health": "2/5",
+     "canslim": "0/7",
+     "buffett": "4/5",
      "quality": "⭐۲/۵"
     },
     {
-     "ticker": "TOT.TO",
-     "name": "TOTAL ENERGY SERVICES INC.",
-     "price": 40.01,
-     "prob": 0.792,
-     "rank": 3,
-     "r6m": 69.8,
-     "from_hi": -0.1,
-     "volu_ratio": 1.1,
+     "ticker": "MMTC.NS",
+     "name": "MMTC Ltd.",
+     "price": 50.44,
+     "prob": 0.565,
+     "rank": 5,
+     "r6m": -23.0,
+     "from_hi": -33.7,
+     "volu_ratio": 0.7,
+     "passed": [
+      "بافت"
+     ],
+     "health": "2/5",
+     "canslim": "2/7",
+     "buffett": "4/5",
+     "quality": "⭐۰/۵ (۱ نامعلوم)"
+    }
+   ],
+   "checked": 25,
+   "dropped": 20,
+   "market_up": false,
+   "median_prob": 0.2
+  },
+  "jp": {
+   "data_date": "2026-10-30",
+   "scored": 1497,
+   "picks": [
+    {
+     "ticker": "3997.T",
+     "name": "TRADE WORKS CO LTD",
+     "price": 380.0,
+     "prob": 0.833,
+     "rank": 1,
+     "r6m": -5.2,
+     "from_hi": -33.5,
+     "volu_ratio": 1.02,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
-     "canslim": "5/7",
-     "buffett": "3/5",
+     "canslim": "1/7",
+     "buffett": "2/5",
+     "quality": "⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "6574.T",
+     "name": "CONVANO INC",
+     "price": 1281.0,
+     "prob": 0.796,
+     "rank": 2,
+     "r6m": 22.0,
+     "from_hi": -35.1,
+     "volu_ratio": 1.46,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "3/7",
+     "buffett": "1/5",
      "quality": "⭐۳/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "CFW.TO",
-     "name": "CALFRAC WELL SERVICES LTD.",
-     "price": 7.93,
-     "prob": 0.778,
-     "rank": 4,
-     "r6m": 43.7,
-     "from_hi": 0.0,
-     "volu_ratio": 1.53,
-     "passed": [
-      "کن‌اسلیم"
-     ],
-     "health": "4/5",
-     "canslim": "7/7",
-     "buffett": "3/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
-    },
-    {
-     "ticker": "MATR.TO",
-     "name": "MATTR CORP",
-     "price": 20.67,
-     "prob": 0.775,
-     "rank": 5,
-     "r6m": 117.8,
-     "from_hi": -7.6,
-     "volu_ratio": 0.91,
+     "ticker": "5802.T",
+     "name": "SUMITOMO ELECTRIC INDUSTRIES",
+     "price": 1770.0,
+     "prob": 0.765,
+     "rank": 3,
+     "r6m": -30.0,
+     "from_hi": -48.9,
+     "volu_ratio": 0.96,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "4/7",
-     "buffett": "0/5",
+     "buffett": "3/5",
+     "quality": "⭐۴/۵"
+    },
+    {
+     "ticker": "6994.T",
+     "name": "SHIZUKI ELECTRIC CO INC",
+     "price": 1109.0,
+     "prob": 0.765,
+     "rank": 4,
+     "r6m": 13.7,
+     "from_hi": -23.0,
+     "volu_ratio": 0.45,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "3/7",
+     "buffett": "2/5",
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "4477.T",
+     "name": "BASE INC",
+     "price": 332.0,
+     "prob": 0.758,
+     "rank": 5,
+     "r6m": 13.7,
+     "from_hi": -17.8,
+     "volu_ratio": 1.94,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "4/7",
+     "buffett": "3/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم)"
+    }
+   ],
+   "checked": 30,
+   "dropped": 25,
+   "market_up": true,
+   "median_prob": 0.276
+  },
+  "tw": {
+   "data_date": "2026-10-30",
+   "scored": 1200,
+   "picks": [
+    {
+     "ticker": "3147.TWO",
+     "name": "JETWELL COMPUTER CO",
+     "price": 307.0,
+     "prob": 0.657,
+     "rank": 1,
+     "r6m": 85.4,
+     "from_hi": -9.7,
+     "volu_ratio": 1.66,
+     "passed": [
+      "بافت"
+     ],
+     "health": "3/5",
+     "canslim": "4/7",
+     "buffett": "4/5",
+     "quality": "⭐۴/۵"
+    },
+    {
+     "ticker": "6292.TWO",
+     "name": "AXIS CORPORATION",
+     "price": 60.8,
+     "prob": 0.627,
+     "rank": 2,
+     "r6m": 37.9,
+     "from_hi": -14.6,
+     "volu_ratio": 0.66,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "3/7",
+     "buffett": "5/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم)"
+    },
+    {
+     "ticker": "2423.TW",
+     "name": "GOOD WILL INSTRUMENT",
+     "price": 66.2,
+     "prob": 0.621,
+     "rank": 3,
+     "r6m": 22.0,
+     "from_hi": -21.9,
+     "volu_ratio": 0.3,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "1/7",
+     "buffett": "5/5",
+     "quality": "⭐۳/۵ (۱ نامعلوم)"
+    },
+    {
+     "ticker": "8383.TWO",
+     "name": "CHEN FULL INT CO",
+     "price": 67.7,
+     "prob": 0.584,
+     "rank": 4,
+     "r6m": 9.0,
+     "from_hi": -25.1,
+     "volu_ratio": 0.38,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "1/7",
+     "buffett": "4/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم)"
+    },
+    {
+     "ticker": "7744.TWO",
+     "name": "WB",
+     "price": 442.0,
+     "prob": 0.583,
+     "rank": 5,
+     "r6m": -13.0,
+     "from_hi": -26.3,
+     "volu_ratio": 0.5,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "5/5",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
+    }
+   ],
+   "checked": 22,
+   "dropped": 17,
+   "market_up": false,
+   "median_prob": 0.355
+  },
+  "kr": {
+   "data_date": "2026-10-30",
+   "scored": 1200,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
+   "market_up": false,
+   "median_prob": 0.546
+  },
+  "hk": {
+   "data_date": "2026-10-30",
+   "scored": 1000,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
+   "market_up": false,
+   "median_prob": 0.32
+  },
+  "gb": {
+   "data_date": "2026-10-30",
+   "scored": 346,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
+   "market_up": true,
+   "median_prob": 0.025
+  },
+  "de": {
+   "data_date": "2026-10-30",
+   "scored": 86,
+   "picks": [
+    {
+     "ticker": "BFSA.DE",
+     "name": "Befesa",
+     "price": 37.0,
+     "prob": 0.095,
+     "rank": 1,
+     "r6m": 9.3,
+     "from_hi": -2.5,
+     "volu_ratio": 1.24,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "3/5",
+     "canslim": "5/7",
+     "buffett": "1/5",
      "quality": "⭐۳/۵ (۱ نامعلوم)"
     }
    ],
-   "checked": 16,
-   "dropped": 11,
+   "checked": 40,
+   "dropped": 39,
    "market_up": true,
-   "median_prob": 0.127
+   "median_prob": 0.006
+  },
+  "ca": {
+   "data_date": "2026-10-30",
+   "scored": 596,
+   "picks": [
+    {
+     "ticker": "CFW.TO",
+     "name": "CALFRAC WELL SERVICES LTD.",
+     "price": 7.82,
+     "prob": 0.762,
+     "rank": 1,
+     "r6m": 46.2,
+     "from_hi": -1.4,
+     "volu_ratio": 1.51,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "3/5",
+     "canslim": "6/7",
+     "buffett": "2/5",
+     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "DBO.TO",
+     "name": "DBOX TECHNOLOGIES INC",
+     "price": 1.11,
+     "prob": 0.709,
+     "rank": 2,
+     "r6m": 35.4,
+     "from_hi": -14.6,
+     "volu_ratio": 0.49,
+     "passed": [
+      "کن‌اسلیم"
+     ],
+     "health": "4/5",
+     "canslim": "5/7",
+     "buffett": "2/5",
+     "quality": "⭐۱/۵ (۱ نامعلوم)"
+    }
+   ],
+   "checked": 40,
+   "dropped": 38,
+   "market_up": true,
+   "median_prob": 0.124
   },
   "au": {
    "data_date": "2026-10-30",

@@ -1,150 +1,222 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "markets": {
   "us": [
    {
     "date": "2026-10-28",
     "ticker": "ANF",
     "name": "Abercrombie & Fitch",
-    "ret_pct": 2.0,
+    "ret_pct": 1.1,
     "max_pct": 2.0,
     "min_pct": -0.8,
-    "index_pct": -0.2
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "MRVL",
     "name": "Marvell Technology",
-    "ret_pct": -12.1,
+    "ret_pct": -21.0,
     "max_pct": 1.3,
-    "min_pct": -12.1,
-    "index_pct": -0.2
+    "min_pct": -21.0,
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "RAL",
     "name": "Ralliant Corp",
-    "ret_pct": 1.6,
+    "ret_pct": -3.2,
     "max_pct": 1.6,
-    "min_pct": 0.7,
-    "index_pct": -0.2
+    "min_pct": -3.2,
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "RELY",
     "name": "Remitly",
-    "ret_pct": 1.5,
+    "ret_pct": -0.5,
     "max_pct": 1.5,
-    "min_pct": 0.0,
-    "index_pct": -0.2
+    "min_pct": -0.5,
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "HRB",
     "name": "H&R Block",
-    "ret_pct": 5.3,
-    "max_pct": 5.3,
+    "ret_pct": 8.8,
+    "max_pct": 8.8,
     "min_pct": 1.3,
-    "index_pct": -0.2
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "LPG",
     "name": "Dorian LPG Ltd.",
-    "ret_pct": 0.7,
+    "ret_pct": 0.3,
     "max_pct": 0.7,
     "min_pct": -0.5,
-    "index_pct": -0.2
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "DAL",
     "name": "Delta Air Lines",
-    "ret_pct": 0.9,
+    "ret_pct": -0.9,
     "max_pct": 0.9,
-    "min_pct": -0.7,
-    "index_pct": -0.2
+    "min_pct": -0.9,
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-28",
     "ticker": "SCSC",
     "name": "ScanSource, Inc.",
-    "ret_pct": 0.9,
+    "ret_pct": -1.2,
     "max_pct": 1.7,
-    "min_pct": 0.9,
-    "index_pct": -0.2
-   },
-   {
-    "date": "2026-10-29",
-    "ticker": "WKC",
-    "name": "World Kinect Corporation",
-    "ret_pct": 1.6,
-    "max_pct": 1.6,
-    "min_pct": 1.6,
-    "index_pct": -0.4
+    "min_pct": -1.2,
+    "index_pct": -2.0
    },
    {
     "date": "2026-10-29",
     "ticker": "FIVE",
     "name": "Five Below",
-    "ret_pct": 4.7,
+    "ret_pct": 2.8,
     "max_pct": 4.7,
-    "min_pct": 4.7,
-    "index_pct": -0.4
+    "min_pct": 2.8,
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
     "ticker": "MNST",
     "name": "Monster Beverage",
-    "ret_pct": 1.5,
-    "max_pct": 1.5,
+    "ret_pct": 3.7,
+    "max_pct": 3.7,
     "min_pct": 1.5,
-    "index_pct": -0.4
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
     "ticker": "LIVN",
     "name": "LivaNova",
-    "ret_pct": 0.7,
+    "ret_pct": -2.1,
     "max_pct": 0.7,
-    "min_pct": 0.7,
-    "index_pct": -0.4
+    "min_pct": -2.1,
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
-    "ticker": "SCL",
-    "name": "Stepan Company",
-    "ret_pct": 2.3,
-    "max_pct": 2.3,
-    "min_pct": 2.3,
-    "index_pct": -0.4
+    "ticker": "WKC",
+    "name": "World Kinect Corporation",
+    "ret_pct": 2.0,
+    "max_pct": 2.0,
+    "min_pct": 1.6,
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
     "ticker": "NTCT",
     "name": "NETSCOUT Systems, Inc.",
-    "ret_pct": -0.5,
+    "ret_pct": -2.9,
     "max_pct": -0.5,
-    "min_pct": -0.5,
-    "index_pct": -0.4
+    "min_pct": -2.9,
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
     "ticker": "AR",
     "name": "Antero Resources",
-    "ret_pct": -2.2,
-    "max_pct": -2.2,
+    "ret_pct": -0.1,
+    "max_pct": -0.1,
     "min_pct": -2.2,
-    "index_pct": -0.4
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-29",
     "ticker": "VCTR",
     "name": "Victory Capital Holdings, Inc.",
-    "ret_pct": 1.7,
+    "ret_pct": -1.1,
     "max_pct": 1.7,
-    "min_pct": 1.7,
-    "index_pct": -0.4
+    "min_pct": -1.1,
+    "index_pct": -2.1
+   },
+   {
+    "date": "2026-10-29",
+    "ticker": "SCL",
+    "name": "Stepan Company",
+    "ret_pct": 1.8,
+    "max_pct": 2.3,
+    "min_pct": 1.8,
+    "index_pct": -2.1
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "MA",
+    "name": "Mastercard",
+    "ret_pct": 0.4,
+    "max_pct": 0.4,
+    "min_pct": 0.4,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "EHC",
+    "name": "Encompass Health",
+    "ret_pct": 3.4,
+    "max_pct": 3.4,
+    "min_pct": 3.4,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "LLY",
+    "name": "Lilly (Eli)",
+    "ret_pct": 3.2,
+    "max_pct": 3.2,
+    "min_pct": 3.2,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "WST",
+    "name": "West Pharmaceutical Services",
+    "ret_pct": -1.0,
+    "max_pct": -1.0,
+    "min_pct": -1.0,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "GKOS",
+    "name": "Glaukos Corp.",
+    "ret_pct": -2.0,
+    "max_pct": -2.0,
+    "min_pct": -2.0,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "HALO",
+    "name": "Halozyme",
+    "ret_pct": -0.2,
+    "max_pct": -0.2,
+    "min_pct": -0.2,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "CROX",
+    "name": "Crocs",
+    "ret_pct": 0.2,
+    "max_pct": 0.2,
+    "min_pct": 0.2,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "NTNX",
+    "name": "Nutanix",
+    "ret_pct": -4.9,
+    "max_pct": -4.9,
+    "min_pct": -4.9,
+    "index_pct": -1.8
    }
   ],
   "cn": [
@@ -190,9 +262,9 @@
     "date": "2026-10-28",
     "ticker": "WELCORP.NS",
     "name": "Welspun Corp Ltd.",
-    "ret_pct": -7.6,
+    "ret_pct": -8.7,
     "max_pct": 0.0,
-    "min_pct": -7.6,
+    "min_pct": -8.7,
     "index_pct": 1.6
    },
    {
@@ -208,46 +280,37 @@
     "date": "2026-10-28",
     "ticker": "AARTIPHARM.NS",
     "name": "Aarti Pharmalabs Ltd.",
-    "ret_pct": 0.1,
+    "ret_pct": -1.0,
     "max_pct": 5.2,
-    "min_pct": 0.0,
+    "min_pct": -1.0,
     "index_pct": 1.6
    },
    {
     "date": "2026-10-28",
     "ticker": "SHRIPISTON.NS",
     "name": "SPR Auto Technologies Ltd.",
-    "ret_pct": -2.0,
+    "ret_pct": -2.8,
     "max_pct": 0.0,
-    "min_pct": -2.0,
+    "min_pct": -2.8,
     "index_pct": 1.6
    },
    {
     "date": "2026-10-28",
     "ticker": "BOSCHLTD.NS",
     "name": "Bosch Ltd.",
-    "ret_pct": -1.0,
+    "ret_pct": -0.9,
     "max_pct": 0.0,
-    "min_pct": -1.0,
+    "min_pct": -0.9,
     "index_pct": 1.6
    },
    {
     "date": "2026-10-28",
     "ticker": "LOTUSDEV.NS",
     "name": "SRI LOTUS DEVELOPERS AND REALTY Ltd.",
-    "ret_pct": -1.3,
-    "max_pct": -0.0,
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
     "min_pct": -1.3,
     "index_pct": 1.6
-   },
-   {
-    "date": "2026-10-29",
-    "ticker": "WESTLIFE.NS",
-    "name": "Westlife Foodworld Ltd.",
-    "ret_pct": -3.0,
-    "max_pct": -0.4,
-    "min_pct": -3.0,
-    "index_pct": 0.5
    },
    {
     "date": "2026-10-29",
@@ -262,37 +325,109 @@
     "date": "2026-10-29",
     "ticker": "ACUTAAS.NS",
     "name": "Acutaas Chemicals Ltd.",
-    "ret_pct": 0.2,
-    "max_pct": 0.2,
+    "ret_pct": 0.3,
+    "max_pct": 0.3,
     "min_pct": -0.3,
     "index_pct": 0.5
    },
    {
     "date": "2026-10-29",
-    "ticker": "VIJAYA.NS",
-    "name": "Vijaya Diagnostic Centre Ltd.",
-    "ret_pct": -1.6,
-    "max_pct": -0.1,
-    "min_pct": -1.6,
+    "ticker": "WESTLIFE.NS",
+    "name": "Westlife Foodworld Ltd.",
+    "ret_pct": -3.1,
+    "max_pct": -0.4,
+    "min_pct": -3.1,
     "index_pct": 0.5
    },
    {
     "date": "2026-10-29",
     "ticker": "THELEELA.NS",
     "name": "Leela Palaces Hotels & Resorts Ltd.",
-    "ret_pct": 0.5,
+    "ret_pct": 0.4,
     "max_pct": 1.3,
-    "min_pct": 0.5,
+    "min_pct": 0.4,
     "index_pct": 0.5
    },
    {
     "date": "2026-10-29",
     "ticker": "ICIL.NS",
     "name": "Indo Count Industries Ltd.",
-    "ret_pct": -0.4,
+    "ret_pct": -1.1,
     "max_pct": 0.5,
-    "min_pct": -0.4,
+    "min_pct": -1.1,
     "index_pct": 0.5
+   },
+   {
+    "date": "2026-10-29",
+    "ticker": "VIJAYA.NS",
+    "name": "Vijaya Diagnostic Centre Ltd.",
+    "ret_pct": -1.4,
+    "max_pct": -0.1,
+    "min_pct": -1.4,
+    "index_pct": 0.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "LAURUSLABS.NS",
+    "name": "Laurus Labs Ltd.",
+    "ret_pct": 1.1,
+    "max_pct": 1.1,
+    "min_pct": 1.1,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "COFORGE.NS",
+    "name": "Coforge Ltd.",
+    "ret_pct": -0.4,
+    "max_pct": -0.4,
+    "min_pct": -0.4,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "DIVISLAB.NS",
+    "name": "Divi's Laboratories Ltd.",
+    "ret_pct": -0.3,
+    "max_pct": -0.3,
+    "min_pct": -0.3,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "ABDL.NS",
+    "name": "Allied Blenders and Distillers Ltd.",
+    "ret_pct": 0.3,
+    "max_pct": 0.3,
+    "min_pct": 0.3,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "GLAND.NS",
+    "name": "Gland Pharma Ltd.",
+    "ret_pct": -0.1,
+    "max_pct": -0.1,
+    "min_pct": -0.1,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "SANSERA.NS",
+    "name": "Sansera Engineering Ltd.",
+    "ret_pct": -0.9,
+    "max_pct": -0.9,
+    "min_pct": -0.9,
+    "index_pct": 0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "NAZARA.NS",
+    "name": "Nazara Technologies Ltd.",
+    "ret_pct": -0.1,
+    "max_pct": -0.1,
+    "min_pct": -0.1,
+    "index_pct": 0.0
    }
   ],
   "jp": [
@@ -303,7 +438,7 @@
     "ret_pct": -0.7,
     "max_pct": 0.0,
     "min_pct": -0.7,
-    "index_pct": -0.9
+    "index_pct": -1.1
    },
    {
     "date": "2026-10-29",
@@ -312,7 +447,7 @@
     "ret_pct": 1.0,
     "max_pct": 1.0,
     "min_pct": 0.0,
-    "index_pct": -0.9
+    "index_pct": -1.1
    },
    {
     "date": "2026-10-29",
@@ -321,7 +456,25 @@
     "ret_pct": 1.6,
     "max_pct": 1.6,
     "min_pct": 0.0,
-    "index_pct": -0.9
+    "index_pct": -1.1
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "7453.T",
+    "name": "",
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "9766.T",
+    "name": "",
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.2
    }
   ],
   "tw": [
@@ -360,6 +513,24 @@
     "max_pct": 0.0,
     "min_pct": -2.7,
     "index_pct": -3.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "6526.TW",
+    "name": "",
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.0
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "6021.TWO",
+    "name": "",
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.0
    }
   ],
   "kr": [
@@ -370,7 +541,7 @@
     "ret_pct": -6.2,
     "max_pct": 1.3,
     "min_pct": -6.2,
-    "index_pct": -1.8
+    "index_pct": -2.1
    },
    {
     "date": "2026-10-28",
@@ -379,20 +550,147 @@
     "ret_pct": 15.9,
     "max_pct": 15.9,
     "min_pct": 11.2,
-    "index_pct": -1.8
+    "index_pct": -2.1
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "053800.KQ",
+    "name": "",
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.3
    }
   ],
   "hk": [],
-  "gb": [],
+  "gb": [
+   {
+    "date": "2026-10-30",
+    "ticker": "ROR.L",
+    "name": "Rotork",
+    "ret_pct": 0.2,
+    "max_pct": 0.2,
+    "min_pct": 0.2,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "AVON.L",
+    "name": "Avon Technologies",
+    "ret_pct": 1.4,
+    "max_pct": 1.4,
+    "min_pct": 1.4,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "FOUR.L",
+    "name": "4imprint",
+    "ret_pct": -0.7,
+    "max_pct": -0.7,
+    "min_pct": -0.7,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "APN.L",
+    "name": "Applied Nutrition",
+    "ret_pct": -0.2,
+    "max_pct": -0.2,
+    "min_pct": -0.2,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "HBR.L",
+    "name": "Harbour Energy",
+    "ret_pct": 0.4,
+    "max_pct": 0.4,
+    "min_pct": 0.4,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "KNOS.L",
+    "name": "Kainos",
+    "ret_pct": -0.8,
+    "max_pct": -0.8,
+    "min_pct": -0.8,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "IHG.L",
+    "name": "IHG Hotels & Resorts",
+    "ret_pct": -0.4,
+    "max_pct": -0.4,
+    "min_pct": -0.4,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "ATG.L",
+    "name": "Auction Technology Group",
+    "ret_pct": 0.3,
+    "max_pct": 0.3,
+    "min_pct": 0.3,
+    "index_pct": -0.2
+   }
+  ],
   "de": [
    {
     "date": "2026-10-29",
     "ticker": "BNR.DE",
     "name": "Brenntag",
-    "ret_pct": 1.3,
-    "max_pct": 1.3,
+    "ret_pct": 1.2,
+    "max_pct": 1.2,
     "min_pct": 0.7,
-    "index_pct": 0.2
+    "index_pct": -0.3
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "FPE3.DE",
+    "name": "Fuchs Petrolub",
+    "ret_pct": -0.8,
+    "max_pct": -0.8,
+    "min_pct": -0.8,
+    "index_pct": -0.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "EVK.DE",
+    "name": "Evonik",
+    "ret_pct": 0.4,
+    "max_pct": 0.4,
+    "min_pct": 0.4,
+    "index_pct": -0.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "ALV.DE",
+    "name": "Allianz",
+    "ret_pct": -0.3,
+    "max_pct": -0.3,
+    "min_pct": -0.3,
+    "index_pct": -0.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "TLX.DE",
+    "name": "Talanx",
+    "ret_pct": 0.2,
+    "max_pct": 0.2,
+    "min_pct": 0.2,
+    "index_pct": -0.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "BAS.DE",
+    "name": "BASF",
+    "ret_pct": -0.0,
+    "max_pct": -0.0,
+    "min_pct": -0.0,
+    "index_pct": -0.5
    }
   ],
   "ca": [
@@ -400,46 +698,118 @@
     "date": "2026-10-28",
     "ticker": "DBO.TO",
     "name": "DBOX TECHNOLOGIES INC",
-    "ret_pct": 0.9,
+    "ret_pct": -0.9,
     "max_pct": 0.9,
-    "min_pct": 0.9,
-    "index_pct": 0.2
+    "min_pct": -0.9,
+    "index_pct": -1.6
    },
    {
     "date": "2026-10-28",
     "ticker": "CGY.TO",
     "name": "CALIAN GROUP LTD",
-    "ret_pct": 4.6,
+    "ret_pct": 1.9,
     "max_pct": 4.6,
     "min_pct": 1.8,
-    "index_pct": 0.2
+    "index_pct": -1.6
    },
    {
     "date": "2026-10-28",
     "ticker": "CVVY.TO",
     "name": "CAVVY ENERGY LTD",
-    "ret_pct": -0.8,
+    "ret_pct": -3.4,
     "max_pct": 1.9,
-    "min_pct": -0.8,
-    "index_pct": 0.2
+    "min_pct": -3.4,
+    "index_pct": -1.6
    },
    {
     "date": "2026-10-29",
     "ticker": "CFW.TO",
     "name": "CALFRAC WELL SERVICES LTD.",
-    "ret_pct": 0.3,
+    "ret_pct": -1.1,
     "max_pct": 0.3,
-    "min_pct": 0.3,
-    "index_pct": -0.0
+    "min_pct": -1.1,
+    "index_pct": -1.8
    },
    {
     "date": "2026-10-29",
     "ticker": "PD.TO",
     "name": "PRECISION DRILLING CORPORATION",
-    "ret_pct": 1.9,
+    "ret_pct": 0.3,
     "max_pct": 1.9,
-    "min_pct": 1.9,
-    "index_pct": -0.0
+    "min_pct": 0.3,
+    "index_pct": -1.8
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "ACX.TO",
+    "name": "ACT ENERGY TECHNOLOGIES LTD",
+    "ret_pct": 2.2,
+    "max_pct": 2.2,
+    "min_pct": 2.2,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "JWEL.TO",
+    "name": "JAMIESON WELLNESS INC",
+    "ret_pct": 0.1,
+    "max_pct": 0.1,
+    "min_pct": 0.1,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "HMM-A.TO",
+    "name": "HAMMOND MANUFACTURING CO. LTD, ",
+    "ret_pct": -1.1,
+    "max_pct": -1.1,
+    "min_pct": -1.1,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "TOT.TO",
+    "name": "TOTAL ENERGY SERVICES INC.",
+    "ret_pct": 0.7,
+    "max_pct": 0.7,
+    "min_pct": 0.7,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "MATR.TO",
+    "name": "MATTR CORP",
+    "ret_pct": -4.5,
+    "max_pct": -4.5,
+    "min_pct": -4.5,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "KEL.TO",
+    "name": "KELT EXPLORATION LTD",
+    "ret_pct": -0.3,
+    "max_pct": -0.3,
+    "min_pct": -0.3,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "VLE.TO",
+    "name": "VALEURA ENERGY INC",
+    "ret_pct": 0.6,
+    "max_pct": 0.6,
+    "min_pct": 0.6,
+    "index_pct": -1.7
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "MTL.TO",
+    "name": "MULLEN GROUP LTD.",
+    "ret_pct": -3.5,
+    "max_pct": -3.5,
+    "min_pct": -3.5,
+    "index_pct": -1.7
    }
   ],
   "au": []
