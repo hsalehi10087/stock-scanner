@@ -1,12 +1,15 @@
 {
  "date": "2026-10-31",
- "new": 10,
+ "new": 0,
  "log": [
+  "Congress S3 representative: HTTPError 403 Client Error: Forbidden for url: https://house-stock-wat",
+  "Congress S3 senator: HTTPError 403 Client Error: Forbidden for url: https://senate-stock-wa",
+  "Congress Finnhub probe: 403 {\"error\":\"You don't have access to this resource.\"}",
   "13F: 3 events",
   "ARK: first snapshot saved",
   "Congress: 0 events from 0 rows",
   "Insiders: 7 events",
-  "new events: 10 (total sources: 13F/ARK/Congress/Insiders)",
+  "new events: 0 (total sources: 13F/ARK/Congress/Insiders)",
   "select: 14/30 leaders pass (SPY 3y +87%)"
  ]
 }
