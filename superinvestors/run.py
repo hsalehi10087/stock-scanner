@@ -199,6 +199,9 @@ def main():
         results = diff_snapshots(prev, snap)
         for r in results:
             r['fa'] = FA_NAMES.get(r['code'], r['manager'])
+        if prev and not any(r['changes'] for r in results):
+            print('no trades above threshold today — nothing sent')      # فقط روزهایی که تغییری هست
+            return 0
         lines = build_daily(date_str, prev_date, results, snap)
 
     return 0 if send(chunks(lines), token, chat_ids) else 2

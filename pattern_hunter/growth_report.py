@@ -15,6 +15,7 @@ import intrinsic as IV  # noqa: E402
 
 FLAG = {'us': '🇺🇸', 'cn': '🇨🇳', 'in': '🇮🇳', 'jp': '🇯🇵', 'tw': '🇹🇼', 'kr': '🇰🇷', 'hk': '🇭🇰', 'gb': '🇬🇧',
         'de': '🇩🇪', 'ca': '🇨🇦', 'au': '🇦🇺'}
+MAX_CHARTS = 10
 CJK = re.compile(r'[぀-ヿ㐀-鿿가-힯＀-￯]')
 
 
@@ -67,7 +68,7 @@ def main():
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
     else:
-        L += ['🖼 <i>نمودار و تحلیل تکنیکال هر سهم (حمایت، مقاومت، سطح ابطال، RSI و حجم) در پیام‌های بعدی آمده است؛ هر نمودار با شرح همان سهم و به همین ترتیب.</i>', '']
+        L += ['🖼 <i>نمودار و تحلیل تکنیکال هر سهم (حمایت، مقاومت، سطح ابطال، RSI و حجم) برای ۱۰ سهم برتر در پیام‌های بعدی آمده است؛ هر نمودار با شرح همان سهم و به همین ترتیب.</i>', '']
     # پیگیری سیگنال‌های قبلی
     items = [dict(x, market=m) for m, xs in track.items() for x in xs]
     if items:
@@ -116,6 +117,13 @@ def build_charts(today):
     import tempfile
     import tech_chart as TC
     sig = [(m, i, s) for m in MARKETS for i, s in enumerate((today['markets'].get(m) or {}).get('signals', []), 1)]
+    # فقط ۱۰ سهم برتر نمودار می‌گیرند: بیشترین فیلتر بنیادی، بعد کیفیت رشد، بعد رتبه‌ی الگوی آماری
+    def strength(x):
+        q = re.search(r'⭐(\S)', x[2].get('quality') or '')
+        qn = int(q.group(1).translate(str.maketrans('۰۱۲۳۴۵', '012345'))) if q else 0
+        return (len(x[2]['fundamentals']), qn, x[2]['tech_rank'])
+    top = sorted(sig, key=strength, reverse=True)[:MAX_CHARTS]
+    sig = [x for x in sig if x in top]
     if not sig:
         return []
     try:
