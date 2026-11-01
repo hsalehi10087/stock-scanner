@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:26:19+00:00",
+ "updated": "2026-11-01T14:01:05+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -285,7 +285,7 @@
     "cagr": 1.92,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.16
+    "total": 21.15
    },
    "buyhold_full": {
     "cagr": 10.74,
@@ -557,6 +557,22 @@
    "reason_not_testable": "فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست"
   },
+  "5c1ca71228-paper-bot-competition-strategy9": {
+   "name": "Paper bot competition Strategy 9",
+   "name_fa": "ربات شماره‌ی ۹ در مسابقه‌ی حساب‌های آزمایشی",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/ai_trading/comments/1xjrrdr/day_7_of_my_papertrading_bot_competition_strategy/",
+   "claim": "«روز ۷ مسابقه‌ی ربات‌ها روی حساب آزمایشی: استراتژی ۹ هنوز ‎+1,608.66‎ دلار (‎+32.17%‎) سود دارد؛ موجودی ۶٬۶۰۸ دلار از ۵٬۰۰۰ دلار»",
+   "claimed_return": "+32.17% در ۷ روز (پول آزمایشی)",
+   "asset_class": "stock",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-01",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های ربات در متن نیامده؛ فقط سود روزانه‌ی یک هفته‌ی پول آزمایشی گزارش شده",
+   "verdict": "غیرقابل آزمون: قانون‌های ربات در متن نیامده؛ فقط سود روزانه‌ی یک هفته‌ی پول آزمایشی گزارش شده"
+  },
   "604f020263-return-stacking-rsst-gde-zroz": {
    "name": "Return stacking ETF mix",
    "name_fa": "سبد ثابت ETFهای انباشت بازده",
@@ -626,6 +642,27 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد",
    "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه است (داده‌ی رایگان چندساله‌ی دقیقه‌ای نداریم)؛ آزمون خود نویسنده هم لبه‌ای نشان نداد"
+  },
+  "706edcfd95-earnings-week-low-delta-puts-calls": {
+   "name": "Earnings-week low-delta puts and covered calls",
+   "name_fa": "فروش پوت کم‌دلتا و کال پوشش‌دار در هفته‌ی گزارش‌ها",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xkcary/36_options_picks_during_earnings_week_31_expired/",
+   "claim": "«۳۶ پیشنهاد آپشن در هفته‌ی گزارش‌های فصلی: ۳۱ تا بی‌ارزش منقضی شد و هر ۵ بازنده از قبل علامت خطر داشتند» — یک پوت کم‌دلتا و یک کال پوشش‌دار روی هر یک از ۱۸ نماد",
+   "claimed_return": "86% win rate (31/36)",
+   "asset_class": "option",
+   "symbols": [
+    "NVDA",
+    "TSM",
+    "RDDT",
+    "MRNA",
+    "TQQQ",
+    "SOFI"
+   ],
+   "added": "2026-11-01",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن است و قیمت تاریخی آپشن رایگان نیست؛ نتیجه فقط یک هفته است و انتخاب نماد سلیقه‌ای است",
+   "verdict": "غیرقابل آزمون: فروش آپشن است و قیمت تاریخی آپشن رایگان نیست؛ نتیجه فقط یک هفته است و انتخاب نماد سلیقه‌ای است"
   },
   "767a34abe8-signal-driver-retrace": {
    "name": "Signal Driver retrace strategy",
@@ -843,6 +880,22 @@
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست"
   },
+  "9c1ae51d61-private-breakout-ib": {
+   "name": "Private breakout strategy",
+   "name_fa": "روش شکست قیمت (قانون‌ها مخفی)",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xl03f5/first_full_month_live_with_my_own_breakout/",
+   "claim": "«در بک‌تست پنج‌ساله حدود ۲۰٪ بازده سالانه با بیشترین افت حدود ۱۶٪؛ ماه اول زنده ‎+930.76‎ دلار با ۱۷ معامله و ۴۷٫۱٪ برد»",
+   "claimed_return": "~20%/yr, max DD ~16%",
+   "asset_class": "stock",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-01",
+   "status": "not_testable",
+   "reason_not_testable": "نویسنده گفته قانون‌های دقیق را فاش نمی‌کند؛ بازار و نماد هم معلوم نیست",
+   "verdict": "غیرقابل آزمون: نویسنده گفته قانون‌های دقیق را فاش نمی‌کند؛ بازار و نماد هم معلوم نیست"
+  },
   "9f6727445a-vix-momentum-spy-gld-efa": {
    "name": "VIX momentum rotation SPY/GLD/EFA",
    "name_fa": "چرخش مومنتوم با رژیم VIX بین SPY و GLD و EFA",
@@ -890,42 +943,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.89,
+    "cagr": 66.87,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 83.65,
+    "cagr": 84.1,
     "sharpe": 1.43,
     "max_dd": -74.38,
-    "total": 17360.01
+    "total": 17755.82
    },
    "out_sample": {
-    "cagr": 36.69,
-    "sharpe": 1.09,
+    "cagr": 33.45,
+    "sharpe": 1.03,
     "max_dd": -35.7,
-    "total": 212.05
+    "total": 185.99
    },
    "buyhold_full": {
-    "cagr": 52.66,
+    "cagr": 52.71,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16831.44
+    "total": 16924.98
    },
    "buyhold_out_sample": {
-    "cagr": 41.0,
-    "sharpe": 0.98,
+    "cagr": 37.85,
+    "sharpe": 0.93,
     "max_dd": -53.06,
-    "total": 249.37
+    "total": 221.77
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-10-31",
-   "oos_start": "2023-03-13",
-   "forward_days": 6,
+   "period": "2014-09-17 → 2026-11-01",
+   "oos_start": "2023-03-14",
+   "forward_days": 7,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1040,6 +1093,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند"
+  },
+  "d3e7c94a6b-aot-mql5-fx-mean-reversion": {
+   "name": "AOT MQL5 FX mean-reversion EA",
+   "name_fa": "ربات بازگشت به میانگین AOT روی ۱۶ جفت‌ارز",
+   "source": "reddit/ForexTrading",
+   "source_url": "https://www.reddit.com/r/FOREXTRADING/comments/1xke09c/i_exported_all_324_live_trades_of_a_popular_mql5/",
+   "claim": "«بک‌تست سازنده: ۸۱٪ معامله‌ی برنده، ضریب سود ۱٫۸۶، بیشترین افت زیر ۴٪. حساب زنده (۱۰۰ هزار دلار، ۶۹ هفته): کل ‎+54%‎ — سال ۲۰۲۵ ‎+73%‎ و سال ۲۰۲۶ ‎−11%‎، بیشترین افت ۲۹٪»",
+   "claimed_return": "+54% live (backtest 81% win rate)",
+   "asset_class": "forex",
+   "symbols": [
+    "EURUSD=X"
+   ],
+   "added": "2026-11-01",
+   "status": "not_testable",
+   "reason_not_testable": "ربات تجاری است و قانون‌های ورود و خروج آن منتشر نشده",
+   "verdict": "غیرقابل آزمون: ربات تجاری است و قانون‌های ورود و خروج آن منتشر نشده"
   },
   "d5f29306af-nasdaq-stocks-rsi-17dd": {
    "name": "RSI strategy for Nasdaq 100 stocks",
