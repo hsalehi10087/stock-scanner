@@ -141,6 +141,51 @@ AI_ASSETS = [('gold', '🥇 طلا'), ('silver', '🥈 نقره'), ('bitcoin', '
 STANCE = {'صعودی': '🟢', 'نزولی': '🔴', 'خنثی': '⚪', 'دوگانه': '🟡'}
 
 
+SCORE = {}
+YF = {'gold': 'GC=F', 'silver': 'SI=F', 'bitcoin': 'BTC-USD', 'copper': 'HG=F', 'oil': 'CL=F', 'rates': '^TNX'}
+
+
+def scorecard(days=30, horizon=7):
+    """کارنامه‌ی نظر تحلیلگران: نظر صعودی/نزولی هر روز در برابر تغییر واقعی قیمت ۷ روز بعد.
+    خروجی {asset: (درست، کل، بازده ۷ روز اخیر)}."""
+    import glob
+    import yfinance as yf
+    vdir = os.path.dirname(VIEWS)
+    files = sorted(glob.glob(os.path.join(vdir, '20*.json')))
+    today = dt.date.today()
+    out = {}
+    try:
+        df = yf.download(list(YF.values()), period='3mo', interval='1d', progress=False, auto_adjust=True)['Close']
+    except Exception:
+        return out
+    for key, sym in YF.items():
+        c = df[sym].dropna() if sym in df else None
+        if c is None or len(c) < horizon + 2:
+            continue
+        hit = tot = 0
+        for f in files:
+            d = dt.date.fromisoformat(os.path.basename(f)[:10])
+            if not (today - dt.timedelta(days=days + horizon) <= d <= today - dt.timedelta(days=horizon)):
+                continue
+            try:
+                st = (json.load(open(f, encoding='utf-8')).get('assets') or {}).get(key, {}).get('stance')
+            except Exception:
+                continue
+            if st not in ('صعودی', 'نزولی'):
+                continue
+            a = c[c.index <= str(d)]
+            b = c[c.index <= str(d + dt.timedelta(days=horizon))]
+            if not len(a) or not len(b):
+                continue
+            up = b.iloc[-1] > a.iloc[-1]
+            tot += 1
+            hit += (up == (st == 'صعودی'))
+        w = c[c.index <= str(today - dt.timedelta(days=horizon))]
+        r7 = (c.iloc[-1] / w.iloc[-1] - 1) * 100 if len(w) else None
+        out[key] = (hit, tot, r7)
+    return out
+
+
 def analyst_section():
     """نظر تحلیلگران که کار روزانه‌ی Claude از متن خبرها درک و خلاصه کرده (اگر تازه باشد)."""
     try:
@@ -153,6 +198,11 @@ def analyst_section():
         return None
     if age > 0:   # فقط نظرهای امروز؛ اگر کار روزانه اجرا نشده بود، روش قدیمی کلیدواژه‌ای جایگزین می‌شود
         return None
+    global SCORE
+    try:
+        SCORE = scorecard()
+    except Exception:
+        SCORE = {}
     lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {str(v.get('articles_read', '؟')).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))} خبر و تحلیل ۲۴ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
     for key, label in AI_ASSETS:
         a = (v.get('assets') or {}).get(key)
@@ -169,6 +219,12 @@ def analyst_section():
             cnt_txt = f"صعودی {d(cnt.get('bull', 0))}، نزولی {d(cnt.get('bear', 0))}، خنثی {d(cnt.get('neutral', 0))}"
         lines.append(f"• <b>{label}</b> — {tag} ({cnt_txt}): "
                      f"{html.escape(a.get('summary_fa', ''))}")
+        sc = SCORE.get(key)
+        if sc:
+            hit, tot, r7 = sc
+            r7t = f"{r7:+.1f}" if r7 is not None else '—'
+            acc = f"دقت نظرها در ۳۰ روز: {hit} از {tot}" if tot else 'کارنامه هنوز کافی نیست'
+            lines.append(f"   📏 <i>۷ روز اخیر: {r7t}٪ | {acc}</i>".translate(str.maketrans('0123456789.', '۰۱۲۳۴۵۶۷۸۹٫')))
         for w in (a.get('views') or [])[:2]:
             who = html.escape(w.get('who', ''))
             url = w.get('url', '')
