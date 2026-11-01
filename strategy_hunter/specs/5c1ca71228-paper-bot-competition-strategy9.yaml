@@ -1,0 +1,12 @@
+id: 5c1ca71228-paper-bot-competition-strategy9
+name: Paper bot competition Strategy 9
+name_fa: ربات شماره‌ی ۹ در مسابقه‌ی حساب‌های آزمایشی
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/ai_trading/comments/1xjrrdr/day_7_of_my_papertrading_bot_competition_strategy/
+claim: "«روز ۷ مسابقه‌ی ربات‌ها روی حساب آزمایشی: استراتژی ۹ هنوز ‎+1,608.66‎ دلار (‎+32.17%‎) سود دارد؛ موجودی ۶٬۶۰۸ دلار از ۵٬۰۰۰ دلار»"
+claimed_return: "+32.17% در ۷ روز (پول آزمایشی)"
+added: 2026-11-01
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "قانون‌های ربات در متن نیامده؛ فقط سود روزانه‌ی یک هفته‌ی پول آزمایشی گزارش شده"

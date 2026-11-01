@@ -1,0 +1,12 @@
+id: d3e7c94a6b-aot-mql5-fx-mean-reversion
+name: AOT MQL5 FX mean-reversion EA
+name_fa: ربات بازگشت به میانگین AOT روی ۱۶ جفت‌ارز
+source: reddit/ForexTrading
+source_url: https://www.reddit.com/r/FOREXTRADING/comments/1xke09c/i_exported_all_324_live_trades_of_a_popular_mql5/
+claim: "«بک‌تست سازنده: ۸۱٪ معامله‌ی برنده، ضریب سود ۱٫۸۶، بیشترین افت زیر ۴٪. حساب زنده (۱۰۰ هزار دلار، ۶۹ هفته): کل ‎+54%‎ — سال ۲۰۲۵ ‎+73%‎ و سال ۲۰۲۶ ‎−11%‎، بیشترین افت ۲۹٪»"
+claimed_return: "+54% live (backtest 81% win rate)"
+added: 2026-11-01
+status: not_testable
+asset_class: forex
+symbols: [EURUSD=X]
+reason_not_testable: "ربات تجاری است و قانون‌های ورود و خروج آن منتشر نشده"
