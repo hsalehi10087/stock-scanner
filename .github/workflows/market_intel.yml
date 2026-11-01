@@ -1,8 +1,7 @@
 name: 🧭 Market Intel (Finnhub)
 
 on:
-  schedule:
-    - cron: '30 1 * * *'  # هر روز ساعت ۵:۰۰ صبح تهران (۰۱:۳۰ UTC)
+  # زمان‌بندی به ☀️ morning_digest.yml منتقل شد (گزارش صبحگاهی یکجا)
   workflow_dispatch:
     inputs:
       token:
