@@ -1,48 +1,48 @@
-2026-11-01 06:07 raw={'reddit': 49, 'rss_sites': 67, 'hackernews': 62, 'stackexchange': 50, 'medium': 67, 'devto': 73, 'forex': 118} new_claims=11
-200 https://www.reddit.com/r/algotrading/top/.rss len=12509 try=1
-429 https://www.reddit.com/r/Daytrading/top/.rss len=0 try=1
-200 https://www.reddit.com/r/Daytrading/top/.rss len=62786 try=2
-200 https://www.reddit.com/r/Forex/top/.rss len=8468 try=1
-429 https://www.reddit.com/r/options/top/.rss len=0 try=1
-200 https://www.reddit.com/r/options/top/.rss len=11640 try=2
+2026-11-01 13:25 raw={'reddit': 54, 'rss_sites': 67, 'hackernews': 46, 'stackexchange': 50, 'medium': 68, 'devto': 71, 'forex': 116} new_claims=6
+200 https://www.reddit.com/r/Forex/top/.rss len=6632 try=1
+200 https://www.reddit.com/r/options/top/.rss len=15576 try=1
 429 https://www.reddit.com/r/thetagang/top/.rss len=0 try=1
-200 https://www.reddit.com/r/thetagang/top/.rss len=18877 try=2
-200 https://www.reddit.com/r/swingtrading/top/.rss len=9843 try=1
+200 https://www.reddit.com/r/thetagang/top/.rss len=21954 try=2
+200 https://www.reddit.com/r/swingtrading/top/.rss len=6052 try=1
 429 https://www.reddit.com/r/CryptoMarkets/top/.rss len=0 try=1
-SKIP https://www.reddit.com/r/CryptoMarkets/top/.rss (Reddit time budget used)
-SKIP https://www.reddit.com/r/Trading/top/.rss (Reddit time budget used)
+200 https://www.reddit.com/r/CryptoMarkets/top/.rss len=17167 try=2
+429 https://www.reddit.com/r/Trading/top/.rss len=0 try=1
+200 https://www.reddit.com/r/Trading/top/.rss len=71120 try=2
+200 https://www.reddit.com/r/algotrading/top/.rss len=12163 try=1
+SKIP https://www.reddit.com/r/Daytrading/top/.rss (Reddit time budget used)
 200 https://www.quantifiedstrategies.com/feed/ len=1980
 200 https://quantpedia.com/feed/ len=16655
 403 https://forums.babypips.com/latest.rss len=5578
-200 https://www.elitetrader.com/et/forums/-/index.rss len=18766
-200 https://www.tradingview.com/feed/?sort=recent len=229098
+200 https://www.elitetrader.com/et/forums/-/index.rss len=19757
+200 https://www.tradingview.com/feed/?sort=recent len=134677
 200 https://robotwealth.com/feed/ len=19737
-404 https://www.forexfactory.com/rss.php len=40994
-200 https://hn.algolia.com/api/v1/search_by_date len=56467
-200 https://hn.algolia.com/api/v1/search_by_date len=49792
-200 https://hn.algolia.com/api/v1/search_by_date len=75090
+404 https://www.forexfactory.com/rss.php len=40884
+200 https://hn.algolia.com/api/v1/search_by_date len=18054
+200 https://hn.algolia.com/api/v1/search_by_date len=49796
+200 https://hn.algolia.com/api/v1/search_by_date len=67146
 200 https://api.stackexchange.com/2.3/search/excerpts len=165650
 200 https://medium.com/feed/tag/trading-strategy len=18487
-200 https://medium.com/feed/tag/algorithmic-trading len=16819
-200 https://medium.com/feed/tag/forex-trading len=14905
-200 https://medium.com/feed/tag/crypto-trading len=14666
-200 https://medium.com/feed/tag/options-trading len=16488
-200 https://medium.com/feed/tag/day-trading len=15676
-200 https://medium.com/feed/tag/backtesting len=14605
+200 https://medium.com/feed/tag/algorithmic-trading len=17297
+200 https://medium.com/feed/tag/forex-trading len=14772
+200 https://medium.com/feed/tag/crypto-trading len=16280
+200 https://medium.com/feed/tag/options-trading len=16370
+200 https://medium.com/feed/tag/day-trading len=15585
+200 https://medium.com/feed/tag/backtesting len=14682
 200 https://dev.to/api/articles len=66381
-200 https://dev.to/api/articles len=23364
+200 https://dev.to/api/articles len=18883
 200 https://dev.to/api/articles len=3975
 200 https://dev.to/api/articles len=66214
-200 https://www.reddit.com/search.rss len=24461 try=1
 429 https://www.reddit.com/search.rss len=0 try=1
-200 https://www.reddit.com/search.rss len=154199 try=2
+200 https://www.reddit.com/search.rss len=159061 try=2
 200 https://www.reddit.com/search.rss len=118138 try=1
-429 https://www.reddit.com/r/Forex_Trading/top/.rss len=0 try=1
-200 https://www.reddit.com/r/Forex_Trading/top/.rss len=687 try=2
-200 https://www.reddit.com/r/ForexTrading/top/.rss len=10474 try=1
+429 https://www.reddit.com/search.rss len=0 try=1
+200 https://www.reddit.com/search.rss len=24461 try=2
+200 https://www.reddit.com/r/ForexTrading/top/.rss len=6722 try=1
 429 https://www.reddit.com/r/Forexstrategy/top/.rss len=0 try=1
 SKIP https://www.reddit.com/r/Forexstrategy/top/.rss (Reddit time budget used)
-200 https://medium.com/feed/tag/forex len=15829
+429 https://www.reddit.com/r/Forex_Trading/top/.rss len=0 try=1
+SKIP https://www.reddit.com/r/Forex_Trading/top/.rss (Reddit time budget used)
+200 https://medium.com/feed/tag/forex len=14215
 200 https://medium.com/feed/tag/forex-strategy len=15362
 200 https://www.mql5.com/en/articles/rss len=3885
 200 https://api.stackexchange.com/2.3/search/excerpts len=52810
