@@ -189,8 +189,40 @@ def congress_s3(days):
     return rows
 
 
+def congress_capitol(days, max_pages=40):
+    """Capitol Trades (bff.capitoltrades.com) — افشای معاملات کنگره → همان قالب Finnhub."""
+    cut = str(dt.date.today() - dt.timedelta(days=days))
+    rows = []
+    for page in range(1, max_pages + 1):
+        try:
+            r = requests.get('https://bff.capitoltrades.com/trades', headers=dict(UA, Accept='application/json'),
+                             params={'pageSize': 100, 'page': page}, timeout=30)
+            r.raise_for_status()
+            data = r.json().get('data') or []
+        except Exception as e:
+            log(f'Congress CapitolTrades p{page}: {type(e).__name__} {str(e)[:60]}')
+            break
+        if not data:
+            break
+        oldest = None
+        for x in data:
+            pol = x.get('politician') or {}
+            name = ' '.join(filter(None, [pol.get('firstName'), pol.get('lastName')])) or pol.get('fullName')
+            t = str((x.get('issuer') or {}).get('issuerTicker') or '').split(':')[0].upper()
+            d = str(x.get('txDate') or '')[:10]
+            oldest = d if not oldest or d < oldest else oldest
+            if name and d >= cut and TICKER.match(t):
+                rows.append({'name': name, 'symbol': t, 'transactionDate': d,
+                             'transactionType': 'Purchase' if x.get('txType') == 'buy' else ('Sale' if x.get('txType') == 'sell' else x.get('txType', ''))})
+        if oldest and oldest < cut:
+            break
+        time.sleep(1)
+    log(f'Congress CapitolTrades: {len(rows)} rows')
+    return rows
+
+
 def congress_trades(days):
-    rows = congress_s3(days)
+    rows = congress_capitol(days, max_pages=200 if days > 60 else 20) or congress_s3(days)
     key = os.getenv('FINNHUB_API_KEY', '')
     if rows or not key:
         return rows
