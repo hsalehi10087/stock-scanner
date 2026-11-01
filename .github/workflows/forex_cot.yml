@@ -1,0 +1,51 @@
+name: 💱 Forex COT (weekly, Saturday 08:00 Tehran)
+
+on:
+  schedule:
+    - cron: '30 4 * * 6'   # شنبه ۰۸:۰۰ تهران؛ گزارش COT جمعه‌شب منتشر می‌شود
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forex-cot
+  cancel-in-progress: false
+
+jobs:
+  cot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q pandas numpy requests yfinance
+      - name: Fetch, test, signal, report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+          OANDA_TOKEN: ${{ secrets.OANDA_TOKEN }}
+          OANDA_ACCOUNT: ${{ secrets.OANDA_ACCOUNT }}
+          PYTHONWARNINGS: ignore
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 forex/cot.py fetch
+          python3 forex/cot.py backtest
+          python3 forex/cot.py weekly
+          python3 forex/cot.py report
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Forex COT"
+          git add -f data/forex || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "💱 forex cot $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
