@@ -1,29 +1,29 @@
 {
- "date": "2026-10-31",
+ "date": "2026-11-01",
  "first_pick_date": "2026-10-23",
- "days_measured": 6,
- "portfolio_pct": 3.5,
+ "days_measured": 7,
+ "portfolio_pct": -4.3,
  "benchmarks_pct": {
-  "QQQ": 4.2,
-  "SMH": 13.1
+  "QQQ": 0.5,
+  "SMH": 5.2
  },
- "hit_rate_vs_qqq_pct": 17.0,
+ "hit_rate_vs_qqq_pct": 14.0,
  "per_ticker": [
   {
    "ticker": "AAOI",
    "from": "2026-10-23",
-   "to": "2026-10-29",
+   "to": "2026-10-30",
    "in_list_now": true,
-   "ret_pct": 17.3,
-   "qqq_same_period_pct": 1.6
+   "ret_pct": 2.3,
+   "qqq_same_period_pct": -2.0
   },
   {
    "ticker": "APLD",
    "from": "2026-10-23",
-   "to": "2026-10-29",
+   "to": "2026-10-30",
    "in_list_now": true,
-   "ret_pct": 6.4,
-   "qqq_same_period_pct": 1.6
+   "ret_pct": -2.4,
+   "qqq_same_period_pct": -2.0
   },
   {
    "ticker": "INOD",
@@ -36,26 +36,26 @@
   {
    "ticker": "IONQ",
    "from": "2026-10-23",
-   "to": "2026-10-29",
+   "to": "2026-10-30",
    "in_list_now": true,
-   "ret_pct": 1.4,
-   "qqq_same_period_pct": 1.6
+   "ret_pct": -3.9,
+   "qqq_same_period_pct": -2.0
   },
   {
    "ticker": "SITM",
    "from": "2026-10-23",
-   "to": "2026-10-29",
+   "to": "2026-10-30",
    "in_list_now": true,
-   "ret_pct": 6.1,
-   "qqq_same_period_pct": 1.6
+   "ret_pct": -2.9,
+   "qqq_same_period_pct": -2.0
   },
   {
    "ticker": "SOUN",
    "from": "2026-10-29",
-   "to": "2026-10-29",
+   "to": "2026-10-30",
    "in_list_now": true,
-   "ret_pct": 0.0,
-   "qqq_same_period_pct": 0.0
+   "ret_pct": -3.2,
+   "qqq_same_period_pct": -3.5
   }
  ],
  "note": "وزن برابر، ورود با بسته‌شدن روز انتشار، بدون هزینه‌ی معامله"
