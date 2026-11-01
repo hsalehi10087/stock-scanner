@@ -172,11 +172,12 @@ def backtest():
         res[name] = {'train': stats(s[s.index < split]), 'test': stats(s[s.index >= split]), 'full': stats(s)}
     bh = R.mean(axis=1)                                # مقایسه: خرید همه‌ی ارزها در برابر دلار
     res['_buy_all_vs_usd'] = {'train': stats(bh[bh.index < split]), 'test': stats(bh[bh.index >= split]), 'full': stats(bh)}
-    # انتخاب: بهترین Sharpe در دوره‌ی آموزش؛ «قبول» فقط اگر در آزمون جدا هم Sharpe ≥ ۰٫۳ و CAGR > ۰ و ریزش کمتر از ۲۵٪
+    # انتخاب: بهترین Sharpe در دوره‌ی آموزش
     cands = {k: v for k, v in res.items() if not k.startswith('_') and v['train'] and v['test']}
     best = max(cands, key=lambda k: cands[k]['train']['sharpe'])
-    t = cands[best]['test']
-    verdict = 'قبول' if t['sharpe'] >= 0.3 and t['cagr'] > 0 and t['max_dd'] > -25 else 'رد'
+    t, tr = cands[best]['test'], cands[best]['train']
+    # قبول فقط اگر در هر دو دوره مثبت باشد (Sharpe آموزش ≥ ۰٫۲، آزمون ≥ ۰٫۳، سود سالانه‌ی آزمون ≥ ۱٪، ریزش < ۲۵٪)
+    verdict = 'قبول' if tr['sharpe'] >= 0.2 and t['sharpe'] >= 0.3 and t['cagr'] >= 1.0 and t['max_dd'] > -25 else 'رد'
     out = {'date': str(dt.date.today()), 'split': str(split)[:10], 'rules': res, 'chosen': best, 'verdict': verdict}
     json.dump(out, open(os.path.join(OUT, 'backtest.json'), 'w'), ensure_ascii=False, indent=1)
     log(json.dumps({k: v['test'] for k, v in res.items()}, ensure_ascii=False))
