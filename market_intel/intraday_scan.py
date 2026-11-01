@@ -281,65 +281,72 @@ def main():
 
     state = load_json(STATE, {})
     sent = state.get(str(today), {})
+    pending = state.get('pending_' + str(today), [])      # هشدارهای عادی امروز برای خلاصه‌ی پایان روز
+    last_run = force or mins >= 370                        # آخرین اجرای روز (۱۵:۴۰ به بعد نیویورک)
     new = []
     for s in syms:
         for code, d in signals(s, data.get(s), today, frac, watched):
             if code in sent.get(s, []):
                 continue
             new.append((code, s, d))
-    if not new:
-        print('no new signals')
-        return
+    t_teh = dt.datetime.now(TEH)
+    stamp = f'{fa(now.strftime("%H:%M"))} نیویورک ({fa(t_teh.strftime("%H:%M"))} تهران)'
 
-    groups = {}
+    def line(s, d, rvol, tag):
+        return f'{s} {fa(round(d["price"], 2))}$ {pct(d["chg"])} | حجم {fa(round(rvol, 1))} برابر{tag}'
+
+    def with_iv(x):                                         # ارزش ذاتی فقط برای سطرهایی که فرستاده می‌شوند
+        try:
+            ivr = IV.label(IV.value(x['ticker'], x['price']))
+        except Exception:
+            ivr = IV.label(None)
+        return x['line'] + f'\n   💎 {ivr}'
+
+    urgent, normal = [], []
     for code, s, d in new:
         tag, score = fund_tag(finfo.get(s))
-        groups.setdefault(code, []).append((score, d['rvol'], s, d, tag))
-    lines_left = MAX_LINES
-    t_teh = dt.datetime.now(TEH)
-    msg = [f'⚡ اسکن ساعتی بازار آمریکا — {fa(now.strftime("%H:%M"))} نیویورک ({fa(t_teh.strftime("%H:%M"))} تهران)',
-           f'{fa(fresh)} سهم بررسی شد؛ فقط هشدارهای تازه‌ی امروز.', '']
-    sent_now = []
-    for code in ('hi52', 'hi20', 'surge', 'drop', 'ma50'):
-        items = sorted(groups.get(code, []), key=lambda x: (-x[0], -x[1]))
-        if not items:
-            continue
-        if code in ('hi52', 'hi20', 'surge'):
-            items = items[:max(lines_left, 0)]
-            lines_left -= len(items)
-        if not items:
-            continue
-        msg.append(LABELS[code])
-        for score, rvol, s, d, tag in items:
-            try:
-                ivr = IV.label(IV.value(s, d['price']))
-            except Exception:
-                ivr = IV.label(None)
-            msg.append(f'{s} {fa(round(d["price"], 2))}$ {pct(d["chg"])} | حجم {fa(round(rvol, 1))} برابر{tag}\n   💎 {ivr}')
-            sent_now.append((s, code))
-        msg.append('')
-    skipped = len(new) - len(sent_now)
-    if skipped > 0:
-        msg.append(f'(+{fa(skipped)} هشدار دیگر با اولویت کمتر)')
-    msg.append('⭐ = رشد فروش/سود یا تأیید شکارچی الگو. حجم = حجم پیش‌بینی‌شده‌ی امروز نسبت به میانگین ۲۰ روزه.')
-    msg.append(IV.LEGEND)
-    msg.append('هشدار است، نه توصیه‌ی خرید. داده با حدود ۱۵ دقیقه تأخیر.')
+        item = {'code': code, 'ticker': s, 'score': score, 'rvol': d['rvol'], 'line': line(s, d, d['rvol'], tag),
+                'time': now.strftime('%H:%M'), 'price': round(d['price'], 2), 'chg': round(d['chg'], 2)}
+        (urgent if score >= 2 or code in ('drop', 'ma50') else normal).append(item)
+        sent.setdefault(s, []).append(code)
+    pending += normal
+
+    def block(items, cap=None):
+        out = []
+        for code in ('hi52', 'hi20', 'surge', 'drop', 'ma50'):
+            its = sorted([x for x in items if x['code'] == code], key=lambda x: (-x['score'], -x['rvol']))
+            if cap:
+                its = its[:cap]
+            if its:
+                out.append(LABELS[code])
+                out += [with_iv(x) for x in its]
+                out.append('')
+        return out
+
+    msgs = []
+    if urgent:   # فوری: سهم‌های ⭐ (رشد فروش/سود یا تأیید شکارچی الگو) و هشدار ریسک سهم‌های زیر نظر
+        msgs.append([f'⚡ <b>هشدار فوری</b> — {stamp}', ''] + block(urgent) + [IV.LEGEND])
+    if last_run and pending:
+        msgs.append([f'🌙 <b>خلاصه‌ی اسکن ساعتی امروز</b> — {stamp}',
+                     f'{fa(len(pending))} هشدار عادی امروز (بدون ⭐)؛ هشدارهای فوری جدا فرستاده شده بودند.', '']
+                    + block(pending, cap=8)
+                    + ['⭐ = رشد فروش/سود یا تأیید شکارچی الگو. حجم = حجم پیش‌بینی‌شده‌ی روز نسبت به میانگین ۲۰ روزه.',
+                       IV.LEGEND, 'هشدار است، نه توصیه‌ی خرید. داده با حدود ۱۵ دقیقه تأخیر.'])
     IV.save()
-
-    if sent_now and tg('\n'.join(msg)):
-        for s, code in sent_now:
-            sent.setdefault(s, []).append(code)
-        state = {str(today): sent}                    # فقط روز جاری نگه داشته می‌شود
-        os.makedirs(OUT_DIR, exist_ok=True)
-        with open(STATE, 'w', encoding='utf-8') as f:
-            json.dump(state, f, ensure_ascii=False, indent=0)
-        with open(os.path.join(OUT_DIR, f'{today}.jsonl'), 'a', encoding='utf-8') as f:
-            for code, s, d in new:
-                if (s, code) in sent_now:
-                    f.write(json.dumps({'time': now.strftime('%H:%M'), 'ticker': s, 'signal': code,
-                                        'price': round(d['price'], 2), 'chg': round(d['chg'], 2),
-                                        'rvol': round(d['rvol'], 2), 'src': src}) + '\n')
-
+    ok = all(tg('\n'.join(m)) for m in msgs) if msgs else True
+    if not ok:
+        return
+    if last_run and pending:
+        pending = []
+    state = {str(today): sent, 'pending_' + str(today): pending}     # فقط روز جاری
+    os.makedirs(OUT_DIR, exist_ok=True)
+    with open(STATE, 'w', encoding='utf-8') as f:
+        json.dump(state, f, ensure_ascii=False, indent=0)
+    with open(os.path.join(OUT_DIR, f'{today}.jsonl'), 'a', encoding='utf-8') as f:
+        for x in urgent + normal:
+            f.write(json.dumps({'time': x['time'], 'ticker': x['ticker'], 'signal': x['code'], 'price': x['price'],
+                                'chg': x['chg'], 'rvol': round(x['rvol'], 2), 'urgent': x in urgent, 'src': src}) + '\n')
+    print(f'urgent {len(urgent)} | normal {len(normal)} | summary {"sent" if last_run else "later"}')
 
 if __name__ == '__main__':
     main()
