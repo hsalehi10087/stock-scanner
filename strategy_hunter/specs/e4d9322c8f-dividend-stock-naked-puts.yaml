@@ -1,0 +1,12 @@
+id: e4d9322c8f-dividend-stock-naked-puts
+name: Naked puts on dividend stocks
+name_fa: فروش پوت بدون پوشش روی سهام سود‌ده
+source: elitetrader
+source_url: https://www.elitetrader.com/et/threads/20-30-return-journal.387413/
+claim: "«ژورنال بازده ۲۰ تا ۳۰ درصد: فروش پوت بدون پوشش روی سهامی که سود نقدی خوب می‌دهند»"
+claimed_return: "20–30% target"
+added: 2026-10-31
+status: not_testable
+asset_class: option
+symbols: [SPY]
+reason_not_testable: "فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است"

@@ -1,0 +1,12 @@
+id: 9c1ae51d61-private-breakout-ib
+name: Private breakout strategy
+name_fa: روش شکست قیمت (قانون‌ها مخفی)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xl03f5/first_full_month_live_with_my_own_breakout/
+claim: "«در بک‌تست پنج‌ساله حدود ۲۰٪ بازده سالانه با بیشترین افت حدود ۱۶٪؛ ماه اول زنده ‎+930.76‎ دلار با ۱۷ معامله و ۴۷٫۱٪ برد»"
+claimed_return: "~20%/yr, max DD ~16%"
+added: 2026-11-01
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "نویسنده گفته قانون‌های دقیق را فاش نمی‌کند؛ بازار و نماد هم معلوم نیست"

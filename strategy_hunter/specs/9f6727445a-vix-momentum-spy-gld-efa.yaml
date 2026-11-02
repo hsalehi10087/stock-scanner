@@ -1,0 +1,12 @@
+id: 9f6727445a-vix-momentum-spy-gld-efa
+name: VIX momentum rotation SPY/GLD/EFA
+name_fa: چرخش مومنتوم با رژیم VIX بین SPY و GLD و EFA
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/does-this-vix-momentum-strategy-still-work/
+claim: "«آیا این استراتژی مومنتوم VIX هنوز کار می‌کند؟ (بازده ۱۴٪)» — ۶۴ معامله، ۷۳٪ برد، بازده سالانه ۱۴٫۶٪، بیشترین افت ۳۵٪"
+claimed_return: "14.6%/yr, max DD 35%"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [SPY, GLD, EFA]
+reason_not_testable: "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست"

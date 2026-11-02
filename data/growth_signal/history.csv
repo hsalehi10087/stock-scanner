@@ -87,3 +87,29 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-10-30,ca,KEL.TO,KELT EXPLORATION LTD,11.84,36249.0,trend|longpat,کن‌اسلیم,3,0.966,شکست سقف ۵۲ هفته,1.7
 2026-10-30,ca,VLE.TO,VALEURA ENERGY INC,17.22,36249.0,trend|longpat,کیفیت رشد,5,0.96,فنجان‌ودسته (شکست سقف),2.5
 2026-10-30,ca,MTL.TO,MULLEN GROUP LTD.,29.86,36249.0,trend|longpat,کیفیت رشد,4,0.936,شکست سقف ۵۲ هفته,1.7
+2026-10-31,us,BTSG,BrightSpring Health Services,66.89,755.72,breakout|trend|longpat,کیفیت رشد,4,0.792,سرووشانه معکوس (شکست)، مثلث صعودی,3.0
+2026-10-31,us,EXEL,Exelixis,69.39,755.72,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد,5,0.685,شکست سقف ۵۲ هفته,1.7
+2026-10-31,us,MANH,Manhattan Associates,248.39,755.72,breakout|trend|longpat,بافت,3,0.656,شکست سقف ۵۲ هفته,1.7
+2026-10-31,us,MD,Pediatrix Medical Group,29.82,755.72,breakout|trend|longpat,کیفیت رشد,4,0.588,شکست سقف ۵۲ هفته,1.7
+2026-10-31,us,XOM,ExxonMobil,187.25,755.72,breakout|trend|longpat,کیفیت رشد,4,0.478,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
+2026-10-31,us,NDAQ,"Nasdaq, Inc.",106.23,755.72,breakout|trend|longpat,کن‌اسلیم|بافت|کیفیت رشد,4,0.332,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,2.2
+2026-10-31,us,THG,Hanover Insurance,242.09,755.72,breakout|trend|longpat,بافت|کیفیت رشد,4,0.226,شکست سقف ۵۲ هفته,1.7
+2026-10-31,us,LXP,Lexington Realty Trust,61.18,755.72,breakout|trend|longpat,کن‌اسلیم,3,0.215,شکست سقف ۵۲ هفته,1.7
+2026-10-31,in,TANLA.NS,Tanla Platforms Ltd.,627.15,23053.0996,breakout|trend|longpat,بافت,2,0.856,کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته,2.2
+2026-10-31,in,ZYDUSLIFE.NS,Zydus Lifesciences Ltd.,1245.5,23053.0996,breakout|trend|longpat,بافت,3,0.089,شکست سقف ۵۲ هفته,1.7
+2026-10-31,in,SHILPAMED.NS,Shilpa Medicare Ltd.,955.6,23053.0996,trend|pullback,کیفیت رشد,4,0.9,روند صعودی,1.0
+2026-10-31,in,SHREEJISPG.NS,Shreeji Shipping Global Ltd.,843.3,23053.0996,trend|longpat,بافت,3,0.779,شکست سقف ۵۲ هفته,1.7
+2026-10-31,in,GRWRHITECH.NS,Garware Hi-Tech Films Ltd.,6974.5,23053.0996,trend|pullback,صورت مالی|بافت,3,0.429,روند صعودی,1.0
+2026-10-31,in,INDHOTEL.NS,Indian Hotels Co. Ltd.,811.65,23053.0996,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.252,فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته,2.7
+2026-10-31,jp,9110.T,NS UNITED KAIUN KA,10540.0,2496.0,trend|vcp|pullback|longpat,صورت مالی,3,0.057,شکست سقف ۵۲ هفته,1.7
+2026-10-31,jp,3968.T,SEGUE GROUP CO LTD,811.0,2496.0,trend|longpat,کن‌اسلیم|بافت,1,0.979,سرووشانه، سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف),3.0
+2026-10-31,tw,2606.TW,U-MING MARINE TRANSPORT CORP,76.0,65.6,trend|pullback|longpat,بافت,1,0.859,کف دوقلو (شکست خط گردن),2.5
+2026-10-31,tw,2883.TW,KGI FINANCIAL HOLDING CO LTD,37.8,65.6,trend|pullback|longpat,بافت,1,0.667,مثلث صعودی,2.0
+2026-10-31,tw,2891.TW,CTBC FINANCIAL HOLDINGS COMPANY,75.8,65.6,breakout|trend|longpat,بافت,0,0.515,شکست سقف ۵۲ هفته,1.7
+2026-10-31,tw,6214.TW,SYSTEX CORPORATION,201.0,65.6,trend|vcp|longpat,صورت مالی,1,0.334,شکست سقف ۵۲ هفته,1.7
+2026-10-31,tw,8996.TW,KAORI HEAT TREATMENT CO,1435.0,65.6,trend|pullback|longpat,صورت مالی,2,0.108,سرووشانه معکوس,2.0
+2026-10-31,tw,6894.TWO,WRT,396.0,65.6,trend|longpat,صورت مالی|بافت,1,0.897,فنجان‌ودسته (شکست سقف),2.5
+2026-10-31,tw,1714.TW,HO TUNG CHEMICAL CORP,17.45,65.6,trend|pullback,صورت مالی,2,0.894,روند صعودی,1.0
+2026-10-31,tw,2465.TW,LEADTEK RESEARCH,102.0,65.6,trend|longpat,صورت مالی,2,0.858,شکست سقف ۵۲ هفته,1.7
+2026-10-31,de,BFSA.DE,Befesa,37.0,25818.2109,trend|longpat,کن‌اسلیم,3,0.86,سقف دوقلو (هشدار)، سرووشانه معکوس، مثلث صعودی,2.5
+2026-10-31,ca,CEU.TO,CES ENERGY SOLUTIONS CORP,20.96,35620.0,trend|longpat,کیفیت رشد,4,0.906,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0

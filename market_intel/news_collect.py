@@ -36,7 +36,7 @@ BROWSER = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
                          'Chrome/124.0 Safari/537.36', 'Accept-Language': 'en-US,en;q=0.9'}
 ENRICH_MAX = int(os.getenv('NEWS_ENRICH_MAX', '120'))      # حداکثر خبر برای گرفتن متن در هر اجرا
 ENRICH_SECONDS = int(os.getenv('NEWS_ENRICH_SECONDS', '360'))
-BODY_CHARS = 2000
+BODY_CHARS = 4000
 ASSETS = {
     'gold': r'\b(gold|bullion|xau)\b',
     'silver': r'\b(silver|xag)\b',

@@ -1,8 +1,7 @@
 name: 🔍 Pattern Hunter — daily picks and report (≈07:00 Tehran)
 
 on:
-  schedule:
-    - cron: '0 3 * * 2-6'   # ۰۶:۳۰ تهران، سه‌شنبه تا شنبه (بعد از جلسه‌های دوشنبه تا جمعه)
+  # زمان‌بندی روزانه به digest2.yml منتقل شد (اسکن + گزارش در «گزارش میان‌صبح»)؛ این گردش‌کار فقط دستی است
   workflow_dispatch:
     inputs:
       chat_id:
@@ -39,7 +38,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
-          if [ "${{ github.event.inputs.only_report }}" != "true" ]; then python3 pattern_hunter/report.py || echo "pattern report failed"; fi
+          # گزارش جداگانه‌ی الگویاب دیگر فرستاده نمی‌شود؛ رتبه‌ی الگوی آماری داخل گزارش «احتمال رشد» آمده است
           python3 pattern_hunter/growth_report.py
       - name: Save
         if: always()

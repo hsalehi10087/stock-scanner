@@ -8,6 +8,8 @@
   python3 tools/news_digest.py                 # ۳۶ ساعت اخیر، همه‌ی دارایی‌ها
   python3 tools/news_digest.py --hours 36 --asset oil --chars 1200
   python3 tools/news_digest.py --stats         # فقط تعداد خبرها و تازه‌ترین زمان جمع‌آوری
+  python3 tools/news_digest.py --ids a1b2c3 d4e5f6   # متن کامل ذخیره‌شده‌ی چند خبر مشخص
+خبرهایی که متن ندارند (NO BODY) با نشانی URL چاپ می‌شوند تا در صورت اهمیت با WebFetch خوانده شوند.
 """
 import argparse
 import datetime as dt
@@ -78,16 +80,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--hours', type=float, default=36)
     ap.add_argument('--asset', choices=ASSETS)
-    ap.add_argument('--chars', type=int, default=400, help='حداکثر طول متن هر خبر')
+    ap.add_argument('--chars', type=int, default=4000, help='حداکثر طول متن هر خبر')
     ap.add_argument('--stats', action='store_true')
+    ap.add_argument('--ids', nargs='+', help='چاپ متن کامل این خبرها')
     a = ap.parse_args()
     items, files = load(a.hours)
+    if a.ids:
+        for n in items:
+            if n['id'] in a.ids:
+                print(f"[{n['id']}] {n['publisher']} | {n['title']}\n  URL: {n.get('url')}\n  "
+                      f"{'BODY' if n.get('body') else 'NO BODY'}: {(n.get('body') or n.get('summary') or '').strip()}\n")
+        return
     newest = max((parse_time(n.get('collected')) for n in items if n.get('collected')), default=None)
     print(f'files={[os.path.basename(f) for f in files]} unique_items={len(items)} '
           f'with_body={sum(bool(n.get("body")) for n in items)} newest_collected={newest}')
     for asset in ([a.asset] if a.asset else ASSETS):
         rows = [n for n in items if asset in n['primary']]
-        print(f'\n===== {asset} ({len(rows)})')
+        print(f'\n===== {asset} ({len(rows)}, with_body={sum(bool(n.get("body")) for n in rows)})')
         if a.stats:
             continue
         for n in rows:
@@ -97,6 +106,8 @@ def main():
             print(f"[{n['id']}] {n['_t']:%m-%d %H:%M} | {n['publisher']} | {title}")
             if text and not text.lower().startswith(title.lower()[:60]):
                 print(f'    {tag}: {text[:a.chars]}')
+            if not n.get('body'):
+                print(f"    NO BODY — URL: {n.get('url')}")
 
 
 if __name__ == '__main__':

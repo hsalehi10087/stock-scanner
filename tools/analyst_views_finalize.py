@@ -14,6 +14,8 @@
   python3 tools/analyst_views_finalize.py draft.json --check    # فقط بررسی
 ساختار پیش‌نویس: مثل latest.json، به‌علاوه‌ی
   "labels": [{"id": "<id خبر از news_digest>", "asset": "gold", "label": "bull|bear|neutral"}, ...]
+و برای هر دارایی "stories": [{"id": "<id خبر>", "title_fa": "...", "understood_fa": "..."}]  (۱ تا ۳ خبر مهم)
+که url و publisher را این اسکریپت از خود خبر پر می‌کند؛ و در ریشه "full_read": تعداد خبرهایی که متنشان خوانده شد.
 """
 import argparse
 import datetime as dt
@@ -66,6 +68,7 @@ def finalize(draft, now=None, news=None):
     errs = []
     v = {'date': report_date(now), 'generated_at': now.isoformat(timespec='seconds'),
          'articles_read': draft.get('articles_read') or len(news), 'method': draft.get('method', ''),
+         'full_read': int(draft.get('full_read') or 0),
          'assets': {}, 'watch_fa': (draft.get('watch_fa') or '').strip()}
     labels = draft.get('labels') or []
     good = []
@@ -98,8 +101,25 @@ def finalize(draft, now=None, news=None):
         for j, w in enumerate(views):
             if not (w.get('who') and w.get('view_fa') and str(w.get('url', '')).startswith('http')):
                 errs.append(f'{a}.views[{j}]: who/view_fa/url ناقص')
+        stories = []
+        for j, st in enumerate(d.get('stories') or []):
+            n = by_id.get(st.get('id'))
+            if not n:
+                errs.append(f'{a}.stories[{j}]: id {st.get("id")} در خبرهای ۶۰ ساعت اخیر نیست')
+                continue
+            if not ((st.get('title_fa') or '').strip() and len((st.get('understood_fa') or '').strip()) >= 40):
+                errs.append(f'{a}.stories[{j}]: title_fa یا understood_fa ناقص (understood_fa باید دست‌کم یک جمله‌ی کامل باشد)')
+                continue
+            stories.append({'id': n['id'], 'title_fa': st['title_fa'].strip(), 'understood_fa': st['understood_fa'].strip(),
+                             'publisher': n.get('publisher') or n.get('source', ''),
+                             'url': n.get('url', '') if 'news.google.com' not in n.get('url', '') or not str(st.get('url', '')).startswith('http')
+                             else st['url']})
+        if len(stories) > 3:
+            errs.append(f'{a}: بیش از ۳ story')
+        if mine and not stories:
+            errs.append(f'{a}: برای دارایی‌ای که خبر برچسب‌خورده دارد دست‌کم یک story لازم است')
         out = {'stance': stance, 'counts': counts, 'confidence': confidence(len(directional), len(pubs)),
-               'summary_fa': summary, 'views': views[:2]}
+               'summary_fa': summary, 'stories': stories[:3], 'views': views[:2]}
         old = ((prev or {}).get('assets') or {}).get(a, {}).get('stance')
         out['prev_stance'] = old
         out['change_fa'] = f'از «{old}» به «{stance}»' if old and old != stance else ''

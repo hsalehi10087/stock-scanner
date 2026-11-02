@@ -108,8 +108,17 @@ def scan(m):
         labels[t] = CJK.sub('', str(n)).strip(' -,')[:40]
     dist = {s: sum(1 for r in ok.values() if r['score'] == s) for s in range(6)}
     os.makedirs(OUT, exist_ok=True)
+    # سهم‌هایی که هفته‌ی قبل ⭐۵ بودند و این هفته افت کردند
+    try:
+        prev = json.load(open(os.path.join(OUT, f'weekly_{m}.json'), encoding='utf-8'))
+        prev5 = prev.get('fives') or [r['ticker'] for r in prev.get('top', []) if r.get('score') == 5]
+    except Exception:
+        prev5 = []
+    dropped = [{'ticker': t, 'name': names.get(t, ''), 'score': ok[t]['score']} for t in prev5
+               if t in ok and ok[t]['score'] <= 3]
     json.dump({'market': m, 'date': str(dt.date.today()), 'scored': len(ok), 'no_data': len(res) - len(ok), 'universe': len(names), 'liquid': len(pool),
-               'distribution': dist, 'top': [{'ticker': t, 'name': labels[t], **ok[t]} for t in top]},
+               'distribution': dist, 'fives': [t for t, r in ok.items() if r['score'] == 5], 'dropped': dropped,
+               'top': [{'ticker': t, 'name': labels[t], **ok[t]} for t in top]},
               open(os.path.join(OUT, f'weekly_{m}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(m, 'distribution', dist)
 
@@ -137,6 +146,10 @@ def report():
             peg = (r.get('badges') or {}).get('peg')
             extra = f" | PEG {str(peg).translate(D)}" if peg is not None and 0 < peg < 50 else ''
             L.append(f"{str(i).translate(D)}. <b>{html.escape(t)}</b>{nm} | {Q.label(r)}{extra}")
+        if v.get('dropped'):
+            L.append('🔻 <b>از ⭐۵ هفته‌ی قبل افت کردند:</b> ' + '، '.join(
+                f"{html.escape(x['ticker'].replace('.T', '') if m == 'jp' else x['ticker'])} (⭐{str(x['score']).translate(D)})"
+                for x in v['dropped'][:10]))
         L.append('')
     L.append('<i>صرفاً برای بررسی بیشتر؛ توصیه‌ی خرید نیست.</i>')
     msg = '\n'.join(L)

@@ -1,0 +1,12 @@
+id: 97d13133e7-spy-deep-pullback
+name: SPY deep pullback
+name_fa: خرید اصلاح عمیق SPY
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/deep-pullback-strategy-only-14-drawdown/
+claim: "«استراتژی اصلاح عمیق (فقط ۱۴٪ افت)» — ۱۲۸ معامله، ۷۸٪ برد، ضریب سود ۳، بازده سالانه ۳٪، ۵٪ زمان در بازار، بیشترین افت ۱۴٪"
+claimed_return: "3%/yr, 78% win rate, max DD 14%"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [SPY]
+reason_not_testable: "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده"

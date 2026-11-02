@@ -169,7 +169,36 @@ def chunks(lines, limit=3800):
     return out
 
 
+_DIGEST_CID = []
+
+
+def _digest_record(cid, method, kw):
+    """حالت گزارش صبحگاهی: پیام به‌جای ارسال، در DIGEST_DIR ذخیره می‌شود (فقط برای اولین چت)."""
+    import json as _json
+    import shutil
+    if _DIGEST_CID and cid != _DIGEST_CID[0]:
+        return True
+    _DIGEST_CID[:1] = [cid]
+    d = os.environ['DIGEST_DIR']
+    os.makedirs(d, exist_ok=True)
+    name = os.path.splitext(os.path.basename(sys.argv[0] or 'x'))[0]
+    data = {k: v for k, v in (kw.get('data') or {}).items() if k != 'chat_id'}
+    rec = {'method': method, 'data': data}
+    for key, f in (kw.get('files') or {}).items():
+        n = len(os.listdir(d))
+        dst = os.path.join(d, f'{name}_{n}.png')
+        f.seek(0)
+        with open(dst, 'wb') as out:
+            shutil.copyfileobj(f, out)
+        rec['photo'] = os.path.basename(dst)
+    with open(os.path.join(d, name + '.jsonl'), 'a', encoding='utf-8') as fh:
+        fh.write(_json.dumps(rec, ensure_ascii=False) + '\n')
+    return True
+
+
 def tg_post(token, cid, method, **kw):
+    if os.getenv('DIGEST_DIR'):
+        return _digest_record(cid, method, kw)
     r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **kw)
     if r.status_code != 200 or '"ok":true' not in r.text:
         print(f'❌ {cid} {method}: {r.status_code} {r.text[:200]}', file=sys.stderr)

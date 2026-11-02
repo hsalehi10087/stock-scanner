@@ -1,23 +1,23 @@
 {
  "market": "tw",
- "date": "2026-10-24",
- "scored": 1903,
- "no_data": 0,
- "universe": 1983,
- "liquid": 1903,
+ "date": "2026-10-31",
+ "scored": 1868,
+ "no_data": 36,
+ "universe": 1986,
+ "liquid": 1904,
  "distribution": {
-  "0": 263,
-  "1": 609,
-  "2": 618,
-  "3": 321,
-  "4": 90,
-  "5": 2
+  "0": 272,
+  "1": 600,
+  "2": 606,
+  "3": 300,
+  "4": 87,
+  "5": 3
  },
  "top": [
   {
    "ticker": "3711.TW",
    "name": "ASE TECHNOLOGY HOLDING CO LTD",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -33,9 +33,9 @@
    }
   },
   {
-   "ticker": "6196.TW",
-   "name": "MARKETECH INTERNATIONAL CORP",
-   "date": "2026-10-23",
+   "ticker": "3006.TW",
+   "name": "ELITE SEMICONDUCTOR MICROELECTR",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -46,13 +46,30 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 8.6
+    "dilution_pct": -0.4
+   }
+  },
+  {
+   "ticker": "3702.TW",
+   "name": "WPG HOLDINGS LIMITED",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
    }
   },
   {
    "ticker": "2615.TW",
    "name": "WAN HAI LINES",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -70,7 +87,7 @@
   {
    "ticker": "3443.TW",
    "name": "GLOBAL UNICHIP CORP.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -88,7 +105,7 @@
   {
    "ticker": "9939.TW",
    "name": "TAIWAN HON CHUAN ENTERPRISE",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -104,9 +121,27 @@
    }
   },
   {
+   "ticker": "2330.TW",
+   "name": "TAIWAN SEMICONDUCTOR MANUFACTUR",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.66
+   }
+  },
+  {
    "ticker": "2356.TW",
    "name": "INVENTEC CORP",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -122,9 +157,9 @@
    }
   },
   {
-   "ticker": "2330.TW",
-   "name": "TAIWAN SEMICONDUCTOR MANUFACTUR",
-   "date": "2026-10-23",
+   "ticker": "2327.TW",
+   "name": "YAGEO CORP",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -135,14 +170,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.75
+    "dilution_pct": 0.1,
+    "peg": 0.76
    }
   },
   {
    "ticker": "2455.TW",
    "name": "VISUAL PHOTONICS EPITAXY CO LTD",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -160,7 +195,7 @@
   {
    "ticker": "2497.TW",
    "name": "E-LEAD ELECTRONIC CO LTD",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -176,27 +211,9 @@
    }
   },
   {
-   "ticker": "2327.TW",
-   "name": "YAGEO CORP",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.1,
-    "peg": 0.87
-   }
-  },
-  {
    "ticker": "6166.TW",
    "name": "ADLINK TECHNOLOGY INC",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -212,9 +229,27 @@
    }
   },
   {
+   "ticker": "2303.TW",
+   "name": "UNITED MICRO ELECTRONICS",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.2,
+    "peg": 0.91
+   }
+  },
+  {
    "ticker": "2727.TW",
    "name": "WOWPRIME CORP",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -232,7 +267,7 @@
   {
    "ticker": "2855.TW",
    "name": "PRESIDENT SECURITIES",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -248,9 +283,27 @@
    }
   },
   {
+   "ticker": "3105.TWO",
+   "name": "WIN SEMICONDUCTORS CORP",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.15
+   }
+  },
+  {
    "ticker": "2404.TW",
    "name": "UNITED INTEGRATION SERVICES CO",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -266,27 +319,9 @@
    }
   },
   {
-   "ticker": "2303.TW",
-   "name": "UNITED MICRO ELECTRONICS",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.2,
-    "peg": 1.3
-   }
-  },
-  {
    "ticker": "3044.TW",
    "name": "TRIPOD TECHNOLOGY CORP",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -302,27 +337,9 @@
    }
   },
   {
-   "ticker": "3189.TW",
-   "name": "KINSUS INTERCONNECT TECHNOLOGY",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.41
-   }
-  },
-  {
    "ticker": "3037.TW",
    "name": "UNIMICRON TECHNOLOGY",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -338,9 +355,9 @@
    }
   },
   {
-   "ticker": "2885.TW",
-   "name": "YUANTA FINANCIAL HOLDING CO. LT",
-   "date": "2026-10-23",
+   "ticker": "2395.TW",
+   "name": "ADVANTECH CO LTD",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -351,26 +368,8 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.0,
-    "peg": 2.39
-   }
-  },
-  {
-   "ticker": "1303.TW",
-   "name": "NAN YA PLASTIC",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 6.46
+    "dilution_pct": 0.3,
+    "peg": 1.55
    }
   }
  ]

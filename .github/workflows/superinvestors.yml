@@ -1,8 +1,7 @@
 name: 🏦 Superinvestors (Dataroma)
 
 on:
-  schedule:
-    - cron: '30 6 * * *'  # هر روز 10:00 تهران (06:30 UTC)
+  # اجرای روزانه به digest2.yml منتقل شد (فقط روزهایی که تغییر هست در «گزارش میان‌صبح» می‌آید)؛ این گردش‌کار فقط دستی است
   workflow_dispatch:
     inputs:
       mode:
