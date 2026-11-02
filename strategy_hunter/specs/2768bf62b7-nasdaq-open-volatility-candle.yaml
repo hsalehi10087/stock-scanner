@@ -1,0 +1,10 @@
+id: 2768bf62b7-nasdaq-open-volatility-candle
+name: Nasdaq big first 5-min candle follow
+name_fa: دنبال کردن کندل بزرگ ۵ دقیقه‌ی اول بازار نزدک
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xle3nm/i_found_a_possible_nasdaq_opening_volatility_edge/
+claim: "«اگر دامنه‌ی اولین کندل ۵ دقیقه‌ای ساعت ۹:۳۰ نیویورک نسبت به ATR(14) قبلی غیرعادی بزرگ باشد، ساعت ۹:۳۵ هم‌جهت با آن وارد شو، حد ضرر سر دیگر کندل، خروج ۱۰:۳۵. ۲۰۱۳ تا اکتبر ۲۰۲۶: ۶۳۷ معامله، میانگین ‎+0.177R‎، ضریب سود ۱٫۳۶، برد ۴۶٫۵٪، بیشترین افت حدود ۱۵٫۳R»"
+claimed_return: "+0.177R/trade, PF 1.36, 46.5% win rate"
+added: 2026-11-02
+status: not_testable
+reason_not_testable: "روی کندل ۵ دقیقه‌ای و ساعت دقیق بازگشایی است؛ آستانه‌ی دقیق نوسان هم گفته نشده"
