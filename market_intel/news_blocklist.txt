@@ -1,0 +1,35 @@
+# منابع بی‌کیفیت یا تبلیغاتی که خبرخوان کنار می‌گذارد.
+# هر خط: نام ناشر (همان‌طور که در انتهای تیتر Google News یا فیلد source می‌آید؛ بزرگی/کوچکی حروف مهم نیست)
+# اگر بعد از «:» فهرست دارایی بیاید، فقط همان برچسب‌ها حذف می‌شوند (مثلاً TipRanks برای خبرهای AI مفید است
+# ولی خبرهای طلای آن بیشتر اطلاعیه‌ی شرکت‌های معدنی کوچک است). اگر برچسبی نماند، خبر کنار گذاشته می‌شود.
+# خط‌هایی که با «re:» شروع شوند الگوی تیتر هستند (regex) و خبر را کامل حذف می‌کنند.
+
+# پیش‌بینی خودکار قیمت، صفحه‌های قیمت و سایت‌های تبلیغاتی
+CoinGecko
+CoinCodex
+openPR.com
+TechBullion
+CaptainAltcoin
+The Market Periodical
+TronWeekly
+Coinpedia
+Bitcoin Foundation
+Traders Union
+Economies.com
+Mitrade
+LiteFinance
+Intellectia AI
+Discovery Alert
+Norada Real Estate Investments
+# بازنشر خبرهای دیگران (تکراری)
+Vietnam.vn
+Laodong.vn
+# اطلاعیه‌ی شرکت‌ها؛ برای کالاها بی‌فایده، برای AI نگه داشته می‌شود
+TipRanks : gold, silver, copper, oil, bitcoin
+Simply Wall Street : gold, silver, copper, oil, bitcoin
+Simply Wall St : gold, silver, copper, oil, bitcoin
+
+re:\bBTC to [A-Z]{3}\b
+re:\b\d{2,4}x to \d{2,4}x\b
+re:\bArchives\b
+re:\bLive .* Technical Analysis\b

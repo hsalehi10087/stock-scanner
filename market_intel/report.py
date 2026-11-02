@@ -192,18 +192,21 @@ def analyst_section():
         v = json.load(open(VIEWS, encoding='utf-8'))
     except Exception:
         return None
+    now = dt.datetime.now(dt.timezone.utc)
     try:
-        age = (dt.datetime.now(dt.timezone.utc).date() - dt.date.fromisoformat(v['date'])).days
+        fresh = dt.date.fromisoformat(v['date']) >= now.date()
+        if v.get('generated_at'):   # کار روزانه ممکن است شب قبل (UTC) اجرا شده باشد
+            fresh = fresh or now - dt.datetime.fromisoformat(v['generated_at']) < dt.timedelta(hours=12)
     except Exception:
         return None
-    if age > 0:   # فقط نظرهای امروز؛ اگر کار روزانه اجرا نشده بود، روش قدیمی کلیدواژه‌ای جایگزین می‌شود
+    if not fresh:   # فقط نظرهای تازه؛ اگر کار روزانه اجرا نشده بود، روش قدیمی کلیدواژه‌ای جایگزین می‌شود
         return None
     global SCORE
     try:
         SCORE = scorecard()
     except Exception:
         SCORE = {}
-    lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {str(v.get('articles_read', '؟')).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))} خبر و تحلیل ۲۴ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
+    lines = ['<b>🧠 نظر تحلیلگران</b>', f"<i>از {str(v.get('articles_read', '؟')).translate(str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))} خبر و تحلیل ۳۶ ساعت اخیر، درک‌شده با هوش مصنوعی</i>"]
     for key, label in AI_ASSETS:
         a = (v.get('assets') or {}).get(key)
         if not a:
@@ -217,8 +220,19 @@ def analyst_section():
         else:
             tag = f"{STANCE.get(st, '⚪')} {st}"
             cnt_txt = f"صعودی {d(cnt.get('bull', 0))}، نزولی {d(cnt.get('bear', 0))}، خنثی {d(cnt.get('neutral', 0))}"
-        lines.append(f"• <b>{label}</b> — {tag} ({cnt_txt}): "
+        extra = ''
+        if a.get('change_fa'):
+            extra += f" 🔄 <i>{html.escape(a['change_fa'])}</i>"
+        if a.get('confidence'):
+            extra += f" · اطمینان: {html.escape(a['confidence'])}"
+        lines.append(f"• <b>{label}</b> — {tag} ({cnt_txt}){extra}: "
                      f"{html.escape(a.get('summary_fa', ''))}")
+        for s in (a.get('stories') or [])[:3]:
+            t = html.escape(s.get('title_fa', ''))
+            pub = html.escape(s.get('publisher') or 'منبع')
+            u = s.get('url', '')
+            src = f'<a href="{html.escape(u)}">{pub}</a>' if u else pub
+            lines.append(f"   📰 <b>{t}</b> ({src}): {html.escape(s.get('understood_fa', ''))}")
         sc = SCORE.get(key)
         if sc:
             hit, tot, r7 = sc

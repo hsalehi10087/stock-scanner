@@ -3,7 +3,13 @@ name: 📰 Market news collector (gold, silver, BTC, copper, oil, rates)
 on:
   schedule:
     - cron: '40 */4 * * *'   # هر ۴ ساعت
+    - cron: '5 23 * * *'     # یک دور تازه قبل از کار شبانه‌ی خبرخوان Claude (حدود ۲۳:۴۷ UTC)
   workflow_dispatch:
+    inputs:
+      save:
+        description: 'ذخیره و commit خبرها (false = فقط آزمایش و چاپ نتیجه)'
+        required: false
+        default: 'true'
 
 permissions:
   contents: write
@@ -15,7 +21,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,11 +30,12 @@ jobs:
       - run: pip install -q requests
       - env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          NEWS_SAVE: ${{ github.event.inputs.save == 'false' && '0' || '1' }}
         run: |
           echo "::add-mask::$FINNHUB_API_KEY"
           python3 market_intel/news_collect.py
       - name: Save
-        if: always()
+        if: always() && github.event.inputs.save != 'false'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "News Collector"
