@@ -1,6 +1,6 @@
 {
  "cot_date": "2026-10-27",
- "rule": "follow_net",
+ "rule": "contrarian_extreme",
  "verdict": "رد",
  "currencies": {
   "AUD": {
@@ -8,49 +8,49 @@
    "am_net_pct": -38.5,
    "z": 1.14,
    "d4_pct": -4.7,
-   "position": 1
+   "position": 0
   },
   "CAD": {
    "lev_net_pct": -26.8,
    "am_net_pct": -0.4,
    "z": -1.2,
    "d4_pct": -6.7,
-   "position": -1
+   "position": 0
   },
   "CHF": {
    "lev_net_pct": -12.9,
    "am_net_pct": -18.5,
    "z": -0.96,
    "d4_pct": -2.5,
-   "position": -1
+   "position": 0
   },
   "EUR": {
    "lev_net_pct": -8.2,
    "am_net_pct": 20.0,
    "z": -2.21,
    "d4_pct": -3.6,
-   "position": -1
+   "position": 1
   },
   "GBP": {
    "lev_net_pct": 6.8,
    "am_net_pct": -50.8,
    "z": -1.0,
    "d4_pct": 4.9,
-   "position": 1
+   "position": 0
   },
   "JPY": {
    "lev_net_pct": -3.9,
    "am_net_pct": 24.4,
    "z": 0.92,
    "d4_pct": 0.0,
-   "position": -1
+   "position": 0
   },
   "NZD": {
    "lev_net_pct": -17.5,
    "am_net_pct": -36.3,
    "z": -0.87,
    "d4_pct": -16.5,
-   "position": -1
+   "position": 0
   }
  }
 }
