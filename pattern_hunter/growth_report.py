@@ -30,6 +30,8 @@ def entry_lines(i, s):
     out = [f"{fa(i)}. <b>{e(s['ticker'])}</b>{' — ' + e(nm[:32]) if nm else ''} | قیمت {fa(s['price'])}",
            f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار",
            f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}",
+           f"   📈 سود خالص {fa(s.get('profit_streak', 2))} فصل پیاپی بالا رفته" + (
+               ' (فصل قبل‌تر هم افزایش داشته ✅)' if s.get('profit_more') else '') + f" ({s.get('profit_basis') or ''})",
            f"   💎 {IV.label(s.get('iv'))}"]
     if s.get('chart'):
         out.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")

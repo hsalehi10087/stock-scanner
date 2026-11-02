@@ -8,7 +8,7 @@
      • فشردگی نزدیک سقف: نوسان ۲۰ روزه کمتر از ۶۰٪ نوسان ۶۰ روزه، حجم رو به کاهش، تا ۱۰٪ زیر سقف ۵۲ هفته
      • برگشت به میانگین ۵۰ در روند: روند منظم برقرار، قیمت تا ۳٪ از میانگین ۵۰ روزه، حجم ۵ روز اخیر کم
   قبولی: دست‌کم ۲ الگوی کلاسیک، یا ۱ الگوی کلاسیک + رتبه‌ی الگوی آماری جزو ۲۰٪ برتر بازار
-صافی ۲ (بنیادی): دست‌کم یکی از صورت مالی سالم، کن‌اسلیم، وارن بافت (pattern_hunter/fundamentals) یا امتیاز کیفیت رشد ⭐۴ و ⭐۵.
+صافی ۲ (بنیادی): سود خالص دست‌کم ۲ فصل پیاپی بالا رفته باشد (وگرنه سیگنال نمی‌شود) و دست‌کم یکی از صورت مالی سالم، کن‌اسلیم، وارن بافت (pattern_hunter/fundamentals) یا امتیاز کیفیت رشد ⭐۴ و ⭐۵.
 فقط سهم‌هایی که از هر دو بگذرند فرستاده و در تاریخچه ثبت می‌شوند؛ رشد یا نزول هر سیگنال تا امروز پیگیری می‌شود.
 """
 import datetime as dt
@@ -32,6 +32,7 @@ OUT = os.path.join(ROOT, 'data', 'growth_signal')
 HIST = os.path.join(OUT, 'history.csv')
 POOL = 30        # چند نامزد تکنیکال برتر به صافی بنیادی می‌روند
 MAX_SEND = 8     # حداکثر سیگنال در هر بازار در روز
+MIN_PROFIT_Q = 2   # دست‌کم این‌قدر فصل پیاپی افزایش سود خالص
 COOLDOWN = 20    # سهمی که در ۲۰ روز اخیر سیگنال شده، دوباره سیگنال تازه حساب نمی‌شود
 SETUP_FA = {'longpat': 'الگوی نموداری بلندمدت', 'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم', 'vcp': 'فشردگی نزدیک سقف', 'pullback': 'برگشت به میانگین ۵۰'}
 COLS = ['date', 'market', 'ticker', 'name', 'price', 'index_price', 'setups', 'fundamentals', 'quality', 'tech_rank',
@@ -112,6 +113,10 @@ class Collector:
                 fu = FU.check(t, {'from_hi': float(r.from_hi), 'rs6m': float(r.rs6m), 'volu_ratio': float(r.volu_ratio)}, mkt_up)
             except Exception:
                 fu = {'passed': []}
+            nu = fu.get('numbers') or {}
+            streak = nu.get('profit_streak')
+            if streak is None or streak < MIN_PROFIT_Q:     # سود دست‌کم ۲ فصل پیاپی بالا نرفته (یا داده نیست) ← سیگنال نمی‌شود
+                continue
             try:
                 qs = Q.score(t, m)
             except Exception:
@@ -126,7 +131,8 @@ class Collector:
                 nm = en_name(t) or ''
             price = float(C[t].dropna().iloc[-1])
             sent.append({'ticker': t, 'name': nm, 'price': round(price, 3), 'setups': st, 'tech_rank': round(rk, 3),
-                         'fundamentals': passed, 'quality': Q.label(qs) if qs else '',
+                         'fundamentals': passed, 'quality': Q.label(qs) if qs else '', 'profit_streak': streak,
+                         'profit_basis': nu.get('profit_basis', ''), 'profit_more': bool(streak >= 3),
                          'chart': CP.label(charts[t]), 'chart_score': charts[t]['score']})
             self.hist.loc[len(self.hist)] = [self.today, m, t, nm, round(price, 4), round(float(idx.dropna().iloc[-1]), 4),
                                              '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),

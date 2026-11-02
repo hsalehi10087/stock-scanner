@@ -28,6 +28,23 @@ def _g(a, b):
     return (a - b) / abs(b) if b not in (None, 0) and a is not None and not (isinstance(b, float) and math.isnan(b)) else None
 
 
+def profit_streak(qni):
+    """چند فصل پیاپی (از جدیدترین) سود خالص بالا رفته؟ با مقایسه‌ی هر فصل با همان فصل سال قبل (۶ فصل داده لازم)،
+    وگرنه با فصل قبل از خودش. برمی‌گرداند (تعداد فصل پیاپی، تعداد فصلی که می‌شد سنجید، مبنا)."""
+    if qni is None:
+        return None, 0, ''
+    v = [float(x) for x in qni]
+    yoy = len(v) >= 6
+    n = len(v) - 4 if yoy else len(v) - 1
+    k = 0
+    for i in range(max(n, 0)):
+        if v[i] > v[i + (4 if yoy else 1)]:
+            k += 1
+        else:
+            break
+    return k, n, ('سالانه' if yoy else 'فصل‌به‌فصل')
+
+
 def check(ticker, feat, market_up):
     import yfinance as yf
     tk = yf.Ticker(ticker)
@@ -58,6 +75,7 @@ def check(ticker, feat, market_up):
     rev_g = i.get('revenueGrowth')
     if rev_g is None and rev is not None and len(rev) >= 2:
         rev_g = _g(float(rev.iloc[0]), float(rev.iloc[1]))
+    streak, qn, basis = profit_streak(qni)
     pm = i.get('profitMargins')
     fcf = i.get('freeCashflow')
     cr = i.get('currentRatio')
@@ -87,4 +105,4 @@ def check(ticker, feat, market_up):
     return {'passed': passed, 'health': f'{n(health)}/5', 'canslim': f'{n(canslim)}/7', 'buffett': f'{n(buffett)}/5',
             'detail': {'health': health, 'canslim': canslim, 'buffett': buffett},
             'numbers': {'rev_growth': rev_g, 'q_earn_growth': q_g, 'annual_earn_growth': a_g, 'roe': roe, 'de': de,
-                        'profit_margin': pm, 'fcf': fcf, 'current_ratio': cr}}
+                        'profit_margin': pm, 'profit_streak': streak, 'profit_q_checked': qn, 'profit_basis': basis, 'fcf': fcf, 'current_ratio': cr}}
