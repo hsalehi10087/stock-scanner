@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T19:51:08+00:00",
+ "updated": "2026-11-02T14:06:23+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -143,6 +143,20 @@
    "reason_not_testable": "قضاوت روی حرکت قیمت آپشن با نگه‌داری ۱–۲ دقیقه‌ای؛ قانون مشخص و داده‌ی تاریخی آپشن دقیقه‌ای نداریم",
    "verdict": "غیرقابل آزمون: قضاوت روی حرکت قیمت آپشن با نگه‌داری ۱–۲ دقیقه‌ای؛ قانون مشخص و داده‌ی تاریخی آپشن دقیقه‌ای نداریم"
   },
+  "2768bf62b7-nasdaq-open-volatility-candle": {
+   "name": "Nasdaq big first 5-min candle follow",
+   "name_fa": "دنبال کردن کندل بزرگ ۵ دقیقه‌ی اول بازار نزدک",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xle3nm/i_found_a_possible_nasdaq_opening_volatility_edge/",
+   "claim": "«اگر دامنه‌ی اولین کندل ۵ دقیقه‌ای ساعت ۹:۳۰ نیویورک نسبت به ATR(14) قبلی غیرعادی بزرگ باشد، ساعت ۹:۳۵ هم‌جهت با آن وارد شو، حد ضرر سر دیگر کندل، خروج ۱۰:۳۵. ۲۰۱۳ تا اکتبر ۲۰۲۶: ۶۳۷ معامله، میانگین ‎+0.177R‎، ضریب سود ۱٫۳۶، برد ۴۶٫۵٪، بیشترین افت حدود ۱۵٫۳R»",
+   "claimed_return": "+0.177R/trade, PF 1.36, 46.5% win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-02",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ دقیقه‌ای و ساعت دقیق بازگشایی است؛ آستانه‌ی دقیق نوسان هم گفته نشده",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و ساعت دقیق بازگشایی است؛ آستانه‌ی دقیق نوسان هم گفته نشده"
+  },
   "277a1cce48-fxi-ibs-short": {
    "name": "FXI IBS short (Medium)",
    "name_fa": "فروش استقراضی FXI با نسبت IBS",
@@ -158,16 +172,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -4.96,
+    "cagr": -4.91,
     "sharpe": -0.11,
-    "max_dd": -83.41,
-    "total": -67.42
+    "max_dd": -83.22,
+    "total": -67.05
    },
    "in_sample": {
-    "cagr": -8.63,
+    "cagr": -8.56,
     "sharpe": -0.26,
-    "max_dd": -78.86,
-    "total": -75.15
+    "max_dd": -78.62,
+    "total": -74.86
    },
    "out_sample": {
     "cagr": 3.7,
@@ -338,16 +352,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.28,
+    "cagr": 10.33,
     "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 286.33
+    "total": 288.45
    },
    "in_sample": {
-    "cagr": 7.86,
+    "cagr": 7.92,
     "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 107.77
+    "total": 108.91
    },
    "out_sample": {
     "cagr": 15.29,
@@ -367,9 +381,9 @@
     "max_dd": -47.44,
     "total": 275.47
    },
-   "trades": 93,
-   "win_rate": 71.0,
-   "avg_trade_pct": 2.0,
+   "trades": 94,
+   "win_rate": 71.3,
+   "avg_trade_pct": 1.99,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-10-30",
    "oos_start": "2022-09-02",
@@ -392,6 +406,60 @@
    "status": "not_testable",
    "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ فقط گفته شده بر پایه‌ی تقاطع طلایی و جابه‌جایی SPY/SSO است",
    "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ فقط گفته شده بر پایه‌ی تقاطع طلایی و جابه‌جایی SPY/SSO است"
+  },
+  "4119030b0f-spy-sma200-band-2pct": {
+   "name": "SPY 200SMA +/-2% band timing",
+   "name_fa": "زمان‌بندی با باند ‎±۲٪‎ دور میانگین ۲۰۰ روزه‌ی SPY",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/LETFs/comments/1xh5d0i/return_stacking_backtest_part_2_exus_leveraged/",
+   "claim": "«از ۱۲۸ تنظیم (SMA/EMA × ۸ دوره × ۸ باند) روی ۱۹۲۸–۲۰۲۶، میانگین ۲۰۰ روزه‌ی ساده با باند ‎±۲٪‎ همراه با همسایه‌هایش بهترین میانگین را داشت؛ همان بازده بلندمدت میانگین ۲۰۰ ساده، ولی ۱٫۵ جابه‌جایی در سال به جای ۵٫۵. سبد نهایی: ۴۰ RSST / ۴۰ GDE / ۲۰ UPRO با SMA200 ‎±۲٪‎ → اوراق خزانه؛ ۱۴٫۴٪ در سال پس از مالیات در برابر ۸٫۳٪ برای SPY، بیشترین افت ‎−42%‎ در برابر ‎−55%‎» (بعداً اصلاح شد: ۱۴٫۰۷٪ و ‎−41.8%‎)",
+   "claimed_return": "14.4%/yr after tax (portfolio), max DD -42%; SMA200±2% = same return as SMA200 with 1.5 switches/yr",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-02",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 9.31,
+    "sharpe": 0.79,
+    "max_dd": -21.98,
+    "total": 1912.52
+   },
+   "in_sample": {
+    "cagr": 8.58,
+    "sharpe": 0.74,
+    "max_dd": -19.72,
+    "total": 598.21
+   },
+   "out_sample": {
+    "cagr": 11.19,
+    "sharpe": 0.91,
+    "max_dd": -21.98,
+    "total": 192.37
+   },
+   "buyhold_full": {
+    "cagr": 10.74,
+    "sharpe": 0.64,
+    "max_dd": -55.19,
+    "total": 3019.64
+   },
+   "buyhold_out_sample": {
+    "cagr": 15.16,
+    "sharpe": 0.88,
+    "max_dd": -33.72,
+    "total": 317.01
+   },
+   "trades": 24,
+   "win_rate": 62.5,
+   "avg_trade_pct": 15.81,
+   "exposure": 0.75,
+   "period": "1993-02-01 → 2026-10-30",
+   "oos_start": "2016-09-12",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "قبول"
   },
   "43c28f72f0-gold-swing-breakout": {
    "name": "Gold swing breakout (Gold Reaper rebuild, daily engine)",
@@ -420,30 +488,30 @@
     "total": 13.48
    },
    "out_sample": {
-    "cagr": 5.64,
+    "cagr": 5.63,
     "sharpe": 0.59,
     "max_dd": -14.57,
     "total": 31.84
    },
    "buyhold_full": {
-    "cagr": 7.72,
+    "cagr": 7.8,
     "sharpe": 0.52,
     "max_dd": -44.36,
-    "total": 248.83
+    "total": 253.48
    },
    "buyhold_out_sample": {
-    "cagr": 16.64,
-    "sharpe": 0.9,
+    "cagr": 16.94,
+    "sharpe": 0.92,
     "max_dd": -26.69,
-    "total": 117.25
+    "total": 120.14
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-10-30",
+   "period": "2010-01-04 → 2026-11-02",
    "oos_start": "2021-10-14",
-   "forward_days": 6,
+   "forward_days": 7,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -507,13 +575,13 @@
     "cagr": 8.02,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1247.73
+    "total": 1247.74
    },
    "in_sample": {
     "cagr": 6.78,
     "sharpe": 0.61,
     "max_dd": -25.39,
-    "total": 370.25
+    "total": 370.26
    },
    "out_sample": {
     "cagr": 11.13,
@@ -943,42 +1011,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.87,
+    "cagr": 66.85,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 84.1,
+    "cagr": 83.73,
     "sharpe": 1.43,
     "max_dd": -74.38,
-    "total": 17755.82
+    "total": 17488.76
    },
    "out_sample": {
-    "cagr": 33.45,
-    "sharpe": 1.03,
+    "cagr": 32.64,
+    "sharpe": 1.01,
     "max_dd": -35.7,
-    "total": 185.99
+    "total": 179.65
    },
    "buyhold_full": {
-    "cagr": 52.67,
+    "cagr": 52.7,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16877.47
+    "total": 16932.12
    },
    "buyhold_out_sample": {
-    "cagr": 37.74,
-    "sharpe": 0.93,
+    "cagr": 37.02,
+    "sharpe": 0.92,
     "max_dd": -53.06,
-    "total": 220.87
+    "total": 214.77
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-11-01",
-   "oos_start": "2023-03-14",
-   "forward_days": 7,
+   "period": "2014-09-17 → 2026-11-02",
+   "oos_start": "2023-03-15",
+   "forward_days": 8,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1079,6 +1147,20 @@
    "status": "not_testable",
    "reason_not_testable": "نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است",
    "verdict": "غیرقابل آزمون: نیاز به قیمت تاریخی آپشن فروخته‌شده دارد (داده‌ی رایگان نیست) و نتیجه‌ی فقط ۲ هفته است"
+  },
+  "cb36598dee-ultima-17-nq-strategies": {
+   "name": "Ultima 17-strategy Nasdaq micro futures system",
+   "name_fa": "سیستم ۱۷ روشی «اولتیما» روی میکرو آتی نزدک",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xldrag/from_8_strategies_to_17_my_full_plan_from_one/",
+   "claim": "«بک‌تست با کمیسیون و لغزش، یک میکرو قرارداد برای هر سیگنال: نسخه‌ی ارزیابی (روش‌های ۱–۵) حدود ۵٬۳۰۰ دلار سود در سال با بدترین افت ‎−2,055‎ دلار؛ V2 (روش‌های ۱–۷) حدود ۶٬۹۰۰ دلار و ‎−3,166‎؛ V3 (روش‌های ۱–۱۷) حدود ۱۹٬۶۰۰ دلار و ‎−4,541‎ دلار»",
+   "claimed_return": "~$19,600/yr per micro set, max DD -$4,541",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-02",
+   "status": "not_testable",
+   "reason_not_testable": "نویسنده قوانین را خصوصی نگه داشته؛ روش‌ها روی کندل ۱۵ و ۳۰ دقیقه‌ای و داده‌ی ۱ دقیقه‌ای است",
+   "verdict": "غیرقابل آزمون: نویسنده قوانین را خصوصی نگه داشته؛ روش‌ها روی کندل ۱۵ و ۳۰ دقیقه‌ای و داده‌ی ۱ دقیقه‌ای است"
   },
   "cc42c45e99-spxw-1dte-5delta-put-selling": {
    "name": "SPXW 1DTE 5-delta put selling",
