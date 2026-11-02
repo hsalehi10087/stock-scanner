@@ -15,13 +15,18 @@ import summary as S  # noqa: E402
 ORDER = [('report', '🧭 بازار و نظر تحلیلگران'), ('gainers', '🚀 آمریکا: رشد قیمت بیش از ۱۰٪'),
          ('fund_growth', '📈 آمریکا: رشد سود بیش از ۱۰٪'), ('jp_growth', '🇯🇵 ژاپن'),
          ('cn_growth', '🇨🇳 چین'), ('tw_growth', '🇹🇼 تایوان')]
+# گزارش دوم (حدود ۰۸:۴۰ تهران): هوش مصنوعی، احتمال رشد، فارکس، سرمایه‌گذاران بزرگ
+ORDER2 = [('ai_report', '🤖 سهام هوش مصنوعی'), ('growth_report', '🚀 احتمال رشد تکنیکال و بنیادی'),
+          ('cot', '💱 فارکس — موقعیت معامله‌گران بزرگ'), ('run', '🏦 سرمایه‌گذاران بزرگ (Dataroma)')]
+SLOTS = {'morning': ('☀️ گزارش صبحگاهی', ORDER), 'morning2': ('🌤 گزارش میان‌صبح', ORDER2)}
 FA = str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹')
 
 
-def main(d):
+def main(d, slot='morning'):
     import datetime as dt
+    title_main, order = SLOTS[slot]
     photos, texts, have, missing = [], [], [], []
-    for name, title in ORDER:
+    for name, title in order:
         p = os.path.join(d, name + '.jsonl')
         if not os.path.exists(p):
             missing.append(title)
@@ -37,11 +42,11 @@ def main(d):
                 texts.append(body.strip())
     if not have:
         print('nothing to send')
-        return 1
+        return 0 if slot != 'morning' else 1
     today = dt.date.today().strftime('%Y/%m/%d').translate(FA)
-    head = [f'<b>☀️ گزارش صبحگاهی — {today}</b>',
+    head = [f'<b>{title_main} — {today}</b>',
             'در این گزارش: ' + '، '.join(t for t in have)]
-    if missing:
+    if missing and slot == 'morning':
         head.append('<i>⚠️ امروز نرسید: ' + '، '.join(missing) + '</i>')
     if photos:
         head.append(f'<i>🖼 {len(photos)} جدول در آلبوم بالا (به همان ترتیب).</i>'.translate(FA))
@@ -73,4 +78,4 @@ def main(d):
 
 if __name__ == '__main__':
     os.environ.pop('DIGEST_DIR', None)
-    sys.exit(main(sys.argv[1]))
+    sys.exit(main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else 'morning'))

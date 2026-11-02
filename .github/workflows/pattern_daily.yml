@@ -1,8 +1,7 @@
 name: 🔍 Pattern Hunter — daily picks and report (≈07:00 Tehran)
 
 on:
-  schedule:
-    - cron: '0 3 * * 2-6'   # ۰۶:۳۰ تهران، سه‌شنبه تا شنبه (بعد از جلسه‌های دوشنبه تا جمعه)
+  # زمان‌بندی روزانه به digest2.yml منتقل شد (اسکن + گزارش در «گزارش میان‌صبح»)؛ این گردش‌کار فقط دستی است
   workflow_dispatch:
     inputs:
       chat_id:

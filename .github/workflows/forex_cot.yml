@@ -1,8 +1,7 @@
-name: 💱 Forex COT (daily, 08:00 Tehran)
+name: 💱 Forex COT (manual; daily run is inside digest2)
 
 on:
-  schedule:
-    - cron: '30 4 * * *'   # هر روز ۰۸:۰۰ تهران (داده‌ی COT هر جمعه‌شب تازه می‌شود؛ دفتر آزمایشی فقط با داده‌ی جدید جابه‌جا می‌شود)
+  # اجرای روزانه به digest2.yml منتقل شد (۰۸:۴۰ تهران، داخل «گزارش میان‌صبح»)؛ این گردش‌کار فقط دستی است
   workflow_dispatch:
     inputs:
       chat_id:
