@@ -34,7 +34,7 @@ SAVE = os.getenv('NEWS_SAVE', '1') != '0'
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; market-intel-news/1.0)'}
 BROWSER = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                          'Chrome/124.0 Safari/537.36', 'Accept-Language': 'en-US,en;q=0.9'}
-ENRICH_MAX = int(os.getenv('NEWS_ENRICH_MAX', '120'))      # حداکثر خبر برای گرفتن متن در هر اجرا
+ENRICH_MAX = int(os.getenv('NEWS_ENRICH_MAX', '300'))      # حداکثر خبر برای گرفتن متن در هر اجرا
 ENRICH_SECONDS = int(os.getenv('NEWS_ENRICH_SECONDS', '360'))
 BODY_CHARS = 4000
 ASSETS = {
