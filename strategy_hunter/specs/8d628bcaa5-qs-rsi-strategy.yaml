@@ -1,0 +1,12 @@
+id: 8d628bcaa5-qs-rsi-strategy
+name: QS RSI strategy
+name_fa: استراتژی QS RSI
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/qs-rsi-strategy/
+claim: "«استراتژی QS RSI (۷۸٪ نرخ برد)»"
+claimed_return: "78% win rate"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [SPY]
+reason_not_testable: "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست"

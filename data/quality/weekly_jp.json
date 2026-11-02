@@ -1,41 +1,23 @@
 {
  "market": "jp",
- "date": "2026-10-24",
- "scored": 1993,
- "no_data": 7,
+ "date": "2026-10-31",
+ "scored": 2000,
+ "no_data": 0,
  "universe": 3609,
  "liquid": 2000,
  "distribution": {
-  "0": 248,
-  "1": 661,
-  "2": 644,
-  "3": 321,
-  "4": 106,
-  "5": 13
+  "0": 173,
+  "1": 574,
+  "2": 682,
+  "3": 427,
+  "4": 128,
+  "5": 16
  },
  "top": [
   {
-   "ticker": "9962.T",
-   "name": "MISUMI Group Inc.",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -3.5,
-    "peg": 0.35
-   }
-  },
-  {
    "ticker": "4503.T",
    "name": "Astellas Pharma Inc.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -53,7 +35,7 @@
   {
    "ticker": "4021.T",
    "name": "Nissan Chemical Corporation",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -69,9 +51,27 @@
    }
   },
   {
+   "ticker": "4578.T",
+   "name": "Otsuka Holdings Co.,Ltd.",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.7,
+    "peg": 1.04
+   }
+  },
+  {
    "ticker": "2371.T",
    "name": "Kakaku.com,Inc.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -87,9 +87,63 @@
    }
   },
   {
+   "ticker": "8015.T",
+   "name": "TOYOTA TSUSHO CORPORATION",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.38
+   }
+  },
+  {
+   "ticker": "6098.T",
+   "name": "Recruit Holdings Co.,Ltd.",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -4.8,
+    "peg": 1.75
+   }
+  },
+  {
+   "ticker": "7453.T",
+   "name": "RYOHIN KEIKAKU CO.,LTD.",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.2,
+    "peg": 2.07
+   }
+  },
+  {
    "ticker": "6448.T",
    "name": "BROTHER INDUSTRIES,LTD.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -105,9 +159,43 @@
    }
   },
   {
+   "ticker": "2782.T",
+   "name": "Seria Co.,Ltd.",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -16.7
+   }
+  },
+  {
+   "ticker": "3097.T",
+   "name": "The Monogatari Corporation",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.3
+   }
+  },
+  {
    "ticker": "7846.T",
    "name": "PILOT CORPORATION",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -124,7 +212,7 @@
   {
    "ticker": "3964.T",
    "name": "AUCNET INC.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -139,9 +227,9 @@
    }
   },
   {
-   "ticker": "2384.T",
-   "name": "SBS Holdings,Inc.",
-   "date": "2026-10-23",
+   "ticker": "3399.T",
+   "name": "Maruchiyo Yamaokaya Corporation",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -152,30 +240,13 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "3091.T",
-   "name": "BRONCO BILLY Co.,LTD.",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.1
+    "dilution_pct": 101.0
    }
   },
   {
    "ticker": "6570.T",
    "name": "Kyowa Corporation",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -190,9 +261,9 @@
    }
   },
   {
-   "ticker": "6191.T",
-   "name": "AirTrip Corp.",
-   "date": "2026-10-23",
+   "ticker": "5136.T",
+   "name": "tripla Co.,Ltd.",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -203,13 +274,13 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.2
+    "dilution_pct": 0.9
    }
   },
   {
-   "ticker": "6238.T",
-   "name": "FURYU CORPORATION",
-   "date": "2026-10-23",
+   "ticker": "9251.T",
+   "name": "AB&Company Co.,Ltd.",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -220,30 +291,31 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.0
+    "dilution_pct": 0.6
    }
   },
   {
-   "ticker": "2820.T",
-   "name": "Yamami Company",
-   "date": "2026-10-23",
-   "score": 5,
+   "ticker": "3941.T",
+   "name": "Rengo Co.,Ltd.",
+   "date": "2026-10-31",
+   "score": 4,
    "known": 5,
    "flags": {
     "growth": true,
     "cash": true,
-    "profit": true,
+    "profit": false,
     "momentum": true,
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -0.0
+    "dilution_pct": 0.1,
+    "peg": 0.08
    }
   },
   {
    "ticker": "9104.T",
    "name": "Mitsui O.S.K.Lines,Ltd.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -259,27 +331,9 @@
    }
   },
   {
-   "ticker": "6724.T",
-   "name": "SEIKO EPSON CORPORATION",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": false
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.17
-   }
-  },
-  {
    "ticker": "5020.T",
    "name": "ENEOS Holdings,Inc.",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
@@ -295,75 +349,21 @@
    }
   },
   {
-   "ticker": "5975.T",
-   "name": "Topre Corporation",
-   "date": "2026-10-23",
+   "ticker": "9962.T",
+   "name": "MISUMI Group Inc.",
+   "date": "2026-10-31",
    "score": 4,
    "known": 5,
    "flags": {
     "growth": true,
     "cash": true,
-    "profit": false,
+    "profit": true,
     "momentum": true,
-    "analysts": true
+    "analysts": false
    },
    "badges": {
-    "dilution_pct": -2.4,
-    "peg": 0.47
-   }
-  },
-  {
-   "ticker": "7269.T",
-   "name": "SUZUKI MOTOR CORPORATION",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.56
-   }
-  },
-  {
-   "ticker": "4507.T",
-   "name": "Shionogi & Co.,Ltd.",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.66
-   }
-  },
-  {
-   "ticker": "9956.T",
-   "name": "VALOR HOLDINGS CO.,LTD.",
-   "date": "2026-10-23",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.8
+    "dilution_pct": -3.5,
+    "peg": 0.35
    }
   }
  ]

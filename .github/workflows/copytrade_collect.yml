@@ -1,0 +1,44 @@
+name: 👥 Copy trade — collect leader trades (daily)
+
+on:
+  schedule:
+    - cron: '20 7 * * *'   # بعد از به‌روزرسانی Dataroma (06:30 UTC)؛ ۱۰:۵۰ تهران
+  workflow_dispatch:
+    inputs:
+      select:
+        description: 'انتخاب دوباره‌ی رهبرها (yes/no)'
+        required: false
+        default: 'no'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: copytrade-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q pandas numpy requests yfinance lxml
+      - name: Collect
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          PYTHONWARNINGS: ignore
+        run: |
+          if [ "${{ github.event.inputs.select }}" = "yes" ]; then python3 copytrade/collect.py --select; else python3 copytrade/collect.py; fi
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Copy Trade Collector"
+          git add -f data/copytrade || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "👥 copytrade events $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done

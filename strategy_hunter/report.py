@@ -91,7 +91,7 @@ def main():
     if passed:
         b = passed[0]
         l3 = (f"🏆 بهترین روش: {b.get('name_fa') or b.get('name')} — سالانه {pct(b['out_sample']['cagr'])}، "
-              f"ریزش {pct(b['out_sample']['max_dd'])}؛ ۱٬۰۰۰ دلار زنده ← {fa(round(b['forward_usd']))} دلار")
+              f"ریزش {pct(b['out_sample']['max_dd'])}؛ ۱٬۰۰۰ دلار آزمایشی از روز ثبت ({fa(b.get('forward_days', 0))} روز) ← {fa(round(b['forward_usd']))} دلار")
     else:
         l3 = '🏆 هنوز هیچ روشی آزمون واقعی را قبول نشده است.'
     if tested:

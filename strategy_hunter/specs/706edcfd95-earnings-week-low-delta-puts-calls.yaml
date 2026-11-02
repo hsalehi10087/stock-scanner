@@ -1,0 +1,12 @@
+id: 706edcfd95-earnings-week-low-delta-puts-calls
+name: Earnings-week low-delta puts and covered calls
+name_fa: فروش پوت کم‌دلتا و کال پوشش‌دار در هفته‌ی گزارش‌ها
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xkcary/36_options_picks_during_earnings_week_31_expired/
+claim: "«۳۶ پیشنهاد آپشن در هفته‌ی گزارش‌های فصلی: ۳۱ تا بی‌ارزش منقضی شد و هر ۵ بازنده از قبل علامت خطر داشتند» — یک پوت کم‌دلتا و یک کال پوشش‌دار روی هر یک از ۱۸ نماد"
+claimed_return: "86% win rate (31/36)"
+added: 2026-11-01
+status: not_testable
+asset_class: option
+symbols: [NVDA, TSM, RDDT, MRNA, TQQQ, SOFI]
+reason_not_testable: "فروش آپشن است و قیمت تاریخی آپشن رایگان نیست؛ نتیجه فقط یک هفته است و انتخاب نماد سلیقه‌ای است"

@@ -1,0 +1,109 @@
+name: 🌤 Morning digest 2 (08:40 Tehran) — AI, growth signal, forex COT, superinvestors in one
+
+on:
+  schedule:
+    - cron: '10 5 * * *'   # ۰۸:۴۰ تهران
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: digest2
+  cancel-in-progress: false
+
+jobs:
+  part:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {name: ai, data: 'data/ai_stocks'}
+          - {name: growth, data: 'data/pattern_hunter data/growth_signal data/quality'}
+          - {name: cot, data: 'data/forex'}
+          - {name: superinvestors, data: 'data/superinvestors'}
+          - {name: scorecard, data: ''}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy scikit-learn joblib requests matplotlib scipy deep-translator arabic-reshaper python-bidi
+      - name: Build ${{ matrix.name }} (saved for the digest, not sent)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          OANDA_TOKEN: ${{ secrets.OANDA_TOKEN }}
+          OANDA_ACCOUNT: ${{ secrets.OANDA_ACCOUNT }}
+          DIGEST_DIR: digest_parts
+          PYTHONWARNINGS: ignore
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          case "${{ matrix.name }}" in
+            ai)
+              python3 market_intel/ai_report.py ;;
+            growth)
+              # اسکن الگو فقط سه‌شنبه تا شنبه (بعد از جلسه‌های دوشنبه تا جمعه آمریکا)؛ گزارش هر روز
+              dow=$(TZ=Asia/Tehran date +%u)
+              if [ "$dow" -ge 2 ] && [ "$dow" -le 6 ]; then python3 pattern_hunter/daily.py; fi
+              python3 pattern_hunter/growth_report.py ;;
+            cot)
+              python3 forex/cot.py fetch
+              python3 forex/cot.py backtest
+              python3 forex/cot.py weekly
+              python3 forex/cot.py report ;;
+            superinvestors)
+              python3 superinvestors/run.py --fetch ;;
+            scorecard)
+              # کارنامه‌ی واحد فقط شنبه‌ها
+              if [ "$(TZ=Asia/Tehran date +%u)" = 6 ]; then python3 market_intel/scorecard_all.py; fi ;;
+          esac
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: digest-${{ matrix.name }}
+          path: digest_parts
+          if-no-files-found: ignore
+          retention-days: 3
+      - name: Save data
+        if: always() && matrix.data != ''
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Morning Digest 2"
+          git add -f ${{ matrix.data }} || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🌤 ${{ matrix.name }} $(date -u +%F)"
+          for i in 1 2 3 4 5 6; do git pull --rebase -q && git push -q && break; sleep $((i * 7)); done
+
+  send:
+    needs: part
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests matplotlib
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: digest-*
+          path: digest
+          merge-multiple: true
+      - name: Send one digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          ls -la digest || true
+          python3 market_summary/digest.py digest morning2

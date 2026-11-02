@@ -1,0 +1,12 @@
+id: dcc3f9155e-qqq-rsi-ema-vwap
+name: QQQ RSI + EMA + VWAP
+name_fa: ترکیب RSI و EMA و VWAP روی QQQ
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/we-combined-rsi-ema-and-vwap-on-qqq-3-54-profit-factor/
+claim: "«RSI، EMA و VWAP را روی QQQ ترکیب کردیم — ضریب سود ۳٫۵۴»"
+claimed_return: "3.54 profit factor"
+added: 2026-10-31
+status: not_testable
+asset_class: etf
+symbols: [QQQ]
+reason_not_testable: "صفحه‌ی مقاله در دسترس نبود (صفحه‌ی ضدربات) و قانون‌های ورود و خروج مشخص نیست؛ VWAP هم به داده‌ی درون‌روزی نیاز دارد"

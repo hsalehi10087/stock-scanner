@@ -1,0 +1,10 @@
+id: 101b4bc443-index-930-orb-plain
+name: Plain 9:30 opening range breakout on NQ/ES/YM
+name_fa: شکست ساده‌ی محدوده‌ی ۱۵ دقیقه‌ی اول بازار روی NQ، ES و YM
+source: reddit/Forexstrategy
+source_url: https://www.reddit.com/r/Forexstrategy/comments/1xiusat/i_backtested_the_930_opening_range_breakout_on_nq/
+claim: "«شکست محدوده‌ی ۹:۳۰ تا ۹:۴۵ را روی NQ، ES و YM با داده‌ی ۱ دقیقه‌ای ۲۰۱۹ تا ۲۰۲۱ آزمودم (۲٬۱۲۵ شکست). روش رایج روی NQ (حد ضرر سمت دیگر محدوده، هدف ۲ برابر محدوده): ۴۹.۸٪ برد و حدود ‎+۲.۶۹ دلار به ازای هر ۱۰۰ دلار ریسک پیش از کمیسیون؛ با کمیسیون معمولی ضررده بود.»"
+claimed_return: "+$2.69 per $100 risked before commission (49.8% win rate)"
+added: 2026-10-30
+status: not_testable
+reason_not_testable: "روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم"

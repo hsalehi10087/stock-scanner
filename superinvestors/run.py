@@ -159,6 +159,13 @@ def chunks(lines, limit=3800):
 
 def send(text_chunks, token, chat_ids):
     ok = True
+    if os.getenv('DIGEST_DIR'):                       # گزارش میان‌صبح: به‌جای ارسال، برای ادغام ذخیره می‌شود
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'market_summary'))
+        import summary as S
+        for cid in chat_ids:
+            for ch in text_chunks:
+                ok &= S.tg_post(token, cid, 'sendMessage', data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'})
+        return ok
     for cid in chat_ids:
         for ch in text_chunks:
             r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
@@ -199,6 +206,9 @@ def main():
         results = diff_snapshots(prev, snap)
         for r in results:
             r['fa'] = FA_NAMES.get(r['code'], r['manager'])
+        if prev and not any(r['changes'] for r in results):
+            print('no trades above threshold today — nothing sent')      # فقط روزهایی که تغییری هست
+            return 0
         lines = build_daily(date_str, prev_date, results, snap)
 
     return 0 if send(chunks(lines), token, chat_ids) else 2

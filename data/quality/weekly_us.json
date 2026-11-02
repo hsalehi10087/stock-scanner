@@ -1,23 +1,23 @@
 {
  "market": "us",
- "date": "2026-10-24",
- "scored": 1999,
- "no_data": 1,
- "universe": 6948,
+ "date": "2026-10-31",
+ "scored": 1970,
+ "no_data": 30,
+ "universe": 6943,
  "liquid": 2000,
  "distribution": {
-  "0": 101,
-  "1": 370,
-  "2": 663,
-  "3": 546,
-  "4": 265,
-  "5": 54
+  "0": 162,
+  "1": 555,
+  "2": 689,
+  "3": 410,
+  "4": 135,
+  "5": 19
  },
  "top": [
   {
-   "ticker": "GCT",
-   "name": "GigaCloud Technology Inc - Class A Ordin",
-   "date": "2026-10-23",
+   "ticker": "CF",
+   "name": "CF Industries Holdings, Inc. Common Stoc",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -28,14 +28,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -8.5,
-    "peg": 0.27
+    "dilution_pct": -9.6,
+    "peg": 0.51
    }
   },
   {
-   "ticker": "FIVN",
-   "name": "Five9, Inc. - Common Stock",
-   "date": "2026-10-23",
+   "ticker": "ROKU",
+   "name": "Roku, Inc. - Class A Common Stock",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -46,14 +46,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 1.8,
-    "peg": 0.28
+    "dilution_pct": 1.3,
+    "peg": 0.6
    }
   },
   {
-   "ticker": "DK",
-   "name": "Delek US Holdings, Inc. Common Stock",
-   "date": "2026-10-23",
+   "ticker": "TXN",
+   "name": "Texas Instruments Incorporated - Common ",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -64,122 +64,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -4.4,
-    "peg": 0.38
-   }
-  },
-  {
-   "ticker": "OUT",
-   "name": "OUTFRONT Media Inc. Common Stock",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 8.1,
-    "peg": 0.39
-   }
-  },
-  {
-   "ticker": "SM",
-   "name": "SM Energy Company Common Stock",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.1,
-    "peg": 0.54
-   }
-  },
-  {
-   "ticker": "AMG",
-   "name": "Affiliated Managers Group, Inc. Common S",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -8.8,
-    "peg": 0.61
-   }
-  },
-  {
-   "ticker": "CVI",
-   "name": "CVR Energy Inc. Common Stock",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.71
-   }
-  },
-  {
-   "ticker": "CPAY",
-   "name": "Corpay, Inc. Common Stock",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -2.6,
-    "peg": 0.75
-   }
-  },
-  {
-   "ticker": "UGP",
-   "name": "Ultrapar Participacoes S.A. (New) Americ",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -1.2,
-    "peg": 0.78
+    "dilution_pct": -0.5,
+    "peg": 0.95
    }
   },
   {
    "ticker": "MPC",
    "name": "Marathon Petroleum Corporation Common St",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -191,67 +83,13 @@
    },
    "badges": {
     "dilution_pct": -6.8,
-    "peg": 0.9
-   }
-  },
-  {
-   "ticker": "LIVN",
-   "name": "LivaNova PLC - Ordinary Shares",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.6,
-    "peg": 0.93
-   }
-  },
-  {
-   "ticker": "CHEF",
-   "name": "The Chefs' Warehouse, Inc. - Common Stoc",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 1.1,
-    "peg": 1.08
-   }
-  },
-  {
-   "ticker": "EQNR",
-   "name": "Equinor ASA",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -8.3,
-    "peg": 1.12
+    "peg": 1.0
    }
   },
   {
    "ticker": "DINO",
    "name": "HF Sinclair Corporation Common Stock",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -263,85 +101,13 @@
    },
    "badges": {
     "dilution_pct": -3.5,
-    "peg": 1.13
-   }
-  },
-  {
-   "ticker": "DHT",
-   "name": "DHT Holdings, Inc.",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.5,
     "peg": 1.19
-   }
-  },
-  {
-   "ticker": "DDOG",
-   "name": "Datadog, Inc. - Class A Common Stock",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 3.0,
-    "peg": 1.27
-   }
-  },
-  {
-   "ticker": "REGN",
-   "name": "Regeneron Pharmaceuticals, Inc. - Common",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -3.6,
-    "peg": 1.32
-   }
-  },
-  {
-   "ticker": "EPD",
-   "name": "Enterprise Products Partners L.P. Common",
-   "date": "2026-10-23",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.2,
-    "peg": 1.33
    }
   },
   {
    "ticker": "EOG",
    "name": "EOG Resources, Inc. Common Stock",
-   "date": "2026-10-23",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -353,13 +119,13 @@
    },
    "badges": {
     "dilution_pct": -3.5,
-    "peg": 1.35
+    "peg": 1.23
    }
   },
   {
-   "ticker": "DGX",
-   "name": "Quest Diagnostics Incorporated Common St",
-   "date": "2026-10-23",
+   "ticker": "DXCM",
+   "name": "DexCom, Inc. - Common Stock",
+   "date": "2026-10-31",
    "score": 5,
    "known": 5,
    "flags": {
@@ -370,8 +136,242 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -0.3,
-    "peg": 1.53
+    "dilution_pct": -1.5,
+    "peg": 1.36
+   }
+  },
+  {
+   "ticker": "VLO",
+   "name": "Valero Energy Corporation Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -5.1,
+    "peg": 1.44
+   }
+  },
+  {
+   "ticker": "SHEL",
+   "name": "Shell PLC American Depositary Shares (ea",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -6.5,
+    "peg": 1.76
+   }
+  },
+  {
+   "ticker": "WAT",
+   "name": "Waters Corporation Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.3,
+    "peg": 1.79
+   }
+  },
+  {
+   "ticker": "OKE",
+   "name": "ONEOK, Inc. Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 8.0,
+    "peg": 1.83
+   }
+  },
+  {
+   "ticker": "CSX",
+   "name": "CSX Corporation - Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.1,
+    "peg": 1.86
+   }
+  },
+  {
+   "ticker": "GWW",
+   "name": "W.W. Grainger, Inc. Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.9,
+    "peg": 1.87
+   }
+  },
+  {
+   "ticker": "ROST",
+   "name": "Ross Stores, Inc. - Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.0,
+    "peg": 2.13
+   }
+  },
+  {
+   "ticker": "UNP",
+   "name": "Union Pacific Corporation Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.8,
+    "peg": 2.93
+   }
+  },
+  {
+   "ticker": "CNQ",
+   "name": "Canadian Natural Resources Limited Commo",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.0,
+    "peg": 3.42
+   }
+  },
+  {
+   "ticker": "NUE",
+   "name": "Nucor Corporation Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.9,
+    "peg": 5.21
+   }
+  },
+  {
+   "ticker": "CRWD",
+   "name": "CrowdStrike Holdings, Inc. - Class A Com",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 2.2,
+    "peg": 6.74
+   }
+  },
+  {
+   "ticker": "SU",
+   "name": "Suncor Energy  Inc. Common Stock",
+   "date": "2026-10-31",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -4.1,
+    "peg": 11.4
+   }
+  },
+  {
+   "ticker": "BP",
+   "name": "BP p.l.c. Common Stock",
+   "date": "2026-10-31",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -3.0,
+    "peg": 0.05
    }
   }
  ]

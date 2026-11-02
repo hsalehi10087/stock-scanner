@@ -1,0 +1,89 @@
+name: ☀️ Morning digest (05:00 Tehran) — 6 reports in one
+
+on:
+  schedule:
+    - cron: '30 1 * * *'   # ۰۵:۰۰ تهران
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morning-digest
+  cancel-in-progress: false
+
+jobs:
+  part:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {script: report, data: ''}
+          - {script: gainers, data: 'data/gainers data/signal_tracker data/quality'}
+          - {script: fund_growth, data: 'data/fundamentals data/signal_tracker data/quality'}
+          - {script: jp_growth, data: 'data/jp_gainers data/quality'}
+          - {script: cn_growth, data: 'data/cn_gainers data/quality'}
+          - {script: tw_growth, data: 'data/tw_gainers data/quality'}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests matplotlib deep-translator arabic-reshaper python-bidi xlrd openpyxl
+      - name: Build ${{ matrix.script }} (saved for the digest, not sent)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          DIGEST_DIR: digest_parts
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/${{ matrix.script }}.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: digest-${{ matrix.script }}
+          path: digest_parts
+          if-no-files-found: ignore
+          retention-days: 3
+      - name: Save data
+        if: always() && matrix.data != ''
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Morning Digest"
+          git add -f ${{ matrix.data }} || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "☀️ ${{ matrix.script }} $(date -u +%F)"
+          for i in 1 2 3 4 5 6; do git pull --rebase -q && git push -q && break; sleep $((i * 7)); done
+
+  send:
+    needs: part
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: digest-*
+          path: digest
+          merge-multiple: true
+      - name: Send one digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          ls -la digest || true
+          python3 market_summary/digest.py digest
