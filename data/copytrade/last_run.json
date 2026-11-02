@@ -1,6 +1,6 @@
 {
- "date": "2026-11-01",
- "new": 0,
+ "date": "2026-11-02",
+ "new": 2,
  "log": [
   "Congress CapitolTrades p1: HTTPError 503 Server Error: Service Unavailable for url: https://bff.c",
   "Congress CapitolTrades: 0 rows",
@@ -10,8 +10,7 @@
   "13F: 3 events",
   "ARK: 0 events",
   "Congress: 0 events from 0 rows",
-  "Insiders: 6 events",
-  "new events: 0 (total sources: 13F/ARK/Congress/Insiders)",
-  "select: 14/30 leaders pass (SPY 3y +87%)"
+  "Insiders: 8 events",
+  "new events: 2 (total sources: 13F/ARK/Congress/Insiders)"
  ]
 }
