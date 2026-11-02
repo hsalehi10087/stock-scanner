@@ -1,8 +1,8 @@
-name: 💱 Forex COT (weekly, Saturday 08:00 Tehran)
+name: 💱 Forex COT (daily, 08:00 Tehran)
 
 on:
   schedule:
-    - cron: '30 4 * * 6'   # شنبه ۰۸:۰۰ تهران؛ گزارش COT جمعه‌شب منتشر می‌شود
+    - cron: '30 4 * * *'   # هر روز ۰۸:۰۰ تهران (داده‌ی COT هر جمعه‌شب تازه می‌شود؛ دفتر آزمایشی فقط با داده‌ی جدید جابه‌جا می‌شود)
   workflow_dispatch:
     inputs:
       chat_id:
