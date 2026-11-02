@@ -13,7 +13,9 @@
   python3 tools/analyst_views_finalize.py draft.json            # بررسی و نوشتن
   python3 tools/analyst_views_finalize.py draft.json --check    # فقط بررسی
 ساختار پیش‌نویس: مثل latest.json، به‌علاوه‌ی
-  "labels": [{"id": "<id خبر از news_digest>", "asset": "gold", "label": "bull|bear|neutral"}, ...]
+  "labels": [{"id": "<id خبر از news_digest>", "asset": "gold", "label": "bull|bear|neutral",
+              "note_fa": "برداشت دوخطی ایجنت از متن خبر: نویسنده چه می‌گوید و چرا"}, ...]
+(note_fa برای حسابرسی در JSON می‌ماند و در گزارش تلگرام نمی‌آید؛ گزارش فقط آمار را نشان می‌دهد)
 و برای هر دارایی "stories": [{"id": "<id خبر>", "title_fa": "...", "understood_fa": "..."}]  (۱ تا ۳ خبر مهم)
 که url و publisher را این اسکریپت از خود خبر پر می‌کند؛ و در ریشه "full_read": تعداد خبرهایی که متنشان خوانده شد.
 """
@@ -77,7 +79,10 @@ def finalize(draft, now=None, news=None):
             errs.append(f'labels[{i}]: asset/label نامعتبر {lb}')
         elif lb.get('id') not in by_id:
             errs.append(f'labels[{i}]: id {lb.get("id")} در خبرهای ۶۰ ساعت اخیر نیست')
+        elif len((lb.get('note_fa') or '').strip()) < 30:
+            errs.append(f'labels[{i}]: note_fa (برداشت دوخطی از متن خبر) برای {lb.get("id")} نیست یا خیلی کوتاه است')
         else:
+            lb['note_fa'] = lb['note_fa'].strip()
             good.append(lb)
     uniq = {(lb['id'], lb['asset']): lb for lb in good}           # هر خبر برای هر دارایی یک بار
     prev = previous(v['date'])
@@ -93,8 +98,6 @@ def finalize(draft, now=None, news=None):
             errs.append(f'{a}: stance نامعتبر «{stance}»')
         if not mine and not summary:
             summary = NO_NEWS
-        if not summary:
-            errs.append(f'{a}: summary_fa خالی است')
         views = d.get('views') or []
         if len(views) > 2:
             errs.append(f'{a}: بیش از ۲ view')
@@ -116,16 +119,12 @@ def finalize(draft, now=None, news=None):
                              else st['url']})
         if len(stories) > 3:
             errs.append(f'{a}: بیش از ۳ story')
-        if mine and not stories:
-            errs.append(f'{a}: برای دارایی‌ای که خبر برچسب‌خورده دارد دست‌کم یک story لازم است')
         out = {'stance': stance, 'counts': counts, 'confidence': confidence(len(directional), len(pubs)),
                'summary_fa': summary, 'stories': stories[:3], 'views': views[:2]}
         old = ((prev or {}).get('assets') or {}).get(a, {}).get('stance')
         out['prev_stance'] = old
         out['change_fa'] = f'از «{old}» به «{stance}»' if old and old != stance else ''
         v['assets'][a] = out
-    if not v['watch_fa']:
-        errs.append('watch_fa خالی است')
     v['labels'] = sorted(uniq.values(), key=lambda lb: (lb['asset'], lb['id']))
     return v, errs
 
