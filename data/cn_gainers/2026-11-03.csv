@@ -1,0 +1,7 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+688518.SS,联赢激光,21.347643565797835,376.76100415197214,52.43949198,10.99911518,2026-11-03,0,5,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+301071.SZ,力量钻石,11.891669374057878,376.47904576609324,54.10600317,11.35537935,2026-11-03,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+301607.SZ,富特科技,8.974356309588604,71.0527420543111,80.87355003,47.27989102,2026-11-03,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+688087.SS,英科再生,18.551169506634935,39.536698866287324,102.56290793000001,73.50246118999999,2026-11-03,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+688073.SS,毕得医药,13.07035568221746,32.21946669467589,56.474856409999994,42.71296642,2026-11-03,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+688818.SS,电科蓝天,21.520405325991376,25.90356407653645,60.53951879,48.08403895,2026-11-03,0,3,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
