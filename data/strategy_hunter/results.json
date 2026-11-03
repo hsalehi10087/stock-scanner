@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T23:11:13+00:00",
+ "updated": "2026-11-03T14:00:08+00:00",
  "results": {
   "03cdd17a5a-eurusd-ma-cross-1-5r": {
    "name": "EURUSD/EURJPY MA cross 1.5R",
@@ -56,6 +56,20 @@
    "status": "not_testable",
    "reason_not_testable": "روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم",
    "verdict": "غیرقابل آزمون: روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم"
+  },
+  "11070fcb83-rust-hft-engine": {
+   "name": "Rust HFT engine",
+   "name_fa": "موتور معامله‌ی فرکانس بالا با Rust",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xm7qfz/built_a_custom_rust_hft_engine_266_sharpe_how_do/",
+   "claim": "«روی کاغذ و در شبیه‌سازی تمیز (۴۸ میلیون درخواست در ثانیه، تأخیر داخلی ۳۳۲ نانوثانیه): نرخ برد ۸۵٪ و شارپ ۲٫۶۶»",
+   "claimed_return": "85% win rate, Sharpe 2.66",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-03",
+   "status": "not_testable",
+   "reason_not_testable": "معامله‌ی فرکانس بالا (HFT) که داده‌ی تیک و دفتر سفارش می‌خواهد؛ هیچ قانون معامله‌ای گفته نشده",
+   "verdict": "غیرقابل آزمون: معامله‌ی فرکانس بالا (HFT) که داده‌ی تیک و دفتر سفارش می‌خواهد؛ هیچ قانون معامله‌ای گفته نشده"
   },
   "143c5c2124-morning-momentum-pop": {
    "name": "Morning Momentum Pop (AI day-trading)",
@@ -128,6 +142,20 @@
    "status": "not_testable",
    "reason_not_testable": "ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست"
+  },
+  "251f3276af-diamond-geezer-1min-bias": {
+   "name": "Diamond Geezer 1-minute traffic lights",
+   "name_fa": "چراغ‌های راهنمای «دایموند گیزر» روی کندل ۱ دقیقه‌ای",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/Forexstrategy/comments/1xlqmhu/diamond_geezer_monday_market_pulse/",
+   "claim": "«نتایج قبلی DG، جمعه ۳۰ اکتبر، چارت ۱ دقیقه‌ای: CADCHF خرید ‎+6R‎، CHFJPY فروش ‎+5R‎، DE40 فروش ‎+3R‎، EURAUD فروش ‎+6R‎، EURCAD فروش ‎+3R‎، EURGBP فروش ‎+2R‎، EURJPY فروش ‎+4R‎، EURUSD فروش ‎+5R‎ ...»",
+   "claimed_return": "+2R to +6R per trade (one day)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-03",
+   "status": "not_testable",
+   "reason_not_testable": "معامله روی کندل ۱ دقیقه‌ای؛ درصد اطمینان «چراغ‌ها» از یک مدل منتشرنشده می‌آید و قانون ورود و خروج گفته نشده",
+   "verdict": "غیرقابل آزمون: معامله روی کندل ۱ دقیقه‌ای؛ درصد اطمینان «چراغ‌ها» از یک مدل منتشرنشده می‌آید و قانون ورود و خروج گفته نشده"
   },
   "276555f346-0dte-quick-scalp": {
    "name": "0DTE options quick scalping",
@@ -284,10 +312,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.16,
-    "sharpe": 0.63,
+    "cagr": 2.99,
+    "sharpe": 0.58,
     "max_dd": -13.27,
-    "total": 185.58
+    "total": 170.14
    },
    "in_sample": {
     "cagr": 3.7,
@@ -296,10 +324,10 @@
     "total": 135.71
    },
    "out_sample": {
-    "cagr": 1.91,
-    "sharpe": 0.38,
-    "max_dd": -8.4,
-    "total": 21.15
+    "cagr": 1.36,
+    "sharpe": 0.26,
+    "max_dd": -8.64,
+    "total": 14.61
    },
    "buyhold_full": {
     "cagr": 10.73,
@@ -313,9 +341,9 @@
     "max_dd": -33.72,
     "total": 315.01
    },
-   "trades": 91,
-   "win_rate": 81.3,
-   "avg_trade_pct": 1.18,
+   "trades": 92,
+   "win_rate": 80.4,
+   "avg_trade_pct": 1.11,
    "exposure": 0.06,
    "period": "1993-02-01 → 2026-11-02",
    "oos_start": "2016-09-12",
@@ -461,6 +489,20 @@
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
+  "43a8d23608-mnq-5min-box-breakout": {
+   "name": "MNQ 5-minute opening box breakout",
+   "name_fa": "شکست جعبه‌ی ۵ دقیقه‌ای MNQ در بازگشایی شبانه و ساعت ۵ صبح",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xljwwh/the_month_of_november_trading_journey/",
+   "claim": "«۲ قرارداد MNQ در هر معامله؛ جعبه‌ی ۵ دقیقه‌ای که با بازگشایی شبانه و ساعت ۵ صبح شکل می‌گیرد، منتظر شکست به بالا یا پایین؛ هدف ۶۰ دلار در روز با حد ضرر روزانه ‎-150‎ دلار؛ یک‌چهارم راه قبولی ارزیابی این ماه»",
+   "claimed_return": "$60/day target",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-03",
+   "status": "not_testable",
+   "reason_not_testable": "روش روی کندل ۵ دقیقه‌ای و ساعت مشخص (۵ صبح) است؛ داده‌ی دقیقه‌ای در دسترس نیست و حد سود/ضرر هر معامله گفته نشده",
+   "verdict": "غیرقابل آزمون: روش روی کندل ۵ دقیقه‌ای و ساعت مشخص (۵ صبح) است؛ داده‌ی دقیقه‌ای در دسترس نیست و حد سود/ضرر هر معامله گفته نشده"
+  },
   "43c28f72f0-gold-swing-breakout": {
    "name": "Gold swing breakout (Gold Reaper rebuild, daily engine)",
    "name_fa": "شکست سقف نوسانی طلا (بازسازی Gold Reaper)",
@@ -476,42 +518,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 2.42,
+    "cagr": 2.41,
     "sharpe": 0.31,
     "max_dd": -28.05,
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.08,
-    "sharpe": 0.17,
+    "cagr": 0.94,
+    "sharpe": 0.15,
     "max_dd": -28.05,
-    "total": 13.48
+    "total": 11.61
    },
    "out_sample": {
-    "cagr": 5.63,
-    "sharpe": 0.59,
+    "cagr": 5.59,
+    "sharpe": 0.58,
     "max_dd": -14.57,
-    "total": 31.84
+    "total": 31.59
    },
    "buyhold_full": {
-    "cagr": 7.82,
-    "sharpe": 0.52,
+    "cagr": 7.85,
+    "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 254.19
+    "total": 256.0
    },
    "buyhold_out_sample": {
-    "cagr": 16.98,
+    "cagr": 17.06,
     "sharpe": 0.92,
     "max_dd": -26.69,
-    "total": 120.58
+    "total": 121.31
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-02",
-   "oos_start": "2021-10-14",
-   "forward_days": 7,
+   "period": "2010-01-04 → 2026-11-03",
+   "oos_start": "2021-10-15",
+   "forward_days": 8,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -581,7 +623,7 @@
     "cagr": 6.78,
     "sharpe": 0.61,
     "max_dd": -25.39,
-    "total": 370.25
+    "total": 370.26
    },
    "out_sample": {
     "cagr": 11.07,
@@ -902,6 +944,20 @@
    "reason_not_testable": "به داده‌ی بنیادی از گزارش‌های SEC (ROA، حاشیه‌ی عملیاتی، جریان نقد و...) و فهرست تاریخی اعضای S&P 100 نیاز دارد؛ موتور فقط قیمت یک نماد را می‌آزماید",
    "verdict": "غیرقابل آزمون: به داده‌ی بنیادی از گزارش‌های SEC (ROA، حاشیه‌ی عملیاتی، جریان نقد و...) و فهرست تاریخی اعضای S&P 100 نیاز دارد؛ موتور فقط قیمت یک نماد را می‌آزماید"
   },
+  "9283d6ceb8-midterm-election-week-seasonality": {
+   "name": "Midterm election week seasonality",
+   "name_fa": "فصلی بودن هفته‌ی انتخابات میان‌دوره‌ای آمریکا",
+   "source": "reddit/swingtrading",
+   "source_url": "https://www.reddit.com/r/swingtrading/comments/1xlx6pi/market_analysis_0211_where_to_this_week/",
+   "claim": "«داده‌ی Seasonax: اس‌اند‌پی ۵۰۰ در هفته‌ی انتخابات میان‌دوره‌ای (۱۹۳۴ تا ۲۰۲۲) به‌طور میانگین ‎+2.74%‎ بوده و در ۲۲ مورد از ۲۳ مورد مثبت بوده (حدود ۹۵٫۷٪). در ۴۰ سال گذشته (۱۰ انتخابات میان‌دوره‌ای) نزدک ۱۰۰ از ۲ روز معاملاتی قبل تا ۲ روز معاملاتی بعد از انتخابات همیشه مثبت بوده؛ میانگین ‎+2.06%‎»",
+   "claimed_return": "95.7% hit rate, avg +2.74% (S&P 500 midterm week)",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-03",
+   "status": "not_testable",
+   "reason_not_testable": "فقط هر ۴ سال یک بار (سال‌های زوج غیر ریاست‌جمهوری) رخ می‌دهد؛ موتور شاخص ماه یا سال ندارد و با ۲ تا ۱۰ نمونه نتیجه‌ی آماری معنادار نمی‌شود",
+   "verdict": "غیرقابل آزمون: فقط هر ۴ سال یک بار (سال‌های زوج غیر ریاست‌جمهوری) رخ می‌دهد؛ موتور شاخص ماه یا سال ندارد و با ۲ تا ۱۰ نمونه نتیجه‌ی آماری معنادار نمی‌شود"
+  },
   "94a3d9a5f8-gold-asian-15m-ifvg": {
    "name": "Gold Asian session 15m IFVG",
    "name_fa": "طلا با اولین IFVG پانزده‌دقیقه‌ای جلسه‌ی آسیا",
@@ -1011,7 +1067,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.85,
+    "cagr": 66.83,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -1023,30 +1079,30 @@
     "total": 17488.76
    },
    "out_sample": {
-    "cagr": 32.64,
+    "cagr": 32.61,
     "sharpe": 1.01,
     "max_dd": -35.7,
     "total": 179.65
    },
    "buyhold_full": {
-    "cagr": 52.51,
+    "cagr": 52.58,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16670.13
+    "total": 16791.27
    },
    "buyhold_out_sample": {
-    "cagr": 36.43,
+    "cagr": 36.67,
     "sharpe": 0.91,
     "max_dd": -53.06,
-    "total": 209.93
+    "total": 212.17
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-11-02",
+   "period": "2014-09-17 → 2026-11-03",
    "oos_start": "2023-03-15",
-   "forward_days": 8,
+   "forward_days": 9,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1082,7 +1138,7 @@
     "cagr": 5.88,
     "sharpe": 0.59,
     "max_dd": -19.5,
-    "total": 383.52
+    "total": 383.51
    },
    "in_sample": {
     "cagr": 6.09,
@@ -1115,7 +1171,7 @@
    "period": "1999-03-10 → 2026-11-02",
    "oos_start": "2018-07-16",
    "forward_days": 4,
-   "forward_usd": 979.04,
+   "forward_usd": 979.03,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "c59688fc4a-qqq-mean-reversion-plus-trend": {
@@ -1133,6 +1189,20 @@
    "status": "not_testable",
    "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده (سایت و سابستک هر دو پشت اشتراک)",
    "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده (سایت و سابستک هر دو پشت اشتراک)"
+  },
+  "c6c7f880b9-mt5-signal-tp03-sl125": {
+   "name": "MT5 signal EA TP 0.3% SL 1.25%",
+   "name_fa": "اکسپرت MT5 با حد سود ۰٫۳٪ و حد ضرر ۱٫۲۵٪",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/ai_trading/comments/1xlx9di/from_1000_to_25900_in_an_mt5_is_this_actually/",
+   "claim": "«سپرده‌ی اولیه ۱٬۰۰۰ دلار، سود خالص ۲۴٬۹۰۲ دلار، ضریب سود ۱٫۷۰، نرخ برد ۷۷٫۸۲٪، ۱۷٬۸۷۷ معامله، بیشترین افت ۳۰٫۴۲٪، شارپ ۶٫۸۶. حد سود ۰٫۳٪، حد ضرر ۱٫۲۵٪، بیشترین مدت ۲۴۰ دقیقه» (نتیجه‌ی بک‌تست، نه معامله‌ی واقعی)",
+   "claimed_return": "+2490% ($1,000 to $25,900), 77.82% win rate",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-03",
+   "status": "not_testable",
+   "reason_not_testable": "منطق ورود عمداً فاش نشده و نماد و تایم‌فریم گفته نشده؛ مدت نگه‌داری ۲۴۰ دقیقه‌ای داده‌ی درون‌روزی می‌خواهد",
+   "verdict": "غیرقابل آزمون: منطق ورود عمداً فاش نشده و نماد و تایم‌فریم گفته نشده؛ مدت نگه‌داری ۲۴۰ دقیقه‌ای داده‌ی درون‌روزی می‌خواهد"
   },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
