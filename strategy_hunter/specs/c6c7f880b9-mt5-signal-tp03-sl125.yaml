@@ -1,0 +1,10 @@
+id: c6c7f880b9-mt5-signal-tp03-sl125
+name: MT5 signal EA TP 0.3% SL 1.25%
+name_fa: اکسپرت MT5 با حد سود ۰٫۳٪ و حد ضرر ۱٫۲۵٪
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/ai_trading/comments/1xlx9di/from_1000_to_25900_in_an_mt5_is_this_actually/
+claim: "«سپرده‌ی اولیه ۱٬۰۰۰ دلار، سود خالص ۲۴٬۹۰۲ دلار، ضریب سود ۱٫۷۰، نرخ برد ۷۷٫۸۲٪، ۱۷٬۸۷۷ معامله، بیشترین افت ۳۰٫۴۲٪، شارپ ۶٫۸۶. حد سود ۰٫۳٪، حد ضرر ۱٫۲۵٪، بیشترین مدت ۲۴۰ دقیقه» (نتیجه‌ی بک‌تست، نه معامله‌ی واقعی)"
+claimed_return: "+2490% ($1,000 to $25,900), 77.82% win rate"
+added: 2026-11-03
+status: not_testable
+reason_not_testable: "منطق ورود عمداً فاش نشده و نماد و تایم‌فریم گفته نشده؛ مدت نگه‌داری ۲۴۰ دقیقه‌ای داده‌ی درون‌روزی می‌خواهد"

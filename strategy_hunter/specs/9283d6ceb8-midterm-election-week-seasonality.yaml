@@ -1,0 +1,10 @@
+id: 9283d6ceb8-midterm-election-week-seasonality
+name: Midterm election week seasonality
+name_fa: فصلی بودن هفته‌ی انتخابات میان‌دوره‌ای آمریکا
+source: reddit/swingtrading
+source_url: https://www.reddit.com/r/swingtrading/comments/1xlx6pi/market_analysis_0211_where_to_this_week/
+claim: "«داده‌ی Seasonax: اس‌اند‌پی ۵۰۰ در هفته‌ی انتخابات میان‌دوره‌ای (۱۹۳۴ تا ۲۰۲۲) به‌طور میانگین ‎+2.74%‎ بوده و در ۲۲ مورد از ۲۳ مورد مثبت بوده (حدود ۹۵٫۷٪). در ۴۰ سال گذشته (۱۰ انتخابات میان‌دوره‌ای) نزدک ۱۰۰ از ۲ روز معاملاتی قبل تا ۲ روز معاملاتی بعد از انتخابات همیشه مثبت بوده؛ میانگین ‎+2.06%‎»"
+claimed_return: "95.7% hit rate, avg +2.74% (S&P 500 midterm week)"
+added: 2026-11-03
+status: not_testable
+reason_not_testable: "فقط هر ۴ سال یک بار (سال‌های زوج غیر ریاست‌جمهوری) رخ می‌دهد؛ موتور شاخص ماه یا سال ندارد و با ۲ تا ۱۰ نمونه نتیجه‌ی آماری معنادار نمی‌شود"
