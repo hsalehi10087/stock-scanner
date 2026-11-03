@@ -1,75 +1,110 @@
 {
-"2026-10-30": {
-"REGN": [
-"hi52",
+"2026-11-03": {
+"AEHR": [
 "surge"
 ],
-"DFIN": [
+"DD": [
+"surge"
+],
+"FISV": [
+"surge"
+],
+"GPK": [
+"surge"
+],
+"LSCC": [
+"surge"
+],
+"NBIX": [
+"surge"
+],
+"RRX": [
+"surge"
+],
+"VRSN": [
 "hi52"
-],
-"GPN": [
-"hi20",
-"surge"
-],
-"APP": [
-"drop"
-],
-"COHR": [
-"drop"
-],
-"AVGO": [
-"drop"
-],
-"ALAB": [
-"drop"
-],
-"PLTR": [
-"drop"
-],
-"ARM": [
-"drop"
-],
-"LITE": [
-"drop"
-],
-"AAOI": [
-"drop"
-],
-"TEM": [
-"drop"
-],
-"CRDO": [
-"drop"
-],
-"IONQ": [
-"drop"
-],
-"SITM": [
-"drop"
-],
-"NBIS": [
-"drop"
-],
-"CRWV": [
-"drop"
-],
-"RGTI": [
-"drop"
-],
-"APLD": [
-"drop"
-],
-"QBTS": [
-"drop"
-],
-"NVTS": [
-"drop"
-],
-"IREN": [
-"drop"
-],
-"OKLO": [
-"drop"
 ]
+},
+"pending_2026-11-03": [
+{
+"code": "surge",
+"ticker": "AEHR",
+"score": 1,
+"rvol": 2.916209785095037,
+"line": "AEHR ۶۴٫۱۵$ ▲۲۴٫۶٪ | حجم ۲٫۹ برابر | فروش ▲۳۳٫۷٪، AI ۵٫۲",
+"time": "15:17",
+"price": 64.15,
+"chg": 24.64
+},
+{
+"code": "surge",
+"ticker": "DD",
+"score": 1,
+"rvol": 2.4458902889074876,
+"line": "DD ۱۵۳٫۹۶$ ▲۹٫۰٪ | حجم ۲٫۴ برابر | فروش ▲۴٫۰٪، سود ▲۱۴۲٫۴٪",
+"time": "15:17",
+"price": 153.96,
+"chg": 8.96
+},
+{
+"code": "surge",
+"ticker": "FISV",
+"score": 0,
+"rvol": 2.8107907031411563,
+"line": "FISV ۵۸٫۹۵$ ▲۱۳٫۵٪ | حجم ۲٫۸ برابر | فروش ▼۴٫۱٪، سود ▼۳۸٫۹٪",
+"time": "15:17",
+"price": 58.95,
+"chg": 13.52
+},
+{
+"code": "surge",
+"ticker": "GPK",
+"score": 0,
+"rvol": 2.1319727441223244,
+"line": "GPK ۱۱٫۰۹$ ▲۱۸٫۸٪ | حجم ۲٫۱ برابر",
+"time": "15:17",
+"price": 11.09,
+"chg": 18.81
+},
+{
+"code": "surge",
+"ticker": "LSCC",
+"score": 1,
+"rvol": 3.1140366441516045,
+"line": "LSCC ۱۰۶٫۷۶$ ▲۱۱٫۹٪ | حجم ۳٫۱ برابر | فروش ▲۶۲٫۲٪، AI ۵٫۶",
+"time": "15:17",
+"price": 106.76,
+"chg": 11.86
+},
+{
+"code": "surge",
+"ticker": "NBIX",
+"score": 0,
+"rvol": 2.6674237289114506,
+"line": "NBIX ۱۶۷٫۰$ ▲۱۴٫۹٪ | حجم ۲٫۷ برابر",
+"time": "15:17",
+"price": 167.0,
+"chg": 14.9
+},
+{
+"code": "surge",
+"ticker": "RRX",
+"score": 0,
+"rvol": 2.2049656870867804,
+"line": "RRX ۱۷۷٫۷۹$ ▲۱۰٫۵٪ | حجم ۲٫۲ برابر",
+"time": "15:17",
+"price": 177.79,
+"chg": 10.48
+},
+{
+"code": "hi52",
+"ticker": "VRSN",
+"score": 1,
+"rvol": 1.915412658559234,
+"line": "VRSN ۳۱۵٫۹۸$ ▲۲٫۵٪ | حجم ۱٫۹ برابر | فروش ▲۶٫۰٪، سود ▲۴٫۴٪",
+"time": "15:17",
+"price": 315.98,
+"chg": 2.46
 }
+]
 }
