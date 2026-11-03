@@ -1,2 +1,2 @@
-ticker,name,price_chg,ni_growth,ni_cur_m,ni_prev_m,date,qs,qs_label
-6557,AIAI Group Corporation,19.86754966887416,35.052450128178684,183.331,135.748,2026-11-02,,
+ticker,name,price_chg,ni_growth,ni_cur_m,ni_prev_m,date,qs,qs_known,qs_label,qs_flags
+6557,AIAI Group Corporation,19.86754966887416,35.052450128178684,183.331,135.748,2026-11-02,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
