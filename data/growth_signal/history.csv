@@ -113,3 +113,13 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-10-31,tw,2465.TW,LEADTEK RESEARCH,102.0,65.6,trend|longpat,صورت مالی,2,0.858,شکست سقف ۵۲ هفته,1.7
 2026-10-31,de,BFSA.DE,Befesa,37.0,25818.2109,trend|longpat,کن‌اسلیم,3,0.86,سقف دوقلو (هشدار)، سرووشانه معکوس، مثلث صعودی,2.5
 2026-10-31,ca,CEU.TO,CES ENERGY SOLUTIONS CORP,20.96,35620.0,trend|longpat,کیفیت رشد,4,0.906,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
+2026-11-03,us,EXPD,Expeditors International,200.56,752.1,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.158,شکست سقف ۵۲ هفته,1.7
+2026-11-03,us,MUR,Murphy Oil,40.16,752.1,trend|longpat,کیفیت رشد,4,0.79,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-03,in,GABRIEL.NS,Gabriel India Ltd.,1401.1,23810.8496,trend|pullback,صورت مالی|کیفیت رشد,5,0.591,روند صعودی,1.0
+2026-11-03,in,METROPOLIS.NS,Metropolis Healthcare Ltd.,568.7,23810.8496,trend|pullback,کیفیت رشد,5,0.433,روند صعودی,1.0
+2026-11-03,jp,4008.T,SUMITOMO SEIKA CHEMICALS CO,1448.0,2472.0,vcp|longpat,صورت مالی,3,0.744,مثلث صعودی,2.0
+2026-11-03,jp,4911.T,SHISEIDO COMPANY LIMITED,3814.0,2472.0,trend|longpat,کیفیت رشد,4,0.734,سرووشانه معکوس (شکست),3.0
+2026-11-03,jp,4471.T,SANYO CHEMICAL INDUSTRIES,1596.0,2472.0,trend|pullback,صورت مالی|کیفیت رشد,4,0.715,روند صعودی,1.0
+2026-11-03,tw,6491.TW,PEGAVISION CORPORATION,405.0,63.15,trend|pullback,بافت|کیفیت رشد,4,0.759,روند صعودی,1.0
+2026-11-03,tw,2027.TW,TA CHEN STAINLESS PIPE CORP,48.95,63.15,trend|pullback,صورت مالی,2,0.664,روند صعودی,1.0
+2026-11-03,tw,1303.TW,NAN YA PLASTIC,271.0,63.15,trend|longpat,صورت مالی,3,0.091,سرووشانه معکوس (شکست),3.0

@@ -1,530 +1,281 @@
 {
- "date": "2026-10-31",
+ "date": "2026-11-03",
  "markets": {
   "us": {
-   "data_date": "2026-10-30",
-   "scored": 1487,
-   "technical": 222,
-   "checked": 16,
+   "data_date": "2026-11-02",
+   "scored": 1483,
+   "technical": 204,
+   "checked": 23,
    "signals": [
     {
-     "ticker": "BTSG",
-     "name": "BrightSpring Health Services",
-     "price": 66.89,
+     "ticker": "EXPD",
+     "name": "Expeditors International",
+     "price": 200.56,
      "setups": [
       "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.792,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ ⚠️رقیق‌شدن",
-     "chart": "سرووشانه معکوس (شکست)، مثلث صعودی",
-     "chart_score": 3.0
-    },
-    {
-     "ticker": "EXEL",
-     "name": "Exelixis",
-     "price": 69.39,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.685,
+     "tech_rank": 0.158,
      "fundamentals": [
       "صورت مالی",
       "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۵/۵",
+     "quality": "⭐۴/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
      "chart": "شکست سقف ۵۲ هفته",
      "chart_score": 1.7
     },
     {
-     "ticker": "MANH",
-     "name": "Manhattan Associates",
-     "price": 248.39,
+     "ticker": "MUR",
+     "name": "Murphy Oil",
+     "price": 40.16,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.656,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۳/۵",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "MD",
-     "name": "Pediatrix Medical Group",
-     "price": 29.82,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.588,
+     "tech_rank": 0.79,
      "fundamentals": [
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "XOM",
-     "name": "ExxonMobil",
-     "price": 187.25,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.478,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 3.0
-    },
-    {
-     "ticker": "NDAQ",
-     "name": "Nasdaq, Inc.",
-     "price": 106.23,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.332,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 2.2
-    },
-    {
-     "ticker": "THG",
-     "name": "Hanover Insurance",
-     "price": 242.09,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.226,
-     "fundamentals": [
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "LXP",
-     "name": "Lexington Realty Trust",
-     "price": 61.18,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.215,
-     "fundamentals": [
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۳/۵",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
+     "chart_score": 2.0
     }
    ]
   },
   "cn": {
-   "data_date": "2026-10-30",
-   "scored": 1500,
-   "technical": 19,
-   "checked": 18,
+   "data_date": "2026-11-03",
+   "scored": 1498,
+   "technical": 17,
+   "checked": 17,
    "signals": []
   },
   "in": {
-   "data_date": "2026-10-30",
-   "scored": 707,
-   "technical": 45,
-   "checked": 17,
+   "data_date": "2026-11-03",
+   "scored": 706,
+   "technical": 51,
+   "checked": 15,
    "signals": [
     {
-     "ticker": "TANLA.NS",
-     "name": "Tanla Platforms Ltd.",
-     "price": 627.15,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.856,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۲/۵ (۱ نامعلوم)",
-     "chart": "کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته",
-     "chart_score": 2.2
-    },
-    {
-     "ticker": "ZYDUSLIFE.NS",
-     "name": "Zydus Lifesciences Ltd.",
-     "price": 1245.5,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.089,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "SHILPAMED.NS",
-     "name": "Shilpa Medicare Ltd.",
-     "price": 955.6,
+     "ticker": "GABRIEL.NS",
+     "name": "Gabriel India Ltd.",
+     "price": 1401.1,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.9,
+     "tech_rank": 0.591,
      "fundamentals": [
+      "صورت مالی",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵ ⚠️رقیق‌شدن",
+     "quality": "⭐۵/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
      "chart": "روند صعودی",
      "chart_score": 1.0
     },
     {
-     "ticker": "SHREEJISPG.NS",
-     "name": "Shreeji Shipping Global Ltd.",
-     "price": 843.3,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.779,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "GRWRHITECH.NS",
-     "name": "Garware Hi-Tech Films Ltd.",
-     "price": 6974.5,
+     "ticker": "METROPOLIS.NS",
+     "name": "Metropolis Healthcare Ltd.",
+     "price": 568.7,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.429,
+     "tech_rank": 0.433,
      "fundamentals": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    },
-    {
-     "ticker": "INDHOTEL.NS",
-     "name": "Indian Hotels Co. Ltd.",
-     "price": 811.65,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.252,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵",
-     "chart": "فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 2.7
+     "quality": "⭐۵/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
     }
    ]
   },
   "jp": {
-   "data_date": "2026-10-30",
-   "scored": 1497,
-   "technical": 129,
-   "checked": 25,
+   "data_date": "2026-11-02",
+   "scored": 1499,
+   "technical": 105,
+   "checked": 27,
    "signals": [
     {
-     "ticker": "9110.T",
-     "name": "NS UNITED KAIUN KA",
-     "price": 10540.0,
+     "ticker": "4008.T",
+     "name": "SUMITOMO SEIKA CHEMICALS CO",
+     "price": 1448.0,
      "setups": [
-      "trend",
       "vcp",
-      "pullback",
       "longpat"
      ],
-     "tech_rank": 0.057,
+     "tech_rank": 0.744,
      "fundamentals": [
       "صورت مالی"
      ],
      "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "3968.T",
-     "name": "SEGUE GROUP CO LTD",
-     "price": 811.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.979,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "بافت"
-     ],
-     "quality": "⭐۱/۵ (۲ نامعلوم)",
-     "chart": "سرووشانه، سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف)",
-     "chart_score": 3.0
-    }
-   ]
-  },
-  "tw": {
-   "data_date": "2026-10-30",
-   "scored": 1200,
-   "technical": 108,
-   "checked": 22,
-   "signals": [
-    {
-     "ticker": "2606.TW",
-     "name": "U-MING MARINE TRANSPORT CORP",
-     "price": 76.0,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.859,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۱/۵ (۱ نامعلوم)",
-     "chart": "کف دوقلو (شکست خط گردن)",
-     "chart_score": 2.5
-    },
-    {
-     "ticker": "2883.TW",
-     "name": "KGI FINANCIAL HOLDING CO LTD",
-     "price": 37.8,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.667,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۱/۵ (۲ نامعلوم)",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
      "chart": "مثلث صعودی",
      "chart_score": 2.0
     },
     {
-     "ticker": "2891.TW",
-     "name": "CTBC FINANCIAL HOLDINGS COMPANY",
-     "price": 75.8,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.515,
-     "fundamentals": [
-      "بافت"
-     ],
-     "quality": "⭐۰/۵ (۲ نامعلوم)",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "6214.TW",
-     "name": "SYSTEX CORPORATION",
-     "price": 201.0,
-     "setups": [
-      "trend",
-      "vcp",
-      "longpat"
-     ],
-     "tech_rank": 0.334,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    },
-    {
-     "ticker": "8996.TW",
-     "name": "KAORI HEAT TREATMENT CO",
-     "price": 1435.0,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.108,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۲/۵",
-     "chart": "سرووشانه معکوس",
-     "chart_score": 2.0
-    },
-    {
-     "ticker": "6894.TWO",
-     "name": "WRT",
-     "price": 396.0,
+     "ticker": "4911.T",
+     "name": "SHISEIDO COMPANY LIMITED",
+     "price": 3814.0,
      "setups": [
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.897,
+     "tech_rank": 0.734,
      "fundamentals": [
-      "صورت مالی",
-      "بافت"
+      "کیفیت رشد"
      ],
-     "quality": "⭐۱/۵ (۱ نامعلوم)",
-     "chart": "فنجان‌ودسته (شکست سقف)",
-     "chart_score": 2.5
+     "quality": "⭐۴/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "سرووشانه معکوس (شکست)",
+     "chart_score": 3.0
     },
     {
-     "ticker": "1714.TW",
-     "name": "HO TUNG CHEMICAL CORP",
-     "price": 17.45,
+     "ticker": "4471.T",
+     "name": "SANYO CHEMICAL INDUSTRIES",
+     "price": 1596.0,
      "setups": [
       "trend",
       "pullback"
      ],
-     "tech_rank": 0.894,
+     "tech_rank": 0.715,
      "fundamentals": [
-      "صورت مالی"
+      "صورت مالی",
+      "کیفیت رشد"
      ],
-     "quality": "⭐۲/۵ (۱ نامعلوم)",
+     "quality": "⭐۴/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    }
+   ]
+  },
+  "tw": {
+   "data_date": "2026-11-03",
+   "scored": 1200,
+   "technical": 64,
+   "checked": 25,
+   "signals": [
+    {
+     "ticker": "6491.TW",
+     "name": "PEGAVISION CORPORATION",
+     "price": 405.0,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.759,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
      "chart": "روند صعودی",
      "chart_score": 1.0
     },
     {
-     "ticker": "2465.TW",
-     "name": "LEADTEK RESEARCH",
-     "price": 102.0,
+     "ticker": "2027.TW",
+     "name": "TA CHEN STAINLESS PIPE CORP",
+     "price": 48.95,
      "setups": [
       "trend",
-      "longpat"
+      "pullback"
      ],
-     "tech_rank": 0.858,
+     "tech_rank": 0.664,
      "fundamentals": [
       "صورت مالی"
      ],
-     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    }
-   ]
-  },
-  "kr": {
-   "data_date": "2026-10-30",
-   "scored": 1200,
-   "technical": 23,
-   "checked": 20,
-   "signals": []
-  },
-  "hk": {
-   "data_date": "2026-10-30",
-   "scored": 1000,
-   "technical": 63,
-   "checked": 30,
-   "signals": []
-  },
-  "gb": {
-   "data_date": "2026-10-30",
-   "scored": 346,
-   "technical": 49,
-   "checked": 22,
-   "signals": []
-  },
-  "de": {
-   "data_date": "2026-10-30",
-   "scored": 86,
-   "technical": 12,
-   "checked": 7,
-   "signals": [
+     "quality": "⭐۲/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
     {
-     "ticker": "BFSA.DE",
-     "name": "Befesa",
-     "price": 37.0,
+     "ticker": "1303.TW",
+     "name": "NAN YA PLASTIC",
+     "price": 271.0,
      "setups": [
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.86,
+     "tech_rank": 0.091,
      "fundamentals": [
-      "کن‌اسلیم"
+      "صورت مالی"
      ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "chart": "سقف دوقلو (هشدار)، سرووشانه معکوس، مثلث صعودی",
-     "chart_score": 2.5
-    }
-   ]
-  },
-  "ca": {
-   "data_date": "2026-10-30",
-   "scored": 596,
-   "technical": 67,
-   "checked": 21,
-   "signals": [
-    {
-     "ticker": "CEU.TO",
-     "name": "CES ENERGY SOLUTIONS CORP",
-     "price": 20.96,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.906,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ (۱ نامعلوم)",
-     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "quality": "⭐۳/۵",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "سرووشانه معکوس (شکست)",
      "chart_score": 3.0
     }
    ]
   },
-  "au": {
-   "data_date": "2026-10-30",
-   "scored": 465,
-   "technical": 31,
+  "kr": {
+   "data_date": "2026-11-03",
+   "scored": 1198,
+   "technical": 18,
+   "checked": 18,
+   "signals": []
+  },
+  "hk": {
+   "data_date": "2026-11-03",
+   "scored": 990,
+   "technical": 44,
    "checked": 30,
+   "signals": []
+  },
+  "gb": {
+   "data_date": "2026-11-03",
+   "scored": 346,
+   "technical": 57,
+   "checked": 23,
+   "signals": []
+  },
+  "de": {
+   "data_date": "2026-11-03",
+   "scored": 86,
+   "technical": 12,
+   "checked": 5,
+   "signals": []
+  },
+  "ca": {
+   "data_date": "2026-11-02",
+   "scored": 575,
+   "technical": 55,
+   "checked": 27,
+   "signals": []
+  },
+  "au": {
+   "data_date": "2026-11-03",
+   "scored": 460,
+   "technical": 28,
+   "checked": 28,
    "signals": []
   }
  }
