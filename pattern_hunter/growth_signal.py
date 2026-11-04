@@ -7,7 +7,9 @@
      • روند صعودی منظم: قیمت > میانگین ۵۰ > ۱۵۰ > ۲۰۰ روزه، میانگین ۲۰۰ رو به بالا، ≥۳۰٪ بالای کف و ≤۲۵٪ زیر سقف ۵۲ هفته
      • فشردگی نزدیک سقف: نوسان ۲۰ روزه کمتر از ۶۰٪ نوسان ۶۰ روزه، حجم رو به کاهش، تا ۱۰٪ زیر سقف ۵۲ هفته
      • برگشت به میانگین ۵۰ در روند: روند منظم برقرار، قیمت تا ۳٪ از میانگین ۵۰ روزه، حجم ۵ روز اخیر کم
-  قبولی: دست‌کم ۲ الگوی کلاسیک، یا ۱ الگوی کلاسیک + رتبه‌ی الگوی آماری جزو ۲۰٪ برتر بازار
+  قبولی: دست‌کم ۲ الگو (رتبه‌ی الگوی آماری فقط برای ترتیب)؛ داغ‌ها کنار: بیش از ۲۰٪ بالای میانگین ۵۰ یا RSI > ۷۵
+  رژیم بازار: اگر شاخص همان بورس زیر میانگین ۵۰ روزه باشد، حداکثر ۲ سیگنال
+  گزارش فصلی در ۱۰ روز آینده ← کنار؛ پیگیری با حد ضرر ۸٪ (🛑)
 صافی ۲ (بنیادی): سود خالص دست‌کم ۲ فصل پیاپی بالا رفته باشد (وگرنه سیگنال نمی‌شود) و دست‌کم یکی از صورت مالی سالم، کن‌اسلیم، وارن بافت (pattern_hunter/fundamentals) یا امتیاز کیفیت رشد ⭐۴ و ⭐۵.
 فقط سهم‌هایی که از هر دو بگذرند فرستاده و در تاریخچه ثبت می‌شوند؛ رشد یا نزول هر سیگنال تا امروز پیگیری می‌شود.
 """
@@ -33,10 +35,35 @@ HIST = os.path.join(OUT, 'history.csv')
 POOL = 30        # چند نامزد تکنیکال برتر به صافی بنیادی می‌روند
 MAX_SEND = 8     # حداکثر سیگنال در هر بازار در روز
 MIN_PROFIT_Q = 2   # دست‌کم این‌قدر فصل پیاپی افزایش سود خالص
+MIN_FUND = 2     # دست‌کم ۲ فیلتر بنیادی (صورت مالی، کن‌اسلیم، بافت، کیفیت رشد)
+MAX_SEND_WEAK = 2  # وقتی شاخص همان بورس زیر میانگین ۵۰ روزه است، حداکثر ۲ سیگنال
+MAX_EXT = 0.20   # بیش از ۲۰٪ بالای میانگین ۵۰ روزه = داغ ← کنار
+MAX_RSI = 75     # RSI ۱۴ روزه بالای ۷۵ = داغ ← کنار
+EARN_DAYS = 10   # گزارش فصلی در ۱۰ روز آینده ← کنار
+STOP_PCT = 8     # پیگیری: افت ۸٪ از قیمت سیگنال = حد ضرر خورده (🛑) و سیگنال بسته می‌شود
 COOLDOWN = 20    # سهمی که در ۲۰ روز اخیر سیگنال شده، دوباره سیگنال تازه حساب نمی‌شود
 SETUP_FA = {'longpat': 'الگوی نموداری بلندمدت', 'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم', 'vcp': 'فشردگی نزدیک سقف', 'pullback': 'برگشت به میانگین ۵۰'}
 COLS = ['date', 'market', 'ticker', 'name', 'price', 'index_price', 'setups', 'fundamentals', 'quality', 'tech_rank',
         'chart', 'chart_score']
+
+
+def rsi(c, n=14):
+    d = c.diff()
+    up, dn = d.clip(lower=0).ewm(alpha=1 / n).mean(), (-d.clip(upper=0)).ewm(alpha=1 / n).mean()
+    return float((100 - 100 / (1 + up / dn.replace(0, np.nan))).iloc[-1])
+
+
+def earnings_soon(t, days=EARN_DAYS):
+    """تاریخ گزارش فصلی بعدی از Yahoo؛ نامعلوم = False."""
+    try:
+        import yfinance as yf
+        cal = yf.Ticker(t).calendar
+        ds = cal.get('Earnings Date') if isinstance(cal, dict) else None
+        ds = ds if isinstance(ds, (list, tuple)) else [ds]
+        today = dt.date.today()
+        return any(d and 0 <= (pd.Timestamp(d).date() - today).days <= days for d in ds)
+    except Exception:
+        return False
 
 
 def history_tickers():
@@ -94,18 +121,28 @@ class Collector:
             if cp['score'] >= 1.5:
                 st = st + ['longpat']
             charts[t] = cp
-            ok = len(st) >= 2 or (len(st) >= 1 and rank[t] >= 0.80)
+            ok = len(st) >= 2           # همیشه دست‌کم ۲ الگو؛ رتبه‌ی آماری فقط برای ترتیب
             if ok:
                 tech.append((t, st, float(rank[t])))
         tech.sort(key=lambda x: (-len(x[1]), -x[2]))
         recent = set(self.hist[(self.hist.market == m) &
                                (self.hist.date >= str(dt.date.today() - dt.timedelta(days=COOLDOWN)))].ticker)
-        mkt_up = bool(idx.dropna().iloc[-1] > idx.dropna().rolling(200).mean().iloc[-1])
-        sent, checked = [], 0
+        ix = idx.dropna()
+        mkt_up = bool(ix.iloc[-1] > ix.rolling(200).mean().iloc[-1])
+        mkt_50 = bool(ix.iloc[-1] > ix.rolling(50).mean().iloc[-1])     # رژیم کوتاه‌مدت بازار
+        cap = MAX_SEND if mkt_50 else MAX_SEND_WEAK
+        sent, checked, drop = [], 0, {'ext': 0, 'rsi': 0, 'earn': 0, 'fund': 0}
         for t, st, rk in tech[:POOL]:
-            if len(sent) >= MAX_SEND:
+            if len(sent) >= cap:
                 break
             if t in recent:
+                continue
+            c = C[t].dropna()
+            if c.iloc[-1] / c.rolling(50).mean().iloc[-1] - 1 > MAX_EXT:
+                drop['ext'] += 1
+                continue
+            if rsi(c) > MAX_RSI:
+                drop['rsi'] += 1
                 continue
             checked += 1
             r = X.loc[t]
@@ -124,7 +161,11 @@ class Collector:
             passed = list(fu.get('passed') or [])
             if qs and qs['score'] >= 4:
                 passed.append('کیفیت رشد')
-            if not passed:
+            if len(passed) < MIN_FUND:
+                drop['fund'] += 1
+                continue
+            if earnings_soon(t):
+                drop['earn'] += 1
                 continue
             nm = names.get(t, '')
             if m in ('cn', 'jp', 'tw', 'kr', 'hk') or not nm:
@@ -138,7 +179,7 @@ class Collector:
                                              '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),
                                              CP.label(charts[t]), charts[t]['score']]
         self.markets[m] = {'data_date': str(C.index[-1].date()), 'scored': int(len(X)), 'technical': len(tech),
-                           'checked': checked, 'signals': sent}
+                           'checked': checked, 'signals': sent, 'market_up50': mkt_50, 'cap': cap, 'dropped': drop}
         # پیگیری: همه‌ی سیگنال‌های قبلی این بازار
         items = []
         first = self.hist[self.hist.market == m].sort_values('date').drop_duplicates('ticker', keep='first')
@@ -151,7 +192,14 @@ class Collector:
             if since.empty or not h.price:
                 continue
             cur = float(c.iloc[-1])
+            stop_px = h.price * (1 - STOP_PCT / 100)
+            hit = since[since <= stop_px]
+            stopped = bool(len(hit))
+            if stopped:                                  # حد ضرر خورده: نتیجه همان −۸٪ (یا بدتر اگر با شکاف قیمت پایین‌تر باز شد)
+                cur = min(stop_px, float(hit.iloc[0]))
+                since = since[since.index <= hit.index[0]]
             items.append({'date': h.date, 'ticker': h.ticker, 'name': h['name'] if isinstance(h['name'], str) else '',
+                          'stopped': stopped, 'stop_date': str(hit.index[0].date()) if stopped else None,
                           'ret_pct': round((cur / h.price - 1) * 100, 1),
                           'max_pct': round((float(since.max()) / h.price - 1) * 100, 1),
                           'min_pct': round((float(since.min()) / h.price - 1) * 100, 1),

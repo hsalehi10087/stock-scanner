@@ -54,7 +54,9 @@ def main():
     L = [f"<b>📈 احتمال رشد تکنیکال و بنیادی</b> — {fa(today['date'].replace('-', '/'))}",
          f"<i>{fa(scored)} سهم در {fa(len(today['markets']))} بورس بررسی شد؛ {fa(total)} سهم از هر دو صافی گذشت.</i>",
          '<i>صافی ۱: نمودار و حجم (الگوی آماری قبل از رشد + شکست با حجم، روند منظم، فشردگی نزدیک سقف، برگشت به میانگین). '
-         'صافی ۲: صورت مالی سالم، کن‌اسلیم، وارن بافت یا کیفیت رشد ⭐۴ و ⭐۵.</i>',
+         'صافی ۲: دست‌کم ۲ تا از صورت مالی سالم، کن‌اسلیم، وارن بافت یا کیفیت رشد ⭐۴ و ⭐۵. '
+         'کنار گذاشته می‌شوند: سهم‌های داغ (بیش از ۲۰٪ بالای میانگین ۵۰ روزه یا RSI بالای ۷۵) و سهم‌هایی که تا ۱۰ روز آینده گزارش فصلی دارند. '
+         'وقتی شاخص یک بورس زیر میانگین ۵۰ روزه است، حداکثر ۲ سیگنال از آن بورس می‌آید. پیگیری با حد ضرر ۸٪.</i>',
          '<i>«الگوی آماری: جزو ۸٪ برتر بازار» یعنی امتیاز این سهم از ۹۲٪ سهم‌های همان بورس در همان روز بیشتر است؛ '
          'یعنی بیشتر از بقیه شبیه سهم‌هایی است که در ۱۰ سال گذشته ظرف ۱۲ ماه دو برابر شده‌اند. '
          'عدد کوچک‌تر بهتر است (جزو ۱٪ برتر = شبیه‌ترین). این عدد احتمال رشد نیست و نسبی است: '
@@ -63,10 +65,21 @@ def main():
         d = today['markets'].get(m)
         if not d or not d['signals']:
             continue
-        L.append(f"{FLAG.get(m, '')} <b>{cfg['fa']}</b> (تکنیکال: {fa(d['technical'])} سهم، بنیادی: {fa(len(d['signals']))} سهم)")
+        weak = '' if d.get('market_up50', True) else ' | 🌧 بازار ضعیف (شاخص زیر میانگین ۵۰): حداکثر ۲ سیگنال'
+        L.append(f"{FLAG.get(m, '')} <b>{cfg['fa']}</b> (تکنیکال: {fa(d['technical'])} سهم، بنیادی: {fa(len(d['signals']))} سهم){weak}")
         for i, s in enumerate(d['signals'], 1):
             L += entry_lines(i, s)
         L.append('')
+    weak_all = [MARKETS[m]['fa'] for m, d in today['markets'].items() if m in MARKETS and not d.get('market_up50', True)]
+    if weak_all:
+        L += [f"<i>🌧 بورس‌های با شاخص زیر میانگین ۵۰ روزه (سیگنال محدود): {'، '.join(weak_all)}</i>", '']
+    drops = {}
+    for d in today['markets'].values():
+        for k, v in (d.get('dropped') or {}).items():
+            drops[k] = drops.get(k, 0) + v
+    if any(drops.values()):
+        L += [f"<i>کنار گذاشته شد: داغ {fa(drops.get('ext', 0) + drops.get('rsi', 0))}، گزارش فصلی نزدیک {fa(drops.get('earn', 0))}، "
+              f"کمتر از ۲ فیلتر بنیادی {fa(drops.get('fund', 0))} سهم</i>", '']
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
     else:
@@ -75,15 +88,16 @@ def main():
     items = [dict(x, market=m) for m, xs in track.items() for x in xs]
     if items:
         started = [x for x in items if x['max_pct'] >= 10]
+        stopped = [x for x in items if x.get('stopped')]
         beat = [x for x in items if x['index_pct'] is not None and x['ret_pct'] > x['index_pct']]
         avg = sum(x['ret_pct'] for x in items) / len(items)
         L.append('<b>📒 پیگیری سیگنال‌های قبلی</b>')
         L.append(f"{fa(len(items))} سیگنال | میانگین بازده {pct(avg)} | بهتر از شاخص: {fa(round(len(beat) / len(items) * 100))}٪ | "
-                 f"رشد ≥۱۰٪ شروع شد: {fa(len(started))} سهم")
+                 f"رشد ≥۱۰٪ شروع شد: {fa(len(started))} سهم | 🛑 حد ضرر ۸٪ خورد: {fa(len(stopped))} سهم")
         ranked = sorted(items, key=lambda x: x['ret_pct'], reverse=True)
         k = min(5, len(ranked))
         def line(x):
-            return (f"{FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
+            return (f"{'🛑 ' if x.get('stopped') else ''}{FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
                     f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، کمترین {pct(x['min_pct'])}، شاخص {pct(x['index_pct'])})")
         L.append('')
         L.append('<b>🏆 بهترین سیگنال‌ها از روز سیگنال تا امروز</b>')
@@ -93,10 +107,10 @@ def main():
         L.append('')
         L.append('<b>فهرست تازه‌ترین سیگنال‌ها</b>')
         for x in sorted(items, key=lambda x: x['date'], reverse=True)[:25]:
-            st = '🚀' if x['max_pct'] >= 10 else ('🔻' if x['ret_pct'] <= -8 else '⏳')
+            st = '🛑' if x.get('stopped') else ('🚀' if x['max_pct'] >= 10 else '⏳')
             L.append(f"{st} {FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
                      f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، شاخص {pct(x['index_pct'])})")
-        L.append('<i>🚀 دست‌کم ۱۰٪ رشد از روز سیگنال | 🔻 بیش از ۸٪ افت | ⏳ هنوز در جریان</i>')
+        L.append('<i>🚀 دست‌کم ۱۰٪ رشد از روز سیگنال | 🛑 حد ضرر ۸٪ خورد و سیگنال بسته شد | ⏳ هنوز در جریان</i>')
     L.append('<i>صرفاً برای بررسی بیشتر؛ توصیه‌ی خرید نیست.</i>')
     msg = '\n'.join(L)
     print(msg)

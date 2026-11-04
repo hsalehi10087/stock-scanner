@@ -40,6 +40,8 @@ jobs:
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
           # گزارش جداگانه‌ی الگویاب دیگر فرستاده نمی‌شود؛ رتبه‌ی الگوی آماری داخل گزارش «احتمال رشد» آمده است
           python3 pattern_hunter/growth_report.py
+          # خودسنجی ماهانه: هر روز ذخیره می‌شود، پیام فقط شنبه‌ی اول هر ماه
+          python3 pattern_hunter/growth_review.py || echo "review failed"
       - name: Save
         if: always()
         run: |
