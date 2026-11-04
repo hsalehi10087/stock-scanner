@@ -1,0 +1,108 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+CHSN,Chanson International Holding - Class A Ordinary Shares,3.380000114440918,241.06963933656363,89471500.0,2026-11-03,1.0,3.0,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+RDAC,Rising Dragon Acquisition Corp. - Ordinary Shares,11.300000190734863,121.56863533410159,9171600.0,2026-11-03,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+PARA,"Parabolic Technologies, Inc. - Class A Common Stock",2.7200000286102295,60.94674180566657,101253900.0,2026-11-03,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+IFBD,"Infobird Co., Ltd - Ordinary Shares",1.4299999475479126,38.83495022028256,565200.0,2026-11-03,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+REED,"Reed's, Inc. Common Stock",1.0199999809265137,34.21052549024037,457400.0,2026-11-03,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+CRMT,"America's Car-Mart, Inc. - Common Stock",1.2100000381469727,32.96703332692093,912900.0,2026-11-03,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+EHGO,Eshallgo Inc. - Class A Ordinary Shares,2.5,30.89005464341723,21885300.0,2026-11-03,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+BUUU,BUUU Group Limited - Class A Ordinary Share,7.380000114440918,28.347828077233352,796200.0,2026-11-03,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': True, 'analysts': None}"
+AEHR,Aehr Test Systems - Common Stock,65.11000061035156,26.5008724813512,8652800.0,2026-11-03,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+BIVI,BioVie Inc. - Common stock,1.7300000190734863,26.277373215482626,13463700.0,2026-11-03,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+CLVT,Clarivate Plc Ordinary Shares,2.0899999141693115,25.903611818926265,11848700.0,2026-11-03,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+FRGT,"Freight Technologies, Inc. - Ordinary Shares",1.0499999523162842,25.748500514848516,992700.0,2026-11-03,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ZJYL,JIN MEDICAL INTERNATIONAL LTD. - Class A Ordinary Shares,2.7200000286102295,23.63636225708263,126700.0,2026-11-03,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+BRAI,Braiin Limited - Common Stock,3.069999933242798,22.799997329711918,7790100.0,2026-11-03,0.0,1.0,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': False, 'momentum': None, 'analysts': None}"
+ACB,Aurora Cannabis Inc. - Common Shares,5.159999847412109,22.2748839799769,8928600.0,2026-11-03,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+ARRY,"Array Technologies, Inc. - Common Stock",4.639999866485596,22.105261176576875,22157700.0,2026-11-03,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+STI,"Solidion Technology, Inc. - Common Stock",4.769999980926514,21.374043254468145,232500.0,2026-11-03,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+GPK,Graphic Packaging Holding Company,11.3100004196167,21.221870440532122,22682800.0,2026-11-03,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+PSHG,Performance Shipping Inc. - Common Shares,1.850000023841858,20.91503649908022,403600.0,2026-11-03,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+ZONE,Zone Frontier Inc. Class B Common Stock,4.980000019073486,20.873790228217516,480800.0,2026-11-03,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+IBTA,"Ibotta, Inc. Class A Common Stock",60.349998474121094,20.5312539284068,2252600.0,2026-11-03,4.0,5.0,⭐۴/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': True, 'analysts': True}"
+EVER,"EverQuote, Inc. - Class A Common Stock",29.110000610351562,19.94231586855877,1965800.0,2026-11-03,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+WFF,WF Holding Limited - Ordinary Shares,1.3300000429153442,19.8198221418902,18515700.0,2026-11-03,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+UFG,Uni-Fuels Holdings Limited - Class A Ordinary Shares,3.359999895095825,19.572952438292425,1105000.0,2026-11-03,1.0,5.0,⭐۱/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+SRTS,"Sensus Healthcare, Inc. - Common Stock",3.2850000858306885,19.454548575661402,9718800.0,2026-11-03,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+NUAI,"New Era Energy & Digital, Inc. - Common Stock",2.7799999713897705,19.313307399939905,8785100.0,2026-11-03,,,,
+BKHA,Black Hawk Acquisition Corporation - Class A Ordinary Shares,5.579999923706055,18.72340745006349,106500.0,2026-11-03,,,,
+NXXT,"NextNRG, Inc. - Common Stock",2.6500000953674316,18.462231065013768,270800.0,2026-11-03,,,,
+RIOT,"Riot Platforms, Inc. - Common Stock",14.020000457763672,18.412164502373706,40721200.0,2026-11-03,,,,
+CIFR,Cipher Digital Inc. - Common Stock,8.119999885559082,18.367342966787593,66918100.0,2026-11-03,,,,
+CDTG,CDT Environmental Technology Investment Holdings Limited - ordinary shares,1.1100000143051147,18.336885570967688,394800.0,2026-11-03,,,,
+CABR,"Caring Brands, Inc. - Common Stock",1.2300000190734863,18.269236941309597,256800.0,2026-11-03,,,,
+ATHE,Alterity Therapeutics Limited - American Depositary Shares,2.4700000286102295,18.18182440413889,3965700.0,2026-11-03,,,,
+SNES,"SenesTech, Inc. - Common Stock",1.2400000095367432,18.09524436656609,598500.0,2026-11-03,,,,
+SIBN,"SI-BONE, Inc. - Common Stock",23.770000457763672,17.55688063779779,3299000.0,2026-11-03,,,,
+WYHG,Wing Yip Food Holdings Group Limited - American Depositary Shares,3.190000057220459,16.8498181294185,4790500.0,2026-11-03,,,,
+ALZN,"Alzamend Neuro, Inc. - Common Stock",1.4600000381469727,16.800003051757816,240500.0,2026-11-03,,,,
+XMTR,"Xometry, Inc. - Class A Common Stock",111.29000091552734,16.546238773927758,2449000.0,2026-11-03,,,,
+BETA,"Beta Technologies, Inc. Class A Common Stock",23.639999389648438,15.996076364701928,4106000.0,2026-11-03,,,,
+HUT,Hut 8 Corp. - Common Stock,63.75,15.898552426270163,9195900.0,2026-11-03,,,,
+KEEL,Keel Infrastructure Corp. - Common Stock,2.190000057220459,15.873019777578179,29193600.0,2026-11-03,,,,
+ALLR,"Allarity Therapeutics, Inc. - Common stock",1.1299999952316284,15.541923549179959,320500.0,2026-11-03,,,,
+IHRT,"iHeartMedia, Inc. - Class A Common Stock",2.0899999141693115,15.469612168041635,1177300.0,2026-11-03,,,,
+FN,Fabrinet Ordinary Shares,363.3299865722656,15.4528034569132,2365300.0,2026-11-03,,,,
+GLXY,Galaxy Digital Inc. - Class A common stock,16.829999923706055,15.352979764848374,8923000.0,2026-11-03,,,,
+MBAI,MBody AI Ltd. - Ordinary Share,2.049999952316284,15.168538498104912,144000.0,2026-11-03,,,,
+CMCO,Columbus McKinnon Corporation - Common Stock,18.149999618530273,15.16497052625998,1056200.0,2026-11-03,,,,
+CCXI,Churchill Capital Corp XI - Class A Ordinary Shares,10.6899995803833,15.069963662852626,4558700.0,2026-11-03,,,,
+BNAI,Brand Engagement Network Inc. - Common Stock,4.389999866485596,14.921464481778802,265500.0,2026-11-03,,,,
+CEPL,"Capstone Energy Plus, Inc. - Common Stock",2.930000066757202,14.901965550852104,306200.0,2026-11-03,,,,
+LENZ,"LENZ Therapeutics, Inc. - Common Stock",3.5,14.75410015472194,1565300.0,2026-11-03,,,,
+SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",23.790000915527344,14.650606821818535,2184400.0,2026-11-03,,,,
+WULF,TeraWulf Inc. - Common Stock,12.529999732971191,14.533822793183159,50010700.0,2026-11-03,,,,
+NUWE,"Nuwellis, Inc. - Common Stock",5.909999847412109,14.092664927898625,390200.0,2026-11-03,,,,
+RXT,"Rackspace Technology, Inc. - Common Stock",2.684999942779541,14.012735500354022,4968100.0,2026-11-03,,,,
+CLSK,"CleanSpark, Inc. - Common Stock",8.149999618530273,13.986007130416024,19827900.0,2026-11-03,,,,
+CORZ,"Core Scientific, Inc. - Common Stock",14.239999771118164,13.874447347454621,19605200.0,2026-11-03,,,,
+CAPR,"Capricor Therapeutics, Inc. - Common Stock",8.239999771118164,13.812155132783355,4396500.0,2026-11-03,,,,
+BRUN,Boost Run Inc. - Class A Common Stock,7.650000095367432,13.670134824466174,4422200.0,2026-11-03,,,,
+PMN,ProMIS Neurosciences Inc. - Common Shares,3.4100000858306885,13.666669527689624,993700.0,2026-11-03,,,,
+OPAD,Offerpad Solutions Inc.  - Class A Common Stock,2.3499999046325684,13.526569102402398,128600.0,2026-11-03,,,,
+EROC,"ERock, Inc. Class A Common Stock",8.960000038146973,13.417720632701325,2823400.0,2026-11-03,,,,
+NBIX,"Neurocrine Biosciences, Inc. - Common Stock",164.85000610351562,13.415892109500472,4057100.0,2026-11-03,,,,
+FTFT,Future FinTech Group Inc. - Common Stock,3.7300000190734863,13.37386207666209,204300.0,2026-11-03,,,,
+WSHP,WeShop Holdings Limited - Class A Ordinary Shares,2.630000114440918,13.362077160270225,122500.0,2026-11-03,,,,
+WYFI,"WhiteFiber, Inc. - Ordinary Shares",10.489999771118164,13.282932093240918,2519700.0,2026-11-03,,,,
+BLZE,"Backblaze, Inc. - Common Stock",8.380000114440918,13.243243330320876,11902900.0,2026-11-03,,,,
+JLHL,Julong Holding Limited - Class A Ordinary Shares,6.610000133514404,13.184930835751807,192200.0,2026-11-03,,,,
+XTND,"Xtend AI Robotics, Inc. Common Stock",1.4700000286102295,13.076929425347018,20482900.0,2026-11-03,,,,
+BCAX,Bicara Therapeutics Inc. - Common Stock,8.960000038146973,12.98865362048993,2328100.0,2026-11-03,,,,
+FRVO,Fervo Energy Company - Class A common stock,9.319999694824219,12.969693270596583,8820100.0,2026-11-03,,,,
+LIME,"Neutron Holdings, Inc. - Common Stock",25.479999542236328,12.84322244609777,508400.0,2026-11-03,,,,
+BWEN,"Broadwind, Inc. - Common Stock",3.1700000762939453,12.811392912638508,2966200.0,2026-11-03,,,,
+FISV,"Fiserv, Inc. - Common Stock",58.400001525878906,12.4590818075891,19242800.0,2026-11-03,,,,
+INBX,"Inhibrx Biosciences, Inc. - Common Stock",81.08000183105469,12.361415903903472,600200.0,2026-11-03,,,,
+YDKG,Yueda Digital Holding - Class A Ordinary Share,1.0,12.359552367771109,231400.0,2026-11-03,,,,
+BTDR,Bitdeer Technologies Group - Ordinary Shares,6.920000076293945,12.155591421815547,9404500.0,2026-11-03,,,,
+ULH,"Universal Logistics Holdings, Inc. - Common Stock",32.0,12.123332072460524,171600.0,2026-11-03,,,,
+PENG,"Penguin Solutions, Inc. - Common Stock",53.189998626708984,11.978944477282072,3174900.0,2026-11-03,,,,
+CNL,Collective Mining Ltd. - Common Stock,11.4399995803833,11.937370660257084,472500.0,2026-11-03,,,,
+PTCT,"PTC Therapeutics, Inc. - Common Stock",68.12000274658203,11.892249591727765,2643700.0,2026-11-03,,,,
+RRX,Regal Rexnord Corporation Common Stock,179.92999267578125,11.80637598006886,3202800.0,2026-11-03,,,,
+PLPC,Preformed Line Products Company - Common Stock,311.510009765625,11.780543258460074,119000.0,2026-11-03,,,,
+CANG,Cango Inc. Class A Ordinary Shares,1.1399999856948853,11.764706569834438,1035800.0,2026-11-03,,,,
+ENGN,enGene Therapeutics Inc. - Common Stock,1.6200000047683716,11.724134585803636,937100.0,2026-11-03,,,,
+DBVT,DBV Technologies S.A. - American Depositary Shares,10.109999656677246,11.712701034278217,323300.0,2026-11-03,,,,
+MWH,"SOLV Energy, Inc. - Class A common stock",26.809999465942383,11.708331108093262,2173100.0,2026-11-03,,,,
+INIO,INNIO N.V. - Ordinary Shares,18.309999465942383,11.57830369407289,5637500.0,2026-11-03,,,,
+PEW,GrabAGun Digital Holdings Inc. Common Stock,2.140000104904175,11.458341288380502,1375200.0,2026-11-03,,,,
+SHLS,"Shoals Technologies Group, Inc. - Class A Common Stock",8.470000267028809,11.447373333069821,9317700.0,2026-11-03,,,,
+MARA,"MARA Holdings, Inc. - Common Stock",7.159999847412109,11.353033259133127,35660200.0,2026-11-03,,,,
+QMLS,"QumulusAI, Inc. - Common Stock",3.5399999618530273,11.320751180453104,371600.0,2026-11-03,,,,
+RLMD,"Relmada Therapeutics, Inc. - Common Stock",4.269999980926514,11.197918655428452,2663600.0,2026-11-03,,,,
+IREN,IREN Limited - Ordinary Shares,24.459999084472656,11.080829137079817,54188200.0,2026-11-03,,,,
+LSCC,Lattice Semiconductor Corporation - Common Stock,105.91999816894531,10.980716114265698,7815800.0,2026-11-03,,,,
+SQNS,Sequans Communications S.A. American Depositary Shares (each representing one hundred (100) Ordinary Shares),2.75,10.88709592136956,219800.0,2026-11-03,,,,
+FORM,"FormFactor, Inc. - Common Stock",96.79000091552734,10.870558455929459,1960000.0,2026-11-03,,,,
+TE,T1 Energy Inc. Common Stock,2.8299999237060547,10.546874490682946,25310700.0,2026-11-03,,,,
+TBBB,BBB Foods Inc. Class A Common Shares,62.970001220703125,10.531858647423675,2943800.0,2026-11-03,,,,
+FPS,"Forgent Power Solutions, Inc. Class A Common Stock",27.139999389648438,10.504885911271167,5732300.0,2026-11-03,,,,
+ODTX,"Odyssey Therapeutics, Inc. - Common Stock",21.56999969482422,10.445463064287797,412200.0,2026-11-03,,,,
+ETRA,"Electra Therapeutics, Inc. - Common stock",8.069999694824219,10.396713515646038,927300.0,2026-11-03,,,,
+SEGG,Sports Entertainment Gaming Global Corporation  - Common Stock,2.130000114440918,10.362703229453851,3741700.0,2026-11-03,,,,
+SRAD,Sportradar Group AG - Class A Ordinary Shares,14.199999809265137,10.334109833197402,7778200.0,2026-11-03,,,,
+CYPH,Cypherpunk Technologies Inc. - Common Stock,2.5999999046325684,10.169492381566325,11696900.0,2026-11-03,,,,
+WKHS,"Workhorse Group, Inc. - Common Stock",3.1500000953674316,10.13986751429199,347700.0,2026-11-03,,,,
+IOVA,"Iovance Biotherapeutics, Inc. - Common Stock",8.829999923706055,10.099743387898098,14129700.0,2026-11-03,,,,
