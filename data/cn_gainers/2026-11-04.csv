@@ -1,0 +1,10 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+688518.SS,联赢激光,22.44094272794397,376.76100415197214,52.43949198,10.99911518,2026-11-04,0,5,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+301071.SZ,力量钻石,15.036375698342862,376.47904576609324,54.10600317,11.35537935,2026-11-04,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+301569.SZ,联亚药业,11.222345202776896,113.87352428265697,85.38181442,39.921638130000005,2026-11-04,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+688138.SS,清溢光电,9.260617550902882,54.50471212288023,62.25840774,40.29547506,2026-11-04,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+688087.SS,英科再生,19.423364238747954,39.536698866287324,102.56290793000001,73.50246118999999,2026-11-04,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+688073.SS,毕得医药,20.151050492096623,32.21946669467589,56.474856409999994,42.71296642,2026-11-04,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+688818.SS,电科蓝天,11.62285882069838,25.90356407653645,60.53951879,48.08403895,2026-11-04,0,3,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+000530.SZ,冰山冷热,26.470588422789064,18.063234152376257,14.17075152,12.002679429999999,2026-11-04,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+601123.SS,马矿股份,15.863028913525067,12.372186913571511,146.41713804,130.29659924,2026-11-04,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
