@@ -1,7 +1,7 @@
 404 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q4.json len=346
 ERR CY2026Q4: 404 Client Error: Not Found for url: https://data.sec.gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q4.json
-200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q3.json len=143625
-200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q3.json len=143625
-200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2025Q3.json len=770153
+200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q3.json len=176479
+200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2026Q3.json len=176479
+200 .gov/api/xbrl/frames/us-gaap/NetIncomeLoss/USD/CY2025Q3.json len=772283
 200 https://www.sec.gov/files/company_tickers.json len=796562
-tracker: 1172 tracked, 1170 priced
+tracker: 1198 tracked, 1196 priced
