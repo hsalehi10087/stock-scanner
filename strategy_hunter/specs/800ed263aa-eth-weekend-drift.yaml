@@ -1,0 +1,31 @@
+id: 800ed263aa-eth-weekend-drift
+name: ETH weekend drift seasonality
+name_fa: خرید اتریوم جمعه شب و فروش یکشنبه شب (فصلی‌بودن آخر هفته)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xmtc3e/i_tested_748_crypto_trading_strategies_and/
+claim: "«از ۴۱۶ ربات، فقط یکی در حالت کمی آسان‌گیرتر دوباره قبول شد: weekend_season_eth_v6 با ‎+325bps‎ در داده‌ی خارج از نمونه»"
+claimed_return: "+325bps out-of-sample"
+added: 2026-11-04
+status: implemented
+asset_class: crypto
+symbols: [ETH-USD]
+timeframe: 1d
+start: '2017-11-09'
+notes: >-
+  قانون از کد منتشرشده‌ی نویسنده (github.com/CacheCarti/Crypto-Strategies، فایل strategies/weekend_season_eth_v6.py) برداشته شد.
+  اصل: ورود جمعه ۱۷ تا ۲۳ UTC اگر قیمت ≥ ۰٫۹۸۵ × EMA55 و RSI14 بین ۳۸ و ۷۲؛ خروج یکشنبه از ساعت ۲۰ UTC تا دوشنبه ۳ صبح،
+  یا اگر شنبه/یکشنبه RSI بالای ۷۶ شد؛ حد ضرر ۴٫۵٪، حد سود ۷٫۵٪، حداکثر ۴۸ ساعت.
+  تقریب‌ها: موتور اندیکاتور «ساعت» ندارد، پس با کندل روزانه پیاده شد: سیگنال در بسته‌شدن کندل جمعه (۲۴ UTC) → ورود در بازگشایی شنبه؛
+  سیگنال خروج در بسته‌شدن یکشنبه → خروج بازگشایی دوشنبه (۰ UTC، درون پنجره‌ی خروج اصلی).
+  اندازه‌ی کندل اصلی معلوم نیست (احتمالاً ساعتی)؛ اینجا EMA55 و RSI14 روزانه است. RSI کد اصلی میانگین ساده است، موتور از روش وایلدر استفاده می‌کند.
+  فیلتر «رژیم بحران» کد اصلی داده‌ی بیرونی دارد و حذف شد. شرط اضافه‌ی EMA21 فقط اطمینان سیگنال را تغییر می‌دهد، پس حذف شد.
+indicators:
+  ema55: {fn: ema, n: 55}
+  rsi14: {fn: rsi, n: 14}
+  wd: {fn: weekday}
+entry: wd == 4 and close >= ema55 * 0.985 and rsi14 >= 38 and rsi14 <= 72
+exit: wd == 6 or (rsi14 > 76 and wd == 5)
+side: long
+stop_loss_pct: 0.045
+take_profit_pct: 0.075
+max_hold_bars: 2

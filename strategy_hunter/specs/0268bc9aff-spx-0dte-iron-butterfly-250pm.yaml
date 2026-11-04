@@ -1,0 +1,12 @@
+id: 0268bc9aff-spx-0dte-iron-butterfly-250pm
+name: SPX 0DTE iron butterfly 2:50pm
+name_fa: فروش پروانه‌ی آهنی همان‌روزه‌ی SPX ساعت ۲:۵۰ عصر
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xmu9tv/i_backtested_a_simple_0dte_spx_strategy_for_2/
+claim: "«بک‌تست ۲ ساله (اوت ۲۰۲۴ تا اوت ۲۰۲۶): سود خالص ‎+95,620‎ دلار، ۴۷۹ معامله، ۷۸٪ برد، ضریب سود ۱٫۵۴، شارپ ۲٫۵۹، بیشترین افت ‎-13,828‎ دلار»"
+claimed_return: "+$95,620 in 2y, 78% win rate"
+added: 2026-11-04
+status: not_testable
+asset_class: option
+symbols: [SPY]
+reason_not_testable: "فروش آپشن همان‌روزه با ورود ساعت ۲:۵۰؛ به داده‌ی دقیقه‌ای و تاریخی آپشن SPX نیاز دارد که در دسترس نیست"

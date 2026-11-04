@@ -1,0 +1,12 @@
+id: 587747d290-0dte-iron-condor-97pct
+name: 0DTE iron condor trend filter
+name_fa: فروش کاندور آهنی همان‌روزه با فیلتر روند
+source: medium/options-trading
+source_url: https://blockstoxx.medium.com/trading-accident-results-in-97-success-rate-for-0-dte-iron-condors-df70c721aa46
+claim: "«به‌طور اتفاقی یک تغییر پیدا کردم که نرخ موفقیت کاندور آهنی را از ۹۵٪ به ۹۷٪ رساند، با افزودن یکی از اندیکاتورهای روند محبوبم»"
+claimed_return: "97% success rate"
+added: 2026-11-04
+status: not_testable
+asset_class: option
+symbols: [SPY]
+reason_not_testable: "فروش آپشن همان‌روزه که داده‌ی تاریخی ندارد؛ فقط مقدمه‌ی مقاله در دسترس است و نام اندیکاتور و قانون گفته نشده"

@@ -1,0 +1,12 @@
+id: 6f1874a188-india-ml-option-bot
+name: India index ML option bot
+name_fa: ربات یادگیری ماشین برای آپشن شاخص هند
+source: reddit/indiaStockMarket
+source_url: https://www.reddit.com/r/indiaStockMarket/comments/1xjfmd8/algorithmic_trading_with_ml/
+claim: "«یک هفته: ۸ از ۱۰ معامله برد؛ سود ۹۷٬۰۰۰، زیان ۵۰٬۰۰۰، سود خالص ۴۷٬۰۰۰ (روپیه)»"
+claimed_return: "80% win rate, +47,000 INR in 1 week"
+added: 2026-11-04
+status: not_testable
+asset_class: option
+symbols: ['^NSEI']
+reason_not_testable: "قانون ۶ مرحله‌ای ربات در متن نیامده؛ فقط نتیجه‌ی یک هفته گزارش شده"

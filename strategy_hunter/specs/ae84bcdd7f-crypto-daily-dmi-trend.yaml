@@ -1,0 +1,12 @@
+id: ae84bcdd7f-crypto-daily-dmi-trend
+name: Crypto daily DMI cross trend
+name_fa: سیستم روندی کریپتو با تقاطع DMI روزانه
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xmmpvv/8year_backtested_crypto_trend_system_what/
+claim: "«سیستم روندی بک‌تست‌شده‌ی ۸ ساله روی ۷ کریپتوی اصلی، با کارمزد و فاندینگ؛ روی ۱۵ کوین دیده‌نشده هم سودده ولی ضعیف‌تر»"
+claimed_return: "profitable over 8 years (no number given)"
+added: 2026-11-04
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+reason_not_testable: "اندیکاتور DMI (DI+ و DI−) در موتور نیست؛ حد ضرر پویا (کف فاز نزولی قبلی و جابه‌جایی به نقطه‌ی سربه‌سر) و ترکیب با Supertrend هم پیاده‌شدنی نیست؛ نماد کوین‌ها و عدد سود هم گفته نشده"

@@ -1,0 +1,12 @@
+id: 373de13ce5-kalshi-btc-15m-eth-filter
+name: Kalshi BTC 15m with ETH filter
+name_fa: بازار ۱۵ دقیقه‌ای بیت‌کوین در Kalshi با فیلتر اتریوم
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xmynj5/i_tested_a_bitcoin_trading_bot_that_skips_trades/
+claim: "«هر ۱۰۰ نسخه در شبیه‌سازی سودده بودند: ۱٬۵۵۲ تا ۲٬۲۲۵ دلار (۳ اکتبر تا ۲ نوامبر)؛ بهترین نسخه ۶۵٫۸۳٪ برد و بیشترین افت ۱۲۳ دلار»"
+claimed_return: "+$1,552 to +$2,225 in 1 month (simulation)"
+added: 2026-11-04
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+reason_not_testable: "معامله روی بازار پیش‌بینی Kalshi با حرکت ۵ دقیقه‌ای و ۲ تا ۵ دقیقه مانده به پایان؛ داده‌ی دقیقه‌ای و قیمت قراردادهای Kalshi در دسترس نیست"
