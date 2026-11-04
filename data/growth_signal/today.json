@@ -1,282 +1,192 @@
 {
- "date": "2026-11-03",
+ "date": "2026-11-04",
  "markets": {
   "us": {
-   "data_date": "2026-11-02",
-   "scored": 1483,
-   "technical": 204,
-   "checked": 23,
+   "data_date": "2026-11-03",
+   "scored": 1482,
+   "technical": 138,
+   "checked": 20,
    "signals": [
     {
-     "ticker": "EXPD",
-     "name": "Expeditors International",
-     "price": 200.56,
+     "ticker": "ROKU",
+     "name": "Roku, Inc.",
+     "price": 160.36,
      "setups": [
       "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.158,
+     "tech_rank": 0.505,
      "fundamentals": [
       "صورت مالی",
-      "بافت",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 2,
+     "quality": "⭐۵/۵",
+     "profit_streak": 4,
      "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
+     "profit_more": true,
      "chart": "شکست سقف ۵۲ هفته",
      "chart_score": 1.7
-    },
-    {
-     "ticker": "MUR",
-     "name": "Murphy Oil",
-     "price": 40.16,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.79,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.0
     }
-   ]
+   ],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 3,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 4
+   }
   },
   "cn": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 1498,
-   "technical": 17,
-   "checked": 17,
-   "signals": []
+   "technical": 14,
+   "checked": 9,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 5,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 2
+   }
   },
   "in": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 706,
-   "technical": 51,
+   "technical": 58,
    "checked": 15,
-   "signals": [
-    {
-     "ticker": "GABRIEL.NS",
-     "name": "Gabriel India Ltd.",
-     "price": 1401.1,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.591,
-     "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    },
-    {
-     "ticker": "METROPOLIS.NS",
-     "name": "Metropolis Healthcare Ltd.",
-     "price": 568.7,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.433,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    }
-   ]
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 2,
+    "rsi": 2,
+    "earn": 1,
+    "fund": 4
+   }
   },
   "jp": {
-   "data_date": "2026-11-02",
+   "data_date": "2026-11-04",
    "scored": 1499,
-   "technical": 105,
-   "checked": 27,
-   "signals": [
-    {
-     "ticker": "4008.T",
-     "name": "SUMITOMO SEIKA CHEMICALS CO",
-     "price": 1448.0,
-     "setups": [
-      "vcp",
-      "longpat"
-     ],
-     "tech_rank": 0.744,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "مثلث صعودی",
-     "chart_score": 2.0
-    },
-    {
-     "ticker": "4911.T",
-     "name": "SHISEIDO COMPANY LIMITED",
-     "price": 3814.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.734,
-     "fundamentals": [
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "سرووشانه معکوس (شکست)",
-     "chart_score": 3.0
-    },
-    {
-     "ticker": "4471.T",
-     "name": "SANYO CHEMICAL INDUSTRIES",
-     "price": 1596.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.715,
-     "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    }
-   ]
+   "technical": 82,
+   "checked": 19,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 6,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 0
+   }
   },
   "tw": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 1200,
-   "technical": 64,
-   "checked": 25,
-   "signals": [
-    {
-     "ticker": "6491.TW",
-     "name": "PEGAVISION CORPORATION",
-     "price": 405.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.759,
-     "fundamentals": [
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 4,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    },
-    {
-     "ticker": "2027.TW",
-     "name": "TA CHEN STAINLESS PIPE CORP",
-     "price": 48.95,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.664,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۲/۵ ⚠️رقیق‌شدن",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0
-    },
-    {
-     "ticker": "1303.TW",
-     "name": "NAN YA PLASTIC",
-     "price": 271.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.091,
-     "fundamentals": [
-      "صورت مالی"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 4,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "سرووشانه معکوس (شکست)",
-     "chart_score": 3.0
-    }
-   ]
+   "technical": 34,
+   "checked": 18,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 8,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 5
+   }
   },
   "kr": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 1198,
-   "technical": 18,
-   "checked": 18,
-   "signals": []
+   "technical": 20,
+   "checked": 14,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 5,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 4
+   }
   },
   "hk": {
-   "data_date": "2026-11-03",
-   "scored": 990,
-   "technical": 44,
-   "checked": 30,
-   "signals": []
+   "data_date": "2026-11-04",
+   "scored": 996,
+   "technical": 36,
+   "checked": 24,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 5,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 1
+   }
   },
   "gb": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 346,
-   "technical": 57,
+   "technical": 54,
    "checked": 23,
-   "signals": []
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 2,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 0
+   }
   },
   "de": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 86,
    "technical": 12,
    "checked": 5,
-   "signals": []
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 0,
+    "rsi": 2,
+    "earn": 0,
+    "fund": 0
+   }
   },
   "ca": {
-   "data_date": "2026-11-02",
-   "scored": 575,
-   "technical": 55,
-   "checked": 27,
-   "signals": []
+   "data_date": "2026-11-03",
+   "scored": 574,
+   "technical": 51,
+   "checked": 24,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 1,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 4
+   }
   },
   "au": {
-   "data_date": "2026-11-03",
-   "scored": 460,
-   "technical": 28,
-   "checked": 28,
-   "signals": []
+   "data_date": "2026-11-04",
+   "scored": 461,
+   "technical": 23,
+   "checked": 21,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 0,
+    "rsi": 2,
+    "earn": 0,
+    "fund": 0
+   }
   }
  }
 }

@@ -123,3 +123,4 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-03,tw,6491.TW,PEGAVISION CORPORATION,405.0,63.15,trend|pullback,بافت|کیفیت رشد,4,0.759,روند صعودی,1.0
 2026-11-03,tw,2027.TW,TA CHEN STAINLESS PIPE CORP,48.95,63.15,trend|pullback,صورت مالی,2,0.664,روند صعودی,1.0
 2026-11-03,tw,1303.TW,NAN YA PLASTIC,271.0,63.15,trend|longpat,صورت مالی,3,0.091,سرووشانه معکوس (شکست),3.0
+2026-11-04,us,ROKU,"Roku, Inc.",160.36,754.35,breakout|trend|longpat,صورت مالی|کیفیت رشد,5,0.505,شکست سقف ۵۲ هفته,1.7
