@@ -1,6 +1,6 @@
 {
- "date": "2026-11-04",
- "built_at": "2026-11-04T01:29:55+00:00",
+ "date": "2026-11-05",
+ "built_at": "2026-11-05T01:31:33+00:00",
  "tickers": [
   "AAOI",
   "APLD",
@@ -14,11 +14,17 @@
   "SITM",
   "SMCI",
   "SOUN",
-  "UPST",
   "ZETA"
  ],
  "news": {
   "AAOI": [
+   {
+    "headline": "Applied Optoelectronics (AAOI) Shares Just Moved, What Is Catching Investors’ Attention?",
+    "summary": "Applied Optoelectronics (AAOI) heads into its third quarter 2026 earnings report on November 5, with attention fixed on AI driven demand for high speed optical transceivers and a recent Northland upgrade supporting sentiment. Over the past year, Applied Optoelectronics has swung sharply, with the share price up 61.54% year to date despite a 30 day share price return that is down 44.66% and a 90 day share price return that is down 50.24%. Long term total shareholder return over three and five...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=7b761519d3ba4ba2f714a8fd9d534641f4860fe250445bcc43d9a2c914d9faac",
+    "published": "2026-11-04T01:11:58+00:00"
+   },
    {
     "headline": "Should You Buy, Sell, or Hold AAOI Stock Ahead of Q3 Earnings?",
     "summary": "Applied Optoelectronics' AI-driven demand and capacity expansion fuel growth prospects ahead of Q3 earnings, but supply constraints and valuation pose risks.",
@@ -78,77 +84,140 @@
   ],
   "APLD": [
    {
-    "headline": "Has Applied Digital (APLD) Become Overvalued After Its 232% Run?",
-    "summary": "Applied Digital has delivered a very strong 3 year share price gain, yet the recent pullback and shifting AI infrastructure funding backdrop put fresh focus on what investors are really paying for in terms of its sales. With the stock now well below its highs and sentiment moving quickly, the key issue is how that price lines up against the revenue it is generating from data center capacity. Over the past 3 years, Applied Digital shares are up 232.4%, which puts real pressure on the question...",
+    "headline": "Applied Digital Stock Faces Data Center Permit Risk After Election Results",
+    "summary": "Soluna Holdings and Applied Digital agreed in October 2026 to form a joint venture for a 50 MW AI and HPC data center at the Dorothy 3 site in Briscoe County, Texas, with Applied Digital expected to own 51% and fund development, while Soluna contributes land and power assets. The project depends on several approvals, including a Briscoe County tax abatement. This is occurring at the same time that newly elected officials in Texas are raising questions about future data center incentives and...",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=c45504ceb0f3fb88473505f96c408706b04396d8ee4b755109b9733a2815b2dd",
-    "published": "2026-11-02T22:12:08+00:00"
+    "url": "https://finnhub.io/api/news?id=539bfe6a9a05e49a420cd09cecf8f8597f7e352ad837d518bdc1db2e42af9bd9",
+    "published": "2026-11-04T20:10:38+00:00"
    },
    {
-    "headline": "Applied Digital vs. IREN: Which Technology Stock Is a Better Buy for 2027?",
-    "summary": "Both companies are burning billions in free cash flow to build AI infrastructure, but their debt levels and customer concentration tell very different risk stories.",
+    "headline": "Bernstein Cuts Price Targets on Seven Bitcoin Miners After Democrats’ Texas Win Threatens AI Data Center Boom",
+    "summary": "Research firm Bernstein cut its target prices on seven Bitcoin (CRYPTO: $BTC) miners by as much as 54% on Wednesday...",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=7bcf04bdda97bea18dd98159dbbb49bf9c0a36cbb0dadbe95832320f15797e24",
-    "published": "2026-11-02T20:41:52+00:00"
+    "url": "https://finnhub.io/api/news?id=3f46e61adcad879adc68d3668ae3a0b918bcc6cb9fd1c5cea897091ce8904e83",
+    "published": "2026-11-04T19:41:00+00:00"
    },
    {
-    "headline": "Applied Digital Slumps 8% as CEO Says 800 MW Still Needs Financing; Nebius and CoreWeave Fall 6%",
-    "summary": "Worries over how the AI data center buildout gets paid for are back in focus. Applied Digital (NASDAQ:APLD) stock is at $16.33 in afternoon trading, down 8%. The drop follows comments from CEO Wes Cummins, who stated the company still needs to finance about 800 megawatts (MW) of data center capacity over the next 12 […]",
+    "headline": "IREN to Report Q1 Earnings: Should You Buy, Sell or Hold the Stock?",
+    "summary": "IREN faces a challenging Q1 earnings outlook as AI cloud growth battles declining bitcoin mining revenues and rising costs. Is reducing exposure the right move?",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=d484e44d62942450ff5a504284ebe39f78b35865dd38b70ff6d4217a2837c487",
-    "published": "2026-11-02T19:54:03+00:00"
+    "url": "https://finnhub.io/api/news?id=010b94051c7e2839d79d07cd03e4f4f759941d7f25bd7af5e4967ee4f681be6a",
+    "published": "2026-11-04T17:49:00+00:00"
    },
    {
-    "headline": "Cipher Digital Falls 5% on Q3 Revenue Miss as First HPC Lease Revenue Arrives",
-    "summary": "Key TakeawaysCipher Digital fell 5% after third-quarter revenue missed estimates, despite its first $5. 9 million of HPC rent.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=9ce2bf136c314d82aa00e9db3872351ed10fee2531b4fa80d0d20a77420ef069",
-    "published": "2026-11-02T18:28:43+00:00"
-   },
-   {
-    "headline": "APLD Stock Hits Over 1-Year Low: CEO Says It’s Not a Neocloud, But 800 MW Capacity Still Needs Financing",
-    "summary": "In an interview with CNBC, Applied Digital CEO Wes Cummins said most of the company’s contracted capacity still isn’t paid for.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=bdc051120f2a3b4ba106f34d17e3f7ef4866ecc7bed9b66a3d66021261ee05f3",
-    "published": "2026-11-02T17:36:43+00:00"
-   },
-   {
-    "headline": "Nebius Lost 35% Last Month As Contagion Spikes: One Wall Street Pro Says 165% Gains Are Coming",
-    "summary": "Nebius shed a third of its value in a single month without a single piece of bad earnings news, and now one Wall Street analyst thinks the selloff created a setup for triple-digit gains. Here is what the bull case requires to actually work.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=741f939d54206e29d20138be329c36b8d31f90f1163a87257dd13396a75276ba",
-    "published": "2026-11-02T15:45:07+00:00"
-   },
-   {
-    "headline": "Musk Predicts “Death and Consolidation” for Neoclouds as Debt Markets Shut Off",
-    "summary": "Key TakeawaysElon Musk says debt markets have nearly shut off for companies without substantial revenue outside AI data centers, and expects most of the 200-plus neoclouds to die or be absorbed. CoreWeave is the most exposed, with $51.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=29ad0ab7e72fcab1eb25a5fe835e30ed91cf0faade331f5622c5017bda345905",
-    "published": "2026-11-02T14:44:05+00:00"
-   },
-   {
-    "headline": "Investors brace for midterms as markets face a perfect storm, Musk in talks to buy Boost Mobile",
-    "summary": "The 8:30 hosts, Pras Subramanian, Jake Conley, and Bullseye American Ingenuity Fund Portfolio Manager Adam Johnson, tackle the day's top stories, including Crude falling below $100, Elon Musk's SpaceX (SPCX) in talks to buy EchoStar's (ECHO) Boost Mobile, and whether AI stocks will rebound or not after last week's sell-off.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=d9696a72c9ce5c5ca5e9a5e41bc1b5d6668bde6d4bc2f72b9faaee90ec8546dd",
-    "published": "2026-11-02T14:41:05+00:00"
-   },
-   {
-    "headline": "Will AI stocks rebound? A closer look at last week's tech sell-off",
-    "summary": "Bullseye American Ingenuity Fund portfolio manager Adam Johnson sits down with The 8:30 Hosts Pras Subramanian and Jake Conley to discuss last week's tech sell-off.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=105f43fd5b8309f9fd347dff03445d337f056d6a8d9df815753da415a35ab122",
-    "published": "2026-11-02T14:22:53+00:00"
-   },
-   {
-    "headline": "How Power Defines The AI Buildout: Part I",
-    "summary": "",
+    "headline": "Post-Election AI Infrastructure And Data Center Rethink",
+    "summary": "Explore how U.S. data center and AI infrastructure spending may shift by 2030, with policy, power, and supply chain risks shaping investment decisions. Click for more.",
     "source": "SeekingAlpha",
-    "url": "https://finnhub.io/api/news?id=6c65d2e236f97b06ce9779bb2c187e4a0de348a52763e08ff96cc0d7a12dd6e9",
-    "published": "2026-11-02T08:29:10+00:00"
+    "url": "https://finnhub.io/api/news?id=5ccec8dcd6795e9ce2ec748a9e3b114f2f8c65e0290782d51c338c4ab39d7c26",
+    "published": "2026-11-04T17:00:31+00:00"
+   },
+   {
+    "headline": "Texas Blue Wave Could Threaten 27% Of Planned U.S. Data Center Power. Here’s What It Means For CoreWeave, Iren, Nebius And Other Neocloud Stocks",
+    "summary": "Texas just flipped Democratic for the first time in decades, and the new governor-elect has data centers in her crosshairs. Neocloud stocks are already bleeding, but the real question is how much of their future capacity she can actually stop.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a94ea22fde039549ced75c4842fc32911dbfbfeafe070eb9a2b757de656d294f",
+    "published": "2026-11-04T15:39:56+00:00"
+   },
+   {
+    "headline": "Applied Digital Falls 4%, CoreWeave Down 7% as Data Centers “Feel the Heat” After Democratic Sweep",
+    "summary": "[IMAGE CREDIT: Aflo Images from アフロ (Aflo) and Nikada from Getty Images Signature via Canva] Key TakeawaysApplied Digital fell 4% this morning after Democrats won both chambers of Congress, and CoreWeave fell with it. New laws still need President Trump’s signature, and states and towns issue most data center permits.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=124c658e26fc88104c6ab9d107fd79ab1c17624097966b0e8e49476aeef7227c",
+    "published": "2026-11-04T15:27:38+00:00"
+   },
+   {
+    "headline": "IREN Sinks 9%, CoreWeave Down 6% as Democrats Win Congress: Cramer Warns “Be Careful”",
+    "summary": "Key TakeawaysIREN fell 9% today, with CoreWeave and Applied Digital, after Democrats won Congress and Texas elected a governor backing a data center moratorium. Jim Cramer warned investors to be careful with Nebius and IREN.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=afee6c93c9c18b4c8db1b35f39a9b92ef7cd2b91385a2693fcad3e1194ca2ae1",
+    "published": "2026-11-04T15:13:20+00:00"
+   },
+   {
+    "headline": "Vertiv Sinks 9%, GE Vernova Down 8% as Democrats Win Congress, Reviving Data Center Fears",
+    "summary": "Key TakeawaysVertiv fell 9% today after Democrats won Congress, dragging GE Vernova, Eaton and CoreWeave down too. Developers will still need Vertiv’s gear even if they pay more for power, so the selloff looks overdone.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=de6ec3753a4e1e94f97bede57ef283179ec5f51ece9fe1759c23b94ece517ddc",
+    "published": "2026-11-04T15:09:52+00:00"
+   },
+   {
+    "headline": "IREN Falls 5%, CoreWeave Drops 4% as Texas Election Stokes Data Center Moratorium Fears; Nebius Dips 2%",
+    "summary": "Texas just handed AI data center investors a political wildcard that could reshape where the next wave of GPU capacity gets built, and three major stocks are already paying the price before anyone knows what the new governor will actually do.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=c5b0f917431fe0f355d90100bb4b74b61041a9bb9bdc868e49c25eae6d821c80",
+    "published": "2026-11-04T15:02:38+00:00"
+   },
+   {
+    "headline": "AI data center stocks and Musk's companies take hits as Democrats take control",
+    "summary": "The 8:30 hosts, Pras Subramanian, Jake Conley, and Defiance ETFs CIO Sylvia Jablonski, break down the latest market headlines, including the Democrats retaking Congress and its possible negative effects on AI stocks and Elon Musk's companies. Plus, the team dives into the stocks to watch: CVS (CVS), McDonald's (MCD), Meta (META), and Uber (UBER).",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=7eddfe7e3d99fdbec6cc7c388fa76ac7084caa8d505215ef6e720279cc657b28",
+    "published": "2026-11-04T14:41:59+00:00"
+   },
+   {
+    "headline": "AI data center stocks dip as midterm elections shake up Wall Street",
+    "summary": "The 8:30 hosts, Jake Conley and Pras Subramanian, welcome Defiance ETFs CIO Sylvia Jablonski to discuss how AI data centers became an issue in the midterm elections, an election in which Democrats won back both the House and the Senate. initial market reaction has weighed on neocloud stocks, including IREN (IREN), Hut 8 (HUT), Applied Digital (APLD), and CoreWeave (CRWV), raising questions about the outlook for AI infrastructure spending, while hyperscalers appear unaffected.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=e123d22b775b43b6a9ffff7a8694e344ffd6d071994b2b1a6569ea83fbb9fed3",
+    "published": "2026-11-04T14:08:29+00:00"
+   },
+   {
+    "headline": "Texas, Ohio and Georgia data center risks after Democratic election wins",
+    "summary": "Investing.com -- Three of the most important data center states elected Democratic governors on Nov 3, 2026. That includes Texas, Ohio and Georgia. Democrats also won the Senate seats in Texas and Ohio, and Georgia’s Sen. Jon Ossoff was re-elected (Reuters, Nov 4, 2026, 01:11 EST; Reuters, Nov 4, 01:58 EST). Reuters called the results \"more like a referendum on AI\" than on President Trump. The stakes are large: Texas alone holds about a quarter of US capacity due by 2030, per GLJ Research (Reute",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=fce072edc0b9fe9e16482aa36d7333c55e7ee79379438bfc099ebbfe0634bea5",
+    "published": "2026-11-04T13:16:24+00:00"
+   },
+   {
+    "headline": "What Is Behind The Move In Cipher Digital Stock?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=c010aef3ad99a374cce6a1395244f95a6bb249ef093296879a2a2a99cbd0425a",
+    "published": "2026-11-04T12:56:00+00:00"
+   },
+   {
+    "headline": "What Is Behind The Move In Applied Digital Stock?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=ae6de3879425dac4963e7ff7375dae299f3dfecdad08f636a1bb22a43e818a64",
+    "published": "2026-11-04T12:55:44+00:00"
+   },
+   {
+    "headline": "CoreWeave More Than Halved Over the Past 6 Months: This Pro Analyst Expects 360% Returns to Come",
+    "summary": "CoreWeave's $104 billion revenue backlog and a Street-high price target pointing to 365% upside tell one story, but its bond market tells a very different one, and right now the bond market is winning.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=1f35a12c9ce13e2ce5739bdbada4eec2af0202777822d5b62311d73e2956cf05",
+    "published": "2026-11-04T12:15:19+00:00"
    }
   ],
   "FN": [
+   {
+    "headline": "Does Beating The Market Prove Flex Is A Great Company?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=e7ef7130930ce38e851105b5e76876e488f4ec265447fcc1cde7e42662f81159",
+    "published": "2026-11-04T13:49:34+00:00"
+   },
+   {
+    "headline": "Fabrinet (FN) Stock Jumps As Q1 Earnings Fuel Margin Questions",
+    "summary": "Fabrinet stock exploded higher, jumping 15.5% to about US$363 after markets weighed its latest Q1 2027 report. On the surface this looks like a simple relief rally after a tough three months, with the share price down about 30% over the prior quarter. The real story sits in the tape of the income statement. Revenue landed near US$1.47b and non cash earnings risk stayed front of mind, yet the trailing twelve month earnings base reached roughly US$480.6 million. For traders, that one day spike...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=53b897ea7f05b58dcaee0dcd3f3179c411c95d290bfd0502f1bc2db533bb535f",
+    "published": "2026-11-04T07:18:23+00:00"
+   },
+   {
+    "headline": "Record Results May Change The Case For Investing In Fabrinet Stock",
+    "summary": "Fabrinet reported record Q1 FY2027 results, with sales of US$1,474.46 million and GAAP diluted EPS of US$2.86, and issued Q2 revenue guidance of US$1.6 billion to US$1.65 billion with expected GAAP diluted EPS of US$3.81 to US$3.96. The business paired its strong quarter with an expanded share repurchase authorization of US$637.3 million, underlining management’s focus on converting demand for data center, communications, automotive, and industrial programs into both capacity build out and...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=2107be299c095b0c4ffdcc64d000fc609f63f41a73aa20be9dbd9d8a49ee89c5",
+    "published": "2026-11-04T06:19:30+00:00"
+   },
+   {
+    "headline": "Fabrinet 2027 Q1 - Results - Earnings Call Presentation",
+    "summary": "2026-11-04. The following slide deck was published by Fabrinet in conjunction with their 2027 Q1 earnings call.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=b1947099d0ac3a185a93bedb15623ec80f55e484924fd471ed54083474e302b0",
+    "published": "2026-11-04T01:06:22+00:00"
+   },
    {
     "headline": "Fabrinet Lost 32% in a Month. Barclays Sees 58% Upside From Here",
     "summary": "Key TakeawaysFabrinet shares fell 32% in the past month as AI optics stocks, including Coherent, Lumentum and Marvell, sold off on fears about AI funding and hyperscaler spending. Fabrinet had no news of its own during the sell-off.",
@@ -192,6 +261,27 @@
     "published": "2026-11-03T14:00:00+00:00"
    },
    {
+    "headline": "JP Morgan Maintains Neutral on Fabrinet, Raises Price Target to $470",
+    "summary": "JP Morgan  analyst Joseph Cardoso   maintains Fabrinet (NYSE:FN) with a Neutral and raises the price target from $465 to $470.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=ba97be1b5e711afa06eb7f0d5b23c9e4dfe378802efe44a59dd70005316c9668",
+    "published": "2026-11-03T13:46:45+00:00"
+   },
+   {
+    "headline": "Fabrinet Q1 2027 Earnings Call Summary",
+    "summary": "Moby summary of Fabrinet's Q1 2027 earnings call",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9cc66d4999db0ede43d7a0601d10775927441589095d54dd772eb3ba98a977ce",
+    "published": "2026-11-03T13:30:00+00:00"
+   },
+   {
+    "headline": "Nasdaq 100 Gets a Lift As Nvidia Overtakes Apple: Stock Market Today",
+    "summary": "Apple&#39;s memory-cost margin warning hands Nvidia the top market value as chipmakers rebound. Here&#39;s what&#39;s happening in the stock market today.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=40c247a869524b5a509ff521ec7779c9ef6dd383879922d8c456a25f5feaa5c0",
+    "published": "2026-11-03T13:24:36+00:00"
+   },
+   {
     "headline": "Marvell and Lumentum Fell Hard. Their Supplier’s Stock Is Soaring",
     "summary": "When Marvell announced a blockbuster acquisition and both stocks tanked, one overlooked supplier quietly posted the best quarter in its history after hours. The question now is whether that record run can survive the deal's fallout.",
     "source": "Yahoo",
@@ -199,63 +289,28 @@
     "published": "2026-11-03T13:11:00+00:00"
    },
    {
-    "headline": "Stock Market Today: Marvell’s $115 Billion Bet on Lumentum Backfires as Chip Stocks Drag the Nasdaq Lower",
-    "summary": "Marvell and Lumentum sank after a $115 billion all-stock deal, chip stocks fell again and the Nasdaq lost 1.1%. Oil dropped about 8% on US-Iran talk hopes, Apple warned on margins and Palantir raised its outlook.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=95ead1af5f192359af32bbe99608a9d5c1f40b2f3e16b925099b5b3c19443de9",
-    "published": "2026-11-03T13:01:11+00:00"
-   },
-   {
-    "headline": "Apple, Palantir, AMD, Sandisk, Onsemi, and More Stocks That Explain Today’s Market",
-    "summary": "AI stocks stage a comeback, but Apple slides after the iPhone maker’s guidance fails to meet investors’ high bar.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=0a4bb09ef5bb9535c285f59d8d8b0d0095f5d37bba6e1562faa221392cc04faa",
-    "published": "2026-11-03T11:25:00+00:00"
-   },
-   {
-    "headline": "Rosenblatt Maintains Buy on Fabrinet, Lowers Price Target to $600",
-    "summary": "Rosenblatt  analyst Mike Genovese   maintains Fabrinet (NYSE:FN) with a Buy and lowers the price target from $750 to $600.",
+    "headline": "Fabrinet, EverQuote, Lattice Semiconductor, Fiserv And Other Big Stocks Moving Higher On Tuesday",
+    "summary": "U.S. stocks mixed as Dow fell 200 points; Fabrinet surged 13.7% on strong results, guidance and buyback, while several small caps rallied.",
     "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=7174ef6366ca57674969cc615fd47dfdafb73bf870d8a891a9653a43a4c91a54",
-    "published": "2026-11-03T08:46:06+00:00"
-   },
-   {
-    "headline": "Fabrinet (FN) (Q1 2027) Earnings Call Highlights: Record 51% Revenue Growth and $10 Billion ...",
-    "summary": "Fabrinet (FN) posts its strongest top-line growth in a decade on surging data center demand, guides Q2 FY2027 revenue to $1.6 billion, and expands capacity toward $10 billion by January.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=56e2045034dd645363b9cac3f6356dcf09bc52700295ae9587fc797f7fbd1775",
-    "published": "2026-11-03T07:04:34+00:00"
-   },
-   {
-    "headline": "Needham Reiterates Buy on Fabrinet, Maintains $500 Price Target",
-    "summary": "Needham  analyst Ryan Koontz   reiterates Fabrinet (NYSE:FN) with a Buy and maintains $500 price target.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=eda43884c7a61022e5976be586d3ec748fa213338c33a69a4543a58115a870c5",
-    "published": "2026-11-03T06:05:34+00:00"
-   },
-   {
-    "headline": "Why Is Fabrinet Stock Soaring Tuesday?",
-    "summary": "Fabrinet (NYSE: FN) stock rose 11% premarket after beating Q1 estimates with $1.47B in revenue and issuing strong Q2 guidance.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=d4fc494040402e093a7fdd6bb5acb03e04174f07c0f2b369a661921ea65ffb4d",
-    "published": "2026-11-03T06:03:44+00:00"
-   },
-   {
-    "headline": "Fabrinet (FN) Q1 2027 Earnings Call Transcript",
-    "summary": "Data center revenue surged 78% as Fabrinet expands capacity.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=846687781b85c9934a275f44b09790a51a35868f96e9a3134bf7146f9c23a558",
-    "published": "2026-11-03T04:59:22+00:00"
-   },
-   {
-    "headline": "Fabrinet: Fiscal Q1 Earnings Snapshot",
-    "summary": "GRAND CAYMAN, Cayman Islands (AP) — GRAND CAYMAN, Cayman Islands (AP) — Fabrinet (FN) on Monday reported fiscal first-quarter net income of $103.The Grand Cayman, Cayman Islands-based company said it had profit of $2.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=a9bf3635cc0691d836217086bf678bc9c533aceea5282a4554c68f2b3522f021",
-    "published": "2026-11-03T04:25:31+00:00"
+    "url": "https://finnhub.io/api/news?id=e2d73d51940816c1caa967687d54c5a10306a0e77676401dbfc0be156ddef8d6",
+    "published": "2026-11-03T13:02:46+00:00"
    }
   ],
   "INOD": [
+   {
+    "headline": "Cerebras Systems vs. Innodata: Which Tech Stock Is the Better Buy for 2027?",
+    "summary": "One of these AI stocks is growing fast but burning cash, while the other is already profitable and cheaper on sales and forward earnings.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=bf4ae62074b7ac9d89f69558665e9de82bffa7d9c4d0093999bdade0d86771ed",
+    "published": "2026-11-04T14:04:01+00:00"
+   },
+   {
+    "headline": "Is Innodata (INOD) Above Fair Value After Its Sharp Pullback?",
+    "summary": "Innodata has swung from a very large 5 year gain to sharp recent pullbacks, and the gap between those returns raises a simple question about the stock. Is the current share price really in line with what the business is earning today and what those profits may support over time? Over the past 5 years the stock has climbed about 402.4%, which puts a lot of weight on the idea that Innodata's earnings power can justify a much richer valuation than in the past. Recent mass layoffs linked to...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=746250be448f4add1e8bdf80d1ef5c2611c39a306c6e0598938cb441436d0593",
+    "published": "2026-11-04T13:10:31+00:00"
+   },
    {
     "headline": "Innodata Before Q3 Earnings: Should You Buy, Sell or Hold the Stock?",
     "summary": "INOD's AI-driven growth and expanding customer base fuel optimism ahead of Q3 earnings, but premium valuation and margin risks warrant caution.",
@@ -265,6 +320,62 @@
    }
   ],
   "IONQ": [
+   {
+    "headline": "Prediction: This Is How Much IonQ Stock Will Be Worth by the End of 2027",
+    "summary": "IonQ's stock has had a rough year, but a turnaround could be coming.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=1062719475fc8878cd73a9691387378e6c8b8d5dd3687cd95b980b64ca943302",
+    "published": "2026-11-05T00:20:00+00:00"
+   },
+   {
+    "headline": "Why D-Wave Quantum Stock Led a Quantum Computing Crash in October",
+    "summary": "Quantum computing stocks fell as a pack last month. D-Wave Quantum just out-plunged the others.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=ce42a3e45f945eb8dc68872c9f3629e79a6eae9272eb01ad543c0bb9efa760bb",
+    "published": "2026-11-04T21:07:01+00:00"
+   },
+   {
+    "headline": "IonQ Q3 2026 Earnings Tomorrow: Time to Buy Stock, Wait or Sell?",
+    "summary": "IonQ faces a pivotal Q3 earnings report as revenue growth and quantum advances clash with profitability concerns and falling estimates.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=007f1af72e68f567c63cca27b961c52664ca5281c4db4f3281f4dc5e0c0d96ba",
+    "published": "2026-11-04T19:00:00+00:00"
+   },
+   {
+    "headline": "IonQ Partners with QuantumCT to Expand Quantum Computing Access Across Connecticut",
+    "summary": "IonQ (NYSE:IONQ) announced a partnership with QuantumCT, Connecticut’s statewide quantum innovation initiative, to provide universities, researchers, startups and businesses with access to its trapped-ion quantum computing systems. Under the agreement, QuantumCT will purchase cloud computing resources from IonQ on behalf of participating organisations across Connecticut, supporting research, technology development and commercial applications.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9122f61f5d73ef3f0b26cd49df34cdc066e222f74632862383e718f30d53fbeb",
+    "published": "2026-11-04T15:37:29+00:00"
+   },
+   {
+    "headline": "IonQ, SoundHound and Unity Earnings Previews: What Investors Should Watch",
+    "summary": "IonQ, SoundHound, and Unity all head into Thursday's earnings after brutal selloffs, yet each stock carries a completely different set of make-or-break questions that could send shares soaring or accelerate the pain.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9eefa9ecafd083076e932f3c1ea76629a28a2879717863f34bf5fce626f8c18a",
+    "published": "2026-11-04T14:48:28+00:00"
+   },
+   {
+    "headline": "IonQ Announces Partnership with QuantumCT to Expand Quantum Computing Access",
+    "summary": "COLLEGE PARK, Md., November 04, 2026--IonQ (NYSE: IONQ), the world's leading full-stack quantum platform and foundry, today announced a partnership with QuantumCT, Connecticut's statewide initiative to accelerate quantum innovation and economic development. QuantumCT will purchase access to IonQ's trapped-ion quantum computers on behalf of Connecticut-based, quantum-focused organizations.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=5fc922ed4f8be28f0a30fee91aafc76e7920a2c572d030314fa9e1c36d10574c",
+    "published": "2026-11-04T14:00:00+00:00"
+   },
+   {
+    "headline": "IonQ Completes Acquisition of Elisity, Extending Quantum Security for Enterprises and Government",
+    "summary": "COLLEGE PARK, Md., November 04, 2026--IonQ (NYSE: IONQ), the world's leading full-stack quantum platform and foundry, today completed its acquisition of Elisity, Inc., a Zero Trust security company, in an all-stock transaction. The combination extends IonQ’s quantum security strategy, adding Zero Trust technology that complements IonQ's post-quantum cryptography (PQC) and quantum key distribution (QKD) capabilities. These combined enhancements are intended to protect customers today, and keep th",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=95ef58e4db7597bb1e06ec18c4c5eb5bb85834f96be6cc2303ca190feb5b383b",
+    "published": "2026-11-04T13:45:00+00:00"
+   },
+   {
+    "headline": "Not IonQ. Not Rigetti. This Quantum Computing Stock Could Be the Next to Soar.",
+    "summary": "D-Wave is adding customers and partners, and securing up to $100 million in government funding. Here's what that could mean for the stock and the risks.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=4c8c78b4058c70f6aeb054ad56035979a66edd23e9fe0d76b4ffcd185a6890cc",
+    "published": "2026-11-04T06:20:00+00:00"
+   },
    {
     "headline": "IonQ Just Dropped 32% In a Month: Is IONQ Stock Hopeless or Ready for a Rebound?",
     "summary": "IonQ has posted record revenue five quarters running, struck a deal with NVIDIA, and swallowed a billion-dollar acquisition, yet the stock has cratered 32% in a month. Something in that math does not add up, and figuring out which side is wrong has real money riding on it.",
@@ -287,6 +398,13 @@
     "published": "2026-11-03T17:02:48+00:00"
    },
    {
+    "headline": "Shares of semiconductor companies are trading higher amid overall market strength due to a rise in NVIDIA, a slight improvement in consumer confidence and as traders await details on potential US trade deals.",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=1ef7d3773528d919b2737790cb511e39b831d69c1c59cb9c912ffeb0727832cf",
+    "published": "2026-11-03T12:55:37+00:00"
+   },
+   {
     "headline": "The Zacks Analyst Blog Highlights IonQ, D-Wave Quantum, Rigetti Computing and Quantum Computing",
     "summary": "IonQ and peers plunged in October, but upcoming Q3 results could test whether revenue growth and commercial progress can restore confidence in quantum stocks.",
     "source": "Yahoo",
@@ -306,51 +424,30 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=437b56a1eee1f08f612c9a5cbb251b321d9ef35acd0301d1050a6c5da73e1059",
     "published": "2026-11-03T10:10:00+00:00"
-   },
-   {
-    "headline": "2 Unstoppable Quantum Computing Stocks to Buy Hand Over Fist Before the Next Rally",
-    "summary": "IonQ's revenue rose 287% and Rigetti's 185% last quarter, but both carry steep valuations. Here's how the two compare on risk and fit.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=04089cb7c518629375abf7cbbbf5c1c0bc228530434c6cc13415d9b0ceff11c0",
-    "published": "2026-11-03T06:20:00+00:00"
-   },
-   {
-    "headline": "Quantum Stocks Plunge in October: Can Q3 Earnings Halt the Slide?",
-    "summary": "Quantum stocks IonQ, D-Wave, Rigetti and QCi plunged in October. Can upcoming Q3 earnings, revenue growth and commercial progress reverse the selloff?",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=d072649093d6787a4b1172471d47b4620309ea89f33cc7cf24bc7262d9fee76e",
-    "published": "2026-11-02T19:00:00+00:00"
-   },
-   {
-    "headline": "Quantum Computing and Communications Market Global Report 2026 | Capitalize on 35.2% CAGR Through 2030 as IBM, Quantinuum, IonQ and PsiQuantum Scale Secure Quantum Networks",
-    "summary": "IBM, Quantinuum, IonQ, PsiQuantum and Quantum Brilliance are profiled, covering their quantum computing and communications offerings.Dublin, Nov. 02, 2026 (GLOBE NEWSWIRE) -- \"Quantum Computing And Communications Market Global Report 2026\" has been added to ResearchAndMarkets.com's offering. Quantum Computing and Communications Market to Reach $6.93 Billion by 2030 The global quantum computing and communications market is experiencing exponential growth as governments, research institutions and",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=34be0d7e2d4c31375bbd553800d89726640b84f960e8884651703bceb5a4b42b",
-    "published": "2026-11-02T14:47:00+00:00"
-   },
-   {
-    "headline": "Quantum Stocks Face Earnings Reality Check After Selloff Exposes Profitability Divide",
-    "summary": "Quantum computing stocks face earnings tests after a sharp drawdown, with investors separating profitable enablers from speculative loss-makers.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=13115f0ccea78f020ddbdbbab2301237ae094356c0e31cef29b2bdfa812386fd",
-    "published": "2026-11-02T13:36:41+00:00"
-   },
-   {
-    "headline": "B. Riley Securities Maintains Buy on IonQ, Lowers Price Target to $75",
-    "summary": "B. Riley Securities  analyst Craig Ellis   maintains IonQ (NYSE:IONQ) with a Buy and lowers the price target from $100 to $75.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=508d9471bfc734ad78bfcbae9b2c08d216e895645cd324b8c9d76ae5b8a9d4d2",
-    "published": "2026-11-02T13:05:02+00:00"
-   },
-   {
-    "headline": "What Is The Case For Waiting On Rigetti Computing Stock?",
-    "summary": "For questions about this article or underlying research, email help@trefis.com.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5f98949fcbf5421db304274b13895651c84d709904c71e6936d921b38ecd121c",
-    "published": "2026-11-02T07:04:09+00:00"
    }
   ],
   "LSCC": [
+   {
+    "headline": "What iShares A.I. Innovation ETF (BAI) Bought: Amazon Leads on Nov. 2",
+    "summary": "The fund bought $17.9 million of Amazon and $16.7 million of Entegris while selling $36.7 million of Lattice Semiconductor, with net sales of $49.0 million.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=6925b978caac29d410480394f70d3ebbbb70286f236120f3f92f5ee501efc247",
+    "published": "2026-11-04T11:05:50+00:00"
+   },
+   {
+    "headline": "ETFs Are Net Sellers of Lattice Semiconductor (LSCC) on Nov. 2",
+    "summary": "ETFs sold a net $36.5 million of Lattice Semiconductor on Monday.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=8cdc9981bb7c0d135efdada87f5fe2210049d6af393acb3ded5d1f82a336cf0f",
+    "published": "2026-11-04T11:02:55+00:00"
+   },
+   {
+    "headline": "Lattice Semiconductor Corporation 2026 Q3 - Results - Earnings Call Presentation",
+    "summary": "2026-11-04. The following slide deck was published by Lattice Semiconductor Corporation in conjunction with their 2026 Q3 earnings call.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=07c5a49ef84c0ac4fa0ca73b093ae267917c459b3f0a65a81e6ea40f52fbab17",
+    "published": "2026-11-04T02:10:00+00:00"
+   },
    {
     "headline": "Lattice Semiconductor earnings analysis: questions answered and next catalysts",
     "summary": "Investing.com -- Lattice Semiconductor (LSCC) reported FY2026 Q3 on Nov 2, 2026. It beat consensus on both lines, and the stock is up +12.43% to $107.30 as of Nov 3, 12:37 PM EST.",
@@ -394,6 +491,27 @@
     "published": "2026-11-03T14:00:00+00:00"
    },
    {
+    "headline": "Lattice Semiconductor Corporation Q3 2026 Earnings Call Summary",
+    "summary": "Moby summary of Lattice Semiconductor Corporation's Q3 2026 earnings call",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=8549a0712f37a2d634440ff282d83af6d223c2a076b11c35636166144c1b60a6",
+    "published": "2026-11-03T13:30:00+00:00"
+   },
+   {
+    "headline": "Nasdaq 100 Gets a Lift As Nvidia Overtakes Apple: Stock Market Today",
+    "summary": "Apple&#39;s memory-cost margin warning hands Nvidia the top market value as chipmakers rebound. Here&#39;s what&#39;s happening in the stock market today.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=40c247a869524b5a509ff521ec7779c9ef6dd383879922d8c456a25f5feaa5c0",
+    "published": "2026-11-03T13:24:36+00:00"
+   },
+   {
+    "headline": "Fabrinet, EverQuote, Lattice Semiconductor, Fiserv And Other Big Stocks Moving Higher On Tuesday",
+    "summary": "U.S. stocks mixed as Dow fell 200 points; Fabrinet surged 13.7% on strong results, guidance and buyback, while several small caps rallied.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=e2d73d51940816c1caa967687d54c5a10306a0e77676401dbfc0be156ddef8d6",
+    "published": "2026-11-03T13:02:46+00:00"
+   },
+   {
     "headline": "Lattice Semiconductor: 3 Key Takeaways for Long-Term Investors",
     "summary": "AI tools and debt paydown signal the company is building durable competitive advantages beyond just riding the data center boom.",
     "source": "Yahoo",
@@ -413,51 +531,51 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=d83a9ed7857c356f7295200df97867fbc844ebee796b459f35d66837332c3892",
     "published": "2026-11-03T11:04:28+00:00"
-   },
-   {
-    "headline": "These Analysts Boost Their Forecasts On Lattice Semiconductor After Upbeat Q3 Results",
-    "summary": "Lattice Semiconductor beat Q3 estimates and raised Q4 guidance, citing AI-driven FPGA demand; shares jumped 10.7% premarket.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=eaefe9fba2b6af2334c7e083f24451d487589849965cbbfb85cf20ceaa14835b",
-    "published": "2026-11-03T09:24:47+00:00"
-   },
-   {
-    "headline": "Stifel Maintains Buy on Lattice Semiconductor, Raises Price Target to $175",
-    "summary": "Stifel  analyst Ruben Roy   maintains Lattice Semiconductor (NASDAQ:LSCC) with a Buy and raises the price target from $165 to $175.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=33278cb6c624c74c1b09c0487d4e597f9a35591af3a09c513dcf3a11222d0763",
-    "published": "2026-11-03T09:05:06+00:00"
-   },
-   {
-    "headline": "Rosenblatt Maintains Buy on Lattice Semiconductor, Raises Price Target to $200",
-    "summary": "Rosenblatt  analyst Kevin Cassidy   maintains Lattice Semiconductor (NASDAQ:LSCC) with a Buy and raises the price target from $175 to $200.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=9209674cb420d2e5e5079a0e1c54fac6d65ab7cd4cbe2e380d058bd811dc0c6c",
-    "published": "2026-11-03T08:26:33+00:00"
-   },
-   {
-    "headline": "Should Earnings Beat Require Action From Lattice Semiconductor (LSCC) Investors?",
-    "summary": "Lattice Semiconductor reported Q3 2026 sales of US$291.04 million and net income of US$11.21 million, with earnings per share from continuing operations of US$0.08. The company also shared broader full year context, with nine month sales of US$663.01 million and net income of US$52.38 million. The firm paired this higher revenue and earnings base with an AI focused outlook, highlighting FPGA demand in data center and industrial uses, and the planned integration of AMI software to deepen its...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=0ad82081466392e483c70891a062a677f56757021d0c6c021b6b73eda1cd930d",
-    "published": "2026-11-03T08:09:29+00:00"
-   },
-   {
-    "headline": "Lattice (LSCC) Q3 2026 Earnings Call Transcript",
-    "summary": "Record Q3 results driven by data center AI momentum and industrial market recovery.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=eb1ca8090f6eb755f5a51ebfb1f775662a6ccbb574f458e5347a16b9426ecd69",
-    "published": "2026-11-03T06:43:23+00:00"
-   },
-   {
-    "headline": "Lattice Semiconductor Corp (LSCC) (Q3 2026) Earnings Call Highlights: Record Revenue of $291 ...",
-    "summary": "Lattice Semiconductor Corp (LSCC) delivered a record Q3 2026 with revenue up 118% year-over-year, guided Q4 revenue to a $335 million midpoint, and projected at least 60% growth in 2027.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=f2aa111f7ac87b0b88dc30301d6bb87077a9492b880303a6fad67d9c3e79d716",
-    "published": "2026-11-03T05:05:22+00:00"
    }
   ],
   "OUST": [
+   {
+    "headline": "This Edwards Lifesciences Analyst Turns Bullish; Here Are Top 5 Upgrades For Wednesday",
+    "summary": "Wall Street analysts upgraded EW, MSGK, OUST, NVTS; EW, OUST and NVTS also received price-target updates.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=59974cc09c3af9ad8dbef06e8268ef1b900aac90a8088cdc57b9a124ca5fb0d3",
+    "published": "2026-11-04T09:59:58+00:00"
+   },
+   {
+    "headline": "12 Information Technology Stocks Moving In Wednesday's Pre-Market Session",
+    "summary": "Gainers\n\nHelport AI (NASDAQ:HPAI) shares moved upwards by 40.0% to $0.34 during Wednesday&#39;s pre-market session. The market value of their outstanding shares is at $9.0 million. \nCPS Technologies (NASDAQ:CPSH) shares",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=0289ef61f5641086217f79b02d53e474f1f67cf86b118385f9f5a0876533d98b",
+    "published": "2026-11-04T08:05:33+00:00"
+   },
+   {
+    "headline": "Cantor Fitzgerald Upgrades Ouster to Overweight, Announces $45 Price Target",
+    "summary": "Cantor Fitzgerald  analyst Andres Sheppard   upgrades Ouster (NASDAQ:OUST) from Neutral to Overweight and announces $45 price target.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=a4d41a292b802db81be8d27f3fe619bbd50cc98a2fcd0307a2170ac4c8b39433",
+    "published": "2026-11-04T07:41:23+00:00"
+   },
+   {
+    "headline": "Ouster Sees Explosive Demand for Humanoid Robots and Drones",
+    "summary": "Ouster (OUST) shares jumped 14% premarket after beating Q3 estimates with $59.3M in revenue, up 50% YoY on surging robotics demand.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=e8797b46b98cffd775b536884ae740ec3e0cb52afe30d50f35cea0096d7d47d2",
+    "published": "2026-11-04T07:36:10+00:00"
+   },
+   {
+    "headline": "OUST Stock Gets A Retail Boost After Ouster's Record Revenue And Sensor Shipments: ‘Great Guide And Q3’",
+    "summary": "Ouster recorded revenue growth for the fifteenth quarter in a row, driven by strong demand for its LiDAR sensors and cameras.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=574b6440258ba74bb52d6524a2709730285686c6d461ac46e0fa35d3de1678f2",
+    "published": "2026-11-04T04:25:53+00:00"
+   },
+   {
+    "headline": "Ouster Q3 Earnings Call Highlights",
+    "summary": "Ouster (NASDAQ:OUST) reported third-quarter revenue of $59 million, a company record and an increase of approximately 50% from a year earlier, as the lidar and perception technology company expanded shipments of both sensors and cameras. Chief Executive Officer Angus Pacala said Ouster shipped more",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=0e97dded7ff85602da681ab7ea52e3ce04c949e04d7ff85dab69417b3d92319b",
+    "published": "2026-11-04T02:14:06+00:00"
+   },
    {
     "headline": "Ouster (NASDAQ:OUST) Q3 Beats Estimates as Rev8 and Stereolabs Drive Relief Rally",
     "summary": "Ouster (OUST) Q3 2026 revenue and EPS beat consensus; Q4 guidance broadly in line sparked an after-market relief rally after a weak month.",
@@ -466,14 +584,77 @@
     "published": "2026-11-03T23:54:45+00:00"
    },
    {
-    "headline": "Fabrinet (FN) Q1 Earnings and Revenues Surpass Estimates",
-    "summary": "Fabrinet (FN) delivered earnings and revenue surprises of +3.58% and +5.00%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+    "headline": "Ouster rises on revenue beat and solid guidance",
+    "summary": "Investing.com -- Ouster Inc (NASDAQ:OUST) reported third quarter revenue that exceeded analyst expectations, driving shares up 8.4% in after-hours trading Tuesday, as the sensing and perception company demonstrated continued momentum in the robotics and industrial sectors.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5e1f07d2a4ba6b78f34ca4f8142251efdf9b283eb62f8cd045b19e7b67f2c0eb",
-    "published": "2026-11-02T23:10:04+00:00"
+    "url": "https://finnhub.io/api/news?id=9e4bd0d0e1fe238b76e5f03d5b16b1a89558c7e5c6e6dc1fdb408e05b6ccf129",
+    "published": "2026-11-03T22:14:50+00:00"
+   },
+   {
+    "headline": "Ouster, Inc. (OUST) Reports Q3 Loss, Beats Revenue Estimates",
+    "summary": "Ouster (OUST) delivered earnings and revenue surprises of +33.33% and +5.56%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=8e89d3ee7bd7b4bb67ab10999b6a5500bc83d013110168633dff02dca73666e2",
+    "published": "2026-11-03T21:50:06+00:00"
+   },
+   {
+    "headline": "Ouster, Inc. (OUST) Q3 2026 Earnings Call Transcript",
+    "summary": "Ouster, Inc. (OUST) Q3 2026 Earnings Call November 3, 2026 5:00 PM ESTCompany ParticipantsChen GengCharles Pacala - Co-founder, CEO & DirectorKenneth...",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=10f1b21eb7d33dd9b2244fc87436800a8ba49449bbacee90f8a09cf01739bf11",
+    "published": "2026-11-03T21:46:01+00:00"
+   },
+   {
+    "headline": "Ouster Announces Results for Third Quarter 2026",
+    "summary": "SAN FRANCISCO, November 03, 2026--Ouster, Inc. (Nasdaq: OUST) (\"Ouster\" or the \"Company\"), a leader in sensing and perception for Physical AI, announced financial results for the three months ended September 30, 2026.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=39cc368ccf4754153a0a0e68bba99f074e0563a9969cf9ed4c816c4b0f3c929e",
+    "published": "2026-11-03T21:05:00+00:00"
+   },
+   {
+    "headline": "Ouster Just Dropped 34% in a Month. Is It Time to Sell, or Load Up?",
+    "summary": "Key TakeawaysOuster stock has dropped 34% in the past month after a hot September inflation report started a sell-off in AI and chip stocks. Ouster’s own news this month was good: a defense milestone with Forterra and a new robotics product.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=fb3c9a5f4f76340270c2933f9b87738b8dd73060341455cafe04d157802b2d45",
+    "published": "2026-11-03T20:00:16+00:00"
+   },
+   {
+    "headline": "Ouster Q3 2026 Earnings Call Transcript",
+    "summary": "Ouster (NASDAQ:OUST) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=46f1b6a5f91451163dda7631ad5f6307ced45c7b8111223c86d016b97e5e71ab",
+    "published": "2026-11-03T19:04:56+00:00"
+   },
+   {
+    "headline": "Ouster Reports Q3 Double Beat, Shares Rise",
+    "summary": "Ouster Inc (NASDAQ:OUST) reports financial results for the third quarter after the closing bell on Tuesday. Here&#39;s a rundown of the report.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=065f1a44acfdd21f0ac8c07f91f50a7b4692b4b1fc00a484fa77bffab8116a27",
+    "published": "2026-11-03T17:55:04+00:00"
+   },
+   {
+    "headline": "Ouster Q3 EPS $(0.20) Beats $(0.24) Estimate, Sales $59.325M Beat $56.267M Estimate",
+    "summary": "Ouster (NASDAQ:OUST) reported quarterly losses of $(0.20) per share which beat the analyst consensus estimate of $(0.24) by 16.67 percent. This is a 45.95 percent increase over losses of $(0.37) per share from the same",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=52a0fb270805a7585bc5f382a4571de53f50d3cd4bfe21dfac587efb004ca8d0",
+    "published": "2026-11-03T17:10:35+00:00"
    }
   ],
   "PONY": [
+   {
+    "headline": "Cloudflare upgraded, Marvell downgraded: Wall Street's top analyst calls",
+    "summary": "Cloudflare upgraded, Marvell downgraded: Wall Street's top analyst calls",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=c3e9b505b42487c4a069bc6e89f75eaa229f3186e37cfbd9b5a49e8fd98968fa",
+    "published": "2026-11-03T14:40:44+00:00"
+   },
+   {
+    "headline": "Buy, Sell, or Hold? Tuesday’s Top Upgrades and Downgrades: AON, Bloom Energy, Chevron, Cloudflare, Marvell Technologies, Lumentum Holdings, Merck & Co., Roku, X-Energy, and More",
+    "summary": "Tech stocks keep beating estimates and then selling off anyway, Apple just joined the club, and Wall Street analysts are busy reshuffling their ratings on everything from nuclear energy plays to insurance giants. Here is who got upgraded, downgraded, and initiated today.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=841635119e98e8444ed963065216327ec992ef9f023b0c03685bee38d1fd2f15",
+    "published": "2026-11-03T12:59:26+00:00"
+   },
    {
     "headline": "This X-Energy Analyst Begins Coverage On A Bullish Note; Here Are Top 5 Initiations For Tuesday",
     "summary": "New coverage: Pony AI Overweight/$10, X-Energy Outperform/$17, TRex Bio Buy/$39, NuScale Underperform/$5.",
@@ -491,6 +672,41 @@
   ],
   "RDDT": [
    {
+    "headline": "Husband Sends Sister $40K A Year From Joint Account To Chase Her Dreams. 'I’d Have To Seriously Consider Our Marriage,' Wife Says",
+    "summary": "A 30-year-old wife wanted her husband to stop sending money from their joint account to support his younger sister’s dreams. He gave her roughly 30,000 British pounds ($39,847) the previous year, and kept sending money even after she repeatedly raised...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=be5ea62c0b79749e7bb878c6c56f6618b7caae24bcfcba515b58070c0d2af2f5",
+    "published": "2026-11-04T15:00:14+00:00"
+   },
+   {
+    "headline": "Reddit Begins To Test Search Ads",
+    "summary": "Reddit is testing ad placements in search with a select group of advertisers. Ad delivery in search will depend on contextual relevance to a user's search query, and other factors.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=04fc28503eb65cf6cb3d5177ec1626b6d8101dca41aa3a87f4b64f5ac1214fcf",
+    "published": "2026-11-04T14:47:39+00:00"
+   },
+   {
+    "headline": "Reddit Stock Roars Back From AI Search Scare: Keep This On A Watchlist",
+    "summary": "Reddit plunged amid AI search fears despite posting strong earnings. Poor momentum triggered a downgrade to Hold, but robust fundamentals make it a stock to watch.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=99bc818b5e45b5814771bca975c07d72f16f64234a94f1133bf8f3fda09f5746",
+    "published": "2026-11-04T14:04:21+00:00"
+   },
+   {
+    "headline": "Social Buzz: Wallstreetbets Stocks Mostly Higher Premarket Wednesday; Super Micro Computer, AMD to Advance",
+    "summary": "The most-talked-about stocks in the Reddit subforum Wallstreetbets were mostly higher hours before W",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=f85c64af21c48183ee83bb2cb5a93d24d1f197ca2767899c4cee350ee4c5f949",
+    "published": "2026-11-04T11:32:26+00:00"
+   },
+   {
+    "headline": "How Much Should This Fall Change Your View Of Reddit Stock?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=0f7419eb6367f863bdb013d13c5a0b543a757396e17a427e2a35ef0868b21b49",
+    "published": "2026-11-04T10:24:40+00:00"
+   },
+   {
     "headline": "Why Reddit Stock Is In Focus After Strong Q3 And A Google Traffic Warning",
     "summary": "Reddit reported Q3 2026 revenue of US$894.96 million and net income of US$283.26 million, alongside a completed US$340.37 million share repurchase covering 1.15% of shares. The business paired stronger earnings with a warning about lower daily users and weaker Google search referrals, while preparing a logged in only platform that concentrates on the audience already driving most monetization. We will now examine how Reddit's investment narrative is affected by the sharp Google search...",
     "source": "Yahoo",
@@ -498,11 +714,25 @@
     "published": "2026-11-03T23:24:29+00:00"
    },
    {
+    "headline": "Reddit pitches its 1,300 gaming-related communities to brands",
+    "summary": "The company said that in-app conversations “created and shaped by real players” can drive engagement and influence purchasing decisions.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=4c3b05a67c4d4ded54d35b4efe859351fb2f841544d71327270a8106729c3d03",
+    "published": "2026-11-03T23:19:23+00:00"
+   },
+   {
     "headline": "What Did Reddit's Quarter Change For Its Stock?",
     "summary": "For questions about this article or underlying research, email help@trefis.com.",
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=b0dca06d77ca16d14dce2851fad4ccfe42d9ee236cb9a2234ecc97361f10e7fe",
     "published": "2026-11-03T20:20:16+00:00"
+   },
+   {
+    "headline": "Reddit Is Fighting Back Against AI. What That Means for RDDT Stock.",
+    "summary": "Reddit wants to put a login wall between AI bots and its content. Will that protect its business or backfire?",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=66ae6034900d95c28ebbcc61dadfe6708f89cb99180cba3f1c7c5ddb2a698caa",
+    "published": "2026-11-03T19:44:38+00:00"
    },
    {
     "headline": "Reddit tests ads in search results as traffic declines and growth concerns mount",
@@ -545,58 +775,37 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=6d3504f63f0ed09ed8b226a96d53b24be14d8fc668e04bb75beaafe874bfad2c",
     "published": "2026-11-03T10:10:09+00:00"
-   },
-   {
-    "headline": "Snap Sinks 14% in a Week on Social Ad Fears, Then Settles Its Teen Addiction Trial",
-    "summary": "Key TakeawaysSnap shares fell 14% in a week as weak ad results and outlooks from Alphabet, Reddit and Pinterest hit social stocks, and Meta’s settlement left Snap alone in a teen addiction trial. Snap settled with the two teenage plaintiffs on Monday, taking the nearest legal risk off the table.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=b3a4f23829b6d4c6cf77f59ce81d3d78f9b60f272c4d203036166e59740cef4a",
-    "published": "2026-11-03T10:07:55+00:00"
-   },
-   {
-    "headline": "Welcome To The Stealth Bear Market",
-    "summary": "AI and neocloud providers like CoreWeave, Nebius, and IREN suffered declines. Read more on the high valuations and poor breadth of the current market.",
-    "source": "SeekingAlpha",
-    "url": "https://finnhub.io/api/news?id=dbd98cc5e99680d4826ec664cb1d294bc19f00868d65bb65ea138a63e76af57a",
-    "published": "2026-11-03T09:38:44+00:00"
-   },
-   {
-    "headline": "Mom Says She Owes $10K On One Credit Card, Then Her Child Finds Out She Has Another $10K Across 7 Store Cards. ‘I Almost Lost It’",
-    "summary": "A mother asked her child to help pay off her credit card debt, but they had already bailed her out once. They agreed to discuss it, but their mother had not told them how much she actually owed. \"I almost...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=2cb9d6863f5d99455835f974c4228886c9a0c90142125defd5957c6752b2d2a9",
-    "published": "2026-11-03T00:00:07+00:00"
-   },
-   {
-    "headline": "RDDT Q3 deep dive: Search traffic drop and cautious guidance weigh on results",
-    "summary": "Online community and discussion platform Reddit (NYSE:RDDT) reported revenue ahead of Wall Street’s expectations in Q3 2026, with sales up 53% year on year to $895 million. On the other hand, next quarter’s revenue guidance of $1.02 billion was less impressive, coming in 2.8% below analysts’ estimates. Its non-GAAP profit of $2.07 per share was 6.1% above analysts’ consensus estimates.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=4896b86ed1267a284164caf4dec1cc9fc0817f67f1170a8ae1399525fa6b44ad",
-    "published": "2026-11-02T23:33:36+00:00"
-   },
-   {
-    "headline": "Nvidia, Microsoft, and JPMorgan object to OKXICE tokenized stocks",
-    "summary": "Scott Melker discusses the growing list of major US companies, now about 50, filing objections to unaffiliated third-party tokens tracking their shares on a new tokenized stock venue backed by ICE (ICE). \"The Daily Wolf with Scott Melker\" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto. Make sure to also check out Yahoo Finance's new crypto hub to find the latest crypto-related news.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=aba896868aa4037633cc6ba01258c4989bf44de4a46cbc38a30b548f34d75e4f",
-    "published": "2026-11-02T20:30:00+00:00"
-   },
-   {
-    "headline": "These 2 Tech Stocks Both Fell 29% on Friday. Are They Buying Opportunities Now?",
-    "summary": "Two very different businesses with two very different problems, and one common thread.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5a9ec691fbf22be018525c2dc2081dbb810edcfde5c670dfcfad153b133dea4d",
-    "published": "2026-11-02T19:24:01+00:00"
-   },
-   {
-    "headline": "5 must-read analyst questions from Reddit’s Q3 earnings call",
-    "summary": "Reddit’s third quarter results prompted a significant negative market reaction, despite year-on-year revenue growth and margin expansion. Management attributed the quarter’s performance to robust advertising demand, with strong gains in both pricing and impressions, but also acknowledged that a sharp decline in search referral traffic—especially from Google—pressured user growth. CEO Steve Huffman highlighted that logged-in and app user engagement remained the primary revenue driver, stating, “W",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=2aff0b1c2c3f031babd53b3a4b2569f85bb51f7cfbaee56ad50dfa32517fdeb8",
-    "published": "2026-11-02T18:45:36+00:00"
    }
   ],
   "SITM": [
+   {
+    "headline": "SiTime (SITM) Q3 Earnings and Revenues Surpass Estimates",
+    "summary": "SiTime (SITM) delivered earnings and revenue surprises of +17.60% and +2.85%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=54bb928bea5e8667f025cab302636cc7c97b353f0141665647111aec924d364c",
+    "published": "2026-11-04T21:50:09+00:00"
+   },
+   {
+    "headline": "SiTime: Q3 Earnings Snapshot",
+    "summary": "(AP) — SiTime Corporation (SITM) on Wednesday reported third-quarter profit of $4.On a per-share basis, the Santa Clara, California-based company said it had profit of 14 cents.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=c7a6d19e58f26b26cbdf5b31b289e1a0e452281845a89764541ac872fe0a7f45",
+    "published": "2026-11-04T21:26:03+00:00"
+   },
+   {
+    "headline": "SiTime Reports Third Quarter 2026 Financial Results",
+    "summary": "Q3 Net Revenue Increased 257% to $298.7 MillionSANTA CLARA, Calif., Nov. 04, 2026 (GLOBE NEWSWIRE) -- SiTime Corporation, (Nasdaq: SITM), the Precision Timing company, today announced financial results for the third quarter ended September 30, 2026. Net revenue in the third quarter of 2026 was $298.7 million, as compared to $83.6 million in the year ago quarter. “With its rapid organic growth and the addition of TPD, SiTime is now operating at a new level of scale and financial performance,” sai",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=f4d22fdb707dd9fca4e748c725c190e73a907ea57a004402d61b9b97161d93d3",
+    "published": "2026-11-04T21:10:00+00:00"
+   },
+   {
+    "headline": "Chip Stocks Feeling Blue After Democratic Party Victories",
+    "summary": "Chip stocks fell to their lowest level since late April as investors debated the impact of Democratic Party victories in midterm elections.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=b12cfed3c193f1bfe68bc981888170b45301be56a1c5cf028035783156c61d18",
+    "published": "2026-11-04T17:45:28+00:00"
+   },
    {
     "headline": "SiTime to Report Q3 Earnings: What's in the Cards for the Stock?",
     "summary": "SITM gears up for Q3 2026 earnings, with AI infrastructure demand, Renesas acquisition gains and CED growth in focus amid supply-chain challenges.",
@@ -621,112 +830,154 @@
   ],
   "SMCI": [
    {
-    "headline": "Super Micro’s Q1 Revenue Nearly Quadruples To $20B On Surging AI Server Demand",
-    "summary": "Relentless enterprise demand for data center infrastructure and artificial intelligence hardware drove revenue higher.",
+    "headline": "Super Micro Stock Has Disappointed for a Year: Why Raymond James Sees 107% Upside",
+    "summary": "Key TakeawaysRaymond James raised its Super Micro Computer price target to $65 from $48 on Nov. 4, 107% above the Nov.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=e45d29dbc3055554efd7e31d7250b364b8644753426d2a7eaa9fd834d4fbe2d4",
-    "published": "2026-11-04T00:02:28+00:00"
+    "url": "https://finnhub.io/api/news?id=ec5ca2358744f4c88a0ba88492e74f7c9d54088d41d0d15a90d4a8bb020451b1",
+    "published": "2026-11-04T20:24:33+00:00"
    },
    {
-    "headline": "Stock Market Today, Nov. 3: Markets Edge Higher as Semiconductor Stocks Rebound",
-    "summary": "Midterm elections take a back seat as chip stocks lead a mixed session that left the Dow lagging, today, Nov. 3, 2026.",
+    "headline": "Super Micro Sinks 6%, Flex Down 13% as Election Raises Fears of “Data Center Moratoriums”",
+    "summary": "Key TakeawaysSuper Micro fell 6% today, alongside Flex, on fears of Texas limits on data center construction after Tuesday’s midterms. Super Micro’s full-year gross margin guide of 11.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=de37a3796a4b947676a9ff15fb1f12a777133a8ceda8acc403b3a46dab067a1f",
-    "published": "2026-11-03T23:03:59+00:00"
+    "url": "https://finnhub.io/api/news?id=f5e0c1d597dc05805f9c2e77eab2898535cc2770a0fd49bb5423f2e0de2c5efe",
+    "published": "2026-11-04T20:16:19+00:00"
    },
    {
-    "headline": "Supermicro's Sales Quadruple as Cash Drains: Rapid Earnings Reaction",
-    "summary": "Record sales, thin margins, and a cash problem that's growing with the business.",
+    "headline": "Super Micro's AI Boom Just Got Much Bigger",
+    "summary": "Revenue nearly quadrupled as AI server demand overwhelmed Wall Street expectations.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=14c0e414b5d747c3318f1e6c444c7cf7c24dc637d8e701c93ac88b55dcb1d477",
-    "published": "2026-11-03T22:06:31+00:00"
+    "url": "https://finnhub.io/api/news?id=36621f2c86a43b1f3e1f8ebedd4b3773f964df959861247ad2f67cf2508e8f14",
+    "published": "2026-11-04T19:28:19+00:00"
    },
    {
-    "headline": "S&P 500 After-Hours Gainers: Tuesday Postmarket Movers",
-    "summary": "S&P 500 after-hours gainers from Tuesday's US close, led by ANET, SMCI, AMD, XYZ, HPE, BE, CIEN, COHR, DELL and TER, measured from Tuesday closing prices.",
+    "headline": "Super Micro Stock Soars -- Raises 2027 Sales Outlook as AI Demand Surges",
+    "summary": "Super Micro Stock Jumps as Company Unleashes Stunning $21.5 Billion Revenue Forecast",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=ad72f15c6a4f22eda7d0cad2e1af6f11d53aa14bf650207d067f5ee41dbb8633",
+    "published": "2026-11-04T19:11:45+00:00"
+   },
+   {
+    "headline": "Most-Active S&P 500 Stocks for Nov. 4, 2026",
+    "summary": "Nov. 4, 2026 most-active S&P 500 list: SMCI led volume at 61.87M shares and fell 4.71%, while UBER rose 6.92% and CVS dropped 12.33%.",
     "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=b841c0cf723b24b85d977911a7fc41eb245d56271544418191a11d5cc383e566",
-    "published": "2026-11-03T22:06:00+00:00"
+    "url": "https://finnhub.io/api/news?id=8713d2afdf63db720d31e32e8a5c703e167551bea0e93beb4202799cfb3bf45f",
+    "published": "2026-11-04T19:06:09+00:00"
    },
    {
-    "headline": "Stock Market Election Night: Dow Futures, AI Stocks, Elon Musk In Focus; AMD, Arista Lead Earnings Winners (Live)",
-    "summary": "IBD's stock market election night coverage will focus on midterm results' impact on Dow Jones futures, Treasury yields, AI and more.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=66a957fd9ea828523ddd20d41168ae0df47ca0ad1c179b59c013acc2a0811fbe",
-    "published": "2026-11-03T21:53:57+00:00"
+    "headline": "Most Active US Stocks in Today's Session",
+    "summary": "A compact look at the most active US stocks by volume in today's session, including NWGL, CRIS, INTC, HPAI, FTCI, NVDA, PLUG, CIFR, RIOT and SMCI.",
+    "source": "ChartMill",
+    "url": "https://finnhub.io/api/news?id=b51e6ec57060a56284e88059a3ea6e0f8fcec11dc3a8801ff839ecb016e1627b",
+    "published": "2026-11-04T19:00:33+00:00"
    },
    {
-    "headline": "Super Micro Computer (SMCI) Beats Q1 Earnings and Revenue Estimates",
-    "summary": "Super Micro (SMCI) delivered earnings and revenue surprises of +45.97% and +26.46%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
+    "headline": "Super Micro Has More Going for It Than Meets the Eye",
+    "summary": "Supermicro shares have sold off hard even as its order backlog hit record levels and a preliminary quarter beat guidance. A single-digit forward multiple on a company growing faster than Dell raises a question worth examining before November 3.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=349162dfccf91eced3357e73e6ef5d8d2ffe83d1685a8c9d83bdd53592b670dd",
-    "published": "2026-11-03T21:50:08+00:00"
+    "url": "https://finnhub.io/api/news?id=686408673414fbf60253f9b8ffb798caa3e185535cd68ea8e307c7e843223133",
+    "published": "2026-11-04T18:33:49+00:00"
    },
    {
-    "headline": "Super Micro Computer surges 6% as earnings, guidance top estimates",
-    "summary": "Investing.com -- Super Micro Computer shares rose 6% after the company reported quarterly earnings and revenue well above Wall Street expectations, while issuing an upbeat outlook that points to continued strength in AI infrastructure spending.",
+    "headline": "Super Micro gets BofA upgrade to price target, but margins remain a concern",
+    "summary": "Super Micro Computer Inc (NASDAQ:SMCI) received a higher price target from Bank of America at $39 as stronger guidance failed to dispel concerns about margin sustainability. Management raised its fiscal year 2027 revenue guidance to $72 billion to $82 billion and its gross margin outlook to...",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=ef5a812a4e8b8e10dc3d22194aa3c36ba2941100f60f613a0e6390e09855c1c5",
-    "published": "2026-11-03T21:43:20+00:00"
+    "url": "https://finnhub.io/api/news?id=113cc8c121fe843d39b8b12bf36c0615a64ae139b48bd48287669a7d00a98da8",
+    "published": "2026-11-04T18:08:00+00:00"
    },
    {
-    "headline": "Super Micro shares jump as revenue surges, and full-year outlook tops estimates",
-    "summary": "Super Micro Computer Inc (NASDAQ:SMCI) shares rose nearly 8% in after-hours trading Tuesday after the server and data centre infrastructure maker reported a sharp increase in first-quarter fiscal 2027 revenue and issued a full-year outlook above Wall Street expectations. Revenue for the...",
+    "headline": "SMCI earnings analysis: questions answered and next catalysts",
+    "summary": "Investing.com -- Super Micro Computer (SMCI) reported FY2027 Q1 on Nov 3, 2026, and the numbers were large. The stock still trades at $30.28 (-3.55%) as of Nov 4, 12:25 PM EST. The after-hours pop of about +8–10% has faded. The stock is down -30.9% over one month (snapshot as of Nov 4, 2026).",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=f718951115d4023946e5df1d7f0f5867bf19ab3fc9a71db16206c95beb75e203",
-    "published": "2026-11-03T21:38:00+00:00"
+    "url": "https://finnhub.io/api/news?id=e4efa80e8f684aacdcdf641ee0576f955aefd8ba471ebd0b728bcfb52f4af2e9",
+    "published": "2026-11-04T18:02:05+00:00"
    },
    {
-    "headline": "Super Micro (NASDAQ:SMCI) beats expectations in strong Q3 CY2026, stock soars",
-    "summary": "Server solutions provider Super Micro (NASDAQ:SMCI) reported calendar Q3 2026 (fiscal Q1 2027) results topping the market’s revenue expectations, with revenue up 298% year on year to $19.95 billion. In addition, next quarter’s revenue guidance ($20.5 billion at the midpoint) was surprisingly strong and 16.3% above analysts’ consensus estimates. Its non-GAAP profit of $1.81 per share was 46.6% above analysts’ consensus estimates.",
+    "headline": "Super Micro Falls 4% Despite Blowout Quarter as Margin Worries and Data Center Backlash Weigh; Dell Sinks 8%, Hewlett Packard Enterprise Drops 6%",
+    "summary": "Super Micro's blowout earnings sent the stock tumbling instead of soaring, and the reason involves a collision of shrinking margins, one enormous customer, and a wave of ballot measures that could reshape where AI gets built.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=31ba5edccc2acb48ee4386c57938e3b466fe5ee6d3c6872f577edd37f8848da4",
-    "published": "2026-11-03T21:37:45+00:00"
+    "url": "https://finnhub.io/api/news?id=a82d068d394614852281ce7d4f741f9ad133305ab633a0733185eee4a07bfbc5",
+    "published": "2026-11-04T17:51:48+00:00"
    },
    {
-    "headline": "SMCI earnings preview: margins and guidance in focus as pre-announced revenue tops old targets",
-    "summary": "Investing.com -- Super Micro Computer (SMCI) reports fiscal Q1 2027 today, Nov 3, 2026, after the close. The headline numbers are mostly known. On Oct 20 the company pre-announced revenue of $18.5B–$19.5B, against earlier guidance of $14.5B–$15.5B. It also pre-announced gross margin of 12.0%–12.5%, against a prior 10.4%–10.8% range (Read more, Nov 3, 2026).",
+    "headline": "Micron Leads Three AI Memory Stocks With Major Upside Potential",
+    "summary": "AMD reported 45% revenue growth, while Supermicro nearly quadrupled quarterly sales.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=a5ec13014bf8e18c242e45a51904550267f060a09ea7ad5d12ad766132c470b4",
-    "published": "2026-11-03T21:22:13+00:00"
+    "url": "https://finnhub.io/api/news?id=5c89faac609d994b2037855473451e583bae14f62ec0ea2885df313875f251bc",
+    "published": "2026-11-04T17:29:01+00:00"
    },
    {
-    "headline": "Super Micro: Fiscal Q1 Earnings Snapshot",
-    "summary": "(AP) — Super Micro Computer Inc. (SMCI) on Tuesday reported fiscal first-quarter profit of $1.",
+    "headline": "Does The Move In Hewlett Packard Enterprise Stock Change Anything?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=bd1794c8a2e7667be063f6e8c37bb5b035d093daf55c94dc1aab19280d369b56",
-    "published": "2026-11-03T21:19:54+00:00"
+    "url": "https://finnhub.io/api/news?id=df9509994e7a60edb988460e112a78321413fa90bd7e3ba2aeb8501f65c92573",
+    "published": "2026-11-04T17:27:36+00:00"
    },
    {
-    "headline": "Super Micro Reports Strong Earnings Beat. The Stock Pops.",
-    "summary": "Super Micro Computer reported better-than-expected first-quarter earnings and revenue.",
+    "headline": "SMCI Stock Near 3-Month Low: Super Micro’s Earnings Beat Fails To Ease Analyst Concerns Over Margins",
+    "summary": "Super Micro raised its full-year forecast, but analysts have flagged its reliance on one buyer and thinner profit margins.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=4e62d6a7271f33c03510a0657c18945fdf35fe24c574c9cdf64ecf4213e27879",
-    "published": "2026-11-03T21:14:00+00:00"
+    "url": "https://finnhub.io/api/news?id=6bd4583e749c7f5793fd4343eed6c22b477f9d7b48dd501480101e0b6c0b030b",
+    "published": "2026-11-04T17:15:36+00:00"
    },
    {
-    "headline": "Super Micro Computer (SMCI) Stock Dropped, So What Is Driving Attention Now?",
-    "summary": "Super Micro Computer (SMCI) just added the NVIDIA Vera CPU rack to its Data Center Building Block Solutions portfolio, a product aimed at agentic AI factories that need dense, liquid cooled CPU capacity alongside high end GPUs. Super Micro Computer’s share price has retreated sharply in recent weeks, with a 1 month share price return down 30.3% and a 1 day move lower by 7.6%. This follows a very large 5 year total shareholder return, which points to strong long term momentum that has recently...",
+    "headline": "Super Micro's Revenue Soars 298%. One Number Raises Questions",
+    "summary": "The AI server maker reported a sharp increase in revenue and earnings, supported by large-scale data-center deployments.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=733bc81075f62786cfd193532a387e7281269f826f38957f02cf79f9a6588ebc",
-    "published": "2026-11-03T21:10:40+00:00"
+    "url": "https://finnhub.io/api/news?id=79d24e798582e197e4132d70edcb3920cbde3268388af82c3da4405485ded255",
+    "published": "2026-11-04T17:04:44+00:00"
    },
    {
-    "headline": "Supermicro Announces First Quarter of Fiscal Year 2027 Financial Results",
-    "summary": "SAN JOSE, Calif., November 03, 2026--Super Micro Computer, Inc. (NASDAQ: SMCI) (\"Supermicro\" or the \"Company\"), an AI, Enterprise, Storage, and 5G/Edge IT Total Solution Provider, featuring Data Center Building Block Solutions® (DCBBS), today announced unaudited financial results for its first quarter ended September 30, 2026.",
+    "headline": "Super Micro (SMCI) Q1 2027 Earnings Call Transcript",
+    "summary": "Revenue hit a record, but one customer drove nearly half of sales.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=700bae171c49d5a9fb48c1aab3c3355ebb9db665d896ae17f8f00fef9c367968",
-    "published": "2026-11-03T21:05:00+00:00"
-   },
-   {
-    "headline": "Celestica Lost 36% in a Month. CIBC Sees 101% Upside From Here",
-    "summary": "Key TakeawaysCelestica stock is down 36% in the past month, even though it beat its own third-quarter guidance and forecast $40. 0 billion of revenue for 2027.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=c87978ee82c7304f29a36103cb7824ec981e3bce609733f93719c67459a0945f",
-    "published": "2026-11-03T21:00:31+00:00"
+    "url": "https://finnhub.io/api/news?id=1577113f2b00f80dbacc014e5e7dea4a27566292bfb0dc28867104a936d528dc",
+    "published": "2026-11-04T15:45:00+00:00"
    }
   ],
   "SOUN": [
+   {
+    "headline": "SoundHound AI Expands Partnership with Ultraviolette to Bring Voice AI Across Global Electric Motorcycle Lineup",
+    "summary": "SoundHound AI, Inc. (NASDAQ:SOUN) announced a major expansion of its commercial partnership with electric motorcycle manufacturer Ultraviolette Automotive, extending the deployment of its voice-powered artificial intelligence technology across the company’s global electric vehicle lineup.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=2b8fa6de0259bae8233623411f3af14b9ce2602cae47be2f1d655921c410f15b",
+    "published": "2026-11-04T15:39:41+00:00"
+   },
+   {
+    "headline": "3 Penny Stocks With Revenue Growth Up To 44%",
+    "summary": "Elon Musk’s plan to spend about $100b building a new US wireless network has investors rethinking where the next wave of growth could come from. When giants commit that kind of capital, strong smaller companies trading under US$5 can sometimes offer exposure with less crowded entry points. This article highlights three financially solid low-priced stocks that pass a strict balance sheet and cash flow check. The three stocks highlighted here offer a compelling starting point if you want...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=df5a5c2edf4478b9c096c4ac94d844fa595cb764e430fcd35b6783f0b9dbd807",
+    "published": "2026-11-04T15:12:24+00:00"
+   },
+   {
+    "headline": "IonQ, SoundHound and Unity Earnings Previews: What Investors Should Watch",
+    "summary": "IonQ, SoundHound, and Unity all head into Thursday's earnings after brutal selloffs, yet each stock carries a completely different set of make-or-break questions that could send shares soaring or accelerate the pain.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9eefa9ecafd083076e932f3c1ea76629a28a2879717863f34bf5fce626f8c18a",
+    "published": "2026-11-04T14:48:28+00:00"
+   },
+   {
+    "headline": "SoundHound AI and Ultraviolette Announce Major Expansion of Agentic Voice AI Across Global Electric Vehicle Lineup",
+    "summary": "As Ultraviolette exhibits at EICMA 2026 in Milan, expanded partnership scales in-helmet voice control and advances agentic AI roadmap with OASYS SANTA CLARA, Calif., Nov. 04, 2026 (GLOBE NEWSWIRE) -- SoundHound AI, Inc. (NASDAQ: SOUN), a global leader in voice and agentic AI, and Ultraviolette Automotive, an innovator in future-ready electric mobility platforms and battery technology, today announced a major commercial expansion, with SoundHound set to power Ultraviolette’s voice AI co-pilot. Th",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=0bcd07cf19f79b20da4b3c0e474f26861b948184c3200f406249d3397e2a95f0",
+    "published": "2026-11-04T14:05:00+00:00"
+   },
+   {
+    "headline": "SoundHound AI Signed a Deal With LG. Thursday’s Report Has to Show Its Losses Are Shrinking",
+    "summary": "Key TakeawaysSoundHound AI reports third-quarter results after the close on Thursday, two days after announcing a deal to bring restaurant ordering to about 20 million LG smart TVs in the US. Second-quarter revenue grew 45%, but the operating loss excluding earnout swings barely changed, so this report has to show the losses and cash burn shrinking in dollars.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=4061ed4f1d1b54facedc580a6a2d1d8ebb216e1a16fce4be9753d365f00e678a",
+    "published": "2026-11-04T13:48:29+00:00"
+   },
+   {
+    "headline": "SoundHound AI To Power Ultraviolette Automotive's Voice AI Co-Pilot",
+    "summary": "SoundHound AI, Inc. (NASDAQ: SOUN), a global leader in voice and agentic AI, and Ultraviolette Automotive, an innovator in future-ready electric mobility platforms and battery technology, today announced a major",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=03f46903c3667ca978c02fefbb4d962c41486b8b9338fa4da701f10af5d9d263",
+    "published": "2026-11-04T10:14:13+00:00"
+   },
    {
     "headline": "SoundHound AI and LG Partner to Expand Commerce Opportunities for Merchants on LG Smart TVs",
     "summary": "Partnership opens a new commerce channel, starting with approximately 20 million LG Smart TVs in the U.S.; restaurants to be the first category of focusSANTA CLARA, Calif., Nov. 03, 2026 (GLOBE NEWSWIRE) -- SoundHound AI, Inc. (Nasdaq: SOUN), a global leader in voice and agentic AI, today announced a strategic partnership with LG Electronics to expand restaurant and merchant participation on LG Smart TVs in the United States. The collaboration lays the groundwork for a new commerce channel in th",
@@ -742,6 +993,13 @@
     "published": "2026-11-03T12:53:00+00:00"
    },
    {
+    "headline": "SoundHound AI Collaborates With LG Electronics To Expand Restaurant, Merchant Participation On LG Smart TVs In U.S.",
+    "summary": "SoundHound AI, Inc. (Nasdaq: SOUN), a global leader in voice and agentic AI, today announced a strategic partnership with LG Electronics to expand restaurant and merchant participation on LG Smart TVs in the United",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=c06ea33bbe46153c58ae3621b19b254e915f8794cafac15d0748c86e4ad7cf72",
+    "published": "2026-11-03T10:09:04+00:00"
+   },
+   {
     "headline": "Telos Corporation (TLS) Expected to Beat Earnings Estimates: Should You Buy?",
     "summary": "Telos (TLS) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.",
     "source": "Yahoo",
@@ -754,120 +1012,6 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=883d132d68010062222923d842b17370cc112b83a6f0e825d02ca20760ec21d3",
     "published": "2026-11-02T13:08:23+00:00"
-   },
-   {
-    "headline": "3 AI Stocks To Watch In November 2026",
-    "summary": "Business investment is tilting toward artificial intelligence, and that shift is not just a story about mega caps. As companies pour money into automation and data tools to control costs, smaller AI specialists can end up supplying the picks and shovels for this new productivity push. This article walks through three small cap AI stocks from our US screener and explains where each might fit in a long term portfolio. The three stocks below are a small sample. The full AI small cap screen...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=458bc2c349b7eec4fb77fba50ad26446b2ce39282208414eb3c2795e1422f406",
-    "published": "2026-11-01T21:11:48+00:00"
-   }
-  ],
-  "UPST": [
-   {
-    "headline": "3 Key Takeaways From Upstart's Latest Report",
-    "summary": "Investors shrugged off Upstart's earnings, but the stock could be a big winner in 2027.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=d04046ad277011fd7e40e9b74c99553605078d6b09a7aa97fb0977620097a80c",
-    "published": "2026-11-03T23:20:02+00:00"
-   },
-   {
-    "headline": "Upstart Holdings Inc (UPST) (Q3 2026) Earnings Call Highlights: Record Contribution Profit of ...",
-    "summary": "Upstart Holdings Inc (UPST) posted record contribution profit and 34% revenue growth in Q3 2026, but macro headwinds and balance sheet pressure prompted lowered full-year guidance.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=c89182af2bedb86b2cb3b092b180a171856be6f7f9a2e0c316d640d4ac2f693a",
-    "published": "2026-11-03T21:04:27+00:00"
-   },
-   {
-    "headline": "BTIG’s $40 Target Says Upstart’s Selloff Went Too Far",
-    "summary": "Key TakeawaysUpstart stock is 58% below its January high, and BTIG kept its Buy rating on Nov. 3 while cutting its price target to $40 from $43, 89% above the share price.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=7e7ad9904745d1cacbe0dcd15a93acc23f280e26a6d09395f01e780703e5bc68",
-    "published": "2026-11-03T20:08:43+00:00"
-   },
-   {
-    "headline": "What Upstart (UPST) Said on Its Q3 Earnings Call",
-    "summary": "Upstart (NASDAQ:UPST) reported third-quarter results marked by record contribution profit, accelerating fee revenue and a shift to positive contribution margins in its secured lending products, while worsening consumer-credit conditions and higher interest rates prompted the company to reduce its fu",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=130a0ae54cf53497391f410a18bda0936d6188e146c1ad95644be12b468bee7c",
-    "published": "2026-11-03T19:14:38+00:00"
-   },
-   {
-    "headline": "Upstart Reports After Pagaya Raised Its 2026 View. Here’s What the November 3 Quarter Has to Prove",
-    "summary": "Key TakeawaysPagaya Technologies posted record third-quarter revenue of $390. 5 million and raised its 2026 GAAP net income outlook to $162-$182 million.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=58ecf347c16e0d51e74ca7ada1009c478c0183a43a2f485a6a02adaed858df23",
-    "published": "2026-11-03T18:12:33+00:00"
-   },
-   {
-    "headline": "Upstart Holdings, Inc. (UPST) Q3 2026 Earnings Call Transcript",
-    "summary": "Upstart Holdings, Inc. (UPST) Q3 2026 Earnings Call November 3, 2026 8:00 AM ESTCompany ParticipantsSonya Banerjee - Head of Investor RelationsPaul Gu - CEO...",
-    "source": "SeekingAlpha",
-    "url": "https://finnhub.io/api/news?id=72a400e6282386a5b8f1080e6675869950890800d901643f7fb3a47665446eba",
-    "published": "2026-11-03T17:55:56+00:00"
-   },
-   {
-    "headline": "Upstart Beats Expectations in a Challenging Macro Environment. What It Means for Investors",
-    "summary": "Upstart stock fluctuated after results were released. Here's what the latest quarter means.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=da2ba89f24bbf8875eab120da9c1477b0b34ae9e33d89844644ee21c80ba06d8",
-    "published": "2026-11-03T13:59:51+00:00"
-   },
-   {
-    "headline": "Upstart Holdings (NASDAQ:UPST) Q3 In Line but Full-Year Revenue Outlook Lags Consensus",
-    "summary": "Upstart Q3 2026 results met revenue estimates and slightly beat EPS, but its full-year revenue outlook missed consensus amid macro pressure.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=5d1f676c3a9ddbc592275bcf6a4871d9b9310b1b39b31695807f98e9f47bbc0a",
-    "published": "2026-11-03T13:46:10+00:00"
-   },
-   {
-    "headline": "Compared to Estimates, Upstart (UPST) Q3 Earnings: A Look at Key Metrics",
-    "summary": "The headline numbers for Upstart (UPST) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=36bafd9cd513166cd8e75f2b2e9cea7050163142a645b37fae10afe46de6736a",
-    "published": "2026-11-03T13:30:06+00:00"
-   },
-   {
-    "headline": "Upstart (NASDAQ:UPST) posts better-than-expected sales in Q3 2026, stock soars",
-    "summary": "Artificial intelligence-powered lending platform Upstart (NASDAQ:UPST) reported revenue ahead of Wall Street’s expectations in Q3 2026, as revenue rose 33.7% year on year to $370.5 million. On the other hand, the company’s full-year revenue guidance of $1.35 billion at the midpoint came in 4.8% below analysts’ consensus estimates. Its GAAP profit of $0.33 per share was 44.1% above analysts’ consensus estimates.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=9affa5b8c1bda4c0546851b91953fe222cb33e424be5bdb634ff0c0ae22ad179",
-    "published": "2026-11-03T12:52:11+00:00"
-   },
-   {
-    "headline": "Upstart Holdings, Inc. (UPST) Surpasses Q3 Earnings and Revenue Estimates",
-    "summary": "Upstart (UPST) delivered earnings and revenue surprises of +10.00% and +1.62%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=740b6b127ca6e76bccef0e4a29d371fea867454029037dbc7b20968607d1170c",
-    "published": "2026-11-03T12:40:04+00:00"
-   },
-   {
-    "headline": "Upstart Publishes October 2026 Originations and Latest UMI",
-    "summary": "BURLINGAME, Calif., November 03, 2026--Upstart Publishes October 2026 Originations and Latest UMI",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=2ff7b5c98ee2422be8c32c1719b738ba90c501acefab35b230b7beffbd9f3791",
-    "published": "2026-11-03T12:02:00+00:00"
-   },
-   {
-    "headline": "Upstart Announces Third Quarter 2026 Results",
-    "summary": "BURLINGAME, Calif., November 03, 2026--Upstart Announces Third Quarter 2026 Results",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=02419391c515c32990ee9b0efe451f616f30c8fc78bd88048920c221cbbb7f9a",
-    "published": "2026-11-03T12:00:00+00:00"
-   },
-   {
-    "headline": "Upstart Shares Are Retreating Tuesday: What's Happening? (CORRECTED)",
-    "summary": "Upstart Holdings shares are trading lower Tuesday after the company reported third-quarter results and lowered its 2026 revenue guidance.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=fc15e302e2589332e93fa196014857da965f207060f91b6e9a96c89092de8dfa",
-    "published": "2026-11-03T10:48:42+00:00"
-   },
-   {
-    "headline": "Upstart Hldgs Q3 2026 Earnings Call Transcript",
-    "summary": "Upstart Hldgs (NASDAQ:UPST) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.",
-    "source": "Benzinga",
-    "url": "https://finnhub.io/api/news?id=f4a5d03e5c1e64e0223eedd1aae56560c7d85c8d6c1fa17989eccfcf67af7465",
-    "published": "2026-11-03T10:43:35+00:00"
    }
   ],
   "ZETA": [
