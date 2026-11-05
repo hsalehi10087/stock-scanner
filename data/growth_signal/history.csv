@@ -124,3 +124,7 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-03,tw,2027.TW,TA CHEN STAINLESS PIPE CORP,48.95,63.15,trend|pullback,صورت مالی,2,0.664,روند صعودی,1.0
 2026-11-03,tw,1303.TW,NAN YA PLASTIC,271.0,63.15,trend|longpat,صورت مالی,3,0.091,سرووشانه معکوس (شکست),3.0
 2026-11-04,us,ROKU,"Roku, Inc.",160.36,754.35,breakout|trend|longpat,صورت مالی|کیفیت رشد,5,0.505,شکست سقف ۵۲ هفته,1.7
+2026-11-05,us,THC,Tenet Health,292.25,766.81,breakout|trend|longpat,بافت|کیفیت رشد,4,0.435,شکست سقف ۵۲ هفته,1.7
+2026-11-05,cn,603129.SS,ZHEJIANG CF MOTO POWER CO LTD,320.63,21.77,trend|longpat,صورت مالی|بافت|کیفیت رشد,5,0.033,شکست سقف ۵۲ هفته,1.7
+2026-11-05,in,NAVINFLUOR.NS,Navin Fluorine International Ltd.,8845.0,24536.5996,breakout|trend|longpat,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد,5,0.15,شکست سقف ۵۲ هفته,1.7
+2026-11-05,in,AUROPHARMA.NS,Aurobindo Pharma Ltd.,1785.0,24536.5996,breakout|trend|longpat,صورت مالی|کیفیت رشد,4,0.099,کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته,3.0

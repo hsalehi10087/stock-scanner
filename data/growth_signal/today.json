@@ -1,28 +1,65 @@
 {
- "date": "2026-11-04",
+ "date": "2026-11-05",
  "markets": {
   "us": {
-   "data_date": "2026-11-03",
+   "data_date": "2026-11-04",
    "scored": 1482,
-   "technical": 138,
-   "checked": 20,
+   "technical": 241,
+   "checked": 16,
    "signals": [
     {
-     "ticker": "ROKU",
-     "name": "Roku, Inc.",
-     "price": 160.36,
+     "ticker": "THC",
+     "name": "Tenet Health",
+     "price": 292.25,
      "setups": [
       "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.505,
+     "tech_rank": 0.435,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 4,
+    "rsi": 5,
+    "earn": 0,
+    "fund": 1
+   }
+  },
+  "cn": {
+   "data_date": "2026-11-05",
+   "scored": 1498,
+   "technical": 18,
+   "checked": 12,
+   "signals": [
+    {
+     "ticker": "603129.SS",
+     "name": "ZHEJIANG CF MOTO POWER CO LTD",
+     "price": 320.63,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.033,
      "fundamentals": [
       "صورت مالی",
+      "بافت",
       "کیفیت رشد"
      ],
      "quality": "⭐۵/۵",
-     "profit_streak": 4,
+     "profit_streak": 3,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": true,
      "chart": "شکست سقف ۵۲ هفته",
@@ -32,158 +69,188 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 3,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 4
-   }
-  },
-  "cn": {
-   "data_date": "2026-11-04",
-   "scored": 1498,
-   "technical": 14,
-   "checked": 9,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 5,
+    "ext": 6,
     "rsi": 0,
     "earn": 0,
-    "fund": 2
+    "fund": 3
    }
   },
   "in": {
-   "data_date": "2026-11-04",
+   "data_date": "2026-11-05",
    "scored": 706,
-   "technical": 58,
-   "checked": 15,
-   "signals": [],
+   "technical": 56,
+   "checked": 16,
+   "signals": [
+    {
+     "ticker": "NAVINFLUOR.NS",
+     "name": "Navin Fluorine International Ltd.",
+     "price": 8845.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.15,
+     "fundamentals": [
+      "صورت مالی",
+      "کن‌اسلیم",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "AUROPHARMA.NS",
+     "name": "Aurobindo Pharma Ltd.",
+     "price": 1785.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.099,
+     "fundamentals": [
+      "صورت مالی",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    }
+   ],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 2,
+    "ext": 1,
     "rsi": 2,
-    "earn": 1,
+    "earn": 0,
     "fund": 4
    }
   },
   "jp": {
-   "data_date": "2026-11-04",
+   "data_date": "2026-11-05",
    "scored": 1499,
-   "technical": 82,
-   "checked": 19,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 6,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 0
-   }
-  },
-  "tw": {
-   "data_date": "2026-11-04",
-   "scored": 1200,
-   "technical": 34,
-   "checked": 18,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 8,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 5
-   }
-  },
-  "kr": {
-   "data_date": "2026-11-04",
-   "scored": 1198,
-   "technical": 20,
+   "technical": 194,
    "checked": 14,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 5,
+    "rsi": 7,
+    "earn": 0,
+    "fund": 2
+   }
+  },
+  "tw": {
+   "data_date": "2026-11-05",
+   "scored": 1198,
+   "technical": 15,
+   "checked": 8,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 4,
     "rsi": 0,
+    "earn": 0,
+    "fund": 3
+   }
+  },
+  "kr": {
+   "data_date": "2026-11-05",
+   "scored": 1197,
+   "technical": 19,
+   "checked": 14,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 4,
+    "rsi": 1,
     "earn": 0,
     "fund": 4
    }
   },
   "hk": {
-   "data_date": "2026-11-04",
-   "scored": 996,
-   "technical": 36,
-   "checked": 24,
+   "data_date": "2026-11-05",
+   "scored": 994,
+   "technical": 45,
+   "checked": 22,
    "signals": [],
-   "market_up50": false,
-   "cap": 2,
+   "market_up50": true,
+   "cap": 8,
    "dropped": {
-    "ext": 5,
+    "ext": 7,
     "rsi": 1,
     "earn": 0,
     "fund": 1
    }
   },
   "gb": {
-   "data_date": "2026-11-04",
+   "data_date": "2026-11-05",
    "scored": 346,
-   "technical": 54,
-   "checked": 23,
+   "technical": 55,
+   "checked": 22,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 2,
+    "ext": 3,
     "rsi": 0,
     "earn": 0,
     "fund": 0
    }
   },
   "de": {
-   "data_date": "2026-11-04",
+   "data_date": "2026-11-05",
    "scored": 86,
-   "technical": 12,
-   "checked": 5,
+   "technical": 15,
+   "checked": 6,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
     "ext": 0,
-    "rsi": 2,
+    "rsi": 3,
     "earn": 0,
-    "fund": 0
+    "fund": 1
    }
   },
   "ca": {
-   "data_date": "2026-11-03",
-   "scored": 574,
-   "technical": 51,
-   "checked": 24,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 1,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 4
-   }
-  },
-  "au": {
    "data_date": "2026-11-04",
-   "scored": 461,
-   "technical": 23,
-   "checked": 21,
+   "scored": 573,
+   "technical": 56,
+   "checked": 24,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 0,
-    "rsi": 2,
+    "ext": 2,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 8
+   }
+  },
+  "au": {
+   "data_date": "2026-11-05",
+   "scored": 461,
+   "technical": 36,
+   "checked": 29,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 1,
+    "rsi": 0,
     "earn": 0,
     "fund": 0
    }
