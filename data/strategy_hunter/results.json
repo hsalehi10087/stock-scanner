@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T21:24:00+00:00",
+ "updated": "2026-11-05T13:56:26+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -73,6 +73,22 @@
    "reason_not_testable": "روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم",
    "verdict": "غیرقابل آزمون: روی داده‌ی ۱ و ۱۵ دقیقه‌ای و محدوده‌ی ۱۵ دقیقه‌ی اول روز است؛ داده‌ی دقیقه‌ای چندساله نداریم"
   },
+  "108e63208a-iwn-rsi": {
+   "name": "IWN RSI strategy",
+   "name_fa": "روش RSI روی IWN",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/iwn-rsi-trading-strategy/",
+   "claim": "«روش RSI روی IWN با قانون‌های روشن ورود و خروج، ۴۲۷ معامله‌ی تاریخی و ضریب سود ۱٫۶۳»",
+   "claimed_return": "profit factor 1.63, 427 trades",
+   "asset_class": "etf",
+   "symbols": [
+    "IWN"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود (صفحه‌ی تأیید ربات)؛ دوره و آستانه‌های RSI و قانون خروج معلوم نیست",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود (صفحه‌ی تأیید ربات)؛ دوره و آستانه‌های RSI و قانون خروج معلوم نیست"
+  },
   "11070fcb83-rust-hft-engine": {
    "name": "Rust HFT engine",
    "name_fa": "موتور معامله‌ی فرکانس بالا با Rust",
@@ -114,6 +130,22 @@
    "status": "not_testable",
    "reason_not_testable": "قانون‌ها را نویسنده منتشر نکرده و اجرا روی داده‌ی ۱ دقیقه‌ای است",
    "verdict": "غیرقابل آزمون: قانون‌ها را نویسنده منتشر نکرده و اجرا روی داده‌ی ۱ دقیقه‌ای است"
+  },
+  "15486c454d-btc-nine-model-trend": {
+   "name": "Nine-model Bitcoin trend following",
+   "name_fa": "روندگیری نُه‌مدلی روی بیت‌کوین",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@ayratmurtazin/i-tested-a-nine-model-bitcoin-trend-strategy-it-cut-the-worst-crash-from-83-to-20-2033a2291abd",
+   "claim": "«یک روش روندگیری نُه‌مدلی (برگرفته از مقاله‌ی Swiss Finance Institute) را روی بیت‌کوین و اتریوم ساختم؛ بدترین ریزش را از ‎−83%‎ به ‎−20%‎ کم کرد»",
+   "claimed_return": "max drawdown -20% vs -83%",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ دوره‌های نُه مدل و روش وزن‌دهی معلوم نیست",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ دوره‌های نُه مدل و روش وزن‌دهی معلوم نیست"
   },
   "18da1bc880-spy-stochastic-grid-search": {
    "name": "SPY stochastic (grid search)",
@@ -158,6 +190,22 @@
    "status": "not_testable",
    "reason_not_testable": "ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: ترکیب ۵۲ استراتژی منتشرشده‌ی مختلف که قانون هیچ‌کدام در متن نیامده؛ اطلاعات کافی نیست"
+  },
+  "20c65a18d4-xauusd-1min-scalper": {
+   "name": "XAUUSD 1-minute scalper",
+   "name_fa": "اسکالپر یک‌دقیقه‌ای طلا",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xngx81/xauusd_1min_tf_scalper_1k_to_197m_in_10_month/",
+   "claim": "«اسکالپر یک‌دقیقه‌ای XAUUSD؛ بک‌تست ۱ ژانویه تا ۳۱ اکتبر ۲۰۲۶ با داده‌ی تیک: از ۱٬۰۰۰ دلار به سود خالص ۱٬۹۷۱٬۴۴۱ دلار، ۱۴٬۲۲۹ معامله، ۶۴٪ برد، ضریب سود ۱٫۵۳»",
+   "claimed_return": "$1k → $1.97M in 10 months, 64% win rate",
+   "asset_class": "forex",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "کندل یک‌دقیقه‌ای و داده‌ی تیک؛ قانون‌های ورود و خروج هم منتشر نشده",
+   "verdict": "غیرقابل آزمون: کندل یک‌دقیقه‌ای و داده‌ی تیک؛ قانون‌های ورود و خروج هم منتشر نشده"
   },
   "251f3276af-diamond-geezer-1min-bias": {
    "name": "Diamond Geezer 1-minute traffic lights",
@@ -216,16 +264,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.11,
+    "cagr": -5.16,
     "sharpe": -0.12,
-    "max_dd": -83.22,
-    "total": -68.54
+    "max_dd": -83.41,
+    "total": -68.9
    },
    "in_sample": {
-    "cagr": -8.64,
-    "sharpe": -0.26,
-    "max_dd": -78.62,
-    "total": -75.18
+    "cagr": -8.7,
+    "sharpe": -0.27,
+    "max_dd": -78.86,
+    "total": -75.46
    },
    "out_sample": {
     "cagr": 3.63,
@@ -254,6 +302,22 @@
    "forward_days": 8,
    "forward_usd": 932.19,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
+  "28fe8c88b5-sp500-10-strongest": {
+   "name": "Buy 10 strongest S&P 500 stocks",
+   "name_fa": "خرید ۱۰ سهم قوی‌تر S&P 500",
+   "source": "quantifiedstrategies",
+   "source_url": "https://www.quantifiedstrategies.com/does-buying-the-10-strongest-sp-500-stocks-work/",
+   "claim": "«آیا خرید ۱۰ سهم قوی‌تر S&P 500 جواب می‌دهد؟ (بک‌تست – ۲۲٪)»",
+   "claimed_return": "22%",
+   "asset_class": "stock",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید"
   },
   "32742da0fc-nasdaq100-stock-momentum": {
    "name": "Nasdaq-100 stock momentum",
@@ -344,28 +408,28 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.21,
+    "cagr": 3.16,
     "sharpe": 0.63,
     "max_dd": -13.27,
-    "total": 189.92
+    "total": 185.58
    },
    "in_sample": {
-    "cagr": 3.76,
-    "sharpe": 0.75,
+    "cagr": 3.7,
+    "sharpe": 0.74,
     "max_dd": -13.27,
-    "total": 139.3
+    "total": 135.71
    },
    "out_sample": {
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.15
+    "total": 21.16
    },
    "buyhold_full": {
     "cagr": 10.79,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3065.46
+    "total": 3065.42
    },
    "buyhold_out_sample": {
     "cagr": 15.32,
@@ -373,9 +437,9 @@
     "max_dd": -33.72,
     "total": 323.23
    },
-   "trades": 92,
-   "win_rate": 81.5,
-   "avg_trade_pct": 1.19,
+   "trades": 91,
+   "win_rate": 81.3,
+   "avg_trade_pct": 1.18,
    "exposure": 0.06,
    "period": "1993-02-01 → 2026-11-04",
    "oos_start": "2016-09-14",
@@ -485,25 +549,25 @@
     "cagr": 9.36,
     "sharpe": 0.79,
     "max_dd": -21.98,
-    "total": 1942.07
+    "total": 1942.04
    },
    "in_sample": {
     "cagr": 8.51,
     "sharpe": 0.74,
     "max_dd": -19.72,
-    "total": 587.91
+    "total": 587.92
    },
    "out_sample": {
     "cagr": 11.35,
     "sharpe": 0.92,
     "max_dd": -21.98,
-    "total": 196.74
+    "total": 196.73
    },
    "buyhold_full": {
     "cagr": 10.79,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3065.46
+    "total": 3065.42
    },
    "buyhold_out_sample": {
     "cagr": 15.32,
@@ -518,7 +582,7 @@
    "period": "1993-02-01 → 2026-11-04",
    "oos_start": "2016-09-14",
    "forward_days": 2,
-   "forward_usd": 1019.57,
+   "forward_usd": 1019.56,
    "verdict": "قبول"
   },
   "43a8d23608-mnq-5min-box-breakout": {
@@ -568,24 +632,24 @@
     "total": 33.79
    },
    "buyhold_full": {
-    "cagr": 8.0,
-    "sharpe": 0.53,
+    "cagr": 8.09,
+    "sharpe": 0.54,
     "max_dd": -44.36,
-    "total": 264.67
+    "total": 269.71
    },
    "buyhold_out_sample": {
-    "cagr": 18.01,
-    "sharpe": 0.96,
+    "cagr": 18.31,
+    "sharpe": 0.97,
     "max_dd": -26.69,
-    "total": 130.5
+    "total": 133.68
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-04",
+   "period": "2010-01-04 → 2026-11-05",
    "oos_start": "2021-10-18",
-   "forward_days": 9,
+   "forward_days": 10,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -649,7 +713,7 @@
     "cagr": 8.06,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1267.53
+    "total": 1267.52
    },
    "in_sample": {
     "cagr": 6.71,
@@ -661,13 +725,13 @@
     "cagr": 11.28,
     "sharpe": 0.93,
     "max_dd": -24.43,
-    "total": 195.05
+    "total": 195.04
    },
    "buyhold_full": {
     "cagr": 10.79,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3065.46
+    "total": 3065.42
    },
    "buyhold_out_sample": {
     "cagr": 15.32,
@@ -682,7 +746,7 @@
    "period": "1993-02-01 → 2026-11-04",
    "oos_start": "2016-09-14",
    "forward_days": 7,
-   "forward_usd": 1001.89,
+   "forward_usd": 1001.88,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -937,30 +1001,30 @@
     "total": 104.59
    },
    "out_sample": {
-    "cagr": 8.86,
+    "cagr": 8.85,
     "sharpe": 0.71,
     "max_dd": -20.59,
     "total": 25.74
    },
    "buyhold_full": {
-    "cagr": 25.18,
+    "cagr": 24.98,
     "sharpe": 0.69,
     "max_dd": -93.96,
-    "total": 653.64
+    "total": 643.63
    },
    "buyhold_out_sample": {
-    "cagr": -6.77,
+    "cagr": -7.22,
     "sharpe": 0.23,
     "max_dd": -67.61,
-    "total": -17.23
+    "total": -18.33
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-04",
+   "period": "2017-11-09 → 2026-11-05",
    "oos_start": "2024-02-24",
-   "forward_days": 0,
+   "forward_days": 1,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -982,7 +1046,7 @@
     "cagr": 9.5,
     "sharpe": 0.81,
     "max_dd": -20.16,
-    "total": 2034.74
+    "total": 2034.72
    },
    "in_sample": {
     "cagr": 8.71,
@@ -1000,7 +1064,7 @@
     "cagr": 10.79,
     "sharpe": 0.65,
     "max_dd": -55.19,
-    "total": 3065.46
+    "total": 3065.42
    },
    "buyhold_out_sample": {
     "cagr": 15.32,
@@ -1015,7 +1079,7 @@
    "period": "1993-02-01 → 2026-11-04",
    "oos_start": "2016-09-14",
    "forward_days": 5,
-   "forward_usd": 992.89,
+   "forward_usd": 992.88,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -1201,44 +1265,60 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.81,
+    "cagr": 66.79,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 84.29,
-    "sharpe": 1.44,
+    "cagr": 86.22,
+    "sharpe": 1.45,
     "max_dd": -74.38,
-    "total": 17977.13
+    "total": 19688.06
    },
    "out_sample": {
-    "cagr": 33.16,
-    "sharpe": 1.03,
+    "cagr": 32.16,
+    "sharpe": 1.0,
     "max_dd": -35.7,
-    "total": 183.9
+    "total": 176.23
    },
    "buyhold_full": {
-    "cagr": 53.02,
+    "cagr": 52.94,
     "sharpe": 0.98,
     "max_dd": -83.4,
-    "total": 17403.6
+    "total": 17320.43
    },
    "buyhold_out_sample": {
-    "cagr": 38.59,
-    "sharpe": 0.94,
+    "cagr": 37.37,
+    "sharpe": 0.92,
     "max_dd": -53.06,
-    "total": 228.4
+    "total": 218.01
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.61,
-   "period": "2014-09-17 → 2026-11-04",
-   "oos_start": "2023-03-16",
-   "forward_days": 10,
+   "period": "2014-09-17 → 2026-11-05",
+   "oos_start": "2023-03-17",
+   "forward_days": 11,
    "forward_usd": 1000.0,
    "verdict": "قبول"
+  },
+  "bb4cbcfcaa-metapro-scalp-brazil-mini-index": {
+   "name": "MetaPro Scalp V2 ML (Brazil mini index)",
+   "name_fa": "اسکالپ یادگیری ماشین روی مینی‌شاخص برزیل",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://mludemann.medium.com/ai-machine-learning-mt5-with-over-90-win-rate-on-the-brazilian-mini-index-49f5ce614be5",
+   "claim": "«MetaPro Scalp V2 در ۳۴۶ معامله به نرخ برد ۹۱٫۳٪ رسید و در شبیه‌سازی تیک‌به‌تیک ۹۷٪»",
+   "claimed_return": "91.3% win rate",
+   "asset_class": "stock",
+   "symbols": [
+    "EWZ"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "اسکالپ با مدل یادگیری ماشین روی داده‌ی تیک در MT5؛ قانون‌ها منتشر نشده و داده‌ی تاریخی مینی‌شاخص برزیل در Yahoo نیست",
+   "verdict": "غیرقابل آزمون: اسکالپ با مدل یادگیری ماشین روی داده‌ی تیک در MT5؛ قانون‌ها منتشر نشده و داده‌ی تاریخی مینی‌شاخص برزیل در Yahoo نیست"
   },
   "bd9d38fbb8-nq-orb-fvg-irl-erl": {
    "name": "15-min ORB + FVG and IRL to ERL",
@@ -1471,6 +1551,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است"
+  },
+  "e76dbbf01c-profitto-invest-live": {
+   "name": "Profitto Invest crypto live account",
+   "name_fa": "حساب زنده‌ی کریپتوی Profitto Invest",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/ai_trading/comments/1xlufj3/4_months_live_17272_october_exposed_a_problem_our/",
+   "claim": "«حساب زنده‌ی BingX از ۴ ژوئیه ۲۰۲۶ با ۴۰۰ USDT به ‎+172.72%‎ رسید (اکتبر ‎+30.51%‎ در برابر ‎−7.79%‎ بیت‌کوین)؛ تقسیم حد سود ۵/۵/۹۰ در ۱۲۰ روز ‎+147.72%‎ با بیشترین افت ۳۰٫۷۸٪»",
+   "claimed_return": "+172.72% in 4 months live",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-05",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌های ورود و انتخاب ارز منتشر نشده؛ فقط نتیجه و تقسیم حد سود گفته شده",
+   "verdict": "غیرقابل آزمون: قانون‌های ورود و انتخاب ارز منتشر نشده؛ فقط نتیجه و تقسیم حد سود گفته شده"
   },
   "ea05e61257-spy-candle-dna-rsi-scalp": {
    "name": "SPY candle-DNA + RSI scalp bot",
