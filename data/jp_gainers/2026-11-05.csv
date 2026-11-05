@@ -1,0 +1,10 @@
+ticker,name,price_chg,ni_growth,ni_cur_m,ni_prev_m,date,qs,qs_known,qs_label,qs_flags
+5857,"ARE Holdings,Inc.",22.8013029315961,137.04927057528212,8612.0,3633.0,2026-11-05,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+7203,TOYOTA MOTOR CORPORATION,16.677675033025107,75.55747047881665,1477044.0,841345.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+7211,MITSUBISHI MOTORS CORPORATION,13.343237413516906,91.19241192411924,1411.0,738.0,2026-11-05,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+3150,"grems,Inc.",13.189655172413794,10.665874265527977,1333.277,1204.777,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+5101,"The Yokohama Rubber Company,Limited",11.605356318300753,114.22065901517956,57861.0,27010.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+2222,"Kotobuki Spirits Co.,Ltd.",10.981481481481481,18.58445505861919,2731.0,2303.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+9766,KONAMI GROUP CORPORATION,10.947368421052639,75.08629746360498,46664.0,26652.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+4483,JMDC Inc.,10.93525179856114,17.080745341614907,1131.0,966.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+4543,TERUMO CORPORATION,10.864978902953592,68.31011160767632,70426.0,41843.0,2026-11-05,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
