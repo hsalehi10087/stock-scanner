@@ -1,0 +1,12 @@
+id: 20c65a18d4-xauusd-1min-scalper
+name: XAUUSD 1-minute scalper
+name_fa: اسکالپر یک‌دقیقه‌ای طلا
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xngx81/xauusd_1min_tf_scalper_1k_to_197m_in_10_month/
+claim: "«اسکالپر یک‌دقیقه‌ای XAUUSD؛ بک‌تست ۱ ژانویه تا ۳۱ اکتبر ۲۰۲۶ با داده‌ی تیک: از ۱٬۰۰۰ دلار به سود خالص ۱٬۹۷۱٬۴۴۱ دلار، ۱۴٬۲۲۹ معامله، ۶۴٪ برد، ضریب سود ۱٫۵۳»"
+claimed_return: "$1k → $1.97M in 10 months, 64% win rate"
+added: 2026-11-05
+status: not_testable
+asset_class: forex
+symbols: [GC=F]
+reason_not_testable: "کندل یک‌دقیقه‌ای و داده‌ی تیک؛ قانون‌های ورود و خروج هم منتشر نشده"

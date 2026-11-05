@@ -1,0 +1,12 @@
+id: 108e63208a-iwn-rsi
+name: IWN RSI strategy
+name_fa: روش RSI روی IWN
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/iwn-rsi-trading-strategy/
+claim: "«روش RSI روی IWN با قانون‌های روشن ورود و خروج، ۴۲۷ معامله‌ی تاریخی و ضریب سود ۱٫۶۳»"
+claimed_return: "profit factor 1.63, 427 trades"
+added: 2026-11-05
+status: not_testable
+asset_class: etf
+symbols: [IWN]
+reason_not_testable: "متن کامل مقاله در دسترس نبود (صفحه‌ی تأیید ربات)؛ دوره و آستانه‌های RSI و قانون خروج معلوم نیست"

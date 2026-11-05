@@ -1,0 +1,12 @@
+id: 28fe8c88b5-sp500-10-strongest
+name: Buy 10 strongest S&P 500 stocks
+name_fa: خرید ۱۰ سهم قوی‌تر S&P 500
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/does-buying-the-10-strongest-sp-500-stocks-work/
+claim: "«آیا خرید ۱۰ سهم قوی‌تر S&P 500 جواب می‌دهد؟ (بک‌تست – ۲۲٪)»"
+claimed_return: "22%"
+added: 2026-11-05
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید"

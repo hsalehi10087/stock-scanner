@@ -1,0 +1,12 @@
+id: 15486c454d-btc-nine-model-trend
+name: Nine-model Bitcoin trend following
+name_fa: روندگیری نُه‌مدلی روی بیت‌کوین
+source: medium/algorithmic-trading
+source_url: https://medium.com/@ayratmurtazin/i-tested-a-nine-model-bitcoin-trend-strategy-it-cut-the-worst-crash-from-83-to-20-2033a2291abd
+claim: "«یک روش روندگیری نُه‌مدلی (برگرفته از مقاله‌ی Swiss Finance Institute) را روی بیت‌کوین و اتریوم ساختم؛ بدترین ریزش را از ‎−83%‎ به ‎−20%‎ کم کرد»"
+claimed_return: "max drawdown -20% vs -83%"
+added: 2026-11-05
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+reason_not_testable: "متن کامل مقاله در دسترس نبود؛ دوره‌های نُه مدل و روش وزن‌دهی معلوم نیست"

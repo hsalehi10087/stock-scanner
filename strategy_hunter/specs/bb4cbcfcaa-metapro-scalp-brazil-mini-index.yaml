@@ -1,0 +1,12 @@
+id: bb4cbcfcaa-metapro-scalp-brazil-mini-index
+name: MetaPro Scalp V2 ML (Brazil mini index)
+name_fa: اسکالپ یادگیری ماشین روی مینی‌شاخص برزیل
+source: medium/algorithmic-trading
+source_url: https://mludemann.medium.com/ai-machine-learning-mt5-with-over-90-win-rate-on-the-brazilian-mini-index-49f5ce614be5
+claim: "«MetaPro Scalp V2 در ۳۴۶ معامله به نرخ برد ۹۱٫۳٪ رسید و در شبیه‌سازی تیک‌به‌تیک ۹۷٪»"
+claimed_return: "91.3% win rate"
+added: 2026-11-05
+status: not_testable
+asset_class: stock
+symbols: [EWZ]
+reason_not_testable: "اسکالپ با مدل یادگیری ماشین روی داده‌ی تیک در MT5؛ قانون‌ها منتشر نشده و داده‌ی تاریخی مینی‌شاخص برزیل در Yahoo نیست"
