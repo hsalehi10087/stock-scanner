@@ -1,97 +1,108 @@
 {
-"2026-11-05": {
-"AAOI": [
-"drop"
-],
-"ADMA": [
+"2026-11-06": {
+"ABNB": [
+"hi20",
 "surge"
 ],
-"ALAB": [
-"drop"
+"ASH": [
+"hi20"
 ],
-"APLD": [
-"drop"
-],
-"APP": [
+"KRMN": [
 "surge"
 ],
-"ARM": [
-"drop"
-],
-"AVGO": [
-"drop"
-],
-"BDX": [
-"hi52"
-],
-"COHR": [
-"drop"
-],
-"CRDO": [
-"drop"
-],
-"CRWV": [
-"drop"
-],
-"ECPG": [
-"hi52",
+"MBLY": [
 "surge"
-],
-"EPAM": [
-"surge"
-],
-"IONQ": [
-"drop"
-],
-"IPAR": [
-"hi52",
-"surge"
-],
-"IREN": [
-"drop"
-],
-"LITE": [
-"drop"
-],
-"MORN": [
-"hi52"
-],
-"NBIS": [
-"drop"
-],
-"NVTS": [
-"drop"
 ],
 "OKLO": [
-"drop"
-],
-"OUST": [
-"drop"
-],
-"PGNY": [
 "surge"
 ],
-"PLMR": [
+"TMDX": [
 "surge"
 ],
-"PLTR": [
-"drop"
-],
-"QBTS": [
-"drop"
-],
-"RGTI": [
-"drop"
-],
-"RUN": [
+"WULF": [
 "surge"
-],
-"SITM": [
-"drop"
-],
-"TEM": [
-"drop"
 ]
 },
-"pending_2026-11-05": []
+"pending_2026-11-06": [
+{
+"code": "hi20",
+"ticker": "ABNB",
+"score": 1,
+"rvol": 2.6260176448883854,
+"line": "ABNB ۱۹۱٫۱۹$ ▲۱۲٫۴٪ | حجم ۲٫۶ برابر | فروش ▲۱۶٫۵٪، سود ▲۲۷٫۱٪",
+"time": "15:06",
+"price": 191.19,
+"chg": 12.38
+},
+{
+"code": "surge",
+"ticker": "ABNB",
+"score": 1,
+"rvol": 2.6260176448883854,
+"line": "ABNB ۱۹۱٫۱۹$ ▲۱۲٫۴٪ | حجم ۲٫۶ برابر | فروش ▲۱۶٫۵٪، سود ▲۲۷٫۱٪",
+"time": "15:06",
+"price": 191.19,
+"chg": 12.38
+},
+{
+"code": "hi20",
+"ticker": "ASH",
+"score": 0,
+"rvol": 2.2347161425373714,
+"line": "ASH ۷۷٫۵۳$ ▲۱٫۶٪ | حجم ۲٫۲ برابر",
+"time": "15:06",
+"price": 77.53,
+"chg": 1.64
+},
+{
+"code": "surge",
+"ticker": "KRMN",
+"score": 0,
+"rvol": 2.1976237566699837,
+"line": "KRMN ۴۳٫۲۶$ ▲۳۴٫۸٪ | حجم ۲٫۲ برابر",
+"time": "15:06",
+"price": 43.26,
+"chg": 34.79
+},
+{
+"code": "surge",
+"ticker": "MBLY",
+"score": 0,
+"rvol": 2.2014220216690794,
+"line": "MBLY ۵٫۶۶$ ▲۱۰٫۳٪ | حجم ۲٫۲ برابر | فروش ▼۲٫۴٪، AI ۳٫۷",
+"time": "15:06",
+"price": 5.66,
+"chg": 10.33
+},
+{
+"code": "surge",
+"ticker": "OKLO",
+"score": 0,
+"rvol": 2.4306656495480876,
+"line": "OKLO ۲۳٫۸۸$ ▲۲۴٫۴٪ | حجم ۲٫۴ برابر",
+"time": "15:06",
+"price": 23.88,
+"chg": 24.39
+},
+{
+"code": "surge",
+"ticker": "TMDX",
+"score": 0,
+"rvol": 2.3707452327926655,
+"line": "TMDX ۸۸٫۰۵$ ▲۲۷٫۶٪ | حجم ۲٫۴ برابر",
+"time": "15:06",
+"price": 88.05,
+"chg": 27.65
+},
+{
+"code": "surge",
+"ticker": "WULF",
+"score": 0,
+"rvol": 2.0750910795108783,
+"line": "WULF ۱۱٫۲۷$ ▲۱۱٫۹٪ | حجم ۲٫۱ برابر | فروش ▼۶٫۰٪، AI ۳٫۰",
+"time": "15:06",
+"price": 11.27,
+"chg": 11.86
+}
+]
 }
