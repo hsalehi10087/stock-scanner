@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:31:38+00:00",
+ "updated": "2026-11-06T14:00:55+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -264,16 +264,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.2,
+    "cagr": -5.16,
     "sharpe": -0.12,
-    "max_dd": -83.41,
-    "total": -69.21
+    "max_dd": -83.22,
+    "total": -68.86
    },
    "in_sample": {
-    "cagr": -8.78,
+    "cagr": -8.71,
     "sharpe": -0.27,
-    "max_dd": -78.86,
-    "total": -75.79
+    "max_dd": -78.62,
+    "total": -75.52
    },
    "out_sample": {
     "cagr": 3.49,
@@ -318,6 +318,22 @@
    "status": "not_testable",
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید"
+  },
+  "2fd8cbbac8-spy-calendar-hedged-strangles": {
+   "name": "SPY weekly strangles with 90-day hedge",
+   "name_fa": "فروش استرنگل هفتگی SPY با پوشش ریسک ۹۰ روزه",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xocxre/backtested_strategies_spy/",
+   "claim": "«در بک‌تست، پوشش ۹۰ روزه بهترین بود: استرایک‌های حفاظتی ۹۰ روزه با فروش استرنگل هفتگی یا دوهفتگی. نتیجه: حدود ۱۶٪ در سال، و ۲۰۲۳ حتی بهتر»",
+   "claimed_return": "~16%/yr",
+   "asset_class": "option",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-06",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید. دلتا و استرایک‌ها هم دقیق گفته نشده",
+   "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید. دلتا و استرایک‌ها هم دقیق گفته نشده"
   },
   "32742da0fc-nasdaq100-stock-momentum": {
    "name": "Nasdaq-100 stock momentum",
@@ -423,7 +439,7 @@
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.15
+    "total": 21.16
    },
    "buyhold_full": {
     "cagr": 10.64,
@@ -476,16 +492,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.01,
-    "sharpe": 0.48,
+    "cagr": 10.19,
+    "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 273.86
+    "total": 282.19
    },
    "in_sample": {
-    "cagr": 7.78,
-    "sharpe": 0.42,
+    "cagr": 8.03,
+    "sharpe": 0.43,
     "max_dd": -49.5,
-    "total": 106.58
+    "total": 111.18
    },
    "out_sample": {
     "cagr": 15.67,
@@ -505,10 +521,10 @@
     "max_dd": -47.44,
     "total": 280.87
    },
-   "trades": 93,
-   "win_rate": 71.0,
-   "avg_trade_pct": 1.98,
-   "exposure": 0.46,
+   "trades": 94,
+   "win_rate": 71.3,
+   "avg_trade_pct": 1.99,
+   "exposure": 0.47,
    "period": "2013-01-02 → 2026-11-05",
    "oos_start": "2022-09-08",
    "forward_days": 10,
@@ -620,36 +636,36 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 0.93,
+    "cagr": 0.95,
     "sharpe": 0.15,
     "max_dd": -28.05,
-    "total": 11.45
+    "total": 11.75
    },
    "out_sample": {
-    "cagr": 5.94,
+    "cagr": 5.97,
     "sharpe": 0.62,
     "max_dd": -14.57,
-    "total": 33.79
+    "total": 33.99
    },
    "buyhold_full": {
-    "cagr": 8.03,
+    "cagr": 7.97,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 266.68
+    "total": 263.3
    },
    "buyhold_out_sample": {
-    "cagr": 18.12,
-    "sharpe": 0.97,
+    "cagr": 17.94,
+    "sharpe": 0.96,
     "max_dd": -26.69,
-    "total": 131.77
+    "total": 129.97
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-05",
-   "oos_start": "2021-10-18",
-   "forward_days": 10,
+   "period": "2010-01-04 → 2026-11-06",
+   "oos_start": "2021-10-19",
+   "forward_days": 11,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -713,7 +729,7 @@
     "cagr": 7.92,
     "sharpe": 0.69,
     "max_dd": -25.39,
-    "total": 1207.22
+    "total": 1207.21
    },
    "in_sample": {
     "cagr": 6.75,
@@ -995,36 +1011,36 @@
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.04,
-    "sharpe": 0.67,
+    "cagr": 12.73,
+    "sharpe": 0.7,
     "max_dd": -26.31,
-    "total": 104.59
+    "total": 112.82
    },
    "out_sample": {
-    "cagr": 8.85,
-    "sharpe": 0.71,
+    "cagr": 7.93,
+    "sharpe": 0.65,
     "max_dd": -20.59,
-    "total": 25.74
+    "total": 22.9
    },
    "buyhold_full": {
-    "cagr": 24.06,
+    "cagr": 24.05,
     "sharpe": 0.68,
     "max_dd": -93.96,
-    "total": 595.88
+    "total": 595.83
    },
    "buyhold_out_sample": {
-    "cagr": -9.47,
-    "sharpe": 0.19,
+    "cagr": -10.27,
+    "sharpe": 0.18,
     "max_dd": -67.61,
-    "total": -23.57
+    "total": -25.38
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-05",
-   "oos_start": "2024-02-24",
-   "forward_days": 1,
+   "period": "2017-11-09 → 2026-11-06",
+   "oos_start": "2024-02-25",
+   "forward_days": 2,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1220,6 +1236,25 @@
    "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست",
    "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست"
   },
+  "a6a4a28087-hyperliquid-rust-ou-donchian": {
+   "name": "Hyperliquid Rust OU + Donchian HMM bot",
+   "name_fa": "ربات راست هایپرلیکوئید با بازگشت به میانگین OU و شکست دانچیان",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/algotradingcrypto/comments/1xlgjlj/built_a_pure_rust_perp_trading_bot_running_on_a/",
+   "claim": "«در ۵ روز اخیر ۷ معامله‌ی زنده گرفت: ۶ برد، ۱ زیان کوچک (‎$142.18 → $142.73‎). نرخ برد حدود ۸۵٪»",
+   "claimed_return": "85% win rate (7 trades)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "AVAX-USD"
+   ],
+   "added": "2026-11-06",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه‌ای و ۱ دقیقه‌ای کار می‌کند، با فیلتر کالمن و مدل HMM و اجرای میکر روی دفتر سفارش؛ پارامترها در متن نیامده",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه‌ای و ۱ دقیقه‌ای کار می‌کند، با فیلتر کالمن و مدل HMM و اجرای میکر روی دفتر سفارش؛ پارامترها در متن نیامده"
+  },
   "ab0d637a16-ml-midday-intraday": {
    "name": "ML midday-to-close intraday long",
    "name_fa": "خرید درون‌روزی سهام با یادگیری ماشین (ورود نیمروز، خروج ۳:۵۵)",
@@ -1250,6 +1285,60 @@
    "reason_not_testable": "اندیکاتور DMI (DI+ و DI−) در موتور نیست؛ حد ضرر پویا (کف فاز نزولی قبلی و جابه‌جایی به نقطه‌ی سربه‌سر) و ترکیب با Supertrend هم پیاده‌شدنی نیست؛ نماد کوین‌ها و عدد سود هم گفته نشده",
    "verdict": "غیرقابل آزمون: اندیکاتور DMI (DI+ و DI−) در موتور نیست؛ حد ضرر پویا (کف فاز نزولی قبلی و جابه‌جایی به نقطه‌ی سربه‌سر) و ترکیب با Supertrend هم پیاده‌شدنی نیست؛ نماد کوین‌ها و عدد سود هم گفته نشده"
   },
+  "b4b0adc14c-qqq-rsi30-dip": {
+   "name": "QQQ RSI14 oversold dip buy",
+   "name_fa": "خرید افت QQQ وقتی RSI چهارده‌روزه زیر ۳۰ می‌رود",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xomh9r/stresstesting_a_daily_rsi_dip_rule_on_qqq_24/",
+   "claim": "«وقتی RSI بسته‌شدن زیر حدود ۳۰ می‌رود، ۱۰۰٪ TQQQ تا وقتی RSI برگردد، و بالای حدود ۸۰، ۱۰۰٪ SQQQ. از ۱۱ فوریه ۲۰۱۰ تا ۲۲ اکتبر ۲۰۲۶ بک‌تست ۳۰٫۰٪ در سال با بدترین افت ۲۰٫۴٪؛ QQQ در همان روزها ۱۹٫۱٪ در سال و افت ۳۵٫۱٪» — به گفته‌ی نویسنده، ۴۱ روز در حالت فروش‌بیش‌ازحد (۲۴ دوره) ۴۲٪ کل بازده لگاریتمی را ساخته‌اند",
+   "claimed_return": "30.0%/yr, max DD 20.4% (full portfolio, 2010-2026)",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-11-06",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 3.72,
+    "sharpe": 0.49,
+    "max_dd": -18.15,
+    "total": 174.24
+   },
+   "in_sample": {
+    "cagr": 3.93,
+    "sharpe": 0.5,
+    "max_dd": -18.15,
+    "total": 110.68
+   },
+   "out_sample": {
+    "cagr": 3.23,
+    "sharpe": 0.48,
+    "max_dd": -10.81,
+    "total": 30.17
+   },
+   "buyhold_full": {
+    "cagr": 10.32,
+    "sharpe": 0.5,
+    "max_dd": -82.96,
+    "total": 1405.39
+   },
+   "buyhold_out_sample": {
+    "cagr": 17.41,
+    "sharpe": 0.79,
+    "max_dd": -35.12,
+    "total": 278.08
+   },
+   "trades": 54,
+   "win_rate": 75.9,
+   "avg_trade_pct": 1.96,
+   "exposure": 0.02,
+   "period": "1999-03-10 → 2026-11-05",
+   "oos_start": "2018-07-18",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
   "b651b12620-crypto-ts-momentum-28d": {
    "name": "Crypto own-asset momentum 28d",
    "name_fa": "مومنتوم خودِ دارایی ۲۸ روزه در کریپتو",
@@ -1265,7 +1354,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.79,
+    "cagr": 66.77,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -1277,30 +1366,30 @@
     "total": 19688.06
    },
    "out_sample": {
-    "cagr": 32.16,
+    "cagr": 32.13,
     "sharpe": 1.0,
     "max_dd": -35.7,
     "total": 176.23
    },
    "buyhold_full": {
-    "cagr": 52.33,
+    "cagr": 52.3,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16495.51
+    "total": 16471.84
    },
    "buyhold_out_sample": {
-    "cagr": 35.55,
+    "cagr": 35.47,
     "sharpe": 0.89,
     "max_dd": -53.06,
-    "total": 202.95
+    "total": 202.52
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
-   "exposure": 0.61,
-   "period": "2014-09-17 → 2026-11-05",
+   "exposure": 0.6,
+   "period": "2014-09-17 → 2026-11-06",
    "oos_start": "2023-03-17",
-   "forward_days": 11,
+   "forward_days": 12,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1611,6 +1700,22 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم",
    "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم"
+  },
+  "f5c0a1543a-qqq-vix-riskoff-ladder": {
+   "name": "QQQ VIX risk-off ladder",
+   "name_fa": "نردبان خروج از ریسک QQQ با VIX و میانگین ۲۰۰ روزه",
+   "source": "tradingview-ideas",
+   "source_url": "https://www.tradingview.com/chart/QQQ/hZ5Y8pds-QQQ-If-it-closes-here-I-m-out-Just-following-the-indicator/",
+   "claim": "«اگر QQQ زیر ۶۸۱ (میانگین ۲۰۰ روزه) با VIX بالای ۱۹٫۹ (۲ از ۳ هشدار) بسته شود، در بسته‌شدن به ۰٪ می‌روم... جایی که کمک کرد (بک‌تست QQQ از ۲۰۰۰): بدترین افت ۲۰۰۸-۰۹ ‎−22%‎ در برابر ‎−53%‎ نگه‌داشتن، ۲۰۲۲ ‎−21%‎ در برابر ‎−35%‎»",
+   "claimed_return": "max DD -22% vs -53% (2008-09), -21% vs -35% (2022)",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-11-06",
+   "status": "not_testable",
+   "reason_not_testable": "دو هشدار از سه هشدار به داده‌ی VIX (بالای صدک ۸۰ یک سال) نیاز دارد و موتور فقط داده‌ی یک نماد را می‌خواند؛ قانون ورود ۷۰٪ هم دقیق تعریف نشده",
+   "verdict": "غیرقابل آزمون: دو هشدار از سه هشدار به داده‌ی VIX (بالای صدک ۸۰ یک سال) نیاز دارد و موتور فقط داده‌ی یک نماد را می‌خواند؛ قانون ورود ۷۰٪ هم دقیق تعریف نشده"
   },
   "f7e1f24aa0-claude-renko-pnf-crypto": {
    "name": "Renko + Point&Figure crypto (1-min)",
