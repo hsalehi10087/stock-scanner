@@ -1,0 +1,58 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+AEHL,Antelope Enterprise Holdings Limited - Class A Ordinary Shares,17.440000534057617,178.14992961898733,26014900.0,2026-11-05,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ZNB,Zeta Network Group - Class A Ordinary Shares,1.0700000524520874,72.5806522940001,86759200.0,2026-11-05,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+AMTX,"Aemetis, Inc - Common Stock",1.7300000190734863,38.4000015258789,16553200.0,2026-11-05,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+FLYE,"Fly-E Group, Inc. - Common Stock",2.240000009536743,31.764702747437457,27680600.0,2026-11-05,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+APP,Applovin Corporation - Class A Common Stock,356.1000061035156,31.0395606636672,22169400.0,2026-11-05,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+HTCR,"Heartcore Enterprises, Inc. - Common Stock",1.7000000476837158,30.76923923379602,322700.0,2026-11-05,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+DNUT,"Krispy Kreme, Inc. - Common Stock",4.599999904632568,30.681816180629173,29023800.0,2026-11-05,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+VXX,iPath Series B S&P 500 VIX Short-Term Futures ETN,22.200000762939453,30.128965169420297,70353800.0,2026-11-05,0.0,1.0,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+ARQ,"Arq, Inc. - Common Stock",2.4000000953674316,29.729733212835296,11306400.0,2026-11-05,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+PTLO,Portillo's Inc. - Class A Common Stock,7.019999980926514,28.807343607468326,9229800.0,2026-11-05,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+ECPG,Encore Capital Group Inc - Common Stock,126.16999816894531,26.25837864868941,719700.0,2026-11-05,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': True, 'analysts': False}"
+ADMA,ADMA Biologics Inc - Common Stock,13.210000038146973,26.049624190423295,14997200.0,2026-11-05,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+TBI,"TrueBlue, Inc. Common Stock",12.359999656677246,25.60975066069082,1497800.0,2026-11-05,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': True, 'analysts': False}"
+STAK,STAK Inc. - Class A Ordinary Shares,1.7899999618530273,25.17482709859,7506600.0,2026-11-05,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+XERS,"Xeris Biopharma Holdings, Inc. - Common Stock",13.079999923706055,25.047799961798333,12597300.0,2026-11-05,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+WRBY,Warby Parker Inc. Class A Common Stock,26.079999923706055,22.498820113648943,11259300.0,2026-11-05,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+ARDT,"Ardent Health, Inc. Common Stock",15.899999618530273,22.401846795118296,2470900.0,2026-11-05,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+DTIL,"Precision BioSciences, Inc. - Common Stock",9.869999885559082,21.551724441674768,2913000.0,2026-11-05,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+LYNX,Lyntris Inc. Common Stock,11.34000015258789,20.766770372397115,2855700.0,2026-11-05,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': None, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+MGNI,"Magnite, Inc. - Common Stock",27.520000457763672,20.75471413875052,9699600.0,2026-11-05,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': True, 'analysts': False}"
+CRMT,"America's Car-Mart, Inc. - Common Stock",1.5199999809265137,20.63492003421874,396200.0,2026-11-05,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+EPAM,"EPAM Systems, Inc. Common Stock",165.6999969482422,20.631913375046175,3673000.0,2026-11-05,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+ONT,"Onterris, Inc. Common Stock",19.420000076293945,20.396782930588707,1222400.0,2026-11-05,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+VIVO,VivoPower PLC - Class A Ordinary Shares,1.8300000429153442,20.394741176238075,1115300.0,2026-11-05,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+CCLD,"CareCloud, Inc. - Common Stock",2.1600000858306885,20.00000794728618,3414200.0,2026-11-05,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+DLX,Deluxe Corporation Common Stock,27.700000762939453,18.27498152306919,1023500.0,2026-11-05,,,,
+AGL,"agilon health, inc. Common Stock",113.7699966430664,18.2271564733028,585600.0,2026-11-05,,,,
+APYX,Apyx Medical Corporation - Common Stock,3.059999942779541,18.14671985272911,995000.0,2026-11-05,,,,
+FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",35.40999984741211,18.033332824707028,1198900.0,2026-11-05,,,,
+ENOV,Enovis Corporation Common Stock,28.6200008392334,17.199020269523512,5591800.0,2026-11-05,,,,
+RZAI,Roze AI Inc. - Common Shares,2.940000057220459,17.131476828326186,972500.0,2026-11-05,,,,
+KLRS,"Kalaris Therapeutics, Inc.  - Common Stock",2.359999895095825,16.831679078202953,175500.0,2026-11-05,,,,
+ONEN,ONE Nuclear Energy Inc. - Common Stock,1.690000057220459,16.551724251328693,128300.0,2026-11-05,,,,
+FUN,Six Flags Entertainment Corporation Common Stock New,9.239999771118164,16.519545663773272,12426600.0,2026-11-05,,,,
+SVCO,"Silvaco Group, Inc. - Common Stock",6.730000019073486,15.635735748652756,535400.0,2026-11-05,,,,
+LODE,Comstock Inc. Common Stock,1.7200000286102295,15.436242792038346,4021100.0,2026-11-05,,,,
+MASK,3 E Network Technology Group Ltd - Class A Ordinary Shares,1.8899999856948853,15.243902571991331,3877300.0,2026-11-05,,,,
+HLP,Hongli Group Inc. - Class A Ordinary Shares,3.369999885559082,15.01705832003113,1014600.0,2026-11-05,,,,
+U,Unity Software Inc. Common Stock,48.79999923706055,14.93170110525599,50169100.0,2026-11-05,,,,
+ENHA,Enhanced Group Inc. Class A Common Stock,8.170000076293945,14.908578380793823,396600.0,2026-11-05,,,,
+KXIN,Kaixin Holdings - Ordinary Shares,2.559999942779541,14.798202730202759,2963300.0,2026-11-05,,,,
+PGNY,"Progyny, Inc. - Common Stock",34.369998931884766,14.186041515945469,2789600.0,2026-11-05,,,,
+BKSY,BlackSky Technology Inc. Class A Common Stock,19.1200008392334,14.013120556486292,2535300.0,2026-11-05,,,,
+NVRI,Enviri Corporation Common Stock,23.360000610351562,13.895662358191508,1174900.0,2026-11-05,,,,
+VCEL,Vericel Corporation - Common Stock,51.779998779296875,13.852241205961025,2682400.0,2026-11-05,,,,
+JYD,Jayud Global Logistics Limited - Class A Ordinary Shares,1.600000023841858,13.47518168214794,442500.0,2026-11-05,,,,
+SEZL,Sezzle Inc. - Common Stock,155.0,13.395271952272104,1967900.0,2026-11-05,,,,
+EVO,Evotec SE - American Depositary Shares each representing 1/2 of one ordinary share,1.7799999713897705,13.375790568267632,273600.0,2026-11-05,,,,
+ZVIA,Zevia PBC Class A Common Stock,1.3600000143051147,13.333330021964308,1356200.0,2026-11-05,,,,
+CPIX,Cumberland Pharmaceuticals Inc. - Common Stock,5.010000228881836,12.837841538637495,284300.0,2026-11-05,,,,
+COTY,Coty Inc. Class A Common Stock,3.9100000858306885,12.680116818231934,14927000.0,2026-11-05,,,,
+RUN,Sunrun Inc. - Common Stock,9.869999885559082,12.286688605154206,35952500.0,2026-11-05,,,,
+SMX,SMX (Security Matters) Public Limited Company - Ordinary Shares,1.309999942779541,11.016949238156638,2704200.0,2026-11-05,,,,
+PRKS,United Parks & Resorts Inc. Common Stock,37.86000061035156,10.734139020337953,1327500.0,2026-11-05,,,,
+KAZR,Skyline Builders Group Holding Limited - Class A Ordinary Shares,1.2599999904632568,10.52631633983976,370900.0,2026-11-05,,,,
+VERX,"Vertex, Inc. - Class A Common Stock",17.59000015258789,10.489950177705708,4998900.0,2026-11-05,,,,
+VCIG,VCI Global Limited - Ordinary Share,5.920000076293945,10.242089431210522,181400.0,2026-11-05,,,,
