@@ -1,0 +1,13 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+688353.SS,华盛锂电,11.078119277954102,800.584987463957,313.20526187,34.777979450000004,2026-11-06,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+601069.SS,西部黄金,13.458826401654411,313.20492965101926,584.39656044,141.43020049,2026-11-06,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+688235.SS,百济神州,11.779810609559949,151.27968617472433,237.007,94.32,2026-11-06,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+688813.SS,泰金新能,8.328831015712556,105.47471377648733,75.30740516,36.65044899,2026-11-06,2,3,⭐۲/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': None, 'analysts': None}"
+001393.SZ,维通利,13.349911485950038,46.38645979301009,113.32419953,77.4144,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+688809.SS,强一股份,14.40615664967515,34.10401931651045,150.05650487,111.89560584,2026-11-06,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+301531.SZ,春光集团,8.282553476034726,32.017379830016296,44.70500706,33.862971009999995,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+301655.SZ,绿控传动,10.89875328761476,27.218779309195746,41.34246319,32.497138719999995,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+000530.SZ,冰山冷热,9.848481382037843,18.063234152376257,14.17075152,12.002679429999999,2026-11-06,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+601123.SS,马矿股份,10.207094038773912,12.372186913571511,146.41713804,130.29659924,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+001233.SZ,海安集团,18.792675041044316,11.42695925264691,135.18594349,121.32247384,2026-11-06,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+301599.SZ,理奇智能,10.888803188259132,10.829743817718256,36.779619600000004,33.18569396,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
