@@ -1,0 +1,12 @@
+id: f5c0a1543a-qqq-vix-riskoff-ladder
+name: QQQ VIX risk-off ladder
+name_fa: نردبان خروج از ریسک QQQ با VIX و میانگین ۲۰۰ روزه
+source: tradingview-ideas
+source_url: https://www.tradingview.com/chart/QQQ/hZ5Y8pds-QQQ-If-it-closes-here-I-m-out-Just-following-the-indicator/
+claim: "«اگر QQQ زیر ۶۸۱ (میانگین ۲۰۰ روزه) با VIX بالای ۱۹٫۹ (۲ از ۳ هشدار) بسته شود، در بسته‌شدن به ۰٪ می‌روم... جایی که کمک کرد (بک‌تست QQQ از ۲۰۰۰): بدترین افت ۲۰۰۸-۰۹ ‎−22%‎ در برابر ‎−53%‎ نگه‌داشتن، ۲۰۲۲ ‎−21%‎ در برابر ‎−35%‎»"
+claimed_return: "max DD -22% vs -53% (2008-09), -21% vs -35% (2022)"
+added: 2026-11-06
+status: not_testable
+asset_class: etf
+symbols: [QQQ]
+reason_not_testable: "دو هشدار از سه هشدار به داده‌ی VIX (بالای صدک ۸۰ یک سال) نیاز دارد و موتور فقط داده‌ی یک نماد را می‌خواند؛ قانون ورود ۷۰٪ هم دقیق تعریف نشده"

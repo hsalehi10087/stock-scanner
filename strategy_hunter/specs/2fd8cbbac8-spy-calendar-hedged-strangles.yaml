@@ -1,0 +1,12 @@
+id: 2fd8cbbac8-spy-calendar-hedged-strangles
+name: SPY weekly strangles with 90-day hedge
+name_fa: فروش استرنگل هفتگی SPY با پوشش ریسک ۹۰ روزه
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xocxre/backtested_strategies_spy/
+claim: "«در بک‌تست، پوشش ۹۰ روزه بهترین بود: استرایک‌های حفاظتی ۹۰ روزه با فروش استرنگل هفتگی یا دوهفتگی. نتیجه: حدود ۱۶٪ در سال، و ۲۰۲۳ حتی بهتر»"
+claimed_return: "~16%/yr"
+added: 2026-11-06
+status: not_testable
+asset_class: option
+symbols: [SPY]
+reason_not_testable: "فروش آپشن است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید. دلتا و استرایک‌ها هم دقیق گفته نشده"

@@ -1,0 +1,12 @@
+id: a6a4a28087-hyperliquid-rust-ou-donchian
+name: Hyperliquid Rust OU + Donchian HMM bot
+name_fa: ربات راست هایپرلیکوئید با بازگشت به میانگین OU و شکست دانچیان
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/algotradingcrypto/comments/1xlgjlj/built_a_pure_rust_perp_trading_bot_running_on_a/
+claim: "«در ۵ روز اخیر ۷ معامله‌ی زنده گرفت: ۶ برد، ۱ زیان کوچک (‎$142.18 → $142.73‎). نرخ برد حدود ۸۵٪»"
+claimed_return: "85% win rate (7 trades)"
+added: 2026-11-06
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD, ETH-USD, SOL-USD, AVAX-USD]
+reason_not_testable: "روی کندل ۵ و ۱۵ دقیقه‌ای و ۱ دقیقه‌ای کار می‌کند، با فیلتر کالمن و مدل HMM و اجرای میکر روی دفتر سفارش؛ پارامترها در متن نیامده"
