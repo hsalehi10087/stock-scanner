@@ -40,6 +40,21 @@ def scorecard_lines():
     return L + ['']
 
 
+def weak_market():
+    """اگر QQQ زیر میانگین ۵۰ روزه است: هشدار (سهم‌های کوچک و پرنوسان AI در بازار نزولی بیشتر می‌ریزند)."""
+    try:
+        import yfinance as yf
+        c = yf.download('QQQ', period='6mo', interval='1d', auto_adjust=True, progress=False)['Close'].squeeze().dropna()
+        p, m50 = float(c.iloc[-1]), float(c.rolling(50).mean().iloc[-1])
+    except Exception:
+        return ''
+    if p >= m50:
+        return ''
+    gap = f'{(p / m50 - 1) * 100:.1f}'.translate(str.maketrans('0123456789.-', '۰۱۲۳۴۵۶۷۸۹٫−'))
+    return (f"🌧 <b>هشدار بازار:</b> QQQ {gap}٪ زیر میانگین ۵۰ روزه است. در چنین بازاری سهم‌های کوچک و پرنوسان AI معمولاً "
+            "بیشتر از شاخص می‌ریزند؛ فقط سهم‌هایی که جریان نقد مثبت یا نقد کافی دارند در فهرست مانده‌اند و این زمان، زمان صبر است، نه خرید عجولانه.")
+
+
 def main():
     token = os.getenv('TELEGRAM_BOT_TOKEN', '')
     chats = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip() and c.strip() != 'none']
@@ -67,6 +82,9 @@ def main():
          f"<i>{e(v.get('method_fa', ''))}</i>", '']
     if v.get('market_fa'):
         L += [f"🌐 <b>فضای بازار AI:</b> {e(v['market_fa'])}", '']
+    w = weak_market()
+    if w:
+        L += [w, '']
     for i, p in enumerate(v.get('picks', [])[:5], 1):
         L.append(f"<b>{str(i).translate(D)}. {e(p['ticker'])} — {e(p.get('name', ''))}</b> ({e(p.get('segment_fa', ''))})")
         L.append(f"📊 {e(p.get('numbers_fa', ''))}")
