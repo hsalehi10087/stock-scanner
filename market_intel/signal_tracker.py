@@ -16,6 +16,7 @@ import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.join(ROOT, 'data', 'signal_tracker')
+since_of = {}
 FA_DIGITS = str.maketrans('0123456789.-+', '۰۱۲۳۴۵۶۷۸۹٫−+')
 
 
@@ -131,20 +132,70 @@ def bootstrap(kind, hist_dir, event_col=None, price_col=None):
     return state
 
 
+def split_factors(tickers, since):
+    """ضریب تقسیم سهام (split) پس از تاریخ اولین سیگنال: {ticker: ضرب همه‌ی نسبت‌ها}. نسبت > ۱ یعنی تقسیم عادی (مثلاً ۱۰ به ۱)
+    و < ۱ یعنی تقسیم معکوس. اگر داده نیامد، نماد در نتیجه نیست."""
+    import yfinance as yf
+    out = {}
+    tl = sorted(tickers)
+    for i in range(0, len(tl), 100):
+        part = tl[i:i + 100]
+        try:
+            df = yf.download(part, start=str(since), interval='1d', group_by='ticker', threads=True, progress=False,
+                             auto_adjust=False, actions=True)
+        except Exception as e:
+            print('⚠️ split_factors', e, file=sys.stderr)
+            continue
+        for t in part:
+            try:
+                sp = (df[t]['Stock Splits'] if len(part) > 1 else df['Stock Splits']).dropna()
+                f = 1.0
+                for d, v in sp.items():
+                    if v and d > pd.Timestamp(since_of[t]):
+                        f *= float(v)
+                out[t] = f
+            except Exception:
+                continue
+    return out
+
+
 def returns(state, prices):
+    """بازده هر سهم از قیمت روز اولین سیگنال. قیمت‌ها خام‌اند، پس برای سهمی که بازده‌اش غیرعادی است (بالای +۸۰٪ یا
+    زیر −۴۰٪) تقسیم سهام را از Yahoo می‌گیریم و قیمت مبنا را تعدیل می‌کنیم. اگر نشد تأیید کرد، «مشکوک» علامت می‌خورد."""
+    global since_of
     rows = []
     for t, s in state.items():
         p = prices.get(t)
         if p and s.get('first_price'):
             rows.append({'ticker': t, 'count': s['count'], 'first_date': s['first_date'],
-                         'ret': (p / s['first_price'] - 1) * 100})
+                         'ret': (p / s['first_price'] - 1) * 100, 'split': None, 'suspect': False})
+    odd = [r for r in rows if r['ret'] > 80 or r['ret'] < -40]
+    if odd:
+        since_of = {r['ticker']: r['first_date'] for r in odd}
+        fac = split_factors(since_of.keys(), min(since_of.values()))
+        for r in odd:
+            f = fac.get(r['ticker'])
+            if f is None:
+                r['suspect'] = True            # تقسیم سهام را نتوانستیم بررسی کنیم
+            elif abs(f - 1) > 1e-9:
+                base = state[r['ticker']]['first_price'] / f
+                r['ret'] = (prices[r['ticker']] / base - 1) * 100
+                r['split'] = f
+                if r['ret'] > 300 or r['ret'] < -80:
+                    r['suspect'] = True        # بعد از تعدیل هم افراطی است
+            elif r['ret'] > 300 or r['ret'] < -85:
+                r['suspect'] = True            # بدون تقسیم، ولی افراطی (مثلاً اسم نماد عوض شده یا داده‌ی ناقص)
     return rows
 
 
 def summary_text(title, rows, since, unit_word):
     if not rows:
         return ''
-    df = pd.DataFrame(rows)
+    alld = pd.DataFrame(rows)
+    bad = alld[alld.suspect] if 'suspect' in alld else alld.iloc[0:0]
+    df = alld[~alld.suspect] if 'suspect' in alld else alld
+    if df.empty:
+        return ''
     pos = (df.ret > 0).mean() * 100
     lines = [f'<b>📊 پیگیری سیگنال‌ها — {title}</b>',
              f'<i>از {since}؛ بازده از قیمت بسته‌شدن روز اولین سیگنال تا امروز</i>',
@@ -153,10 +204,13 @@ def summary_text(title, rows, since, unit_word):
 
     def fmt(r):
         return (f"{r.ticker} — {fa(int(r['count']))} {unit_word} — <b>{fa(f'{r.ret:+.1f}')}٪</b> "
-                f"(از {r.first_date})")
+                f"(از {r.first_date}){' ⚠️ با تعدیل split' if pd.notna(r.get('split')) else ''}")
     rep = df[df['count'] >= 2].sort_values(['count', 'ret'], ascending=[False, False]).head(10)
     if len(rep):
         lines += ['', '<b>🔁 بیشترین تکرار سیگنال:</b>'] + [fmt(r) for _, r in rep.iterrows()]
     lines += ['', '<b>🟢 بهترین بازده از اولین سیگنال:</b>'] + [fmt(r) for _, r in df.nlargest(7, 'ret').iterrows()]
     lines += ['', '<b>🔴 بدترین بازده از اولین سیگنال:</b>'] + [fmt(r) for _, r in df.nsmallest(5, 'ret').iterrows()]
+    if len(bad):
+        lines += ['', '<i>⚠️ این سهم‌ها در فهرست‌ها و میانگین نیامدند، چون بازدهشان به‌خاطر split یا داده‌ی ناقص قابل‌اعتماد نیست: '
+                  + '، '.join(bad.ticker.head(12)) + '</i>']
     return '\n'.join(lines)
