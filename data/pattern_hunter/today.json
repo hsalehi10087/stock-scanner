@@ -1,36 +1,19 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-07",
  "markets": {
   "us": {
-   "data_date": "2026-11-05",
-   "scored": 1481,
+   "data_date": "2026-11-06",
+   "scored": 1482,
    "picks": [
-    {
-     "ticker": "MRVL",
-     "name": "Marvell Technology",
-     "price": 133.55,
-     "prob": 0.972,
-     "rank": 1,
-     "r6m": -16.5,
-     "from_hi": -57.8,
-     "volu_ratio": 0.85,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "3/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
-    },
     {
      "ticker": "VCYT",
      "name": "Veracyte, Inc.",
-     "price": 24.0,
+     "price": 24.16,
      "prob": 0.97,
-     "rank": 2,
-     "r6m": -41.1,
-     "from_hi": -60.3,
-     "volu_ratio": 1.29,
+     "rank": 1,
+     "r6m": -40.2,
+     "from_hi": -60.1,
+     "volu_ratio": 1.44,
      "passed": [
       "صورت مالی",
       "کن‌اسلیم"
@@ -41,14 +24,48 @@
      "quality": "⭐۲/۵"
     },
     {
+     "ticker": "MRVL",
+     "name": "Marvell Technology",
+     "price": 141.2,
+     "prob": 0.954,
+     "rank": 2,
+     "r6m": -17.0,
+     "from_hi": -55.4,
+     "volu_ratio": 0.87,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "3/7",
+     "buffett": "4/5",
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "PLTR",
+     "name": "Palantir Technologies",
+     "price": 160.38,
+     "prob": 0.919,
+     "rank": 3,
+     "r6m": 16.4,
+     "from_hi": -23.3,
+     "volu_ratio": 0.76,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "4/7",
+     "buffett": "4/5",
+     "quality": "⭐۴/۵"
+    },
+    {
      "ticker": "VICR",
      "name": "Vicor Corporation",
-     "price": 135.1,
-     "prob": 0.915,
-     "rank": 3,
-     "r6m": -48.3,
-     "from_hi": -64.4,
-     "volu_ratio": 1.25,
+     "price": 146.88,
+     "prob": 0.896,
+     "rank": 4,
+     "r6m": -42.7,
+     "from_hi": -61.3,
+     "volu_ratio": 1.29,
      "passed": [
       "صورت مالی",
       "کن‌اسلیم",
@@ -60,49 +77,31 @@
      "quality": "⭐۴/۵"
     },
     {
-     "ticker": "COHR",
-     "name": "Coherent Corp.",
-     "price": 169.76,
-     "prob": 0.909,
-     "rank": 4,
-     "r6m": -46.8,
-     "from_hi": -60.2,
-     "volu_ratio": 1.28,
-     "passed": [
-      "صورت مالی",
-      "کن‌اسلیم"
-     ],
-     "health": "5/5",
-     "canslim": "5/7",
-     "buffett": "2/5",
-     "quality": "⭐۱/۵ ⚠️رقیق‌شدن"
-    },
-    {
-     "ticker": "PLTR",
-     "name": "Palantir Technologies",
-     "price": 154.99,
-     "prob": 0.888,
+     "ticker": "FORM",
+     "name": "FormFactor, Inc.",
+     "price": 81.12,
+     "prob": 0.879,
      "rank": 5,
-     "r6m": 13.1,
-     "from_hi": -25.9,
-     "volu_ratio": 0.77,
+     "r6m": -45.1,
+     "from_hi": -49.3,
+     "volu_ratio": 1.06,
      "passed": [
-      "صورت مالی"
+      "بافت"
      ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
+     "health": "4/5",
+     "canslim": "3/7",
+     "buffett": "5/5",
      "quality": "⭐۴/۵"
     }
    ],
-   "checked": 37,
-   "dropped": 32,
+   "checked": 38,
+   "dropped": 33,
    "market_up": true,
-   "median_prob": 0.397
+   "median_prob": 0.391
   },
   "cn": {
    "data_date": "2026-11-06",
-   "scored": 1498,
+   "scored": 1500,
    "picks": [
     {
      "ticker": "002463.SZ",
@@ -201,7 +200,7 @@
   },
   "in": {
    "data_date": "2026-11-06",
-   "scored": 706,
+   "scored": 708,
    "picks": [
     {
      "ticker": "STLTECH.NS",
@@ -245,7 +244,7 @@
      "rank": 3,
      "r6m": 59.4,
      "from_hi": -5.7,
-     "volu_ratio": 1.06,
+     "volu_ratio": 1.07,
      "passed": [
       "بافت"
      ],
@@ -312,7 +311,7 @@
      ],
      "health": "5/5",
      "canslim": "0/7",
-     "buffett": "2/5",
+     "buffett": "1/5",
      "quality": "⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
     },
     {
@@ -346,7 +345,7 @@
      ],
      "health": "5/5",
      "canslim": "1/7",
-     "buffett": "2/5",
+     "buffett": "3/5",
      "quality": "⭐۳/۵"
     },
     {
@@ -382,7 +381,7 @@
      ],
      "health": "5/5",
      "canslim": "1/7",
-     "buffett": "4/5",
+     "buffett": "5/5",
      "quality": "⭐۲/۵"
     }
    ],
@@ -393,7 +392,7 @@
   },
   "tw": {
    "data_date": "2026-11-06",
-   "scored": 1198,
+   "scored": 1200,
    "picks": [
     {
      "ticker": "1714.TW",
@@ -410,7 +409,7 @@
      "health": "5/5",
      "canslim": "2/7",
      "buffett": "3/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
+     "quality": "⭐۳/۵"
     },
     {
      "ticker": "3147.TWO",
@@ -489,421 +488,75 @@
   },
   "kr": {
    "data_date": "2026-11-06",
-   "scored": 1198,
-   "picks": [
-    {
-     "ticker": "033240.KS",
-     "name": "JahwaElec",
-     "price": 14860.0,
-     "prob": 0.871,
-     "rank": 1,
-     "r6m": -69.5,
-     "from_hi": -73.3,
-     "volu_ratio": 0.77,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "3/5",
-     "quality": "⭐۳/۵"
-    }
-   ],
+   "scored": 1200,
+   "picks": [],
    "checked": 40,
-   "dropped": 39,
+   "dropped": 40,
    "market_up": false,
    "median_prob": 0.581
   },
   "hk": {
    "data_date": "2026-11-06",
-   "scored": 995,
-   "picks": [
-    {
-     "ticker": "2269.HK",
-     "name": "WUXI BIO",
-     "price": 47.62,
-     "prob": 0.784,
-     "rank": 1,
-     "r6m": 43.1,
-     "from_hi": -17.8,
-     "volu_ratio": 1.21,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "1093.HK",
-     "name": "CSPC PHARMA",
-     "price": 8.45,
-     "prob": 0.782,
-     "rank": 2,
-     "r6m": 6.8,
-     "from_hi": -17.5,
-     "volu_ratio": 0.87,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "2587.HK",
-     "name": "HEALTHYWAY INC",
-     "price": 0.7,
-     "prob": 0.763,
-     "rank": 3,
-     "r6m": -82.0,
-     "from_hi": -89.5,
-     "volu_ratio": 0.25,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "3/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "0917.HK",
-     "name": "QUNABOX GROUP",
-     "price": 5.365,
-     "prob": 0.713,
-     "rank": 4,
-     "r6m": -66.3,
-     "from_hi": -86.1,
-     "volu_ratio": 0.87,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "8030.HK",
-     "name": "FENGYINHE",
-     "price": 1.5,
-     "prob": 0.647,
-     "rank": 5,
-     "r6m": 44.2,
-     "from_hi": -88.5,
-     "volu_ratio": 0.35,
-     "passed": [
-      "بافت"
-     ],
-     "health": "3/5",
-     "canslim": "1/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
-    }
-   ],
-   "checked": 35,
-   "dropped": 30,
+   "scored": 1000,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
    "market_up": false,
    "median_prob": 0.341
   },
   "gb": {
    "data_date": "2026-11-06",
    "scored": 346,
-   "picks": [
-    {
-     "ticker": "BCG.L",
-     "name": "Baltic Classifieds",
-     "price": 2.426,
-     "prob": 0.901,
-     "rank": 1,
-     "r6m": -98.7,
-     "from_hi": -99.0,
-     "volu_ratio": 0.52,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "RPI.L",
-     "name": "Raspberry Pi Holdings",
-     "price": 495.0,
-     "prob": 0.709,
-     "rank": 2,
-     "r6m": -26.8,
-     "from_hi": -52.9,
-     "volu_ratio": 0.72,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "2/5",
-     "quality": "⭐۱/۵"
-    },
-    {
-     "ticker": "KNOS.L",
-     "name": "Kainos",
-     "price": 1220.78,
-     "prob": 0.608,
-     "rank": 3,
-     "r6m": 55.6,
-     "from_hi": -9.0,
-     "volu_ratio": 0.65,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "5/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
-    },
-    {
-     "ticker": "MEGP.L",
-     "name": "ME Group International",
-     "price": 113.387,
-     "prob": 0.584,
-     "rank": 4,
-     "r6m": -16.8,
-     "from_hi": -31.0,
-     "volu_ratio": 1.0,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "ATYM.L",
-     "name": "Atalaya Mining",
-     "price": 830.5,
-     "prob": 0.514,
-     "rank": 5,
-     "r6m": -1.9,
-     "from_hi": -25.1,
-     "volu_ratio": 0.88,
-     "passed": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "5/5",
-     "quality": "⭐۳/۵"
-    }
-   ],
-   "checked": 17,
-   "dropped": 12,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
    "market_up": true,
-   "median_prob": 0.035
+   "median_prob": 0.033
   },
   "de": {
    "data_date": "2026-11-06",
    "scored": 86,
-   "picks": [
-    {
-     "ticker": "TMV.DE",
-     "name": "TeamViewer",
-     "price": 5.125,
-     "prob": 0.931,
-     "rank": 1,
-     "r6m": -3.4,
-     "from_hi": -32.9,
-     "volu_ratio": 1.29,
-     "passed": [
-      "بافت"
-     ],
-     "health": "1/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "PAH3.DE",
-     "name": "Porsche SE",
-     "price": 26.13,
-     "prob": 0.047,
-     "rank": 2,
-     "r6m": -14.3,
-     "from_hi": -32.9,
-     "volu_ratio": 0.7,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "2/7",
-     "buffett": "1/5",
-     "quality": "⭐۱/۵"
-    },
-    {
-     "ticker": "TLX.DE",
-     "name": "Talanx",
-     "price": 130.2,
-     "prob": 0.014,
-     "rank": 3,
-     "r6m": 24.7,
-     "from_hi": -3.3,
-     "volu_ratio": 0.68,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "3/7",
-     "buffett": "4/5",
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "HNR1.DE",
-     "name": "Hannover Re",
-     "price": 292.8,
-     "prob": 0.01,
-     "rank": 4,
-     "r6m": 24.1,
-     "from_hi": -4.4,
-     "volu_ratio": 0.97,
-     "passed": [
-      "بافت"
-     ],
-     "health": "3/5",
-     "canslim": "3/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
-    }
-   ],
+   "picks": [],
    "checked": 40,
-   "dropped": 36,
+   "dropped": 40,
    "market_up": true,
-   "median_prob": 0.008
+   "median_prob": 0.007
   },
   "ca": {
-   "data_date": "2026-11-05",
-   "scored": 573,
+   "data_date": "2026-11-06",
+   "scored": 572,
    "picks": [
-    {
-     "ticker": "HWX.TO",
-     "name": "HEADWATER EXPLORATION INC",
-     "price": 11.47,
-     "prob": 0.832,
-     "rank": 1,
-     "r6m": -8.4,
-     "from_hi": -24.4,
-     "volu_ratio": 1.23,
-     "passed": [
-      "بافت"
-     ],
-     "health": "3/5",
-     "canslim": "4/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "TRX.TO",
-     "name": "TRX GOLD CORPORATION",
-     "price": 1.32,
-     "prob": 0.831,
-     "rank": 2,
-     "r6m": -21.0,
-     "from_hi": -55.3,
-     "volu_ratio": 0.84,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "1/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "CEU.TO",
-     "name": "CES ENERGY SOLUTIONS CORP",
-     "price": 18.3,
-     "prob": 0.803,
-     "rank": 3,
-     "r6m": -0.7,
-     "from_hi": -12.7,
-     "volu_ratio": 1.22,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "4/7",
-     "buffett": "3/5",
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
-    },
     {
      "ticker": "CFW.TO",
      "name": "CALFRAC WELL SERVICES LTD.",
-     "price": 6.71,
-     "prob": 0.796,
-     "rank": 4,
-     "r6m": 27.1,
-     "from_hi": -15.4,
-     "volu_ratio": 1.67,
-     "passed": [
-      "کن‌اسلیم"
-     ],
-     "health": "4/5",
-     "canslim": "6/7",
-     "buffett": "3/5",
-     "quality": "⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
-    },
-    {
-     "ticker": "HMM-A.TO",
-     "name": "HAMMOND MANUFACTURING CO. LTD, ",
-     "price": 28.83,
-     "prob": 0.79,
-     "rank": 5,
-     "r6m": 78.2,
-     "from_hi": -3.9,
-     "volu_ratio": 1.11,
-     "passed": [
-      "بافت"
-     ],
-     "health": "4/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
-     "quality": "⭐۴/۵ (۱ نامعلوم)"
-    }
-   ],
-   "checked": 18,
-   "dropped": 13,
-   "market_up": true,
-   "median_prob": 0.142
-  },
-  "au": {
-   "data_date": "2026-11-06",
-   "scored": 461,
-   "picks": [
-    {
-     "ticker": "CYL.AX",
-     "name": "CAT METALS FPO [CYL]",
-     "price": 4.08,
-     "prob": 0.68,
+     "price": 7.02,
+     "prob": 0.782,
      "rank": 1,
-     "r6m": -28.3,
-     "from_hi": -57.7,
-     "volu_ratio": 1.44,
+     "r6m": 35.5,
+     "from_hi": -11.5,
+     "volu_ratio": 1.66,
      "passed": [
       "کن‌اسلیم"
      ],
-     "health": "4/5",
-     "canslim": "5/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+     "health": "3/5",
+     "canslim": "6/7",
+     "buffett": "2/5",
+     "quality": "⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
     }
    ],
    "checked": 40,
    "dropped": 39,
    "market_up": true,
-   "median_prob": 0.18
+   "median_prob": 0.143
+  },
+  "au": {
+   "data_date": "2026-11-06",
+   "scored": 464,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
+   "market_up": true,
+   "median_prob": 0.184
   }
  }
 }

@@ -1,24 +1,24 @@
 {
- "date": "2026-11-06",
+ "date": "2026-11-07",
  "markets": {
   "us": {
-   "data_date": "2026-11-05",
-   "scored": 1481,
-   "technical": 153,
-   "checked": 13,
+   "data_date": "2026-11-06",
+   "scored": 1482,
+   "technical": 139,
+   "checked": 18,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 7,
-    "rsi": 8,
+    "rsi": 3,
     "earn": 0,
-    "fund": 3
+    "fund": 2
    }
   },
   "cn": {
    "data_date": "2026-11-06",
-   "scored": 1498,
+   "scored": 1500,
    "technical": 12,
    "checked": 8,
    "signals": [],
@@ -33,7 +33,7 @@
   },
   "in": {
    "data_date": "2026-11-06",
-   "scored": 706,
+   "scored": 708,
    "technical": 60,
    "checked": 16,
    "signals": [],
@@ -63,7 +63,7 @@
   },
   "tw": {
    "data_date": "2026-11-06",
-   "scored": 1198,
+   "scored": 1200,
    "technical": 10,
    "checked": 5,
    "signals": [],
@@ -78,7 +78,7 @@
   },
   "kr": {
    "data_date": "2026-11-06",
-   "scored": 1198,
+   "scored": 1200,
    "technical": 13,
    "checked": 10,
    "signals": [],
@@ -93,31 +93,10 @@
   },
   "hk": {
    "data_date": "2026-11-06",
-   "scored": 995,
+   "scored": 1000,
    "technical": 37,
-   "checked": 19,
-   "signals": [
-    {
-     "ticker": "6160.HK",
-     "name": "BEONE MEDICINES",
-     "price": 244.2,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.315,
-     "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7
-    }
-   ],
+   "checked": 18,
+   "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
@@ -130,13 +109,13 @@
   "gb": {
    "data_date": "2026-11-06",
    "scored": 346,
-   "technical": 37,
-   "checked": 24,
+   "technical": 36,
+   "checked": 22,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 1,
+    "ext": 2,
     "rsi": 2,
     "earn": 0,
     "fund": 0
@@ -145,38 +124,38 @@
   "de": {
    "data_date": "2026-11-06",
    "scored": 86,
-   "technical": 10,
-   "checked": 5,
+   "technical": 9,
+   "checked": 3,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
     "ext": 0,
-    "rsi": 0,
+    "rsi": 2,
     "earn": 0,
     "fund": 0
    }
   },
   "ca": {
-   "data_date": "2026-11-05",
-   "scored": 573,
-   "technical": 32,
-   "checked": 23,
+   "data_date": "2026-11-06",
+   "scored": 572,
+   "technical": 34,
+   "checked": 21,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 1,
-    "rsi": 3,
+    "rsi": 5,
     "earn": 0,
-    "fund": 7
+    "fund": 5
    }
   },
   "au": {
    "data_date": "2026-11-06",
-   "scored": 461,
-   "technical": 27,
-   "checked": 26,
+   "scored": 464,
+   "technical": 28,
+   "checked": 27,
    "signals": [],
    "market_up50": true,
    "cap": 8,
@@ -184,7 +163,7 @@
     "ext": 0,
     "rsi": 1,
     "earn": 0,
-    "fund": 0
+    "fund": 1
    }
   }
  }
