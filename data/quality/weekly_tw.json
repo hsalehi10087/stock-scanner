@@ -1,18 +1,24 @@
 {
  "market": "tw",
- "date": "2026-10-31",
- "scored": 1868,
- "no_data": 36,
- "universe": 1986,
- "liquid": 1904,
+ "date": "2026-11-07",
+ "scored": 1886,
+ "no_data": 0,
+ "universe": 1985,
+ "liquid": 1886,
  "distribution": {
-  "0": 272,
+  "0": 270,
   "1": 600,
-  "2": 606,
-  "3": 300,
-  "4": 87,
+  "2": 618,
+  "3": 307,
+  "4": 88,
   "5": 3
  },
+ "fives": [
+  "3711.TW",
+  "3006.TW",
+  "3702.TW"
+ ],
+ "dropped": [],
  "top": [
   {
    "ticker": "3711.TW",
@@ -67,6 +73,24 @@
    }
   },
   {
+   "ticker": "2408.TW",
+   "name": "NANYA TECHNOLOGY CORPORATION",
+   "date": "2026-11-07",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.04
+   }
+  },
+  {
    "ticker": "2615.TW",
    "name": "WAN HAI LINES",
    "date": "2026-10-31",
@@ -103,6 +127,24 @@
    }
   },
   {
+   "ticker": "2330.TW",
+   "name": "TAIWAN SEMICONDUCTOR MANUFACTUR",
+   "date": "2026-11-07",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.0,
+    "peg": 0.62
+   }
+  },
+  {
    "ticker": "9939.TW",
    "name": "TAIWAN HON CHUAN ENTERPRISE",
    "date": "2026-10-31",
@@ -118,24 +160,6 @@
    "badges": {
     "dilution_pct": 0.0,
     "peg": 0.64
-   }
-  },
-  {
-   "ticker": "2330.TW",
-   "name": "TAIWAN SEMICONDUCTOR MANUFACTUR",
-   "date": "2026-10-31",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.66
    }
   },
   {
@@ -352,24 +376,6 @@
    "badges": {
     "dilution_pct": -0.8,
     "peg": 1.45
-   }
-  },
-  {
-   "ticker": "2395.TW",
-   "name": "ADVANTECH CO LTD",
-   "date": "2026-10-31",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": false,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.3,
-    "peg": 1.55
    }
   }
  ]
