@@ -1,0 +1,13 @@
+id: 92e932694e-qqq-45m-liquidity-pool-reversal
+name: QQQ 45m liquidity pool reversal
+name_fa: برگشت از استخر نقدینگی روی نمودار ۴۵ دقیقه‌ای QQQ
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xpgdee/questions_about_backtesting/
+claim: '«بک‌تست TradingView روی نمودار ۴۵ دقیقه‌ای QQQ در ۳۶۵ روز گذشته: سرمایه از ۱۰٬۰۰۰ به ۱۰٬۷۰۸ دلار، سود کل +۷٫۰۹٪، بیشترین افت ۱٫۱۷٪، ۳۳ از ۴۱ معامله سودده (۸۰٫۴۹٪)، ضریب سود ۳٫۶۵۸»'
+claimed_return: +7.09% in 365 days, 80.49% win rate, PF 3.658
+added: '2026-11-07'
+status: not_testable
+asset_class: etf
+symbols:
+- QQQ
+reason_not_testable: نمودار ۴۵ دقیقه‌ای است و «استخر نقدینگی»، «ساختار داخلی» و هم‌جهتی با تایم‌فریم بالاتر قضاوت تصویری‌اند و عدد مشخصی ندارند

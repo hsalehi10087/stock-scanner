@@ -1,0 +1,13 @@
+id: eccb7707d3-nifty-itm-500-pivot-option-buying
+name: NIFTY ITM 500 pivot option buying
+name_fa: ربات خرید آپشن ITM نیفتی بر پایه‌ی پیوت
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/IndiaAlgoTrading/comments/1xp84w1/algorithm_updated_post_4_last_for_this_year/
+claim: «ربات ITM 500 با ۲ لات وارد شد؛ یک لات در ۲٫۳۳ برابر پریمیوم (بیش از ۱۶٬۰۰۰ روپیه) فروخته شد و لات دوم تا سررسید یا تغییر محدوده‌ی پیوت می‌ماند؛ در ۱۱ سال بک‌تست این دومین معامله‌ی پرسود از ۱۵۳۶ معامله بود»
+claimed_return: 2.33x premium on first lot; 1536 trades in 11 years
+added: '2026-11-07'
+status: not_testable
+asset_class: option
+symbols:
+- ^NSEI
+reason_not_testable: قانون ورود پیوت دقیق گفته نشده و آپشن هفتگی نیفتی داده‌ی تاریخی ندارد

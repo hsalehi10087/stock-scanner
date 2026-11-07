@@ -1,0 +1,13 @@
+id: c1c2092d61-kalshi-btc-15m-rsi-1m
+name: Kalshi BTC 15m RSI cross
+name_fa: قرارداد ۱۵ دقیقه‌ای بیت‌کوین در Kalshi با RSI یک‌دقیقه‌ای
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xpgnw4/i_tested_100_versions_of_a_kalshi_15_minute_btc/
+claim: «خرید ۱۰ قرارداد YES وقتی RSI چهارده‌دوره‌ای یک‌دقیقه‌ای از ۶۰ بالا برود و RSI پنج‌دقیقه‌ای بالای ۵۰ باشد (و برعکس برای NO)؛ هر ۱۰۰ نسخه سود خالص مثبت داشتند، بهترین +۳۱۵٫۸۸ دلار با شارپ ۱٫۰۲ و نرخ برد ۵۸٫۷۰٪، میانگین +۲۰۶٫۲۰ دلار»
+claimed_return: +$315.88 best of 100 variants, 58.70% win rate
+added: '2026-11-07'
+status: not_testable
+asset_class: crypto
+symbols:
+- BTC-USD
+reason_not_testable: به کندل یک‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست

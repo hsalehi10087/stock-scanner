@@ -1,0 +1,13 @@
+id: 972dae5f61-spy-cipher-b-trendline-exit
+name: SPY Cipher B divergence trendline exit
+name_fa: خروج از بازار با خط روند و واگرایی Cipher B روی SPY
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xpgf8r/identified_the_crash_and_sold_all_my_trading/
+claim: «همه‌ی معاملات را ۲۸ اکتبر، یک روز پیش از ریزش، بستم و سود از ابتدای سال +۴۷٪ شد؛ فقط با VMC Cipher B و خط روند روی نمودار ۲ ساعته»
+claimed_return: +47% YTD
+added: '2026-11-07'
+status: not_testable
+asset_class: etf
+symbols:
+- SPY
+reason_not_testable: رسم خط روند قضاوت تصویری است و اندیکاتور VMC Cipher B در موتور نیست؛ نمودار ۲ ساعته

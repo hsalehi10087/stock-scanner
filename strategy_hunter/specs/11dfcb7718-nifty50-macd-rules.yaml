@@ -1,0 +1,13 @@
+id: 11dfcb7718-nifty50-macd-rules
+name: MACD rules on 43 NIFTY 50 stocks
+name_fa: آزمون قانون‌های MACD روی ۴۳ سهم نیفتی ۵۰
+source: medium/algorithmic-trading
+source_url: https://medium.com/@Kryptera/the-indicator-everyone-trusts-lost-the-race-backtesting-macd-on-43-nifty-50-stocks-b103eab84ccb?source=rss------algorithmic_trading-5
+claim: «قانون هیستوگرام در ۶۴٪ معاملات برد و باز هم به‌زحمت سود کرد؛ «بدترین» قانون ۶۰٪ معاملاتش را باخت و اول شد»
+claimed_return: 64% win rate (histogram rule)
+added: '2026-11-07'
+status: not_testable
+asset_class: stock
+symbols:
+- RELIANCE.NS
+reason_not_testable: متن کامل مقاله در دسترس نبود؛ قوانین MACD، دوره‌ها، خروج و فهرست سهم‌ها معلوم نیست

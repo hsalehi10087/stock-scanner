@@ -1,0 +1,13 @@
+id: 6c6dcab160-oanda-6-forward-tests-orb
+name: 6 frozen-rule forward tests (ORB, intraday momentum)
+name_fa: شش آزمون پیش‌رو با قوانین ثابت (شکست محدوده‌ی آغاز روز و مومنتوم درون‌روز)
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xprhrh/update_after_60_backtested_strategies_6_are_now/
+claim: '«۴۰ معامله‌ی بسته در ۶ آزمون، جمعاً +۲٫۲۴R؛ شکست محدوده‌ی ۳۰ دقیقه‌ی اول روی شش شاخص: +۱۲٫۰۹R در ۱۸ معامله، ولی بک‌تست ۲۰۱۵ تا ۲۰۲۶: −۰٫۰۷۰R در هر معامله در ۶٬۷۳۶ معامله (رد شده)»'
+claimed_return: +2.24R over 40 paper trades; ORB +12.09R / 18 trades
+added: '2026-11-07'
+status: not_testable
+asset_class: etf
+symbols:
+- ^GSPC
+reason_not_testable: روش‌ها درون‌روزی‌اند (محدوده‌ی ۳۰ دقیقه‌ی اول و ۳۰ دقیقه‌ی آخر روز) و با کندل روزانه یا ساعتی ساخته نمی‌شوند؛ قوانین بقیه‌ی آزمون‌ها هم در متن کامل نیست

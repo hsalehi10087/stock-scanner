@@ -1,0 +1,13 @@
+id: f658a915f2-spx-0dte-straddle-credit-spread
+name: SPX 0DTE straddle-sized credit spread
+name_fa: اسپرد اعتباری ۰DTE روی SPX در جهت حرکت صبح
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xpeq9d/spx_0dte_credit_spread_in_the_direction_of_the/
+claim: '«ساعت ۱۰:۳۰ اگر SPX بالای بازگشایی بود، اسپرد پوت اعتباری با فاصله‌ی ۱٫۲۵ برابر استرادل بفروش (و برعکس)، تا تسویه نگه دار؛ بک‌تست نوامبر ۲۰۲۲ تا نوامبر ۲۰۲۶: بازده کل ۵۲٫۴٪ (۱۱٫۱٪ در سال)، بیشترین افت ۷٫۶٪، ۷۰۲ معامله»'
+claimed_return: +52.4% total (11.1% CAGR), max DD 7.6%, 702 trades
+added: '2026-11-07'
+status: not_testable
+asset_class: option
+symbols:
+- ^GSPC
+reason_not_testable: فروش آپشن ۰DTE است و به داده‌ی دقیقه‌ای و قیمت تاریخی آپشن نیاز دارد
