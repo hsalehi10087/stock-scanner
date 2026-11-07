@@ -2,7 +2,10 @@ name: ⚡ US intraday scan — hourly while the market is open
 
 on:
   schedule:
-    - cron: '50 13-20 * * 1-5'   # هر ساعت؛ خود اسکریپت فقط بین ۹:۴۵ تا ۱۶:۱۰ نیویورک کار می‌کند (تابستان و زمستان)
+    # GitHub اجرای زمان‌بندی‌شده را گاهی چند ساعت دیر شروع می‌کند؛ پس هر اجرا یک حلقه‌ی طولانی است که
+    # تا پایان بازار هر ساعت در دقیقه‌ی ۵۰ اسکن می‌کند (scripts/hourly_loop.py). دومی اگر اولی تمام شد ادامه می‌دهد.
+    - cron: '25 13 * * 1-5'
+    - cron: '25 18 * * 1-5'
   workflow_dispatch:
     inputs:
       force:
@@ -24,7 +27,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,7 +44,7 @@ jobs:
           PYTHONWARNINGS: ignore
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"
-          if [ "${{ github.event.inputs.force }}" = "yes" ]; then python3 market_intel/intraday_scan.py --force; else python3 market_intel/intraday_scan.py; fi
+          if [ "${{ github.event.inputs.force }}" = "yes" ]; then python3 market_intel/intraday_scan.py --force; else python3 scripts/hourly_loop.py 50 python3 market_intel/intraday_scan.py; fi
       - name: Save state
         if: always()
         run: |
