@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T20:58:52+00:00",
+ "updated": "2026-11-07T13:58:07+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -102,6 +102,22 @@
    "status": "not_testable",
    "reason_not_testable": "معامله‌ی فرکانس بالا (HFT) که داده‌ی تیک و دفتر سفارش می‌خواهد؛ هیچ قانون معامله‌ای گفته نشده",
    "verdict": "غیرقابل آزمون: معامله‌ی فرکانس بالا (HFT) که داده‌ی تیک و دفتر سفارش می‌خواهد؛ هیچ قانون معامله‌ای گفته نشده"
+  },
+  "11dfcb7718-nifty50-macd-rules": {
+   "name": "MACD rules on 43 NIFTY 50 stocks",
+   "name_fa": "آزمون قانون‌های MACD روی ۴۳ سهم نیفتی ۵۰",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/the-indicator-everyone-trusts-lost-the-race-backtesting-macd-on-43-nifty-50-stocks-b103eab84ccb?source=rss------algorithmic_trading-5",
+   "claim": "«قانون هیستوگرام در ۶۴٪ معاملات برد و باز هم به‌زحمت سود کرد؛ «بدترین» قانون ۶۰٪ معاملاتش را باخت و اول شد»",
+   "claimed_return": "64% win rate (histogram rule)",
+   "asset_class": "stock",
+   "symbols": [
+    "RELIANCE.NS"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ قوانین MACD، دوره‌ها، خروج و فهرست سهم‌ها معلوم نیست",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ قوانین MACD، دوره‌ها، خروج و فهرست سهم‌ها معلوم نیست"
   },
   "143c5c2124-morning-momentum-pop": {
    "name": "Morning Momentum Pop (AI day-trading)",
@@ -264,34 +280,34 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.15,
+    "cagr": -5.2,
     "sharpe": -0.12,
-    "max_dd": -83.22,
-    "total": -68.84
+    "max_dd": -83.41,
+    "total": -69.22
    },
    "in_sample": {
-    "cagr": -8.78,
+    "cagr": -8.85,
     "sharpe": -0.27,
-    "max_dd": -78.62,
-    "total": -75.81
+    "max_dd": -78.86,
+    "total": -76.09
    },
    "out_sample": {
-    "cagr": 3.71,
+    "cagr": 3.7,
     "sharpe": 0.28,
     "max_dd": -33.52,
-    "total": 27.27
+    "total": 27.14
    },
    "buyhold_full": {
-    "cagr": 5.31,
+    "cagr": 5.32,
     "sharpe": 0.32,
     "max_dd": -72.68,
-    "total": 213.13
+    "total": 213.44
    },
    "buyhold_out_sample": {
-    "cagr": 2.41,
+    "cagr": 2.42,
     "sharpe": 0.23,
     "max_dd": -60.81,
-    "total": 17.04
+    "total": 17.15
    },
    "trades": 633,
    "win_rate": 54.0,
@@ -300,7 +316,7 @@
    "period": "2004-10-08 → 2026-11-06",
    "oos_start": "2020-03-23",
    "forward_days": 10,
-   "forward_usd": 923.42,
+   "forward_usd": 922.5,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
   },
   "28fe8c88b5-sp500-10-strongest": {
@@ -424,38 +440,38 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.0,
-    "sharpe": 0.59,
+    "cagr": 3.16,
+    "sharpe": 0.63,
     "max_dd": -13.27,
-    "total": 171.28
+    "total": 185.58
    },
    "in_sample": {
-    "cagr": 3.47,
-    "sharpe": 0.68,
+    "cagr": 3.7,
+    "sharpe": 0.74,
     "max_dd": -13.27,
-    "total": 123.91
+    "total": 135.71
    },
    "out_sample": {
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.16
+    "total": 21.15
    },
    "buyhold_full": {
     "cagr": 10.65,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 2936.46
+    "total": 2935.3
    },
    "buyhold_out_sample": {
-    "cagr": 14.85,
+    "cagr": 14.84,
     "sharpe": 0.86,
     "max_dd": -33.72,
-    "total": 306.14
+    "total": 305.98
    },
    "trades": 91,
-   "win_rate": 80.2,
-   "avg_trade_pct": 1.13,
+   "win_rate": 81.3,
+   "avg_trade_pct": 1.18,
    "exposure": 0.06,
    "period": "1993-02-01 → 2026-11-06",
    "oos_start": "2016-09-15",
@@ -492,43 +508,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.4,
-    "sharpe": 0.5,
+    "cagr": 10.21,
+    "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 292.49
+    "total": 283.29
    },
    "in_sample": {
-    "cagr": 8.21,
-    "sharpe": 0.43,
+    "cagr": 7.97,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 114.71
+    "total": 110.03
    },
    "out_sample": {
-    "cagr": 15.93,
+    "cagr": 15.88,
     "sharpe": 0.63,
     "max_dd": -42.23,
-    "total": 84.7
+    "total": 84.39
    },
    "buyhold_full": {
-    "cagr": 25.07,
+    "cagr": 25.05,
     "sharpe": 0.77,
     "max_dd": -76.74,
-    "total": 2103.69
+    "total": 2099.98
    },
    "buyhold_out_sample": {
-    "cagr": 38.35,
+    "cagr": 38.29,
     "sharpe": 0.98,
     "max_dd": -47.44,
-    "total": 284.71
+    "total": 284.06
    },
-   "trades": 94,
-   "win_rate": 71.3,
+   "trades": 93,
+   "win_rate": 71.0,
    "avg_trade_pct": 2.0,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-11-06",
    "oos_start": "2022-09-08",
    "forward_days": 11,
-   "forward_usd": 941.94,
+   "forward_usd": 940.36,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "40f0082a54-sp500-2x-golden-cross": {
@@ -565,7 +581,7 @@
     "cagr": 9.22,
     "sharpe": 0.78,
     "max_dd": -21.98,
-    "total": 1858.85
+    "total": 1858.11
    },
    "in_sample": {
     "cagr": 8.55,
@@ -577,19 +593,19 @@
     "cagr": 10.89,
     "sharpe": 0.89,
     "max_dd": -21.98,
-    "total": 184.75
+    "total": 184.64
    },
    "buyhold_full": {
     "cagr": 10.65,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 2936.46
+    "total": 2935.3
    },
    "buyhold_out_sample": {
-    "cagr": 14.85,
+    "cagr": 14.84,
     "sharpe": 0.86,
     "max_dd": -33.72,
-    "total": 306.14
+    "total": 305.98
    },
    "trades": 24,
    "win_rate": 62.5,
@@ -598,7 +614,7 @@
    "period": "1993-02-01 → 2026-11-06",
    "oos_start": "2016-09-15",
    "forward_days": 4,
-   "forward_usd": 978.02,
+   "forward_usd": 977.65,
    "verdict": "قبول"
   },
   "43a8d23608-mnq-5min-box-breakout": {
@@ -648,16 +664,16 @@
     "total": 33.99
    },
    "buyhold_full": {
-    "cagr": 7.99,
+    "cagr": 8.0,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 264.53
+    "total": 264.58
    },
    "buyhold_out_sample": {
     "cagr": 18.02,
     "sharpe": 0.96,
     "max_dd": -26.69,
-    "total": 130.75
+    "total": 130.78
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -729,7 +745,7 @@
     "cagr": 7.93,
     "sharpe": 0.69,
     "max_dd": -25.39,
-    "total": 1211.8
+    "total": 1211.3
    },
    "in_sample": {
     "cagr": 6.75,
@@ -738,22 +754,22 @@
     "total": 367.95
    },
    "out_sample": {
-    "cagr": 10.83,
+    "cagr": 10.82,
     "sharpe": 0.89,
     "max_dd": -24.43,
-    "total": 183.13
+    "total": 183.02
    },
    "buyhold_full": {
     "cagr": 10.65,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 2936.46
+    "total": 2935.3
    },
    "buyhold_out_sample": {
-    "cagr": 14.85,
+    "cagr": 14.84,
     "sharpe": 0.86,
     "max_dd": -33.72,
-    "total": 306.14
+    "total": 305.98
    },
    "trades": 102,
    "win_rate": 25.5,
@@ -762,7 +778,7 @@
    "period": "1993-02-01 → 2026-11-06",
    "oos_start": "2016-09-15",
    "forward_days": 9,
-   "forward_usd": 961.06,
+   "forward_usd": 960.7,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -824,6 +840,22 @@
    "status": "not_testable",
    "reason_not_testable": "سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است",
    "verdict": "غیرقابل آزمون: سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است"
+  },
+  "6c6dcab160-oanda-6-forward-tests-orb": {
+   "name": "6 frozen-rule forward tests (ORB, intraday momentum)",
+   "name_fa": "شش آزمون پیش‌رو با قوانین ثابت (شکست محدوده‌ی آغاز روز و مومنتوم درون‌روز)",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xprhrh/update_after_60_backtested_strategies_6_are_now/",
+   "claim": "«۴۰ معامله‌ی بسته در ۶ آزمون، جمعاً +۲٫۲۴R؛ شکست محدوده‌ی ۳۰ دقیقه‌ی اول روی شش شاخص: +۱۲٫۰۹R در ۱۸ معامله، ولی بک‌تست ۲۰۱۵ تا ۲۰۲۶: −۰٫۰۷۰R در هر معامله در ۶٬۷۳۶ معامله (رد شده)»",
+   "claimed_return": "+2.24R over 40 paper trades; ORB +12.09R / 18 trades",
+   "asset_class": "etf",
+   "symbols": [
+    "^GSPC"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "روش‌ها درون‌روزی‌اند (محدوده‌ی ۳۰ دقیقه‌ی اول و ۳۰ دقیقه‌ی آخر روز) و با کندل روزانه یا ساعتی ساخته نمی‌شوند؛ قوانین بقیه‌ی آزمون‌ها هم در متن کامل نیست",
+   "verdict": "غیرقابل آزمون: روش‌ها درون‌روزی‌اند (محدوده‌ی ۳۰ دقیقه‌ی اول و ۳۰ دقیقه‌ی آخر روز) و با کندل روزانه یا ساعتی ساخته نمی‌شوند؛ قوانین بقیه‌ی آزمون‌ها هم در متن کامل نیست"
   },
   "6e5773fb3d-nq-15min-orb": {
    "name": "NQ 15-minute opening range breakout",
@@ -1005,42 +1037,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.79,
+    "cagr": 10.78,
     "sharpe": 0.65,
     "max_dd": -26.31,
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.73,
+    "cagr": 12.71,
     "sharpe": 0.7,
     "max_dd": -26.31,
-    "total": 112.82
+    "total": 112.6
    },
    "out_sample": {
-    "cagr": 7.93,
-    "sharpe": 0.65,
+    "cagr": 6.37,
+    "sharpe": 0.55,
     "max_dd": -20.59,
-    "total": 22.9
+    "total": 18.15
    },
    "buyhold_full": {
-    "cagr": 24.02,
+    "cagr": 24.1,
     "sharpe": 0.68,
     "max_dd": -93.96,
-    "total": 594.06
+    "total": 598.73
    },
    "buyhold_out_sample": {
-    "cagr": -10.36,
-    "sharpe": 0.18,
+    "cagr": -11.44,
+    "sharpe": 0.16,
     "max_dd": -67.61,
-    "total": -25.57
+    "total": -27.97
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-06",
-   "oos_start": "2024-02-25",
-   "forward_days": 2,
+   "period": "2017-11-09 → 2026-11-07",
+   "oos_start": "2024-02-26",
+   "forward_days": 3,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1062,7 +1094,7 @@
     "cagr": 9.36,
     "sharpe": 0.79,
     "max_dd": -20.16,
-    "total": 1947.75
+    "total": 1946.97
    },
    "in_sample": {
     "cagr": 8.75,
@@ -1074,19 +1106,19 @@
     "cagr": 10.9,
     "sharpe": 0.9,
     "max_dd": -20.16,
-    "total": 185.03
+    "total": 184.93
    },
    "buyhold_full": {
     "cagr": 10.65,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 2936.46
+    "total": 2935.3
    },
    "buyhold_out_sample": {
-    "cagr": 14.85,
+    "cagr": 14.84,
     "sharpe": 0.86,
     "max_dd": -33.72,
-    "total": 306.14
+    "total": 305.98
    },
    "trades": 14,
    "win_rate": 92.9,
@@ -1095,7 +1127,7 @@
    "period": "1993-02-01 → 2026-11-06",
    "oos_start": "2016-09-15",
    "forward_days": 7,
-   "forward_usd": 952.43,
+   "forward_usd": 952.07,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -1156,6 +1188,22 @@
    "reason_not_testable": "فقط هر ۴ سال یک بار (سال‌های زوج غیر ریاست‌جمهوری) رخ می‌دهد؛ موتور شاخص ماه یا سال ندارد و با ۲ تا ۱۰ نمونه نتیجه‌ی آماری معنادار نمی‌شود",
    "verdict": "غیرقابل آزمون: فقط هر ۴ سال یک بار (سال‌های زوج غیر ریاست‌جمهوری) رخ می‌دهد؛ موتور شاخص ماه یا سال ندارد و با ۲ تا ۱۰ نمونه نتیجه‌ی آماری معنادار نمی‌شود"
   },
+  "92e932694e-qqq-45m-liquidity-pool-reversal": {
+   "name": "QQQ 45m liquidity pool reversal",
+   "name_fa": "برگشت از استخر نقدینگی روی نمودار ۴۵ دقیقه‌ای QQQ",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xpgdee/questions_about_backtesting/",
+   "claim": "«بک‌تست TradingView روی نمودار ۴۵ دقیقه‌ای QQQ در ۳۶۵ روز گذشته: سرمایه از ۱۰٬۰۰۰ به ۱۰٬۷۰۸ دلار، سود کل +۷٫۰۹٪، بیشترین افت ۱٫۱۷٪، ۳۳ از ۴۱ معامله سودده (۸۰٫۴۹٪)، ضریب سود ۳٫۶۵۸»",
+   "claimed_return": "+7.09% in 365 days, 80.49% win rate, PF 3.658",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "نمودار ۴۵ دقیقه‌ای است و «استخر نقدینگی»، «ساختار داخلی» و هم‌جهتی با تایم‌فریم بالاتر قضاوت تصویری‌اند و عدد مشخصی ندارند",
+   "verdict": "غیرقابل آزمون: نمودار ۴۵ دقیقه‌ای است و «استخر نقدینگی»، «ساختار داخلی» و هم‌جهتی با تایم‌فریم بالاتر قضاوت تصویری‌اند و عدد مشخصی ندارند"
+  },
   "94a3d9a5f8-gold-asian-15m-ifvg": {
    "name": "Gold Asian session 15m IFVG",
    "name_fa": "طلا با اولین IFVG پانزده‌دقیقه‌ای جلسه‌ی آسیا",
@@ -1171,6 +1219,22 @@
    "status": "not_testable",
    "reason_not_testable": "به کندل ۱۵ دقیقه‌ای و تشخیص الگوی IFVG نیاز دارد که با داده‌ی روزانه یا ساعتی و اندیکاتورهای مجاز ساخته نمی‌شود",
    "verdict": "غیرقابل آزمون: به کندل ۱۵ دقیقه‌ای و تشخیص الگوی IFVG نیاز دارد که با داده‌ی روزانه یا ساعتی و اندیکاتورهای مجاز ساخته نمی‌شود"
+  },
+  "972dae5f61-spy-cipher-b-trendline-exit": {
+   "name": "SPY Cipher B divergence trendline exit",
+   "name_fa": "خروج از بازار با خط روند و واگرایی Cipher B روی SPY",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xpgf8r/identified_the_crash_and_sold_all_my_trading/",
+   "claim": "«همه‌ی معاملات را ۲۸ اکتبر، یک روز پیش از ریزش، بستم و سود از ابتدای سال +۴۷٪ شد؛ فقط با VMC Cipher B و خط روند روی نمودار ۲ ساعته»",
+   "claimed_return": "+47% YTD",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "رسم خط روند قضاوت تصویری است و اندیکاتور VMC Cipher B در موتور نیست؛ نمودار ۲ ساعته",
+   "verdict": "غیرقابل آزمون: رسم خط روند قضاوت تصویری است و اندیکاتور VMC Cipher B در موتور نیست؛ نمودار ۲ ساعته"
   },
   "97d13133e7-spy-deep-pullback": {
    "name": "SPY deep pullback",
@@ -1303,31 +1367,31 @@
     "cagr": 3.71,
     "sharpe": 0.49,
     "max_dd": -18.15,
-    "total": 173.3
+    "total": 173.17
    },
    "in_sample": {
     "cagr": 3.93,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.69
+    "total": 110.68
    },
    "out_sample": {
-    "cagr": 3.19,
+    "cagr": 3.18,
     "sharpe": 0.47,
     "max_dd": -10.81,
-    "total": 29.72
+    "total": 29.66
    },
    "buyhold_full": {
     "cagr": 10.37,
     "sharpe": 0.5,
     "max_dd": -82.96,
-    "total": 1427.16
+    "total": 1426.44
    },
    "buyhold_out_sample": {
-    "cagr": 17.64,
+    "cagr": 17.63,
     "sharpe": 0.8,
     "max_dd": -35.12,
-    "total": 284.27
+    "total": 284.09
    },
    "trades": 54,
    "win_rate": 75.9,
@@ -1354,42 +1418,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.77,
+    "cagr": 66.75,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 86.22,
+    "cagr": 85.82,
     "sharpe": 1.45,
     "max_dd": -74.38,
-    "total": 19688.06
+    "total": 19357.55
    },
    "out_sample": {
-    "cagr": 32.13,
-    "sharpe": 1.0,
+    "cagr": 28.9,
+    "sharpe": 0.93,
     "max_dd": -35.7,
-    "total": 176.23
+    "total": 152.35
    },
    "buyhold_full": {
-    "cagr": 52.3,
+    "cagr": 52.29,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16474.32
+    "total": 16482.32
    },
    "buyhold_out_sample": {
-    "cagr": 35.47,
-    "sharpe": 0.89,
+    "cagr": 32.17,
+    "sharpe": 0.84,
     "max_dd": -53.06,
-    "total": 202.56
+    "total": 176.53
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-06",
-   "oos_start": "2023-03-17",
-   "forward_days": 12,
+   "period": "2014-09-17 → 2026-11-07",
+   "oos_start": "2023-03-18",
+   "forward_days": 13,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1423,6 +1487,22 @@
    "reason_not_testable": "روی کندل ۱ و ۱۵ دقیقه‌ای است و شرط‌ها (جهت کلی بازار، جابه‌جایی، هدف نقدینگی) قضاوت تصویری است؛ داده‌ی دقیقه‌ای چندساله نداریم",
    "verdict": "غیرقابل آزمون: روی کندل ۱ و ۱۵ دقیقه‌ای است و شرط‌ها (جهت کلی بازار، جابه‌جایی، هدف نقدینگی) قضاوت تصویری است؛ داده‌ی دقیقه‌ای چندساله نداریم"
   },
+  "c1c2092d61-kalshi-btc-15m-rsi-1m": {
+   "name": "Kalshi BTC 15m RSI cross",
+   "name_fa": "قرارداد ۱۵ دقیقه‌ای بیت‌کوین در Kalshi با RSI یک‌دقیقه‌ای",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xpgnw4/i_tested_100_versions_of_a_kalshi_15_minute_btc/",
+   "claim": "«خرید ۱۰ قرارداد YES وقتی RSI چهارده‌دوره‌ای یک‌دقیقه‌ای از ۶۰ بالا برود و RSI پنج‌دقیقه‌ای بالای ۵۰ باشد (و برعکس برای NO)؛ هر ۱۰۰ نسخه سود خالص مثبت داشتند، بهترین +۳۱۵٫۸۸ دلار با شارپ ۱٫۰۲ و نرخ برد ۵۸٫۷۰٪، میانگین +۲۰۶٫۲۰ دلار»",
+   "claimed_return": "+$315.88 best of 100 variants, 58.70% win rate",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "به کندل یک‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست",
+   "verdict": "غیرقابل آزمون: به کندل یک‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست"
+  },
   "c2271322da-qqq-acceleration-bands-dip": {
    "name": "QQQ acceleration bands dip buy",
    "name_fa": "خرید QQQ زیر باند پایینی «باندهای شتاب» و فروش در اولین برگشت",
@@ -1438,10 +1518,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 5.76,
+    "cagr": 5.75,
     "sharpe": 0.58,
     "max_dd": -19.5,
-    "total": 369.13
+    "total": 368.91
    },
    "in_sample": {
     "cagr": 6.09,
@@ -1450,22 +1530,22 @@
     "total": 213.62
    },
    "out_sample": {
-    "cagr": 4.98,
+    "cagr": 4.97,
     "sharpe": 0.51,
     "max_dd": -11.59,
-    "total": 49.59
+    "total": 49.52
    },
    "buyhold_full": {
     "cagr": 10.37,
     "sharpe": 0.5,
     "max_dd": -82.96,
-    "total": 1427.16
+    "total": 1426.44
    },
    "buyhold_out_sample": {
-    "cagr": 17.64,
+    "cagr": 17.63,
     "sharpe": 0.8,
     "max_dd": -35.12,
-    "total": 284.27
+    "total": 284.09
    },
    "trades": 195,
    "win_rate": 64.1,
@@ -1474,7 +1554,7 @@
    "period": "1999-03-10 → 2026-11-06",
    "oos_start": "2018-07-19",
    "forward_days": 8,
-   "forward_usd": 949.92,
+   "forward_usd": 949.47,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "c59688fc4a-qqq-mean-reversion-plus-trend": {
@@ -1687,6 +1767,22 @@
    "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ روی سبدی از سهام نزدک با حداکثر ۳ معامله‌ی هم‌زمان اجرا می‌شود",
    "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ روی سبدی از سهام نزدک با حداکثر ۳ معامله‌ی هم‌زمان اجرا می‌شود"
   },
+  "eccb7707d3-nifty-itm-500-pivot-option-buying": {
+   "name": "NIFTY ITM 500 pivot option buying",
+   "name_fa": "ربات خرید آپشن ITM نیفتی بر پایه‌ی پیوت",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/IndiaAlgoTrading/comments/1xp84w1/algorithm_updated_post_4_last_for_this_year/",
+   "claim": "«ربات ITM 500 با ۲ لات وارد شد؛ یک لات در ۲٫۳۳ برابر پریمیوم (بیش از ۱۶٬۰۰۰ روپیه) فروخته شد و لات دوم تا سررسید یا تغییر محدوده‌ی پیوت می‌ماند؛ در ۱۱ سال بک‌تست این دومین معامله‌ی پرسود از ۱۵۳۶ معامله بود»",
+   "claimed_return": "2.33x premium on first lot; 1536 trades in 11 years",
+   "asset_class": "option",
+   "symbols": [
+    "^NSEI"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "قانون ورود پیوت دقیق گفته نشده و آپشن هفتگی نیفتی داده‌ی تاریخی ندارد",
+   "verdict": "غیرقابل آزمون: قانون ورود پیوت دقیق گفته نشده و آپشن هفتگی نیفتی داده‌ی تاریخی ندارد"
+  },
   "ee02d103c4-spy-vwap-band-fade": {
    "name": "SPY VWAP band fade (5-min)",
    "name_fa": "معامله‌ی خلاف جهت بیرون‌زدن از باندهای VWAP روی SPY",
@@ -1716,6 +1812,22 @@
    "status": "not_testable",
    "reason_not_testable": "دو هشدار از سه هشدار به داده‌ی VIX (بالای صدک ۸۰ یک سال) نیاز دارد و موتور فقط داده‌ی یک نماد را می‌خواند؛ قانون ورود ۷۰٪ هم دقیق تعریف نشده",
    "verdict": "غیرقابل آزمون: دو هشدار از سه هشدار به داده‌ی VIX (بالای صدک ۸۰ یک سال) نیاز دارد و موتور فقط داده‌ی یک نماد را می‌خواند؛ قانون ورود ۷۰٪ هم دقیق تعریف نشده"
+  },
+  "f658a915f2-spx-0dte-straddle-credit-spread": {
+   "name": "SPX 0DTE straddle-sized credit spread",
+   "name_fa": "اسپرد اعتباری ۰DTE روی SPX در جهت حرکت صبح",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xpeq9d/spx_0dte_credit_spread_in_the_direction_of_the/",
+   "claim": "«ساعت ۱۰:۳۰ اگر SPX بالای بازگشایی بود، اسپرد پوت اعتباری با فاصله‌ی ۱٫۲۵ برابر استرادل بفروش (و برعکس)، تا تسویه نگه دار؛ بک‌تست نوامبر ۲۰۲۲ تا نوامبر ۲۰۲۶: بازده کل ۵۲٫۴٪ (۱۱٫۱٪ در سال)، بیشترین افت ۷٫۶٪، ۷۰۲ معامله»",
+   "claimed_return": "+52.4% total (11.1% CAGR), max DD 7.6%, 702 trades",
+   "asset_class": "option",
+   "symbols": [
+    "^GSPC"
+   ],
+   "added": "2026-11-07",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن ۰DTE است و به داده‌ی دقیقه‌ای و قیمت تاریخی آپشن نیاز دارد",
+   "verdict": "غیرقابل آزمون: فروش آپشن ۰DTE است و به داده‌ی دقیقه‌ای و قیمت تاریخی آپشن نیاز دارد"
   },
   "f7e1f24aa0-claude-renko-pnf-crypto": {
    "name": "Renko + Point&Figure crypto (1-min)",
