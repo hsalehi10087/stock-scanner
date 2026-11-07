@@ -12,13 +12,35 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: digest2
   cancel-in-progress: false
 
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.g.outputs.skip }}
+    steps:
+      - id: g
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # زمان‌بندی GitHub چند ساعت دیر اجرا می‌شود؛ یک کار زمان‌بندی‌شده‌ی Claude همین گردش‌کار را سر وقت اجرا می‌کند.
+          # اگر امروز آن اجرای سروقت انجام شده، این اجرای دیرکرده چیزی نمی‌فرستد.
+          skip=false
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            n=$(gh api "repos/${{ github.repository }}/actions/workflows/digest2.yml/runs?event=workflow_dispatch&created=>=$(date -u +%F)&per_page=20" \
+                 --jq '[.workflow_runs[]|select(.conclusion=="success" or .status=="in_progress" or .status=="queued")]|length')
+            [ "$n" -gt 0 ] && skip=true
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"; echo "skip=$skip"
+
   part:
+    needs: guard
+    if: needs.guard.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 240
     strategy:
@@ -84,8 +106,8 @@ jobs:
           for i in 1 2 3 4 5 6; do git pull --rebase -q && git push -q && break; sleep $((i * 7)); done
 
   send:
-    needs: part
-    if: always()
+    needs: [guard, part]
+    if: always() && needs.guard.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
