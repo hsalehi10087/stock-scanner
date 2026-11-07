@@ -35,7 +35,7 @@ HIST = os.path.join(OUT, 'history.csv')
 POOL = 30        # چند نامزد تکنیکال برتر به صافی بنیادی می‌روند
 MAX_SEND = 8     # حداکثر سیگنال در هر بازار در روز
 MIN_PROFIT_Q = 2   # دست‌کم این‌قدر فصل پیاپی افزایش سود خالص
-MIN_FUND = 2     # دست‌کم ۲ فیلتر بنیادی (صورت مالی، کن‌اسلیم، بافت، کیفیت رشد)
+MIN_FUND = 2     # دست‌کم ۲ از ۵ فیلتر بنیادی (صورت مالی، کن‌اسلیم، بافت، کیفیت رشد، سود ۲ فصل پیاپی)
 MAX_SEND_WEAK = 2  # وقتی شاخص همان بورس زیر میانگین ۵۰ روزه است، حداکثر ۲ سیگنال
 MAX_EXT = 0.20   # بیش از ۲۰٪ بالای میانگین ۵۰ روزه = داغ ← کنار
 MAX_RSI = 75     # RSI ۱۴ روزه بالای ۷۵ = داغ ← کنار
@@ -152,8 +152,6 @@ class Collector:
                 fu = {'passed': []}
             nu = fu.get('numbers') or {}
             streak = nu.get('profit_streak')
-            if streak is None or streak < MIN_PROFIT_Q:     # سود دست‌کم ۲ فصل پیاپی بالا نرفته (یا داده نیست) ← سیگنال نمی‌شود
-                continue
             try:
                 qs = Q.score(t, m)
             except Exception:
@@ -161,6 +159,8 @@ class Collector:
             passed = list(fu.get('passed') or [])
             if qs and qs['score'] >= 4:
                 passed.append('کیفیت رشد')
+            if streak is not None and streak >= MIN_PROFIT_Q:   # سود دست‌کم ۲ فصل پیاپی بالا رفته: یکی از فیلترهای بنیادی
+                passed.append('سود پیاپی')
             if len(passed) < MIN_FUND:
                 drop['fund'] += 1
                 continue
@@ -173,7 +173,7 @@ class Collector:
             price = float(C[t].dropna().iloc[-1])
             sent.append({'ticker': t, 'name': nm, 'price': round(price, 3), 'setups': st, 'tech_rank': round(rk, 3),
                          'fundamentals': passed, 'quality': Q.label(qs) if qs else '', 'profit_streak': streak,
-                         'profit_basis': nu.get('profit_basis', ''), 'profit_more': bool(streak >= 3),
+                         'profit_basis': nu.get('profit_basis', ''), 'profit_more': bool(streak is not None and streak >= 3),
                          'chart': CP.label(charts[t]), 'chart_score': charts[t]['score']})
             self.hist.loc[len(self.hist)] = [self.today, m, t, nm, round(price, 4), round(float(idx.dropna().iloc[-1]), 4),
                                              '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),
