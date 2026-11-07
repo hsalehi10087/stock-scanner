@@ -1,0 +1,62 @@
+{
+ "bot8": {
+  "full": {
+   "return_pct": -96.3,
+   "max_dd_pct": -98.0
+  },
+  "first_half": {
+   "return_pct": -77.8,
+   "max_dd_pct": -93.5
+  },
+  "second_half": {
+   "return_pct": -83.3,
+   "max_dd_pct": -89.2
+  },
+  "qqq": {
+   "return_pct": 55.4,
+   "max_dd_pct": -22.8
+  },
+  "trades": 145,
+  "win_rate_pct": 33.1,
+  "avg_trade_ret_pct": -4.5,
+  "exits": {
+   "STOP": 97,
+   "TRAIL": 36,
+   "EXPIRY": 12
+  },
+  "passed": false,
+  "start": "2024-02-05",
+  "end": "2026-11-06"
+ },
+ "large30": {
+  "full": {
+   "return_pct": -86.8,
+   "max_dd_pct": -99.4
+  },
+  "first_half": {
+   "return_pct": -68.8,
+   "max_dd_pct": -97.4
+  },
+  "second_half": {
+   "return_pct": -57.8,
+   "max_dd_pct": -94.9
+  },
+  "qqq": {
+   "return_pct": 55.4,
+   "max_dd_pct": -22.8
+  },
+  "trades": 223,
+  "win_rate_pct": 35.9,
+  "avg_trade_ret_pct": 4.7,
+  "exits": {
+   "STOP": 142,
+   "TRAIL": 59,
+   "EXPIRY": 22
+  },
+  "passed": false,
+  "start": "2024-02-05",
+  "end": "2026-11-06"
+ },
+ "verdict": "رد",
+ "note": "تصمیم بر اساس ۳۰ سهم بزرگ است؛ ۸ سهم ربات در اکتبر به‌خاطر رشد اخیرشان انتخاب شده‌اند و آزمون رویشان خوش‌بینانه است. قیمت اختیار با بلک‌شولز تقریب زده شده و فیلتر گزارش فصلی در آزمون نیست."
+}
