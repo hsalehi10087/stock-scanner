@@ -1,18 +1,42 @@
 {
  "market": "us",
- "date": "2026-10-31",
- "scored": 1970,
- "no_data": 30,
- "universe": 6943,
+ "date": "2026-11-07",
+ "scored": 2000,
+ "no_data": 0,
+ "universe": 6931,
  "liquid": 2000,
  "distribution": {
-  "0": 162,
-  "1": 555,
-  "2": 689,
-  "3": 410,
-  "4": 135,
-  "5": 19
+  "0": 164,
+  "1": 563,
+  "2": 694,
+  "3": 417,
+  "4": 141,
+  "5": 21
  },
+ "fives": [
+  "CRWD",
+  "TXN",
+  "VLO",
+  "MPC",
+  "UNP",
+  "SHEL",
+  "ROST",
+  "CSX",
+  "EOG",
+  "WAT",
+  "DXCM",
+  "CNQ",
+  "GWW",
+  "ROKU",
+  "NUE",
+  "OKE",
+  "CF",
+  "SU",
+  "DINO",
+  "FROG",
+  "NDSN"
+ ],
+ "dropped": [],
  "top": [
   {
    "ticker": "CF",
@@ -174,6 +198,24 @@
    "badges": {
     "dilution_pct": -6.5,
     "peg": 1.76
+   }
+  },
+  {
+   "ticker": "NDSN",
+   "name": "Nordson Corporation - Common Stock",
+   "date": "2026-11-07",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.77
    }
   },
   {
@@ -354,24 +396,6 @@
    "badges": {
     "dilution_pct": -4.1,
     "peg": 11.4
-   }
-  },
-  {
-   "ticker": "BP",
-   "name": "BP p.l.c. Common Stock",
-   "date": "2026-10-31",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -3.0,
-    "peg": 0.05
    }
   }
  ]
