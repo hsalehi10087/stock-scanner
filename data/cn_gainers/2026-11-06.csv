@@ -1,7 +1,7 @@
 ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
 688353.SS,华盛锂电,11.078119277954102,800.584987463957,313.20526187,34.777979450000004,2026-11-06,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
 601069.SS,西部黄金,13.458826401654411,313.20492965101926,584.39656044,141.43020049,2026-11-06,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
-688235.SS,百济神州,11.779810609559949,151.27968617472433,237.007,94.32,2026-11-06,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+688235.SS,百济神州,11.779810609559949,208.15677541833213,384.706,124.841,2026-11-06,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
 688813.SS,泰金新能,8.328831015712556,105.47471377648733,75.30740516,36.65044899,2026-11-06,2,3,⭐۲/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': None, 'analysts': None}"
 001393.SZ,维通利,13.349911485950038,46.38645979301009,113.32419953,77.4144,2026-11-06,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
 688809.SS,强一股份,14.40615664967515,34.10401931651045,150.05650487,111.89560584,2026-11-06,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
