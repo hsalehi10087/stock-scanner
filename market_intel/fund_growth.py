@@ -82,8 +82,9 @@ def main():
 
 def _main():
     token = os.getenv('TELEGRAM_BOT_TOKEN', '')
-    chat_ids = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip()]
-    if not token or not chat_ids:
+    chat_ids = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip() and c.strip() != 'none']
+    dry = 'none' in os.getenv('TELEGRAM_CHAT_ID', '')   # none = فقط ساخت و چاپ، بدون ارسال
+    if not token or (not chat_ids and not dry):
         print('❌ توکن یا شناسه‌ی چت تنظیم نشده', file=sys.stderr)
         return 1
 

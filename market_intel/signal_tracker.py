@@ -213,4 +213,6 @@ def summary_text(title, rows, since, unit_word):
     if len(bad):
         lines += ['', '<i>⚠️ این سهم‌ها در فهرست‌ها و میانگین نیامدند، چون بازدهشان به‌خاطر split یا داده‌ی ناقص قابل‌اعتماد نیست: '
                   + '، '.join(bad.ticker.head(12)) + '</i>']
-    return '\n'.join(lines)
+    out = '\n'.join(lines)
+    print('=== TRACK MESSAGE ===\n' + out + '\n=== END ===')
+    return out
