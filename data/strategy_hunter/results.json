@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T13:55:32+00:00",
+ "updated": "2026-11-08T19:52:20+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -595,7 +595,7 @@
     "cagr": 9.22,
     "sharpe": 0.78,
     "max_dd": -21.98,
-    "total": 1858.11
+    "total": 1858.1
    },
    "in_sample": {
     "cagr": 8.55,
@@ -1085,16 +1085,16 @@
     "total": 18.15
    },
    "buyhold_full": {
-    "cagr": 24.04,
+    "cagr": 24.02,
     "sharpe": 0.68,
     "max_dd": -93.96,
-    "total": 595.87
+    "total": 595.13
    },
    "buyhold_out_sample": {
-    "cagr": -11.56,
+    "cagr": -11.59,
     "sharpe": 0.16,
     "max_dd": -67.61,
-    "total": -28.26
+    "total": -28.34
    },
    "trades": 221,
    "win_rate": 51.6,
@@ -1471,7 +1471,7 @@
     "cagr": 3.93,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.68
+    "total": 110.69
    },
    "out_sample": {
     "cagr": 3.18,
@@ -1534,16 +1534,16 @@
     "total": 156.63
    },
    "buyhold_full": {
-    "cagr": 52.27,
+    "cagr": 52.28,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16470.67
+    "total": 16482.49
    },
    "buyhold_out_sample": {
-    "cagr": 32.76,
+    "cagr": 32.78,
     "sharpe": 0.85,
     "max_dd": -53.06,
-    "total": 181.03
+    "total": 181.23
    },
    "trades": 170,
    "win_rate": 40.0,
