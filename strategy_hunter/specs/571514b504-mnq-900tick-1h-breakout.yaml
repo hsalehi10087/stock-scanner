@@ -1,0 +1,12 @@
+id: 571514b504-mnq-900tick-1h-breakout
+name: MNQ 1H candle breakout on tick chart
+name_fa: شکست کندل یک‌ساعته‌ی MNQ روی نمودار تیکی
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xq6o33/big_wins_and_big_losses_how_did_you_stop_getting/
+claim: "«شکست کندل‌های یک‌ساعته روی نمودار ۹۰۰ تیکی MNQ، افزودن ۲ قرارداد بعد از ۸۰ تا ۱۰۰ تیک سود؛ این هفته حسابم را ۵ برابر کردم»"
+claimed_return: "5x account in one week"
+added: 2026-11-08
+status: not_testable
+asset_class: stock
+symbols: [NQ=F]
+reason_not_testable: "نمودار تیکی و تصمیم بر اساس دفتر سفارش و حجم؛ با داده‌ی روزانه یا ساعتی قابل بازسازی نیست"

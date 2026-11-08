@@ -1,0 +1,23 @@
+id: 88c6119200-qqq-sma200-tqqq-exit
+name: QQQ 200SMA timing for TQQQ
+name_fa: زمان‌بندی TQQQ با میانگین ۲۰۰ روزه‌ی QQQ
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/TQQQ/comments/1xoygpw/if_you_used_spy_200day_for_tqqqs_you_are_now_dead/
+claim: "«اگر وقتی QQQ زیر میانگین ۲۰۰ روزه بسته شد TQQQ را فروختی، از یک ریزش ۳۰ درصدی نجات پیدا کردی. اگر منتظر بسته‌شدن SPY زیر ۲۰۰ روزه ماندی، الان روی TQQQ در زیانی»"
+claimed_return: "avoided ~30% TQQQ drop"
+added: 2026-11-08
+status: implemented
+asset_class: etf
+symbols: [QQQ]
+timeframe: 1d
+start: '1999-03-10'
+notes: >-
+  ادعا درباره‌ی یک ریزش اخیر است، نه بازده بلندمدت. موتور فقط یک دارایی را می‌آزماید، پس سیگنال و معامله هر دو روی QQQ است
+  (در اصل معامله روی TQQQ با اهرم ۳ برابر؛ اهرم بازده و افت را بزرگ می‌کند ولی شارپ تقریباً همان است، پس این آزمون کیفیت زمان‌بندی را می‌سنجد).
+  فرض: ورود وقتی QQQ بالای SMA200 بسته شود و خروج وقتی زیر آن بسته شود (بدون باند). خروج = نقد. فقط خرید.
+  ایده‌ی «ورود با ۲۰۰ روزه و خروج با ۵۰ روزه» را نویسنده نیازموده و ادعایی برایش ندارد، پس اینجا آزموده نمی‌شود.
+indicators:
+  sma200: {fn: sma, n: 200}
+entry: close > sma200
+exit: close < sma200
+side: long

@@ -1,0 +1,12 @@
+id: e1eae742e4-fib-ote-15m-shift
+name: Fib 0.6-0.7 OTE with 15m shift
+name_fa: ورود در ناحیه‌ی فیبوناچی ۰٫۶ تا ۰٫۷ با تأیید ۱۵ دقیقه‌ای
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xqq06c/i_backtested_for_the_month_of_feb_only_4_entries/
+claim: "«فیبوناچی روی سقف و کف ساختاری، صبر تا اصلاح به ۰٫۶ تا ۰٫۷، تأیید تغییر ساختار در ۱۵ دقیقه؛ در فوریه فقط ۴ ورود با ۵۰٪ برد و میانگین ریسک به ریوارد ۱:۴»"
+claimed_return: "50% win rate, avg RR 1:4 (4 trades)"
+added: 2026-11-08
+status: not_testable
+asset_class: forex
+symbols: []
+reason_not_testable: "تشخیص سقف و کف ساختاری و «PD array» قضاوت تصویری است؛ نماد هم گفته نشده و فقط ۴ معامله"

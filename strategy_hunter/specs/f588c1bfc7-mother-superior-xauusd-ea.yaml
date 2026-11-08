@@ -1,0 +1,12 @@
+id: f588c1bfc7-mother-superior-xauusd-ea
+name: Mother Superior XAUUSD DCA EA
+name_fa: ربات میانگین‌کم‌کن طلا Mother Superior
+source: reddit/Forexstrategy
+source_url: https://www.reddit.com/r/Forexstrategy/comments/1xq8v5r/mother_superior_update_live_progress_through/
+claim: "«ربات MT5 با هشت ماژول روی XAUUSD، فاصله‌ی ورودهای اضافه بر پایه‌ی ATR و افزایش حجم در حرکت مخالف؛ رشد حساب ‎+34.51%‎ از ۱ اکتبر تا ۶ نوامبر»"
+claimed_return: "+34.51% (Oct 1 – Nov 6)"
+added: 2026-11-08
+status: not_testable
+asset_class: forex
+symbols: [GC=F]
+reason_not_testable: "ربات فروشی با قانون‌های منتشرنشده؛ میانگین‌کم‌کن چندپله‌ای درون‌روزی با موتور یک‌موقعیتی قابل آزمون نیست"
