@@ -1,373 +1,373 @@
 {
- "date": "2026-11-04",
+ "date": "2026-11-08",
  "items": [
   {
    "ticker": "فاراک",
    "date": "2026-10-28",
-   "ret_pct": 15.1,
-   "max_pct": 15.1,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 18.5,
+   "max_pct": 18.5,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "تایرا",
    "date": "2026-10-28",
-   "ret_pct": -0.3,
-   "max_pct": 0.8,
+   "ret_pct": 2.3,
+   "max_pct": 2.3,
    "min_pct": -2.6,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "ولکار",
    "date": "2026-10-28",
-   "ret_pct": 14,
-   "max_pct": 14,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 12.7,
+   "max_pct": 14.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "چفیبر",
    "date": "2026-10-28",
-   "ret_pct": -11.9,
-   "max_pct": 0,
-   "min_pct": -11.9,
-   "last_date": "20261104"
+   "ret_pct": -14.4,
+   "max_pct": 0.0,
+   "min_pct": -14.4,
+   "last_date": "20261107"
   },
   {
    "ticker": "بنیرو",
    "date": "2026-10-28",
-   "ret_pct": 3,
-   "max_pct": 3,
+   "ret_pct": 4.3,
+   "max_pct": 4.3,
    "min_pct": -4.8,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "اسیاتک",
    "date": "2026-10-28",
-   "ret_pct": -6.5,
-   "max_pct": 0,
+   "ret_pct": -4.4,
+   "max_pct": 0.0,
    "min_pct": -6.7,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "پارس",
    "date": "2026-10-28",
-   "ret_pct": 11.3,
-   "max_pct": 11.3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 14.4,
+   "max_pct": 14.4,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "وصندوق",
    "date": "2026-10-28",
-   "ret_pct": 2.4,
-   "max_pct": 2.4,
+   "ret_pct": 5.4,
+   "max_pct": 5.4,
    "min_pct": -2.9,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "فولاد",
    "date": "2026-10-28",
-   "ret_pct": 1.9,
-   "max_pct": 1.9,
+   "ret_pct": 4.8,
+   "max_pct": 4.8,
    "min_pct": -2.9,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "دتماد",
    "date": "2026-10-28",
-   "ret_pct": -4,
-   "max_pct": 0,
-   "min_pct": -5.6,
-   "last_date": "20261104"
+   "ret_pct": -6.1,
+   "max_pct": 0.0,
+   "min_pct": -6.1,
+   "last_date": "20261107"
   },
   {
    "ticker": "فایرا",
    "date": "2026-10-28",
-   "ret_pct": -2.1,
-   "max_pct": 0,
+   "ret_pct": 0.8,
+   "max_pct": 0.8,
    "min_pct": -7.6,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "پتایر",
    "date": "2026-10-28",
    "ret_pct": 6.6,
    "max_pct": 9.6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "فسپا",
    "date": "2026-11-02",
-   "ret_pct": -4.3,
-   "max_pct": 0,
+   "ret_pct": -2.9,
+   "max_pct": 0.0,
    "min_pct": -4.3,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "دارو",
    "date": "2026-11-02",
-   "ret_pct": 1,
-   "max_pct": 3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": -1.9,
+   "max_pct": 3.0,
+   "min_pct": -1.9,
+   "last_date": "20261107"
   },
   {
    "ticker": "دلر",
    "date": "2026-11-02",
-   "ret_pct": 1.5,
+   "ret_pct": -1.1,
    "max_pct": 2.7,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": -1.1,
+   "last_date": "20261107"
   },
   {
    "ticker": "کهمدا",
    "date": "2026-11-02",
-   "ret_pct": 5.9,
-   "max_pct": 5.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 8.9,
+   "max_pct": 8.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "فسازان",
    "date": "2026-11-02",
-   "ret_pct": -1.5,
+   "ret_pct": -1.1,
    "max_pct": 1.5,
    "min_pct": -1.5,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "فجر",
    "date": "2026-11-02",
-   "ret_pct": 5.9,
-   "max_pct": 5.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 9.0,
+   "max_pct": 9.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "دابور",
    "date": "2026-11-02",
-   "ret_pct": -2.6,
+   "ret_pct": -4.6,
    "max_pct": 0.3,
-   "min_pct": -2.6,
-   "last_date": "20261104"
+   "min_pct": -4.6,
+   "last_date": "20261107"
   },
   {
    "ticker": "دفارا",
    "date": "2026-11-02",
-   "ret_pct": 2.1,
-   "max_pct": 3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 5.1,
+   "max_pct": 5.1,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "کطبس",
    "date": "2026-11-02",
-   "ret_pct": 3.1,
+   "ret_pct": 1.8,
    "max_pct": 3.1,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "سرود",
    "date": "2026-11-02",
-   "ret_pct": 4.8,
-   "max_pct": 4.8,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 7.8,
+   "max_pct": 7.8,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "کساوه",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 9.2,
+   "max_pct": 9.2,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "دسینا",
    "date": "2026-11-02",
-   "ret_pct": -0.3,
-   "max_pct": 0,
-   "min_pct": -0.3,
-   "last_date": "20261104"
+   "ret_pct": -0.9,
+   "max_pct": 0.0,
+   "min_pct": -0.9,
+   "last_date": "20261107"
   },
   {
    "ticker": "کرازی",
    "date": "2026-11-02",
-   "ret_pct": 5.9,
-   "max_pct": 5.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 8.4,
+   "max_pct": 8.4,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "فخاس",
    "date": "2026-11-02",
-   "ret_pct": 5.3,
-   "max_pct": 5.3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 7.6,
+   "max_pct": 7.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "پاسا",
    "date": "2026-11-02",
-   "ret_pct": 4.8,
-   "max_pct": 4.8,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 6.6,
+   "max_pct": 6.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "شسینا",
    "date": "2026-11-02",
-   "ret_pct": 4.3,
+   "ret_pct": 1.9,
    "max_pct": 4.3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "کحافظ",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 6.5,
+   "max_pct": 6.5,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "غپینو",
    "date": "2026-11-02",
-   "ret_pct": 5.1,
-   "max_pct": 5.1,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 8.3,
+   "max_pct": 8.3,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "رتاپ",
    "date": "2026-11-02",
-   "ret_pct": -0.3,
-   "max_pct": 0,
+   "ret_pct": 0.9,
+   "max_pct": 0.9,
    "min_pct": -0.4,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "آلومینا",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 9.2,
+   "max_pct": 9.2,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "فرآور",
    "date": "2026-11-02",
-   "ret_pct": 1.9,
+   "ret_pct": -0.8,
    "max_pct": 2.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": -0.8,
+   "last_date": "20261107"
   },
   {
    "ticker": "فباهنر",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 7.8,
+   "max_pct": 7.8,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "غسالم",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 9.1,
+   "max_pct": 9.1,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "ثاخت",
    "date": "2026-11-02",
-   "ret_pct": 0.7,
-   "max_pct": 2.7,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 3.6,
+   "max_pct": 3.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "سکرد",
    "date": "2026-11-02",
-   "ret_pct": 4.6,
-   "max_pct": 4.6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 6.7,
+   "max_pct": 6.7,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "ساربیل",
    "date": "2026-11-02",
-   "ret_pct": 0,
+   "ret_pct": 2.5,
    "max_pct": 2.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "حتاید",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 9.1,
+   "max_pct": 9.1,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "امید",
    "date": "2026-11-02",
-   "ret_pct": -3.2,
-   "max_pct": 0,
+   "ret_pct": -0.5,
+   "max_pct": 0.0,
    "min_pct": -3.2,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "دسبحان",
    "date": "2026-11-02",
-   "ret_pct": -4.6,
-   "max_pct": 0,
+   "ret_pct": -4.2,
+   "max_pct": 0.0,
    "min_pct": -4.6,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "دیران",
    "date": "2026-11-02",
-   "ret_pct": -3.8,
-   "max_pct": 0,
-   "min_pct": -3.8,
-   "last_date": "20261104"
+   "ret_pct": -5.6,
+   "max_pct": 0.0,
+   "min_pct": -5.6,
+   "last_date": "20261107"
   },
   {
    "ticker": "داسوه",
    "date": "2026-11-02",
    "ret_pct": -5.4,
-   "max_pct": 0,
+   "max_pct": 0.0,
    "min_pct": -5.4,
-   "last_date": "20261104"
+   "last_date": "20261108"
   },
   {
    "ticker": "دالبر",
    "date": "2026-11-02",
-   "ret_pct": -0.1,
+   "ret_pct": 2.1,
    "max_pct": 2.4,
    "min_pct": -0.1,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "درازک",
    "date": "2026-11-02",
-   "ret_pct": 0.5,
+   "ret_pct": -2.1,
    "max_pct": 2.8,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": -2.1,
+   "last_date": "20261107"
   },
   {
    "ticker": "دلقما",
    "date": "2026-11-02",
-   "ret_pct": 0.5,
+   "ret_pct": 2.3,
    "max_pct": 2.7,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "دکیمی",
@@ -375,145 +375,287 @@
    "ret_pct": -0.1,
    "max_pct": 2.9,
    "min_pct": -0.1,
-   "last_date": "20261104"
+   "last_date": "20261108"
   },
   {
    "ticker": "دزهراوی",
    "date": "2026-11-02",
-   "ret_pct": 5.6,
-   "max_pct": 5.6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 8.7,
+   "max_pct": 8.7,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "شغدیر",
    "date": "2026-11-02",
-   "ret_pct": 5.6,
-   "max_pct": 5.6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 7.0,
+   "max_pct": 7.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "فنورد",
    "date": "2026-11-02",
-   "ret_pct": -2.3,
+   "ret_pct": 0.1,
    "max_pct": 0.6,
    "min_pct": -2.3,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "سپید",
    "date": "2026-11-02",
-   "ret_pct": 1.6,
-   "max_pct": 3,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 0.8,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "کیمیاتک",
    "date": "2026-11-02",
-   "ret_pct": 0.5,
+   "ret_pct": 2.1,
    "max_pct": 2.5,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "شاراک",
    "date": "2026-11-02",
-   "ret_pct": 3.6,
-   "max_pct": 3.6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 4.6,
+   "max_pct": 4.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "پی پاد",
    "date": "2026-11-02",
-   "ret_pct": 2.9,
+   "ret_pct": 2.5,
    "max_pct": 2.9,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "دپارس",
    "date": "2026-11-02",
-   "ret_pct": -1.5,
-   "max_pct": 0.4,
+   "ret_pct": 1.1,
+   "max_pct": 1.1,
    "min_pct": -1.5,
-   "last_date": "20261104"
+   "last_date": "20261107"
   },
   {
    "ticker": "کفپارس",
    "date": "2026-11-02",
-   "ret_pct": -4.3,
-   "max_pct": 0,
-   "min_pct": -4.3,
-   "last_date": "20261104"
+   "ret_pct": -4.8,
+   "max_pct": 0.0,
+   "min_pct": -4.8,
+   "last_date": "20261107"
   },
   {
    "ticker": "کمنگنز",
    "date": "2026-11-02",
-   "ret_pct": 6,
-   "max_pct": 6,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "ret_pct": 8.6,
+   "max_pct": 8.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "کنور",
    "date": "2026-11-02",
-   "ret_pct": 0.2,
+   "ret_pct": -2.1,
    "max_pct": 2.8,
-   "min_pct": 0,
-   "last_date": "20261104"
+   "min_pct": -2.1,
+   "last_date": "20261107"
   },
   {
    "ticker": "سبهان",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "آباد",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "بوعلی",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "اخابر",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "وبصادر",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "حفاری",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 1.8,
+   "max_pct": 1.8,
+   "min_pct": 0.0,
+   "last_date": "20261108"
   },
   {
    "ticker": "داترا",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "خراسان",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "ثامید",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 2.3,
+   "max_pct": 2.3,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   },
   {
    "ticker": "پکویر",
    "date": "2026-11-04",
-   "ret_pct": null
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "لخزر",
+   "date": "2026-11-04",
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "سقاین",
+   "date": "2026-11-04",
+   "ret_pct": -0.3,
+   "max_pct": 0.0,
+   "min_pct": -0.3,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "سیسکو",
+   "date": "2026-11-04",
+   "ret_pct": 2.7,
+   "max_pct": 2.7,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "شاملا",
+   "date": "2026-11-04",
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "کسرا",
+   "date": "2026-11-04",
+   "ret_pct": -1.5,
+   "max_pct": 0.0,
+   "min_pct": -1.5,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "تنوین",
+   "date": "2026-11-04",
+   "ret_pct": 1.9,
+   "max_pct": 1.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "جم پیلن",
+   "date": "2026-11-04",
+   "ret_pct": 2.7,
+   "max_pct": 2.7,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "سنیر",
+   "date": "2026-11-04",
+   "ret_pct": -1.7,
+   "max_pct": 0.0,
+   "min_pct": -1.7,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "کویر",
+   "date": "2026-11-04",
+   "ret_pct": 2.6,
+   "max_pct": 2.6,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "فپنتا",
+   "date": "2026-11-04",
+   "ret_pct": 2.7,
+   "max_pct": 2.7,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "سغرب",
+   "date": "2026-11-04",
+   "ret_pct": -0.2,
+   "max_pct": 0.0,
+   "min_pct": -0.2,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "شخارک",
+   "date": "2026-11-04",
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "قمرو",
+   "date": "2026-11-04",
+   "ret_pct": 3.0,
+   "max_pct": 3.0,
+   "min_pct": 0.0,
+   "last_date": "20261107"
+  },
+  {
+   "ticker": "فسبزوار",
+   "date": "2026-11-04",
+   "ret_pct": 2.9,
+   "max_pct": 2.9,
+   "min_pct": 0.0,
+   "last_date": "20261107"
   }
  ]
 }
