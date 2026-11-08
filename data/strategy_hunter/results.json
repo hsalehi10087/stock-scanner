@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T19:31:29+00:00",
+ "updated": "2026-11-08T13:55:32+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -177,6 +177,20 @@
    "reason_not_testable": "متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود و پارامترهای استوکاستیک و آستانه‌ها معلوم نیست؛ اطلاعات کافی نیست"
   },
+  "1b5644bd4b-martin-luk-episodic-pivot": {
+   "name": "Martin Luk episodic pivot ORB",
+   "name_fa": "روش شکست دامنه‌ی بازگشایی مارتین لوک",
+   "source": "reddit/swingtrading",
+   "source_url": "https://www.reddit.com/r/swingtrading/comments/1xqieam/how_to_trade_like_future_market_wizard_martin_luk/",
+   "claim": "«مارتین لوک برنده‌ی اول USIC با بازده تأییدشده‌ی ‎969.8%‎؛ بازده ۲۰۲۶ تا اوت ‎844.5%‎. ورود روی شکست دامنه‌ی بازگشایی یک‌دقیقه‌ای با حد ضرر ۳٪ و خروج پله‌ای طی چند روز»",
+   "claimed_return": "+969.8% (USIC 2025)",
+   "asset_class": "stock",
+   "symbols": [],
+   "added": "2026-11-08",
+   "status": "not_testable",
+   "reason_not_testable": "انتخاب سهم دستی است (خبر و حجم تاریخی) و ورود روی کندل یک‌دقیقه‌ای؛ قانون عددی کامل ندارد",
+   "verdict": "غیرقابل آزمون: انتخاب سهم دستی است (خبر و حجم تاریخی) و ورود روی کندل یک‌دقیقه‌ای؛ قانون عددی کامل ندارد"
+  },
   "1ed322a1b6-gld-pre-holiday-3day": {
    "name": "GLD 3 days before holiday",
    "name_fa": "خرید طلا (GLD) سه روز قبل از تعطیلی",
@@ -280,16 +294,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.2,
+    "cagr": -5.16,
     "sharpe": -0.12,
-    "max_dd": -83.41,
-    "total": -69.22
+    "max_dd": -83.22,
+    "total": -68.87
    },
    "in_sample": {
-    "cagr": -8.85,
+    "cagr": -8.78,
     "sharpe": -0.27,
-    "max_dd": -78.86,
-    "total": -76.09
+    "max_dd": -78.62,
+    "total": -75.81
    },
    "out_sample": {
     "cagr": 3.7,
@@ -508,16 +522,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.38,
-    "sharpe": 0.5,
+    "cagr": 10.25,
+    "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 291.83
+    "total": 285.39
    },
    "in_sample": {
-    "cagr": 8.21,
+    "cagr": 8.03,
     "sharpe": 0.43,
     "max_dd": -49.5,
-    "total": 114.71
+    "total": 111.18
    },
    "out_sample": {
     "cagr": 15.88,
@@ -539,8 +553,8 @@
    },
    "trades": 94,
    "win_rate": 71.3,
-   "avg_trade_pct": 2.0,
-   "exposure": 0.46,
+   "avg_trade_pct": 1.99,
+   "exposure": 0.47,
    "period": "2013-01-02 → 2026-11-06",
    "oos_start": "2022-09-08",
    "forward_days": 11,
@@ -794,6 +808,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست"
+  },
+  "571514b504-mnq-900tick-1h-breakout": {
+   "name": "MNQ 1H candle breakout on tick chart",
+   "name_fa": "شکست کندل یک‌ساعته‌ی MNQ روی نمودار تیکی",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xq6o33/big_wins_and_big_losses_how_did_you_stop_getting/",
+   "claim": "«شکست کندل‌های یک‌ساعته روی نمودار ۹۰۰ تیکی MNQ، افزودن ۲ قرارداد بعد از ۸۰ تا ۱۰۰ تیک سود؛ این هفته حسابم را ۵ برابر کردم»",
+   "claimed_return": "5x account in one week",
+   "asset_class": "stock",
+   "symbols": [
+    "NQ=F"
+   ],
+   "added": "2026-11-08",
+   "status": "not_testable",
+   "reason_not_testable": "نمودار تیکی و تصمیم بر اساس دفتر سفارش و حجم؛ با داده‌ی روزانه یا ساعتی قابل بازسازی نیست",
+   "verdict": "غیرقابل آزمون: نمودار تیکی و تصمیم بر اساس دفتر سفارش و حجم؛ با داده‌ی روزانه یا ساعتی قابل بازسازی نیست"
   },
   "587747d290-0dte-iron-condor-97pct": {
    "name": "0DTE iron condor trend filter",
@@ -1049,30 +1079,30 @@
     "total": 112.6
    },
    "out_sample": {
-    "cagr": 6.37,
-    "sharpe": 0.55,
+    "cagr": 6.36,
+    "sharpe": 0.54,
     "max_dd": -20.59,
     "total": 18.15
    },
    "buyhold_full": {
-    "cagr": 24.03,
+    "cagr": 24.04,
     "sharpe": 0.68,
     "max_dd": -93.96,
-    "total": 595.22
+    "total": 595.87
    },
    "buyhold_out_sample": {
-    "cagr": -11.6,
+    "cagr": -11.56,
     "sharpe": 0.16,
     "max_dd": -67.61,
-    "total": -28.33
+    "total": -28.26
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-07",
+   "period": "2017-11-09 → 2026-11-08",
    "oos_start": "2024-02-26",
-   "forward_days": 3,
+   "forward_days": 4,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1129,6 +1159,60 @@
    "forward_days": 7,
    "forward_usd": 952.07,
    "verdict": "رد: معامله‌ی کافی نیست"
+  },
+  "88c6119200-qqq-sma200-tqqq-exit": {
+   "name": "QQQ 200SMA timing for TQQQ",
+   "name_fa": "زمان‌بندی TQQQ با میانگین ۲۰۰ روزه‌ی QQQ",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/TQQQ/comments/1xoygpw/if_you_used_spy_200day_for_tqqqs_you_are_now_dead/",
+   "claim": "«اگر وقتی QQQ زیر میانگین ۲۰۰ روزه بسته شد TQQQ را فروختی، از یک ریزش ۳۰ درصدی نجات پیدا کردی. اگر منتظر بسته‌شدن SPY زیر ۲۰۰ روزه ماندی، الان روی TQQQ در زیانی»",
+   "claimed_return": "avoided ~30% TQQQ drop",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ"
+   ],
+   "added": "2026-11-08",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 7.27,
+    "sharpe": 0.5,
+    "max_dd": -54.29,
+    "total": 595.27
+   },
+   "in_sample": {
+    "cagr": 4.82,
+    "sharpe": 0.37,
+    "max_dd": -54.29,
+    "total": 148.64
+   },
+   "out_sample": {
+    "cagr": 13.14,
+    "sharpe": 0.78,
+    "max_dd": -23.21,
+    "total": 178.23
+   },
+   "buyhold_full": {
+    "cagr": 10.37,
+    "sharpe": 0.5,
+    "max_dd": -82.96,
+    "total": 1426.44
+   },
+   "buyhold_out_sample": {
+    "cagr": 17.63,
+    "sharpe": 0.8,
+    "max_dd": -35.12,
+    "total": 284.09
+   },
+   "trades": 94,
+   "win_rate": 24.5,
+   "avg_trade_pct": 2.89,
+   "exposure": 0.73,
+   "period": "1999-03-10 → 2026-11-06",
+   "oos_start": "2018-07-19",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "قبول"
   },
   "8b0312fa04-turtle-26-markets": {
    "name": "Original Turtle rules on 26 markets",
@@ -1266,6 +1350,20 @@
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار «ترس» و «روند صعودی» و قانون خروج مشخص نیست"
   },
+  "9a9fd71297-return-stacking-1968": {
+   "name": "Return stacking portfolio since 1968",
+   "name_fa": "سبد انباشت بازده از ۱۹۶۸",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/LETFs/comments/1xlg11h/return_stacking_part_45_my_final_portfolio_back/",
+   "claim": "«آوریل ۱۹۶۸ تا سپتامبر ۲۰۲۶ پس از مالیات: ‎16.0%‎ در سال در حالت میانی (‎14.7%‎ کف، ‎18.7%‎ سقف) در برابر ‎10.8%‎ برای SPY؛ بیشترین افت ‎−41.6%‎ در برابر ‎−55.1%‎»",
+   "claimed_return": "16.0%/yr after tax, max DD -41.6%",
+   "asset_class": null,
+   "symbols": null,
+   "added": "2026-11-08",
+   "status": "not_testable",
+   "reason_not_testable": "سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ بیشتر دوره با داده‌ی شبیه‌سازی‌شده ساخته شده",
+   "verdict": "غیرقابل آزمون: سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ بیشتر دوره با داده‌ی شبیه‌سازی‌شده ساخته شده"
+  },
   "9c1ae51d61-private-breakout-ib": {
    "name": "Private breakout strategy",
    "name_fa": "روش شکست قیمت (قانون‌ها مخفی)",
@@ -1373,7 +1471,7 @@
     "cagr": 3.93,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.69
+    "total": 110.68
    },
    "out_sample": {
     "cagr": 3.18,
@@ -1418,42 +1516,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.75,
+    "cagr": 66.74,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 85.82,
-    "sharpe": 1.45,
+    "cagr": 86.63,
+    "sharpe": 1.46,
     "max_dd": -74.38,
-    "total": 19357.55
+    "total": 20131.63
    },
    "out_sample": {
-    "cagr": 28.9,
-    "sharpe": 0.93,
+    "cagr": 29.49,
+    "sharpe": 0.95,
     "max_dd": -35.7,
-    "total": 152.35
+    "total": 156.63
    },
    "buyhold_full": {
     "cagr": 52.27,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16449.3
+    "total": 16470.67
    },
    "buyhold_out_sample": {
-    "cagr": 32.1,
-    "sharpe": 0.84,
+    "cagr": 32.76,
+    "sharpe": 0.85,
     "max_dd": -53.06,
-    "total": 175.98
+    "total": 181.03
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-07",
-   "oos_start": "2023-03-18",
-   "forward_days": 13,
+   "period": "2014-09-17 → 2026-11-08",
+   "oos_start": "2023-03-19",
+   "forward_days": 14,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1705,6 +1803,20 @@
    "reason_not_testable": "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست",
    "verdict": "غیرقابل آزمون: به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
   },
+  "e1eae742e4-fib-ote-15m-shift": {
+   "name": "Fib 0.6-0.7 OTE with 15m shift",
+   "name_fa": "ورود در ناحیه‌ی فیبوناچی ۰٫۶ تا ۰٫۷ با تأیید ۱۵ دقیقه‌ای",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xqq06c/i_backtested_for_the_month_of_feb_only_4_entries/",
+   "claim": "«فیبوناچی روی سقف و کف ساختاری، صبر تا اصلاح به ۰٫۶ تا ۰٫۷، تأیید تغییر ساختار در ۱۵ دقیقه؛ در فوریه فقط ۴ ورود با ۵۰٪ برد و میانگین ریسک به ریوارد ۱:۴»",
+   "claimed_return": "50% win rate, avg RR 1:4 (4 trades)",
+   "asset_class": "forex",
+   "symbols": [],
+   "added": "2026-11-08",
+   "status": "not_testable",
+   "reason_not_testable": "تشخیص سقف و کف ساختاری و «PD array» قضاوت تصویری است؛ نماد هم گفته نشده و فقط ۴ معامله",
+   "verdict": "غیرقابل آزمون: تشخیص سقف و کف ساختاری و «PD array» قضاوت تصویری است؛ نماد هم گفته نشده و فقط ۴ معامله"
+  },
   "e4d9322c8f-dividend-stock-naked-puts": {
    "name": "Naked puts on dividend stocks",
    "name_fa": "فروش پوت بدون پوشش روی سهام سود‌ده",
@@ -1796,6 +1908,22 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم",
    "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم"
+  },
+  "f588c1bfc7-mother-superior-xauusd-ea": {
+   "name": "Mother Superior XAUUSD DCA EA",
+   "name_fa": "ربات میانگین‌کم‌کن طلا Mother Superior",
+   "source": "reddit/Forexstrategy",
+   "source_url": "https://www.reddit.com/r/Forexstrategy/comments/1xq8v5r/mother_superior_update_live_progress_through/",
+   "claim": "«ربات MT5 با هشت ماژول روی XAUUSD، فاصله‌ی ورودهای اضافه بر پایه‌ی ATR و افزایش حجم در حرکت مخالف؛ رشد حساب ‎+34.51%‎ از ۱ اکتبر تا ۶ نوامبر»",
+   "claimed_return": "+34.51% (Oct 1 – Nov 6)",
+   "asset_class": "forex",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-11-08",
+   "status": "not_testable",
+   "reason_not_testable": "ربات فروشی با قانون‌های منتشرنشده؛ میانگین‌کم‌کن چندپله‌ای درون‌روزی با موتور یک‌موقعیتی قابل آزمون نیست",
+   "verdict": "غیرقابل آزمون: ربات فروشی با قانون‌های منتشرنشده؛ میانگین‌کم‌کن چندپله‌ای درون‌روزی با موتور یک‌موقعیتی قابل آزمون نیست"
   },
   "f5c0a1543a-qqq-vix-riskoff-ladder": {
    "name": "QQQ VIX risk-off ladder",
