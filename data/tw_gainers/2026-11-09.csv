@@ -1,0 +1,3 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+1558.TW,伸興,11.004784688995217,302.90309390759165,206.927,51.359,2026-11-09,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+6446.TW,藥華藥,10.504201680672276,203.99050286512121,2529.964,832.251,2026-11-09,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
