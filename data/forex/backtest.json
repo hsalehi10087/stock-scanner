@@ -1,5 +1,5 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "split": "2021-04-27",
  "rules": {
   "follow_flow": {
@@ -11,7 +11,7 @@
     "hit": 48.9
    },
    "test": {
-    "cagr": -1.6,
+    "cagr": -1.7,
     "max_dd": -10.7,
     "sharpe": -0.45,
     "weeks": 288,
@@ -20,7 +20,7 @@
    "full": {
     "cagr": -1.2,
     "max_dd": -22.4,
-    "sharpe": -0.23,
+    "sharpe": -0.24,
     "weeks": 961,
     "hit": 47.8
    }
@@ -61,14 +61,14 @@
     "max_dd": -1.4,
     "sharpe": 0.39,
     "weeks": 288,
-    "hit": 18.1
+    "hit": 18.4
    },
    "full": {
     "cagr": -0.0,
     "max_dd": -4.3,
     "sharpe": 0.0,
     "weeks": 961,
-    "hit": 16.0
+    "hit": 16.1
    }
   },
   "flow_unless_extreme": {
@@ -103,16 +103,16 @@
     "hit": 50.1
    },
    "test": {
-    "cagr": -2.0,
+    "cagr": -1.9,
     "max_dd": -19.2,
-    "sharpe": -0.27,
+    "sharpe": -0.24,
     "weeks": 288,
     "hit": 46.5
    },
    "full": {
     "cagr": -0.4,
     "max_dd": -34.0,
-    "sharpe": -0.02,
+    "sharpe": -0.01,
     "weeks": 961,
     "hit": 49.0
    }
