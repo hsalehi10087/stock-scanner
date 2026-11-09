@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:52:20+00:00",
+ "updated": "2026-11-09T13:57:16+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -30,6 +30,27 @@
    "status": "not_testable",
    "reason_not_testable": "طول میانگین‌ها، تایم‌فریم و تعریف حد ضرر (1R) گفته نشده؛ اطلاعات کافی نیست",
    "verdict": "غیرقابل آزمون: طول میانگین‌ها، تایم‌فریم و تعریف حد ضرر (1R) گفته نشده؛ اطلاعات کافی نیست"
+  },
+  "05952ee40d-tqqq-sqqq-rsi-vol-regime": {
+   "name": "TQQQ/SQQQ RSI14 + QQQ vol regime mix",
+   "name_fa": "چرخش TQQQ/SQQQ با RSI۱۴ و رژیم نوسان QQQ",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/LETFs/comments/1xqq0ok/27_cagr_27_max_dd_tqqqsqqq_based_strategy_please/",
+   "claim": "«بازده سالانه ۲۷٫۷٪، بدترین افت ‎−27.5%‎، شارپ ۱٫۰۷؛ ۱۰ هزار دلار شد ۸٫۶۹ میلیون (مارس ۱۹۹۹ تا نوامبر ۲۰۲۶)» — RSI۱۴ روزه‌ی QQQ زیر ۳۰ ← TQQQ، بالای ۸۰ ← SQQQ، بقیه‌ی وقت سبد ۱/۳ TQQQ یا IEI و KMLM و طلا بسته به نوسان ۲۰ روزه‌ی QQQ (بالای ۳۵٪ / زیر ۲۵٪)",
+   "claimed_return": "27.7%/yr, max DD -27.5%",
+   "asset_class": "etf",
+   "symbols": [
+    "QQQ",
+    "TQQQ",
+    "SQQQ",
+    "KMLM",
+    "GLD",
+    "IEI"
+   ],
+   "added": "2026-11-09",
+   "status": "not_testable",
+   "reason_not_testable": "روش بین شش دارایی با وزن‌های مختلف می‌چرخد و هم‌زمان سبد نگه می‌دارد؛ موتور فقط یک دارایی را می‌آزماید. KMLM پیش از ۲۰۲۰ و TQQQ/SQQQ پیش از ۲۰۱۰ هم شبیه‌سازی‌شده‌اند",
+   "verdict": "غیرقابل آزمون: روش بین شش دارایی با وزن‌های مختلف می‌چرخد و هم‌زمان سبد نگه می‌دارد؛ موتور فقط یک دارایی را می‌آزماید. KMLM پیش از ۲۰۲۰ و TQQQ/SQQQ پیش از ۲۰۱۰ هم شبیه‌سازی‌شده‌اند"
   },
   "06da43d5d6-expiredoptions-csp-cc-leaps": {
    "name": "CSP + covered calls + LEAPS portfolio",
@@ -294,16 +315,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.16,
+    "cagr": -5.2,
     "sharpe": -0.12,
-    "max_dd": -83.22,
-    "total": -68.87
+    "max_dd": -83.41,
+    "total": -69.22
    },
    "in_sample": {
-    "cagr": -8.78,
+    "cagr": -8.85,
     "sharpe": -0.27,
-    "max_dd": -78.62,
-    "total": -75.81
+    "max_dd": -78.86,
+    "total": -76.09
    },
    "out_sample": {
     "cagr": 3.7,
@@ -469,7 +490,7 @@
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.16
+    "total": 21.15
    },
    "buyhold_full": {
     "cagr": 10.65,
@@ -522,16 +543,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.25,
-    "sharpe": 0.49,
+    "cagr": 10.07,
+    "sharpe": 0.48,
     "max_dd": -66.12,
-    "total": 285.39
+    "total": 276.99
    },
    "in_sample": {
-    "cagr": 8.03,
-    "sharpe": 0.43,
+    "cagr": 7.78,
+    "sharpe": 0.42,
     "max_dd": -49.5,
-    "total": 111.18
+    "total": 106.58
    },
    "out_sample": {
     "cagr": 15.88,
@@ -551,10 +572,10 @@
     "max_dd": -47.44,
     "total": 284.06
    },
-   "trades": 94,
-   "win_rate": 71.3,
-   "avg_trade_pct": 1.99,
-   "exposure": 0.47,
+   "trades": 93,
+   "win_rate": 71.0,
+   "avg_trade_pct": 1.98,
+   "exposure": 0.46,
    "period": "2013-01-02 → 2026-11-06",
    "oos_start": "2022-09-08",
    "forward_days": 11,
@@ -666,36 +687,36 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 0.95,
-    "sharpe": 0.15,
+    "cagr": 1.02,
+    "sharpe": 0.16,
     "max_dd": -28.05,
-    "total": 11.75
+    "total": 12.66
    },
    "out_sample": {
-    "cagr": 5.97,
-    "sharpe": 0.62,
+    "cagr": 5.91,
+    "sharpe": 0.61,
     "max_dd": -14.57,
-    "total": 33.99
+    "total": 33.62
    },
    "buyhold_full": {
-    "cagr": 8.0,
-    "sharpe": 0.53,
+    "cagr": 8.08,
+    "sharpe": 0.54,
     "max_dd": -44.36,
-    "total": 264.58
+    "total": 269.43
    },
    "buyhold_out_sample": {
-    "cagr": 18.02,
-    "sharpe": 0.96,
+    "cagr": 18.27,
+    "sharpe": 0.97,
     "max_dd": -26.69,
-    "total": 130.78
+    "total": 133.22
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-06",
-   "oos_start": "2021-10-19",
-   "forward_days": 11,
+   "period": "2010-01-04 → 2026-11-09",
+   "oos_start": "2021-10-20",
+   "forward_days": 12,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -759,7 +780,7 @@
     "cagr": 7.93,
     "sharpe": 0.69,
     "max_dd": -25.39,
-    "total": 1211.3
+    "total": 1211.31
    },
    "in_sample": {
     "cagr": 6.75,
@@ -1073,36 +1094,36 @@
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.71,
+    "cagr": 12.7,
     "sharpe": 0.7,
     "max_dd": -26.31,
     "total": 112.6
    },
    "out_sample": {
-    "cagr": 6.36,
-    "sharpe": 0.54,
+    "cagr": 6.4,
+    "sharpe": 0.55,
     "max_dd": -20.59,
-    "total": 18.15
+    "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 24.02,
-    "sharpe": 0.68,
+    "cagr": 23.33,
+    "sharpe": 0.67,
     "max_dd": -93.96,
-    "total": 595.13
+    "total": 561.3
    },
    "buyhold_out_sample": {
-    "cagr": -11.59,
-    "sharpe": 0.16,
+    "cagr": -13.88,
+    "sharpe": 0.12,
     "max_dd": -67.61,
-    "total": -28.34
+    "total": -33.25
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-08",
-   "oos_start": "2024-02-26",
-   "forward_days": 4,
+   "period": "2017-11-09 → 2026-11-09",
+   "oos_start": "2024-02-27",
+   "forward_days": 5,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1471,7 +1492,7 @@
     "cagr": 3.93,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.69
+    "total": 110.68
    },
    "out_sample": {
     "cagr": 3.18,
@@ -1516,7 +1537,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.74,
+    "cagr": 66.72,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -1528,30 +1549,30 @@
     "total": 20131.63
    },
    "out_sample": {
-    "cagr": 29.49,
+    "cagr": 29.47,
     "sharpe": 0.95,
     "max_dd": -35.7,
     "total": 156.63
    },
    "buyhold_full": {
-    "cagr": 52.28,
+    "cagr": 52.07,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16482.49
+    "total": 16223.23
    },
    "buyhold_out_sample": {
-    "cagr": 32.78,
-    "sharpe": 0.85,
+    "cagr": 32.18,
+    "sharpe": 0.84,
     "max_dd": -53.06,
-    "total": 181.23
+    "total": 176.84
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-08",
+   "period": "2014-09-17 → 2026-11-09",
    "oos_start": "2023-03-19",
-   "forward_days": 14,
+   "forward_days": 15,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1685,6 +1706,20 @@
    "reason_not_testable": "منطق ورود عمداً فاش نشده و نماد و تایم‌فریم گفته نشده؛ مدت نگه‌داری ۲۴۰ دقیقه‌ای داده‌ی درون‌روزی می‌خواهد",
    "verdict": "غیرقابل آزمون: منطق ورود عمداً فاش نشده و نماد و تایم‌فریم گفته نشده؛ مدت نگه‌داری ۲۴۰ دقیقه‌ای داده‌ی درون‌روزی می‌خواهد"
   },
+  "c7850310da-six-megacaps-long-short": {
+   "name": "Six US megacaps long/short (undisclosed)",
+   "name_fa": "خرید و فروش شش سهم بزرگ آمریکا (قانون فاش‌نشده)",
+   "source": "elitetrader",
+   "source_url": "https://www.elitetrader.com/et/threads/this-stock-strategy-outperformed-s-p500-x1-6-without-leverage.391965/",
+   "claim": "«از ۱ ژانویه ۲۰۲۰ این روش ‎+53%‎ با افت حداکثر ۸٫۶٪ ساخته (S&P500: ‎+128%‎ با افت ۳۴٪)؛ با اهرم ۳ ← ‎+230%‎ و افت ۲۴٫۶٪. دارایی‌ها: شش تا از ده سهم بزرگ آمریکا در دسامبر ۲۰۱۹، خرید و فروش، بعد از هزینه»",
+   "claimed_return": "+53% since 2020, max DD 8.6%",
+   "asset_class": "stock",
+   "symbols": [],
+   "added": "2026-11-09",
+   "status": "not_testable",
+   "reason_not_testable": "نویسنده قانون معامله و نام سهم‌ها را نگفته و از خواننده می‌خواهد حدس بزند؛ اطلاعات برای آزمون کافی نیست",
+   "verdict": "غیرقابل آزمون: نویسنده قانون معامله و نام سهم‌ها را نگفته و از خواننده می‌خواهد حدس بزند؛ اطلاعات برای آزمون کافی نیست"
+  },
   "caf9306398-weekly-wheel-soxl-rddt": {
    "name": "Weekly options wheel (RDDT, SOXL)",
    "name_fa": "چرخه‌ی هفتگی آپشن (wheel)",
@@ -1816,6 +1851,25 @@
    "status": "not_testable",
    "reason_not_testable": "تشخیص سقف و کف ساختاری و «PD array» قضاوت تصویری است؛ نماد هم گفته نشده و فقط ۴ معامله",
    "verdict": "غیرقابل آزمون: تشخیص سقف و کف ساختاری و «PD array» قضاوت تصویری است؛ نماد هم گفته نشده و فقط ۴ معامله"
+  },
+  "e37c1506e4-crypto-pairs-ols-kalman": {
+   "name": "Crypto cointegration pairs OLS vs Kalman",
+   "name_fa": "آربیتراژ آماری جفت‌ارزهای کریپتو (OLS در برابر کالمن)",
+   "source": "reddit/search-forex",
+   "source_url": "https://www.reddit.com/r/algotradingcrypto/comments/1xr46j9/built_a_crypto_statistical_arbitrage_system_ols/",
+   "claim": "«OLS ایستا: ۶ معامله، ۶۶٫۷٪ برد، شارپ ۲٫۱۴، ضریب سود ۱٫۴۱، بیشترین افت ‎−0.15%‎؛ کالمن: ۴۷ معامله، ۱۴٫۹٪ برد» — جفت‌های BTC/ETH و SOL/AVAX روی داده‌ی ۵ دقیقه‌ای فیوچرز دائمی",
+   "claimed_return": "66.7% win rate, Sharpe 2.14",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "AVAX-USD"
+   ],
+   "added": "2026-11-09",
+   "status": "not_testable",
+   "reason_not_testable": "معامله‌ی جفتی (دو دارایی هم‌زمان) روی کندل ۵ دقیقه‌ای است؛ آستانه‌های ورود و خروج هم گفته نشده و فقط ۶ معامله دارد",
+   "verdict": "غیرقابل آزمون: معامله‌ی جفتی (دو دارایی هم‌زمان) روی کندل ۵ دقیقه‌ای است؛ آستانه‌های ورود و خروج هم گفته نشده و فقط ۶ معامله دارد"
   },
   "e4d9322c8f-dividend-stock-naked-puts": {
    "name": "Naked puts on dividend stocks",
