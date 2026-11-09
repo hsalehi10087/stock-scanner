@@ -1,0 +1,13 @@
+id: e37c1506e4-crypto-pairs-ols-kalman
+name: Crypto cointegration pairs OLS vs Kalman
+name_fa: آربیتراژ آماری جفت‌ارزهای کریپتو (OLS در برابر کالمن)
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/algotradingcrypto/comments/1xr46j9/built_a_crypto_statistical_arbitrage_system_ols/
+claim: "«OLS ایستا: ۶ معامله، ۶۶٫۷٪ برد، شارپ ۲٫۱۴، ضریب سود ۱٫۴۱، بیشترین افت ‎−0.15%‎؛ کالمن: ۴۷ معامله، ۱۴٫۹٪ برد» — جفت‌های BTC/ETH و SOL/AVAX روی داده‌ی ۵ دقیقه‌ای فیوچرز دائمی"
+claimed_return: "66.7% win rate, Sharpe 2.14"
+added: 2026-11-09
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD, ETH-USD, SOL-USD, AVAX-USD]
+timeframe: 1d
+reason_not_testable: "معامله‌ی جفتی (دو دارایی هم‌زمان) روی کندل ۵ دقیقه‌ای است؛ آستانه‌های ورود و خروج هم گفته نشده و فقط ۶ معامله دارد"

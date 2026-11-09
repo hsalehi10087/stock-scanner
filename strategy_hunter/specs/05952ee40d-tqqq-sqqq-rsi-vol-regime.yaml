@@ -1,0 +1,14 @@
+id: 05952ee40d-tqqq-sqqq-rsi-vol-regime
+name: TQQQ/SQQQ RSI14 + QQQ vol regime mix
+name_fa: چرخش TQQQ/SQQQ با RSI۱۴ و رژیم نوسان QQQ
+source: reddit/search-forex
+source_url: https://www.reddit.com/r/LETFs/comments/1xqq0ok/27_cagr_27_max_dd_tqqqsqqq_based_strategy_please/
+claim: "«بازده سالانه ۲۷٫۷٪، بدترین افت ‎−27.5%‎، شارپ ۱٫۰۷؛ ۱۰ هزار دلار شد ۸٫۶۹ میلیون (مارس ۱۹۹۹ تا نوامبر ۲۰۲۶)» — RSI۱۴ روزه‌ی QQQ زیر ۳۰ ← TQQQ، بالای ۸۰ ← SQQQ، بقیه‌ی وقت سبد ۱/۳ TQQQ یا IEI و KMLM و طلا بسته به نوسان ۲۰ روزه‌ی QQQ (بالای ۳۵٪ / زیر ۲۵٪)"
+claimed_return: "27.7%/yr, max DD -27.5%"
+added: 2026-11-09
+status: not_testable
+asset_class: etf
+symbols: [QQQ, TQQQ, SQQQ, KMLM, GLD, IEI]
+timeframe: 1d
+start: '1999-03-10'
+reason_not_testable: "روش بین شش دارایی با وزن‌های مختلف می‌چرخد و هم‌زمان سبد نگه می‌دارد؛ موتور فقط یک دارایی را می‌آزماید. KMLM پیش از ۲۰۲۰ و TQQQ/SQQQ پیش از ۲۰۱۰ هم شبیه‌سازی‌شده‌اند"
