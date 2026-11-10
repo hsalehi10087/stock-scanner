@@ -1,169 +1,696 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-10",
  "markets": {
   "us": {
-   "data_date": "2026-11-06",
-   "scored": 1482,
-   "technical": 139,
-   "checked": 18,
-   "signals": [],
+   "data_date": "2026-11-09",
+   "scored": 1480,
+   "technical": 193,
+   "checked": 7,
+   "signals": [
+    {
+     "ticker": "PCTY",
+     "name": "Paylocity",
+     "price": 177.81,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.662,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 0,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "PLMR",
+     "name": "Palomar Holdings, Inc.",
+     "price": 156.78,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.621,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "بافت",
+      "کیفیت رشد",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 7,
-    "rsi": 3,
+    "ext": 5,
+    "rsi": 0,
     "earn": 0,
-    "fund": 2
+    "fund": 5
    }
   },
   "cn": {
-   "data_date": "2026-11-06",
-   "scored": 1500,
-   "technical": 12,
+   "data_date": "2026-11-10",
+   "scored": 1498,
+   "technical": 21,
    "checked": 8,
-   "signals": [],
+   "signals": [
+    {
+     "ticker": "688017.SS",
+     "name": "LEADER HARMONIOUS DRIVE SYSTEMS",
+     "price": 302.76,
+     "setups": [
+      "breakout",
+      "longpat"
+     ],
+     "tech_rank": 0.264,
+     "fundamentals": [
+      "صورت مالی",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "مثلث صعودی",
+     "chart_score": 2.0
+    },
+    {
+     "ticker": "688213.SS",
+     "name": "SMARTSENS TECHNOLOGY (SHANGHAI)",
+     "price": 108.67,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.262,
+     "fundamentals": [
+      "صورت مالی",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۳/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
+     "chart_score": 2.0
+    }
+   ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 3,
-    "rsi": 1,
+    "rsi": 0,
     "earn": 0,
-    "fund": 1
+    "fund": 6
    }
   },
   "in": {
-   "data_date": "2026-11-06",
+   "data_date": "2026-11-09",
    "scored": 708,
-   "technical": 60,
+   "technical": 62,
    "checked": 16,
-   "signals": [],
+   "signals": [
+    {
+     "ticker": "PGIL.NS",
+     "name": "Pearl Global Industries Ltd.",
+     "price": 1343.6,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.655,
+     "fundamentals": [
+      "کیفیت رشد",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۵/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "ANTHEM.NS",
+     "name": "Anthem Biosciences Ltd.",
+     "price": 958.15,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.15,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "MANKIND.NS",
+     "name": "Mankind Pharma Ltd.",
+     "price": 2668.3,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.089,
+     "fundamentals": [
+      "کیفیت رشد",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۵/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "WELSPUNLIV.NS",
+     "name": "Welspun Living Ltd.",
+     "price": 252.21,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.948,
+     "fundamentals": [
+      "کیفیت رشد",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "QUESS.NS",
+     "name": "Quess Corp Ltd.",
+     "price": 345.7,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.941,
+     "fundamentals": [
+      "صورت مالی",
+      "کن‌اسلیم",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۳/۵",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "کف دوقلو (در انتظار شکست)",
+     "chart_score": 1.5
+    },
+    {
+     "ticker": "CPPLUS.NS",
+     "name": "Aditya Infotech Ltd.",
+     "price": 4224.9,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.688,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 1,
-    "rsi": 2,
+    "ext": 2,
+    "rsi": 3,
     "earn": 0,
-    "fund": 4
+    "fund": 10
    }
   },
   "jp": {
-   "data_date": "2026-11-06",
+   "data_date": "2026-11-10",
    "scored": 1499,
-   "technical": 70,
-   "checked": 23,
-   "signals": [],
+   "technical": 123,
+   "checked": 21,
+   "signals": [
+    {
+     "ticker": "9201.T",
+     "name": "JAPAN AIRLINES CO LTD",
+     "price": 3468.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.47,
+     "fundamentals": [
+      "صورت مالی",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "سرووشانه معکوس (شکست)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "9697.T",
+     "name": "CAPCOM CO LTD",
+     "price": 4415.0,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.804,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "quality": "⭐۱/۵",
+     "profit_streak": 0,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
+     "chart_score": 2.0
+    }
+   ],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 2,
+    "rsi": 1,
+    "earn": 1,
+    "fund": 18
+   }
+  },
+  "tw": {
+   "data_date": "2026-11-10",
+   "scored": 1198,
+   "technical": 37,
+   "checked": 10,
+   "signals": [
+    {
+     "ticker": "6782.TW",
+     "name": "VISCO VISION INC",
+     "price": 288.0,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.929,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "5904.TWO",
+     "name": "POYA INTERNATIONAL CO LTD",
+     "price": 76.8,
+     "setups": [
+      "breakout",
+      "trend"
+     ],
+     "tech_rank": 0.9,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    }
+   ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 4,
     "rsi": 0,
     "earn": 0,
-    "fund": 3
-   }
-  },
-  "tw": {
-   "data_date": "2026-11-06",
-   "scored": 1200,
-   "technical": 10,
-   "checked": 5,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 3,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 1
+    "fund": 8
    }
   },
   "kr": {
-   "data_date": "2026-11-06",
-   "scored": 1200,
-   "technical": 13,
+   "data_date": "2026-11-10",
+   "scored": 1197,
+   "technical": 17,
    "checked": 10,
-   "signals": [],
+   "signals": [
+    {
+     "ticker": "008930.KS",
+     "name": "Hanmi Science",
+     "price": 57200.0,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.582,
+     "fundamentals": [
+      "بافت",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۲/۵ (۱ نامعلوم)",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
    "market_up50": false,
    "cap": 2,
+   "dropped": {
+    "ext": 7,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 9
+   }
+  },
+  "hk": {
+   "data_date": "2026-11-10",
+   "scored": 994,
+   "technical": 42,
+   "checked": 17,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 4,
+    "rsi": 8,
+    "earn": 0,
+    "fund": 17
+   }
+  },
+  "gb": {
+   "data_date": "2026-11-10",
+   "scored": 346,
+   "technical": 45,
+   "checked": 24,
+   "signals": [
+    {
+     "ticker": "FCH.L",
+     "name": "Funding Circle",
+     "price": 233.0,
+     "setups": [
+      "breakout",
+      "trend"
+     ],
+     "tech_rank": 0.98,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "RS1.L",
+     "name": "RS Group",
+     "price": 797.5,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.376,
+     "fundamentals": [
+      "صورت مالی",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
+   "market_up50": true,
+   "cap": 8,
    "dropped": {
     "ext": 3,
     "rsi": 0,
     "earn": 0,
-    "fund": 1
+    "fund": 22
    }
   },
-  "hk": {
-   "data_date": "2026-11-06",
-   "scored": 1000,
-   "technical": 37,
-   "checked": 18,
-   "signals": [],
+  "de": {
+   "data_date": "2026-11-10",
+   "scored": 86,
+   "technical": 12,
+   "checked": 4,
+   "signals": [
+    {
+     "ticker": "HNR1.DE",
+     "name": "Hannover Re",
+     "price": 296.8,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.628,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 0,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "کف دوقلو (شکست خط گردن)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "G1A.DE",
+     "name": "GEA Group",
+     "price": 72.05,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.384,
+     "fundamentals": [
+      "بافت",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۳/۵ (۱ نامعلوم)",
+     "profit_streak": 3,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    }
+   ],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 8,
-    "rsi": 3,
+    "ext": 0,
+    "rsi": 2,
     "earn": 0,
-    "fund": 0
+    "fund": 2
    }
   },
-  "gb": {
-   "data_date": "2026-11-06",
-   "scored": 346,
-   "technical": 36,
+  "ca": {
+   "data_date": "2026-11-09",
+   "scored": 572,
+   "technical": 40,
    "checked": 22,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
+   "signals": [
+    {
+     "ticker": "DCBO.TO",
+     "name": "DOCEBO INC",
+     "price": 44.1,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.727,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۲/۵ (۱ نامعلوم)",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7
+    },
+    {
+     "ticker": "WCN.TO",
+     "name": "WASTE CONNECTIONS INC",
+     "price": 268.1,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.428,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۲/۵",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "سرووشانه معکوس (شکست)، فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    }
+   ],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 3,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 20
+   }
+  },
+  "au": {
+   "data_date": "2026-11-10",
+   "scored": 461,
+   "technical": 31,
+   "checked": 26,
+   "signals": [
+    {
+     "ticker": "MND.AX",
+     "name": "MONADEL FPO [MND]",
+     "price": 32.63,
+     "setups": [
+      "breakout",
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.382,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0
+    },
+    {
+     "ticker": "ALK.AX",
+     "name": "ALKANE FPO [ALK]",
+     "price": 1.87,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.718,
+     "fundamentals": [
+      "کن‌اسلیم",
+      "بافت"
+     ],
+     "quality": "⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "سرووشانه معکوس",
+     "chart_score": 2.0
+    },
+    {
+     "ticker": "DPM.AX",
+     "name": "DPMMETALS CDI 1:1 [DPM]",
+     "price": 59.07,
+     "setups": [
+      "trend",
+      "pullback"
+     ],
+     "tech_rank": 0.473,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد",
+      "سود پیاپی"
+     ],
+     "quality": "⭐۴/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 4,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": true,
+     "chart": "روند صعودی",
+     "chart_score": 1.0
+    },
+    {
+     "ticker": "CPU.AX",
+     "name": "CSHARE FPO [CPU]",
+     "price": 43.23,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.078,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "سرووشانه معکوس (شکست)",
+     "chart_score": 3.0
+    }
+   ],
+   "market_up50": true,
+   "cap": 8,
    "dropped": {
     "ext": 2,
     "rsi": 2,
     "earn": 0,
-    "fund": 0
-   }
-  },
-  "de": {
-   "data_date": "2026-11-06",
-   "scored": 86,
-   "technical": 9,
-   "checked": 3,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 0,
-    "rsi": 2,
-    "earn": 0,
-    "fund": 0
-   }
-  },
-  "ca": {
-   "data_date": "2026-11-06",
-   "scored": 572,
-   "technical": 34,
-   "checked": 21,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 1,
-    "rsi": 5,
-    "earn": 0,
-    "fund": 5
-   }
-  },
-  "au": {
-   "data_date": "2026-11-06",
-   "scored": 464,
-   "technical": 28,
-   "checked": 27,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 0,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 1
+    "fund": 22
    }
   }
  }

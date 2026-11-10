@@ -129,3 +129,28 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-05,in,NAVINFLUOR.NS,Navin Fluorine International Ltd.,8845.0,24536.5996,breakout|trend|longpat,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد,5,0.15,شکست سقف ۵۲ هفته,1.7
 2026-11-05,in,AUROPHARMA.NS,Aurobindo Pharma Ltd.,1785.0,24536.5996,breakout|trend|longpat,صورت مالی|کیفیت رشد,4,0.099,کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته,3.0
 2026-11-06,hk,6160.HK,BEONE MEDICINES,244.2,24481.8594,trend|longpat,صورت مالی|کیفیت رشد,4,0.315,شکست سقف ۵۲ هفته,1.7
+2026-11-10,us,PCTY,Paylocity,177.81,752.69,breakout|trend|longpat,بافت|کیفیت رشد,4,0.662,شکست سقف ۵۲ هفته,1.7
+2026-11-10,us,PLMR,"Palomar Holdings, Inc.",156.78,752.69,breakout|trend|longpat,کن‌اسلیم|بافت|کیفیت رشد|سود پیاپی,4,0.621,شکست سقف ۵۲ هفته,1.7
+2026-11-10,cn,688017.SS,LEADER HARMONIOUS DRIVE SYSTEMS,302.76,21.64,breakout|longpat,صورت مالی|سود پیاپی,3,0.264,مثلث صعودی,2.0
+2026-11-10,cn,688213.SS,SMARTSENS TECHNOLOGY (SHANGHAI),108.67,21.64,trend|longpat,صورت مالی|سود پیاپی,3,0.262,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-10,in,PGIL.NS,Pearl Global Industries Ltd.,1343.6,25044.6504,breakout|trend|longpat,کیفیت رشد|سود پیاپی,5,0.655,شکست سقف ۵۲ هفته,1.7
+2026-11-10,in,ANTHEM.NS,Anthem Biosciences Ltd.,958.15,25044.6504,breakout|trend|longpat,بافت|کیفیت رشد,4,0.15,شکست سقف ۵۲ هفته,1.7
+2026-11-10,in,MANKIND.NS,Mankind Pharma Ltd.,2668.3,25044.6504,breakout|trend|longpat,کیفیت رشد|سود پیاپی,5,0.089,شکست سقف ۵۲ هفته,1.7
+2026-11-10,in,WELSPUNLIV.NS,Welspun Living Ltd.,252.21,25044.6504,trend|longpat,کیفیت رشد|سود پیاپی,4,0.948,شکست سقف ۵۲ هفته,1.7
+2026-11-10,in,QUESS.NS,Quess Corp Ltd.,345.7,25044.6504,trend|longpat,صورت مالی|کن‌اسلیم|سود پیاپی,3,0.941,کف دوقلو (در انتظار شکست),1.5
+2026-11-10,in,CPPLUS.NS,Aditya Infotech Ltd.,4224.8999,25044.6504,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.688,شکست سقف ۵۲ هفته,1.7
+2026-11-10,jp,9201.T,JAPAN AIRLINES CO LTD,3468.0,2485.0,breakout|trend|longpat,صورت مالی|کیفیت رشد,4,0.47,سرووشانه معکوس (شکست)، شکست سقف ۵۲ هفته,3.0
+2026-11-10,jp,9697.T,CAPCOM CO LTD,4415.0,2485.0,trend|longpat,صورت مالی|بافت,1,0.804,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-10,tw,6782.TW,VISCO VISION INC,288.0,62.0,breakout|trend|longpat,کن‌اسلیم|بافت|کیفیت رشد,4,0.929,شکست سقف ۵۲ هفته,1.7
+2026-11-10,tw,5904.TWO,POYA INTERNATIONAL CO LTD,76.8,62.0,breakout|trend,بافت|کیفیت رشد,4,0.9,روند صعودی,1.0
+2026-11-10,kr,008930.KS,Hanmi Science,57200.0,10780.0,trend|longpat,بافت|سود پیاپی,2,0.582,شکست سقف ۵۲ هفته,1.7
+2026-11-10,gb,FCH.L,Funding Circle,233.0,10834.54,breakout|trend,کن‌اسلیم|کیفیت رشد,4,0.98,روند صعودی,1.0
+2026-11-10,gb,RS1.L,RS Group,797.5,10834.54,trend|longpat,صورت مالی|کیفیت رشد,4,0.376,شکست سقف ۵۲ هفته,1.7
+2026-11-10,de,HNR1.DE,Hannover Re,296.8,26586.6094,trend|longpat,بافت|کیفیت رشد,4,0.628,کف دوقلو (شکست خط گردن)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
+2026-11-10,de,G1A.DE,GEA Group,72.05,26586.6094,trend|longpat,بافت|سود پیاپی,3,0.384,شکست سقف ۵۲ هفته,1.7
+2026-11-10,ca,DCBO.TO,DOCEBO INC,44.1,36446.3008,breakout|trend|longpat,کن‌اسلیم|سود پیاپی,2,0.727,شکست سقف ۵۲ هفته,1.7
+2026-11-10,ca,WCN.TO,WASTE CONNECTIONS INC,268.1,36446.3008,trend|longpat,کن‌اسلیم|سود پیاپی,2,0.428,سرووشانه معکوس (شکست)، فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته,3.0
+2026-11-10,au,MND.AX,MONADEL FPO [MND],32.63,9129.0,breakout|trend|longpat,کن‌اسلیم|بافت|کیفیت رشد,4,0.382,کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته,3.0
+2026-11-10,au,ALK.AX,ALKANE FPO [ALK],1.87,9129.0,trend|longpat,کن‌اسلیم|بافت,2,0.718,سرووشانه معکوس,2.0
+2026-11-10,au,DPM.AX,DPMMETALS CDI 1:1 [DPM],59.07,9129.0,trend|pullback,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.473,روند صعودی,1.0
+2026-11-10,au,CPU.AX,CSHARE FPO [CPU],43.23,9129.0,trend|longpat,بافت|کیفیت رشد,4,0.078,سرووشانه معکوس (شکست),3.0
