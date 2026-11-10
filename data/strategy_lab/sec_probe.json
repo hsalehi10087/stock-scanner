@@ -1,5 +1,5 @@
 {
- "ua": "Hossein Stock Scanner hsalehi10087@users.noreply.github.com",
+ "ua_set": false,
  "tickers": "FactsError: HTTP 403 for https://www.sec.gov/files/company_tickers.json",
  "facts_aapl": "FactsError: HTTP 403 for https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
  "check": {
