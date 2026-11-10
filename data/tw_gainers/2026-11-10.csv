@@ -1,0 +1,6 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+6446.TW,藥華藥,11.428571428571432,203.99050286512121,2529.964,832.251,2026-11-10,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+1476.TW,儒鴻,11.961722488038284,158.3081746883239,1552.91,601.185,2026-11-10,3,5,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+3219.TWO,倚強科,20.72649769459418,146.52626939906193,156.628,63.534,2026-11-10,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+3023.TW,信邦,10.10526315789473,19.018849431144506,903.434,759.068,2026-11-10,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+6788.TWO,華景電,12.41721854304636,18.347646282952905,205.474,173.619,2026-11-10,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
