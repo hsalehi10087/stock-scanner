@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T23:49:40+00:00",
+ "updated": "2026-11-10T13:57:44+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -475,16 +475,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.21,
-    "sharpe": 0.63,
+    "cagr": 3.0,
+    "sharpe": 0.59,
     "max_dd": -13.27,
-    "total": 189.92
+    "total": 171.28
    },
    "in_sample": {
-    "cagr": 3.76,
-    "sharpe": 0.75,
+    "cagr": 3.47,
+    "sharpe": 0.68,
     "max_dd": -13.27,
-    "total": 139.3
+    "total": 123.91
    },
    "out_sample": {
     "cagr": 1.91,
@@ -504,9 +504,9 @@
     "max_dd": -33.72,
     "total": 311.48
    },
-   "trades": 92,
-   "win_rate": 81.5,
-   "avg_trade_pct": 1.19,
+   "trades": 91,
+   "win_rate": 80.2,
+   "avg_trade_pct": 1.13,
    "exposure": 0.06,
    "period": "1993-02-01 → 2026-11-09",
    "oos_start": "2016-09-16",
@@ -543,16 +543,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.65,
+    "cagr": 10.6,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 305.11
+    "total": 302.9
    },
    "in_sample": {
-    "cagr": 8.51,
+    "cagr": 8.44,
     "sharpe": 0.44,
     "max_dd": -49.5,
-    "total": 120.42
+    "total": 119.22
    },
    "out_sample": {
     "cagr": 16.99,
@@ -572,10 +572,10 @@
     "max_dd": -47.44,
     "total": 299.55
    },
-   "trades": 94,
-   "win_rate": 71.3,
-   "avg_trade_pct": 1.99,
-   "exposure": 0.47,
+   "trades": 93,
+   "win_rate": 71.0,
+   "avg_trade_pct": 2.0,
+   "exposure": 0.46,
    "period": "2013-01-02 → 2026-11-09",
    "oos_start": "2022-09-09",
    "forward_days": 12,
@@ -616,13 +616,13 @@
     "cagr": 9.29,
     "sharpe": 0.79,
     "max_dd": -21.98,
-    "total": 1904.44
+    "total": 1904.45
    },
    "in_sample": {
     "cagr": 8.54,
     "sharpe": 0.74,
     "max_dd": -19.72,
-    "total": 592.1
+    "total": 592.11
    },
    "out_sample": {
     "cagr": 11.03,
@@ -687,36 +687,36 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.02,
+    "cagr": 1.0,
     "sharpe": 0.16,
     "max_dd": -28.05,
-    "total": 12.66
+    "total": 12.47
    },
    "out_sample": {
-    "cagr": 5.91,
-    "sharpe": 0.61,
+    "cagr": 5.74,
+    "sharpe": 0.6,
     "max_dd": -14.57,
-    "total": 33.62
+    "total": 32.54
    },
    "buyhold_full": {
-    "cagr": 8.11,
-    "sharpe": 0.54,
+    "cagr": 7.98,
+    "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 270.98
+    "total": 264.02
    },
    "buyhold_out_sample": {
-    "cagr": 18.36,
-    "sharpe": 0.98,
+    "cagr": 17.73,
+    "sharpe": 0.95,
     "max_dd": -26.69,
-    "total": 134.19
+    "total": 127.95
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-09",
-   "oos_start": "2021-10-20",
-   "forward_days": 12,
+   "period": "2010-01-04 → 2026-11-10",
+   "oos_start": "2021-10-21",
+   "forward_days": 13,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -733,6 +733,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن است و قیمت تاریخی آپشن رایگان نیست؛ انتخاب نماد و قیمت اعمال سلیقه‌ای است و نتیجه فقط ۳ هفته است",
    "verdict": "غیرقابل آزمون: فروش آپشن است و قیمت تاریخی آپشن رایگان نیست؛ انتخاب نماد و قیمت اعمال سلیقه‌ای است و نتیجه فقط ۳ هفته است"
+  },
+  "46ff72d3f6-london-reversal-sweep-cisd": {
+   "name": "London Reversal sweep/CISD (FTMO vs Eightcap)",
+   "name_fa": "برگشت سشن لندن با جارو کردن نقدینگی (مقایسه‌ی دو کارگزار)",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xsfgzr/london_reversal_strategy_results_ftmo_vs_eightcap/",
+   "claim": "«همان قوانین London Reversal روی FTMO و Eightcap، همان نماد و دوره: نتیجه‌ی FTMO بین ۳۰ تا ۱۰۰٪ و Eightcap حدود ۳۰۰٪ در ۳۴ ماه»",
+   "claimed_return": "+300% in 34 months (Eightcap), 30-100% (FTMO)",
+   "asset_class": "forex",
+   "symbols": [
+    "EURUSD=X"
+   ],
+   "added": "2026-11-10",
+   "status": "not_testable",
+   "reason_not_testable": "قوانین در این پست نیامده و نماد گفته نشده؛ لبه‌ی روش به زمان‌بندی دقیق جارو و CISD در بازگشایی لندن (داده‌ی تیکی/دقیقه‌ای) وابسته است",
+   "verdict": "غیرقابل آزمون: قوانین در این پست نیامده و نماد گفته نشده؛ لبه‌ی روش به زمان‌بندی دقیق جارو و CISD در بازگشایی لندن (داده‌ی تیکی/دقیقه‌ای) وابسته است"
   },
   "47be355ba2-1432-backtests-winner": {
    "name": "Winner of 1,432 backtests (Medium)",
@@ -907,6 +923,115 @@
    "status": "not_testable",
    "reason_not_testable": "روش‌ها درون‌روزی‌اند (محدوده‌ی ۳۰ دقیقه‌ی اول و ۳۰ دقیقه‌ی آخر روز) و با کندل روزانه یا ساعتی ساخته نمی‌شوند؛ قوانین بقیه‌ی آزمون‌ها هم در متن کامل نیست",
    "verdict": "غیرقابل آزمون: روش‌ها درون‌روزی‌اند (محدوده‌ی ۳۰ دقیقه‌ی اول و ۳۰ دقیقه‌ی آخر روز) و با کندل روزانه یا ساعتی ساخته نمی‌شوند؛ قوانین بقیه‌ی آزمون‌ها هم در متن کامل نیست"
+  },
+  "6d26f491e2-ema9-21-rsi-macd-1h-btc": {
+   "name": "EMA 9/21 + RSI + MACD 1h (BTC)",
+   "name_fa": "تقاطع EMA 9/21 با فیلتر RSI و MACD روی کندل ساعتی بیت‌کوین",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xs8zab/i_backtested_a_textbook_strategy_ema_921_rsi_macd/",
+   "claim": "«کندل ۱ ساعته: خرید وقتی EMA 9 از بالای EMA 21 عبور کند، فقط اگر RSI بین ۵۰ و ۷۰، هیستوگرام MACD مثبت و قیمت بالای SMA 200 باشد؛ فروش با حد ضرر ‎-3%‎، حد سود ‎+6%‎ یا تقاطع نزولی EMA. بیت‌کوین (۱ سال): ربات ‎-17.6%‎ در برابر نگه‌داشتن ‎-17.8%‎، افت ‎-24%‎ در برابر ‎-40%‎؛ ۶۴ معامله؛ کارمزد ۰٫۲۵٪ حدود ۲۷٪ سرمایه را خورد و بدون هزینه حدود ‎+13%‎ می‌شد»",
+   "claimed_return": "-17.6% in 1y on BTC (vs -17.8% buy & hold, ~+13% before fees)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-10",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": -12.99,
+    "sharpe": -0.8,
+    "max_dd": -28.53,
+    "total": -24.22
+   },
+   "in_sample": {
+    "cagr": -10.79,
+    "sharpe": -0.63,
+    "max_dd": -28.53,
+    "total": -14.73
+   },
+   "out_sample": {
+    "cagr": -16.92,
+    "sharpe": -1.15,
+    "max_dd": -13.67,
+    "total": -10.49
+   },
+   "buyhold_full": {
+    "cagr": -8.91,
+    "sharpe": 0.01,
+    "max_dd": -53.99,
+    "total": -16.96
+   },
+   "buyhold_out_sample": {
+    "cagr": 11.23,
+    "sharpe": 0.47,
+    "max_dd": -29.65,
+    "total": 6.57
+   },
+   "trades": 133,
+   "win_rate": 29.3,
+   "avg_trade_pct": -0.19,
+   "exposure": 0.17,
+   "period": "2024-11-12 → 2026-11-10",
+   "oos_start": "2026-04-06",
+   "forward_days": 13,
+   "forward_usd": 1000.0,
+   "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
+  },
+  "6d26f491e2-ema9-21-rsi-macd-1h-stocks": {
+   "name": "EMA 9/21 + RSI + MACD 1h (NVDA, SPY)",
+   "name_fa": "تقاطع EMA 9/21 با فیلتر RSI و MACD روی کندل ساعتی (انویدیا و SPY)",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xs8zab/i_backtested_a_textbook_strategy_ema_921_rsi_macd/",
+   "claim": "«کندل ۱ ساعته: خرید وقتی EMA 9 از بالای EMA 21 عبور کند، فقط اگر RSI بین ۵۰ و ۷۰، هیستوگرام MACD مثبت و قیمت بالای SMA 200 باشد؛ فروش با حد ضرر ‎-3%‎، حد سود ‎+6%‎ یا تقاطع نزولی EMA. انویدیا (۲ سال): ربات ‎+41%‎ در برابر نگه‌داشتن ‎+38%‎، افت ‎-15%‎ در برابر ‎-41%‎. SPY (۲ سال): ربات ‎+4%‎ در برابر ‎+25%‎»",
+   "claimed_return": "+41% in 2y on NVDA (vs +38% buy & hold)",
+   "asset_class": "stock",
+   "symbols": [
+    "NVDA",
+    "SPY"
+   ],
+   "added": "2026-11-10",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 2.53,
+    "sharpe": 0.37,
+    "max_dd": -11.77,
+    "total": 7.4
+   },
+   "in_sample": {
+    "cagr": 4.89,
+    "sharpe": 0.69,
+    "max_dd": -5.63,
+    "total": 10.05
+   },
+   "out_sample": {
+    "cagr": -2.8,
+    "sharpe": -0.34,
+    "max_dd": -7.4,
+    "total": -2.41
+   },
+   "buyhold_full": {
+    "cagr": 39.15,
+    "sharpe": 1.29,
+    "max_dd": -28.12,
+    "total": 157.54
+   },
+   "buyhold_out_sample": {
+    "cagr": 5.34,
+    "sharpe": 0.34,
+    "max_dd": -16.45,
+    "total": 4.57
+   },
+   "trades": 96,
+   "win_rate": 32.3,
+   "avg_trade_pct": 0.17,
+   "exposure": 0.39,
+   "period": "2023-12-13 → 2026-11-09",
+   "oos_start": "2025-12-22",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
   "6e5773fb3d-nq-15min-orb": {
    "name": "NQ 15-minute opening range breakout",
@@ -1088,7 +1213,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.78,
+    "cagr": 10.77,
     "sharpe": 0.65,
     "max_dd": -26.31,
     "total": 151.44
@@ -1106,24 +1231,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 23.38,
+    "cagr": 22.97,
     "sharpe": 0.67,
     "max_dd": -93.96,
-    "total": 563.56
+    "total": 544.53
    },
    "buyhold_out_sample": {
-    "cagr": -13.78,
-    "sharpe": 0.12,
+    "cagr": -15.34,
+    "sharpe": 0.09,
     "max_dd": -67.61,
-    "total": -33.02
+    "total": -36.26
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-09",
-   "oos_start": "2024-02-27",
-   "forward_days": 5,
+   "period": "2017-11-09 → 2026-11-10",
+   "oos_start": "2024-02-28",
+   "forward_days": 6,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1145,13 +1270,13 @@
     "cagr": 9.44,
     "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 1995.4
+    "total": 1995.41
    },
    "in_sample": {
     "cagr": 8.74,
     "sharpe": 0.75,
     "max_dd": -19.44,
-    "total": 622.79
+    "total": 622.8
    },
    "out_sample": {
     "cagr": 11.04,
@@ -1486,7 +1611,7 @@
     "cagr": 3.74,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 175.77
+    "total": 175.75
    },
    "in_sample": {
     "cagr": 3.93,
@@ -1498,7 +1623,7 @@
     "cagr": 3.3,
     "sharpe": 0.49,
     "max_dd": -10.81,
-    "total": 30.89
+    "total": 30.88
    },
    "buyhold_full": {
     "cagr": 10.51,
@@ -1519,7 +1644,7 @@
    "period": "1999-03-10 → 2026-11-09",
    "oos_start": "2018-07-19",
    "forward_days": 1,
-   "forward_usd": 1009.53,
+   "forward_usd": 1009.47,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
   },
   "b651b12620-crypto-ts-momentum-28d": {
@@ -1537,44 +1662,60 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.72,
+    "cagr": 66.7,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 86.63,
+    "cagr": 86.38,
     "sharpe": 1.46,
     "max_dd": -74.38,
-    "total": 20131.63
+    "total": 19935.77
    },
    "out_sample": {
-    "cagr": 29.47,
-    "sharpe": 0.95,
+    "cagr": 28.09,
+    "sharpe": 0.92,
     "max_dd": -35.7,
-    "total": 156.63
+    "total": 146.81
    },
    "buyhold_full": {
-    "cagr": 52.14,
+    "cagr": 51.9,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16322.04
+    "total": 16028.5
    },
    "buyhold_out_sample": {
-    "cagr": 32.4,
-    "sharpe": 0.84,
+    "cagr": 30.35,
+    "sharpe": 0.81,
     "max_dd": -53.06,
-    "total": 178.51
+    "total": 163.07
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-09",
-   "oos_start": "2023-03-19",
-   "forward_days": 15,
+   "period": "2014-09-17 → 2026-11-10",
+   "oos_start": "2023-03-20",
+   "forward_days": 16,
    "forward_usd": 1000.0,
    "verdict": "قبول"
+  },
+  "b719efd731-mnq-5min-trend-persistence": {
+   "name": "MNQ 5-min intraday trend persistence",
+   "name_fa": "ادامه‌ی روند درون‌روزی MNQ روی کندل ۵ دقیقه‌ای",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xrs4s4/solo_trader_building_an_automated_mnq_bot/",
+   "claim": "«ادامه‌ی روند درون‌روزی روی کندل ۵ دقیقه‌ای: فقط وقتی قیمت هم‌سمت بازگشایی ۹:۳۰ و VWAP است؛ ورود با تثبیت بالای/زیر سقف و کف روز قبل یا شب؛ حد ضرر ATR، افزودن در ‎+1R‎. ۷ سال داده‌ی ۱ دقیقه‌ای: حدود ۱٬۱۷۰ معامله، ۳۱٪ برد، میانگین ‎+0.36R‎ در هر معامله، ضریب سود حدود ۱٫۶، همه‌ی سال‌ها سبز»",
+   "claimed_return": "PF ~1.6, +0.36R per trade, 31% win rate",
+   "asset_class": "stock",
+   "symbols": [
+    "NQ=F"
+   ],
+   "added": "2026-11-10",
+   "status": "not_testable",
+   "reason_not_testable": "روش روی کندل ۵ دقیقه‌ای و VWAP و بازگشایی ۹:۳۰ و سقف/کف شبانه است؛ به داده‌ی دقیقه‌ای نیاز دارد",
+   "verdict": "غیرقابل آزمون: روش روی کندل ۵ دقیقه‌ای و VWAP و بازگشایی ۹:۳۰ و سقف/کف شبانه است؛ به داده‌ی دقیقه‌ای نیاز دارد"
   },
   "bb4cbcfcaa-metapro-scalp-brazil-mini-index": {
    "name": "MetaPro Scalp V2 ML (Brazil mini index)",
@@ -1640,7 +1781,7 @@
     "cagr": 5.79,
     "sharpe": 0.58,
     "max_dd": -19.5,
-    "total": 373.38
+    "total": 373.35
    },
    "in_sample": {
     "cagr": 6.09,
@@ -1652,7 +1793,7 @@
     "cagr": 5.09,
     "sharpe": 0.52,
     "max_dd": -11.59,
-    "total": 50.94
+    "total": 50.93
    },
    "buyhold_full": {
     "cagr": 10.51,
@@ -1673,7 +1814,7 @@
    "period": "1999-03-10 → 2026-11-09",
    "oos_start": "2018-07-19",
    "forward_days": 9,
-   "forward_usd": 958.52,
+   "forward_usd": 958.46,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "c59688fc4a-qqq-mean-reversion-plus-trend": {
