@@ -1,0 +1,12 @@
+id: b719efd731-mnq-5min-trend-persistence
+name: MNQ 5-min intraday trend persistence
+name_fa: ادامه‌ی روند درون‌روزی MNQ روی کندل ۵ دقیقه‌ای
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xrs4s4/solo_trader_building_an_automated_mnq_bot/
+claim: "«ادامه‌ی روند درون‌روزی روی کندل ۵ دقیقه‌ای: فقط وقتی قیمت هم‌سمت بازگشایی ۹:۳۰ و VWAP است؛ ورود با تثبیت بالای/زیر سقف و کف روز قبل یا شب؛ حد ضرر ATR، افزودن در ‎+1R‎. ۷ سال داده‌ی ۱ دقیقه‌ای: حدود ۱٬۱۷۰ معامله، ۳۱٪ برد، میانگین ‎+0.36R‎ در هر معامله، ضریب سود حدود ۱٫۶، همه‌ی سال‌ها سبز»"
+claimed_return: "PF ~1.6, +0.36R per trade, 31% win rate"
+added: 2026-11-10
+status: not_testable
+asset_class: stock
+symbols: [NQ=F]
+reason_not_testable: "روش روی کندل ۵ دقیقه‌ای و VWAP و بازگشایی ۹:۳۰ و سقف/کف شبانه است؛ به داده‌ی دقیقه‌ای نیاز دارد"

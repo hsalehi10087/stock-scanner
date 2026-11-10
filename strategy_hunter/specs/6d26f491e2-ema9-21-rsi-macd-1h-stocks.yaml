@@ -1,0 +1,30 @@
+id: 6d26f491e2-ema9-21-rsi-macd-1h-stocks
+name: EMA 9/21 + RSI + MACD 1h (NVDA, SPY)
+name_fa: تقاطع EMA 9/21 با فیلتر RSI و MACD روی کندل ساعتی (انویدیا و SPY)
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xs8zab/i_backtested_a_textbook_strategy_ema_921_rsi_macd/
+claim: "«کندل ۱ ساعته: خرید وقتی EMA 9 از بالای EMA 21 عبور کند، فقط اگر RSI بین ۵۰ و ۷۰، هیستوگرام MACD مثبت و قیمت بالای SMA 200 باشد؛ فروش با حد ضرر ‎-3%‎، حد سود ‎+6%‎ یا تقاطع نزولی EMA. انویدیا (۲ سال): ربات ‎+41%‎ در برابر نگه‌داشتن ‎+38%‎، افت ‎-15%‎ در برابر ‎-41%‎. SPY (۲ سال): ربات ‎+4%‎ در برابر ‎+25%‎»"
+claimed_return: "+41% in 2y on NVDA (vs +38% buy & hold)"
+added: 2026-11-10
+status: implemented
+asset_class: stock
+symbols: [NVDA, SPY]
+timeframe: 1h
+start: '2024-11-10'
+notes: >-
+  همان قانون پست، بدون تغییر پارامتر. RSI با دوره‌ی ۱۴ و MACD با ۱۲/۲۶/۹ فرض شد (در پست گفته نشده).
+  داده‌ی ساعتی Yahoo فقط حدود ۲ سال است. هزینه‌ی موتور (۰٫۰۵٪ هر طرف) به‌جای ۰٫۲۵٪ پست است.
+  نسخه‌ی بیت‌کوین همین روش در فایل جداگانه آزموده می‌شود. سرمایه بین دو نماد مساوی تقسیم می‌شود.
+indicators:
+  ema9: {fn: ema, n: 9}
+  ema21: {fn: ema, n: 21}
+  ema9_prev: {fn: prev, col: ema9, k: 1}
+  ema21_prev: {fn: prev, col: ema21, k: 1}
+  rsi14: {fn: rsi, n: 14}
+  hist: {fn: macd_hist, fast: 12, slow: 26, signal: 9}
+  sma200: {fn: sma, n: 200}
+entry: ema9 > ema21 and ema9_prev <= ema21_prev and rsi14 > 50 and rsi14 < 70 and hist > 0 and close > sma200
+exit: ema9 < ema21 and ema9_prev >= ema21_prev
+side: long
+stop_loss_pct: 0.03
+take_profit_pct: 0.06

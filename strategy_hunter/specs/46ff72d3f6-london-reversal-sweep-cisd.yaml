@@ -1,0 +1,12 @@
+id: 46ff72d3f6-london-reversal-sweep-cisd
+name: London Reversal sweep/CISD (FTMO vs Eightcap)
+name_fa: برگشت سشن لندن با جارو کردن نقدینگی (مقایسه‌ی دو کارگزار)
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xsfgzr/london_reversal_strategy_results_ftmo_vs_eightcap/
+claim: "«همان قوانین London Reversal روی FTMO و Eightcap، همان نماد و دوره: نتیجه‌ی FTMO بین ۳۰ تا ۱۰۰٪ و Eightcap حدود ۳۰۰٪ در ۳۴ ماه»"
+claimed_return: "+300% in 34 months (Eightcap), 30-100% (FTMO)"
+added: 2026-11-10
+status: not_testable
+asset_class: forex
+symbols: [EURUSD=X]
+reason_not_testable: "قوانین در این پست نیامده و نماد گفته نشده؛ لبه‌ی روش به زمان‌بندی دقیق جارو و CISD در بازگشایی لندن (داده‌ی تیکی/دقیقه‌ای) وابسته است"
