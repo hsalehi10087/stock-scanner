@@ -16,3 +16,4 @@
 {"time": "13:50", "ticker": "APP", "signal": "drop", "price": 385.29, "chg": -6.03, "rvol": 0.84, "urgent": true, "src": "Yahoo"}
 {"time": "13:50", "ticker": "TEM", "signal": "drop", "price": 78.87, "chg": -6.6, "rvol": 0.68, "urgent": true, "src": "Yahoo"}
 {"time": "14:50", "ticker": "SPNT", "signal": "hi52", "price": 27.19, "chg": 2.97, "rvol": 2.22, "urgent": false, "src": "Yahoo"}
+{"time": "15:30", "ticker": "RGTI", "signal": "drop", "price": 12.18, "chg": -6.2, "rvol": 0.8, "urgent": true, "src": "Yahoo"}
