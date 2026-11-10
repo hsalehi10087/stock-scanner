@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.join(ROOT, 'market_summary'))
 import summary as S  # noqa: E402
 sys.path.insert(0, os.path.join(ROOT, 'market_intel'))
 import intrinsic as IV  # noqa: E402
+import sec_check as SC  # noqa: E402
 
 FLAG = {'us': '🇺🇸', 'cn': '🇨🇳', 'in': '🇮🇳', 'jp': '🇯🇵', 'tw': '🇹🇼', 'kr': '🇰🇷', 'hk': '🇭🇰', 'gb': '🇬🇧',
         'de': '🇩🇪', 'ca': '🇨🇦', 'au': '🇦🇺'}
@@ -31,6 +32,8 @@ def entry_lines(i, s):
            f"   📊 {'، '.join(SETUP_FA[x] for x in s['setups'])} | الگوی آماری: جزو {fa(max(1, 100 - round(s['tech_rank'] * 100)))}٪ برتر بازار",
            f"   ✅ {'، '.join(s['fundamentals'])} {s.get('quality', '')}",
            f"   💎 {IV.label(s.get('iv'))}"]
+    if s.get('sec'):
+        out.insert(3, '   ' + SC.label(s['sec']))
     ps = s.get('profit_streak')
     if ps is not None and ps >= 2:
         out.insert(3, f"   📈 سود خالص {fa(ps)} فصل پیاپی بالا رفته" + (
@@ -56,7 +59,7 @@ def main():
     L = [f"<b>📈 احتمال رشد تکنیکال و بنیادی</b> — {fa(today['date'].replace('-', '/'))}",
          f"<i>{fa(scored)} سهم در {fa(len(today['markets']))} بورس بررسی شد؛ {fa(total)} سهم از هر دو صافی گذشت.</i>",
          '<i>صافی ۱: نمودار و حجم (الگوی آماری قبل از رشد + شکست با حجم، روند منظم، فشردگی نزدیک سقف، برگشت به میانگین). '
-         'صافی ۲: دست‌کم ۲ تا از صورت مالی سالم، کن‌اسلیم، وارن بافت، کیفیت رشد ⭐۴ و ⭐۵، یا سود خالص ۲ فصل پیاپی رو به بالا. '
+         'صافی ۲: دست‌کم ۲ تا از صورت مالی سالم، کن‌اسلیم، وارن بافت، کیفیت رشد ⭐۴ و ⭐۵، یا سود خالص ۲ فصل پیاپی رو به بالا (برای سهام آمریکا از گزارش رسمی SEC). '
          'کنار گذاشته می‌شوند: سهم‌های داغ (بیش از ۲۰٪ بالای میانگین ۵۰ روزه یا RSI بالای ۷۵) و سهم‌هایی که تا ۱۰ روز آینده گزارش فصلی دارند. '
          'وقتی شاخص یک بورس زیر میانگین ۵۰ روزه است، حداکثر ۲ سیگنال از آن بورس می‌آید. پیگیری با حد ضرر ۸٪.</i>',
          '<i>«الگوی آماری: جزو ۸٪ برتر بازار» یعنی امتیاز این سهم از ۹۲٪ سهم‌های همان بورس در همان روز بیشتر است؛ '
@@ -81,7 +84,7 @@ def main():
             drops[k] = drops.get(k, 0) + v
     if any(drops.values()):
         L += [f"<i>کنار گذاشته شد: داغ {fa(drops.get('ext', 0) + drops.get('rsi', 0))}، گزارش فصلی نزدیک {fa(drops.get('earn', 0))}، "
-              f"کمتر از ۲ فیلتر بنیادی {fa(drops.get('fund', 0))} سهم</i>", '']
+              f"کمتر از ۲ فیلتر بنیادی {fa(drops.get('fund', 0))}، فروش و سود رسمی SEC هر دو کاهشی {fa(drops.get('sec', 0))} سهم</i>", '']
     if total == 0:
         L += ['امروز هیچ سهمی از هر دو صافی نگذشت.', '']
     else:

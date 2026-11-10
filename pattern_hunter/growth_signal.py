@@ -29,6 +29,7 @@ from common import OUT as PH_OUT  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'market_intel'))
 import quality as Q  # noqa: E402
+import sec_check as SC  # noqa: E402  (عددهای رسمی SEC برای سهام آمریکا؛ ابزار trader-analyst)
 
 OUT = os.path.join(ROOT, 'data', 'growth_signal')
 HIST = os.path.join(OUT, 'history.csv')
@@ -159,8 +160,17 @@ class Collector:
             passed = list(fu.get('passed') or [])
             if qs and qs['score'] >= 4:
                 passed.append('کیفیت رشد')
+            sec = SC.check(t) if m == 'us' else None
+            if sec and not sec.get('stale'):
+                # سهام آمریکا: گزارش رسمی SEC بر داده‌ی Yahoo مقدم است
+                if (sec['revenue_yoy'] is not None and sec['revenue_yoy'] < 0
+                        and sec['net_income_yoy'] is not None and sec['net_income_yoy'] < 0):
+                    drop['sec'] = drop.get('sec', 0) + 1     # فروش و سود رسمی هر دو کمتر از سال قبل
+                    continue
+                streak = sec['profit_streak_yoy']             # رشد سود نسبت به همان فصل سال قبل (بدون اثر فصلی)
+                nu = dict(nu, profit_basis='گزارش رسمی SEC، نسبت به همان فصل سال قبل')
             if streak is not None and streak >= MIN_PROFIT_Q:   # سود دست‌کم ۲ فصل پیاپی بالا رفته: یکی از فیلترهای بنیادی
-                passed.append('سود پیاپی')
+                passed.append('سود پیاپی' + (' (SEC)' if sec and not sec.get('stale') else ''))
             if len(passed) < MIN_FUND:
                 drop['fund'] += 1
                 continue
@@ -174,7 +184,7 @@ class Collector:
             sent.append({'ticker': t, 'name': nm, 'price': round(price, 3), 'setups': st, 'tech_rank': round(rk, 3),
                          'fundamentals': passed, 'quality': Q.label(qs) if qs else '', 'profit_streak': streak,
                          'profit_basis': nu.get('profit_basis', ''), 'profit_more': bool(streak is not None and streak >= 3),
-                         'chart': CP.label(charts[t]), 'chart_score': charts[t]['score']})
+                         'chart': CP.label(charts[t]), 'chart_score': charts[t]['score'], 'sec': sec})
             self.hist.loc[len(self.hist)] = [self.today, m, t, nm, round(price, 4), round(float(idx.dropna().iloc[-1]), 4),
                                              '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),
                                              CP.label(charts[t]), charts[t]['score']]
@@ -210,6 +220,7 @@ class Collector:
         os.makedirs(OUT, exist_ok=True)
         self.hist.to_csv(HIST, index=False)
         Q.save()
+        SC.save()
         json.dump({'date': self.today, 'markets': self.markets}, open(os.path.join(OUT, 'today.json'), 'w', encoding='utf-8'),
                   ensure_ascii=False, indent=1)
         json.dump({'date': self.today, 'markets': self.track}, open(os.path.join(OUT, 'track.json'), 'w', encoding='utf-8'),
