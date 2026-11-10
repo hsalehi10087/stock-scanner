@@ -41,3 +41,5 @@
 {"id": "Insiders|Insiders:Cluster buys|TSM|buy|2026-11-05", "seen": "2026-11-09", "leader": "Insiders:Cluster buys", "source": "Insiders", "ticker": "TSM", "side": "buy", "trade_date": "2026-11-05", "ref_price": 130.17, "insiders": 2, "value_usd": 545393.0}
 {"id": "Insiders|Insiders:Cluster buys|NTHI|buy|2026-11-05", "seen": "2026-11-09", "leader": "Insiders:Cluster buys", "source": "Insiders", "ticker": "NTHI", "side": "buy", "trade_date": "2026-11-05", "ref_price": 3.49, "insiders": 2, "value_usd": 545305.0}
 {"id": "Insiders|Insiders:Cluster buys|GLXY|buy|2026-11-05", "seen": "2026-11-09", "leader": "Insiders:Cluster buys", "source": "Insiders", "ticker": "GLXY", "side": "buy", "trade_date": "2026-11-05", "ref_price": 13.11, "insiders": 2, "value_usd": 10122778.0}
+{"id": "ARK|ARK:Cathie Wood|SOFI|buy|2026-11-10", "seen": "2026-11-10", "leader": "ARK:Cathie Wood", "source": "ARK", "ticker": "SOFI", "side": "buy", "trade_date": "2026-11-10", "ref_price": 16.75}
+{"id": "ARK|ARK:Cathie Wood|PSNL|sell|2026-11-10", "seen": "2026-11-10", "leader": "ARK:Cathie Wood", "source": "ARK", "ticker": "PSNL", "side": "sell", "trade_date": "2026-11-10", "ref_price": null}
