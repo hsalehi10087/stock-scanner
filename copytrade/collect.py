@@ -262,6 +262,64 @@ def from_congress(rows, days=21):
     return [e for e in out if e]
 
 
+# ---------------------------------------------------------------- 3b) کنگره از منبع رسمی (ابزار trader-pelosi)
+def from_house_ptr(days=21, max_new=60):
+    """گزارش‌های معاملات نمایندگان مجلس (PTR) از سایت رسمی House Clerk؛ فقط سهام (ST)، فقط خرید و فروش،
+    بدون اختیار معامله، مبلغ دست‌کم ۱۵ هزار دلار. هر گزارش یک بار خوانده می‌شود."""
+    import tempfile
+    import ptr as P
+    seen_p = os.path.join(OUT, 'ptr_seen.json')
+    seen = set(json.load(open(seen_p))) if os.path.exists(seen_p) else set()
+    today = dt.date.today()
+    cut = str(today - dt.timedelta(days=days))
+    rows = []
+    for y in sorted({today.year, (today - dt.timedelta(days=days)).year}):
+        try:
+            rows += P.select(P.load_index(y), kind='P', since=cut)
+        except Exception as e:
+            log(f'House PTR index {y}: {type(e).__name__} {str(e)[:80]}')
+    new = [r for r in rows if r['doc_id'] not in seen][:max_new]
+    out, tmp = [], tempfile.mkdtemp()
+    for r in new:
+        try:
+            pdf = os.path.join(tmp, r['doc_id'] + '.pdf')
+            open(pdf, 'wb').write(P.download(r['url']))
+            text = P.pdf_to_text(pdf)
+            if text is None:
+                log('House PTR: pdftotext missing')
+                break
+            rep = P.parse_ptr_text(text, r['filed'])
+            seen.add(r['doc_id'])
+        except Exception as e:
+            log(f"House PTR {r['doc_id']}: {type(e).__name__} {str(e)[:60]}")
+            continue
+        who = f"Congress:{r['first']} {r['last']}".strip()
+        for x in rep['rows']:
+            if not x.get('ticker') or x.get('asset_type') not in (None, 'ST') or x.get('option'):
+                continue
+            if (x.get('amount_low') or 0) < 15001 or x['type'] not in ('P', 'S', 'S (partial)'):
+                continue
+            side = 'buy' if x['type'] == 'P' else 'sell'
+            out.append(ev(who, 'Congress', x['ticker'], side, x['date'] or r['filed'], None,
+                          {'amount': x['amount'], 'owner': x['owner_name'], 'filed': r['filed'],
+                           'days_to_disclose': x.get('days_to_disclose'), 'doc': r['url']}))
+        time.sleep(0.5)
+    json.dump(sorted(seen)[-5000:], open(seen_p, 'w'))
+    out = [e for e in out if e]
+    # قیمت روز معامله برای فیلتر جاماندگی (۱۵٪)
+    try:
+        import yfinance as yf
+        for e in out:
+            if e['side'] == 'buy':
+                h = yf.Ticker(e['ticker']).history(start=e['trade_date'], period='5d', auto_adjust=True)
+                if len(h):
+                    e['ref_price'] = round(float(h['Close'].iloc[0]), 4)
+    except Exception:
+        pass
+    log(f'House PTR: {len(new)} new reports, {len(out)} stock events')
+    return out
+
+
 # ---------------------------------------------------------------- 4) خرید گروهی مدیران
 def from_insiders():
     try:
@@ -349,6 +407,8 @@ def select(congress_rows):
             avg = sum(ex) / len(ex)
             leaders[f'Congress:{name}'] = {'source': 'Congress', 'excess6m': round(float(avg), 3), 'n': len(ex),
                                            'active': avg > 0, 'basis': 'میانگین بازده اضافه‌ی ۶ ماهه‌ی خریدها نسبت به S&P 500'}
+    leaders['Congress:Members'] = {'source': 'Congress', 'active': True,
+                                   'basis': 'نمایندگان مجلس آمریکا (گزارش رسمی PTR، سهام ≥ ۱۵ هزار دلار) — هر نماینده جدا، با حذف پس از ۳ ضرر'}
     leaders['Insiders:Cluster buys'] = {'source': 'Insiders', 'active': True,
                                         'basis': 'خرید گروهی مدیران (دست‌کم ۲ مدیر، ≥۲۵۰ هزار دلار) — بدون رتبه‌بندی فردی'}
     n = sum(v['active'] for v in leaders.values())
@@ -364,7 +424,7 @@ def main():
         seen = {json.loads(l)['id'] for l in open(EVENTS, encoding='utf-8') if l.strip()}
     need_select = '--select' in sys.argv or not os.path.exists(LEADERS) or dt.date.today().weekday() == 5
     crows = congress_trades(3 * 365 if need_select else 30)
-    events = from_13f() + from_ark() + from_congress(crows) + from_insiders()
+    events = from_13f() + from_ark() + from_congress(crows) + from_house_ptr() + from_insiders()
     new = [e for e in events if e['id'] not in seen]
     with open(EVENTS, 'a', encoding='utf-8') as f:
         for e in new:
