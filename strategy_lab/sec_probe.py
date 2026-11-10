@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.join(ROOT, 'market_intel'))
 import sec_check as SC  # noqa: E402
 import sec_facts as F  # noqa: E402
 
-out = {'ua': SC.UA}
+out = {'ua_set': bool(__import__('os').getenv('SEC_USER_AGENT'))}
 f = F.Fetcher(ua=SC.UA)
 for name, url in [('tickers', F.TICKERS_URL), ('facts_aapl', F.FACTS_URL % '0000320193')]:
     try:
