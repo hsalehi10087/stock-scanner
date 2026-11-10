@@ -1,0 +1,9 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+601069.SS,西部黄金,14.741790654779386,313.20492965101926,584.39656044,141.43020049,2026-11-09,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+688235.SS,百济神州,13.776994590619584,208.15677541833213,384.706,124.841,2026-11-09,4,5,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+001393.SZ,维通利,11.331279238380777,46.38645979301009,113.32419953,77.4144,2026-11-09,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+688809.SS,强一股份,14.038330748760597,34.10401931651045,150.05650487,111.89560584,2026-11-09,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+301655.SZ,绿控传动,8.720333370699528,27.218779309195746,41.34246319,32.497138719999995,2026-11-09,1,3,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+000530.SZ,冰山冷热,9.873704396219596,18.063234152376257,14.17075152,12.002679429999999,2026-11-09,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+601123.SS,马矿股份,10.43795857725991,12.372186913571511,146.41713804,130.29659924,2026-11-09,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+001233.SZ,海安集团,20.482373456844115,11.42695925264691,135.18594349,121.32247384,2026-11-09,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
