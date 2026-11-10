@@ -61,6 +61,7 @@ jobs:
       - name: Build ${{ matrix.name }} (saved for the digest, not sent)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           OANDA_TOKEN: ${{ secrets.OANDA_TOKEN }}
@@ -124,6 +125,7 @@ jobs:
       - name: Send one digest
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"

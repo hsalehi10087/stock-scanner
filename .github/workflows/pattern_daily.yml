@@ -31,10 +31,13 @@ jobs:
           python-version: '3.12'
       - run: pip install -q yfinance pandas numpy scikit-learn joblib requests matplotlib scipy
       - if: github.event.inputs.only_report != 'true'
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: python3 pattern_hunter/daily.py
       - name: Report
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
           TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
         run: |
           echo "::add-mask::$TELEGRAM_BOT_TOKEN"

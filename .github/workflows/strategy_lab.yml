@@ -29,7 +29,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q yfinance pandas numpy
-      - run: python3 "strategy_lab/${{ github.event.inputs.script || 'lab' }}.py" "${{ github.event.inputs.symbol }}" "${{ github.event.inputs.name }}"
+      - env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python3 "strategy_lab/${{ github.event.inputs.script || 'lab' }}.py" "${{ github.event.inputs.symbol }}" "${{ github.event.inputs.name }}"
       - name: Save results
         if: always()
         run: |

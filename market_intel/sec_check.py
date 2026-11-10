@@ -18,6 +18,7 @@ TTL_DAYS = 7
 # SEC می‌خواهد هر برنامه نام و راه تماس بدهد؛ آدرس عمومی GitHub صاحب مخزن (نه ایمیل شخصی)
 UA = os.getenv('SEC_USER_AGENT') or 'Hossein Stock Scanner hsalehi10087@users.noreply.github.com'
 _cache, _fetcher, _ciks = None, None, None
+_disabled = False      # بعد از اولین رد شدن (۴۰۳) در همین اجرا دیگر تلاش نمی‌شود
 
 
 def _load():
@@ -73,7 +74,9 @@ def summarize(result):
 
 def check(ticker):
     """None اگر سهم آمریکایی نیست یا SEC داده ندارد."""
-    global _fetcher, _ciks
+    global _fetcher, _ciks, _disabled
+    if _disabled:
+        return None
     if '.' in ticker and not ticker.endswith(('.A', '.B')):
         return None
     c = _load()
@@ -92,6 +95,8 @@ def check(ticker):
         out = summarize(res)
     except Exception as e:
         print('SEC', ticker, e, file=sys.stderr)
+        if '403' in str(e):
+            _disabled = True
         return None
     c[ticker] = out or {'date': str(dt.date.today())}
     return out
