@@ -102,6 +102,57 @@ def check(ticker):
     return out
 
 
+ITEMS_8K = {'2.02': 'گزارش نتایج مالی', '5.02': 'تغییر مدیر ارشد/هیئت‌مدیره', '1.01': 'قرارداد مهم تازه',
+            '2.06': 'کاهش ارزش دارایی', '1.03': 'ورشکستگی', '4.02': 'اصلاح صورت‌های مالی قبلی',
+            '2.01': 'خرید/فروش دارایی بزرگ', '1.02': 'لغو قرارداد مهم'}
+WARN_8K = {'5.02', '2.06', '1.03', '4.02', '1.02'}
+_ev_cache = {}
+
+
+def parse_8k(sub, days=7, today=None):
+    """از JSON submissions شرکت: بندهای مهم 8-K در N روز اخیر → [(تاریخ، بند)]."""
+    today = today or dt.date.today()
+    rec = (sub.get('filings') or {}).get('recent') or {}
+    out = []
+    for f, d, it in zip(rec.get('form', []), rec.get('filingDate', []), rec.get('items', [])):
+        if f not in ('8-K', '8-K/A'):
+            continue
+        if (today - dt.date.fromisoformat(d)).days > days:
+            break                                         # فهرست از تازه به قدیم مرتب است
+        for i in (it or '').split(','):
+            i = i.strip()
+            if i in ITEMS_8K and (d, i) not in out:
+                out.append((d, i))
+    return out
+
+
+def events_8k(ticker, days=7):
+    """رویدادهای مهم 8-K سهم آمریکایی در ۷ روز اخیر (ایده از trader-news)."""
+    global _fetcher, _ciks
+    if _disabled or ('.' in ticker and not ticker.endswith(('.A', '.B'))):
+        return []
+    if ticker in _ev_cache:
+        return _ev_cache[ticker]
+    try:
+        if _fetcher is None:
+            _fetcher = F.Fetcher(ua=UA, offline=os.getenv('SEC_OFFLINE_DIR'))
+            _ciks = F.ticker_ciks(_fetcher)
+        cik = _ciks.get(ticker.upper().replace('-', '.'))
+        ev = parse_8k(_fetcher.json(F.SUBMISSIONS_URL % cik[0], f'submissions-CIK{cik[0]}.json'), days) if cik else []
+    except Exception as e:
+        print('SEC 8-K', ticker, e, file=sys.stderr)
+        ev = []
+    _ev_cache[ticker] = ev
+    return ev
+
+
+def label_8k(ev):
+    if not ev:
+        return ''
+    parts = [('⚠️ ' if i in WARN_8K else '') + f"{ITEMS_8K[i]} ({fa(d[5:].replace('-', '/'))})" for d, i in ev[:3]]
+    return '📰 اطلاعیه‌ی رسمی ۸-K در هفته‌ی اخیر: ' + '، '.join(parts)
+
+
 def fa(x):
     return str(x).translate(str.maketrans('0123456789.-', '۰۱۲۳۴۵۶۷۸۹٫−'))
 

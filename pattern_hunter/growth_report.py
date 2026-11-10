@@ -34,6 +34,8 @@ def entry_lines(i, s):
            f"   💎 {IV.label(s.get('iv'))}"]
     if s.get('sec'):
         out.insert(3, '   ' + SC.label(s['sec']))
+    if s.get('k8'):
+        out.append('   ' + SC.label_8k([tuple(x) for x in s['k8']]))
     ps = s.get('profit_streak')
     if ps is not None and ps >= 2:
         out.insert(3, f"   📈 سود خالص {fa(ps)} فصل پیاپی بالا رفته" + (

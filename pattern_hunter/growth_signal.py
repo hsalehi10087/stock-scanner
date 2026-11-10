@@ -184,7 +184,8 @@ class Collector:
             sent.append({'ticker': t, 'name': nm, 'price': round(price, 3), 'setups': st, 'tech_rank': round(rk, 3),
                          'fundamentals': passed, 'quality': Q.label(qs) if qs else '', 'profit_streak': streak,
                          'profit_basis': nu.get('profit_basis', ''), 'profit_more': bool(streak is not None and streak >= 3),
-                         'chart': CP.label(charts[t]), 'chart_score': charts[t]['score'], 'sec': sec})
+                         'chart': CP.label(charts[t]), 'chart_score': charts[t]['score'], 'sec': sec,
+                         'k8': SC.events_8k(t) if m == 'us' else []})
             self.hist.loc[len(self.hist)] = [self.today, m, t, nm, round(price, 4), round(float(idx.dropna().iloc[-1]), 4),
                                              '|'.join(st), '|'.join(passed), qs['score'] if qs else None, round(rk, 3),
                                              CP.label(charts[t]), charts[t]['score']]
