@@ -13,7 +13,7 @@
   "rev_prev": 5568402,
   "rev_growth": 151.1,
   "none": "no_data",
-  "fetched": "2026-11-02"
+  "fetched": "2026-11-10"
  },
  "فاراک": {
   "title": "صورت‌های مالی سال مالی منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)(اصلاحیه)",
@@ -985,12 +985,12 @@
   "fetched": "2026-11-02"
  },
  "کاما": {
-  "title": "(ذخیره‌ی میانی)",
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای تلفیقی دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
   "period": "1405/06/31",
   "consolidated": true,
   "audited": false,
   "none": "no_table",
-  "fetched": "2026-11-02"
+  "fetched": "2026-11-10"
  },
  "سبهان": {
   "period": "1405/06/31",
@@ -1594,5 +1594,110 @@
   "rev_prev": 48668820,
   "rev_growth": 122.6,
   "fetched": "2026-11-08"
+ },
+ "غکورش": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 85214997,
+  "np_prev": 22327551,
+  "codal_pct": "۲۸۲",
+  "np_growth": 281.7,
+  "verified": true,
+  "rev_cur": 584512054,
+  "rev_prev": 140141486,
+  "rev_growth": 317.1,
+  "fetched": "2026-11-10"
+ },
+ "رمپنا": {
+  "title": "صورت‌های مالی تلفیقی سال مالی منتهی به ۱۴۰۴/۱۲/۲۹ (حسابرسی شده)",
+  "period": "1404/12/29",
+  "consolidated": true,
+  "audited": true,
+  "np_cur": 2249781241,
+  "np_prev": 829871503,
+  "codal_pct": "۱۷۱",
+  "np_growth": 171.1,
+  "verified": true,
+  "rev_cur": 1959274057,
+  "rev_prev": 1054611496,
+  "rev_growth": 85.8,
+  "fetched": "2026-11-10"
+ },
+ "شکربن": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 3028884,
+  "np_prev": 3092075,
+  "codal_pct": "(۲)",
+  "np_growth": -2,
+  "verified": true,
+  "rev_cur": 23115606,
+  "rev_prev": 14054162,
+  "rev_growth": 64.5,
+  "fetched": "2026-11-10"
+ },
+ "سخاش": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 6724016,
+  "np_prev": 3021544,
+  "codal_pct": "۱۲۳",
+  "np_growth": 122.5,
+  "verified": true,
+  "rev_cur": 14012887,
+  "rev_prev": 7226563,
+  "rev_growth": 93.9,
+  "fetched": "2026-11-10"
+ },
+ "ثبهساز": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 16759233,
+  "np_prev": 12658187,
+  "codal_pct": "۳۲",
+  "np_growth": 32.4,
+  "verified": true,
+  "rev_cur": 29004804,
+  "rev_prev": 18885210,
+  "rev_growth": 53.6,
+  "fetched": "2026-11-10"
+ },
+ "تملت": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای تلفیقی دوره ۶ ماهه منتهی به ۱۴۰۵/۰۴/۳۱ (حسابرسی شده)",
+  "period": "1405/04/31",
+  "consolidated": true,
+  "audited": true,
+  "np_cur": 16455867,
+  "np_prev": 10393721,
+  "codal_pct": "۵۸",
+  "np_growth": 58.3,
+  "verified": true,
+  "rev_cur": 29366799,
+  "rev_prev": 17881481,
+  "rev_growth": 64.2,
+  "fetched": "2026-11-10"
+ },
+ "غشاذر": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 5378410,
+  "np_prev": 2355211,
+  "codal_pct": "۱۲۸",
+  "np_growth": 128.4,
+  "verified": true,
+  "rev_cur": 50746340,
+  "rev_prev": 22834448,
+  "rev_growth": 122.2,
+  "fetched": "2026-11-10"
  }
 }
