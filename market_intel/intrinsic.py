@@ -53,6 +53,11 @@ def dcf(base, g1):
 
 def _fx(fc, pc):
     """نرخ تبدیل ارز گزارش مالی به ارز قیمت (مثلاً TWD→USD برای ADR)."""
+    sub = {'GBp': ('GBP', 100), 'GBX': ('GBP', 100), 'ZAc': ('ZAR', 100), 'ILA': ('ILS', 100)}   # قیمت به پنی/سنت
+    if pc in sub:
+        base, m = sub[pc]
+        f = _fx(fc, base)
+        return f * m if f is not None else None
     if not fc or not pc or fc == pc:
         return 1.0
     import yfinance as yf
@@ -104,9 +109,11 @@ def from_info(info, price=None, sym=None, sec=None, fx=None, stmt_fcf=None):
         base, src = fcf * k / sh, 'FCF'
     elif (info.get('forwardEps') or 0) > 0:
         base, src = info['forwardEps'], 'EPS'          # forwardEps یاهو به ارز قیمت است
-    elif (info.get('trailingEps') or 0) > 0:
+    elif (info.get('trailingEps') or 0) > 0 and (info.get('operatingMargins') or 0) > 0:
+        # سود گذشته فقط وقتی کسب‌وکار اصلی سودده است (نه سود یک‌باره از فروش دارایی یا ارزیابی مجدد)
         base, src = info['trailingEps'], 'EPS گذشته'
-    elif sec and ((sec.get('eps_ttm') or 0) > 0 or (sec.get('net_income_ttm') or 0) > 0):
+    elif sec and ((sec.get('eps_ttm') or 0) > 0 or (sec.get('net_income_ttm') or 0) > 0) \
+            and (sec.get('operating_margin') or 0) > 0 and not sec.get('one_off'):
         base = sec.get('eps_ttm') if (sec.get('eps_ttm') or 0) > 0 else sec['net_income_ttm'] / sh
         src = 'SEC'
     rev = info.get('totalRevenue') or (sec or {}).get('revenue_ttm')
