@@ -1,0 +1,7 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+3491.TWO,昇達科,10.612244897959178,333.2207492470939,307.838,71.058,2026-11-11,2,5,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+1476.TW,儒鴻,13.759999999999994,158.3081746883239,1552.91,601.185,2026-11-11,3,5,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+3219.TWO,倚強科,15.631689759743516,146.52626939906193,156.628,63.534,2026-11-11,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+6782.TW,視陽,12.015503875968992,55.61815336463224,397.76,255.6,2026-11-11,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+3661.TW,世芯-KY,10.691823899371066,23.803533299786476,1638.567,1323.522,2026-11-11,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+3617.TW,碩天,11.422413793103448,14.812970675836018,758.629,660.752,2026-11-11,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
