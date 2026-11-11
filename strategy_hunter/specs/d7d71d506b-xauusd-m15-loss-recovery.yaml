@@ -1,0 +1,12 @@
+id: d7d71d506b-xauusd-m15-loss-recovery
+name: XAUUSD M15 extreme zone with loss recovery
+name_fa: طلا با ناحیه‌های افراطی ۱۵ دقیقه‌ای و معامله‌ی جبرانی
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xsrl4a/title_the_brutal_psychological_trap_of_loss/
+claim: "«استراتژی ناحیه‌ی افراطی M15 روی طلا، یک معامله در روز در نشانگرهای جلسه، ضرر ثابت ۵ دلار… در ۱۴ روز، حساب ۳۶ دلاری به ۵۶ دلار رسید؛ در سپتامبر هر دو حالت حساب را به چند هزار دلار رساندند.»"
+claimed_return: "$36 → $56 in 14 days (backtest); $36 → thousands in September"
+added: 2026-11-11
+status: not_testable
+asset_class: forex
+symbols: [GC=F]
+reason_not_testable: "روی کندل ۱۵ دقیقه‌ای است و «ناحیه‌ی افراطی» و «نشانگر جلسه» تعریف عددی ندارند؛ اطلاعات کافی برای قانون دقیق نیست"

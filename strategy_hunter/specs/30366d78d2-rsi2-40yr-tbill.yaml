@@ -1,0 +1,12 @@
+id: 30366d78d2-rsi2-40yr-tbill
+name: RSI(2) mean reversion 40-year test
+name_fa: بازگشت به میانگین با RSI دو روزه (آزمون ۴۰ ساله)
+source: medium/algorithmic-trading
+source_url: https://medium.com/@abhinav.neo/rsi-2-wins-72-of-its-trades-more-than-half-of-what-it-earns-is-t-bill-interest-2ef8196443bb
+claim: "«RSI(2) در ۷۲٪ معامله‌هایش برنده است. بیش از نیمی از درآمدش سود اوراق خزانه است. پرتقلیدترین قانون بازگشت به میانگین بین معامله‌گران خرد، آزموده‌شده در ۴۰ سال. سیگنال واقعی است؛ ولی استراتژی دور آن بیشتر نقد است.»"
+claimed_return: "72% win rate"
+added: 2026-11-11
+status: not_testable
+asset_class: etf
+symbols: [SPY]
+reason_not_testable: "متن کامل مقاله باز نشد و قانون دقیق (دارایی، آستانه‌ی ورود، شرط خروج، فیلتر روند) در متن عمومی نیامده؛ حدس زدن قانون یعنی ساختن ادعا"

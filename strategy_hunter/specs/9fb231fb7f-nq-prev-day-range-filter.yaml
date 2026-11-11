@@ -1,0 +1,12 @@
+id: 9fb231fb7f-nq-prev-day-range-filter
+name: NQ intraday setups filtered by prior-day range
+name_fa: چهار ستاپ روزانه‌ی NQ با فیلتر «بیرون از محدوده‌ی دیروز»
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xt3o08/i_split_4_nq_daytrading_strategies_by_one_thing/
+claim: "«۴ استراتژی روزانه‌ی NQ را با یک چیز جدا کردم: آیا قیمت هنگام ورود هنوز داخل محدوده‌ی دیروز بود؟ در ۲ سال، ۱٬۶۶۰ معامله‌ی داخل محدوده ۹۳۸ دلار ضرر می‌دادند و ۹۵۴ معامله‌ی بیرون از آن ۱۹٬۹۸۲ دلار سود.»"
+claimed_return: "+$19,982 (954 trades outside prior-day range, 2 years, 1 micro)"
+added: 2026-11-11
+status: not_testable
+asset_class: stock
+symbols: [NQ=F]
+reason_not_testable: "ستاپ‌ها (Silver Bullet، شکست محدوده‌ی ۱۵ دقیقه‌ای، شکار نقدینگی با FVG، Power of Three) روی کندل دقیقه‌ای و ساعت‌های مشخص نیویورک/لندن هستند؛ داده‌ی دقیقه‌ای دوساله و تشخیص FVG در موتور نداریم"
