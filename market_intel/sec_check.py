@@ -69,7 +69,8 @@ def summarize(result):
             'eps_yoy': cur.get('eps_yoy'), 'profit_streak_yoy': streak, 'revenue_streak_yoy': rev_streak,
             'operating_margin': gm, 'margin_up': bool(gm is not None and pgm is not None and gm > pgm),
             'net_margin': cur.get('net_margin'), 'one_off': one_off,
-            'revenue_ttm': result['ttm'].get('revenue'), 'net_income_ttm': result['ttm'].get('net_income')}
+            'revenue_ttm': result['ttm'].get('revenue'), 'net_income_ttm': result['ttm'].get('net_income'),
+            'eps_ttm': result['ttm'].get('eps_diluted')}
 
 
 def check(ticker):
