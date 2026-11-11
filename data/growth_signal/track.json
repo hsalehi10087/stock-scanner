@@ -1,5 +1,5 @@
 {
- "date": "2026-11-10",
+ "date": "2026-11-11",
  "markets": {
   "us": [
    {
@@ -11,7 +11,7 @@
     "ret_pct": -8.0,
     "max_pct": 5.2,
     "min_pct": -8.0,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -22,7 +22,7 @@
     "ret_pct": -12.1,
     "max_pct": 1.3,
     "min_pct": -12.1,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -33,7 +33,7 @@
     "ret_pct": -9.5,
     "max_pct": 3.1,
     "min_pct": -9.5,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -44,7 +44,7 @@
     "ret_pct": -11.2,
     "max_pct": 11.6,
     "min_pct": -11.2,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -55,7 +55,7 @@
     "ret_pct": 8.1,
     "max_pct": 17.6,
     "min_pct": 1.3,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -66,7 +66,7 @@
     "ret_pct": -8.3,
     "max_pct": -2.0,
     "min_pct": -8.3,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -74,10 +74,10 @@
     "name": "Delta Air Lines",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 13.5,
-    "max_pct": 13.5,
+    "ret_pct": 14.0,
+    "max_pct": 14.0,
     "min_pct": -0.9,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-28",
@@ -88,7 +88,7 @@
     "ret_pct": -22.9,
     "max_pct": 1.7,
     "min_pct": -22.9,
-    "index_pct": -2.4
+    "index_pct": -2.7
    },
    {
     "date": "2026-10-29",
@@ -96,10 +96,10 @@
     "name": "World Kinect Corporation",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.1,
+    "ret_pct": -3.5,
     "max_pct": 3.8,
-    "min_pct": -2.5,
-    "index_pct": -2.5
+    "min_pct": -3.5,
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -107,10 +107,10 @@
     "name": "Five Below",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 8.2,
+    "ret_pct": 8.1,
     "max_pct": 8.2,
     "min_pct": 0.7,
-    "index_pct": -2.5
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -118,10 +118,10 @@
     "name": "Monster Beverage",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.0,
+    "ret_pct": -0.7,
     "max_pct": 6.8,
-    "min_pct": -0.0,
-    "index_pct": -2.5
+    "min_pct": -0.7,
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -129,10 +129,10 @@
     "name": "LivaNova",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 14.8,
+    "ret_pct": 13.0,
     "max_pct": 16.8,
     "min_pct": -2.1,
-    "index_pct": -2.5
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -143,7 +143,7 @@
     "ret_pct": -11.1,
     "max_pct": -0.1,
     "min_pct": -11.1,
-    "index_pct": -2.5
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -154,7 +154,7 @@
     "ret_pct": -19.5,
     "max_pct": -0.5,
     "min_pct": -19.5,
-    "index_pct": -2.5
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -162,10 +162,10 @@
     "name": "Victory Capital Holdings, Inc.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 13.3,
+    "ret_pct": 13.0,
     "max_pct": 13.3,
     "min_pct": -1.1,
-    "index_pct": -2.5
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-29",
@@ -173,10 +173,10 @@
     "name": "Stepan Company",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.5,
+    "ret_pct": -2.4,
     "max_pct": 3.3,
-    "min_pct": -2.1,
-    "index_pct": -2.5
+    "min_pct": -2.4,
+    "index_pct": -2.9
    },
    {
     "date": "2026-10-30",
@@ -184,10 +184,10 @@
     "name": "West Pharmaceutical Services",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.9,
+    "ret_pct": -1.0,
     "max_pct": -0.9,
-    "min_pct": -5.8,
-    "index_pct": -2.2
+    "min_pct": -5.9,
+    "index_pct": -2.5
    },
    {
     "date": "2026-10-30",
@@ -195,10 +195,10 @@
     "name": "Mastercard",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.2,
+    "ret_pct": 3.6,
     "max_pct": 5.8,
     "min_pct": 0.4,
-    "index_pct": -2.2
+    "index_pct": -2.5
    },
    {
     "date": "2026-10-30",
@@ -206,10 +206,10 @@
     "name": "Encompass Health",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 7.3,
-    "max_pct": 7.4,
+    "ret_pct": 8.4,
+    "max_pct": 8.4,
     "min_pct": 2.5,
-    "index_pct": -2.2
+    "index_pct": -2.5
    },
    {
     "date": "2026-10-30",
@@ -217,43 +217,10 @@
     "name": "Lilly (Eli)",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.8,
-    "max_pct": 3.2,
+    "ret_pct": 4.3,
+    "max_pct": 4.3,
     "min_pct": -1.4,
-    "index_pct": -2.2
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "GKOS",
-    "name": "Glaukos Corp.",
-    "stopped": true,
-    "stop_date": "2026-11-05",
-    "ret_pct": -9.3,
-    "max_pct": 1.7,
-    "min_pct": -9.3,
-    "index_pct": -2.2
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "HALO",
-    "name": "Halozyme",
-    "stopped": true,
-    "stop_date": "2026-11-06",
-    "ret_pct": -21.0,
-    "max_pct": -0.2,
-    "min_pct": -21.0,
-    "index_pct": -2.2
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "CROX",
-    "name": "Crocs",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 6.6,
-    "max_pct": 6.6,
-    "min_pct": 0.2,
-    "index_pct": -2.2
+    "index_pct": -2.5
    },
    {
     "date": "2026-10-30",
@@ -264,7 +231,40 @@
     "ret_pct": -8.9,
     "max_pct": -4.9,
     "min_pct": -8.9,
-    "index_pct": -2.2
+    "index_pct": -2.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "GKOS",
+    "name": "Glaukos Corp.",
+    "stopped": true,
+    "stop_date": "2026-11-05",
+    "ret_pct": -9.3,
+    "max_pct": 1.7,
+    "min_pct": -9.3,
+    "index_pct": -2.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "HALO",
+    "name": "Halozyme",
+    "stopped": true,
+    "stop_date": "2026-11-06",
+    "ret_pct": -21.0,
+    "max_pct": -0.2,
+    "min_pct": -21.0,
+    "index_pct": -2.5
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "CROX",
+    "name": "Crocs",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 6.3,
+    "max_pct": 6.6,
+    "min_pct": 0.2,
+    "index_pct": -2.5
    },
    {
     "date": "2026-10-31",
@@ -272,54 +272,10 @@
     "name": "Nasdaq, Inc.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.1,
-    "max_pct": 3.3,
+    "ret_pct": 3.6,
+    "max_pct": 3.6,
     "min_pct": 0.6,
-    "index_pct": -0.4
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "BTSG",
-    "name": "BrightSpring Health Services",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 3.4,
-    "max_pct": 4.4,
-    "min_pct": -1.5,
-    "index_pct": -0.4
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "EXEL",
-    "name": "Exelixis",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 3.4,
-    "max_pct": 4.8,
-    "min_pct": -1.0,
-    "index_pct": -0.4
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "MANH",
-    "name": "Manhattan Associates",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 1.3,
-    "max_pct": 4.8,
-    "min_pct": 1.3,
-    "index_pct": -0.4
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "MD",
-    "name": "Pediatrix Medical Group",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 5.6,
-    "max_pct": 10.0,
-    "min_pct": 2.6,
-    "index_pct": -0.4
+    "index_pct": -0.8
    },
    {
     "date": "2026-10-31",
@@ -330,7 +286,7 @@
     "ret_pct": -9.6,
     "max_pct": -4.0,
     "min_pct": -9.6,
-    "index_pct": -0.4
+    "index_pct": -0.8
    },
    {
     "date": "2026-10-31",
@@ -338,10 +294,54 @@
     "name": "Hanover Insurance",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 1.3,
-    "max_pct": 3.2,
+    "ret_pct": 3.4,
+    "max_pct": 3.4,
     "min_pct": 0.3,
-    "index_pct": -0.4
+    "index_pct": -0.8
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "MANH",
+    "name": "Manhattan Associates",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 3.7,
+    "max_pct": 4.8,
+    "min_pct": 1.3,
+    "index_pct": -0.8
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "EXEL",
+    "name": "Exelixis",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.7,
+    "max_pct": 4.8,
+    "min_pct": -1.0,
+    "index_pct": -0.8
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "BTSG",
+    "name": "BrightSpring Health Services",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 8.4,
+    "max_pct": 8.4,
+    "min_pct": -1.5,
+    "index_pct": -0.8
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "MD",
+    "name": "Pediatrix Medical Group",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 6.0,
+    "max_pct": 10.0,
+    "min_pct": 2.6,
+    "index_pct": -0.8
    },
    {
     "date": "2026-11-03",
@@ -349,10 +349,10 @@
     "name": "Expeditors International",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -5.5,
+    "ret_pct": -5.7,
     "max_pct": 1.9,
     "min_pct": -8.0,
-    "index_pct": 0.1
+    "index_pct": -0.3
    },
    {
     "date": "2026-11-03",
@@ -363,7 +363,7 @@
     "ret_pct": -10.5,
     "max_pct": -1.7,
     "min_pct": -10.5,
-    "index_pct": 0.1
+    "index_pct": -0.3
    },
    {
     "date": "2026-11-05",
@@ -371,10 +371,32 @@
     "name": "Tenet Health",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -1.1,
-    "max_pct": -1.1,
+    "ret_pct": -0.7,
+    "max_pct": -0.7,
     "min_pct": -3.1,
-    "index_pct": -1.8
+    "index_pct": -2.2
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "PCTY",
+    "name": "Paylocity",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 0.7,
+    "max_pct": 0.7,
+    "min_pct": 0.7,
+    "index_pct": -0.4
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "PLMR",
+    "name": "Palomar Holdings, Inc.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 2.7,
+    "max_pct": 2.7,
+    "min_pct": 2.7,
+    "index_pct": -0.4
    }
   ],
   "cn": [
@@ -384,10 +406,10 @@
     "name": "Foresight Technology",
     "stopped": true,
     "stop_date": "2026-11-03",
-    "ret_pct": -12.4,
-    "max_pct": 1.2,
-    "min_pct": -12.4,
-    "index_pct": 1.4
+    "ret_pct": -12.5,
+    "max_pct": 1.1,
+    "min_pct": -12.5,
+    "index_pct": 2.8
    },
    {
     "date": "2026-10-28",
@@ -398,7 +420,7 @@
     "ret_pct": -12.3,
     "max_pct": -0.0,
     "min_pct": -12.3,
-    "index_pct": 1.4
+    "index_pct": 2.8
    },
    {
     "date": "2026-11-05",
@@ -406,10 +428,32 @@
     "name": "ZHEJIANG CF MOTO POWER CO LTD",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.0,
+    "ret_pct": -2.5,
     "max_pct": 0.0,
     "min_pct": -3.3,
-    "index_pct": -0.6
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "688017.SS",
+    "name": "LEADER HARMONIOUS DRIVE SYSTEMS",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 0.1,
+    "max_pct": 0.1,
+    "min_pct": 0.0,
+    "index_pct": 1.4
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "688213.SS",
+    "name": "SMARTSENS TECHNOLOGY (SHANGHAI)",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.3,
+    "max_pct": -0.0,
+    "min_pct": -0.3,
+    "index_pct": 1.4
    }
   ],
   "in": [
@@ -422,7 +466,7 @@
     "ret_pct": -9.5,
     "max_pct": 0.3,
     "min_pct": -9.5,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -430,10 +474,10 @@
     "name": "Tips Music Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.6,
+    "ret_pct": -2.4,
     "max_pct": 0.0,
     "min_pct": -3.8,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -444,7 +488,7 @@
     "ret_pct": -8.7,
     "max_pct": 0.0,
     "min_pct": -8.7,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -452,10 +496,10 @@
     "name": "Sona BLW Precision Forgings Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 5.1,
-    "max_pct": 5.1,
+    "ret_pct": 5.2,
+    "max_pct": 5.2,
     "min_pct": -0.7,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -463,10 +507,10 @@
     "name": "Aarti Pharmalabs Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 4.5,
+    "ret_pct": 4.7,
     "max_pct": 5.3,
     "min_pct": -1.0,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -474,10 +518,10 @@
     "name": "SPR Auto Technologies Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -4.0,
+    "ret_pct": -4.5,
     "max_pct": 0.0,
     "min_pct": -5.7,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -485,10 +529,10 @@
     "name": "Bosch Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 4.0,
+    "ret_pct": 6.0,
     "max_pct": 10.2,
     "min_pct": -0.9,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-28",
@@ -499,7 +543,7 @@
     "ret_pct": -8.9,
     "max_pct": 0.9,
     "min_pct": -8.9,
-    "index_pct": 10.3
+    "index_pct": 11.3
    },
    {
     "date": "2026-10-29",
@@ -507,10 +551,10 @@
     "name": "Westlife Foodworld Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 10.1,
+    "ret_pct": 9.9,
     "max_pct": 10.1,
     "min_pct": -3.1,
-    "index_pct": 9.2
+    "index_pct": 10.1
    },
    {
     "date": "2026-10-29",
@@ -521,7 +565,7 @@
     "ret_pct": -10.8,
     "max_pct": -1.1,
     "min_pct": -10.8,
-    "index_pct": 9.2
+    "index_pct": 10.1
    },
    {
     "date": "2026-10-29",
@@ -529,21 +573,10 @@
     "name": "Acutaas Chemicals Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.7,
+    "ret_pct": -1.8,
     "max_pct": 0.3,
     "min_pct": -5.5,
-    "index_pct": 9.2
-   },
-   {
-    "date": "2026-10-29",
-    "ticker": "ICIL.NS",
-    "name": "Indo Count Industries Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 12.9,
-    "max_pct": 17.6,
-    "min_pct": -1.1,
-    "index_pct": 9.2
+    "index_pct": 10.1
    },
    {
     "date": "2026-10-29",
@@ -551,10 +584,21 @@
     "name": "Leela Palaces Hotels & Resorts Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 4.5,
+    "ret_pct": 3.5,
     "max_pct": 9.6,
     "min_pct": 0.4,
-    "index_pct": 9.2
+    "index_pct": 10.1
+   },
+   {
+    "date": "2026-10-29",
+    "ticker": "ICIL.NS",
+    "name": "Indo Count Industries Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 21.5,
+    "max_pct": 21.5,
+    "min_pct": -1.1,
+    "index_pct": 10.1
    },
    {
     "date": "2026-10-29",
@@ -562,65 +606,10 @@
     "name": "Vijaya Diagnostic Centre Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 0.8,
+    "ret_pct": -2.9,
     "max_pct": 0.8,
-    "min_pct": -2.8,
-    "index_pct": 9.2
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "SANSERA.NS",
-    "name": "Sansera Engineering Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 12.1,
-    "max_pct": 12.1,
-    "min_pct": -0.9,
-    "index_pct": 8.6
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "NAZARA.NS",
-    "name": "Nazara Technologies Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 2.2,
-    "max_pct": 5.5,
-    "min_pct": -0.1,
-    "index_pct": 8.6
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "ABDL.NS",
-    "name": "Allied Blenders and Distillers Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 3.3,
-    "max_pct": 3.3,
-    "min_pct": -0.2,
-    "index_pct": 8.6
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "GLAND.NS",
-    "name": "Gland Pharma Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": 6.5,
-    "max_pct": 6.5,
-    "min_pct": -1.1,
-    "index_pct": 8.6
-   },
-   {
-    "date": "2026-10-30",
-    "ticker": "COFORGE.NS",
-    "name": "Coforge Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": -0.3,
-    "max_pct": 2.3,
-    "min_pct": -0.4,
-    "index_pct": 8.6
+    "min_pct": -2.9,
+    "index_pct": 10.1
    },
    {
     "date": "2026-10-30",
@@ -628,10 +617,21 @@
     "name": "Laurus Labs Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.1,
+    "ret_pct": 2.1,
     "max_pct": 3.1,
     "min_pct": -2.4,
-    "index_pct": 8.6
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "COFORGE.NS",
+    "name": "Coforge Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -1.7,
+    "max_pct": 2.3,
+    "min_pct": -1.7,
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-30",
@@ -639,43 +639,76 @@
     "name": "Divi's Laboratories Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 17.9,
+    "ret_pct": 15.9,
     "max_pct": 17.9,
     "min_pct": -0.3,
-    "index_pct": 8.6
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "ABDL.NS",
+    "name": "Allied Blenders and Distillers Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 5.8,
+    "max_pct": 5.8,
+    "min_pct": -0.2,
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "GLAND.NS",
+    "name": "Gland Pharma Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 5.3,
+    "max_pct": 6.5,
+    "min_pct": -1.1,
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "SANSERA.NS",
+    "name": "Sansera Engineering Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 12.2,
+    "max_pct": 12.2,
+    "min_pct": -0.9,
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-30",
+    "ticker": "NAZARA.NS",
+    "name": "Nazara Technologies Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 3.7,
+    "max_pct": 5.5,
+    "min_pct": -0.1,
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-31",
-    "ticker": "TANLA.NS",
-    "name": "Tanla Platforms Ltd.",
+    "ticker": "GRWRHITECH.NS",
+    "name": "Garware Hi-Tech Films Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.4,
-    "max_pct": 5.6,
-    "min_pct": 2.9,
-    "index_pct": 8.6
+    "ret_pct": 11.1,
+    "max_pct": 12.7,
+    "min_pct": -0.2,
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-31",
-    "ticker": "ZYDUSLIFE.NS",
-    "name": "Zydus Lifesciences Ltd.",
+    "ticker": "INDHOTEL.NS",
+    "name": "Indian Hotels Co. Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.4,
-    "max_pct": -0.4,
-    "min_pct": -4.6,
-    "index_pct": 8.6
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "SHILPAMED.NS",
-    "name": "Shilpa Medicare Ltd.",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": -2.3,
-    "max_pct": -1.4,
-    "min_pct": -3.5,
-    "index_pct": 8.6
+    "ret_pct": 7.6,
+    "max_pct": 9.9,
+    "min_pct": 1.3,
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-31",
@@ -686,29 +719,40 @@
     "ret_pct": 4.5,
     "max_pct": 4.9,
     "min_pct": 0.9,
-    "index_pct": 8.6
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-31",
-    "ticker": "GRWRHITECH.NS",
-    "name": "Garware Hi-Tech Films Ltd.",
+    "ticker": "TANLA.NS",
+    "name": "Tanla Platforms Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 12.7,
-    "max_pct": 12.7,
-    "min_pct": -0.2,
-    "index_pct": 8.6
+    "ret_pct": 10.7,
+    "max_pct": 10.7,
+    "min_pct": 2.9,
+    "index_pct": 9.6
    },
    {
     "date": "2026-10-31",
-    "ticker": "INDHOTEL.NS",
-    "name": "Indian Hotels Co. Ltd.",
+    "ticker": "ZYDUSLIFE.NS",
+    "name": "Zydus Lifesciences Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 9.9,
-    "max_pct": 9.9,
-    "min_pct": 1.3,
-    "index_pct": 8.6
+    "ret_pct": -3.7,
+    "max_pct": -0.4,
+    "min_pct": -4.6,
+    "index_pct": 9.6
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "SHILPAMED.NS",
+    "name": "Shilpa Medicare Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -2.2,
+    "max_pct": -1.4,
+    "min_pct": -3.5,
+    "index_pct": 9.6
    },
    {
     "date": "2026-11-03",
@@ -716,10 +760,10 @@
     "name": "Gabriel India Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 1.4,
+    "ret_pct": 0.5,
     "max_pct": 1.4,
     "min_pct": -1.9,
-    "index_pct": 5.2
+    "index_pct": 6.1
    },
    {
     "date": "2026-11-03",
@@ -727,10 +771,10 @@
     "name": "Metropolis Healthcare Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.4,
+    "ret_pct": 1.3,
     "max_pct": 2.4,
     "min_pct": -0.2,
-    "index_pct": 5.2
+    "index_pct": 6.1
    },
    {
     "date": "2026-11-05",
@@ -738,10 +782,10 @@
     "name": "Navin Fluorine International Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.1,
-    "max_pct": 3.1,
+    "ret_pct": 9.2,
+    "max_pct": 9.2,
     "min_pct": 0.0,
-    "index_pct": 2.1
+    "index_pct": 2.9
    },
    {
     "date": "2026-11-05",
@@ -749,10 +793,76 @@
     "name": "Aurobindo Pharma Ltd.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.9,
-    "max_pct": 3.9,
-    "min_pct": 0.0,
-    "index_pct": 2.1
+    "ret_pct": 2.4,
+    "max_pct": 3.5,
+    "min_pct": -0.4,
+    "index_pct": 2.9
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "CPPLUS.NS",
+    "name": "Aditya Infotech Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.3,
+    "max_pct": -0.3,
+    "min_pct": -0.3,
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "QUESS.NS",
+    "name": "Quess Corp Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.9,
+    "max_pct": 1.9,
+    "min_pct": 1.9,
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "WELSPUNLIV.NS",
+    "name": "Welspun Living Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.4,
+    "max_pct": 1.4,
+    "min_pct": 1.4,
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "MANKIND.NS",
+    "name": "Mankind Pharma Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.3,
+    "max_pct": -0.3,
+    "min_pct": -0.3,
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "PGIL.NS",
+    "name": "Pearl Global Industries Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 3.6,
+    "max_pct": 3.6,
+    "min_pct": 3.6,
+    "index_pct": 0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "ANTHEM.NS",
+    "name": "Anthem Biosciences Ltd.",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.1,
+    "max_pct": -0.1,
+    "min_pct": -0.1,
+    "index_pct": 0.8
    }
   ],
   "jp": [
@@ -762,21 +872,21 @@
     "name": "",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 1.2,
+    "ret_pct": 0.0,
     "max_pct": 2.3,
     "min_pct": -4.5,
-    "index_pct": -1.5
+    "index_pct": -0.3
    },
    {
     "date": "2026-10-29",
     "ticker": "7199.T",
     "name": "",
-    "stopped": false,
-    "stop_date": null,
-    "ret_pct": -1.1,
+    "stopped": true,
+    "stop_date": "2026-11-11",
+    "ret_pct": -9.4,
     "max_pct": 1.0,
-    "min_pct": -3.2,
-    "index_pct": -1.5
+    "min_pct": -9.4,
+    "index_pct": -0.3
    },
    {
     "date": "2026-10-29",
@@ -787,7 +897,7 @@
     "ret_pct": -10.0,
     "max_pct": 1.6,
     "min_pct": -10.0,
-    "index_pct": -1.5
+    "index_pct": -0.3
    },
    {
     "date": "2026-10-30",
@@ -795,10 +905,10 @@
     "name": "",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.5,
+    "ret_pct": 0.8,
     "max_pct": 5.6,
     "min_pct": -2.2,
-    "index_pct": -0.7
+    "index_pct": 0.6
    },
    {
     "date": "2026-10-30",
@@ -806,10 +916,10 @@
     "name": "",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 9.8,
+    "ret_pct": 6.7,
     "max_pct": 9.9,
     "min_pct": -1.1,
-    "index_pct": -0.7
+    "index_pct": 0.6
    },
    {
     "date": "2026-10-31",
@@ -817,10 +927,10 @@
     "name": "NS UNITED KAIUN KA",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 0.2,
+    "ret_pct": 0.0,
     "max_pct": 0.2,
     "min_pct": -0.1,
-    "index_pct": -0.4
+    "index_pct": 0.8
    },
    {
     "date": "2026-10-31",
@@ -831,7 +941,7 @@
     "ret_pct": -9.4,
     "max_pct": 0.1,
     "min_pct": -9.4,
-    "index_pct": -0.4
+    "index_pct": 0.8
    },
    {
     "date": "2026-11-03",
@@ -839,10 +949,10 @@
     "name": "SUMITOMO SEIKA CHEMICALS CO",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.9,
+    "ret_pct": -6.4,
     "max_pct": -0.9,
     "min_pct": -7.0,
-    "index_pct": 0.5
+    "index_pct": 1.8
    },
    {
     "date": "2026-11-03",
@@ -850,10 +960,10 @@
     "name": "SHISEIDO COMPANY LIMITED",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 1.6,
+    "ret_pct": 4.6,
     "max_pct": 7.9,
     "min_pct": -1.4,
-    "index_pct": 0.5
+    "index_pct": 1.8
    },
    {
     "date": "2026-11-03",
@@ -864,7 +974,29 @@
     "ret_pct": -8.3,
     "max_pct": -1.6,
     "min_pct": -8.3,
-    "index_pct": 0.5
+    "index_pct": 1.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "9201.T",
+    "name": "JAPAN AIRLINES CO LTD",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.8,
+    "max_pct": 0.0,
+    "min_pct": -0.8,
+    "index_pct": 1.2
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "9697.T",
+    "name": "CAPCOM CO LTD",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -0.6,
+    "max_pct": 0.0,
+    "min_pct": -0.6,
+    "index_pct": 1.2
    }
   ],
   "tw": [
@@ -877,7 +1009,7 @@
     "ret_pct": -8.1,
     "max_pct": 0.2,
     "min_pct": -8.1,
-    "index_pct": -10.1
+    "index_pct": -10.2
    },
    {
     "date": "2026-10-28",
@@ -885,10 +1017,10 @@
     "name": "",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 14.7,
-    "max_pct": 14.7,
+    "ret_pct": 26.1,
+    "max_pct": 26.1,
     "min_pct": -5.1,
-    "index_pct": -10.1
+    "index_pct": -10.2
    },
    {
     "date": "2026-10-28",
@@ -899,7 +1031,7 @@
     "ret_pct": -8.3,
     "max_pct": 0.0,
     "min_pct": -8.3,
-    "index_pct": -10.1
+    "index_pct": -10.2
    },
    {
     "date": "2026-10-29",
@@ -910,7 +1042,7 @@
     "ret_pct": -10.6,
     "max_pct": 0.0,
     "min_pct": -10.6,
-    "index_pct": -8.8
+    "index_pct": -8.9
    },
    {
     "date": "2026-10-30",
@@ -921,7 +1053,7 @@
     "ret_pct": -13.6,
     "max_pct": 0.9,
     "min_pct": -13.6,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-30",
@@ -932,7 +1064,7 @@
     "ret_pct": -8.3,
     "max_pct": 0.0,
     "min_pct": -8.3,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -940,10 +1072,10 @@
     "name": "LEADTEK RESEARCH",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 33.3,
-    "max_pct": 33.3,
+    "ret_pct": 46.6,
+    "max_pct": 46.6,
     "min_pct": 9.8,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -954,7 +1086,7 @@
     "ret_pct": -11.2,
     "max_pct": -0.6,
     "min_pct": -11.2,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -965,7 +1097,7 @@
     "ret_pct": -15.5,
     "max_pct": -3.8,
     "min_pct": -15.5,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -976,18 +1108,7 @@
     "ret_pct": -10.1,
     "max_pct": 5.2,
     "min_pct": -10.1,
-    "index_pct": -5.5
-   },
-   {
-    "date": "2026-10-31",
-    "ticker": "6214.TW",
-    "name": "SYSTEX CORPORATION",
-    "stopped": true,
-    "stop_date": "2026-11-04",
-    "ret_pct": -9.5,
-    "max_pct": 0.5,
-    "min_pct": -9.5,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -995,10 +1116,10 @@
     "name": "CTBC FINANCIAL HOLDINGS COMPANY",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.8,
+    "ret_pct": -1.5,
     "max_pct": 0.1,
     "min_pct": -3.4,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -1009,7 +1130,7 @@
     "ret_pct": -9.1,
     "max_pct": -1.5,
     "min_pct": -9.1,
-    "index_pct": -5.5
+    "index_pct": -5.6
    },
    {
     "date": "2026-10-31",
@@ -1020,7 +1141,18 @@
     "ret_pct": -8.7,
     "max_pct": -0.5,
     "min_pct": -8.7,
-    "index_pct": -5.5
+    "index_pct": -5.6
+   },
+   {
+    "date": "2026-10-31",
+    "ticker": "6214.TW",
+    "name": "SYSTEX CORPORATION",
+    "stopped": true,
+    "stop_date": "2026-11-04",
+    "ret_pct": -9.5,
+    "max_pct": 0.5,
+    "min_pct": -9.5,
+    "index_pct": -5.6
    },
    {
     "date": "2026-11-03",
@@ -1028,10 +1160,10 @@
     "name": "PEGAVISION CORPORATION",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -1.2,
+    "ret_pct": -3.1,
     "max_pct": 0.0,
     "min_pct": -5.4,
-    "index_pct": -1.8
+    "index_pct": -2.0
    },
    {
     "date": "2026-11-03",
@@ -1039,10 +1171,10 @@
     "name": "TA CHEN STAINLESS PIPE CORP",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.5,
-    "max_pct": 0.0,
+    "ret_pct": 2.3,
+    "max_pct": 2.3,
     "min_pct": -6.6,
-    "index_pct": -1.8
+    "index_pct": -2.0
    },
    {
     "date": "2026-11-03",
@@ -1053,7 +1185,29 @@
     "ret_pct": -8.1,
     "max_pct": 2.0,
     "min_pct": -8.1,
-    "index_pct": -1.8
+    "index_pct": -2.0
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "6782.TW",
+    "name": "VISCO VISION INC",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -1.9,
+    "max_pct": 0.0,
+    "min_pct": -1.9,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "5904.TWO",
+    "name": "POYA INTERNATIONAL CO LTD",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 0.0,
+    "max_pct": 0.0,
+    "min_pct": 0.0,
+    "index_pct": -0.2
    }
   ],
   "kr": [
@@ -1066,7 +1220,7 @@
     "ret_pct": -15.0,
     "max_pct": 1.3,
     "min_pct": -15.0,
-    "index_pct": -9.1
+    "index_pct": -3.8
    },
    {
     "date": "2026-10-28",
@@ -1077,7 +1231,7 @@
     "ret_pct": -9.2,
     "max_pct": 15.9,
     "min_pct": -9.2,
-    "index_pct": -9.1
+    "index_pct": -3.8
    },
    {
     "date": "2026-10-30",
@@ -1088,7 +1242,18 @@
     "ret_pct": -16.0,
     "max_pct": 0.0,
     "min_pct": -16.0,
-    "index_pct": -7.4
+    "index_pct": -2.0
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "008930.KS",
+    "name": "Hanmi Science",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -2.4,
+    "max_pct": 0.0,
+    "min_pct": -2.4,
+    "index_pct": 5.8
    }
   ],
   "hk": [
@@ -1098,10 +1263,10 @@
     "name": "BEONE MEDICINES",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 3.3,
+    "ret_pct": 3.1,
     "max_pct": 3.3,
     "min_pct": -0.0,
-    "index_pct": 0.3
+    "index_pct": -0.7
    }
   ],
   "gb": [
@@ -1114,7 +1279,7 @@
     "ret_pct": 0.1,
     "max_pct": 0.2,
     "min_pct": 0.0,
-    "index_pct": 0.8
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1122,10 +1287,10 @@
     "name": "Avon Technologies",
     "stopped": true,
     "stop_date": "2026-11-10",
-    "ret_pct": -9.7,
+    "ret_pct": -8.3,
     "max_pct": 1.4,
-    "min_pct": -9.7,
-    "index_pct": 0.8
+    "min_pct": -8.3,
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1133,10 +1298,10 @@
     "name": "4imprint",
     "stopped": true,
     "stop_date": "2026-11-10",
-    "ret_pct": -9.6,
+    "ret_pct": -9.8,
     "max_pct": 0.8,
-    "min_pct": -9.6,
-    "index_pct": 0.8
+    "min_pct": -9.8,
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1144,10 +1309,10 @@
     "name": "Applied Nutrition",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.3,
+    "ret_pct": 3.0,
     "max_pct": 3.9,
     "min_pct": -0.2,
-    "index_pct": 0.8
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1158,7 +1323,7 @@
     "ret_pct": -8.7,
     "max_pct": 0.4,
     "min_pct": -8.7,
-    "index_pct": 0.8
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1169,7 +1334,7 @@
     "ret_pct": -16.8,
     "max_pct": -0.2,
     "min_pct": -16.8,
-    "index_pct": 0.8
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1177,10 +1342,10 @@
     "name": "IHG Hotels & Resorts",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 7.7,
-    "max_pct": 7.7,
+    "ret_pct": 7.2,
+    "max_pct": 7.2,
     "min_pct": -0.4,
-    "index_pct": 0.8
+    "index_pct": 0.4
    },
    {
     "date": "2026-10-30",
@@ -1188,10 +1353,32 @@
     "name": "Auction Technology Group",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 0.2,
+    "ret_pct": -1.4,
     "max_pct": 5.4,
-    "min_pct": 0.2,
-    "index_pct": 0.8
+    "min_pct": -1.4,
+    "index_pct": 0.4
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "FCH.L",
+    "name": "Funding Circle",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 5.0,
+    "max_pct": 5.0,
+    "min_pct": 0.4,
+    "index_pct": -0.4
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "RS1.L",
+    "name": "RS Group",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.3,
+    "max_pct": 1.3,
+    "min_pct": 0.1,
+    "index_pct": -0.4
    }
   ],
   "de": [
@@ -1201,10 +1388,10 @@
     "name": "Brenntag",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -1.6,
+    "ret_pct": -4.7,
     "max_pct": 2.1,
-    "min_pct": -2.1,
-    "index_pct": 2.7
+    "min_pct": -4.7,
+    "index_pct": 2.5
    },
    {
     "date": "2026-10-30",
@@ -1212,10 +1399,10 @@
     "name": "Fuchs Petrolub",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -2.7,
+    "ret_pct": -2.6,
     "max_pct": -0.8,
     "min_pct": -4.3,
-    "index_pct": 2.4
+    "index_pct": 2.2
    },
    {
     "date": "2026-10-30",
@@ -1223,10 +1410,10 @@
     "name": "Evonik",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.6,
+    "ret_pct": -0.9,
     "max_pct": 2.7,
     "min_pct": -1.0,
-    "index_pct": 2.4
+    "index_pct": 2.2
    },
    {
     "date": "2026-10-30",
@@ -1234,10 +1421,10 @@
     "name": "Allianz",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 5.9,
-    "max_pct": 5.9,
+    "ret_pct": 4.9,
+    "max_pct": 5.8,
     "min_pct": -0.3,
-    "index_pct": 2.4
+    "index_pct": 2.2
    },
    {
     "date": "2026-10-30",
@@ -1245,10 +1432,10 @@
     "name": "Talanx",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.7,
+    "ret_pct": 1.8,
     "max_pct": 5.1,
     "min_pct": 0.1,
-    "index_pct": 2.4
+    "index_pct": 2.2
    },
    {
     "date": "2026-10-30",
@@ -1256,10 +1443,10 @@
     "name": "BASF",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.2,
+    "ret_pct": 1.5,
     "max_pct": 4.9,
     "min_pct": -0.2,
-    "index_pct": 2.4
+    "index_pct": 2.2
    },
    {
     "date": "2026-10-31",
@@ -1267,10 +1454,32 @@
     "name": "Befesa",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 4.3,
-    "max_pct": 4.3,
+    "ret_pct": 4.9,
+    "max_pct": 4.9,
     "min_pct": 0.3,
-    "index_pct": 3.0
+    "index_pct": 2.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "HNR1.DE",
+    "name": "Hannover Re",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -1.4,
+    "max_pct": -0.3,
+    "min_pct": -1.4,
+    "index_pct": -0.2
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "G1A.DE",
+    "name": "GEA Group",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 0.6,
+    "max_pct": 0.6,
+    "min_pct": 0.2,
+    "index_pct": -0.2
    }
   ],
   "ca": [
@@ -1280,10 +1489,10 @@
     "name": "DBOX TECHNOLOGIES INC",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 0.0,
+    "ret_pct": -4.5,
     "max_pct": 0.9,
-    "min_pct": -3.6,
-    "index_pct": 0.7
+    "min_pct": -4.5,
+    "index_pct": -0.1
    },
    {
     "date": "2026-10-28",
@@ -1294,7 +1503,7 @@
     "ret_pct": 9.7,
     "max_pct": 9.7,
     "min_pct": 1.8,
-    "index_pct": 0.7
+    "index_pct": -0.1
    },
    {
     "date": "2026-10-28",
@@ -1305,7 +1514,7 @@
     "ret_pct": -10.0,
     "max_pct": 1.9,
     "min_pct": -10.0,
-    "index_pct": 0.7
+    "index_pct": -0.1
    },
    {
     "date": "2026-10-29",
@@ -1316,7 +1525,7 @@
     "ret_pct": -14.4,
     "max_pct": 0.3,
     "min_pct": -14.4,
-    "index_pct": 0.5
+    "index_pct": -0.3
    },
    {
     "date": "2026-10-29",
@@ -1327,7 +1536,7 @@
     "ret_pct": -8.6,
     "max_pct": 1.9,
     "min_pct": -8.6,
-    "index_pct": 0.5
+    "index_pct": -0.3
    },
    {
     "date": "2026-10-30",
@@ -1338,7 +1547,7 @@
     "ret_pct": -8.2,
     "max_pct": 2.2,
     "min_pct": -8.2,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1349,7 +1558,7 @@
     "ret_pct": 0.2,
     "max_pct": 0.2,
     "min_pct": 0.0,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1357,10 +1566,10 @@
     "name": "HAMMOND MANUFACTURING CO. LTD, ",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": 2.8,
+    "ret_pct": 0.8,
     "max_pct": 14.2,
     "min_pct": -1.8,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1371,7 +1580,7 @@
     "ret_pct": -9.3,
     "max_pct": 0.7,
     "min_pct": -9.3,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1379,10 +1588,10 @@
     "name": "MATTR CORP",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -0.4,
-    "max_pct": -0.4,
+    "ret_pct": 1.1,
+    "max_pct": 1.1,
     "min_pct": -5.9,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1393,7 +1602,7 @@
     "ret_pct": -12.5,
     "max_pct": -0.3,
     "min_pct": -12.5,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1404,7 +1613,7 @@
     "ret_pct": -15.3,
     "max_pct": 0.6,
     "min_pct": -15.3,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-30",
@@ -1412,10 +1621,10 @@
     "name": "MULLEN GROUP LTD.",
     "stopped": false,
     "stop_date": null,
-    "ret_pct": -1.7,
+    "ret_pct": -1.0,
     "max_pct": -1.0,
     "min_pct": -4.4,
-    "index_pct": 0.5
+    "index_pct": -0.2
    },
    {
     "date": "2026-10-31",
@@ -1426,9 +1635,76 @@
     "ret_pct": -11.6,
     "max_pct": -2.4,
     "min_pct": -11.6,
-    "index_pct": 2.3
+    "index_pct": 1.5
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "DCBO.TO",
+    "name": "DOCEBO INC",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.7,
+    "max_pct": 1.7,
+    "min_pct": 1.7,
+    "index_pct": -0.8
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "WCN.TO",
+    "name": "WASTE CONNECTIONS INC",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.1,
+    "max_pct": 1.1,
+    "min_pct": 1.1,
+    "index_pct": -0.8
    }
   ],
-  "au": []
+  "au": [
+   {
+    "date": "2026-11-10",
+    "ticker": "MND.AX",
+    "name": "MONADEL FPO [MND]",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 7.2,
+    "max_pct": 7.2,
+    "min_pct": 0.0,
+    "index_pct": 0.3
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "ALK.AX",
+    "name": "ALKANE FPO [ALK]",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 1.1,
+    "max_pct": 1.1,
+    "min_pct": 0.0,
+    "index_pct": 0.3
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "DPM.AX",
+    "name": "DPMMETALS CDI 1:1 [DPM]",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": -5.7,
+    "max_pct": -0.0,
+    "min_pct": -5.7,
+    "index_pct": 0.3
+   },
+   {
+    "date": "2026-11-10",
+    "ticker": "CPU.AX",
+    "name": "CSHARE FPO [CPU]",
+    "stopped": false,
+    "stop_date": null,
+    "ret_pct": 0.7,
+    "max_pct": 0.7,
+    "min_pct": -0.0,
+    "index_pct": 0.3
+   }
+  ]
  }
 }

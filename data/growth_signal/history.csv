@@ -154,3 +154,16 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-10,au,ALK.AX,ALKANE FPO [ALK],1.87,9129.0,trend|longpat,کن‌اسلیم|بافت,2,0.718,سرووشانه معکوس,2.0
 2026-11-10,au,DPM.AX,DPMMETALS CDI 1:1 [DPM],59.07,9129.0,trend|pullback,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.473,روند صعودی,1.0
 2026-11-10,au,CPU.AX,CSHARE FPO [CPU],43.23,9129.0,trend|longpat,بافت|کیفیت رشد,4,0.078,سرووشانه معکوس (شکست),3.0
+2026-11-11,us,AMG,Affiliated Managers Group,401.32,749.92,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.41,شکست سقف ۵۲ هفته,1.7
+2026-11-11,us,BOX,"Box, Inc.",42.55,749.92,trend|longpat,بافت|سود پیاپی (SEC),2,0.861,فنجان‌ودسته (شکست سقف),2.5
+2026-11-11,cn,603893.SS,FUZHOU ROCKCHIP ELECTRONICS CO,235.01,21.94,trend|longpat,صورت مالی|بافت,3,0.273,فنجان‌ودسته (نزدیک سقف)، مثلث صعودی، شکست سقف ۵۲ هفته,3.0
+2026-11-11,in,ACMESOLAR.NS,ACME Solar Holdings Ltd.,418.65,25255.0508,trend|pullback|longpat,کن‌اسلیم|کیفیت رشد|سود پیاپی,4,0.663,کف دوقلو (در انتظار شکست),1.5
+2026-11-11,in,EPL.NS,EPL Ltd.,238.77,25255.0508,trend|pullback|longpat,صورت مالی|کیفیت رشد,4,0.375,کف دوقلو (در انتظار شکست),1.5
+2026-11-11,in,AETHER.NS,Aether Industries Ltd.,1635.9,25255.0508,trend|pullback|longpat,صورت مالی|کن‌اسلیم|سود پیاپی,2,0.249,سرووشانه معکوس,2.0
+2026-11-11,in,FLUOROCHEM.NS,Gujarat Fluorochemicals Ltd.,4824.3999,25255.0508,breakout|trend|longpat,صورت مالی|سود پیاپی,3,0.187,شکست سقف ۵۲ هفته,1.7
+2026-11-11,in,LALPATHLAB.NS,Dr. Lal Path Labs Ltd.,2028.7,25255.0508,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,5,0.133,شکست سقف ۵۲ هفته,1.7
+2026-11-11,in,TVSMOTOR.NS,TVS Motor Company Ltd.,4560.0,25255.0508,breakout|trend|longpat,کن‌اسلیم|کیفیت رشد|سود پیاپی,4,0.054,شکست سقف ۵۲ هفته,1.7
+2026-11-11,jp,4373.T,SIMPLEX HLDGS INC,1195.0,2516.0,trend|pullback|longpat,صورت مالی|بافت|کیفیت رشد,4,0.686,کف دوقلو (در انتظار شکست),1.5
+2026-11-11,jp,6080.T,M&A CAPITAL PARTNERS CO LTD,4650.0,2516.0,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.298,شکست سقف ۵۲ هفته,1.7
+2026-11-11,tw,6532.TWO,CALITECH CO LTD,106.5,61.9,trend|pullback|longpat,صورت مالی|بافت,2,0.719,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-11,tw,3029.TW,ZERO ONE TECHNOLOGY,135.0,61.9,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.581,فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته,2.7
