@@ -1,0 +1,399 @@
+{
+ "date": "2026-11-12",
+ "generated_at": "2026-11-11T23:55:00+00:00",
+ "articles_read": 273,
+ "method": "۲۷۳ خبر یکتا خوانده شد؛ متن حدود ۴۵ خبر واقعاً بررسی شد (WebFetch در این اجرا تأیید نشد)؛ خبرهای بدون متن فقط در views با تیتر کامل آمدند یا کنار رفتند؛ مطالب تبلیغاتی و بی‌ربط کنار گذاشته شدند.",
+ "full_read": 45,
+ "assets": {
+  "gold": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 2,
+    "bear": 6,
+    "neutral": 1
+   },
+   "confidence": "متوسط",
+   "summary_fa": "طلا بعد از تورم داغ اکتبر آمریکا حدود ۳ درصد افت کرد و زیر ۴٬۰۰۰ دلار رفت، چون احتمال افزایش نرخ فدرال رزرو در دسامبر کاملاً قیمت‌گذاری شد و بازده واقعی و دلار بالا رفتند. نمودار هفتگی هنوز نشانه‌ی برگشت صعودی دارد، پس حمایت ۳٬۹۷۶ تا ۴٬۰۰۰ دلار مهم است.",
+   "stories": [
+    {
+     "id": "b37bcf9ba328",
+     "title_fa": "طلا زیر فشار دلار و بازده‌ها",
+     "understood_fa": "طلا بعد از رسیدن به ۴٬۰۶۶ دلار دوباره به حدود ۴٬۰۱۴ دلار برگشت. تورم اکتبر ۰٫۴ درصد (پیش‌بینی ۰٫۳) و تورم هسته ۰٫۳ درصد (پیش‌بینی ۰٫۲) بود و شاخص دلار به بالاترین سطح از آوریل ۲۰۲۵ رسید. تا وقتی تورم یا بازده‌ها پایین نیایند، بالا رفتن قیمت محدود می‌ماند.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/gold-price-forecast-tests-support-as-dollar-climbs-1643980"
+    },
+    {
+     "id": "9db3dc2ef3b0",
+     "title_fa": "بازده واقعی بالا رفته، هزینه‌ی نگه‌داشتن طلا بیشتر شده",
+     "understood_fa": "بازده واقعی ۱۰ ساله به ۲٫۷۸ درصد رسید (از ۲٫۶۳ در ششم نوامبر). خبر می‌گوید هسته‌ی تورم ۰٫۳ درصد یعنی عقب‌نشینی گسترده‌ای در قیمت‌ها نیست و نگه‌داشتن طلای بدون سود گران‌تر می‌شود.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/gold-faces-fresh-headwinds-as-real-yields-climb-after-us-cpi-1643887"
+    },
+    {
+     "id": "a07964958324",
+     "title_fa": "نمودار هفتگی طلا هنوز برگشت صعودی را نشان می‌دهد",
+     "understood_fa": "طبق FXEmpire، شکست صعودی هفته‌ی قبل در نمودار هفتگی ثبت شده و کف بالاتر ۳٬۸۷۵ دلار شکل گرفته است. افت فعلی را می‌توان آزمون حمایت دانست و اگر کف بالاتری بسازد، هدف نزدیک ۴٬۲۶۲ دلار مطرح می‌شود.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/gold-xau-usd-price-forecast-bullish-reversal-faces-critical-support-test-1644024"
+    }
+   ],
+   "views": [
+    {
+     "who": "TD Securities",
+     "view_fa": "احتمال آزمون دوباره‌ی حمایت ۳٬۹۰۰ دلار را هشدار داده است.",
+     "url": "https://www.indexbox.io/blog/gold-falls-below-4000-as-hot-inflation-data-boosts-rate-hike-expectations/"
+    }
+   ],
+   "prev_stance": "دوگانه",
+   "change_fa": "از «دوگانه» به «نزولی»"
+  },
+  "silver": {
+   "stance": "خنثی",
+   "counts": {
+    "bull": 0,
+    "bear": 1,
+    "neutral": 3
+   },
+   "confidence": "پایین",
+   "summary_fa": "نقره روز سه‌شنبه حدود ۳٫۵ درصد افت کرد و بعد بالای ۵۱ دلار ماند. فشار بازده‌ها و دلار با تقاضای سرمایه‌گذاری و حمایت‌های فنی خنثی شده است.",
+   "stories": [
+    {
+     "id": "cd761f37fc31",
+     "title_fa": "نقره بعد از ریزش شدید حمایت را نگه داشت",
+     "understood_fa": "نقره روز چهارشنبه بعد از افت ۳٫۵۷ درصدی سه‌شنبه بالاتر رفت. احتمال افزایش نرخ در دسامبر به ۱۰۰ درصد رسید و بحث افزایش ۵۰ نقطه‌ای هم مطرح است، ولی فروشندگان ادامه ندادند.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/silver-price-forecast-support-holds-as-yields-rise-1643812"
+    },
+    {
+     "id": "1482ba0e827c",
+     "title_fa": "تقاضای سرمایه‌گذاری نقره در برابر فدرال رزرو سخت‌گیر",
+     "understood_fa": "قیمت نقره ۵۱٫۸۷ دلار و ۲٫۹ درصد پایین بسته شد. CPM Group انتظار دارد تقاضای سرمایه‌گذاری در ۲۰۲۶ حدود ۱۸۰ میلیون اونس و تقریباً دو برابر ۲۰۲۵ شود، ولی افت‌های بیشتر را هم ممکن می‌داند.",
+     "publisher": "ad-hoc-news.de",
+     "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/silver-s-floor-thesis-meets-a-hawkish-fed-180-million-ounces-of-investment-demand-vs-a-december-rate/70488453"
+    }
+   ],
+   "views": [
+    {
+     "who": "BMO",
+     "view_fa": "نسبت طلا به نقره را در چهار سال آینده حدود ۸۵ می‌بیند و می‌گوید ضعف تقاضای خورشیدی ممکن است کمبود عرضه را برگرداند.",
+     "url": "https://www.indexbox.io/blog/gold-slips-as-rate-fears-mount-silver-outperforms/"
+    },
+    {
+     "who": "CPM Group",
+     "view_fa": "تقاضای سرمایه‌گذاری نقره را حدود ۱۸۰ میلیون اونس در ۲۰۲۶ پیش‌بینی می‌کند و می‌گوید کف قیمت دارد، اما افت‌های دیگر ممکن است.",
+     "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/silver-s-floor-thesis-meets-a-hawkish-fed-180-million-ounces-of-investment-demand-vs-a-december-rate/70488453"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": "از «نزولی» به «خنثی»"
+  },
+  "bitcoin": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 2,
+    "bear": 5,
+    "neutral": 1
+   },
+   "confidence": "متوسط",
+   "summary_fa": "بیت‌کوین نزدیک ۷۴ هزار دلار است و بعد از تورم داغ به کمترین قیمت چند هفته‌ی اخیر رسید. خروج از صندوق‌های ETF ادامه دارد، ولی سرعتش کم شده و دارندگان کوتاه‌مدت زیان کرده‌اند.",
+   "stories": [
+    {
+     "id": "3bcf1b299d62",
+     "title_fa": "بیت‌کوین روی میانگین ۲۰۰ روزه",
+     "understood_fa": "بیت‌کوین از ۷۴٬۳۰۰ به حدود ۷۳٬۵۰۰ دلار رسید و حدود ۲ درصد از بسته‌شدن دوشنبه پایین‌تر بود. بازده ۲ ساله ۱۹ واحد پایه بالا رفت و صندوق‌های ETF در دوشنبه ۲۰۱ میلیون دلار خروج داشتند.",
+     "publisher": "Forexlive",
+     "url": "https://investinglive.com/cryptocurrency/bitcoin-tests-its-200-day-moving-average-after-hotter-us-cpi-data/"
+    },
+    {
+     "id": "a3b7b00e3029",
+     "title_fa": "اهرم در بازار مشتقات بالا می‌رود",
+     "understood_fa": "بیت‌کوین حدود ۷۳٬۸۰۰ دلار است و کف ۷۲٬۷۲۷ را دیده. خروج ETF روز چهارم پشت‌سرهم ۹۵ میلیون دلار بود. گزارش K33 Research هشدار می‌دهد که با بالا رفتن اهرم، حرکت‌های تند ممکن است.",
+     "publisher": "www.tmgm.com",
+     "url": "https://www.tmgm.com/en/analysis/market-news/article/bitcoin-price-forecast-btc-at-risk-of-sharp-moves-as-leverage-builds-in-derivatives-markets-202611110758"
+    }
+   ],
+   "views": [
+    {
+     "who": "K33 Research",
+     "view_fa": "با بالا رفتن اهرم در بازار مشتقات، بیت‌کوین در معرض حرکت‌های تند است.",
+     "url": "https://www.tmgm.com/en/analysis/market-news/article/bitcoin-price-forecast-btc-at-risk-of-sharp-moves-as-leverage-builds-in-derivatives-markets-202611110758"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "copper": {
+   "stance": "خنثی",
+   "counts": {
+    "bull": 0,
+    "bear": 1,
+    "neutral": 2
+   },
+   "confidence": "پایین",
+   "summary_fa": "مس روی میانگین ۲۰۰ روزه ایستاده و خریداران و فروشندگان هنوز تصمیم نگرفته‌اند. UBS بعد از افت سهام معدنی، موضعش را بهتر کرده و عرضه‌ی تنگ را حفظ می‌کند.",
+   "stories": [
+    {
+     "id": "5cfd8fe8d3c8",
+     "title_fa": "UBS سهام Southern Copper را از فروش به خنثی برد",
+     "understood_fa": "UBS در ۱۰ نوامبر Southern Copper را از «فروش» به «خنثی» برد و هدف ۱۸۰ دلار را نگه داشت. سهام حدود ۲۰ درصد در یک ماه افت کرده در حالی که مس فقط ۴ درصد. UBS قیمت ۶٫۵ تا ۷ دلار برای هر پوند را فرض می‌کند و تا سه سال عرضه‌ی تنگ را می‌بیند.",
+     "publisher": "ad-hoc-news.de",
+     "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/southern-copper-stock-ubs-turns-neutral-after-selloff/70492258"
+    },
+    {
+     "id": "6ae575dad321",
+     "title_fa": "مس روی میانگین ۲۰۰ روزه، بالاتر از ۱۴٬۰۰۰ فاصله دارد",
+     "understood_fa": "تحلیلگر FXEmpire می‌گوید مس بعد از عقب‌نشینی از ۱۴٬۰۰۰ دلار در هر تن لندن روی میانگین نمایی ۲۰۰ روزه می‌ایستد. اگر بالای شمع سه‌شنبه برود، سیگنال صعودی می‌دهد. نقدینگی هم به‌خاطر تعطیلی آمریکا کم است.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/premium-what-i-am-watching-today-copper-eur-usd-usd-cad-cac-40-1643918"
+    }
+   ],
+   "views": [
+    {
+     "who": "UBS",
+     "view_fa": "Southern Copper را به «خنثی» برد و هدف ۱۸۰ دلار را نگه داشت؛ می‌گوید عرضه‌ی مس تا سه سال تنگ می‌ماند.",
+     "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/southern-copper-stock-ubs-turns-neutral-after-selloff/70492258"
+    }
+   ],
+   "prev_stance": "صعودی",
+   "change_fa": "از «صعودی» به «خنثی»"
+  },
+  "oil": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 3,
+    "bear": 3,
+    "neutral": 0
+   },
+   "confidence": "متوسط",
+   "summary_fa": "برنت بعد از افت به زیر ۹۰ دلار (کمترین از اواخر اوت) با تردید درباره‌ی گفت‌وگوی آمریکا و ایران و حمله به کشتی‌ها حدود ۹۲ دلار برگشت. موجودی‌ها کم است ولی عرضه‌ی عربستان و اوپک‌پلاس رو به بازگشت است.",
+   "stories": [
+    {
+     "id": "4f28ab29e853",
+     "title_fa": "نشانه‌ی پایان جنگ، برنت زیر ۹۰ دلار",
+     "understood_fa": "ترامپ نشانه‌ی پایان درگیری با ایران داده و برنت روز ۱۰ نوامبر به ۸۹٫۱۶ دلار رسید و ۹۱٫۴۹ بسته شد، کمترین از اواخر اوت. نفت وست‌تگزاس ۸۶٫۰۴ دلار بود.",
+     "publisher": "finance.biggo.com",
+     "url": "https://finance.biggo.com/news/7cfa852f-8087-4258-a7ff-e2b5ba3d06a1"
+    },
+    {
+     "id": "605d70dacaf2",
+     "title_fa": "EIA پیش‌بینی برنت را بالا برد",
+     "understood_fa": "EIA میانگین برنت ۲۰۲۶ را از ۹۶٫۳۲ به ۹۷٫۴۴ دلار رساند و اگر شرایط ادامه یابد قیمت را تا پایان سال حدود ۱۰۰ دلار می‌داند. دلیلش کاهش موجودی‌ها و حمله به نفتکش‌ها است.",
+     "publisher": "Trend News Agency",
+     "url": "https://www.trend.az/world/us/4244980.html"
+    },
+    {
+     "id": "bdd4198d5e59",
+     "title_fa": "پیش‌بینی بانک‌ها برای ۲۰۲۷ پایین‌تر است",
+     "understood_fa": "BNP برنت را در سه‌ماهه‌ی اول ۲۰۲۷ حدود ۷۸ دلار می‌بیند و Morgan Stanley حدود ۱۰۰ دلار. EIA هم ۹۴٫۹۰ دلار را برای همین بازه پیش‌بینی می‌کند.",
+     "publisher": "Exchange Rates UK",
+     "url": "https://www.exchangerates.org.uk/news/47740/2026-11-11-oil-price-forecast-bnp-predicts-78-brent-in-early-2027-as-supply-risks-linger.html"
+    }
+   ],
+   "views": [
+    {
+     "who": "BNP Paribas",
+     "view_fa": "میانگین برنت را در سه‌ماهه‌ی اول ۲۰۲۷ حدود ۷۸ دلار و در سه‌ماهه‌ی چهارم حدود ۸۰ دلار پیش‌بینی می‌کند.",
+     "url": "https://www.exchangerates.org.uk/news/47740/2026-11-11-oil-price-forecast-bnp-predicts-78-brent-in-early-2027-as-supply-risks-linger.html"
+    },
+    {
+     "who": "EIA",
+     "view_fa": "اگر شرایط فعلی بماند، برنت تا پایان سال حدود ۱۰۰ دلار می‌ماند؛ میانگین ۲۰۲۶ را ۹۷٫۴۴ دلار برآورد کرده است.",
+     "url": "https://www.trend.az/world/us/4244980.html"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": "از «نزولی» به «دوگانه»"
+  },
+  "rates": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 1,
+    "bear": 0,
+    "neutral": 1
+   },
+   "confidence": "پایین",
+   "summary_fa": "تورم داغ اکتبر آمریکا باعث شد افزایش نرخ در دسامبر تقریباً قطعی شود. بازده ۱۰ ساله به ۵ درصد رسید و احتمال افزایش ۵۰ نقطه‌ای حدود ۱۴ درصد است.",
+   "stories": [
+    {
+     "id": "d569baadd837",
+     "title_fa": "دلار بالا می‌رود و بازار افزایش‌های بیشتر را قیمت می‌زند",
+     "understood_fa": "بازده ۲ ساله حدود ۲۰ واحد پایه بالا رفت و بازده ۱۰ ساله به ۵ درصد رسید. بازار ۱۴ درصد احتمال افزایش ۵۰ نقطه‌ای در دسامبر و ۷۰ درصد احتمال افزایش دیگر در ژانویه را قیمت‌گذاری کرده است.",
+     "publisher": "Forexlive",
+     "url": "https://investinglive.com/technical-analysis/the-usd-is-making-a-break-for-it-what-do-you-need-to-watch-technically/"
+    }
+   ],
+   "views": [
+    {
+     "who": "Goldman Sachs",
+     "view_fa": "بعد از داده‌ی تورم، افزایش دیگری نرخ فدرال رزرو را به چشم‌انداز خود اضافه کرده است.",
+     "url": "https://www.investing.com/news/economy-news/goldman-expects-additional-fed-rate-hike-in-march-5017688"
+    }
+   ],
+   "prev_stance": "صعودی",
+   "change_fa": ""
+  }
+ },
+ "watch_fa": "روز جمعه شاخص قیمت تولیدکننده‌ی آمریکا (PPI) منتشر می‌شود و برای تصمیم نرخ دسامبر مهم است؛ مذاکره‌ی احتمالی آمریکا و ایران و حمله به کشتی‌ها قیمت نفت را تکان می‌دهد.",
+ "labels": [
+  {
+   "id": "104198e8c1eb",
+   "asset": "bitcoin",
+   "label": "bull"
+  },
+  {
+   "id": "3ad28e3f81e0",
+   "asset": "bitcoin",
+   "label": "bull"
+  },
+  {
+   "id": "3bcf1b299d62",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "7519195dfb27",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "797080cf211d",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "7bc9008e4036",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "a3b7b00e3029",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "fee91adda81e",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "5cfd8fe8d3c8",
+   "asset": "copper",
+   "label": "neutral"
+  },
+  {
+   "id": "6ae575dad321",
+   "asset": "copper",
+   "label": "neutral"
+  },
+  {
+   "id": "8e3030d0d6ca",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "4fdbae6bf071",
+   "asset": "gold",
+   "label": "bull"
+  },
+  {
+   "id": "5849bc93f282",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "73d754ea3508",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "86ecba6f1fd0",
+   "asset": "gold",
+   "label": "neutral"
+  },
+  {
+   "id": "8bf8ea5eefec",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "9db3dc2ef3b0",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "a07964958324",
+   "asset": "gold",
+   "label": "bull"
+  },
+  {
+   "id": "b37bcf9ba328",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "c459c6e1da6b",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "2356cf8e402d",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "4f28ab29e853",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "605d70dacaf2",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "a5f0aaee2a1f",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "bdd4198d5e59",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "c92bd56e5a3f",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "9189bdda00c7",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "d569baadd837",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "1482ba0e827c",
+   "asset": "silver",
+   "label": "neutral"
+  },
+  {
+   "id": "cd761f37fc31",
+   "asset": "silver",
+   "label": "neutral"
+  },
+  {
+   "id": "d0427de09f6c",
+   "asset": "silver",
+   "label": "neutral"
+  },
+  {
+   "id": "fe0da790443f",
+   "asset": "silver",
+   "label": "bear"
+  }
+ ]
+}
