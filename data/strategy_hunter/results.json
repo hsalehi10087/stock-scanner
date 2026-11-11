@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T21:23:04+00:00",
+ "updated": "2026-11-11T13:56:40+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -315,16 +315,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.09,
+    "cagr": -5.11,
     "sharpe": -0.12,
-    "max_dd": -83.22,
-    "total": -68.39
+    "max_dd": -83.3,
+    "total": -68.54
    },
    "in_sample": {
-    "cagr": -8.78,
+    "cagr": -8.81,
     "sharpe": -0.27,
-    "max_dd": -78.62,
-    "total": -75.81
+    "max_dd": -78.72,
+    "total": -75.93
    },
    "out_sample": {
     "cagr": 4.13,
@@ -344,8 +344,8 @@
     "max_dd": -60.81,
     "total": 15.41
    },
-   "trades": 633,
-   "win_rate": 54.0,
+   "trades": 634,
+   "win_rate": 53.9,
    "avg_trade_pct": -0.06,
    "exposure": 0.7,
    "period": "2004-10-08 → 2026-11-10",
@@ -385,6 +385,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید. دلتا و استرایک‌ها هم دقیق گفته نشده",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید. دلتا و استرایک‌ها هم دقیق گفته نشده"
+  },
+  "30366d78d2-rsi2-40yr-tbill": {
+   "name": "RSI(2) mean reversion 40-year test",
+   "name_fa": "بازگشت به میانگین با RSI دو روزه (آزمون ۴۰ ساله)",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@abhinav.neo/rsi-2-wins-72-of-its-trades-more-than-half-of-what-it-earns-is-t-bill-interest-2ef8196443bb",
+   "claim": "«RSI(2) در ۷۲٪ معامله‌هایش برنده است. بیش از نیمی از درآمدش سود اوراق خزانه است. پرتقلیدترین قانون بازگشت به میانگین بین معامله‌گران خرد، آزموده‌شده در ۴۰ سال. سیگنال واقعی است؛ ولی استراتژی دور آن بیشتر نقد است.»",
+   "claimed_return": "72% win rate",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-11",
+   "status": "not_testable",
+   "reason_not_testable": "متن کامل مقاله باز نشد و قانون دقیق (دارایی، آستانه‌ی ورود، شرط خروج، فیلتر روند) در متن عمومی نیامده؛ حدس زدن قانون یعنی ساختن ادعا",
+   "verdict": "غیرقابل آزمون: متن کامل مقاله باز نشد و قانون دقیق (دارایی، آستانه‌ی ورود، شرط خروج، فیلتر روند) در متن عمومی نیامده؛ حدس زدن قانون یعنی ساختن ادعا"
   },
   "32742da0fc-nasdaq100-stock-momentum": {
    "name": "Nasdaq-100 stock momentum",
@@ -543,16 +559,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.78,
-    "sharpe": 0.51,
+    "cagr": 10.64,
+    "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 311.89
+    "total": 305.13
    },
    "in_sample": {
-    "cagr": 8.67,
-    "sharpe": 0.45,
+    "cagr": 8.49,
+    "sharpe": 0.44,
     "max_dd": -49.5,
-    "total": 123.85
+    "total": 120.17
    },
    "out_sample": {
     "cagr": 15.79,
@@ -574,8 +590,8 @@
    },
    "trades": 94,
    "win_rate": 71.3,
-   "avg_trade_pct": 2.0,
-   "exposure": 0.46,
+   "avg_trade_pct": 1.99,
+   "exposure": 0.47,
    "period": "2013-01-02 → 2026-11-10",
    "oos_start": "2022-09-12",
    "forward_days": 13,
@@ -702,21 +718,21 @@
     "cagr": 7.94,
     "sharpe": 0.53,
     "max_dd": -44.36,
-    "total": 261.4
+    "total": 261.89
    },
    "buyhold_out_sample": {
-    "cagr": 17.56,
+    "cagr": 17.58,
     "sharpe": 0.94,
     "max_dd": -26.69,
-    "total": 126.31
+    "total": 126.62
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-10",
+   "period": "2010-01-04 → 2026-11-11",
    "oos_start": "2021-10-21",
-   "forward_days": 13,
+   "forward_days": 14,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -939,42 +955,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -12.99,
+    "cagr": -13.0,
     "sharpe": -0.8,
     "max_dd": -28.53,
     "total": -24.23
    },
    "in_sample": {
-    "cagr": -10.86,
-    "sharpe": -0.63,
+    "cagr": -12.07,
+    "sharpe": -0.71,
     "max_dd": -28.53,
-    "total": -14.82
+    "total": -16.42
    },
    "out_sample": {
-    "cagr": -17.17,
-    "sharpe": -1.18,
+    "cagr": -15.13,
+    "sharpe": -1.02,
     "max_dd": -13.68,
-    "total": -10.66
+    "total": -9.34
    },
    "buyhold_full": {
-    "cagr": -8.87,
-    "sharpe": 0.01,
+    "cagr": -8.53,
+    "sharpe": 0.02,
     "max_dd": -53.99,
-    "total": -16.89
+    "total": -16.27
    },
    "buyhold_out_sample": {
-    "cagr": 11.05,
-    "sharpe": 0.47,
+    "cagr": 12.06,
+    "sharpe": 0.49,
     "max_dd": -29.65,
-    "total": 6.47
+    "total": 7.05
    },
    "trades": 133,
    "win_rate": 29.3,
    "avg_trade_pct": -0.19,
    "exposure": 0.17,
-   "period": "2024-11-12 → 2026-11-10",
-   "oos_start": "2026-04-06",
-   "forward_days": 21,
+   "period": "2024-11-13 → 2026-11-11",
+   "oos_start": "2026-04-07",
+   "forward_days": 37,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1219,7 +1235,7 @@
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.7,
+    "cagr": 12.69,
     "sharpe": 0.7,
     "max_dd": -26.31,
     "total": 112.6
@@ -1231,24 +1247,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 22.9,
+    "cagr": 22.89,
     "sharpe": 0.67,
     "max_dd": -93.96,
-    "total": 541.2
+    "total": 540.83
    },
    "buyhold_out_sample": {
-    "cagr": -15.5,
-    "sharpe": 0.09,
+    "cagr": -16.84,
+    "sharpe": 0.07,
     "max_dd": -67.61,
-    "total": -36.58
+    "total": -39.26
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-10",
-   "oos_start": "2024-02-28",
-   "forward_days": 6,
+   "period": "2017-11-09 → 2026-11-11",
+   "oos_start": "2024-02-29",
+   "forward_days": 7,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1270,7 +1286,7 @@
     "cagr": 9.42,
     "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 1987.7
+    "total": 1987.69
    },
    "in_sample": {
     "cagr": 8.73,
@@ -1336,7 +1352,7 @@
     "cagr": 13.21,
     "sharpe": 0.79,
     "max_dd": -23.21,
-    "total": 179.62
+    "total": 179.63
    },
    "buyhold_full": {
     "cagr": 10.48,
@@ -1544,6 +1560,22 @@
    "reason_not_testable": "قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست",
    "verdict": "غیرقابل آزمون: قانون‌های معامله فقط برای اعضای سایت است و در متن عمومی نیامده؛ چرخش بین چند دارایی هم با موتور تک‌دارایی قابل اجرا نیست"
   },
+  "9fb231fb7f-nq-prev-day-range-filter": {
+   "name": "NQ intraday setups filtered by prior-day range",
+   "name_fa": "چهار ستاپ روزانه‌ی NQ با فیلتر «بیرون از محدوده‌ی دیروز»",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xt3o08/i_split_4_nq_daytrading_strategies_by_one_thing/",
+   "claim": "«۴ استراتژی روزانه‌ی NQ را با یک چیز جدا کردم: آیا قیمت هنگام ورود هنوز داخل محدوده‌ی دیروز بود؟ در ۲ سال، ۱٬۶۶۰ معامله‌ی داخل محدوده ۹۳۸ دلار ضرر می‌دادند و ۹۵۴ معامله‌ی بیرون از آن ۱۹٬۹۸۲ دلار سود.»",
+   "claimed_return": "+$19,982 (954 trades outside prior-day range, 2 years, 1 micro)",
+   "asset_class": "stock",
+   "symbols": [
+    "NQ=F"
+   ],
+   "added": "2026-11-11",
+   "status": "not_testable",
+   "reason_not_testable": "ستاپ‌ها (Silver Bullet، شکست محدوده‌ی ۱۵ دقیقه‌ای، شکار نقدینگی با FVG، Power of Three) روی کندل دقیقه‌ای و ساعت‌های مشخص نیویورک/لندن هستند؛ داده‌ی دقیقه‌ای دوساله و تشخیص FVG در موتور نداریم",
+   "verdict": "غیرقابل آزمون: ستاپ‌ها (Silver Bullet، شکست محدوده‌ی ۱۵ دقیقه‌ای، شکار نقدینگی با FVG، Power of Three) روی کندل دقیقه‌ای و ساعت‌های مشخص نیویورک/لندن هستند؛ داده‌ی دقیقه‌ای دوساله و تشخیص FVG در موتور نداریم"
+  },
   "a6a4a28087-hyperliquid-rust-ou-donchian": {
    "name": "Hyperliquid Rust OU + Donchian HMM bot",
    "name_fa": "ربات راست هایپرلیکوئید با بازگشت به میانگین OU و شکست دانچیان",
@@ -1662,42 +1694,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.7,
+    "cagr": 66.68,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 86.38,
+    "cagr": 86.67,
     "sharpe": 1.46,
     "max_dd": -74.38,
-    "total": 19935.77
+    "total": 20230.59
    },
    "out_sample": {
-    "cagr": 28.09,
-    "sharpe": 0.92,
+    "cagr": 28.43,
+    "sharpe": 0.93,
     "max_dd": -35.7,
-    "total": 146.81
+    "total": 149.23
    },
    "buyhold_full": {
-    "cagr": 51.91,
+    "cagr": 51.89,
     "sharpe": 0.97,
     "max_dd": -83.4,
-    "total": 16045.75
+    "total": 16034.42
    },
    "buyhold_out_sample": {
-    "cagr": 30.39,
+    "cagr": 30.71,
     "sharpe": 0.81,
     "max_dd": -53.06,
-    "total": 163.35
+    "total": 165.74
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-10",
-   "oos_start": "2023-03-20",
-   "forward_days": 16,
+   "period": "2014-09-17 → 2026-11-11",
+   "oos_start": "2023-03-21",
+   "forward_days": 17,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1948,6 +1980,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن روی سهام انتخابی و قضاوت دستی؛ داده‌ی تاریخی آپشن و قانون انتخاب نماد در دسترس نیست"
+  },
+  "d7d71d506b-xauusd-m15-loss-recovery": {
+   "name": "XAUUSD M15 extreme zone with loss recovery",
+   "name_fa": "طلا با ناحیه‌های افراطی ۱۵ دقیقه‌ای و معامله‌ی جبرانی",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xsrl4a/title_the_brutal_psychological_trap_of_loss/",
+   "claim": "«استراتژی ناحیه‌ی افراطی M15 روی طلا، یک معامله در روز در نشانگرهای جلسه، ضرر ثابت ۵ دلار… در ۱۴ روز، حساب ۳۶ دلاری به ۵۶ دلار رسید؛ در سپتامبر هر دو حالت حساب را به چند هزار دلار رساندند.»",
+   "claimed_return": "$36 → $56 in 14 days (backtest); $36 → thousands in September",
+   "asset_class": "forex",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-11-11",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۱۵ دقیقه‌ای است و «ناحیه‌ی افراطی» و «نشانگر جلسه» تعریف عددی ندارند؛ اطلاعات کافی برای قانون دقیق نیست",
+   "verdict": "غیرقابل آزمون: روی کندل ۱۵ دقیقه‌ای است و «ناحیه‌ی افراطی» و «نشانگر جلسه» تعریف عددی ندارند؛ اطلاعات کافی برای قانون دقیق نیست"
   },
   "dcc3f9155e-qqq-rsi-ema-vwap": {
    "name": "QQQ RSI + EMA + VWAP",
