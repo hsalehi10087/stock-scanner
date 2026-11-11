@@ -1,0 +1,317 @@
+{
+ "book_alone": {
+  "cagr": 24.2,
+  "max_dd": -36.7,
+  "sharpe": 1.16,
+  "years": 11.2
+ },
+ "candidates": {
+  "TLT": {
+   "cagr": -0.2,
+   "max_dd": -34.5,
+   "sharpe": 0.03,
+   "years": 11.2,
+   "name_fa": "اوراق بلندمدت آمریکا",
+   "start": "2016-01-01",
+   "corr_book": -0.13,
+   "corr_spy": -0.25,
+   "combined": {
+    "cagr": 22.2,
+    "max_dd": -34.4,
+    "sharpe": 1.16,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": -0.8,
+    "max_dd": -48.4,
+    "sharpe": 0.01,
+    "years": 11.2
+   },
+   "in_market_pct": 49,
+   "pass": false
+  },
+  "DBC": {
+   "cagr": 6.2,
+   "max_dd": -36.4,
+   "sharpe": 0.5,
+   "years": 11.2,
+   "name_fa": "سبد کالاها",
+   "start": "2016-01-01",
+   "corr_book": 0.1,
+   "corr_spy": 0.1,
+   "combined": {
+    "cagr": 22.8,
+    "max_dd": -33.2,
+    "sharpe": 1.18,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": 9.3,
+    "max_dd": -41.7,
+    "sharpe": 0.59,
+    "years": 11.2
+   },
+   "in_market_pct": 57,
+   "pass": false
+  },
+  "UUP": {
+   "cagr": 2.2,
+   "max_dd": -11.4,
+   "sharpe": 0.42,
+   "years": 11.2,
+   "name_fa": "دلار آمریکا",
+   "start": "2016-01-01",
+   "corr_book": -0.15,
+   "corr_spy": -0.09,
+   "combined": {
+    "cagr": 22.4,
+    "max_dd": -33.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": 2.8,
+    "max_dd": -14.2,
+    "sharpe": 0.44,
+    "years": 11.2
+   },
+   "in_market_pct": 59,
+   "pass": false
+  },
+  "BTAL": {
+   "cagr": 0.0,
+   "max_dd": -26.6,
+   "sharpe": 0.06,
+   "years": 11.2,
+   "name_fa": "ضدبتا (بلند کم‌نوسان/کوتاه پرنوسان)",
+   "start": "2016-01-01",
+   "corr_book": -0.41,
+   "corr_spy": -0.47,
+   "combined": {
+    "cagr": 22.3,
+    "max_dd": -33.0,
+    "sharpe": 1.18,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": -2.7,
+    "max_dd": -52.7,
+    "sharpe": -0.07,
+    "years": 11.2
+   },
+   "in_market_pct": 46,
+   "pass": false
+  },
+  "DBMF": {
+   "cagr": 4.0,
+   "max_dd": -17.4,
+   "sharpe": 0.42,
+   "years": 6.9,
+   "name_fa": "مدیریت‌شده‌ی آتی (روند)",
+   "start": "2020-03-03",
+   "corr_book": 0.13,
+   "corr_spy": 0.07,
+   "combined": {
+    "cagr": 23.1,
+    "max_dd": -32.8,
+    "sharpe": 1.08,
+    "years": 6.9
+   },
+   "combined_now_same_period": {
+    "cagr": 23.7,
+    "max_dd": -35.1,
+    "sharpe": 1.08,
+    "years": 6.9
+   },
+   "buy_hold": {
+    "cagr": 8.1,
+    "max_dd": -20.4,
+    "sharpe": 0.7,
+    "years": 6.9
+   },
+   "in_market_pct": 56,
+   "pass": true
+  },
+  "KMLM": {
+   "cagr": 3.4,
+   "max_dd": -27.5,
+   "sharpe": 0.34,
+   "years": 5.3,
+   "name_fa": "مدیریت‌شده‌ی آتی KFA",
+   "start": "2021-09-28",
+   "corr_book": -0.17,
+   "corr_spy": -0.2,
+   "combined": {
+    "cagr": 13.6,
+    "max_dd": -32.2,
+    "sharpe": 0.76,
+    "years": 5.3
+   },
+   "combined_now_same_period": {
+    "cagr": 13.8,
+    "max_dd": -35.1,
+    "sharpe": 0.75,
+    "years": 5.3
+   },
+   "buy_hold": {
+    "cagr": 3.7,
+    "max_dd": -31.0,
+    "sharpe": 0.33,
+    "years": 5.3
+   },
+   "in_market_pct": 46,
+   "pass": false
+  },
+  "XLU": {
+   "cagr": 3.8,
+   "max_dd": -32.4,
+   "sharpe": 0.35,
+   "years": 11.2,
+   "name_fa": "خدمات عمومی",
+   "start": "2016-01-01",
+   "corr_book": 0.2,
+   "corr_spy": 0.3,
+   "combined": {
+    "cagr": 22.6,
+    "max_dd": -34.3,
+    "sharpe": 1.16,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": 9.7,
+    "max_dd": -36.1,
+    "sharpe": 0.59,
+    "years": 11.2
+   },
+   "in_market_pct": 69,
+   "pass": false
+  },
+  "SLV": {
+   "cagr": 5.0,
+   "max_dd": -46.6,
+   "sharpe": 0.32,
+   "years": 11.2,
+   "name_fa": "نقره",
+   "start": "2016-01-01",
+   "corr_book": 0.24,
+   "corr_spy": 0.13,
+   "combined": {
+    "cagr": 22.9,
+    "max_dd": -34.5,
+    "sharpe": 1.16,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": 11.9,
+    "max_dd": -57.8,
+    "sharpe": 0.52,
+    "years": 11.2
+   },
+   "in_market_pct": 56,
+   "pass": false
+  },
+  "CPER": {
+   "cagr": 0.5,
+   "max_dd": -44.5,
+   "sharpe": 0.13,
+   "years": 11.2,
+   "name_fa": "مس",
+   "start": "2016-01-01",
+   "corr_book": 0.25,
+   "corr_spy": 0.21,
+   "combined": {
+    "cagr": 22.3,
+    "max_dd": -35.1,
+    "sharpe": 1.14,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": 9.0,
+    "max_dd": -38.4,
+    "sharpe": 0.48,
+    "years": 11.2
+   },
+   "in_market_pct": 60,
+   "pass": false
+  },
+  "FXY": {
+   "cagr": -2.5,
+   "max_dd": -36.4,
+   "sharpe": -0.36,
+   "years": 11.2,
+   "name_fa": "ین ژاپن",
+   "start": "2016-01-01",
+   "corr_book": -0.1,
+   "corr_spy": -0.24,
+   "combined": {
+    "cagr": 21.9,
+    "max_dd": -34.1,
+    "sharpe": 1.15,
+    "years": 11.2
+   },
+   "combined_now_same_period": {
+    "cagr": 23.1,
+    "max_dd": -35.1,
+    "sharpe": 1.17,
+    "years": 11.2
+   },
+   "buy_hold": {
+    "cagr": -2.9,
+    "max_dd": -42.1,
+    "sharpe": -0.28,
+    "years": 11.2
+   },
+   "in_market_pct": 42,
+   "pass": false
+  }
+ },
+ "book_with_spy_band": {
+  "cagr": 23.1,
+  "max_dd": -35.1,
+  "sharpe": 1.17,
+  "years": 11.2
+ },
+ "winner": "DBMF"
+}
