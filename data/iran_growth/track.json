@@ -1,5 +1,5 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "items": [
   {
    "ticker": "فاراک",
@@ -768,66 +768,6 @@
    "max_pct": 0.0,
    "min_pct": -2.9,
    "last_date": "20261111"
-  },
-  {
-   "ticker": "شیران",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "قزوین",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "شکلر",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "کاذر",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "غمهرا",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "قشهد",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "کرماشا",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "بسویچ",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "ساراب",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "وبملت",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "نوری",
-   "date": "2026-11-11",
-   "ret_pct": null
-  },
-  {
-   "ticker": "چکارن",
-   "date": "2026-11-11",
-   "ret_pct": null
   }
  ]
 }
