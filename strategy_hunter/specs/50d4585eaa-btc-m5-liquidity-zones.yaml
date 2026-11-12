@@ -1,0 +1,14 @@
+id: 50d4585eaa-btc-m5-liquidity-zones
+name: BTC perps M5 daily liquidity zones
+name_fa: ورود ۵ دقیقه‌ای بیت‌کوین در نواحی نقدینگی روزانه
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xtgi6s/modeling_a_3640trade_asymmetrical_execution/
+claim: "«بک‌تست سه‌ساله (نوامبر ۲۰۲۲ تا اکتبر ۲۰۲۵) روی قرارداد دائمی بیت‌کوین با ورود ۵ دقیقه‌ای در نواحی نقدینگی روزانه: ۳٬۶۴۰ معامله، نرخ برد ۱۳٫۸۷٪، بازده خالص +۲۱۲٫۴۳٪ (رشد سالانه ۴۷٫۵۵٪)، بیشترین افت ‎-۱۴٫۳۷٪، شارپ ۲٫۱۰»"
+claimed_return: "+212%"
+added: 2026-11-12
+status: not_testable
+reason_not_testable: "ورود روی کندل ۵ دقیقه‌ای است و تعریف «ناحیه‌ی نقدینگی روزانه»، حد ضرر و حد سود منتشر نشده"
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1h
+notes: "همین ادعا با شناسه‌ی 92b4a1a49b در r/Daytrading هم آمده (تکراری). ریسک هر معامله ۰٫۱۷٪ گفته شده."

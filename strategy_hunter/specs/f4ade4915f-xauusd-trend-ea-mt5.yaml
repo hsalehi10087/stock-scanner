@@ -1,0 +1,14 @@
+id: f4ade4915f-xauusd-trend-ea-mt5
+name: XAUUSD multi-timeframe trend EA
+name_fa: ربات روندگرای طلا (XAUUSD) با تأیید چند تایم‌فریم
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xtnkiz/goldtrendfolgeea_17_jahre_backtest_pf_22_auf_2/
+claim: "«ربات روندگرای طلا، بک‌تست ۲۰۰۹ تا ۲۰۲۶: ضریب سود حدود ۲٫۳ (بک‌تست) و ۲٫۲۱ (آزمون با داده‌ی بروکر ۲۰۲۵–۲۰۲۶)، نرخ برد حدود ۳۲٪، میانگین هر معامله حدود +0.5R، حدود ۱ سال زیان در ۱۷ سال، بیشترین افت حدود ۴۰ تا ۴۵٪ با داده‌ی تیک واقعی»"
+claimed_return: "PF ~2.2"
+added: 2026-11-12
+status: not_testable
+reason_not_testable: "قانون‌ها فقط کلی گفته شده (روند قوی در چند تایم‌فریم + شرط شکست، حد ضرر بر پایه‌ی ATR، سه بخش با حد ضررهای متفاوت، حد ضرر متحرک)؛ اندیکاتورها و عددها منتشر نشده"
+asset_class: forex
+symbols: [GC=F]
+timeframe: 1d
+notes: "پست به آلمانی است. روی MT5 و احتمالاً تایم‌فریم پایین‌تر از روزانه اجرا می‌شود. نماد GC=F فقط برای ثبت بازار گذاشته شده."
