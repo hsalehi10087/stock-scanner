@@ -1,21 +1,96 @@
 {
-"2026-11-11": {
-"AZTA": [
-"hi52"
-],
+"2026-11-12": {
 "CRWV": [
+"drop"
+],
+"IREN": [
+"drop"
+],
+"NBIS": [
+"drop"
+],
+"APLD": [
+"drop"
+],
+"HUBS": [
 "surge"
 ],
-"REZI": [
-"surge"
+"INOD": [
+"drop"
 ],
-"RGTI": [
+"IONQ": [
 "drop"
 ],
 "SONO": [
+"hi20"
+],
+"ALKS": [
+"hi20"
+],
+"AMD": [
+"hi20"
+],
+"TRMK": [
 "hi20",
 "surge"
+],
+"QBTS": [
+"drop"
+],
+"RGTI": [
+"drop"
 ]
 },
-"pending_2026-11-11": []
+"pending_2026-11-12": [
+{
+"code": "surge",
+"ticker": "HUBS",
+"score": 0,
+"rvol": 2.834434160071025,
+"line": "HUBS ۲۱۶٫۰۷$ ▲۶٫۵٪ | حجم ۲٫۸ برابر",
+"time": "10:50",
+"price": 216.07,
+"chg": 6.5
+},
+{
+"code": "hi20",
+"ticker": "SONO",
+"score": 0,
+"rvol": 2.4546426172538953,
+"line": "SONO ۱۹٫۳۷$ ▲۱٫۶٪ | حجم ۲٫۵ برابر",
+"time": "10:50",
+"price": 19.37,
+"chg": 1.63
+},
+{
+"code": "hi20",
+"ticker": "ALKS",
+"score": 0,
+"rvol": 2.713094254044649,
+"line": "ALKS ۴۸٫۱۷$ ▲۰٫۶٪ | حجم ۲٫۷ برابر",
+"time": "11:50",
+"price": 48.17,
+"chg": 0.58
+},
+{
+"code": "hi20",
+"ticker": "TRMK",
+"score": 0,
+"rvol": 8.951563218390806,
+"line": "TRMK ۴۸٫۳$ ▲۶٫۰٪ | حجم ۹٫۰ برابر",
+"time": "12:50",
+"price": 48.3,
+"chg": 6.01
+},
+{
+"code": "surge",
+"ticker": "TRMK",
+"score": 0,
+"rvol": 8.951563218390806,
+"line": "TRMK ۴۸٫۳$ ▲۶٫۰٪ | حجم ۹٫۰ برابر",
+"time": "12:50",
+"price": 48.3,
+"chg": 6.01
+}
+]
 }

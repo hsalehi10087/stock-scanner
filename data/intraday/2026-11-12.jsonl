@@ -1,0 +1,14 @@
+{"time": "09:50", "ticker": "CRWV", "signal": "drop", "price": 56.27, "chg": -7.4, "rvol": 3.14, "urgent": true, "src": "Yahoo"}
+{"time": "09:50", "ticker": "IREN", "signal": "drop", "price": 19.2, "chg": -7.87, "rvol": 1.62, "urgent": true, "src": "Yahoo"}
+{"time": "09:50", "ticker": "NBIS", "signal": "drop", "price": 129.51, "chg": -16.28, "rvol": 6.79, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "APLD", "signal": "drop", "price": 16.56, "chg": -7.57, "rvol": 1.53, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "INOD", "signal": "drop", "price": 35.53, "chg": -6.92, "rvol": 0.87, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "IONQ", "signal": "drop", "price": 31.95, "chg": -6.19, "rvol": 1.2, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "HUBS", "signal": "surge", "price": 216.07, "chg": 6.5, "rvol": 2.83, "urgent": false, "src": "Yahoo"}
+{"time": "10:50", "ticker": "SONO", "signal": "hi20", "price": 19.37, "chg": 1.63, "rvol": 2.45, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "AMD", "signal": "hi20", "price": 585.2, "chg": 5.84, "rvol": 3.07, "urgent": true, "src": "Yahoo"}
+{"time": "11:50", "ticker": "ALKS", "signal": "hi20", "price": 48.17, "chg": 0.58, "rvol": 2.71, "urgent": false, "src": "Yahoo"}
+{"time": "12:50", "ticker": "TRMK", "signal": "hi20", "price": 48.3, "chg": 6.01, "rvol": 8.95, "urgent": false, "src": "Yahoo"}
+{"time": "12:50", "ticker": "TRMK", "signal": "surge", "price": 48.3, "chg": 6.01, "rvol": 8.95, "urgent": false, "src": "Yahoo"}
+{"time": "14:50", "ticker": "QBTS", "signal": "drop", "price": 9.93, "chg": -6.76, "rvol": 0.73, "urgent": true, "src": "Yahoo"}
+{"time": "14:50", "ticker": "RGTI", "signal": "drop", "price": 10.44, "chg": -6.03, "rvol": 0.92, "urgent": true, "src": "Yahoo"}
