@@ -1,0 +1,49 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+SMX,SMX (Security Matters) Public Limited Company - Ordinary Shares,19.25,105.88234454140304,2886132.0,2026-11-10,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+PEPG,PepGen Inc. - Common Stock,4.610000133514404,92.88702640869711,15956914.0,2026-11-10,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+TTEC,"TTEC Holdings, Inc. - Common Stock",2.4000000953674316,71.42858115994217,5133052.0,2026-11-10,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+TANH,Tantech Holdings Ltd. - Class A Common Shares,30.559999465942383,58.01447375817699,173496.0,2026-11-10,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ZIP,"ZipRecruiter, Inc. Class A Common Stock",6.590000152587891,53.6130585358187,2675486.0,2026-11-10,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+MNDO,MIND C.T.I. Ltd. - Ordinary Shares,1.2599999904632568,44.827584316935564,519047.0,2026-11-10,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+LGVN,Longeveron Inc. - Class A Common stock,2.8399999141693115,41.29352873851306,130626.0,2026-11-10,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+PXLW,"Pixelworks, Inc. - Common Stock",7.289999961853027,39.65517729619252,796963.0,2026-11-10,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+TREO,Tactical Resources Corp. - Common Shares,2.5899999141693115,31.4720749520228,179682.0,2026-11-10,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+AMRC,"Ameresco, Inc. Class A Common Stock",27.6200008392334,23.028952786623513,870073.0,2026-11-10,2.0,5.0,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+SECZ,Securitize Corp. Common Stock,8.529999732971191,22.38163543383187,2812863.0,2026-11-10,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+KULR,"KULR Technology Group, Inc. Common Stock",1.9900000095367432,22.085890512776206,1157701.0,2026-11-10,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+STAK,STAK Inc. - Class A Ordinary Shares,4.914999961853027,20.171143728274178,7476519.0,2026-11-10,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+CTEV,Claritev Corporation Class A Common Stock,28.670000076293945,19.45833365122478,437980.0,2026-11-10,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+AAON,"AAON, Inc. - Common Stock",75.01000213623047,19.3096920798401,1530824.0,2026-11-10,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+BW,"Babcock & Wilcox Enterprises, Inc. Common Stock",4.480000019073486,18.205806442359453,11347784.0,2026-11-10,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+LGCL,Lucas GC Limited - Class A Ordinary Shares,1.6100000143051147,17.518248810321758,122795.0,2026-11-10,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+AIBZ,Bitzero Holdings Inc. - Common Shares,2.9200000762939453,17.269078920092152,791350.0,2026-11-10,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+INSE,"Inspired Entertainment, Inc. - Common Stock",4.650000095367432,16.9811372812412,507593.0,2026-11-10,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+SJT,San Juan Basin Royalty Trust Common Stock,4.21999979019165,16.897504510305073,511017.0,2026-11-10,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': None, 'profit': False, 'momentum': False, 'analysts': None}"
+NTHI,"NeOnc Technologies Holdings, Inc. - Common Stock",4.369999885559082,16.84491642823216,306340.0,2026-11-10,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': True}"
+CISS,C3is Inc. - Common Stock,2.0399999618530273,16.571426391601562,263613.0,2026-11-10,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+HUCK,"Huckleberry.ai, Inc. - Class B Common Stock",3.430000066757202,16.271186824229833,1795071.0,2026-11-10,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+RAIL,"Freightcar America, Inc. - Common Stock",5.119999885559082,15.05618213508615,478896.0,2026-11-10,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+JRSH,"Jerash Holdings (US), Inc. - Common Stock",7.550000190734863,14.916286049741,383188.0,2026-11-10,2.0,5.0,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+CSQR,"Csquare, Inc. Common Stock",17.520000457763672,14.73477362507898,2618391.0,2026-11-10,,,,
+IRLA,IRulya Therapeutics Inc. - Common Stock,38.619998931884766,14.344921353426287,156467.0,2026-11-10,,,,
+AVAT,Avalanche Treasury Corporation - Class A Common Stock,1.0499999523162842,14.254615727764897,641740.0,2026-11-10,,,,
+AP,Ampco-Pittsburgh Corporation Common Stock,6.800000190734863,13.33333651224773,121237.0,2026-11-10,,,,
+SPRY,"ARS Pharmaceuticals, Inc. - Common Stock",3.569999933242798,13.333327782848059,3845251.0,2026-11-10,,,,
+ZURA,Zura Bio Limited - Class A Ordinary shares,1.4049999713897705,13.306448434195616,6875527.0,2026-11-10,,,,
+DFNS,T3 Defense Inc. - Common Stock,2.200000047683716,12.820512507010417,1553420.0,2026-11-10,,,,
+CCAP,"Crescent Capital BDC, Inc. - Common Stock",10.380000114440918,12.337666358889955,396180.0,2026-11-10,,,,
+TRDA,"Entrada Therapeutics, Inc. - Common Stock",5.25,11.94029714173237,760792.0,2026-11-10,,,,
+CRBP,"Corbus Pharmaceuticals Holdings, Inc. - Common Stock",3.930000066757202,11.647729774213534,670764.0,2026-11-10,,,,
+RNTZ,Rantizo - Class A Ordinary Shares,4.429999828338623,11.306527816798685,276250.0,2026-11-10,,,,
+PLX,"Protalix BioTherapeutics, Inc. (DE) Common Stock",2.859999895095825,11.284045501398454,3090251.0,2026-11-10,,,,
+VAI,Valor Energy Incorporated - Common Stock,2.4700000286102295,11.261261116131859,107560.0,2026-11-10,,,,
+YYAI,AiRWA Inc. - Common Stock,1.0499999523162842,11.111106906197875,449706.0,2026-11-10,,,,
+VCX,"Fundrise Innovation Fund, LLC Common Shares of Limited Liability Company Interests",23.75,10.929472999836264,845666.0,2026-11-11,,,,
+ACAD,ACADIA Pharmaceuticals Inc. - Common Stock,18.280000686645508,10.787882949366722,2394530.0,2026-11-10,,,,
+CHTR,"Charter Communications, Inc. - Class A Common Stock",134.05999755859375,10.610561826864862,3006650.0,2026-11-10,,,,
+MARA,"MARA Holdings, Inc. - Common Stock",7.340000152587891,10.542173195446015,48926258.0,2026-11-10,,,,
+HROW,"Harrow, Inc. - Common Stock",30.360000610351562,10.5205728767241,978752.0,2026-11-10,,,,
+IAM,"Iambic Therapeutics, Inc. - Common Stock",14.779999732971191,10.463375235843731,355621.0,2026-11-10,,,,
+AZUL,"Azul S.A. American Depositary Shares, each representing two (2) Common Shares",5.320000171661377,10.373443613958578,150374.0,2026-11-10,,,,
+XAIR,"Beyond Air, Inc. - Common Stock",2.5199999809265137,10.284458917663164,673085.0,2026-11-10,,,,
+WFF,WF Holding Limited - Ordinary Shares,1.190000057220459,10.185186105009914,1651465.0,2026-11-10,,,,
