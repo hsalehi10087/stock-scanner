@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T22:06:47+00:00",
+ "updated": "2026-11-12T13:55:34+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -315,16 +315,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.07,
+    "cagr": -5.03,
     "sharpe": -0.11,
-    "max_dd": -83.41,
-    "total": -68.3
+    "max_dd": -83.22,
+    "total": -67.94
    },
    "in_sample": {
-    "cagr": -8.92,
-    "sharpe": -0.28,
-    "max_dd": -78.86,
-    "total": -76.39
+    "cagr": -8.86,
+    "sharpe": -0.27,
+    "max_dd": -78.62,
+    "total": -76.12
    },
    "out_sample": {
     "cagr": 4.35,
@@ -559,16 +559,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.44,
-    "sharpe": 0.5,
+    "cagr": 10.3,
+    "sharpe": 0.49,
     "max_dd": -66.12,
-    "total": 294.99
+    "total": 288.49
    },
    "in_sample": {
-    "cagr": 8.43,
-    "sharpe": 0.44,
+    "cagr": 8.24,
+    "sharpe": 0.43,
     "max_dd": -49.5,
-    "total": 118.97
+    "total": 115.37
    },
    "out_sample": {
     "cagr": 15.22,
@@ -590,7 +590,7 @@
    },
    "trades": 93,
    "win_rate": 71.0,
-   "avg_trade_pct": 2.0,
+   "avg_trade_pct": 1.98,
    "exposure": 0.46,
    "period": "2013-01-02 → 2026-11-11",
    "oos_start": "2022-09-12",
@@ -703,36 +703,36 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.0,
-    "sharpe": 0.16,
+    "cagr": 1.07,
+    "sharpe": 0.17,
     "max_dd": -28.05,
-    "total": 12.47
+    "total": 13.38
    },
    "out_sample": {
-    "cagr": 5.74,
+    "cagr": 5.77,
     "sharpe": 0.6,
     "max_dd": -14.57,
-    "total": 32.54
+    "total": 32.77
    },
    "buyhold_full": {
-    "cagr": 7.86,
-    "sharpe": 0.53,
+    "cagr": 7.71,
+    "sharpe": 0.52,
     "max_dd": -44.36,
-    "total": 257.32
+    "total": 249.04
    },
    "buyhold_out_sample": {
-    "cagr": 17.28,
-    "sharpe": 0.93,
+    "cagr": 16.78,
+    "sharpe": 0.9,
     "max_dd": -26.69,
-    "total": 123.75
+    "total": 118.93
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-11",
-   "oos_start": "2021-10-21",
-   "forward_days": 14,
+   "period": "2010-01-04 → 2026-11-12",
+   "oos_start": "2021-10-22",
+   "forward_days": 15,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -862,6 +862,22 @@
    "reason_not_testable": "فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست",
    "verdict": "غیرقابل آزمون: فروش آپشن و فیلتر GEX به داده‌ی تاریخی قیمت آپشن و موقعیت دیلرها نیاز دارد که در دسترس نیست"
   },
+  "50d4585eaa-btc-m5-liquidity-zones": {
+   "name": "BTC perps M5 daily liquidity zones",
+   "name_fa": "ورود ۵ دقیقه‌ای بیت‌کوین در نواحی نقدینگی روزانه",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xtgi6s/modeling_a_3640trade_asymmetrical_execution/",
+   "claim": "«بک‌تست سه‌ساله (نوامبر ۲۰۲۲ تا اکتبر ۲۰۲۵) روی قرارداد دائمی بیت‌کوین با ورود ۵ دقیقه‌ای در نواحی نقدینگی روزانه: ۳٬۶۴۰ معامله، نرخ برد ۱۳٫۸۷٪، بازده خالص +۲۱۲٫۴۳٪ (رشد سالانه ۴۷٫۵۵٪)، بیشترین افت ‎-۱۴٫۳۷٪، شارپ ۲٫۱۰»",
+   "claimed_return": "+212%",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-12",
+   "status": "not_testable",
+   "reason_not_testable": "ورود روی کندل ۵ دقیقه‌ای است و تعریف «ناحیه‌ی نقدینگی روزانه»، حد ضرر و حد سود منتشر نشده",
+   "verdict": "غیرقابل آزمون: ورود روی کندل ۵ دقیقه‌ای است و تعریف «ناحیه‌ی نقدینگی روزانه»، حد ضرر و حد سود منتشر نشده"
+  },
   "571514b504-mnq-900tick-1h-breakout": {
    "name": "MNQ 1H candle breakout on tick chart",
    "name_fa": "شکست کندل یک‌ساعته‌ی MNQ روی نمودار تیکی",
@@ -955,42 +971,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -12.99,
+    "cagr": -13.0,
     "sharpe": -0.8,
     "max_dd": -28.53,
-    "total": -24.22
+    "total": -24.23
    },
    "in_sample": {
-    "cagr": -12.07,
-    "sharpe": -0.71,
+    "cagr": -10.55,
+    "sharpe": -0.6,
     "max_dd": -28.53,
-    "total": -16.42
+    "total": -14.4
    },
    "out_sample": {
-    "cagr": -15.1,
-    "sharpe": -1.02,
-    "max_dd": -13.67,
-    "total": -9.33
+    "cagr": -18.62,
+    "sharpe": -1.33,
+    "max_dd": -13.68,
+    "total": -11.59
    },
    "buyhold_full": {
-    "cagr": -8.19,
-    "sharpe": 0.03,
+    "cagr": -10.42,
+    "sharpe": -0.03,
     "max_dd": -53.99,
-    "total": -15.66
+    "total": -19.69
    },
    "buyhold_out_sample": {
-    "cagr": 16.31,
-    "sharpe": 0.59,
+    "cagr": 1.65,
+    "sharpe": 0.23,
     "max_dd": -29.65,
-    "total": 9.46
+    "total": 0.98
    },
    "trades": 133,
    "win_rate": 29.3,
    "avg_trade_pct": -0.19,
    "exposure": 0.17,
-   "period": "2024-11-13 → 2026-11-11",
-   "oos_start": "2026-04-07",
-   "forward_days": 46,
+   "period": "2024-11-14 → 2026-11-12",
+   "oos_start": "2026-04-08",
+   "forward_days": 61,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1010,41 +1026,41 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 2.53,
-    "sharpe": 0.37,
+    "cagr": 2.65,
+    "sharpe": 0.39,
     "max_dd": -11.77,
-    "total": 7.4
+    "total": 7.82
    },
    "in_sample": {
-    "cagr": 5.08,
-    "sharpe": 0.71,
+    "cagr": 4.99,
+    "sharpe": 0.7,
     "max_dd": -5.63,
-    "total": 10.44
+    "total": 10.29
    },
    "out_sample": {
-    "cagr": -3.23,
-    "sharpe": -0.4,
-    "max_dd": -7.37,
-    "total": -2.78
+    "cagr": -2.56,
+    "sharpe": -0.31,
+    "max_dd": -7.25,
+    "total": -2.21
    },
    "buyhold_full": {
-    "cagr": 38.0,
+    "cagr": 37.83,
     "sharpe": 1.26,
     "max_dd": -28.12,
-    "total": 151.51
+    "total": 151.49
    },
    "buyhold_out_sample": {
-    "cagr": 1.44,
-    "sharpe": 0.18,
+    "cagr": 2.55,
+    "sharpe": 0.23,
     "max_dd": -18.45,
-    "total": 1.24
+    "total": 2.2
    },
-   "trades": 96,
-   "win_rate": 32.3,
-   "avg_trade_pct": 0.17,
-   "exposure": 0.39,
+   "trades": 95,
+   "win_rate": 33.7,
+   "avg_trade_pct": 0.18,
+   "exposure": 0.38,
    "period": "2023-12-15 → 2026-11-11",
-   "oos_start": "2025-12-26",
+   "oos_start": "2025-12-30",
    "forward_days": 14,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
@@ -1247,24 +1263,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 22.96,
+    "cagr": 22.56,
     "sharpe": 0.67,
     "max_dd": -93.96,
-    "total": 544.45
+    "total": 526.0
    },
    "buyhold_out_sample": {
-    "cagr": -16.67,
-    "sharpe": 0.07,
+    "cagr": -17.54,
+    "sharpe": 0.05,
     "max_dd": -67.61,
-    "total": -38.92
+    "total": -40.67
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-11",
+   "period": "2017-11-09 → 2026-11-12",
    "oos_start": "2024-02-29",
-   "forward_days": 7,
+   "forward_days": 8,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1340,7 +1356,7 @@
     "cagr": 7.27,
     "sharpe": 0.5,
     "max_dd": -54.29,
-    "total": 595.27
+    "total": 595.26
    },
    "in_sample": {
     "cagr": 4.84,
@@ -1694,42 +1710,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.68,
+    "cagr": 66.66,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 86.67,
-    "sharpe": 1.46,
+    "cagr": 85.94,
+    "sharpe": 1.45,
     "max_dd": -74.38,
-    "total": 20230.59
+    "total": 19604.0
    },
    "out_sample": {
-    "cagr": 28.43,
-    "sharpe": 0.93,
+    "cagr": 27.92,
+    "sharpe": 0.91,
     "max_dd": -35.7,
-    "total": 149.23
+    "total": 145.61
    },
    "buyhold_full": {
-    "cagr": 51.98,
-    "sharpe": 0.97,
+    "cagr": 51.65,
+    "sharpe": 0.96,
     "max_dd": -83.4,
-    "total": 16154.99
+    "total": 15745.22
    },
    "buyhold_out_sample": {
-    "cagr": 30.98,
-    "sharpe": 0.82,
+    "cagr": 29.54,
+    "sharpe": 0.79,
     "max_dd": -53.06,
-    "total": 167.72
+    "total": 157.19
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-11",
-   "oos_start": "2023-03-21",
-   "forward_days": 17,
+   "period": "2014-09-17 → 2026-11-12",
+   "oos_start": "2023-03-22",
+   "forward_days": 18,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -2151,6 +2167,22 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم",
    "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و VWAP روزانه است؛ داده‌ی دقیقه‌ای چندساله و اندیکاتور VWAP نداریم"
+  },
+  "f4ade4915f-xauusd-trend-ea-mt5": {
+   "name": "XAUUSD multi-timeframe trend EA",
+   "name_fa": "ربات روندگرای طلا (XAUUSD) با تأیید چند تایم‌فریم",
+   "source": "reddit/Trading",
+   "source_url": "https://www.reddit.com/r/Trading/comments/1xtnkiz/goldtrendfolgeea_17_jahre_backtest_pf_22_auf_2/",
+   "claim": "«ربات روندگرای طلا، بک‌تست ۲۰۰۹ تا ۲۰۲۶: ضریب سود حدود ۲٫۳ (بک‌تست) و ۲٫۲۱ (آزمون با داده‌ی بروکر ۲۰۲۵–۲۰۲۶)، نرخ برد حدود ۳۲٪، میانگین هر معامله حدود +0.5R، حدود ۱ سال زیان در ۱۷ سال، بیشترین افت حدود ۴۰ تا ۴۵٪ با داده‌ی تیک واقعی»",
+   "claimed_return": "PF ~2.2",
+   "asset_class": "forex",
+   "symbols": [
+    "GC=F"
+   ],
+   "added": "2026-11-12",
+   "status": "not_testable",
+   "reason_not_testable": "قانون‌ها فقط کلی گفته شده (روند قوی در چند تایم‌فریم + شرط شکست، حد ضرر بر پایه‌ی ATR، سه بخش با حد ضررهای متفاوت، حد ضرر متحرک)؛ اندیکاتورها و عددها منتشر نشده",
+   "verdict": "غیرقابل آزمون: قانون‌ها فقط کلی گفته شده (روند قوی در چند تایم‌فریم + شرط شکست، حد ضرر بر پایه‌ی ATR، سه بخش با حد ضررهای متفاوت، حد ضرر متحرک)؛ اندیکاتورها و عددها منتشر نشده"
   },
   "f588c1bfc7-mother-superior-xauusd-ea": {
    "name": "Mother Superior XAUUSD DCA EA",
