@@ -1,0 +1,40 @@
+{
+ "model": "NeoQuasar/Kronos-small",
+ "lookback": 400,
+ "horizon_days": 5,
+ "origins": 200,
+ "symbols": {
+  "BTC-USD": {
+   "n": 200,
+   "hit_rate": 54.0,
+   "ic": 0.024,
+   "rule_sharpe": 0.47,
+   "hold_sharpe": 0.41,
+   "rule_return_pct": 43.1,
+   "hold_return_pct": 38.9,
+   "forecast_5d_pct": -2.02,
+   "last_close": 72435.88,
+   "last_date": "2026-11-12",
+   "hit_first_half": 60.0,
+   "hit_second_half": 48.0,
+   "pass": false
+  },
+  "ETH-USD": {
+   "n": 200,
+   "hit_rate": 56.0,
+   "ic": 0.02,
+   "rule_sharpe": 0.32,
+   "hold_sharpe": 0.14,
+   "rule_return_pct": 18.5,
+   "hold_return_pct": -28.3,
+   "forecast_5d_pct": -1.69,
+   "last_close": 2011.22,
+   "last_date": "2026-11-12",
+   "hit_first_half": 59.0,
+   "hit_second_half": 53.0,
+   "pass": false
+  }
+ },
+ "verdict": "رد",
+ "passed": 0
+}
