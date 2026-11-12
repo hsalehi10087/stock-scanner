@@ -10332,219 +10332,219 @@
     {
      "ticker": "BRK.A",
      "name": "Berkshire Hathaway CL A",
-     "pct": 29.73,
+     "pct": 30.32,
      "shares": 86.0,
-     "value_usd": 64401000.0
+     "value_usd": 64242000.0
     },
     {
      "ticker": "GOOG",
      "name": "Alphabet Inc. CL C",
-     "pct": 11.81,
+     "pct": 11.64,
      "shares": 72390.0,
-     "value_usd": 25578000.0
-    },
-    {
-     "ticker": "SYF",
-     "name": "Synchrony Financial",
-     "pct": 7.84,
-     "shares": 223202.0,
-     "value_usd": 16975000.0
+     "value_usd": 24666000.0
     },
     {
      "ticker": "OXY",
      "name": "Occidental Petroleum",
-     "pct": 7.02,
+     "pct": 8.17,
      "shares": 313000.0,
-     "value_usd": 15202000.0
+     "value_usd": 17315000.0
     },
     {
-     "ticker": "SIRI",
-     "name": "SiriusXM Holdings Inc",
-     "pct": 5.59,
-     "shares": 409589.0,
-     "value_usd": 12099000.0
+     "ticker": "SYF",
+     "name": "Synchrony Financial",
+     "pct": 7.48,
+     "shares": 223202.0,
+     "value_usd": 15841000.0
     },
     {
      "ticker": "AAPL",
      "name": "Apple Inc.",
-     "pct": 5.34,
+     "pct": 6.29,
      "shares": 40000.0,
-     "value_usd": 11574000.0
+     "value_usd": 13321000.0
     },
     {
-     "ticker": "ALLY",
-     "name": "Ally Financial Inc.",
-     "pct": 4.78,
-     "shares": 225525.0,
-     "value_usd": 10363000.0
-    },
-    {
-     "ticker": "STLA",
-     "name": "Stellantis N.V.",
-     "pct": 3.69,
-     "shares": 1394194.0,
-     "value_usd": 8003000.0
-    },
-    {
-     "ticker": "JEF",
-     "name": "Jefferies Financial Group Inc.",
-     "pct": 3.44,
-     "shares": 149237.0,
-     "value_usd": 7459000.0
+     "ticker": "SIRI",
+     "name": "SiriusXM Holdings Inc",
+     "pct": 5.0,
+     "shares": 409589.0,
+     "value_usd": 10600000.0
     },
     {
      "ticker": "PYPL",
      "name": "PayPal Holdings Inc.",
-     "pct": 3.34,
+     "pct": 4.15,
      "shares": 167400.0,
-     "value_usd": 7228000.0
+     "value_usd": 8794000.0
+    },
+    {
+     "ticker": "ALLY",
+     "name": "Ally Financial Inc.",
+     "pct": 4.0,
+     "shares": 225525.0,
+     "value_usd": 8484000.0
+    },
+    {
+     "ticker": "JEF",
+     "name": "Jefferies Financial Group Inc.",
+     "pct": 3.22,
+     "shares": 149237.0,
+     "value_usd": 6825000.0
+    },
+    {
+     "ticker": "STLA",
+     "name": "Stellantis N.V.",
+     "pct": 2.87,
+     "shares": 1394194.0,
+     "value_usd": 6079000.0
     },
     {
      "ticker": "WFC",
      "name": "Wells Fargo",
-     "pct": 2.27,
+     "pct": 2.25,
      "shares": 59542.0,
-     "value_usd": 4921000.0
-    },
-    {
-     "ticker": "C",
-     "name": "Citigroup Inc.",
-     "pct": 2.11,
-     "shares": 32695.0,
-     "value_usd": 4576000.0
+     "value_usd": 4766000.0
     },
     {
      "ticker": "BABA",
      "name": "Alibaba Group Holdings",
-     "pct": 1.86,
+     "pct": 2.13,
      "shares": 41900.0,
-     "value_usd": 4022000.0
+     "value_usd": 4506000.0
+    },
+    {
+     "ticker": "C",
+     "name": "Citigroup Inc.",
+     "pct": 2.0,
+     "shares": 32695.0,
+     "value_usd": 4233000.0
     },
     {
      "ticker": "GM",
      "name": "General Motors",
-     "pct": 1.85,
+     "pct": 1.89,
      "shares": 52000.0,
-     "value_usd": 4008000.0
+     "value_usd": 4004000.0
     },
     {
      "ticker": "BAC",
      "name": "Bank of America Corp.",
-     "pct": 1.32,
+     "pct": 1.28,
      "shares": 50000.0,
-     "value_usd": 2849000.0
+     "value_usd": 2722000.0
     },
     {
      "ticker": "CASH",
      "name": "Meta Financial Group Inc.",
-     "pct": 1.1,
+     "pct": 0.92,
      "shares": 27389.0,
-     "value_usd": 2384000.0
+     "value_usd": 1948000.0
     },
     {
      "ticker": "POOL",
      "name": "Pool Corp.",
-     "pct": 1.06,
+     "pct": 0.81,
      "shares": 10636.0,
-     "value_usd": 2286000.0
-    },
-    {
-     "ticker": "MBI",
-     "name": "MBIA Inc.",
-     "pct": 0.97,
-     "shares": 321000.0,
-     "value_usd": 2093000.0
+     "value_usd": 1722000.0
     },
     {
      "ticker": "KHC",
      "name": "Kraft Heinz Co.",
-     "pct": 0.76,
+     "pct": 0.75,
      "shares": 69500.0,
-     "value_usd": 1642000.0
+     "value_usd": 1579000.0
     },
     {
      "ticker": "BRK.B",
      "name": "Berkshire Hathaway CL B",
-     "pct": 0.72,
+     "pct": 0.73,
      "shares": 3100.0,
-     "value_usd": 1551000.0
+     "value_usd": 1544000.0
     },
     {
-     "ticker": "AGO",
-     "name": "Assured Guaranty Ltd.",
-     "pct": 0.63,
-     "shares": 16990.0,
-     "value_usd": 1362000.0
-    },
-    {
-     "ticker": "CYD",
-     "name": "China Yuchai Intl Ltd.",
-     "pct": 0.51,
-     "shares": 23364.0,
-     "value_usd": 1108000.0
+     "ticker": "MBI",
+     "name": "MBIA Inc.",
+     "pct": 0.65,
+     "shares": 321000.0,
+     "value_usd": 1367000.0
     },
     {
      "ticker": "MEOH",
      "name": "Methanex Corp.",
-     "pct": 0.43,
+     "pct": 0.55,
      "shares": 20000.0,
-     "value_usd": 924000.0
+     "value_usd": 1173000.0
     },
     {
-     "ticker": "MCO",
-     "name": "Moody's Corp.",
-     "pct": 0.31,
-     "shares": 1500.0,
-     "value_usd": 679000.0
+     "ticker": "AGO",
+     "name": "Assured Guaranty Ltd.",
+     "pct": 0.54,
+     "shares": 16990.0,
+     "value_usd": 1151000.0
+    },
+    {
+     "ticker": "HPQ",
+     "name": "HP Inc.",
+     "pct": 0.39,
+     "shares": 26500.0,
+     "value_usd": 829000.0
     },
     {
      "ticker": "ATKR-OLD",
      "name": "Atkore International Group Inc.",
-     "pct": 0.3,
+     "pct": 0.38,
      "shares": 8400.0,
-     "value_usd": 639000.0
+     "value_usd": 796000.0
+    },
+    {
+     "ticker": "CYD",
+     "name": "China Yuchai Intl Ltd.",
+     "pct": 0.34,
+     "shares": 23364.0,
+     "value_usd": 725000.0
+    },
+    {
+     "ticker": "MCO",
+     "name": "Moody's Corp.",
+     "pct": 0.32,
+     "shares": 1500.0,
+     "value_usd": 681000.0
     },
     {
      "ticker": "MGA",
      "name": "Magna International Inc.",
      "pct": 0.3,
      "shares": 10000.0,
-     "value_usd": 657000.0
-    },
-    {
-     "ticker": "HPQ",
-     "name": "HP Inc.",
-     "pct": 0.27,
-     "shares": 26500.0,
-     "value_usd": 581000.0
+     "value_usd": 637000.0
     },
     {
      "ticker": "IMO",
      "name": "Imperial Oil Ltd.",
-     "pct": 0.26,
+     "pct": 0.29,
      "shares": 5000.0,
-     "value_usd": 561000.0
+     "value_usd": 615000.0
     },
     {
      "ticker": "LPX",
      "name": "Louisiana-Pacific Corp.",
-     "pct": 0.21,
+     "pct": 0.18,
      "shares": 5886.0,
-     "value_usd": 463000.0
+     "value_usd": 380000.0
     },
     {
      "ticker": "RYAAY",
      "name": "Ryanair Holdings PLC",
-     "pct": 0.18,
+     "pct": 0.15,
      "shares": 5937.0,
-     "value_usd": 384000.0
+     "value_usd": 327000.0
     },
     {
      "ticker": "VTS",
      "name": "Vitesse Energy Inc.",
      "pct": 0.01,
      "shares": 1293.0,
-     "value_usd": 20000.0
+     "value_usd": 22000.0
     }
    ]
   }
