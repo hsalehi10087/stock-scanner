@@ -167,3 +167,10 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-11,jp,6080.T,M&A CAPITAL PARTNERS CO LTD,4650.0,2516.0,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.298,شکست سقف ۵۲ هفته,1.7
 2026-11-11,tw,6532.TWO,CALITECH CO LTD,106.5,61.9,trend|pullback|longpat,صورت مالی|بافت,2,0.719,فنجان‌ودسته (نزدیک سقف),2.0
 2026-11-11,tw,3029.TW,ZERO ONE TECHNOLOGY,135.0,61.9,breakout|trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.581,فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته,2.7
+2026-11-12,us,RRC,Range Resources,51.86,759.81,trend|longpat,بافت|کیفیت رشد,4,0.82,فنجان‌ودسته (شکست سقف),2.5
+2026-11-12,us,LFST,Lifestance Health,14.37,759.81,trend|longpat,صورت مالی|سود پیاپی (SEC),3,0.819,شکست سقف ۵۲ هفته,1.7
+2026-11-12,in,KMEW.NS,Knowledge Marine & Engineering Works Ltd.,713.0,25299.3496,breakout|trend|longpat,صورت مالی|کن‌اسلیم|بافت,3,0.579,شکست سقف ۵۲ هفته,1.7
+2026-11-12,jp,8163.T,SRS HLDS CO LTD,1817.0,2517.0,trend|longpat,صورت مالی|کن‌اسلیم,3,0.797,شکست سقف ۵۲ هفته,1.7
+2026-11-12,jp,1980.T,DAI-DAN CO LTD,3165.0,2517.0,breakout|longpat,بافت|کیفیت رشد,5,0.793,کف دوقلو (شکست خط گردن),2.5
+2026-11-12,tw,3617.TW,CYBERPOWER SYSTEMS INC.,268.5,61.0,trend|longpat,بافت|سود پیاپی,3,0.879,شکست سقف ۵۲ هفته,1.7
+2026-11-12,tw,2535.TW,DA-CIN CONSTRUCTION CO,90.8,61.0,trend|longpat,بافت|سود پیاپی,3,0.872,مثلث صعودی,2.0

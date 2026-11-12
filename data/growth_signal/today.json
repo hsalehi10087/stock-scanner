@@ -1,288 +1,144 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "markets": {
   "us": {
-   "data_date": "2026-11-10",
-   "scored": 1479,
-   "technical": 192,
-   "checked": 9,
+   "data_date": "2026-11-11",
+   "scored": 1480,
+   "technical": 209,
+   "checked": 12,
    "signals": [
     {
-     "ticker": "AMG",
-     "name": "Affiliated Managers Group",
-     "price": 401.32,
+     "ticker": "RRC",
+     "name": "Range Resources",
+     "price": 51.86,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.41,
+     "tech_rank": 0.82,
      "fundamentals": [
-      "صورت مالی",
       "بافت",
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵",
-     "profit_streak": 0,
-     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": {
-      "date": "2026-11-11",
-      "period_end": "2026-09-30",
-      "stale": false,
-      "derived": false,
-      "revenue_yoy": 12.7,
-      "net_income_yoy": -18.4,
-      "eps_yoy": -3.3,
-      "profit_streak_yoy": 0,
-      "revenue_streak_yoy": 5,
-      "operating_margin": null,
-      "margin_up": false,
-      "net_margin": 29.1,
-      "one_off": false,
-      "revenue_ttm": 2337400000,
-      "net_income_ttm": 817100000,
-      "eps_ttm": 28.3
-     },
-     "k8": [
-      [
-       "2026-11-09",
-       "2.02"
-      ]
-     ]
-    },
-    {
-     "ticker": "BOX",
-     "name": "Box, Inc.",
-     "price": 42.55,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.861,
-     "fundamentals": [
-      "بافت",
-      "سود پیاپی (SEC)"
-     ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 2,
+     "profit_streak": 1,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
      "profit_more": false,
      "chart": "فنجان‌ودسته (شکست سقف)",
      "chart_score": 2.5,
      "sec": {
-      "date": "2026-11-11",
-      "period_end": "2026-07-31",
+      "date": "2026-11-12",
+      "period_end": "2026-09-30",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 9.2,
-      "net_income_yoy": 43.0,
-      "eps_yoy": 80.0,
-      "profit_streak_yoy": 2,
+      "revenue_yoy": 19.7,
+      "net_income_yoy": 21.5,
+      "eps_yoy": 25.0,
+      "profit_streak_yoy": 1,
       "revenue_streak_yoy": 8,
-      "operating_margin": 10.2,
-      "margin_up": true,
-      "net_margin": 6.0,
+      "operating_margin": null,
+      "margin_up": false,
+      "net_margin": 22.4,
       "one_off": false,
-      "revenue_ttm": 1234070000,
-      "net_income_ttm": 130691000,
-      "eps_ttm": 0.68
+      "revenue_ttm": 3398397000,
+      "net_income_ttm": 891363000,
+      "eps_ttm": 3.77
      },
      "k8": []
+    },
+    {
+     "ticker": "LFST",
+     "name": "Lifestance Health",
+     "price": 14.37,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.819,
+     "fundamentals": [
+      "صورت مالی",
+      "سود پیاپی (SEC)"
+     ],
+     "quality": "⭐۳/۵",
+     "profit_streak": 5,
+     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7,
+     "sec": {
+      "date": "2026-11-12",
+      "period_end": "2026-09-30",
+      "stale": false,
+      "derived": false,
+      "revenue_yoy": 25.3,
+      "net_income_yoy": 1978.5,
+      "eps_yoy": null,
+      "profit_streak_yoy": 5,
+      "revenue_streak_yoy": 8,
+      "operating_margin": 7.3,
+      "margin_up": true,
+      "net_margin": 4.9,
+      "one_off": false,
+      "revenue_ttm": 1676889000,
+      "net_income_ttm": 71908000,
+      "eps_ttm": null
+     },
+     "k8": [
+      [
+       "2026-11-05",
+       "2.02"
+      ]
+     ]
     }
    ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 7,
-    "rsi": 2,
+    "rsi": 3,
     "earn": 0,
-    "fund": 6,
-    "sec": 1
+    "fund": 8,
+    "sec": 2
    }
   },
   "cn": {
-   "data_date": "2026-11-11",
+   "data_date": "2026-11-12",
    "scored": 1498,
-   "technical": 19,
-   "checked": 10,
-   "signals": [
-    {
-     "ticker": "603893.SS",
-     "name": "FUZHOU ROCKCHIP ELECTRONICS CO",
-     "price": 235.01,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.273,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 0,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "فنجان‌ودسته (نزدیک سقف)، مثلث صعودی، شکست سقف ۵۲ هفته",
-     "chart_score": 3.0,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "technical": 12,
+   "checked": 6,
+   "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 8,
+    "ext": 4,
     "rsi": 0,
     "earn": 0,
-    "fund": 9
+    "fund": 6
    }
   },
   "in": {
-   "data_date": "2026-11-11",
+   "data_date": "2026-11-12",
    "scored": 706,
-   "technical": 80,
-   "checked": 18,
+   "technical": 85,
+   "checked": 12,
    "signals": [
     {
-     "ticker": "ACMESOLAR.NS",
-     "name": "ACME Solar Holdings Ltd.",
-     "price": 418.65,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.663,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "کف دوقلو (در انتظار شکست)",
-     "chart_score": 1.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "EPL.NS",
-     "name": "EPL Ltd.",
-     "price": 238.77,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.375,
-     "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "کف دوقلو (در انتظار شکست)",
-     "chart_score": 1.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "AETHER.NS",
-     "name": "Aether Industries Ltd.",
-     "price": 1635.9,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.249,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "سرووشانه معکوس",
-     "chart_score": 2.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "FLUOROCHEM.NS",
-     "name": "Gujarat Fluorochemicals Ltd.",
-     "price": 4824.4,
+     "ticker": "KMEW.NS",
+     "name": "Knowledge Marine & Engineering Works Ltd.",
+     "price": 713.0,
      "setups": [
       "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.187,
+     "tech_rank": 0.579,
      "fundamentals": [
       "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "LALPATHLAB.NS",
-     "name": "Dr. Lal Path Labs Ltd.",
-     "price": 2028.7,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.133,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت",
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "TVSMOTOR.NS",
-     "name": "TVS Motor Company Ltd.",
-     "price": 4560.0,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.054,
-     "fundamentals": [
       "کن‌اسلیم",
-      "کیفیت رشد",
-      "سود پیاپی"
+      "بافت"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 2,
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
      "chart": "شکست سقف ۵۲ هفته",
@@ -294,58 +150,32 @@
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 3,
-    "rsi": 1,
+    "ext": 4,
+    "rsi": 2,
     "earn": 0,
-    "fund": 12
+    "fund": 11
    }
   },
   "jp": {
-   "data_date": "2026-11-11",
+   "data_date": "2026-11-12",
    "scored": 1499,
-   "technical": 120,
-   "checked": 8,
+   "technical": 145,
+   "checked": 22,
    "signals": [
     {
-     "ticker": "4373.T",
-     "name": "SIMPLEX HLDGS INC",
-     "price": 1195.0,
+     "ticker": "8163.T",
+     "name": "SRS HLDS CO LTD",
+     "price": 1817.0,
      "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.686,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "کف دوقلو (در انتظار شکست)",
-     "chart_score": 1.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "6080.T",
-     "name": "M&A CAPITAL PARTNERS CO LTD",
-     "price": 4650.0,
-     "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.298,
+     "tech_rank": 0.797,
      "fundamentals": [
       "صورت مالی",
-      "بافت",
-      "کیفیت رشد"
+      "کن‌اسلیم"
      ],
-     "quality": "⭐۴/۵",
+     "quality": "⭐۳/۵",
      "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
@@ -353,68 +183,86 @@
      "chart_score": 1.7,
      "sec": null,
      "k8": []
+    },
+    {
+     "ticker": "1980.T",
+     "name": "DAI-DAN CO LTD",
+     "price": 3165.0,
+     "setups": [
+      "breakout",
+      "longpat"
+     ],
+     "tech_rank": 0.793,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵",
+     "profit_streak": 1,
+     "profit_basis": "فصل‌به‌فصل",
+     "profit_more": false,
+     "chart": "کف دوقلو (شکست خط گردن)",
+     "chart_score": 2.5,
+     "sec": null,
+     "k8": []
     }
    ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 3,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 6
+    "ext": 2,
+    "rsi": 1,
+    "earn": 1,
+    "fund": 19
    }
   },
   "tw": {
-   "data_date": "2026-11-11",
-   "scored": 1198,
-   "technical": 55,
-   "checked": 5,
+   "data_date": "2026-11-12",
+   "scored": 1197,
+   "technical": 43,
+   "checked": 7,
    "signals": [
     {
-     "ticker": "6532.TWO",
-     "name": "CALITECH CO LTD",
-     "price": 106.5,
+     "ticker": "3617.TW",
+     "name": "CYBERPOWER SYSTEMS INC.",
+     "price": 268.5,
      "setups": [
       "trend",
-      "pullback",
       "longpat"
      ],
-     "tech_rank": 0.719,
+     "tech_rank": 0.879,
      "fundamentals": [
-      "صورت مالی",
-      "بافت"
+      "بافت",
+      "سود پیاپی"
      ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 1,
+     "quality": "⭐۳/۵",
+     "profit_streak": 3,
      "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.0,
+     "profit_more": true,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7,
      "sec": null,
      "k8": []
     },
     {
-     "ticker": "3029.TW",
-     "name": "ZERO ONE TECHNOLOGY",
-     "price": 135.0,
+     "ticker": "2535.TW",
+     "name": "DA-CIN CONSTRUCTION CO",
+     "price": 90.8,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.581,
+     "tech_rank": 0.872,
      "fundamentals": [
-      "صورت مالی",
       "بافت",
-      "کیفیت رشد",
       "سود پیاپی"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
+     "quality": "⭐۳/۵",
+     "profit_streak": 4,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": true,
-     "chart": "فنجان‌ودسته (نزدیک سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 2.7,
+     "chart": "مثلث صعودی",
+     "chart_score": 2.0,
      "sec": null,
      "k8": []
     }
@@ -422,17 +270,17 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 4,
-    "rsi": 1,
+    "ext": 7,
+    "rsi": 0,
     "earn": 0,
-    "fund": 3
+    "fund": 5
    }
   },
   "kr": {
-   "data_date": "2026-11-11",
+   "data_date": "2026-11-12",
    "scored": 1197,
-   "technical": 21,
-   "checked": 10,
+   "technical": 17,
+   "checked": 7,
    "signals": [],
    "market_up50": false,
    "cap": 2,
@@ -440,29 +288,74 @@
     "ext": 9,
     "rsi": 0,
     "earn": 0,
-    "fund": 10
+    "fund": 7
    }
   },
   "hk": {
-   "data_date": "2026-11-11",
-   "scored": 994,
+   "data_date": "2026-11-12",
+   "scored": 993,
    "technical": 32,
-   "checked": 22,
+   "checked": 19,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 4,
+    "ext": 7,
     "rsi": 3,
     "earn": 0,
-    "fund": 22
+    "fund": 19
    }
   },
   "gb": {
-   "data_date": "2026-11-11",
+   "data_date": "2026-11-12",
    "scored": 346,
-   "technical": 43,
-   "checked": 23,
+   "technical": 53,
+   "checked": 24,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 2,
+    "rsi": 2,
+    "earn": 0,
+    "fund": 24
+   }
+  },
+  "de": {
+   "data_date": "2026-11-12",
+   "scored": 86,
+   "technical": 16,
+   "checked": 6,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 0,
+    "rsi": 2,
+    "earn": 0,
+    "fund": 6
+   }
+  },
+  "ca": {
+   "data_date": "2026-11-11",
+   "scored": 573,
+   "technical": 56,
+   "checked": 18,
+   "signals": [],
+   "market_up50": true,
+   "cap": 8,
+   "dropped": {
+    "ext": 6,
+    "rsi": 4,
+    "earn": 0,
+    "fund": 18
+   }
+  },
+  "au": {
+   "data_date": "2026-11-12",
+   "scored": 460,
+   "technical": 42,
+   "checked": 25,
    "signals": [],
    "market_up50": true,
    "cap": 8,
@@ -470,52 +363,7 @@
     "ext": 1,
     "rsi": 2,
     "earn": 0,
-    "fund": 23
-   }
-  },
-  "de": {
-   "data_date": "2026-11-11",
-   "scored": 86,
-   "technical": 13,
-   "checked": 4,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 0,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 4
-   }
-  },
-  "ca": {
-   "data_date": "2026-11-10",
-   "scored": 573,
-   "technical": 54,
-   "checked": 15,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 7,
-    "rsi": 4,
-    "earn": 0,
-    "fund": 15
-   }
-  },
-  "au": {
-   "data_date": "2026-11-11",
-   "scored": 460,
-   "technical": 35,
-   "checked": 26,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 1,
-    "rsi": 1,
-    "earn": 0,
-    "fund": 26
+    "fund": 25
    }
   }
  }
