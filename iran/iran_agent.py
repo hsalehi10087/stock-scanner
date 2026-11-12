@@ -132,7 +132,7 @@ def merge(res_path, codal_path, track_path):
             st = '، '.join(SETUP_FA.get(s, s) for s in x['st'])
             tag = ' 🆕' if x['sym'] in new else ''
             L += [f"{fa(i)}. {x['sym']} — {x['name'].strip()} | قیمت {x['last']:,.0f} ریال{tag}",
-                  f"   📊 {st}", f"   🗺 {x['cp']} (امتیاز {x['cps']})",
+                  f"   📊 {st}", f"   🗺 {({'up': 'روند صعودی', 'down': 'روند نزولی', 'range': 'خنثی'}).get(x['cp'], x['cp'])} (امتیاز نمودار {fa(x['cps'])} از ۳)",
                   f"   ✅ P/E پیش‌بینی {x['fpe']:.2f} در برابر گروه {x['spe']} | رشد فروش {c['rev_growth']:+.1f}٪، رشد سود {c['np_growth']:+.1f}٪"
                   f" ({'تلفیقی' if c.get('consolidated') else 'شرکتی'}، دوره {c.get('period', '؟')})"]
     else:

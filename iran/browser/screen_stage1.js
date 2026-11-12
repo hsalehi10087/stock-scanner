@@ -69,7 +69,7 @@ IR.run=async()=>{try{IR.status='list';
   const r6=c[n]/c[n-126]-1;list.push({code,sym:o.sym,name:o.name,pe:o.pe,eps:o.eps,r6,last:o.A.raw[n],tv,date:o.A.dates[n]});}
  const sorted=[...list].sort((a,b)=>a.r6-b.r6);sorted.forEach((x,i)=>x.rank=i/(sorted.length-1));
  const out=[];for(const x of list){const A=IR.cache[x.code].A;const st=setups(A.c,A.vol);const cp=detectPatterns(A.c);if(cp.score<=-1)continue;if(cp.score>=1.5)st.push('longpat');
-  if(st.length>=2||(st.length>=1&&x.rank>=0.8))out.push({...x,st,cp:cp.patterns.map(p=>p.name).join('، ')||cp.trend,cps:cp.score});}
+  if(st.length>=2||(st.length>=1&&x.rank>=0.8))out.push({...x,st,cp:cp.patterns.map(p=>p.name).join('، ')||({up:'روند صعودی',down:'روند نزولی',range:'خنثی'}[cp.trend]||cp.trend),cps:cp.score});}
  IR.liquid=list.length;IR.tech=out.sort((a,b)=>b.st.length-a.st.length||b.rank-a.rank);IR.status='tech_done';
  }catch(e){IR.status='error:'+e;}};
 IR.run();return 'started';}
