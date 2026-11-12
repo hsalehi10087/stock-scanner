@@ -21,12 +21,13 @@ from model import Kronos, KronosPredictor, KronosTokenizer  # noqa: E402
 
 SYMS = (sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] not in ('', 'x') else 'SPY,QQQ,GLD,BTC-USD,ETH-USD').split(',')
 MODEL = os.getenv('KRONOS_MODEL', 'NeoQuasar/Kronos-small')
-LOOKBACK, H, ORIGINS, STEP, SAMPLES = 400, 5, 40, 5, 5
+LOOKBACK, H, STEP, SAMPLES = 400, 5, 5, 5
+ORIGINS = int(os.getenv('KRONOS_ORIGINS', '40'))
 OUT = os.path.join('data', 'kronos')
 
 
 def candles(sym):
-    d = yf.download(sym, period='4y', auto_adjust=True, progress=False)
+    d = yf.download(sym, period='6y', auto_adjust=True, progress=False)
     if isinstance(d.columns, pd.MultiIndex):
         d.columns = d.columns.get_level_values(0)
     d = d.rename(columns=str.lower)[['open', 'high', 'low', 'close', 'volume']].dropna()
@@ -76,6 +77,9 @@ def main():
              'hold_return_pct': round(float((1 + t.real).prod() - 1) * 100, 1),
              'forecast_5d_pct': round((float(fut['close'].iloc[-1]) / float(x['close'].iloc[-1]) - 1) * 100, 2),
              'last_close': round(float(x['close'].iloc[-1]), 2), 'last_date': str(x.index[-1].date())}
+        half = len(t) // 2
+        s['hit_first_half'] = round(float((np.sign(t.pred[:half]) == np.sign(t.real[:half])).mean()) * 100, 1)
+        s['hit_second_half'] = round(float((np.sign(t.pred[half:]) == np.sign(t.real[half:])).mean()) * 100, 1)
         s['pass'] = bool(hit >= 0.55 and ic >= 0.05 and s['rule_sharpe'] >= s['hold_sharpe'])
         res['symbols'][sym] = s
         print(sym, s, f'{time.time() - t0:.0f}s', flush=True)
@@ -83,7 +87,7 @@ def main():
     res['verdict'] = 'قبول' if passed >= 3 else 'رد'
     res['passed'] = passed
     os.makedirs(OUT, exist_ok=True)
-    json.dump(res, open(os.path.join(OUT, 'result.json'), 'w'), ensure_ascii=False, indent=1)
+    json.dump(res, open(os.path.join(OUT, os.getenv('KRONOS_OUT', 'result.json')), 'w'), ensure_ascii=False, indent=1)
     print(json.dumps(res, ensure_ascii=False, indent=1))
 
 
