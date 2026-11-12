@@ -1,0 +1,42 @@
+name: 🔮 Kronos forecast model — test (no Telegram)
+
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: 'نمادهای Yahoo با کاما'
+        required: false
+        default: 'SPY,QQQ,GLD,BTC-USD,ETH-USD'
+      model:
+        description: 'NeoQuasar/Kronos-mini | Kronos-small | Kronos-base'
+        required: false
+        default: 'NeoQuasar/Kronos-small'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q numpy pandas yfinance einops==0.8.1 huggingface_hub==0.33.1 safetensors tqdm
+      - name: Kronos walk-forward test
+        env:
+          KRONOS_MODEL: ${{ github.event.inputs.model }}
+        run: python3 kronos/run.py "${{ github.event.inputs.symbols }}"
+      - name: Save result
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Kronos Bot"
+          git add -f data/kronos || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🔮 kronos test"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
