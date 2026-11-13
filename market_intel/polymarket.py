@@ -56,7 +56,8 @@ def parse(q):
         return None                                           # بازه‌ی قیمتی
     if re.search(r'market cap|earnings|IPO', q, re.I):
         return None
-    m2 = re.search(r'hit\s+' + NUM + r'\s*\(HIGH\)', q) or re.search(r'(?:hit|reach|touch)\s+' + NUM, q, re.I)
+    m2 = (re.search(r'hit\s+' + NUM + r'\s*\(HIGH\)', q) or re.search(r'hit\s+\(HIGH\)\s*' + NUM, q)
+          or re.search(r'(?:hit|reach|touch)\s+' + NUM, q, re.I))
     if m2:
         z = num(m2.group(1), m2.group(2))
         return t, 'hit', z, f'آیا {t} تا {when} به {z:,.0f}$ می‌رسد؟'
@@ -113,6 +114,10 @@ def fetch_markets(log):
                         continue
                     seen.add(m.get('id'))
                     m['_event'] = e.get('slug')
+                    try:
+                        m['_event_vol'] = float(e.get('volume') or 0)
+                    except Exception:
+                        m['_event_vol'] = 0.0
                     out.append(m)
             off += 100
     return out
@@ -184,8 +189,22 @@ def main():
             continue
         cands.append({'id': str(m.get('id')), 'event_slug': m.get('_event') or '', 'ticker': t, 'yahoo': y, 'kind': kind,
                       'question': q, 'q_fa': q_fa, 'prob': prob, 'target': target, 'end': (m.get('endDate') or '')[:10],
-                      'volume': vol(m)})
+                      'volume': vol(m), 'event_vol': m.get('_event_vol', 0.0)})
     strong = [c for c in cands if c['prob'] >= MIN_PROB and c['volume'] >= MIN_VOL]
+    # در هر پله‌کان قیمتی (یک سهم، یک تاریخ، یک نوع) فقط بالاترین هدفِ بالای ۷۰٪ می‌ماند؛ بقیه همان حرف را تکرار می‌کنند
+    top = {}
+    for c in strong:
+        k = (c['ticker'], c['kind'], c['end'])
+        if k not in top or (c['target'] or 0) > (top[k]['target'] or 0):
+            top[k] = c
+    strong = list(top.values())
+    hp = [c for c in cands if c['prob'] >= MIN_PROB]
+    vstat = {'prob70_total': len(hp), 'vol>=10k': sum(c['volume'] >= 10000 for c in hp),
+             'vol>=1k': sum(c['volume'] >= 1000 for c in hp), 'vol>=100': sum(c['volume'] >= 100 for c in hp),
+             'event_vol>=10k': sum(c['event_vol'] >= 10000 for c in hp),
+             'max_vol': max([c['volume'] for c in hp] or [0]),
+             'top': sorted([[c['question'], round(c['prob'], 3), round(c['volume']), round(c['event_vol'])] for c in hp],
+                           key=lambda x: -x[2])[:25]}
     low_vol = sum(1 for c in cands if c['prob'] >= MIN_PROB and c['volume'] < MIN_VOL)
     cut = str(today - dt.timedelta(days=TRACK_DAYS))
     track = [r for r in hist if r['date'] >= cut]
@@ -276,7 +295,7 @@ def main():
     print(text)
     os.makedirs(OUT, exist_ok=True)
     json.dump({'date': str(today), 'markets': len(markets), 'candidates': len(cands), 'strong': len(strong),
-               'new': len(new), 'log': log[:10], 'unparsed_sample': unparsed[:60],
+               'new': len(new), 'log': log[:10], 'vstat': vstat, 'unparsed_sample': unparsed[:60],
                'candidate_sample': [[c['question'], round(c['prob'], 3), round(c['volume'])] for c in cands[:80]]},
               open(os.path.join(OUT, 'last_run.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     tok = os.getenv('TELEGRAM_BOT_TOKEN', '')
