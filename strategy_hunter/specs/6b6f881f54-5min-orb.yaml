@@ -1,0 +1,14 @@
+id: 6b6f881f54-5min-orb
+name: 5-minute opening range breakout
+name_fa: شکست محدوده‌ی ۵ دقیقه‌ی اول بازار
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xug0ne/5minute_orb/
+claim: "«مدتی است استراتژی ORB پنج دقیقه‌ای را تمرین می‌کنم. روی حساب دمو در ژوئن و ژوئیه نرخ برد بالای ۷۰٪ داشتم، ولی از وقتی زنده معامله می‌کنم دیگر جواب نمی‌دهد.»"
+claimed_return: "70% win rate (demo)"
+added: 2026-11-13
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+timeframe: 1h
+reason_not_testable: "روی کندل ۵ دقیقه‌ای است و نماد، حد ضرر و حد سود گفته نشده."
+notes: "نویسنده خودش می‌گوید در معامله‌ی زنده دیگر جواب نمی‌دهد."

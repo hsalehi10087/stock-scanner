@@ -1,0 +1,14 @@
+id: bb1561287b-vwap-volume-profile-rejection
+name: VWAP rejection + volume profile
+name_fa: ورود روی رد شدن از VWAP و پروفایل حجم
+source: reddit/Forexstrategy
+source_url: https://www.reddit.com/r/Forexstrategy/comments/1xtqg6i/my_first_500/
+claim: "«حسابی با ۳٬۰۰۰ دلار باز کردم و کل سود امروز به دست آمد (۵۰۰ دلار). استراتژی‌ام VWAP و پروفایل حجم است؛ وقتی رد شدن از VWAP یا حمایت می‌بینم وارد می‌شوم. ریسک حدود ۱ تا ۲٪.»"
+claimed_return: "+$500 in one day"
+added: 2026-11-13
+status: not_testable
+asset_class: forex
+symbols: [EURUSD=X]
+timeframe: 1h
+reason_not_testable: "درون‌روزی و قضاوت تصویری است؛ تعریف «رد شدن» و حد ضرر/سود نیامده و پروفایل حجم در موتور نیست."
+notes: "نماد گفته نشده."

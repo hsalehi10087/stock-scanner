@@ -1,0 +1,14 @@
+id: be0e5d17f9-spy-gex-filter-short-premium
+name: SPY short premium with GEX filter
+name_fa: فروش استرنگل و اسپرد اعتباری SPY با فیلتر GEX
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xtlygg/my_gex_filter_rejected_20_spy_trades_they_made/
+claim: "«فروش استرنگل دلتا ۰٫۲۵ حدود یک هفته: پذیرفته‌شده‌ها +۱٬۲۴۰ دلار در ۸ ورود، ردشده‌ها +۳٬۷۹۲ دلار در ۲۰ ورود. اسپرد اعتباری پوت ۰٫۳۰/۰٫۱۵ دلتا با ۱۴ روز سررسید: پذیرفته +۱٬۵۲۸ دلار، ردشده +۲٬۹۸۵ دلار. فیلتر GEX معامله‌های بهتری انتخاب نکرد.»"
+claimed_return: "+$5,032 (unfiltered strangles, Jul\u2013Sep 2026)"
+added: 2026-11-13
+status: not_testable
+asset_class: option
+symbols: [SPY]
+timeframe: 1d
+reason_not_testable: "فروش آپشن است و داده‌ی تاریخی آپشن و GEX نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید."
+notes: "نمونه فقط دو ماه است و خود نویسنده سود را به بازار آرام و صعودی نسبت می‌دهد."

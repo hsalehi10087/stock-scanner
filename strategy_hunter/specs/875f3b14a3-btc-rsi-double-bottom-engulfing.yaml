@@ -1,0 +1,14 @@
+id: 875f3b14a3-btc-rsi-double-bottom-engulfing
+name: BTC RSI double bottom with engulfing
+name_fa: کف دوقلوی RSI با کندل پوشای صعودی روی بیت‌کوین
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xux1ms/saw_the_rsi_double_bottom_setup_on_youtube/
+claim: "«RSI(14) زیر ۳۰ و بسته‌شدن زیر باند پایین بولینگر، صبر برای کندل پوشای صعودی (کف اول)، دوباره افت ولی این بار کف داخل باند، ورود روی کندل پوشای صعودی دوم، حد ضرر زیر کف دوم، هدف ۳R. نتایج: ۱۵ دقیقه ۱ سال ‎-۱۴۹R بعد از کارمزد؛ ۱ ساعته ۲ سال ‎-۷۸R؛ ۴ ساعته ۴ سال ‎+۶R بعد از کارمزد.»"
+claimed_return: "+6R after fees (4h, 4 years); -78R (1h)"
+added: 2026-11-13
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1h
+reason_not_testable: "الگو چند مرحله‌ای است (کف اول، سپس کف دوم با شرط متفاوت) و فاصله‌ی مجاز بین دو کف گفته نشده؛ حد ضرر زیر کف دوم و هدف ۳R متغیرند و موتور فقط درصد ثابت دارد. تنها نسخه‌ی سودده روی کندل ۴ ساعته است که در موتور نیست."
+notes: "خود نویسنده می‌گوید روی ۱ ساعته و ۱۵ دقیقه زیان داد و ورود را مزیت نمی‌داند. داده: BTCUSDT دائمی با کارمزد ۰٫۰۶٪."

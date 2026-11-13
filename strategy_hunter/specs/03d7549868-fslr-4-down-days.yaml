@@ -1,0 +1,29 @@
+id: 03d7549868-fslr-4-down-days
+name: FSLR 4 down days, 10-day time stop
+name_fa: خرید FSLR بعد از ۴ روز نزولی پشت سر هم، با توقف زمانی ۱۰ روزه
+source: tradingview-ideas
+source_url: https://www.tradingview.com/chart/FSLR/rhXdw9r0-28-in-a-row-Can-I-get-29-We-re-about-to-find-out/
+claim: "«FSLR با استراتژی ۴ روز نزولی و توقف زمانی ۱۰ روزه در گذشته خوب جواب داده. در کل تاریخچه نرخ برد ۸۶٫۵٪ (۱۱۵ برد، ۱۸ باخت). میانگین بازده همه‌ی معامله‌ها +۱٫۲۷٪ در میانگین ۳٫۲ روز. ۲۸ برد پشت سر هم.» خروج: اولین بسته‌شدن سودده، یا لمس سودی بیش از ۲ برابر بازده میانه‌ی ۱٫۵۳٪ در طول روز."
+claimed_return: "86.5% win rate, +1.27% avg trade"
+added: 2026-11-13
+status: implemented
+asset_class: stock
+symbols: [FSLR]
+timeframe: 1d
+start: '2006-11-17'
+notes: >-
+  «۴ روز نزولی» = چهار بسته‌شدن پشت سر هم پایین‌تر از بسته‌شدن روز قبل. نویسنده در بسته‌شدن روز چهارم می‌خرد؛
+  موتور در بازگشایی روز بعد می‌خرد (تقریب). حد سود = ۲ × ۱٫۵۳٪ = ۳٫۰۶٪ لمس در طول روز، و توقف زمانی ۱۰ روز،
+  همان‌طور که گفته شده. قانون «اولین بسته‌شدن سودده» به قیمت ورود نیاز دارد و موتور در عبارت خروج به قیمت ورود
+  دسترسی ندارد؛ پس این خروج پیاده نشده و نتیجه احتمالاً با ادعا فرق خواهد داشت. حد ضرر در پست گفته نشده (ندارد).
+  انتخاب FSLR بعد از دیدن تاریخچه‌ی خوبش سوگیری انتخاب دارد.
+indicators:
+  c1: {fn: prev, col: close, k: 1}
+  c2: {fn: prev, col: close, k: 2}
+  c3: {fn: prev, col: close, k: 3}
+  c4: {fn: prev, col: close, k: 4}
+entry: close < c1 and c1 < c2 and c2 < c3 and c3 < c4
+exit: ''
+side: long
+take_profit_pct: 0.0306
+max_hold_bars: 10

@@ -1,0 +1,14 @@
+id: c967e7d8e6-mstr-grid-1-5pct
+name: MSTR grid trading 1.5%
+name_fa: معامله‌ی شبکه‌ای MSTR با فاصله‌ی ۱٫۵٪
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xume3r/mstr_grid_trading/
+claim: "«ربات خرید و فروش را با فاصله‌ی ۱٫۵٪ دور یک لنگر متحرک می‌گذارد. حدود ۶۰ روز است کار می‌کند و به‌طور میانگین ۳٫۲ چرخه‌ی کامل در روز دارد؛ حدود ۶ دلار در روز بعد از کارمزد.»"
+claimed_return: "~$6/day after fees"
+added: 2026-11-13
+status: not_testable
+asset_class: stock
+symbols: [MSTR]
+timeframe: 1d
+reason_not_testable: "شبکه‌ی سفارش با لنگر متحرک و چند سطح هم‌زمان نیاز به حالت و پرشدن سفارش در طول روز دارد که موتور ندارد؛ قانون جابه‌جایی لنگر هم گفته نشده."
+notes: "سود چرخه‌ها جدا از تغییر ارزش سهام نگه‌داشته‌شده است."

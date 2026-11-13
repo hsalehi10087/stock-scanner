@@ -1,0 +1,14 @@
+id: b053a7b457-mnq-silver-bullet-wider-stop
+name: MNQ Silver Bullet stop width test
+name_fa: آزمون پهنای حد ضرر در ستاپ Silver Bullet روی نزدک
+source: reddit/Trading
+source_url: https://www.reddit.com/r/Trading/comments/1xtkq55/i_gave_the_silver_bullets_stop_more_room_on_2/
+claim: "«قانون‌ها: اولین شکاف ارزش منصفانه (FVG) بین ساعت ۱۰ تا ۱۱ نیویورک، ورود در لبه‌ی شکاف، حد ضرر پشت کندل اول شکاف، هدف ۲R. روی MNQ از ۲۳ اکتبر ۲۰۲۴ تا ۲۲ اکتبر ۲۰۲۶: حد ضرر عادی ۳۶٪ برد و +۱٬۹۰۴ دلار؛ ۳ برابر پهن‌تر ۵۴٪ برد و ‎-۲٬۰۰۴ دلار.»"
+claimed_return: "+$1,904 (2 years, 1 micro)"
+added: 2026-11-13
+status: not_testable
+asset_class: stock
+symbols: [NQ=F]
+timeframe: 1h
+reason_not_testable: "روی کندل دقیقه‌ای و در یک ساعت مشخص نیویورک است و تشخیص FVG و حد ضرر متغیر در موتور نیست؛ داده‌ی دقیقه‌ای دوساله در دسترس نیست."
+notes: "نویسنده می‌گوید بدون هفته‌ی ۳ تا ۱۰ آوریل ۲۰۲۵ همه‌ی نسخه‌ها زیان‌ده بودند."

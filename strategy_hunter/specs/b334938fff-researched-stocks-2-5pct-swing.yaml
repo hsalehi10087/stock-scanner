@@ -1,0 +1,14 @@
+id: b334938fff-researched-stocks-2-5pct-swing
+name: 2.5% swing on researched stocks
+name_fa: معامله روی نوسان ۲٫۵٪ سهام بررسی‌شده
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xtsz1k/6_months_in_strategy_advice/
+claim: "«۶ ماه است ماهی ۱٬۰۰۰ دلار درمی‌آورم. سرمایه را طوری می‌گذارم که با نوسان حدود ۲٫۵٪ هر معامله ۱۲٫۵ دلار سود بدهد و روزانه به‌طور میانگین ۲ معامله‌ی سودده دارم.»"
+claimed_return: "~$1,000/month"
+added: 2026-11-13
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+timeframe: 1d
+reason_not_testable: "انتخاب سهام با تحقیق شخصی است و شرط ورود گفته نشده؛ فقط هدف سود ۲٫۵٪ مشخص است."
+notes: "نماد مشخصی نیامده؛ SPY فقط برای پر کردن فیلد گذاشته شده."

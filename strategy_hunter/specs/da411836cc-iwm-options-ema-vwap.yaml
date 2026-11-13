@@ -1,0 +1,13 @@
+id: da411836cc-iwm-options-ema-vwap
+name: IWM options with EMAs/VWAP levels
+name_fa: آپشن IWM با EMA و VWAP و سطوح روانی
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xug8th/day_14_250_to_5k_in_50_days_before_christmas/
+claim: "«از ۲۵۰ دلار شروع کردم، هدف ۵ هزار دلار سود در ۵۰ روز. روز ۱۴: ۴۸٪ سود، ۳۰۰ دلار. جمع ۱٬۹۶۵ دلار. استراتژی ساده‌ی آپشن، با EMA و VWAP برای روند و سطوح.»"
+claimed_return: "+$1,965 in 14 days"
+added: 2026-11-13
+status: not_testable
+asset_class: option
+symbols: [IWM]
+timeframe: 1d
+reason_not_testable: "قانون مشخصی نیامده (کدام EMA، شرط ورود و خروج)؛ روزانه و قضاوتی است و آپشن کوتاه‌مدت درون‌روزی است."

@@ -1,0 +1,14 @@
+id: a1cb20d607-gc-asian-15m-ifvg
+name: Gold futures Asian session 15m IFVG
+name_fa: شکاف منصفانه‌ی معکوس ۱۵ دقیقه‌ای طلا در جلسه‌ی آسیا
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xu79qm/the_loss_streak_is_over/
+claim: "«همان سیستم: آتی طلا، اولین IFVG تازه‌ی ۱۵ دقیقه‌ای در جلسه‌ی آسیا، ریسک به ریوارد ۱:۱، و انتقال حد ضرر به سر به سر در ۶۸٪ مسیر تا حد سود. امروز یک برد کامل +۲٬۰۸۲ دلار.»"
+claimed_return: "+$2,082 one trade; month \u2248 -$107"
+added: 2026-11-13
+status: not_testable
+asset_class: forex
+symbols: [GC=F]
+timeframe: 1h
+reason_not_testable: "روی کندل ۱۵ دقیقه‌ای و ساعت‌های جلسه‌ی آسیاست؛ تشخیص IFVG و حد ضرر/سود متغیر در موتور نیست."
+notes: "ماه جاری طبق خود نویسنده تقریباً سر به سر (‎-۱۰۷ دلار) است."
