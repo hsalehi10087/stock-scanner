@@ -20,6 +20,9 @@ HIST = os.path.join(OUT, 'history.csv')
 CACHE = os.path.join(OUT, 'codal_cache.json')
 TRACK = os.path.join(OUT, 'track.json')
 MSG = os.path.join(OUT, 'today_message.txt')
+CHARTS_DIR = os.path.join(OUT, 'charts')             # هر روز پاک و دوباره ساخته می‌شود؛ فقط نمودارهای امروز نگه داشته می‌شود
+CHARTS_MANIFEST = os.path.join(OUT, 'charts_manifest.json')  # مسیر نسبی هر PNG + کپشن، برای ارسال در تلگرام (مرحله‌ی ۸ AGENT.md)
+MAX_CHARTS = 10
 COLS = ['date', 'ticker', 'name', 'price', 'setups', 'pe', 'sector_pe', 'chart', 'chart_score', 'sector', 'insCode',
         'rev_growth', 'np_growth']
 SETUP_FA = {'longpat': 'الگوی نموداری بلندمدت', 'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم',
@@ -152,10 +155,25 @@ def merge(res_path, codal_path, track_path):
         L += [f"{fa(i)}. {t['ticker']} (از {t['date'][5:].replace('-', '/')}): {t['ret_pct']:+.1f}٪ (بیشترین {t['max_pct']:+.1f}٪، کمترین {t['min_pct']:+.1f}٪)"
               for i, t in enumerate(reversed(rk[-k:]), 1)]
         L.append('بازده با قیمت تعدیل‌شده‌ی tsetmc (افزایش سرمایه و سود نقدی) حساب شده؛ مقایسه با شاخص بورس هنوز ندارد.')
+    charts = []
+    if passed:
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            import chart as CH
+            if os.path.isdir(CHARTS_DIR):
+                for f in os.listdir(CHARTS_DIR):
+                    os.remove(os.path.join(CHARTS_DIR, f))  # هر روز فقط نمودارهای امروز نگه داشته شود، نه انباشت
+            charts = CH.build(passed, CHARTS_DIR, MAX_CHARTS)
+        except Exception as e:
+            print('⚠️ charts', e, file=sys.stderr)
+        if charts:
+            L.insert(2 if len(L) > 2 else len(L), f"🖼 نمودار تکنیکال (حمایت، مقاومت، سطح ابطال، RSI و حجم) برای {fa(len(charts))} سهم برتر امروز در پیام‌های بعدی می‌آید.")
     L += ['', 'همه‌ی سیگنال‌های تازه در تاریخچه ثبت می‌شود و سود/زیانشان از روز سیگنال پیگیری می‌شود. صرفاً برای بررسی بیشتر؛ توصیه‌ی خرید نیست.']
     open(MSG, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     print('\n'.join(L))
-    print(json.dumps({'new': new, 'pass': len(passed), 'fail': len(failed), 'missing': len(missing)}, ensure_ascii=False), file=sys.stderr)
+    json.dump([{'png': os.path.relpath(p, ROOT), 'caption': c} for p, c in charts],
+              open(CHARTS_MANIFEST, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print(json.dumps({'new': new, 'pass': len(passed), 'fail': len(failed), 'missing': len(missing), 'charts': len(charts)}, ensure_ascii=False), file=sys.stderr)
 
 
 OPT_MSG = os.path.join(OUT, 'options_message.txt')
