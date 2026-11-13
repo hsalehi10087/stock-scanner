@@ -1,17 +1,17 @@
 {
- "date": "2026-11-12",
- "new": 61,
+ "date": "2026-11-13",
+ "new": 48,
  "log": [
   "Congress CapitolTrades p1: HTTPError 503 Server Error: Service Unavailable for url: https://bff.c",
   "Congress CapitolTrades: 0 rows",
   "Congress S3 representative: HTTPError 403 Client Error: Forbidden for url: https://house-stock-wat",
   "Congress S3 senator: HTTPError 403 Client Error: Forbidden for url: https://senate-stock-wa",
   "Congress Finnhub probe: 403 {\"error\":\"You don't have access to this resource.\"}",
-  "13F: 49 events",
-  "ARK: 3 events",
+  "13F: 61 events",
+  "ARK: 31 events",
   "Congress: 0 events from 0 rows",
-  "House PTR: 5 new reports, 6 stock events",
-  "Insiders: 30 events",
-  "new events: 61 (total sources: 13F/ARK/Congress/Insiders)"
+  "House PTR: 2 new reports, 0 stock events",
+  "Insiders: 32 events",
+  "new events: 48 (total sources: 13F/ARK/Congress/Insiders)"
  ]
 }
