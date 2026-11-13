@@ -1,0 +1,49 @@
+name: 🖼 Send Telegram Photo
+
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: 'مسیر فایل عکس در ریپو (مثلاً data/iran_growth/charts/وبانک.png)'
+        required: true
+      caption:
+        description: 'کپشن عکس'
+        required: false
+        default: ''
+      chat_id:
+        description: 'شناسهٔ گروه/چت'
+        required: false
+        default: '-5382888333'
+      token:
+        description: 'توکن ربات (اختیاری؛ اگر خالی باشد از secret استفاده می‌شود)'
+        required: false
+        default: ''
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send photo
+        env:
+          TG_TOKEN: ${{ github.event.inputs.token || secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ github.event.inputs.chat_id }}
+          TG_CAPTION: ${{ github.event.inputs.caption }}
+          IMG_PATH: ${{ github.event.inputs.path }}
+        run: |
+          if [ -z "$TG_TOKEN" ]; then
+            echo "❌ No bot token provided (input 'token' or secret TELEGRAM_BOT_TOKEN)"
+            exit 1
+          fi
+          if [ ! -f "$IMG_PATH" ]; then
+            echo "❌ File not found in repo: $IMG_PATH"
+            exit 1
+          fi
+          curl -sS -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendPhoto" \
+            -F "chat_id=${TG_CHAT}" \
+            -F "caption=${TG_CAPTION}" \
+            -F "parse_mode=HTML" \
+            -F "photo=@${IMG_PATH}" \
+            -o resp.json -w "HTTP %{http_code}\n"
+          cat resp.json; echo
+          grep -q '"ok":true' resp.json

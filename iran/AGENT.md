@@ -16,11 +16,13 @@
 3. `browser_evaluate` با `iran/browser/screen_stage2.js` را اجرا کن؛ بعدش این را بزن تا نتیجه‌ی فشرده بیاید و در `window.name` هم بماند:
    ```js
    () => { const ok = IR.final; const d = IR.tech.map(x=>x.date).sort();
+     const toISO = n => String(n).replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
      const res = {meta:{all:IR.all,total:IR.total,liquid:IR.liquid,tech:IR.tech.length,date:d[d.length-1]},
-       final: ok.map(x=>({code:x.code,sym:x.sym,name:x.name,last:x.last,st:x.st,cp:x.cp,cps:x.cps,rank:x.rank,fpe:x.fpe,spe:x.spe,sector:x.sector,date:x.date}))};
+       final: ok.map(x=>{const A=IR.cache[x.code].A;return {code:x.code,sym:x.sym,name:x.name,last:x.last,st:x.st,cp:x.cp,cps:x.cps,rank:x.rank,fpe:x.fpe,spe:x.spe,sector:x.sector,date:x.date,
+         hist:{d:A.dates.slice(-260).map(toISO),c:A.c.slice(-260),v:A.vol.slice(-260)}};})};
      window.name = JSON.stringify({syms: ok.map(x=>x.sym), res}); return res; }
    ```
-   نتیجه را در `/tmp/results.json` ذخیره کن.
+   نتیجه را در `/tmp/results.json` ذخیره کن. (`hist` قیمت/حجم ۲۶۰ روز اخیر هر سهم است؛ فقط برای ساختن نمودار تکنیکال در مرحله‌ی ۷ استفاده می‌شود، جای دیگری لازم نیست.)
 4. `python3 iran/iran_agent.py plan /tmp/results.json` ← `{"syms":[...]}` نمادهایی که رشد کدالشان باید گرفته شود (کش ۳۰ روزه).
 5. اگر `syms` خالی نیست: `browser_navigate https://www.codal.ir/` ، `window.name = JSON.stringify({syms})` ، سپس `browser_run_code_unsafe` با `iran/browser/codal_growth.js`.
    این اسکریپت آهسته است (حدود ۲۰ ثانیه برای هر نماد). با فراخوانی‌های کوتاه (حداکثر ۴۰ ثانیه) `window.__cdr` را بخوان تا `status` برابر `done` یا `blocked` شود.
@@ -33,13 +35,20 @@
 9. تلگرام (فقط 75439320): `gh api -X POST repos/hsalehi10087/stock-scanner/actions/workflows/send-telegram-test.yml/dispatches -f ref=main -f 'inputs[chat_id]=75439320' -f "inputs[text]=<متن>"`
    (اگر متن از ۳۸۰۰ نویسه بیشتر بود، در دو پیام، تقسیم در مرز خط). پیام را همان‌طور که `today_message.txt` ساخته بفرست و چیزی به آن اضافه نکن.
    اگر کامپیوتر/کدال/tsetmc در دسترس نبود، یک پیام یک‌خطی دلیل را بفرست و عدد نساز.
+10. نمودار تکنیکال سهم‌های برتر (اگر مرحله‌ی ۷ خطی «🖼 نمودار تکنیکال …» در پیام نوشت): `data/iran_growth/charts_manifest.json` را بخوان
+    (لیست `{png, caption}`؛ `png` مسیر نسبی داخل ریپو است و قبلاً در مرحله‌ی ۸ با `git push` به ریپو رفته). توکن ربات هرگز روی کامپیوتر ایران نمی‌آید؛ به همین دلیل مثل
+    پیام متنی، از طریق GitHub Actions (که توکن را به‌صورت secret دارد) ارسال می‌شود، نه مستقیم از کامپیوتر ایران:
+    به ترتیب برای هر عضو این لیست (حداکثر ۱۰ تا):
+    `gh api -X POST repos/hsalehi10087/stock-scanner/actions/workflows/send-telegram-photo.yml/dispatches -f ref=main -f 'inputs[chat_id]=75439320' -f "inputs[path]=<png>" -f "inputs[caption]=<caption>"`
+    هر دیسپچ را با چند ثانیه فاصله بزن و بعد از هر کدام با `gh run list --workflow=send-telegram-photo.yml -L 1` مطمئن شو که `completed`/`success` شده قبل از عضو بعدی.
+    اگر فایل مانیفست نبود یا خالی بود، این مرحله را رد کن (یعنی امروز سیگنال تأیید‌شده‌ای برای نمودار نبود).
 
 ## موقعیت های آپشن ایران (پیام جدا، هر روز بعد از گزارش بالا)
-10. روی همان صفحه‌ی `https://www.tsetmc.com/`، `browser_evaluate` با محتوای `iran/browser/options_screen.js` (حدود ۲۰ ثانیه). خروجی یک رشته‌ی JSON فشرده است؛
+11. روی همان صفحه‌ی `https://www.tsetmc.com/`، `browser_evaluate` با محتوای `iran/browser/options_screen.js` (حدود ۲۰ ثانیه). خروجی یک رشته‌ی JSON فشرده است؛
     آن را عیناً در `/tmp/options.json` ذخیره کن (فقط کپی؛ هیچ عددی را دستی عوض نکن و بعد از ذخیره با خروجی مرورگر تطبیق بده).
-11. `python3 iran/iran_agent.py options /tmp/options.json` ← `data/iran_growth/options_message.txt` و `options_today.json` را می‌نویسد و پیام را چاپ می‌کند.
+12. `python3 iran/iran_agent.py options /tmp/options.json` ← `data/iran_growth/options_message.txt` و `options_today.json` را می‌نویسد و پیام را چاپ می‌کند.
     `git add -f data/iran_growth && git commit && git pull --rebase && git push`.
-12. `options_message.txt` را همان‌طور که هست، در یک پیام جدا (بعد از پیام‌های گزارش رشد) با همان گردش‌کار تلگرام به 75439320 بفرست؛ چیزی اضافه نکن.
+13. `options_message.txt` را همان‌طور که هست، در یک پیام جدا (بعد از پیام‌های گزارش رشد) با همان گردش‌کار تلگرام به 75439320 بفرست؛ چیزی اضافه نکن.
     اگر خروجی مرورگر `error` داشت یا tsetmc باز نشد، پیام آپشن را نفرست و فقط در خلاصه‌ی پایانی بنویس چرا. قاعده: نقدشوندگی (≥۳۰ معامله، ≥۵ میلیارد ریال،
     فاصله‌ی خرید و فروش ≤۸٪، ≥۱۴ روز تا سررسید)، کال فقط روی پایه‌ی بالای میانگین ۵۰ روزه و پوت فقط روی پایه‌ی زیر آن، مرتب بر اساس نوسان ضمنی ÷ نوسان واقعی ۳۰ روزه (حداکثر ۲ برابر).
 
