@@ -1,0 +1,90 @@
+{
+ "date": "2026-11-13",
+ "days_covered": 22,
+ "assets": {
+  "gold": {
+   "month": {
+    "n": 100,
+    "bull": 28,
+    "bear": 43,
+    "neutral": 29
+   },
+   "last7d": {
+    "n": 57,
+    "bull": 33,
+    "bear": 42,
+    "neutral": 25
+   }
+  },
+  "silver": {
+   "month": {
+    "n": 49,
+    "bull": 24,
+    "bear": 41,
+    "neutral": 35
+   },
+   "last7d": {
+    "n": 23,
+    "bull": 22,
+    "bear": 43,
+    "neutral": 35
+   }
+  },
+  "bitcoin": {
+   "month": {
+    "n": 112,
+    "bull": 14,
+    "bear": 59,
+    "neutral": 27
+   },
+   "last7d": {
+    "n": 70,
+    "bull": 11,
+    "bear": 66,
+    "neutral": 23
+   }
+  },
+  "copper": {
+   "month": {
+    "n": 45,
+    "bull": 42,
+    "bear": 36,
+    "neutral": 22
+   },
+   "last7d": {
+    "n": 32,
+    "bull": 44,
+    "bear": 38,
+    "neutral": 19
+   }
+  },
+  "oil": {
+   "month": {
+    "n": 139,
+    "bull": 33,
+    "bear": 49,
+    "neutral": 18
+   },
+   "last7d": {
+    "n": 64,
+    "bull": 28,
+    "bear": 58,
+    "neutral": 14
+   }
+  },
+  "rates": {
+   "month": {
+    "n": 93,
+    "bull": 68,
+    "bear": 6,
+    "neutral": 26
+   },
+   "last7d": {
+    "n": 56,
+    "bull": 73,
+    "bear": 7,
+    "neutral": 20
+   }
+  }
+ }
+}
