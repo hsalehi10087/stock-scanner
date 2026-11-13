@@ -1,0 +1,596 @@
+{
+ "asof": "2026-11-12",
+ "rows": {
+  "GDX": {
+   "first": "2006-05-22",
+   "last": "2026-11-12",
+   "last_close": 81.84,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 152.3,
+    "cagr_pct": 20.3,
+    "price_ret_pct": 135.4,
+    "maxdd_pct": -46.5
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 327.3,
+    "cagr_pct": 15.6,
+    "price_ret_pct": 287.5,
+    "maxdd_pct": -49.8
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 147.8,
+    "cagr_pct": 4.6,
+    "price_ret_pct": 110.3,
+    "maxdd_pct": -80.6
+   },
+   "maxdd_all_pct": -80.6,
+   "maxdd_all_trough": "2016-01-19",
+   "info": {
+    "longName": "VanEck Gold Miners ETF",
+    "profitMargins": null,
+    "operatingMargins": null,
+    "debtToEquity": null,
+    "totalDebt": null,
+    "totalCash": null,
+    "dividendYield": 0.82,
+    "trailingPE": 12.969892,
+    "marketCap": null
+   }
+  },
+  "GDXJ": {
+   "first": "2009-11-11",
+   "last": "2026-11-12",
+   "last_close": 99.62,
+   "splits": {
+    "2013-07-01": 0.25
+   },
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 124.7,
+    "cagr_pct": 17.6,
+    "price_ret_pct": 107.6,
+    "maxdd_pct": -48.8
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 233.2,
+    "cagr_pct": 12.8,
+    "price_ret_pct": 185.0,
+    "maxdd_pct": -57.8
+   },
+   "20y": null,
+   "maxdd_all_pct": -88.7,
+   "maxdd_all_trough": "2016-01-19",
+   "info": {
+    "longName": "VanEck Junior Gold Miners ETF",
+    "profitMargins": null,
+    "operatingMargins": null,
+    "debtToEquity": null,
+    "totalDebt": null,
+    "totalCash": null,
+    "dividendYield": 2.77,
+    "trailingPE": 11.971717,
+    "marketCap": null
+   }
+  },
+  "GLD": {
+   "first": "2004-11-18",
+   "last": "2026-11-12",
+   "last_close": 354.89,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 103.4,
+    "cagr_pct": 15.3,
+    "price_ret_pct": 103.4,
+    "maxdd_pct": -28.4
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 205.6,
+    "cagr_pct": 11.8,
+    "price_ret_pct": 205.6,
+    "maxdd_pct": -28.4
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 470.7,
+    "cagr_pct": 9.1,
+    "price_ret_pct": 470.7,
+    "maxdd_pct": -45.6
+   },
+   "maxdd_all_pct": -45.6,
+   "maxdd_all_trough": "2015-12-17",
+   "info": {
+    "longName": "SPDR Gold Shares",
+    "profitMargins": null,
+    "operatingMargins": null,
+    "debtToEquity": null,
+    "totalDebt": null,
+    "totalCash": null,
+    "dividendYield": 0.0,
+    "trailingPE": null,
+    "marketCap": null
+   }
+  },
+  "SPY": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 757.12,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 73.2,
+    "cagr_pct": 11.6,
+    "price_ret_pct": 62.0,
+    "maxdd_pct": -24.5
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 309.3,
+    "cagr_pct": 15.1,
+    "price_ret_pct": 249.6,
+    "maxdd_pct": -33.7
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 687.5,
+    "cagr_pct": 10.9,
+    "price_ret_pct": 446.3,
+    "maxdd_pct": -55.2
+   },
+   "maxdd_all_pct": -55.2,
+   "maxdd_all_trough": "2009-03-09",
+   "info": {
+    "longName": "State Street SPDR S&P 500 ETF Trust",
+    "profitMargins": null,
+    "operatingMargins": null,
+    "debtToEquity": null,
+    "totalDebt": null,
+    "totalCash": null,
+    "dividendYield": 1.0,
+    "trailingPE": 24.087267,
+    "marketCap": null
+   }
+  },
+  "NEM": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 112.64,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 120.1,
+    "cagr_pct": 17.1,
+    "price_ret_pct": 91.8,
+    "maxdd_pct": -62.4
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 342.1,
+    "cagr_pct": 16.0,
+    "price_ret_pct": 245.5,
+    "maxdd_pct": -62.4
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 263.2,
+    "cagr_pct": 6.7,
+    "price_ret_pct": 147.5,
+    "maxdd_pct": -76.6
+   },
+   "maxdd_all_pct": -77.7,
+   "maxdd_all_trough": "2000-10-25",
+   "info": {
+    "longName": "Newmont Corporation",
+    "profitMargins": 0.34729,
+    "operatingMargins": 0.55562997,
+    "debtToEquity": 15.576,
+    "totalDebt": 5584000000,
+    "totalCash": 8826999808,
+    "dividendYield": 0.92,
+    "trailingPE": 13.067286,
+    "marketCap": 117054726144
+   }
+  },
+  "B": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 37.84,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 108.4,
+    "cagr_pct": 15.8,
+    "price_ret_pct": 82.4,
+    "maxdd_pct": -47.6
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 216.9,
+    "cagr_pct": 12.2,
+    "price_ret_pct": 158.5,
+    "maxdd_pct": -53.9
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 78.7,
+    "cagr_pct": 2.9,
+    "price_ret_pct": 28.4,
+    "maxdd_pct": -88.5
+   },
+   "maxdd_all_pct": -88.5,
+   "maxdd_all_trough": "2015-09-23",
+   "info": {
+    "longName": "Barrick Mining Corporation",
+    "profitMargins": 0.30315,
+    "operatingMargins": 0.5202,
+    "debtToEquity": 12.532,
+    "totalDebt": 4680000000,
+    "totalCash": 5589000192,
+    "dividendYield": 1.85,
+    "trailingPE": 9.67775,
+    "marketCap": 61627469824
+   }
+  },
+  "GOLD": {
+   "first": "2014-03-17",
+   "last": "2026-11-12",
+   "last_close": 36.4,
+   "splits": {
+    "2022-06-07": 2.0
+   },
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 17.1,
+    "cagr_pct": 3.2,
+    "price_ret_pct": -3.1,
+    "maxdd_pct": -56.8
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 518.5,
+    "cagr_pct": 20.0,
+    "price_ret_pct": 337.8,
+    "maxdd_pct": -62.6
+   },
+   "20y": null,
+   "maxdd_all_pct": -62.9,
+   "maxdd_all_trough": "2020-01-28",
+   "info": {
+    "longName": "Gold.com, Inc.",
+    "profitMargins": 0.00338,
+    "operatingMargins": 0.00588,
+    "debtToEquity": 126.026,
+    "totalDebt": 1145127936,
+    "totalCash": 126819000,
+    "dividendYield": 2.2,
+    "trailingPE": 12.255893,
+    "marketCap": 1061327488
+   }
+  },
+  "AEM": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 178.41,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 250.7,
+    "cagr_pct": 28.5,
+    "price_ret_pct": 212.6,
+    "maxdd_pct": -45.8
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 408.6,
+    "cagr_pct": 17.7,
+    "price_ret_pct": 324.6,
+    "maxdd_pct": -54.2
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 508.3,
+    "cagr_pct": 9.4,
+    "price_ret_pct": 361.0,
+    "maxdd_pct": -74.0
+   },
+   "maxdd_all_pct": -86.1,
+   "maxdd_all_trough": "1998-08-31",
+   "info": {
+    "longName": "Agnico Eagle Mines Limited",
+    "profitMargins": 0.41009,
+    "operatingMargins": 0.60318,
+    "debtToEquity": 1.108,
+    "totalDebt": 328078016,
+    "totalCash": 3628862976,
+    "dividendYield": 1.01,
+    "trailingPE": 14.540342,
+    "marketCap": 90194550784
+   }
+  },
+  "KGC": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 20.71,
+   "splits": {
+    "2003-02-03": 0.3333333333333333
+   },
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 224.9,
+    "cagr_pct": 26.6,
+    "price_ret_pct": 198.4,
+    "maxdd_pct": -55.2
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 585.5,
+    "cagr_pct": 21.2,
+    "price_ret_pct": 516.4,
+    "maxdd_pct": -67.9
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 96.6,
+    "cagr_pct": 3.4,
+    "price_ret_pct": 68.6,
+    "maxdd_pct": -94.6
+   },
+   "maxdd_all_pct": -96.0,
+   "maxdd_all_trough": "2000-10-24",
+   "info": {
+    "longName": "Kinross Gold Corporation",
+    "profitMargins": 0.37625,
+    "operatingMargins": 0.50979,
+    "debtToEquity": 7.468,
+    "totalDebt": 754200000,
+    "totalCash": 2638400000,
+    "dividendYield": 0.77,
+    "trailingPE": 7.8446965,
+    "marketCap": 24397168640
+   }
+  },
+  "AU": {
+   "first": "1998-08-05",
+   "last": "2026-11-12",
+   "last_close": 87.6,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 386.5,
+    "cagr_pct": 37.2,
+    "price_ret_pct": 321.0,
+    "maxdd_pct": -51.7
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 809.9,
+    "cagr_pct": 24.7,
+    "price_ret_pct": 647.4,
+    "maxdd_pct": -66.3
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 156.1,
+    "cagr_pct": 4.8,
+    "price_ret_pct": 99.5,
+    "maxdd_pct": -88.6
+   },
+   "maxdd_all_pct": -90.1,
+   "maxdd_all_trough": "2015-08-05",
+   "info": {
+    "longName": "AngloGold Ashanti plc",
+    "profitMargins": 0.32634997,
+    "operatingMargins": 0.50387,
+    "debtToEquity": 16.331,
+    "totalDebt": 1823000064,
+    "totalCash": 3079000064,
+    "dividendYield": 5.16,
+    "trailingPE": 11.3914175,
+    "marketCap": 44315332608
+   }
+  },
+  "GFI": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 35.78,
+   "splits": {
+    "2013-02-21": 1.161
+   },
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 301.4,
+    "cagr_pct": 32.0,
+    "price_ret_pct": 240.1,
+    "maxdd_pct": -56.2
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 1234.0,
+    "cagr_pct": 29.6,
+    "price_ret_pct": 916.5,
+    "maxdd_pct": -56.2
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 255.6,
+    "cagr_pct": 6.5,
+    "price_ret_pct": 133.4,
+    "maxdd_pct": -86.3
+   },
+   "maxdd_all_pct": -89.4,
+   "maxdd_all_trough": "2015-11-17",
+   "info": {
+    "longName": "Gold Fields Limited",
+    "profitMargins": 0.38654998,
+    "operatingMargins": 0.53094,
+    "debtToEquity": 28.562,
+    "totalDebt": 2634500096,
+    "totalCash": 2197100032,
+    "dividendYield": 6.02,
+    "trailingPE": 7.331967,
+    "marketCap": 31654066176
+   }
+  },
+  "AGI": {
+   "first": "2003-05-02",
+   "last": "2026-11-12",
+   "last_close": 28.75,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 243.4,
+    "cagr_pct": 28.0,
+    "price_ret_pct": 231.6,
+    "maxdd_pct": -50.9
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 377.4,
+    "cagr_pct": 16.9,
+    "price_ret_pct": 347.1,
+    "maxdd_pct": -65.9
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 247.7,
+    "cagr_pct": 6.4,
+    "price_ret_pct": 203.9,
+    "maxdd_pct": -88.1
+   },
+   "maxdd_all_pct": -88.1,
+   "maxdd_all_trough": "2016-01-20",
+   "info": {
+    "longName": "Alamos Gold Inc.",
+    "profitMargins": 0.46664003,
+    "operatingMargins": 0.54074,
+    "debtToEquity": 4.574,
+    "totalDebt": 226500000,
+    "totalCash": 641600000,
+    "dividendYield": 0.56,
+    "trailingPE": 11.4087305,
+    "marketCap": 12033635328
+   }
+  },
+  "FNV": {
+   "first": "2007-12-07",
+   "last": "2026-11-12",
+   "last_close": 247.72,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 73.3,
+    "cagr_pct": 11.6,
+    "price_ret_pct": 65.8,
+    "maxdd_pct": -37.1
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 390.4,
+    "cagr_pct": 17.2,
+    "price_ret_pct": 343.5,
+    "maxdd_pct": -37.1
+   },
+   "20y": null,
+   "maxdd_all_pct": -58.8,
+   "maxdd_all_trough": "2008-10-27",
+   "info": {
+    "longName": "Franco-Nevada Corporation",
+    "profitMargins": 0.67042,
+    "operatingMargins": 0.77796996,
+    "debtToEquity": null,
+    "totalDebt": 0,
+    "totalCash": 1232199936,
+    "dividendYield": 0.69,
+    "trailingPE": 30.209757,
+    "marketCap": 47789019136
+   }
+  },
+  "WPM": {
+   "first": "2005-07-06",
+   "last": "2026-11-12",
+   "last_close": 131.8,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 211.2,
+    "cagr_pct": 25.5,
+    "price_ret_pct": 195.6,
+    "maxdd_pct": -43.3
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 713.5,
+    "cagr_pct": 23.3,
+    "price_ret_pct": 617.5,
+    "maxdd_pct": -46.7
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 1259.1,
+    "cagr_pct": 13.9,
+    "price_ret_pct": 1019.8,
+    "maxdd_pct": -86.7
+   },
+   "maxdd_all_pct": -86.7,
+   "maxdd_all_trough": "2008-11-20",
+   "info": {
+    "longName": "Wheaton Precious Metals Corp.",
+    "profitMargins": 0.6039,
+    "operatingMargins": 0.72475,
+    "debtToEquity": 15.997,
+    "totalDebt": 1604833024,
+    "totalCash": 145802000,
+    "dividendYield": 0.59,
+    "trailingPE": 28.652176,
+    "marketCap": 59862106112
+   }
+  },
+  "RGLD": {
+   "first": "1995-01-03",
+   "last": "2026-11-12",
+   "last_close": 255.34,
+   "splits": {},
+   "5y": {
+    "from": "2021-11-12",
+    "total_ret_pct": 153.4,
+    "cagr_pct": 20.4,
+    "price_ret_pct": 139.3,
+    "maxdd_pct": -40.7
+   },
+   "10y": {
+    "from": "2016-11-14",
+    "total_ret_pct": 331.1,
+    "cagr_pct": 15.7,
+    "price_ret_pct": 284.7,
+    "maxdd_pct": -49.6
+   },
+   "20y": {
+    "from": "2006-11-13",
+    "total_ret_pct": 995.9,
+    "cagr_pct": 12.7,
+    "price_ret_pct": 777.8,
+    "maxdd_pct": -73.3
+   },
+   "maxdd_all_pct": -84.5,
+   "maxdd_all_trough": "2000-12-05",
+   "info": {
+    "longName": "Royal Gold, Inc.",
+    "profitMargins": 0.47991002,
+    "operatingMargins": 0.63111997,
+    "debtToEquity": 1.88,
+    "totalDebt": 146146000,
+    "totalCash": 184538000,
+    "dividendYield": 0.74,
+    "trailingPE": 26.081717,
+    "marketCap": 21587568640
+   }
+  }
+ },
+ "notes": []
+}
