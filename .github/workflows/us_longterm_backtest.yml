@@ -1,6 +1,11 @@
 name: 🧪 US long-term backtest (manual)
 on:
   workflow_dispatch:
+    inputs:
+      script:
+        description: 'backtest_core یا miners_returns'
+        required: false
+        default: 'backtest_core'
 permissions:
   contents: write
 jobs:
@@ -13,8 +18,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -q yfinance pandas numpy
-      - name: Core backtest
-        run: python3 us_longterm/backtest_core.py
+      - name: Run script
+        run: python3 us_longterm/${{ github.event.inputs.script || 'backtest_core' }}.py
       - name: Save
         if: always()
         run: |
