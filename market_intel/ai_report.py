@@ -40,6 +40,46 @@ def scorecard_lines():
     return L + ['']
 
 
+def watchlist_lines(v, e):
+    """نامزدهای بعدی: سهم‌هایی که شرط‌ها را دارند ولی در فهرست اصلی نیستند."""
+    w = v.get('watchlist') or []
+    if not w:
+        return []
+    L = ['🔭 <b>نامزدهای بعدی</b> (واجد شرایط، ولی هنوز در فهرست اصلی نیستند):']
+    for r in w[:5]:
+        L.append(f"• <b>{e(r.get('ticker', ''))}</b>" + (f" — {e(r['name'])}" if r.get('name') else '') + f": {e(r.get('why_fa', ''))}")
+    return L + ['']
+
+
+def short_report(v, e):
+    """گزارش روزهای عادی (غیر دوشنبه): فقط تغییرات و هشدار خبری، کوتاه."""
+    L = [f"<b>🤖 سهام هوش مصنوعی — خلاصه‌ی روز</b> — {v['date'].replace('-', '/').translate(D)}", '']
+    if v.get('market_fa'):
+        L += [f"🌐 {e(v['market_fa'])}", '']
+    w = weak_market()
+    if w:
+        L += [w, '']
+    ch = v.get('changes_fa') or []
+    L.append('🔔 <b>چه چیزی از دیروز عوض شد:</b>')
+    L += [f"• {e(c)}" for c in ch[:6]] if ch else ['• تغییر مهمی نبود.']
+    L.append('')
+    al = v.get('alerts') or []
+    if al:
+        L.append('📰 <b>هشدار خبری درباره‌ی سهم‌های فهرست:</b>')
+        for a in al[:5]:
+            src = a.get('url')
+            L.append(f"• <b>{e(a.get('ticker', ''))}</b>: {e(a.get('alert_fa', ''))}" + (f' (<a href="{e(src)}">خبر</a>)' if src else ''))
+        L.append('')
+    picks = [p['ticker'] for p in v.get('picks', [])[:5]]
+    if picks:
+        L += [f"📋 <b>فهرست فعلی:</b> {'، '.join(picks)} (فهرست کامل با دلیل و ریسک، دوشنبه‌ها)", '']
+    L += watchlist_lines(v, e)
+    if v.get('dropped_fa'):
+        L += [f"🔻 <b>از فهرست بیرون رفت:</b> {e(v['dropped_fa'])}", '']
+    L.append('<i>پیش‌بینی قطعی و توصیه‌ی خرید نیست.</i>')
+    return L
+
+
 def weak_market():
     """اگر QQQ زیر میانگین ۵۰ روزه است: هشدار (سهم‌های کوچک و پرنوسان AI در بازار نزولی بیشتر می‌ریزند)."""
     try:
@@ -78,37 +118,43 @@ def main():
     except Exception:
         ms = {}
     e = html.escape
+    # mode: 'weekly' (دوشنبه‌ها: فهرست کامل) | 'daily' (کوتاه). نبودن mode یا بازبینی هفتگی = کامل.
+    short = v.get('mode') == 'daily' and not v.get('review_fa')
     L = [f"<b>🤖 گزارش سهام هوش مصنوعی</b> — {v['date'].replace('-', '/').translate(D)}",
          f"<i>{e(v.get('method_fa', ''))}</i>", '']
-    if v.get('market_fa'):
-        L += [f"🌐 <b>فضای بازار AI:</b> {e(v['market_fa'])}", '']
-    w = weak_market()
-    if w:
-        L += [w, '']
-    for i, p in enumerate(v.get('picks', [])[:5], 1):
-        L.append(f"<b>{str(i).translate(D)}. {e(p['ticker'])} — {e(p.get('name', ''))}</b> ({e(p.get('segment_fa', ''))})")
-        L.append(f"📊 {e(p.get('numbers_fa', ''))}")
-        L.append(f"🚀 چرا: {e(p.get('thesis_fa', ''))}")
-        if p.get('news_fa'):
-            src = p.get('news_url')
-            L.append(f"📰 {e(p['news_fa'])}" + (f' (<a href="{e(src)}">خبر</a>)' if src else ''))
-        L.append(f"⚠️ ریسک: {e(p.get('risk_fa', ''))}")
-        ne = p.get('next_earnings') or ms.get(p['ticker'], {}).get('next_earnings')
-        if ne:
-            days = (dt.date.fromisoformat(ne) - dt.date.fromisoformat(v['date'])).days
-            if days >= 0:
-                L.append(f"📅 گزارش فصلی بعدی: {ne.replace('-', '/').translate(D)}"
-                         + (f" ({str(days).translate(D)} روز دیگر)" if days else ' (امروز)'))
-        L.append('')
-    if v.get('dropped_fa'):
-        L += [f"🔻 <b>از فهرست بیرون رفت:</b> {e(v['dropped_fa'])}", '']
-    if v.get('review_fa'):
-        L += [f"🔄 <b>بازبینی هفتگی:</b> {e(v['review_fa'])}", '']
-    # کارنامه: دوشنبه‌ها (روز بازبینی هفتگی) یا هر روزی که بازبینی هفتگی انجام شده
-    if v.get('review_fa') or dt.date.fromisoformat(v['date']).weekday() == 0:
-        L += scorecard_lines()
-    L.append('<i>فقط درصد کمی از سهم‌ها در یک دهه ۱۰ برابر می‌شوند و بیشتر سهم‌های پرهیجان این‌طور نمی‌شوند؛ این فهرست سهم‌هایی است که شرایطش را بیشتر از بقیه دارند، '
-             'نه پیش‌بینی قطعی و نه توصیه‌ی خرید.</i>')
+    if short:
+        L = short_report(v, e)
+    else:
+        if v.get('market_fa'):
+            L += [f"🌐 <b>فضای بازار AI:</b> {e(v['market_fa'])}", '']
+        w = weak_market()
+        if w:
+            L += [w, '']
+        for i, p in enumerate(v.get('picks', [])[:5], 1):
+            L.append(f"<b>{str(i).translate(D)}. {e(p['ticker'])} — {e(p.get('name', ''))}</b> ({e(p.get('segment_fa', ''))})")
+            L.append(f"📊 {e(p.get('numbers_fa', ''))}")
+            L.append(f"🚀 چرا: {e(p.get('thesis_fa', ''))}")
+            if p.get('news_fa'):
+                src = p.get('news_url')
+                L.append(f"📰 {e(p['news_fa'])}" + (f' (<a href="{e(src)}">خبر</a>)' if src else ''))
+            L.append(f"⚠️ ریسک: {e(p.get('risk_fa', ''))}")
+            ne = p.get('next_earnings') or ms.get(p['ticker'], {}).get('next_earnings')
+            if ne:
+                days = (dt.date.fromisoformat(ne) - dt.date.fromisoformat(v['date'])).days
+                if days >= 0:
+                    L.append(f"📅 گزارش فصلی بعدی: {ne.replace('-', '/').translate(D)}"
+                             + (f" ({str(days).translate(D)} روز دیگر)" if days else ' (امروز)'))
+            L.append('')
+        if v.get('dropped_fa'):
+            L += [f"🔻 <b>از فهرست بیرون رفت:</b> {e(v['dropped_fa'])}", '']
+        if v.get('review_fa'):
+            L += [f"🔄 <b>بازبینی هفتگی:</b> {e(v['review_fa'])}", '']
+        # کارنامه: دوشنبه‌ها (روز بازبینی هفتگی) یا هر روزی که بازبینی هفتگی انجام شده
+        if v.get('review_fa') or dt.date.fromisoformat(v['date']).weekday() == 0:
+            L += scorecard_lines()
+        L += watchlist_lines(v, e)
+        L.append('<i>فقط درصد کمی از سهم‌ها در یک دهه ۱۰ برابر می‌شوند و بیشتر سهم‌های پرهیجان این‌طور نمی‌شوند؛ این فهرست سهم‌هایی است که شرایطش را بیشتر از بقیه دارند، '
+                 'نه پیش‌بینی قطعی و نه توصیه‌ی خرید.</i>')
     msg = '\n'.join(L)
     print(msg)
     if not token or not chats:
