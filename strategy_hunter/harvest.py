@@ -1,9 +1,14 @@
 """شکارچی روش — جمع‌آوری ادعاهای سود از فروم‌ها و سایت‌ها (بدون کلید API).
 
 منابع: Reddit (JSON/RSS)، Hacker News (Algolia)، StackExchange Quant، Medium (RSS برچسب‌ها)، dev.to،
-و بخش ویژه‌ی فارکس (جستجوی Reddit، ساب‌ردیت‌های فارکس، Medium، مقاله‌های MQL5).
+ریپوهای متن‌باز استراتژی و بک‌تست روی GitHub، و بخش ویژه‌ی فارکس (جستجوی Reddit، ساب‌ردیت‌های فارکس،
+Medium و مقاله‌های MQL5).
 هر پست با واژه‌های «روش + ادعای عددی سود» امتیاز می‌گیرد؛ پست‌های بالای آستانه در inbox.jsonl ذخیره می‌شوند.
-خروجی: data/strategy_hunter/inbox.jsonl (بدون تکرار، بر اساس url) و diagnostics.txt
+بهبودها (۲۰۲۶-۱۱-۱۳): حذف پست‌های هم‌عنوانِ تکراری (کراس‌پست در چند ساب‌ردیت) قبل از ورود به inbox،
+امتیازدهی بهتر (پاداش برای قانون عددی/حد ضرر و سود، تنبیه برای سؤال و مطالب غیرروشی)، متن کامل‌تر،
+دنبال‌کردن لینک گیت‌هاب داخل پست برای گرفتن README واقعی، و وزن‌دهی منفی به منبعی که آمار reviewed.json
+نشان می‌دهد تقریباً هیچ قانون قابل‌آزمونی نمی‌دهد.
+خروجی: data/strategy_hunter/inbox.jsonl (بدون تکرار، بر اساس url و عنوان) و diagnostics.txt
 """
 import datetime as dt
 import hashlib
@@ -19,10 +24,12 @@ import requests
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'strategy_hunter')
 INBOX = os.path.join(OUT, 'inbox.jsonl')
+REVIEWED = os.path.join(OUT, 'reviewed.json')
 UA = {'User-Agent': 'strategy-hunter/1.0 (research; contact mahdi.salehi.sichani@gmail.com)'}
 SUBS = ['algotrading', 'Daytrading', 'Forex', 'options', 'thetagang', 'swingtrading', 'CryptoMarkets', 'Trading']
 MEDIUM_TAGS = ['trading-strategy', 'algorithmic-trading', 'forex-trading', 'crypto-trading', 'options-trading',
                'day-trading', 'backtesting']
+GITHUB_TOPICS = ['trading-strategy', 'algorithmic-trading', 'backtesting', 'quant-trading']
 MARKET = re.compile(r'\b(trad\w*|stocks?|forex|fx|crypto|bitcoin|btc|eth|options?|futures|spy|qqq|s&p|nasdaq|'
                     r'portfolio|backtest\w*|scalp\w*|swing|day ?trad\w*|pips?|candles?|'
                     r'(?:eur|gbp|usd|aud|nzd|cad|chf|jpy|xau){2}|gold|currenc\w*|expert advisor)\b', re.I)
@@ -33,12 +40,25 @@ STRAT = re.compile(r'\b(strateg\w*|setup|system|indicator|rsi|macd|ema|sma|movin
                    r'donchian|turtle|keltner|stochastic|parabolic sar|adx)\b', re.I)
 CLAIM = re.compile(r'(\d{2,5}(?:\.\d+)?\s?%|\bwin ?rate\b|\bprofit factor\b|\bsharpe\b|\bcagr\b|'
                    r'\bx\d{1,3}\b|\b\d+x\b|\bdoubled?\b|\bper (?:day|week|month)\b|\$\d{3,}[kK]?)', re.I)
+# پاداش: نام اندیکاتور به‌همراه یک عدد (نشانه‌ی قانون عددی واقعی، نه فقط بحث کلی)
+RULE_NUM = re.compile(r'\b(rsi|sma|ema|macd|adx|atr|bollinger|stochastic|vwap|ibs|z-?score|donchian|keltner)'
+                     r'\w*\D{0,12}\d', re.I)
+# پاداش: ذکر صریح حد ضرر/حد سود یا نسبت ریسک به پاداش
+STOP_TAKE = re.compile(r'\b(stop[- ]?loss|take[- ]?profit|\bsl\b|\btp\b|risk[: ]?reward|\br:r\b|\b1:\d|\b\d+r\b)',
+                      re.I)
+# تنبیه: پست سؤالی (عنوان با علامت سؤال تمام می‌شود) معمولاً روش منتشر نمی‌کند
+QUESTION_TITLE = re.compile(r'\?\s*$')
+# تنبیه: آگهی استخدام، بحث روان‌شناسی معامله، معرفی ابزار/محصول — اینها «روش» نیستند
+NOISE = re.compile(r'\b(who wants to be hired|hiring|resume on request|job|ask hn)\b|'
+                  r'\b(psychology of|get over (my )?nerves|overcome fear|ego|superpower)\b|'
+                  r'\b(released?|release notes|new version|v\d+\.\d+)\b.{0,20}\blibrary\b', re.I)
 DIAG = []
 
 
 def get(url, **kw):
+    headers = {**UA, **kw.pop('headers', {})}
     try:
-        r = requests.get(url, headers=UA, timeout=25, **kw)
+        r = requests.get(url, headers=headers, timeout=25, **kw)
         DIAG.append(f'{r.status_code} {url[:90]} len={len(r.content)}')
         return r if r.status_code == 200 else None
     except Exception as e:
@@ -53,6 +73,9 @@ def get(url, **kw):
 REDDIT_WAITS = (25, 60, 120)
 REDDIT_BUDGET = {'subs': 360, 'forex': 300}
 _reddit_spent = {'subs': 0.0, 'forex': 0.0}
+# سقف درخواست بدون کلید به GitHub REST (۶۰ در ساعت) و جستجو (۱۰ در دقیقه) را رعایت می‌کنیم
+MAX_GH_LINK_FETCH = 5
+_gh_link_spent = {'n': 0}
 
 
 def reddit_get(url, params, section):
@@ -91,13 +114,89 @@ def clean(s):
     return re.sub(r'\s+', ' ', s).strip()
 
 
-def score(title, text):
+def norm_title(s):
+    """برای تشخیص کراس‌پست: یک عنوان بدون نشانه‌گذاری و حروف بزرگ/کوچک و فاصله‌های اضافه."""
+    s = re.sub(r'[^\w\s]', '', (s or '').lower())
+    return re.sub(r'\s+', ' ', s).strip()
+
+
+GH_LINK = re.compile(r'github\.com/([\w.-]+)/([\w.-]+)', re.I)
+
+
+def fetch_github_context(text):
+    """اگر متن پست لینک یک ریپوی گیت‌هاب دارد، README آن را می‌گیرد تا قانون واقعی از کد بیرون بیاید
+    (نه فقط توصیف پست)، به‌جای اینکه ادعای ردشده بماند. سقف تعداد را در کل اجرا رعایت می‌کند."""
+    extra = []
+    seen = set()
+    for m in GH_LINK.finditer(text):
+        if _gh_link_spent['n'] >= MAX_GH_LINK_FETCH:
+            break
+        owner, repo = m.group(1), m.group(2).rstrip('.,);')
+        key = f'{owner}/{repo}'.lower()
+        if key in seen or owner.lower() in ('topics', 'search', 'sponsors'):
+            continue
+        seen.add(key)
+        _gh_link_spent['n'] += 1
+        r = get(f'https://api.github.com/repos/{owner}/{repo}/readme', headers={'Accept': 'application/vnd.github.raw'})
+        if r:
+            extra.append(f'--- README {key} ---\n' + clean(r.text)[:2500])
+    return '\n'.join(extra)
+
+
+def score(source, title, text):
     t = f'{title} {text}'
     if not MARKET.search(t):
         return 0
     s = len(set(m.lower() for m in STRAT.findall(t)))
     c = len(CLAIM.findall(t))
-    return (min(s, 4) + min(c, 4)) if s and c else 0
+    base = (min(s, 4) + min(c, 4)) if s and c else 0
+    if base == 0:
+        return 0
+    if RULE_NUM.search(t):
+        base += 2
+    if STOP_TAKE.search(t):
+        base += 1
+    if QUESTION_TITLE.search((title or '').strip()):
+        base -= 2
+    if NOISE.search(t):
+        base -= 3
+    base += SOURCE_ADJUST.get(source.split('/')[0], 0)
+    return max(base, 0)
+
+
+# با آمار reviewed.json در main() پر می‌شود؛ پیش از آن خالی است (بدون تنبیه)
+SOURCE_ADJUST = {}
+
+
+def source_penalty():
+    """اگر منبعی به‌اندازه‌ی کافی بررسی شده (دست‌کم ۳۰ مورد) ولی تقریباً هیچ قانون قابل‌آزمونی نداده
+    (کمتر از ۵٪)، امتیازش را کم می‌کنیم تا سهم کمتری از ظرفیت بررسی روزانه را بگیرد — حذف کامل نمی‌کنیم،
+    چون ممکن است گاهی مورد خوب هم بدهد."""
+    pen = {}
+    try:
+        rev = json.load(open(REVIEWED, encoding='utf-8'))
+    except Exception:
+        return pen
+    src_of = {}
+    if os.path.exists(INBOX):
+        for ln in open(INBOX, encoding='utf-8'):
+            try:
+                d = json.loads(ln)
+                src_of[d['id']] = d['source'].split('/')[0]
+            except Exception:
+                pass
+    counts = {}
+    for rid, verdict in rev.items():
+        src = src_of.get(rid)
+        if not src:
+            continue
+        n, k = counts.get(src, (0, 0))
+        counts[src] = (n + 1, k + (1 if verdict == 'spec' else 0))
+    for src, (n, k) in counts.items():
+        if n >= 30 and k / n < 0.05:
+            pen[src] = -3
+            DIAG.append(f'PENALTY source={src} n={n} spec_rate={k / n:.1%} -> score -3')
+    return pen
 
 
 def reddit():
@@ -137,7 +236,7 @@ def rss_sites():
             continue
         for it in root.iter('item'):
             body = it.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or it.findtext('description') or ''
-            out.append((name, it.findtext('title', ''), clean(body)[:4000], it.findtext('link', ''), 0))
+            out.append((name, it.findtext('title', ''), clean(body)[:6000], it.findtext('link', ''), 0))
     return out
 
 
@@ -178,7 +277,7 @@ def medium():
             continue
         for it in root.iter('item'):
             body = it.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or it.findtext('description') or ''
-            out.append(('medium/' + tag, it.findtext('title', ''), clean(body)[:4000], it.findtext('link', ''), 0))
+            out.append(('medium/' + tag, it.findtext('title', ''), clean(body)[:6000], it.findtext('link', ''), 0))
     return out
 
 
@@ -190,6 +289,36 @@ def devto():
             for a in r.json():
                 out.append(('dev.to/' + tag, a.get('title', ''), a.get('description', ''), a.get('url', ''),
                             a.get('public_reactions_count', 0)))
+    return out
+
+
+def github_repos():
+    """ریپوهای متن‌باز استراتژی و بک‌تست که به‌تازگی به‌روز شده‌اند. برخلاف یک تحلیل یک‌باره‌ی چارت،
+    قانون این‌ها در خود کد/README است، پس نرخ تبدیل به قانون قابل‌آزمون معمولاً بالاتر است.
+    سقف درخواست بدون کلید گیت‌هاب را رعایت می‌کند: فقط چند جستجو و حداکثر ۳ README در هر برچسب."""
+    out = []
+    cutoff = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=21)).date().isoformat()
+    for topic in GITHUB_TOPICS:
+        r = get('https://api.github.com/search/repositories',
+                params={'q': f'topic:{topic} pushed:>{cutoff}', 'sort': 'updated', 'order': 'desc', 'per_page': 10},
+                headers={'Accept': 'application/vnd.github+json'})
+        time.sleep(7)  # سقف جستجوی بدون کلید: ۱۰ در دقیقه
+        if not r:
+            continue
+        try:
+            items = r.json().get('items', [])
+        except Exception:
+            continue
+        items = sorted(items, key=lambda x: x.get('stargazers_count', 0), reverse=True)[:3]
+        for repo in items:
+            full = repo.get('full_name', '')
+            if not full:
+                continue
+            desc = clean(repo.get('description') or '')
+            rr = get(f'https://api.github.com/repos/{full}/readme', headers={'Accept': 'application/vnd.github.raw'})
+            readme = clean(rr.text)[:4500] if rr else ''
+            out.append(('github/' + topic, full, f'{desc} {readme}'.strip(), repo.get('html_url', ''),
+                        repo.get('stargazers_count', 0)))
     return out
 
 
@@ -229,7 +358,7 @@ def forex():
             continue
         for it in root.iter('item'):
             body = it.findtext('{http://purl.org/rss/1.0/modules/content/}encoded') or it.findtext('description') or ''
-            out.append((name, it.findtext('title', ''), clean(body)[:4000], it.findtext('link', ''), 0))
+            out.append((name, it.findtext('title', ''), clean(body)[:6000], it.findtext('link', ''), 0))
     r = get('https://api.stackexchange.com/2.3/search/excerpts',
             params={'site': 'quant', 'q': 'forex strategy', 'sort': 'creation', 'order': 'desc', 'pagesize': 30})
     if r:
@@ -240,17 +369,27 @@ def forex():
 
 
 def main():
+    global SOURCE_ADJUST
     os.makedirs(OUT, exist_ok=True)
+    SOURCE_ADJUST = source_penalty()
+
     seen = set()
+    seen_titles = set()
     if os.path.exists(INBOX):
         for ln in open(INBOX, encoding='utf-8'):
             try:
-                seen.add(json.loads(ln)['url'])
+                d = json.loads(ln)
+                seen.add(d['url'])
+                nt = norm_title(d.get('title', ''))
+                if len(nt) > 15:
+                    seen_titles.add(nt)
             except Exception:
                 pass
+
     found = []
     counts = {}
-    for fn in (reddit, rss_sites, hackernews, stackexchange, medium, devto, forex):
+    dup_titles = 0
+    for fn in (reddit, rss_sites, hackernews, stackexchange, medium, devto, github_repos, forex):
         try:
             items = fn()
         except Exception as e:
@@ -258,16 +397,33 @@ def main():
             items = []
         counts[fn.__name__] = len(items)
         for src, title, text, url, pop in items:
-            sc = score(title, text)
-            if sc >= 3 and url and url not in seen:
-                seen.add(url)
-                found.append({'id': hashlib.sha1(url.encode()).hexdigest()[:10], 'source': src, 'title': clean(title)[:300],
-                              'text': clean(text)[:3000], 'url': url, 'popularity': pop, 'score': sc,
-                              'found_at': dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'), 'status': 'new'})
+            if not url or url in seen:
+                continue
+            sc = score(src, title, text)
+            if sc < 3:
+                continue
+            nt = norm_title(title)
+            if len(nt) > 15 and nt in seen_titles:
+                dup_titles += 1
+                DIAG.append(f'DUP title [{src}] {clean(title)[:70]}')
+                continue
+            seen.add(url)
+            if len(nt) > 15:
+                seen_titles.add(nt)
+            full_text = clean(text)
+            if 'github.com/' in full_text or 'github.com/' in title:
+                extra = fetch_github_context(f'{title} {full_text}')
+                full_text = (full_text + ('\n\n' + extra if extra else ''))[:8000]
+            else:
+                full_text = full_text[:6000]
+            found.append({'id': hashlib.sha1(url.encode()).hexdigest()[:10], 'source': src, 'title': clean(title)[:300],
+                          'text': full_text, 'url': url, 'popularity': pop, 'score': sc,
+                          'found_at': dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'), 'status': 'new'})
     with open(INBOX, 'a', encoding='utf-8') as f:
         for x in found:
             f.write(json.dumps(x, ensure_ascii=False) + '\n')
-    DIAG.insert(0, f'{dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} raw={counts} new_claims={len(found)}')
+    DIAG.insert(0, f'{dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} raw={counts} new_claims={len(found)} '
+                   f'dup_titles_skipped={dup_titles} source_penalty={SOURCE_ADJUST}')
     open(os.path.join(OUT, 'harvest_diagnostics.txt'), 'w').write('\n'.join(DIAG))
     print(DIAG[0])
 
