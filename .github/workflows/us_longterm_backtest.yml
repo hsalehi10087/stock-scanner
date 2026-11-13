@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       script:
-        description: 'backtest_core یا miners_returns'
+        description: 'backtest_core یا miners_returns یا crypto_returns'
         required: false
         default: 'backtest_core'
 permissions:
