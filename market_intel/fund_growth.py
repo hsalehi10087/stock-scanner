@@ -26,6 +26,8 @@ THRESHOLD = 10.0
 MIN_PREV_USD = 1_000_000  # سود فصل قبل حداقل ۱ میلیون دلار؛ وگرنه درصد بی‌معناست
 MIN_PRICE = 1.0
 MIN_VOLUME = 100_000  # هم‌سنگ آستانه‌ی gainers.py/cn/jp/tw_growth.py؛ سهام کم‌حجم با یک معامله جا به جا می‌شود
+MAX_ANN_VOL = 1.5     # نوسان‌پذیری سالانه‌ی ۱۵۰٪+ (۹۰ روز اخیر): سهم به‌شدت پرنوسان/شکننده
+MAX_SINGLE_DAY_MOVE = 0.20  # یک پرش تکی بیش از ۲۰٪ در ۹۰ روز اخیر، نشانه‌ی ریسک بالای میس سود (مثل PAYS, MAPS)
 # وارانت/حق تقدم/یونیت (اوراق مشتق‌شده، نه خود سهم) و REIT/شرکت در حال انحلال یا تصفیه
 EXCLUDE = re.compile(r'acquisition|\bspac\b|\betf\b|\btrust\b|\bfund\b|\bblank check\b|'
                      r'\bwarrant(s)?\b|\bright(s)?\b|\bunit(s)?\b|\breit\b|real estate investment trust|'
@@ -121,10 +123,13 @@ def _main():
                          'prev_ni_musd': prev_val / 1e6, 'growth': growth, 'period': period})
     rows.sort(key=lambda r: -r['growth'])
 
-    # نقدشوندگی: قیمت ≥ ۱$ و حجم میانگین ۵ روزه ≥ ۱۰۰ هزار؛ سهام کم‌حجم با یک معامله جا به جا می‌شود
+    # نقدشوندگی: قیمت ≥ ۱$ و حجم میانگین ۵ روزه ≥ ۱۰۰ هزار؛ سهام کم‌حجم با یک معامله جا به جا می‌شود.
+    # نوسان‌پذیری/ریسک میس سود: نوسان سالانه‌ی ۹۰ روزه زیر ۱۵۰٪ و بدون پرش تکی بیش از ۲۰٪ (داده نیامد → کنار گذاشته نمی‌شود)
     pv = T.price_vol([r['ticker'] for r in rows])
     rows = [r for r in rows if pv.get(r['ticker'], {}).get('price', 0) >= MIN_PRICE
-            and pv.get(r['ticker'], {}).get('volume', 0) >= MIN_VOLUME]
+            and pv.get(r['ticker'], {}).get('volume', 0) >= MIN_VOLUME
+            and (pv.get(r['ticker'], {}).get('ann_vol') is None or pv[r['ticker']]['ann_vol'] <= MAX_ANN_VOL)
+            and (pv.get(r['ticker'], {}).get('max_abs_move') is None or pv[r['ticker']]['max_abs_move'] <= MAX_SINGLE_DAY_MOVE)]
     Q.annotate(rows, 'us', limit=60)
 
     os.makedirs(HIST_DIR, exist_ok=True)

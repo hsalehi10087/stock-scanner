@@ -102,15 +102,17 @@ def last_prices(tickers):
     return out
 
 
-def price_vol(tickers):
-    """قیمت آخر و میانگین حجم ۵ روزه (نقدشوندگی) برای یک لیست نماد؛ برای کنار گذاشتن سهام کم‌حجم/وارانت."""
+def price_vol(tickers, days=90):
+    """قیمت آخر، میانگین حجم ۵ روزه (نقدشوندگی)، نوسان‌پذیری سالانه و بزرگ‌ترین پرش یک‌روزه (ریسک میس سود) برای
+    یک لیست نماد، از ۹۰ روز اخیر؛ برای کنار گذاشتن سهام کم‌حجم/وارانت/پرنوسانِ آسیب‌پذیر در برابر میس سود."""
+    import numpy as np
     import yfinance as yf
     out = {}
     tl = sorted(tickers)
     for i in range(0, len(tl), 200):
         part = tl[i:i + 200]
         try:
-            df = yf.download(part, period='5d', interval='1d', group_by='ticker', threads=True,
+            df = yf.download(part, period=f'{days}d', interval='1d', group_by='ticker', threads=True,
                              progress=False, auto_adjust=False)
         except Exception as e:
             print('⚠️ price_vol', e, file=sys.stderr)
@@ -119,8 +121,12 @@ def price_vol(tickers):
             try:
                 sub = df[t] if len(part) > 1 else df
                 c, v = sub['Close'].dropna(), sub['Volume'].dropna()
-                if len(c):
-                    out[t] = {'price': float(c.iloc[-1]), 'volume': float(v.mean()) if len(v) else 0.0}
+                if not len(c):
+                    continue
+                r = c.pct_change().dropna()
+                out[t] = {'price': float(c.iloc[-1]), 'volume': float(v.tail(5).mean()) if len(v) else 0.0,
+                          'ann_vol': float(r.std() * np.sqrt(252)) if len(r) >= 10 else None,
+                          'max_abs_move': float(r.abs().max()) if len(r) >= 10 else None}
             except Exception:
                 continue
     return out
