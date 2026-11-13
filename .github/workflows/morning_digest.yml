@@ -53,6 +53,7 @@ jobs:
           - {script: jp_growth, data: 'data/jp_gainers data/quality'}
           - {script: cn_growth, data: 'data/cn_gainers data/quality'}
           - {script: tw_growth, data: 'data/tw_gainers data/quality'}
+          - {script: polymarket, data: 'data/polymarket'}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

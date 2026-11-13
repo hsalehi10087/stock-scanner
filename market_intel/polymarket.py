@@ -27,6 +27,7 @@ TAGS = ['stocks', 'equities', 'indicies', 'sp-500', 'nasdaq', 'finance']
 MIN_PROB, MIN_VOL, TRACK_DAYS, MAX_SHOW = 0.70, 10000, 60, 15
 INDEX = {'SPX': '^GSPC', 'NDX': '^NDX', 'DJIA': '^DJI', 'DJI': '^DJI', 'NIK': '^N225', 'NKY': '^N225', 'RUT': '^RUT',
          'DAX': '^GDAXI', 'FTSE': '^FTSE', 'HSI': '^HSI', 'COMP': '^IXIC', 'IXIC': '^IXIC', 'VIX': None}
+NOT_STOCK = {'WTI', 'BRENT', 'BTC', 'ETH', 'SOL', 'XRP', 'XAU', 'XAG', 'GOLD', 'GC', 'SI', 'CL', 'NG', 'DXY', 'EUR', 'JPY'}
 FA = str.maketrans('0123456789.', '۰۱۲۳۴۵۶۷۸۹٫')
 NUM = r'\$?([\d,]+(?:\.\d+)?)\s*([kK])?'
 
@@ -41,10 +42,10 @@ def num(a, k=None):
 
 def parse(q):
     """سؤال بازار → (نماد، نوع، هدف، متن فارسی) یا None. فقط صورت‌بندی‌های «رو به بالا»."""
-    m = re.search(r'\(([A-Z][A-Z.\-]{0,6})\)', q)
-    if not m:
+    m = [x for x in re.findall(r'\(([A-Z][A-Z.\-]{0,6})\)', q) if x not in ('HIGH', 'LOW')]
+    if not m or m[0] in NOT_STOCK:
         return None
-    t = m.group(1)
+    t = m[0]
     when = re.search(r'\b(?:on|by|in|end of)\s+([A-Z][a-z]+(?:\s+\d{1,2})?(?:,?\s+\d{4})?|\d{4})', q)
     when = when.group(1) if when else ''
     if re.search(r'Up or Down', q, re.I):
@@ -54,7 +55,7 @@ def parse(q):
         return None                                           # بازارهای رو به پایین سیگنال رشد نیستند
     if re.search(r'\d\s*[-–]\s*\$?\d', q) or re.search(r'between', q, re.I):
         return None                                           # بازه‌ی قیمتی
-    if re.search(r'market cap|earnings|IPO', q, re.I):
+    if re.search(r'market cap|earnings|IPO|revenue|valuation|deliver|subscribers|users|margin|EPS', q, re.I):
         return None
     m2 = (re.search(r'hit\s+' + NUM + r'\s*\(HIGH\)', q) or re.search(r'hit\s+\(HIGH\)\s*' + NUM, q)
           or re.search(r'(?:hit|reach|touch)\s+' + NUM, q, re.I))
