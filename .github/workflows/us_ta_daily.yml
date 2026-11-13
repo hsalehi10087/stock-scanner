@@ -31,17 +31,20 @@ jobs:
         if: steps.m.outputs.mode == 'review'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TELEGRAM_CHAT_ID: none
           TA_LOG: '1'
           TA_MAX: '3'
-          TRADINGAGENTS_LLM_PROVIDER: anthropic
-          TRADINGAGENTS_QUICK_THINK_LLM: claude-sonnet-5
-          TRADINGAGENTS_DEEP_THINK_LLM: claude-sonnet-5
+          TRADINGAGENTS_LLM_MAX_RETRIES: '6'
           TRADINGAGENTS_OUTPUT_LANGUAGE: Persian
           TRADINGAGENTS_MAX_DEBATE_ROUNDS: '1'
           TRADINGAGENTS_MAX_RISK_ROUNDS: '1'
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::warning::ANTHROPIC_API_KEY تنظیم نشده؛ امروز اجرا نشد"; exit 0; fi
+          if [ -n "$GOOGLE_API_KEY" ]; then
+            export TRADINGAGENTS_LLM_PROVIDER=google TRADINGAGENTS_QUICK_THINK_LLM=gemini-3.5-flash-lite TRADINGAGENTS_DEEP_THINK_LLM=gemini-3.8-flash
+          elif [ -n "$ANTHROPIC_API_KEY" ]; then
+            export TRADINGAGENTS_LLM_PROVIDER=anthropic TRADINGAGENTS_QUICK_THINK_LLM=claude-sonnet-5 TRADINGAGENTS_DEEP_THINK_LLM=claude-sonnet-5
+          else echo "::warning::هیچ کلید مدلی (GOOGLE_API_KEY یا ANTHROPIC_API_KEY) تنظیم نشده؛ امروز اجرا نشد"; exit 0; fi
           python3 us_longterm/ta_review.py
       - name: Weekly track
         if: steps.m.outputs.mode == 'track'
