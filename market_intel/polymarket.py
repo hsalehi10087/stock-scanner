@@ -47,7 +47,8 @@ def parse(q):
         return None
     t = m[0]
     when = re.search(r'\b(?:on|by|in|end of)\s+([A-Z][a-z]+(?:\s+\d{1,2})?(?:,?\s+\d{4})?|\d{4})', q)
-    when = when.group(1) if when else ''
+    wk = re.search(r'week of ([A-Z][a-z]+ \d{1,2})', q)
+    when = ('پایان هفته‌ی ' + wk.group(1)) if wk else (when.group(1) if when else 'تاریخ پایان بازار')
     if re.search(r'Up or Down', q, re.I):
         o = 'باز می‌شود' if re.search(r'Opens', q) else 'بسته می‌شود'
         return t, 'updown', None, f'آیا {t} در {when} بالاتر از بسته‌شدن قبلی {o}؟'
