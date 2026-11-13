@@ -174,3 +174,20 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-12,jp,1980.T,DAI-DAN CO LTD,3165.0,2517.0,breakout|longpat,بافت|کیفیت رشد,5,0.793,کف دوقلو (شکست خط گردن),2.5
 2026-11-12,tw,3617.TW,CYBERPOWER SYSTEMS INC.,268.5,61.0,trend|longpat,بافت|سود پیاپی,3,0.879,شکست سقف ۵۲ هفته,1.7
 2026-11-12,tw,2535.TW,DA-CIN CONSTRUCTION CO,90.8,61.0,trend|longpat,بافت|سود پیاپی,3,0.872,مثلث صعودی,2.0
+2026-11-13,us,CF,CF Industries,124.92,757.12,trend|pullback|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی (SEC),4,0.51,کف دوقلو (در انتظار شکست)، فنجان‌ودسته (نزدیک سقف),2.5
+2026-11-13,us,VEEV,Veeva Systems,302.42,757.12,trend|vcp|longpat,صورت مالی|کن‌اسلیم|سود پیاپی (SEC),3,0.483,فنجان‌ودسته (شکست سقف),2.5
+2026-11-13,cn,688131.SS,SHANGHAI HAOYUAN CHEMEXPRESS CO,93.0,20.81,trend|pullback,صورت مالی|سود پیاپی,2,0.686,روند صعودی,1.0
+2026-11-13,cn,000333.SZ,MIDEA GROUP,90.55,20.81,trend|longpat,بافت|سود پیاپی,2,0.291,شکست سقف ۵۲ هفته,1.7
+2026-11-13,in,KRBL.NS,KRBL Ltd.,432.05,25144.3008,breakout|trend|longpat,صورت مالی|کن‌اسلیم,3,0.809,کف دوقلو (در انتظار شکست)، فنجان‌ودسته (نزدیک سقف),2.5
+2026-11-13,in,MCX.NS,Multi Commodity Exchange of India Ltd.,3720.0,25144.3008,breakout|trend|longpat,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد,5,0.028,فنجان‌ودسته (شکست سقف)، مثلث صعودی، شکست سقف ۵۲ هفته,3.0
+2026-11-13,in,ENTERO.NS,Entero Healthcare Solutions Ltd.,1968.7,25144.3008,trend|longpat,صورت مالی|سود پیاپی,2,0.759,شکست سقف ۵۲ هفته,1.7
+2026-11-13,jp,4044.T,CENTRAL GLASS CO,4715.0,2494.0,breakout|trend|longpat,صورت مالی|کن‌اسلیم,3,0.275,کف دوقلو (شکست خط گردن)، سقف دوقلو (هشدار)، شکست سقف ۵۲ هفته,2.7
+2026-11-13,jp,3989.T,SHARINGTECHNOLOGY INC,1549.0,2494.0,trend|vcp|pullback,بافت|کیفیت رشد,4,0.149,روند صعودی,1.0
+2026-11-13,tw,2480.TW,STARK TECHNOLOGY,193.5,62.3,breakout|trend|longpat,صورت مالی|بافت,2,0.418,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
+2026-11-13,tw,3374.TWO,XINTEC INC,519.0,62.3,breakout|trend|longpat,بافت|کیفیت رشد|سود پیاپی,5,0.173,شکست سقف ۵۲ هفته,1.7
+2026-11-13,kr,017890.KQ,KAI,15300.0,11320.0,trend|pullback,صورت مالی|سود پیاپی,3,0.723,روند صعودی,1.0
+2026-11-13,kr,144960.KQ,NPP,14220.0,11320.0,trend|longpat,کیفیت رشد|سود پیاپی,4,0.626,شکست سقف ۵۲ هفته,1.7
+2026-11-13,gb,CMCX.L,CMC Markets,705.199,10872.8799,trend|pullback,صورت مالی|بافت,1,0.89,سرووشانه، سرووشانه معکوس,1.0
+2026-11-13,ca,LBS.TO,LIFE & BANC SPLIT CORP.,11.92,36137.1992,trend|longpat,صورت مالی|کن‌اسلیم,1,0.698,شکست سقف ۵۲ هفته,1.7
+2026-11-13,au,PME.AX,PROMEDICUS FPO [PME],202.57,9082.2002,trend|longpat,کن‌اسلیم|بافت,3,0.128,کف دوقلو (شکست خط گردن),1.5
+2026-11-13,au,MPL.AX,MEDIBANK FPO [MPL],5.4,9082.2002,trend|longpat,کن‌اسلیم|بافت,3,0.091,شکست سقف ۵۲ هفته,1.7
