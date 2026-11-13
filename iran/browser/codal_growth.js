@@ -16,9 +16,11 @@ async (page) => {
       const rows=[...tb.querySelectorAll('tr')].map(tr=>[...tr.children].filter(c=>/^(TD|TH)$/.test(c.tagName)).map(c=>norm(c.textContent)));
       const npRows=rows.filter(r=>r.length>=3&&/^سود\(زیان\)خالص$/.test(ns(r[0]))&&num(r[1])!=null);if(!npRows.length)continue;
       const rev=rows.filter(r=>r.length>=3&&/^(درآمدهایعملیاتی|فروشخالص|درآمدعملیاتی)/.test(ns(r[0]))&&num(r[1])!=null);
+      const acc=rows.filter(r=>r.length>=2&&/^سود\(زیان\)انباشته/.test(ns(r[0]))&&num(r[1])!=null);
       const np=npRows[0];const o={np_cur:num(np[1]),np_prev:num(np[2]),codal_pct:np[np.length-1]};o.np_growth=growth(o.np_cur,o.np_prev);
       const pct=num(np[np.length-1]);o.verified=o.np_growth==null||(pct!=null&&Math.abs(o.np_growth-pct)<=Math.max(1,0.01*Math.abs(pct)));
       if(rev.length){o.rev_cur=num(rev[0][1]);o.rev_prev=num(rev[0][2]);o.rev_growth=growth(o.rev_cur,o.rev_prev);}
+      if(acc.length)o.accum=num(acc[0][1]);
       return o;}
     return null;
   };
@@ -39,11 +41,15 @@ async (page) => {
           const letters = (out.j && out.j.Letters) || [];
           const fix = s => (s||'').replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/[‌\s]/g,'');
           const FAd='۰۱۲۳۴۵۶۷۸۹';
-          const cand = letters.filter(l => fix(l.Symbol) === fix(sym) && l.ExcelUrl && !/\(\s*شرکت[^)]*\)\s*$/.test((l.Title||'').replace(/\s+/g,' ').trim()) && /منتهی به/.test(l.Title));
+          const liqRe = /درحالانحلال|انحلالی|هیاتتصفیه|درخواستانحلال|تصفیهشرکت|درحالتصفیه|انحلالشرکت/;
+          const liqHit = letters.find(l => fix(l.Symbol) === fix(sym) && liqRe.test(fix(l.Title||'')));
+          if (liqHit) { rec = {none: 'dissolution', title: liqHit.Title}; }
+          const cand = liqHit ? [] : letters.filter(l => fix(l.Symbol) === fix(sym) && l.ExcelUrl && !/\(\s*شرکت[^)]*\)\s*$/.test((l.Title||'').replace(/\s+/g,' ').trim()) && /منتهی به/.test(l.Title));
           const pend = l => { const m=(l.Title.match(/منتهی به\s*([۰-۹0-9]{4}\/[۰-۹0-9]{2}\/[۰-۹0-9]{2})/)||[])[1]||''; return m.replace(/[۰-۹]/g,c=>FAd.indexOf(c)); };
           cand.sort((a,b) => (pend(b).localeCompare(pend(a))) || ((/تلفیقی/.test(b.Title)?1:0)-(/تلفیقی/.test(a.Title)?1:0)) || ((/اصلاحیه/.test(b.Title)?1:0)-(/اصلاحیه/.test(a.Title)?1:0)) || (b.PublishDateTime||'').localeCompare(a.PublishDateTime||''));
           const l = cand[0];
-          if (!l) rec = {none:'no_statement', n: letters.length};
+          if (liqHit) { /* rec already set to dissolution above */ }
+          else if (!l) rec = {none:'no_statement', n: letters.length};
           else {
             await new Promise(r => setTimeout(r, 8000));
             const r = await page.context().request.get(l.ExcelUrl, {timeout: 90000});
