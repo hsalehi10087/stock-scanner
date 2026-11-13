@@ -102,6 +102,30 @@ def last_prices(tickers):
     return out
 
 
+def price_vol(tickers):
+    """قیمت آخر و میانگین حجم ۵ روزه (نقدشوندگی) برای یک لیست نماد؛ برای کنار گذاشتن سهام کم‌حجم/وارانت."""
+    import yfinance as yf
+    out = {}
+    tl = sorted(tickers)
+    for i in range(0, len(tl), 200):
+        part = tl[i:i + 200]
+        try:
+            df = yf.download(part, period='5d', interval='1d', group_by='ticker', threads=True,
+                             progress=False, auto_adjust=False)
+        except Exception as e:
+            print('⚠️ price_vol', e, file=sys.stderr)
+            continue
+        for t in part:
+            try:
+                sub = df[t] if len(part) > 1 else df
+                c, v = sub['Close'].dropna(), sub['Volume'].dropna()
+                if len(c):
+                    out[t] = {'price': float(c.iloc[-1]), 'volume': float(v.mean()) if len(v) else 0.0}
+            except Exception:
+                continue
+    return out
+
+
 def bootstrap(kind, hist_dir, event_col=None, price_col=None):
     """بار اول، وضعیت را از فایل‌های تاریخچه‌ی موجود بازسازی می‌کند."""
     state, need = {}, {}

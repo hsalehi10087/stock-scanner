@@ -25,6 +25,7 @@ COLS = ['date', 'id', 'event_slug', 'ticker', 'yahoo', 'kind', 'question', 'prob
         'above_already', 'resolved', 'correct']
 TAGS = ['stocks', 'equities', 'indicies', 'sp-500', 'nasdaq', 'finance']
 MIN_PROB, MIN_VOL, TRACK_DAYS, MAX_SHOW = 0.70, 10000, 60, 15
+MIN_STOCK_DOLLAR_VOL = 1_000_000  # ارزش معاملات روزانه‌ی خودِ سهم پایه؛ وارانت/سهم کم‌حجم (مثل AERTW) را کنار می‌گذارد
 INDEX = {'SPX': '^GSPC', 'NDX': '^NDX', 'DJIA': '^DJI', 'DJI': '^DJI', 'NIK': '^N225', 'NKY': '^N225', 'RUT': '^RUT',
          'DAX': '^GDAXI', 'FTSE': '^FTSE', 'HSI': '^HSI', 'COMP': '^IXIC', 'IXIC': '^IXIC', 'VIX': None}
 NOT_STOCK = {'WTI', 'BRENT', 'BTC', 'ETH', 'SOL', 'XRP', 'XAU', 'XAG', 'GOLD', 'GC', 'SI', 'CL', 'NG', 'DXY', 'EUR', 'JPY'}
@@ -140,6 +141,22 @@ def closes(symbols, start):
     return res
 
 
+def dollar_vol(symbols):
+    """میانگین ارزش معاملات روزانه‌ی خودِ سهم پایه (۱۰ روز گذشته، Yahoo): برای کنار گذاشتن سهام کم‌حجم/وارانت
+    حتی اگر حجم شرط‌بندی پلی‌مارکت رویشان کافی باشد."""
+    import yfinance as yf
+    res = {}
+    for s in symbols:
+        try:
+            h = yf.Ticker(s).history(period='10d', auto_adjust=False)
+            c, v = h['Close'].dropna(), h['Volume'].dropna()
+            if len(c) and len(v):
+                res[s] = float((c * v).tail(10).mean())
+        except Exception:
+            pass
+    return res
+
+
 def load_hist():
     if not os.path.exists(HIST):
         return []
@@ -200,11 +217,17 @@ def main():
         if k not in top or (c['target'] or 0) > (top[k]['target'] or 0):
             top[k] = c
     strong = list(top.values())
+    # سهم پایه هم باید نقدشونده باشد؛ وگرنه حتی با احتمال و حجم شرط‌بندی کافی، سیگنال نمی‌شود (عدد نمی‌سازیم؛ اگر
+    # داده‌ی حجمِ سهم نیامد، کنار نمی‌گذاریم چون نمی‌دانیم، رد نمی‌کنیم)
+    dv = dollar_vol({c['yahoo'] for c in strong})
+    illiquid_underlying = sum(1 for c in strong if c['yahoo'] in dv and dv[c['yahoo']] < MIN_STOCK_DOLLAR_VOL)
+    strong = [c for c in strong if c['yahoo'] not in dv or dv[c['yahoo']] >= MIN_STOCK_DOLLAR_VOL]
     hp = [c for c in cands if c['prob'] >= MIN_PROB]
     vstat = {'prob70_total': len(hp), 'vol>=10k': sum(c['volume'] >= 10000 for c in hp),
              'vol>=1k': sum(c['volume'] >= 1000 for c in hp), 'vol>=100': sum(c['volume'] >= 100 for c in hp),
              'event_vol>=10k': sum(c['event_vol'] >= 10000 for c in hp),
              'max_vol': max([c['volume'] for c in hp] or [0]),
+             'illiquid_underlying_excluded': illiquid_underlying,
              'top': sorted([[c['question'], round(c['prob'], 3), round(c['volume']), round(c['event_vol'])] for c in hp],
                            key=lambda x: -x[2])[:25]}
     low_vol = sum(1 for c in cands if c['prob'] >= MIN_PROB and c['volume'] < MIN_VOL)
