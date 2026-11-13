@@ -158,11 +158,62 @@ def merge(res_path, codal_path, track_path):
     print(json.dumps({'new': new, 'pass': len(passed), 'fail': len(failed), 'missing': len(missing)}, ensure_ascii=False), file=sys.stderr)
 
 
+OPT_MSG = os.path.join(OUT, 'options_message.txt')
+OPT_JSON = os.path.join(OUT, 'options_today.json')
+MAX_RATIO = 2.0  # قراردادی که نوسان ضمنی‌اش بیش از دو برابر نوسان واقعی پایه است «گران» حساب می‌شود و نمی‌آید
+
+
+def options(res_path):
+    """پیام «موقعیت های آپشن ایران» را از خروجی iran/browser/options_screen.js می‌سازد (فقط همان عددها)."""
+    d = jload(res_path, None)
+    if not d or d.get('error') or 'cov' not in d:
+        sys.exit('options: نتیجه‌ی معتبر نیست: ' + json.dumps(d, ensure_ascii=False)[:200])
+    os.makedirs(OUT, exist_ok=True)
+    json.dump(d, open(OPT_JSON, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    c = d['cov']
+
+    def row(i, x, sign):
+        return [f"{fa(i)}. {x['sym']} — {x['und']} (قیمت {x['S']:,.0f}) | اعمال {x['K']:,.0f} | سررسید {x['exp'][5:]} ({fa(x['dte'])} روز)",
+                f"   قیمت آپشن {x['prem']:,.0f} ریال | سربه‌سر: پایه باید {abs(x['be']):.1f}٪ {sign} برود | {fa(x['trades'])} معامله",
+                f"   نوسان ضمنی {fa(x['iv'])}٪ در برابر واقعی {fa(x['hv'])}٪ ({x['ratio']:.1f} برابر) | بازده ۲۰ روزه‌ی پایه {x['ret20']:+.1f}٪"]
+
+    L = ['🎯 موقعیت های آپشن ایران',
+         f"آخرین جلسه: {d.get('date', '؟')} | {fa(c['total'])} قرارداد، {fa(c['traded'])} تا معامله شدند روی {fa(d['unds'])} دارایی پایه؛ "
+         f"{fa(d['liq'])} تا نقدشونده بودند ({fa(d['liqCalls'])} کال، {fa(d['liqPuts'])} پوت).", '']
+    calls = [x for x in d.get('calls', []) if x['ratio'] <= MAX_RATIO]
+    puts = [x for x in d.get('puts', []) if x['ratio'] <= MAX_RATIO]
+    if calls:
+        L.append('📈 کال (پایه بالای میانگین ۵۰ روزه؛ از ارزان به گران):')
+        for i, x in enumerate(calls, 1):
+            L += row(i, x, 'بالا')
+    else:
+        L.append('📈 کال: امروز کال نقدشونده‌ای با قیمت قابل‌قبول روی پایه‌ی صعودی نبود.')
+    L.append('')
+    if puts:
+        L.append('📉 پوت (پایه زیر میانگین ۵۰ روزه؛ از ارزان به گران):')
+        for i, x in enumerate(puts, 1):
+            L += row(i, x, 'پایین')
+    else:
+        dn = d.get('undsDown') or []
+        L.append('📉 پوت: امروز پوت نقدشونده‌ای با قیمت قابل‌قبول روی پایه‌ی نزولی نبود'
+                 + (f" (پایه‌های زیر میانگین ۵۰ روزه: {'، '.join(dn[:8])})." if dn else '.'))
+    L += ['', f"نوسان ضمنی با نرخ بهره‌ی {fa(d['rate'])}٪ حساب شده (میانه‌ی {fa(d['ratePairs'])} جفت کال/پوت بازار؛ بیشتر جفت‌ها بین {fa(d['rateLo'])} تا {fa(d['rateHi'])}٪)، پس تقریبی است. "
+              'قیمت‌ها قیمت پایانی جلسه است.']
+    skipped = c.get('unparsed', 0) + c.get('noUnd', 0) + c.get('noDate', 0)
+    if skipped:
+        L.append(f"⚠️ {fa(skipped)} قرارداد خوانده نشد (نام یا تاریخ ناشناخته).")
+    L += ['صرفاً غربال‌گری برای بررسی بیشتر؛ توصیه‌ی خرید نیست. خریدار آپشن ممکن است کل مبلغ پرداختی را از دست بدهد.']
+    open(OPT_MSG, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    print('\n'.join(L))
+
+
 if __name__ == '__main__':
     cmd = sys.argv[1]
     if cmd == 'plan':
         plan(sys.argv[2])
     elif cmd == 'merge':
         merge(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif cmd == 'options':
+        options(sys.argv[2])
     else:
-        sys.exit('plan | merge')
+        sys.exit('plan | merge | options')
