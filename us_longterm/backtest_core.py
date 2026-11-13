@@ -28,8 +28,12 @@ def metrics(r, name):
 
 
 def run(ticker, start):
-    px = yf.download([ticker, 'SHY'], start=start, interval='1d', auto_adjust=True, progress=False)['Close']
+    px = pd.concat({t: yf.download(t, start=start, interval='1d', auto_adjust=True, progress=False, threads=False)['Close'].squeeze()
+                    for t in (ticker, 'SHY')}, axis=1)
+    print(ticker, 'قیمت‌های SHY:', int(px['SHY'].notna().sum()), 'روز؛', ticker, int(px[ticker].notna().sum()), 'روز')
+    assert px['SHY'].notna().sum() > 1000, 'داده‌ی SHY نیامد'
     m = px.resample('ME').last()
+    m = m.iloc[:-1] if px.index[-1] < m.index[-1] else m      # ماه ناقص حذف شود
     ret = m.pct_change()
     cash = ret['SHY'].fillna(0.0)
     asset = ret[ticker]
