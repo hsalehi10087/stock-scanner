@@ -1,0 +1,43 @@
+name: 🔮 Polymarket stock forecasts — manual test run (daily run is part of the morning digest)
+
+on:
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت (none = بدون ارسال)'
+        required: false
+        default: 'none'
+      dry:
+        description: 'بدون ثبت در تاریخچه (true/false)'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas requests matplotlib arabic-reshaper python-bidi
+      - env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id }}
+          POLY_DRY: ${{ github.event.inputs.dry }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/polymarket.py
+      - name: Save data
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Polymarket Agent"
+          git add -f data/polymarket || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "🔮 polymarket $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done
