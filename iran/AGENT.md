@@ -15,11 +15,14 @@
 2. `browser_evaluate` با محتوای `iran/browser/screen_stage1.js` ← حدود ۱ دقیقه؛ با `browser_run_code_unsafe` ( `await new Promise(r=>setTimeout(r,40000)); return page.evaluate(()=>({s:IR.status,done:IR.done,total:IR.total}))` ) صبر کن تا `s == "tech_done"`.
 3. `browser_evaluate` با `iran/browser/screen_stage2.js` را اجرا کن؛ بعدش این را بزن تا نتیجه‌ی فشرده بیاید و در `window.name` هم بماند:
    ```js
-   () => { const ok = IR.final; const d = IR.tech.map(x=>x.date).sort();
+   () => { const ok = IR.final; const finalSyms = new Set(ok.map(x=>x.sym)); const d = IR.tech.map(x=>x.date).sort();
+     const techOnly = IR.tech.filter(x=>!finalSyms.has(x.sym));
      const res = {meta:{all:IR.all,total:IR.total,liquid:IR.liquid,tech:IR.tech.length,date:d[d.length-1]},
-       final: ok.map(x=>({code:x.code,sym:x.sym,name:x.name,last:x.last,st:x.st,cp:x.cp,cps:x.cps,rank:x.rank,fpe:x.fpe,spe:x.spe,sector:x.sector,date:x.date}))};
+       final: ok.map(x=>({code:x.code,sym:x.sym,name:x.name,last:x.last,st:x.st,cp:x.cp,cps:x.cps,rank:x.rank,fpe:x.fpe,spe:x.spe,sector:x.sector,date:x.date})),
+       tech_only: techOnly.map(x=>({sym:x.sym,name:x.name,last:x.last,st:x.st,cp:x.cp,cps:x.cps,rank:x.rank}))};
      window.name = JSON.stringify({syms: ok.map(x=>x.sym), res}); return res; }
    ```
+   `tech_only` یعنی سهمی که فقط از صافی تکنیکال رد شده (بدون تایید P/E یا رشد کدال)؛ در گزارش به‌عنوان «فقط تکنیکال» جداگانه آمده، در تاریخچه/پیگیری سود و زیان ثبت نمی‌شود.
    نتیجه را در `/tmp/results.json` ذخیره کن.
 4. `python3 iran/iran_agent.py plan /tmp/results.json` ← `{"syms":[...]}` نمادهایی که رشد کدالشان باید گرفته شود (کش ۳۰ روزه).
 5. اگر `syms` خالی نیست: `browser_navigate https://www.codal.ir/` ، `window.name = JSON.stringify({syms})` ، سپس `browser_run_code_unsafe` با `iran/browser/codal_growth.js`.

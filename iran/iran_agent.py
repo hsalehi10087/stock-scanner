@@ -156,6 +156,13 @@ def merge(res_path, codal_path, track_path):
     if dissolved:
         L += ['', f"🚫 {fa(len(dissolved))} سهم به‌دلیل در حال انحلال/تصفیه بودن کنار گذاشته شد: "
                   + '، '.join(x['sym'] for x, _ in dissolved[:15]) + (' …' if len(dissolved) > 15 else '')]
+    tech_only = res.get('tech_only') or []
+    if tech_only:
+        L += ['', f"📊 فقط از نظر تکنیکال در حال رشدند ({fa(len(tech_only))} سهم؛ P/E و رشد کدال تایید/رد نشده، در تاریخچه ثبت و دنبال نمی‌شود):"]
+        for i, x in enumerate(sorted(tech_only, key=lambda x: (-len(x['st']), -x['rank']))[:10], 1):
+            st = '، '.join(SETUP_FA.get(s, s) for s in x['st'])
+            L += [f"{fa(i)}. {x['sym']} — {x['name'].strip()} | قیمت {x['last']:,.0f} ریال",
+                  f"   📊 {st}", f"   🗺 {({'up': 'روند صعودی', 'down': 'روند نزولی', 'range': 'خنثی'}).get(x['cp'], x['cp'])} (امتیاز نمودار {fa(x['cps'])} از ۳)"]
     ok = [t for t in trk if t.get('ret_pct') is not None]
     old = [t for t in ok if (today - dt.date.fromisoformat(t['date'])).days >= 1]
     if old:
