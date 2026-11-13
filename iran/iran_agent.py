@@ -7,6 +7,9 @@
                                    و پیام روزانه (سیگنال‌ها + بهترین/بدترین از روز سیگنال) را می‌سازد.
 قاعده‌ی بنیادی: P/E پیش‌بینی ≤ P/E گروه (از tsetmc)  و  رشد فروش > ۱۰٪  و  رشد سود خالص > ۱۵٪ (کدال، آخرین صورت مالی،
 با تطبیق «درصد تغییر» خود کدال). اگر داده‌ی کدال نیامد، سهم «ناقص» حساب می‌شود و سیگنال نمی‌شود (عدد نمی‌سازیم).
+دو استثنا: ۱) سهمی که عنوان یکی از اطلاعیه‌های اخیرش روی کدال نشان‌دهنده‌ی «در حال انحلال/تصفیه» است، کنار گذاشته
+می‌شود و حتی صورت مالی‌اش خوانده نمی‌شود. ۲) اگر «سود (زیان) انباشته» در صورت مالی هنوز منفی باشد (یعنی زیان‌های
+سال‌های قبل هنوز جبران نشده و سود این دوره فقط مقطعی است)، سهم رد می‌شود حتی اگر از صافی رشد گذشته باشد.
 """
 import csv
 import datetime as dt
@@ -61,10 +64,20 @@ def need_fetch(cache, sym, today):
 
 
 def status(c):
-    """pass / fail / missing"""
-    if not c or c.get('none') or c.get('rev_growth') is None or c.get('np_growth') is None or not c.get('verified'):
+    """pass / fail / missing / dissolved"""
+    if not c:
         return 'missing'
-    return 'pass' if c['rev_growth'] > MIN_REV and c['np_growth'] > MIN_NP else 'fail'
+    if c.get('none') == 'dissolution':
+        return 'dissolved'
+    if c.get('none') or c.get('rev_growth') is None or c.get('np_growth') is None or not c.get('verified'):
+        return 'missing'
+    if c['rev_growth'] <= MIN_REV or c['np_growth'] <= MIN_NP:
+        return 'fail'
+    # سود مقطعی بعد از سال‌ها زیان: اگر "سود (زیان) انباشته" هنوز منفی باشد (زیان انباشته‌ی تاریخی جبران نشده)،
+    # این سود این دوره را سیگنال نمی‌کنیم، حتی اگر از صافی رشد گذشته باشد.
+    if c.get('accum') is not None and c['accum'] < 0:
+        return 'fail'
+    return 'pass'
 
 
 def plan(res_path):
@@ -97,11 +110,11 @@ def merge(res_path, codal_path, track_path):
     os.makedirs(OUT, exist_ok=True)
     json.dump(cache, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
-    passed, failed, missing = [], [], []
+    passed, failed, missing, dissolved = [], [], [], []
     for x in res['final']:
         c = cache.get(x['sym'])
         s = status(c)
-        {'pass': passed, 'fail': failed, 'missing': missing}[s].append((x, c))
+        {'pass': passed, 'fail': failed, 'missing': missing, 'dissolved': dissolved}[s].append((x, c))
 
     hist = read_hist()
     have = {h['ticker'] for h in hist}
@@ -140,6 +153,9 @@ def merge(res_path, codal_path, track_path):
     if missing:
         L += ['', f"⚠️ رشد کدال برای {fa(len(missing))} سهم هنوز خوانده نشده (کدال محدودیت دارد؛ به‌تدریج تکمیل می‌شود): "
                   + '، '.join(x['sym'] for x, _ in missing[:15]) + (' …' if len(missing) > 15 else '')]
+    if dissolved:
+        L += ['', f"🚫 {fa(len(dissolved))} سهم به‌دلیل در حال انحلال/تصفیه بودن کنار گذاشته شد: "
+                  + '، '.join(x['sym'] for x, _ in dissolved[:15]) + (' …' if len(dissolved) > 15 else '')]
     ok = [t for t in trk if t.get('ret_pct') is not None]
     old = [t for t in ok if (today - dt.date.fromisoformat(t['date'])).days >= 1]
     if old:
