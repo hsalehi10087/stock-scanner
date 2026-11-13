@@ -26,6 +26,9 @@ MIN_VOLUME = 100_000
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; gainers-scan/1.0)'}
 
 
+NOT_COMMON = re.compile(r'warrant|\bright(s)?\b|\bunit(s)?\b|\bpreferred\b', re.I)
+
+
 def universe():
     out = {}
     for url, sym_col in [('https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt', 'Symbol'),
@@ -35,7 +38,7 @@ def universe():
         df = pd.read_csv(io.StringIO(r.text), sep='|', dtype=str)
         df = df[(df['Test Issue'] == 'N') & (df['ETF'] == 'N')]
         for sym, name in zip(df[sym_col], df['Security Name']):
-            if isinstance(sym, str) and re.fullmatch(r'[A-Z]{1,5}', sym):
+            if isinstance(sym, str) and re.fullmatch(r'[A-Z]{1,5}', sym) and not NOT_COMMON.search(name or ''):
                 out.setdefault(sym, name)
     return out
 
