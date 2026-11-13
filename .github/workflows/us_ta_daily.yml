@@ -1,0 +1,58 @@
+name: 🤖 TradingAgents daily + weekly track
+on:
+  schedule:
+    - cron: '30 22 * * 1-5'   # روزهای کاری، بعد از بسته‌شدن بازار آمریکا و ساخته‌شدن سیگنال‌ها
+    - cron: '0 6 * * 6'       # شنبه: گزارش هفتگی عملکرد
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'review یا track'
+        required: false
+        default: 'review'
+permissions:
+  contents: write
+concurrency: ta-daily
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests yfinance pandas git+https://github.com/TauricResearch/TradingAgents.git
+      - name: Decide mode
+        id: m
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "0 6 * * 6" ]; then echo "mode=track" >> $GITHUB_OUTPUT
+          else echo "mode=${{ github.event.inputs.mode || 'review' }}" >> $GITHUB_OUTPUT; fi
+      - name: Review (log only, no Telegram)
+        if: steps.m.outputs.mode == 'review'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_CHAT_ID: none
+          TA_LOG: '1'
+          TA_MAX: '3'
+          TRADINGAGENTS_LLM_PROVIDER: anthropic
+          TRADINGAGENTS_QUICK_THINK_LLM: claude-sonnet-5
+          TRADINGAGENTS_DEEP_THINK_LLM: claude-sonnet-5
+          TRADINGAGENTS_OUTPUT_LANGUAGE: Persian
+          TRADINGAGENTS_MAX_DEBATE_ROUNDS: '1'
+          TRADINGAGENTS_MAX_RISK_ROUNDS: '1'
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::warning::ANTHROPIC_API_KEY تنظیم نشده؛ امروز اجرا نشد"; exit 0; fi
+          python3 us_longterm/ta_review.py
+      - name: Weekly track
+        if: steps.m.outputs.mode == 'track'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: '75439320'
+        run: python3 us_longterm/ta_track.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "TA Bot"
+          git add -f data/ta_review || true
+          git diff --cached --quiet || (git commit -m "🤖 TA log" && git pull --rebase -q && git push -q)

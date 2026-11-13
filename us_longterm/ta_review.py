@@ -17,6 +17,14 @@ else:
     sig = d.get('markets', {}).get('us', {}).get('signals', [])
     sig = sorted(sig, key=lambda s: -(s.get('profit_streak') or 0))
     tickers = [s['ticker'] for s in sig]
+    price_of = {s['ticker']: s.get('price') for s in sig}
+    # سهم‌هایی که در ۳۰ روز گذشته بررسی شده‌اند دوباره بررسی نمی‌شوند
+    import csv
+    LOG = 'data/ta_review/history.csv'
+    if os.path.exists(LOG):
+        cut = (dt.date.today() - dt.timedelta(days=30)).isoformat()
+        seen = {r['ticker'] for r in csv.DictReader(open(LOG, encoding='utf-8')) if r['date'] >= cut}
+        tickers = [t for t in tickers if t not in seen]
 tickers = tickers[:MAX_N]
 if not tickers:
     print('no tickers'); sys.exit(0)
@@ -27,15 +35,26 @@ cfg = DEFAULT_CONFIG.copy()
 date = dt.date.today().isoformat()
 
 out = []
+rows = []
 for t in tickers:
     try:
         ta = TradingAgentsGraph(debug=False, config=cfg)
         state, rating = ta.propagate(t, date)
         txt = str(state.get('final_trade_decision', ''))[:900]
         out.append(f"📌 {t}: {rating}\n{txt}")
+        rows.append((date, t, rating, price_of.get(t) if not tick_in else ''))
     except Exception as e:
         out.append(f"📌 {t}: ❌ خطا ({type(e).__name__}: {str(e)[:150]})")
     print(out[-1][:300], flush=True)
+
+if os.getenv('TA_LOG') == '1' and rows:
+    import csv
+    os.makedirs('data/ta_review', exist_ok=True)
+    new = not os.path.exists('data/ta_review/history.csv')
+    with open('data/ta_review/history.csv', 'a', newline='', encoding='utf-8') as f:
+        w = csv.writer(f)
+        if new: w.writerow(['date', 'ticker', 'rating', 'price'])
+        w.writerows(rows)
 
 msg = (f"🤖 بررسی TradingAgents ({date})\n"
        "روی سیگنال‌های رشد آمریکا؛ فقط نظر مدل است، توصیه‌ی مالی و تأییدشده نیست.\n\n"
