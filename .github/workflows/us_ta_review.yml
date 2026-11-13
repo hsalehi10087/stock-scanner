@@ -1,0 +1,42 @@
+name: 🤖 TradingAgents review (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      tickers:
+        description: 'سهم‌ها (اختیاری، با فاصله). خالی = سیگنال‌های امروز'
+        required: false
+        default: ''
+      max:
+        description: 'حداکثر تعداد سهم'
+        required: false
+        default: '3'
+      dry:
+        description: 'فقط چاپ، بدون ارسال تلگرام (true/false)'
+        required: false
+        default: 'true'
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests git+https://github.com/TauricResearch/TradingAgents.git
+      - name: Run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.dry == 'false' && '75439320' || 'none' }}
+          TA_TICKERS: ${{ github.event.inputs.tickers }}
+          TA_MAX: ${{ github.event.inputs.max }}
+          TRADINGAGENTS_LLM_PROVIDER: anthropic
+          TRADINGAGENTS_QUICK_THINK_LLM: claude-sonnet-5
+          TRADINGAGENTS_DEEP_THINK_LLM: claude-sonnet-5
+          TRADINGAGENTS_OUTPUT_LANGUAGE: Persian
+          TRADINGAGENTS_MAX_DEBATE_ROUNDS: '1'
+          TRADINGAGENTS_MAX_RISK_ROUNDS: '1'
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "❌ secret ANTHROPIC_API_KEY تنظیم نشده"; exit 1; fi
+          python3 us_longterm/ta_review.py
