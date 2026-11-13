@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T15:03:58+00:00",
+ "updated": "2026-11-13T21:29:45+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -46,10 +46,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 6.5,
+    "cagr": 6.57,
     "sharpe": 0.46,
     "max_dd": -38.39,
-    "total": 251.32
+    "total": 256.02
    },
    "in_sample": {
     "cagr": 4.04,
@@ -58,22 +58,22 @@
     "total": 73.98
    },
    "out_sample": {
-    "cagr": 12.45,
-    "sharpe": 0.81,
+    "cagr": 12.7,
+    "sharpe": 0.83,
     "max_dd": -32.57,
-    "total": 101.94
+    "total": 104.64
    },
    "buyhold_full": {
-    "cagr": 10.1,
+    "cagr": 10.19,
     "sharpe": 0.45,
     "max_dd": -96.22,
-    "total": 581.95
+    "total": 592.76
    },
    "buyhold_out_sample": {
-    "cagr": 13.09,
-    "sharpe": 0.49,
+    "cagr": 13.39,
+    "sharpe": 0.5,
     "max_dd": -59.97,
-    "total": 108.93
+    "total": 112.25
    },
    "trades": 135,
    "win_rate": 82.2,
@@ -369,16 +369,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.01,
-    "sharpe": -0.11,
-    "max_dd": -83.22,
-    "total": -67.86
+    "cagr": -5.08,
+    "sharpe": -0.12,
+    "max_dd": -83.49,
+    "total": -68.37
    },
    "in_sample": {
-    "cagr": -9.02,
-    "sharpe": -0.28,
-    "max_dd": -78.62,
-    "total": -76.77
+    "cagr": -9.11,
+    "sharpe": -0.29,
+    "max_dd": -78.96,
+    "total": -77.14
    },
    "out_sample": {
     "cagr": 4.59,
@@ -387,18 +387,18 @@
     "total": 34.6
    },
    "buyhold_full": {
-    "cagr": 5.1,
+    "cagr": 5.11,
     "sharpe": 0.31,
     "max_dd": -72.68,
-    "total": 199.54
+    "total": 200.26
    },
    "buyhold_out_sample": {
-    "cagr": 0.5,
-    "sharpe": 0.16,
+    "cagr": 0.54,
+    "sharpe": 0.17,
     "max_dd": -60.81,
-    "total": 3.35
+    "total": 3.6
    },
-   "trades": 634,
+   "trades": 635,
    "win_rate": 53.9,
    "avg_trade_pct": -0.07,
    "exposure": 0.7,
@@ -545,37 +545,37 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.16,
+    "cagr": 3.18,
     "sharpe": 0.63,
     "max_dd": -13.27,
-    "total": 185.58
+    "total": 187.71
    },
    "in_sample": {
-    "cagr": 3.7,
+    "cagr": 3.73,
     "sharpe": 0.74,
     "max_dd": -13.27,
-    "total": 135.71
+    "total": 137.47
    },
    "out_sample": {
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.16
+    "total": 21.15
    },
    "buyhold_full": {
-    "cagr": 10.71,
+    "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3004.61
+    "total": 3013.41
    },
    "buyhold_out_sample": {
-    "cagr": 15.02,
+    "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 312.64
+    "total": 313.81
    },
-   "trades": 91,
-   "win_rate": 81.3,
+   "trades": 92,
+   "win_rate": 81.5,
    "avg_trade_pct": 1.18,
    "exposure": 0.06,
    "period": "1993-02-01 → 2026-11-13",
@@ -613,10 +613,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.65,
-    "sharpe": 0.5,
+    "cagr": 10.77,
+    "sharpe": 0.51,
     "max_dd": -66.12,
-    "total": 305.79
+    "total": 312.09
    },
    "in_sample": {
     "cagr": 7.58,
@@ -625,22 +625,22 @@
     "total": 103.04
    },
    "out_sample": {
-    "cagr": 18.16,
-    "sharpe": 0.69,
+    "cagr": 18.6,
+    "sharpe": 0.7,
     "max_dd": -36.62,
-    "total": 100.01
+    "total": 103.12
    },
    "buyhold_full": {
-    "cagr": 25.33,
+    "cagr": 25.47,
     "sharpe": 0.78,
     "max_dd": -76.74,
-    "total": 2178.33
+    "total": 2213.7
    },
    "buyhold_out_sample": {
-    "cagr": 40.98,
+    "cagr": 41.5,
     "sharpe": 1.03,
     "max_dd": -41.3,
-    "total": 316.6
+    "total": 323.06
    },
    "trades": 94,
    "win_rate": 71.3,
@@ -649,7 +649,7 @@
    "period": "2013-01-02 → 2026-11-13",
    "oos_start": "2022-09-14",
    "forward_days": 16,
-   "forward_usd": 973.85,
+   "forward_usd": 988.97,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
   "40f0082a54-sp500-2x-golden-cross": {
@@ -686,7 +686,7 @@
     "cagr": 9.29,
     "sharpe": 0.79,
     "max_dd": -21.98,
-    "total": 1902.82
+    "total": 1908.49
    },
    "in_sample": {
     "cagr": 8.58,
@@ -695,22 +695,22 @@
     "total": 600.05
    },
    "out_sample": {
-    "cagr": 11.06,
+    "cagr": 11.09,
     "sharpe": 0.9,
     "max_dd": -21.98,
-    "total": 189.31
+    "total": 190.13
    },
    "buyhold_full": {
-    "cagr": 10.71,
+    "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3004.61
+    "total": 3013.41
    },
    "buyhold_out_sample": {
-    "cagr": 15.02,
+    "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 312.64
+    "total": 313.81
    },
    "trades": 24,
    "win_rate": 62.5,
@@ -719,7 +719,7 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 9,
-   "forward_usd": 999.97,
+   "forward_usd": 1002.81,
    "verdict": "قبول"
   },
   "43a8d23608-mnq-5min-box-breakout": {
@@ -769,16 +769,16 @@
     "total": 31.7
    },
    "buyhold_full": {
-    "cagr": 7.7,
-    "sharpe": 0.52,
+    "cagr": 7.67,
+    "sharpe": 0.51,
     "max_dd": -44.36,
-    "total": 248.7
+    "total": 247.09
    },
    "buyhold_out_sample": {
-    "cagr": 16.57,
+    "cagr": 16.46,
     "sharpe": 0.89,
-    "max_dd": -26.95,
-    "total": 116.97
+    "max_dd": -27.06,
+    "total": 115.97
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -866,7 +866,7 @@
     "cagr": 8.0,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1241.24
+    "total": 1245.04
    },
    "in_sample": {
     "cagr": 6.78,
@@ -875,22 +875,22 @@
     "total": 371.49
    },
    "out_sample": {
-    "cagr": 11.0,
-    "sharpe": 0.9,
+    "cagr": 11.03,
+    "sharpe": 0.91,
     "max_dd": -24.43,
-    "total": 187.66
+    "total": 188.48
    },
    "buyhold_full": {
-    "cagr": 10.71,
+    "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3004.61
+    "total": 3013.41
    },
    "buyhold_out_sample": {
-    "cagr": 15.02,
+    "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 312.64
+    "total": 313.81
    },
    "trades": 102,
    "win_rate": 25.5,
@@ -899,7 +899,7 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 14,
-   "forward_usd": 982.64,
+   "forward_usd": 985.42,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -1041,10 +1041,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -13.0,
+    "cagr": -12.99,
     "sharpe": -0.8,
     "max_dd": -28.53,
-    "total": -24.23
+    "total": -24.22
    },
    "in_sample": {
     "cagr": -11.23,
@@ -1053,22 +1053,22 @@
     "total": -15.31
    },
    "out_sample": {
-    "cagr": -16.99,
+    "cagr": -16.96,
     "sharpe": -1.22,
-    "max_dd": -13.68,
-    "total": -10.53
+    "max_dd": -13.67,
+    "total": -10.52
    },
    "buyhold_full": {
-    "cagr": -11.63,
-    "sharpe": -0.06,
+    "cagr": -11.9,
+    "sharpe": -0.07,
     "max_dd": -53.99,
-    "total": -21.84
+    "total": -22.31
    },
    "buyhold_out_sample": {
-    "cagr": -6.36,
-    "sharpe": 0.02,
+    "cagr": -5.78,
+    "sharpe": 0.03,
     "max_dd": -29.65,
-    "total": -3.85
+    "total": -3.5
    },
    "trades": 133,
    "win_rate": 29.3,
@@ -1076,7 +1076,7 @@
    "exposure": 0.17,
    "period": "2024-11-15 → 2026-11-13",
    "oos_start": "2026-04-09",
-   "forward_days": 87,
+   "forward_days": 93,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1096,42 +1096,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 2.66,
-    "sharpe": 0.39,
+    "cagr": 2.53,
+    "sharpe": 0.37,
     "max_dd": -11.77,
-    "total": 7.82
+    "total": 7.4
    },
    "in_sample": {
-    "cagr": 4.96,
+    "cagr": 5.01,
     "sharpe": 0.7,
     "max_dd": -5.63,
-    "total": 10.21
+    "total": 10.29
    },
    "out_sample": {
-    "cagr": -2.51,
-    "sharpe": -0.31,
+    "cagr": -3.01,
+    "sharpe": -0.37,
     "max_dd": -7.25,
-    "total": -2.17
+    "total": -2.59
    },
    "buyhold_full": {
-    "cagr": 35.65,
-    "sharpe": 1.2,
+    "cagr": 35.95,
+    "sharpe": 1.21,
     "max_dd": -28.12,
-    "total": 139.97
+    "total": 140.95
    },
    "buyhold_out_sample": {
-    "cagr": -1.94,
-    "sharpe": 0.04,
-    "max_dd": -19.48,
-    "total": -1.68
+    "cagr": -1.63,
+    "sharpe": 0.05,
+    "max_dd": -20.02,
+    "total": -1.4
    },
-   "trades": 95,
-   "win_rate": 33.7,
-   "avg_trade_pct": 0.18,
-   "exposure": 0.38,
+   "trades": 96,
+   "win_rate": 32.3,
+   "avg_trade_pct": 0.17,
+   "exposure": 0.39,
    "period": "2023-12-19 → 2026-11-13",
-   "oos_start": "2025-12-31",
-   "forward_days": 22,
+   "oos_start": "2025-12-30",
+   "forward_days": 28,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1333,16 +1333,16 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 22.09,
+    "cagr": 22.02,
     "sharpe": 0.66,
     "max_dd": -93.96,
-    "total": 505.22
+    "total": 501.79
    },
    "buyhold_out_sample": {
-    "cagr": -18.17,
+    "cagr": -18.34,
     "sharpe": 0.04,
     "max_dd": -67.61,
-    "total": -41.89
+    "total": -42.22
    },
    "trades": 221,
    "win_rate": 51.6,
@@ -1369,10 +1369,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 9.43,
+    "cagr": 9.44,
     "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 1993.71
+    "total": 1999.63
    },
    "in_sample": {
     "cagr": 8.78,
@@ -1381,22 +1381,22 @@
     "total": 631.09
    },
    "out_sample": {
-    "cagr": 11.07,
+    "cagr": 11.1,
     "sharpe": 0.91,
     "max_dd": -20.16,
-    "total": 189.6
+    "total": 190.42
    },
    "buyhold_full": {
-    "cagr": 10.71,
+    "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3004.61
+    "total": 3013.41
    },
    "buyhold_out_sample": {
-    "cagr": 15.02,
+    "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 312.64
+    "total": 313.81
    },
    "trades": 14,
    "win_rate": 92.9,
@@ -1405,7 +1405,7 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 12,
-   "forward_usd": 973.81,
+   "forward_usd": 976.56,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "875f3b14a3-btc-rsi-double-bottom-engulfing": {
@@ -1439,34 +1439,34 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 7.25,
+    "cagr": 7.26,
     "sharpe": 0.5,
     "max_dd": -54.29,
-    "total": 592.87
+    "total": 594.48
    },
    "in_sample": {
     "cagr": 4.86,
     "sharpe": 0.37,
     "max_dd": -54.29,
-    "total": 150.41
+    "total": 150.4
    },
    "out_sample": {
-    "cagr": 13.11,
+    "cagr": 13.14,
     "sharpe": 0.78,
     "max_dd": -23.21,
-    "total": 177.84
+    "total": 178.49
    },
    "buyhold_full": {
-    "cagr": 10.5,
+    "cagr": 10.51,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1478.11
+    "total": 1481.79
    },
    "buyhold_out_sample": {
-    "cagr": 18.12,
+    "cagr": 18.15,
     "sharpe": 0.81,
     "max_dd": -35.12,
-    "total": 297.91
+    "total": 298.84
    },
    "trades": 94,
    "win_rate": 24.5,
@@ -1475,7 +1475,7 @@
    "period": "1999-03-10 → 2026-11-13",
    "oos_start": "2018-07-24",
    "forward_days": 5,
-   "forward_usd": 996.55,
+   "forward_usd": 998.87,
    "verdict": "قبول"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -1799,7 +1799,7 @@
     "cagr": 3.93,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.68
+    "total": 110.69
    },
    "out_sample": {
     "cagr": 3.3,
@@ -1808,16 +1808,16 @@
     "total": 30.88
    },
    "buyhold_full": {
-    "cagr": 10.5,
+    "cagr": 10.51,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1478.11
+    "total": 1481.79
    },
    "buyhold_out_sample": {
-    "cagr": 18.12,
+    "cagr": 18.15,
     "sharpe": 0.81,
     "max_dd": -35.12,
-    "total": 297.91
+    "total": 298.84
    },
    "trades": 55,
    "win_rate": 76.4,
@@ -1862,16 +1862,16 @@
     "total": 145.61
    },
    "buyhold_full": {
-    "cagr": 50.98,
+    "cagr": 50.91,
     "sharpe": 0.96,
     "max_dd": -83.4,
-    "total": 14933.24
+    "total": 14845.24
    },
    "buyhold_out_sample": {
-    "cagr": 27.67,
+    "cagr": 27.46,
     "sharpe": 0.76,
     "max_dd": -53.06,
-    "total": 144.01
+    "total": 142.58
    },
    "trades": 170,
    "win_rate": 40.0,
@@ -2010,16 +2010,16 @@
     "total": 50.93
    },
    "buyhold_full": {
-    "cagr": 10.5,
+    "cagr": 10.51,
     "sharpe": 0.51,
     "max_dd": -82.96,
-    "total": 1478.11
+    "total": 1481.79
    },
    "buyhold_out_sample": {
-    "cagr": 18.12,
+    "cagr": 18.15,
     "sharpe": 0.81,
     "max_dd": -35.12,
-    "total": 297.91
+    "total": 298.84
    },
    "trades": 196,
    "win_rate": 63.8,
