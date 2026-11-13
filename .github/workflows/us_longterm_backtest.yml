@@ -1,0 +1,24 @@
+name: 🧪 US long-term backtest (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy
+      - name: Core backtest
+        run: python3 us_longterm/backtest_core.py
+      - name: Save
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Backtest Bot"
+          git add -f data/us_longterm || true
+          git diff --cached --quiet || (git commit -m "🧪 core backtest" && git pull --rebase -q && git push -q)
