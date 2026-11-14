@@ -1,167 +1,167 @@
 {
- "date": "2026-11-13",
- "markets": 2939,
- "candidates": 1013,
- "strong": 2,
- "new": 2,
+ "date": "2026-11-14",
+ "markets": 2780,
+ "candidates": 752,
+ "strong": 0,
+ "new": 0,
  "log": [],
  "vstat": {
-  "prob70_total": 185,
-  "vol>=10k": 2,
-  "vol>=1k": 9,
-  "vol>=100": 50,
-  "event_vol>=10k": 10,
-  "max_vol": 530950.831692,
+  "prob70_total": 76,
+  "vol>=10k": 0,
+  "vol>=1k": 4,
+  "vol>=100": 22,
+  "event_vol>=10k": 12,
+  "max_vol": 5171.220738999999,
   "top": [
    [
-    "Will Anthropic's valuation hit (HIGH) $1.5T by December 31?",
-    0.784,
-    530951,
-    7794997
-   ],
-   [
-    "Will WTI Crude Oil (WTI) hit (HIGH) $90 in November?",
-    0.9,
-    23851,
-    2348600
-   ],
-   [
-    "S&P 500 (SPX) Opens Up or Down on November 13?",
-    1.0,
-    7024,
-    7024
-   ],
-   [
-    "S&P 500 (SPY) closes above $745 on November 13?",
-    0.831,
-    5862,
-    12115
+    "Will NVIDIA (NVDA) close above $150 end of November?",
+    0.716,
+    5171,
+    122587
    ],
    [
     "Will NVIDIA (NVDA) close above $140 end of November?",
-    0.821,
-    3947,
-    121104
+    0.82,
+    3971,
+    122587
    ],
    [
-    "Will Microsoft (MSFT) close above $510 on November 13?",
-    0.97,
-    2402,
-    4169
+    "Will Meta Platforms, Inc. (META) hit (HIGH) $660 in November?",
+    0.76,
+    2945,
+    39172
    ],
    [
     "Will SpaceX (SPCX) close above $110 end of November?",
-    0.944,
+    0.961,
     1517,
     1860
    ],
    [
-    "Will Meta (META) close above $620 on November 13?",
-    0.795,
-    1129,
-    1211
-   ],
-   [
-    "Will Google (GOOGL) finish week of November 9 above $255?",
-    0.895,
-    1121,
-    1131
-   ],
-   [
-    "Will Microsoft (MSFT) close above $500 on November 13?",
-    0.991,
-    803,
-    4169
-   ],
-   [
     "Will Tesla (TSLA) close above $350 end of November?",
-    0.855,
+    0.87,
     758,
     5027
    ],
    [
-    "Will Tesla (TSLA) finish week of November 9 above $380?",
-    0.868,
-    754,
-    8983
-   ],
-   [
     "Will Tesla (TSLA) close above $360 end of November?",
-    0.785,
+    0.81,
     648,
     5027
    ],
    [
-    "Will Broadcom (AVGO) Q4 AI revenue be above $20B?",
-    0.874,
-    566,
-    1643
-   ],
-   [
     "Will Microsoft (MSFT) close above $480 end of November?",
-    0.887,
+    0.918,
     550,
     2592
    ],
    [
     "Will Meta (META) close above $560 end of November?",
-    0.915,
+    0.95,
     541,
     3533
    ],
    [
-    "Will Meta (META) finish week of November 9 above $600?",
-    0.988,
-    510,
-    811
-   ],
-   [
-    "Will Broadcom (AVGO) Q4 AI revenue be above $21B?",
-    0.815,
-    501,
-    1643
-   ],
-   [
-    "Will NVIDIA (NVDA) Q3 Data Center revenue be above $100B?",
-    0.971,
-    487,
-    2309
-   ],
-   [
     "Will Apple (AAPL) close above $300 end of November?",
-    0.972,
+    0.942,
     453,
     779
    ],
    [
-    "Will NVIDIA (NVDA) close above $155 on November 13?",
-    0.89,
-    452,
-    7000
-   ],
-   [
     "Will Meta (META) close above $580 end of November?",
-    0.825,
+    0.855,
     445,
     3533
    ],
    [
     "Will Tesla (TSLA) close above $370 end of November?",
-    0.7,
+    0.73,
     441,
     5027
    ],
    [
-    "Will NVIDIA (NVDA) Q3 Data Center revenue be above $95B?",
-    0.981,
-    439,
-    2309
-   ],
-   [
     "Will Amazon (AMZN) close above $230 end of November?",
-    0.953,
+    0.755,
     420,
     658
+   ],
+   [
+    "Will Google (GOOGL) close above $260 end of November?",
+    0.898,
+    349,
+    2247
+   ],
+   [
+    "Will Microsoft (MSFT) close above $500 on November 16?",
+    0.91,
+    347,
+    552
+   ],
+   [
+    "Will Microsoft (MSFT) close above $450 end of November?",
+    0.971,
+    300,
+    2592
+   ],
+   [
+    "Will Netflix (NFLX) close above $60 end of November?",
+    0.715,
+    251,
+    361
+   ],
+   [
+    "Will Microsoft (MSFT) close above $435 end of November?",
+    0.982,
+    200,
+    2592
+   ],
+   [
+    "Will Google (GOOGL) close above $280 end of November?",
+    0.795,
+    200,
+    2247
+   ],
+   [
+    "S&P 500 (SPX) Opens Up or Down on November 16?",
+    0.7,
+    195,
+    195
+   ],
+   [
+    "Will Apple (AAPL) close above $310 end of November?",
+    0.903,
+    128,
+    779
+   ],
+   [
+    "Will Tesla (TSLA) close above $340 end of November?",
+    0.9,
+    110,
+    5027
+   ],
+   [
+    "Will Meta (META) close above $500 end of November?",
+    0.983,
+    100,
+    3533
+   ],
+   [
+    "Will Apple (AAPL) close above $330 end of November?",
+    0.925,
+    45,
+    779
+   ],
+   [
+    "S&P 500 (SPY) closes above $745 on November 16?",
+    0.71,
+    45,
+    3359
+   ],
+   [
+    "S&P 500 (SPY) closes above $735 on November 16?",
+    0.975,
+    43,
+    3359
    ]
   ]
  },
@@ -211,6 +211,7 @@
   "Will Meta Platforms, Inc. (META) hit (LOW) $520 in November?",
   "Will Meta Platforms, Inc. (META) hit (LOW) $500 in November?",
   "Will Meta Platforms, Inc. (META) hit (LOW) $600 in November?",
+  "Will Meta Platforms, Inc. (META) hit (LOW) $620 in November?",
   "Will Tesla, Inc. (TSLA) hit (LOW) $330 in November?",
   "Will Tesla, Inc. (TSLA) hit (LOW) $315 in November?",
   "Will Tesla, Inc. (TSLA) hit (LOW) $300 in November?",
@@ -224,7 +225,6 @@
   "Will NVIDIA (NVDA) hit (LOW) $136 in November?",
   "Will NVIDIA (NVDA) hit (LOW) $128 in November?",
   "Will NVIDIA (NVDA) hit (LOW) $120 in November?",
-  "Will NVIDIA (NVDA) hit (LOW) $160 in November?",
   "Will NVIDIA (NVDA) hit (LOW) $152 in November?"
  ],
  "candidate_sample": [
@@ -235,202 +235,207 @@
   ],
   [
    "Will Apple (AAPL) hit (HIGH) $400 in November?",
-   0.016,
+   0.007,
    931
   ],
   [
    "Will Apple (AAPL) hit (HIGH) $392 in November?",
-   0.041,
+   0.035,
    662
   ],
   [
    "Will Apple (AAPL) hit (HIGH) $384 in November?",
-   0.11,
+   0.065,
    266
   ],
   [
    "Will Apple (AAPL) hit (HIGH) $376 in November?",
-   0.29,
+   0.185,
    16676
   ],
   [
    "Will Apple (AAPL) hit (HIGH) $368 in November?",
-   0.55,
-   312
+   0.375,
+   318
+  ],
+  [
+   "Will Apple (AAPL) hit (HIGH) $360 in November?",
+   0.74,
+   0
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $615 in November?",
-   0.094,
+   0.071,
    55
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $600 in November?",
-   0.087,
+   0.111,
    527
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $585 in November?",
-   0.052,
+   0.066,
    1456
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $570 in November?",
-   0.13,
-   993
+   0.105,
+   1544
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $630 in November?",
-   0.041,
+   0.495,
    22
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $555 in November?",
-   0.285,
-   430
+   0.255,
+   450
   ],
   [
    "Will Microsoft Corporation (MSFT) hit (HIGH) $540 in November?",
-   0.545,
+   0.53,
    65
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $304 in November?",
-   0.067,
+   0.033,
    1085
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $296 in November?",
    0.11,
-   7439
+   7500
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $288 in November?",
-   0.22,
+   0.195,
    234
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $280 in November?",
-   0.405,
+   0.37,
    1143
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $312 in November?",
-   0.036,
+   0.058,
    5
   ],
   [
    "Will Amazon.com, Inc. (AMZN) hit (HIGH) $272 in November?",
-   0.74,
+   0.63,
    341
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $390 in November?",
-   0.018,
+   0.068,
    253
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $380 in November?",
-   0.024,
+   0.025,
    9045
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $370 in November?",
-   0.014,
+   0.011,
    398
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $360 in November?",
-   0.036,
+   0.038,
    251
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $350 in November?",
-   0.04,
+   0.029,
    489
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $340 in November?",
-   0.07,
-   818
+   0.125,
+   858
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $330 in November?",
-   0.12,
+   0.15,
    404
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $310 in November?",
-   0.455,
+   0.375,
    214
   ],
   [
    "Will Alphabet Inc. (GOOGL) hit (HIGH) $320 in November?",
-   0.23,
+   0.205,
    423
   ],
   [
+   "Will Alphabet Inc. (GOOGL) hit (HIGH) $300 in November?",
+   0.785,
+   1
+  ],
+  [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $780 in November?",
-   0.038,
+   0.101,
    205
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $760 in November?",
-   0.064,
+   0.102,
    627
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $740 in November?",
-   0.077,
+   0.089,
    2305
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $720 in November?",
-   0.14,
+   0.325,
    9114
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $700 in November?",
-   0.195,
+   0.26,
    727
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $680 in November?",
-   0.32,
+   0.53,
    865
   ],
   [
    "Will Meta Platforms, Inc. (META) hit (HIGH) $660 in November?",
-   0.505,
+   0.76,
    2945
   ],
   [
-   "Will Meta Platforms, Inc. (META) hit (HIGH) $640 in November?",
-   0.78,
-   2
-  ],
-  [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $465 in November?",
-   0.056,
+   0.055,
    2482
   ],
   [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $450 in November?",
-   0.14,
+   0.145,
    1935
   ],
   [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $435 in November?",
-   0.22,
+   0.19,
    720
   ],
   [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $420 in November?",
-   0.39,
+   0.38,
    3712
   ],
   [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $480 in November?",
-   0.048,
+   0.034,
    543
   ],
   [
@@ -440,22 +445,22 @@
   ],
   [
    "Will Tesla, Inc. (TSLA) hit (HIGH) $405 in November?",
-   0.62,
+   0.6,
    1881
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $264 in November?",
-   0.001,
-   742
+   0.035,
+   751
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $256 in November?",
-   0.018,
+   0.016,
    5237
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $248 in November?",
-   0.03,
+   0.018,
    472
   ],
   [
@@ -465,12 +470,12 @@
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $232 in November?",
-   0.033,
+   0.028,
    1654
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $224 in November?",
-   0.022,
+   0.021,
    5527
   ],
   [
@@ -480,32 +485,37 @@
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $208 in November?",
-   0.095,
+   0.09,
    24923
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $200 in November?",
-   0.14,
+   0.15,
    40297
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $192 in November?",
-   0.19,
-   2749
+   0.205,
+   2811
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $184 in November?",
-   0.32,
-   6807
+   0.305,
+   6838
   ],
   [
    "Will NVIDIA (NVDA) hit (HIGH) $176 in November?",
-   0.455,
+   0.545,
    545
   ],
   [
+   "Will NVIDIA (NVDA) hit (HIGH) $168 in November?",
+   0.73,
+   0
+  ],
+  [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $100 in November?",
-   0.019,
+   0.096,
    110
   ],
   [
@@ -515,7 +525,7 @@
   ],
   [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $90 in November?",
-   0.378,
+   0.145,
    88
   ],
   [
@@ -525,78 +535,78 @@
   ],
   [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $80 in November?",
-   0.011,
+   0.005,
    524
   ],
   [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $75 in November?",
-   0.021,
+   0.017,
    3162
   ],
   [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $70 in November?",
-   0.115,
-   2895
+   0.07,
+   2925
   ],
   [
    "Will Netflix, Inc. (NFLX) hit (HIGH) $65 in November?",
-   0.6,
+   0.43,
    0
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $234 in November?",
-   0.011,
+   0.006,
    390
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $228 in November?",
-   0.056,
+   0.058,
    1406
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $222 in November?",
-   0.089,
+   0.051,
    60
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $216 in November?",
-   0.046,
+   0.037,
    2898
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $210 in November?",
-   0.055,
+   0.103,
    2486
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $204 in November?",
-   0.075,
+   0.09,
    3720
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $198 in November?",
-   0.11,
+   0.16,
    6204
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $186 in November?",
-   0.245,
+   0.255,
    306
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $192 in November?",
-   0.165,
+   0.115,
    351
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $180 in November?",
-   0.41,
+   0.385,
    291
   ],
   [
    "Will Palantir Technologies Inc. (PLTR) hit (HIGH) $174 in November?",
-   0.605,
-   20
+   0.555,
+   50
   ],
   [
    "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $5.00 in November?",
@@ -605,28 +615,18 @@
   ],
   [
    "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $4.50 in November?",
-   0.39,
+   0.499,
    15
   ],
   [
    "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $4.00 in November?",
-   0.415,
+   0.48,
    5
   ],
   [
    "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $3.50 in November?",
    0.042,
    190
-  ],
-  [
-   "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $3.00 in November?",
-   0.042,
-   260
-  ],
-  [
-   "Will Opendoor Technologies Inc. (OPEN) hit (HIGH) $2.50 in November?",
-   0.11,
-   3700
   ]
  ]
 }
