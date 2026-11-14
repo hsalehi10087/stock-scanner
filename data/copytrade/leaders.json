@@ -1,207 +1,214 @@
 {
- "date": "2026-11-10",
- "spy3y": 0.762,
+ "date": "2026-11-14",
+ "spy3y": 0.743,
  "leaders": {
   "13F:Abrams Bison Investments": {
    "source": "13F",
-   "ret3y": 1.386,
-   "spy3y": 0.762,
+   "ret3y": 1.356,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:AKO Capital": {
    "source": "13F",
-   "ret3y": 0.701,
-   "spy3y": 0.762,
+   "ret3y": 0.569,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Alex Roepers - Atlantic Investment Management": {
    "source": "13F",
-   "ret3y": 0.055,
-   "spy3y": 0.762,
+   "ret3y": 0.03,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:AltaRock Partners": {
    "source": "13F",
-   "ret3y": 0.65,
-   "spy3y": 0.762,
+   "ret3y": 0.6,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Arnold Van Den Berg - Century Management": {
    "source": "13F",
-   "ret3y": 1.496,
-   "spy3y": 0.762,
+   "ret3y": 1.428,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bill & Melinda Gates Foundation Trust": {
    "source": "13F",
-   "ret3y": 0.752,
-   "spy3y": 0.762,
-   "active": false,
+   "ret3y": 0.745,
+   "spy3y": 0.743,
+   "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bill Ackman - Pershing Square Capital Management": {
    "source": "13F",
-   "ret3y": 0.582,
-   "spy3y": 0.762,
+   "ret3y": 0.518,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bill Miller - Miller Value Partners": {
    "source": "13F",
-   "ret3y": 0.495,
-   "spy3y": 0.762,
+   "ret3y": 0.478,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bill Nygren - Oakmark Funds": {
    "source": "13F",
-   "ret3y": 0.729,
-   "spy3y": 0.762,
+   "ret3y": 0.7,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bruce Berkowitz - Fairholme Capital": {
    "source": "13F",
-   "ret3y": 0.576,
-   "spy3y": 0.762,
+   "ret3y": 0.462,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Bryan Lawrence - Oakcliff Capital": {
    "source": "13F",
-   "ret3y": 1.312,
-   "spy3y": 0.762,
+   "ret3y": 1.415,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Carl Icahn - Icahn Capital Management": {
    "source": "13F",
-   "ret3y": 0.041,
-   "spy3y": 0.762,
+   "ret3y": -0.011,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Chase Coleman - Tiger Global Management": {
    "source": "13F",
-   "ret3y": 1.757,
-   "spy3y": 0.762,
+   "ret3y": 1.752,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Chris Hohn - TCI Fund Management": {
    "source": "13F",
-   "ret3y": 1.324,
-   "spy3y": 0.762,
+   "ret3y": 1.279,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Christopher Bloomstran - Semper Augustus": {
    "source": "13F",
-   "ret3y": 0.531,
-   "spy3y": 0.762,
+   "ret3y": 0.463,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Christopher Davis - Davis Advisors": {
    "source": "13F",
-   "ret3y": 0.756,
-   "spy3y": 0.762,
+   "ret3y": 0.741,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Chuck Akre - Akre Capital Management": {
    "source": "13F",
-   "ret3y": 0.345,
-   "spy3y": 0.762,
+   "ret3y": 0.302,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Clifford Sosin - CAS Investment Partners": {
    "source": "13F",
-   "ret3y": 9.006,
-   "spy3y": 0.762,
+   "ret3y": 7.893,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Daniel Loeb - Third Point": {
    "source": "13F",
-   "ret3y": 1.468,
-   "spy3y": 0.762,
+   "ret3y": 1.451,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:David Abrams - Abrams Capital Management": {
    "source": "13F",
-   "ret3y": 0.544,
-   "spy3y": 0.762,
+   "ret3y": 0.46,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:David Einhorn - Greenlight Capital": {
    "source": "13F",
-   "ret3y": 0.287,
-   "spy3y": 0.762,
+   "ret3y": 0.226,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:David Katz - Matrix Asset Advisors": {
    "source": "13F",
-   "ret3y": 0.84,
-   "spy3y": 0.762,
+   "ret3y": 0.811,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:David Rolfe - Wedgewood Partners": {
    "source": "13F",
-   "ret3y": 1.033,
-   "spy3y": 0.762,
+   "ret3y": 1.028,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:David Tepper - Appaloosa Management": {
    "source": "13F",
-   "ret3y": 2.577,
-   "spy3y": 0.762,
+   "ret3y": 2.636,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Dennis Hong - ShawSpring Partners": {
    "source": "13F",
-   "ret3y": 0.681,
-   "spy3y": 0.762,
+   "ret3y": 0.606,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Duan Yongping - H&H International Investment": {
    "source": "13F",
-   "ret3y": 0.845,
-   "spy3y": 0.762,
+   "ret3y": 0.834,
+   "spy3y": 0.743,
+   "active": true,
+   "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
+  },
+  "13F:First Eagle Investment Management": {
+   "source": "13F",
+   "ret3y": 0.887,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:First Pacific Advisors": {
    "source": "13F",
-   "ret3y": 0.819,
-   "spy3y": 0.762,
+   "ret3y": 0.759,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "13F:Francis Chou - Chou Associates": {
    "source": "13F",
-   "ret3y": 0.703,
-   "spy3y": 0.762,
+   "ret3y": 0.685,
+   "spy3y": 0.743,
    "active": false,
    "basis": "بازده ۳ ساله‌ی ۱۵ سهم اول پورتفوی"
   },
   "ARK:Cathie Wood": {
    "source": "ARK",
-   "ret3y": 0.9260004410953797,
-   "spy3y": 0.762,
+   "ret3y": 0.7876042073882181,
+   "spy3y": 0.743,
    "active": true,
    "basis": "بازده ۳ ساله‌ی ARKK"
   },
