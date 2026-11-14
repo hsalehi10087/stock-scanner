@@ -191,3 +191,8 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-13,ca,LBS.TO,LIFE & BANC SPLIT CORP.,11.92,36137.1992,trend|longpat,صورت مالی|کن‌اسلیم,1,0.698,شکست سقف ۵۲ هفته,1.7
 2026-11-13,au,PME.AX,PROMEDICUS FPO [PME],202.57,9082.2002,trend|longpat,کن‌اسلیم|بافت,3,0.128,کف دوقلو (شکست خط گردن),1.5
 2026-11-13,au,MPL.AX,MEDIBANK FPO [MPL],5.4,9082.2002,trend|longpat,کن‌اسلیم|بافت,3,0.091,شکست سقف ۵۲ هفته,1.7
+2026-11-14,us,CAKE,"The Cheesecake Factory, Inc.",109.11,754.37,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.633,مثلث صعودی,2.0
+2026-11-14,us,ELF,e.l.f. Beauty,117.98,754.37,trend|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.853,شکست سقف ۵۲ هفته,1.7
+2026-11-14,cn,601225.SS,SHAANXI COAL INDUSTRY,26.97,20.81,trend|longpat,بافت|کیفیت رشد,5,0.206,مثلث صعودی,2.0
+2026-11-14,jp,6869.T,SYSMEX CORP,2081.0,2494.0,trend|longpat,کیفیت رشد|سود پیاپی,4,0.904,شکست سقف ۵۲ هفته,1.7
+2026-11-14,tw,4916.TW,PARPRO CORPORATION,112.5,62.3,breakout|trend,صورت مالی|بافت,3,0.841,روند صعودی,1.0

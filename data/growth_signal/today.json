@@ -1,158 +1,132 @@
 {
- "date": "2026-11-13",
+ "date": "2026-11-14",
  "markets": {
   "us": {
-   "data_date": "2026-11-12",
-   "scored": 1479,
-   "technical": 179,
-   "checked": 4,
+   "data_date": "2026-11-13",
+   "scored": 1480,
+   "technical": 193,
+   "checked": 13,
    "signals": [
     {
-     "ticker": "CF",
-     "name": "CF Industries",
-     "price": 124.92,
+     "ticker": "CAKE",
+     "name": "The Cheesecake Factory, Inc.",
+     "price": 109.11,
      "setups": [
       "trend",
       "pullback",
       "longpat"
      ],
-     "tech_rank": 0.51,
+     "tech_rank": 0.633,
      "fundamentals": [
-      "صورت مالی",
-      "بافت",
       "کیفیت رشد",
       "سود پیاپی (SEC)"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 5,
+     "quality": "⭐۵/۵",
+     "profit_streak": 3,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
      "profit_more": true,
-     "chart": "کف دوقلو (در انتظار شکست)، فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.5,
+     "chart": "مثلث صعودی",
+     "chart_score": 2.0,
      "sec": {
-      "date": "2026-11-13",
-      "period_end": "2026-09-30",
+      "date": "2026-11-14",
+      "period_end": "2026-09-29",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 12.1,
-      "net_income_yoy": 13.0,
-      "eps_yoy": 31.1,
-      "profit_streak_yoy": 5,
-      "revenue_streak_yoy": 7,
-      "operating_margin": 37.7,
-      "margin_up": false,
-      "net_margin": 28.0,
-      "one_off": false,
-      "revenue_ttm": 7940000000,
-      "net_income_ttm": 2560000000,
-      "eps_ttm": 14.14
-     },
-     "k8": []
-    },
-    {
-     "ticker": "VEEV",
-     "name": "Veeva Systems",
-     "price": 302.42,
-     "setups": [
-      "trend",
-      "vcp",
-      "longpat"
-     ],
-     "tech_rank": 0.483,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
-      "سود پیاپی (SEC)"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 8,
-     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
-     "profit_more": true,
-     "chart": "فنجان‌ودسته (شکست سقف)",
-     "chart_score": 2.5,
-     "sec": {
-      "date": "2026-11-13",
-      "period_end": "2026-07-31",
-      "stale": false,
-      "derived": false,
-      "revenue_yoy": 17.6,
-      "net_income_yoy": 36.5,
-      "eps_yoy": 39.5,
-      "profit_streak_yoy": 8,
+      "revenue_yoy": 13.9,
+      "net_income_yoy": 92.2,
+      "eps_yoy": 80.3,
+      "profit_streak_yoy": 3,
       "revenue_streak_yoy": 8,
-      "operating_margin": 29.6,
+      "operating_margin": 7.2,
       "margin_up": false,
-      "net_margin": 29.5,
+      "net_margin": 5.9,
       "one_off": false,
-      "revenue_ttm": 3458098000,
-      "net_income_ttm": 1014772000,
-      "eps_ttm": 6.11
+      "revenue_ttm": 4003464000,
+      "net_income_ttm": 208017000,
+      "eps_ttm": 4.21
      },
      "k8": [
       [
-       "2026-11-06",
-       "2.02"
+       "2026-11-10",
+       "5.02"
       ]
      ]
+    },
+    {
+     "ticker": "ELF",
+     "name": "e.l.f. Beauty",
+     "price": 117.98,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.853,
+     "fundamentals": [
+      "کیفیت رشد",
+      "سود پیاپی (SEC)"
+     ],
+     "quality": "⭐۵/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 2,
+     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7,
+     "sec": {
+      "date": "2026-11-14",
+      "period_end": "2026-09-30",
+      "stale": false,
+      "derived": false,
+      "revenue_yoy": 51.4,
+      "net_income_yoy": 902.3,
+      "eps_yoy": 900.0,
+      "profit_streak_yoy": 2,
+      "revenue_streak_yoy": 8,
+      "operating_margin": 10.1,
+      "margin_up": false,
+      "net_margin": 5.8,
+      "one_off": false,
+      "revenue_ttm": 1938986000,
+      "net_income_ttm": 86640000,
+      "eps_ttm": 1.45
+     },
+     "k8": []
     }
    ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 0,
-    "rsi": 0,
+    "ext": 4,
+    "rsi": 1,
     "earn": 0,
-    "fund": 1,
-    "sec": 1
+    "fund": 8,
+    "sec": 3
    }
   },
   "cn": {
    "data_date": "2026-11-13",
-   "scored": 1498,
+   "scored": 1500,
    "technical": 22,
-   "checked": 6,
+   "checked": 14,
    "signals": [
     {
-     "ticker": "688131.SS",
-     "name": "SHANGHAI HAOYUAN CHEMEXPRESS CO",
-     "price": 93.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.686,
-     "fundamentals": [
-      "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "روند صعودی",
-     "chart_score": 1.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "000333.SZ",
-     "name": "MIDEA GROUP",
-     "price": 90.55,
+     "ticker": "601225.SS",
+     "name": "SHAANXI COAL INDUSTRY",
+     "price": 26.97,
      "setups": [
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.291,
+     "tech_rank": 0.206,
      "fundamentals": [
       "بافت",
-      "سود پیاپی"
+      "کیفیت رشد"
      ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 3,
+     "quality": "⭐۵/۵",
+     "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
+     "profit_more": false,
+     "chart": "مثلث صعودی",
+     "chart_score": 2.0,
      "sec": null,
      "k8": []
     }
@@ -160,89 +134,18 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 3,
+    "ext": 4,
     "rsi": 0,
     "earn": 0,
-    "fund": 4
+    "fund": 13
    }
   },
   "in": {
    "data_date": "2026-11-13",
-   "scored": 706,
+   "scored": 708,
    "technical": 78,
-   "checked": 14,
-   "signals": [
-    {
-     "ticker": "KRBL.NS",
-     "name": "KRBL Ltd.",
-     "price": 432.05,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.809,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 0,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "کف دوقلو (در انتظار شکست)، فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "MCX.NS",
-     "name": "Multi Commodity Exchange of India Ltd.",
-     "price": 3720.0,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.028,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "فنجان‌ودسته (شکست سقف)، مثلث صعودی، شکست سقف ۵۲ هفته",
-     "chart_score": 3.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "ENTERO.NS",
-     "name": "Entero Healthcare Solutions Ltd.",
-     "price": 1968.7,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.759,
-     "fundamentals": [
-      "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "checked": 11,
+   "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
@@ -256,51 +159,27 @@
    "data_date": "2026-11-13",
    "scored": 1499,
    "technical": 183,
-   "checked": 17,
+   "checked": 22,
    "signals": [
     {
-     "ticker": "4044.T",
-     "name": "CENTRAL GLASS CO",
-     "price": 4715.0,
+     "ticker": "6869.T",
+     "name": "SYSMEX CORP",
+     "price": 2081.0,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.275,
+     "tech_rank": 0.904,
      "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "کف دوقلو (شکست خط گردن)، سقف دوقلو (هشدار)، شکست سقف ۵۲ هفته",
-     "chart_score": 2.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "3989.T",
-     "name": "SHARINGTECHNOLOGY INC",
-     "price": 1549.0,
-     "setups": [
-      "trend",
-      "vcp",
-      "pullback"
-     ],
-     "tech_rank": 0.149,
-     "fundamentals": [
-      "بافت",
-      "کیفیت رشد"
+      "کیفیت رشد",
+      "سود پیاپی"
      ],
      "quality": "⭐۴/۵",
-     "profit_streak": null,
-     "profit_basis": "",
+     "profit_streak": 2,
+     "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7,
      "sec": null,
      "k8": []
     }
@@ -311,135 +190,65 @@
     "ext": 4,
     "rsi": 0,
     "earn": 0,
-    "fund": 15
+    "fund": 21
    }
   },
   "tw": {
    "data_date": "2026-11-13",
-   "scored": 1196,
+   "scored": 1200,
    "technical": 58,
-   "checked": 5,
+   "checked": 9,
    "signals": [
     {
-     "ticker": "2480.TW",
-     "name": "STARK TECHNOLOGY",
-     "price": 193.5,
+     "ticker": "4916.TW",
+     "name": "PARPRO CORPORATION",
+     "price": 112.5,
      "setups": [
       "breakout",
-      "trend",
-      "longpat"
+      "trend"
      ],
-     "tech_rank": 0.418,
+     "tech_rank": 0.841,
      "fundamentals": [
       "صورت مالی",
       "بافت"
      ],
-     "quality": "⭐۲/۵",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن",
      "profit_streak": 0,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 3.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "3374.TWO",
-     "name": "XINTEC INC",
-     "price": 519.0,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.173,
-     "fundamentals": [
-      "بافت",
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 8,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 3
-   }
-  },
-  "kr": {
-   "data_date": "2026-11-13",
-   "scored": 1197,
-   "technical": 25,
-   "checked": 8,
-   "signals": [
-    {
-     "ticker": "017890.KQ",
-     "name": "KAI",
-     "price": 15300.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.723,
-     "fundamentals": [
-      "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "profit_streak": 2,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
      "chart": "روند صعودی",
      "chart_score": 1.0,
      "sec": null,
      "k8": []
-    },
-    {
-     "ticker": "144960.KQ",
-     "name": "NPP",
-     "price": 14220.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.626,
-     "fundamentals": [
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
     }
    ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 6,
+    "ext": 12,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 8
+   }
+  },
+  "kr": {
+   "data_date": "2026-11-13",
+   "scored": 1200,
+   "technical": 24,
+   "checked": 9,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 11,
     "rsi": 0,
     "earn": 0,
-    "fund": 6
+    "fund": 9
    }
   },
   "hk": {
    "data_date": "2026-11-13",
-   "scored": 992,
+   "scored": 1000,
    "technical": 29,
    "checked": 18,
    "signals": [],
@@ -456,35 +265,12 @@
    "data_date": "2026-11-13",
    "scored": 346,
    "technical": 53,
-   "checked": 22,
-   "signals": [
-    {
-     "ticker": "CMCX.L",
-     "name": "CMC Markets",
-     "price": 705.199,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.89,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت"
-     ],
-     "quality": "⭐۱/۵ (۲ نامعلوم)",
-     "profit_streak": null,
-     "profit_basis": "",
-     "profit_more": false,
-     "chart": "سرووشانه، سرووشانه معکوس",
-     "chart_score": 1.0,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "checked": 21,
+   "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 3,
+    "ext": 2,
     "rsi": 2,
     "earn": 0,
     "fund": 21
@@ -493,107 +279,39 @@
   "de": {
    "data_date": "2026-11-13",
    "scored": 86,
-   "technical": 16,
+   "technical": 15,
    "checked": 7,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
     "ext": 0,
-    "rsi": 1,
+    "rsi": 0,
     "earn": 0,
     "fund": 7
    }
   },
   "ca": {
-   "data_date": "2026-11-12",
+   "data_date": "2026-11-13",
    "scored": 573,
-   "technical": 59,
-   "checked": 21,
-   "signals": [
-    {
-     "ticker": "LBS.TO",
-     "name": "LIFE & BANC SPLIT CORP.",
-     "price": 11.92,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.698,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم"
-     ],
-     "quality": "⭐۱/۵ (۳ نامعلوم) ⚠️رقیق‌شدن",
-     "profit_streak": null,
-     "profit_basis": "",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "technical": 63,
+   "checked": 19,
+   "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 5,
+    "ext": 4,
     "rsi": 2,
     "earn": 0,
-    "fund": 20
+    "fund": 19
    }
   },
   "au": {
    "data_date": "2026-11-13",
-   "scored": 461,
+   "scored": 462,
    "technical": 32,
-   "checked": 26,
-   "signals": [
-    {
-     "ticker": "PME.AX",
-     "name": "PROMEDICUS FPO [PME]",
-     "price": 202.57,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.128,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "بافت"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "profit_streak": null,
-     "profit_basis": "",
-     "profit_more": false,
-     "chart": "کف دوقلو (شکست خط گردن)",
-     "chart_score": 1.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "MPL.AX",
-     "name": "MEDIBANK FPO [MPL]",
-     "price": 5.4,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.091,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "بافت"
-     ],
-     "quality": "⭐۳/۵ (۱ نامعلوم)",
-     "profit_streak": null,
-     "profit_basis": "",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "checked": 24,
+   "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
