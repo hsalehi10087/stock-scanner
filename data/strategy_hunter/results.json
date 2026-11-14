@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:29:45+00:00",
+ "updated": "2026-11-14T13:55:27+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -548,31 +548,31 @@
     "cagr": 3.18,
     "sharpe": 0.63,
     "max_dd": -13.27,
-    "total": 187.71
+    "total": 188.04
    },
    "in_sample": {
     "cagr": 3.73,
     "sharpe": 0.74,
     "max_dd": -13.27,
-    "total": 137.47
+    "total": 137.74
    },
    "out_sample": {
     "cagr": 1.91,
     "sharpe": 0.38,
     "max_dd": -8.4,
-    "total": 21.15
+    "total": 21.16
    },
    "buyhold_full": {
     "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3013.41
+    "total": 3014.06
    },
    "buyhold_out_sample": {
     "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 313.81
+    "total": 313.9
    },
    "trades": 92,
    "win_rate": 81.5,
@@ -583,6 +583,22 @@
    "forward_days": 10,
    "forward_usd": 1000.0,
    "verdict": "رد: بازده نسبت به ریسک ضعیف"
+  },
+  "3a3fc0f101-kalshi-btc-15m-pullback-rsi": {
+   "name": "Kalshi BTC 15m pullback RSI",
+   "name_fa": "خرید در اصلاح بیت‌کوین در قراردادهای ۱۵ دقیقه‌ای Kalshi با RSI",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xvau5s/i_tested_100_versions_of_my_kalshi_bitcoin/",
+   "claim": "«وقتی RSI یک‌دقیقه‌ای دوباره از ۵۰ بالا برود و RSI پنج‌دقیقه‌ای دست‌کم ۶۰ باشد، ۵ قرارداد YES می‌خرد (و برعکس برای NO)، فقط ۳ تا ۱۰ دقیقه مانده به پایان، قیمت ۳۰ تا ۷۰ سنت و اسپرد حداکثر ۳ سنت؛ بک‌تست ۳۰ روزه +۱۷٫۶۷ دلار، ۸۸ از ۱۰۰ ترکیب مثبت، میانگین +۹٫۲۶ دلار، p-value جابه‌جایی ۰٫۰۶۹۳»",
+   "claimed_return": "+$17.67 در ۳۰ روز (۸۸ از ۱۰۰ ترکیب مثبت)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-14",
+   "status": "not_testable",
+   "reason_not_testable": "به کندل یک‌دقیقه‌ای و پنج‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست",
+   "verdict": "غیرقابل آزمون: به کندل یک‌دقیقه‌ای و پنج‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست"
   },
   "3efc371c2f-kronos-ai-eurusd-h1": {
    "name": "Kronos AI candle forecast strategy EURUSD H1",
@@ -683,10 +699,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 9.29,
+    "cagr": 9.3,
     "sharpe": 0.79,
     "max_dd": -21.98,
-    "total": 1908.49
+    "total": 1908.92
    },
    "in_sample": {
     "cagr": 8.58,
@@ -698,19 +714,19 @@
     "cagr": 11.09,
     "sharpe": 0.9,
     "max_dd": -21.98,
-    "total": 190.13
+    "total": 190.19
    },
    "buyhold_full": {
     "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3013.41
+    "total": 3014.06
    },
    "buyhold_out_sample": {
     "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 313.81
+    "total": 313.9
    },
    "trades": 24,
    "win_rate": 62.5,
@@ -719,7 +735,7 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 9,
-   "forward_usd": 1002.81,
+   "forward_usd": 1003.02,
    "verdict": "قبول"
   },
   "43a8d23608-mnq-5min-box-breakout": {
@@ -769,16 +785,16 @@
     "total": 31.7
    },
    "buyhold_full": {
-    "cagr": 7.67,
-    "sharpe": 0.51,
+    "cagr": 7.68,
+    "sharpe": 0.52,
     "max_dd": -44.36,
-    "total": 247.09
+    "total": 247.71
    },
    "buyhold_out_sample": {
-    "cagr": 16.46,
+    "cagr": 16.51,
     "sharpe": 0.89,
-    "max_dd": -27.06,
-    "total": 115.97
+    "max_dd": -26.95,
+    "total": 116.35
    },
    "trades": 186,
    "win_rate": 40.9,
@@ -866,7 +882,7 @@
     "cagr": 8.0,
     "sharpe": 0.7,
     "max_dd": -25.39,
-    "total": 1245.04
+    "total": 1245.32
    },
    "in_sample": {
     "cagr": 6.78,
@@ -878,19 +894,19 @@
     "cagr": 11.03,
     "sharpe": 0.91,
     "max_dd": -24.43,
-    "total": 188.48
+    "total": 188.54
    },
    "buyhold_full": {
     "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3013.41
+    "total": 3014.06
    },
    "buyhold_out_sample": {
     "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 313.81
+    "total": 313.9
    },
    "trades": 102,
    "win_rate": 25.5,
@@ -899,7 +915,7 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 14,
-   "forward_usd": 985.42,
+   "forward_usd": 985.63,
    "verdict": "قبول"
   },
   "4e5794da7c-spy-qqq-gex-option-selling": {
@@ -994,6 +1010,23 @@
    "reason_not_testable": "سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است",
    "verdict": "غیرقابل آزمون: سبد چند ETF با وزن ثابت است و موتور فقط یک دارایی را می‌آزماید؛ RSST و GDE از ۲۰۲۲–۲۰۲۳ داده دارند و بقیه شبیه‌سازی است"
   },
+  "654e45cbca-qqq-tqqq-put-credit-spread-exits": {
+   "name": "QQQ/TQQQ put credit spread exit rules",
+   "name_fa": "قوانین خروج اسپرد اعتباری پوت روی QQQ و TQQQ",
+   "source": "reddit/options",
+   "source_url": "https://www.reddit.com/r/options/comments/1xuxlli/replayed_exit_rules_on_qqq_and_tqqq_put_credit/",
+   "claim": "«اسپرد اعتباری پوت با دلتای ۲۵ و ۳۰ تا ۴۵ روز تا سررسید؛ QQQ با بال ۵٪ و TQQQ با بال ۱۰٪، از آوریل ۲۰۲۲ با قیمت واقعی خرید/فروش. نگه‌داشتن تا سررسید تقریباً در همه‌ی حالت‌ها بیشترین سود را داد؛ برداشت سود در ۵۰٪، بین ۱۳٪ تا ۵۵٪ کل سود را از دست داد؛ بستن در ۲۱ روز مانده بدترین بود»",
+   "claimed_return": "نگه‌داشتن تا سررسید بهترین (بدون عدد کل)",
+   "asset_class": "option",
+   "symbols": [
+    "QQQ",
+    "TQQQ"
+   ],
+   "added": "2026-11-14",
+   "status": "not_testable",
+   "reason_not_testable": "فروش آپشن (اسپرد اعتباری) است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید",
+   "verdict": "غیرقابل آزمون: فروش آپشن (اسپرد اعتباری) است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید"
+  },
   "6b6f881f54-5min-orb": {
    "name": "5-minute opening range breakout",
    "name_fa": "شکست محدوده‌ی ۵ دقیقه‌ی اول بازار",
@@ -1041,42 +1074,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -12.99,
+    "cagr": -13.0,
     "sharpe": -0.8,
     "max_dd": -28.53,
-    "total": -24.22
+    "total": -24.23
    },
    "in_sample": {
-    "cagr": -11.23,
-    "sharpe": -0.64,
+    "cagr": -11.58,
+    "sharpe": -0.66,
     "max_dd": -28.53,
-    "total": -15.31
+    "total": -15.78
    },
    "out_sample": {
-    "cagr": -16.96,
-    "sharpe": -1.22,
-    "max_dd": -13.67,
-    "total": -10.52
+    "cagr": -15.84,
+    "sharpe": -1.14,
+    "max_dd": -13.68,
+    "total": -9.79
    },
    "buyhold_full": {
-    "cagr": -11.9,
-    "sharpe": -0.07,
+    "cagr": -14.43,
+    "sharpe": -0.13,
     "max_dd": -53.99,
-    "total": -22.31
+    "total": -26.68
    },
    "buyhold_out_sample": {
-    "cagr": -5.78,
-    "sharpe": 0.03,
+    "cagr": -11.13,
+    "sharpe": -0.12,
     "max_dd": -29.65,
-    "total": -3.5
+    "total": -6.81
    },
    "trades": 133,
    "win_rate": 29.3,
    "avg_trade_pct": -0.19,
    "exposure": 0.17,
-   "period": "2024-11-15 → 2026-11-13",
-   "oos_start": "2026-04-09",
-   "forward_days": 93,
+   "period": "2024-11-16 → 2026-11-14",
+   "oos_start": "2026-04-10",
+   "forward_days": 109,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1096,41 +1129,41 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 2.53,
-    "sharpe": 0.37,
+    "cagr": 2.65,
+    "sharpe": 0.39,
     "max_dd": -11.77,
-    "total": 7.4
+    "total": 7.82
    },
    "in_sample": {
-    "cagr": 5.01,
-    "sharpe": 0.7,
+    "cagr": 4.95,
+    "sharpe": 0.69,
     "max_dd": -5.63,
-    "total": 10.29
+    "total": 10.21
    },
    "out_sample": {
-    "cagr": -3.01,
-    "sharpe": -0.37,
+    "cagr": -2.51,
+    "sharpe": -0.31,
     "max_dd": -7.25,
-    "total": -2.59
+    "total": -2.17
    },
    "buyhold_full": {
-    "cagr": 35.95,
+    "cagr": 35.79,
     "sharpe": 1.21,
     "max_dd": -28.12,
-    "total": 140.95
+    "total": 140.93
    },
    "buyhold_out_sample": {
-    "cagr": -1.63,
+    "cagr": -1.71,
     "sharpe": 0.05,
     "max_dd": -20.02,
-    "total": -1.4
+    "total": -1.48
    },
-   "trades": 96,
-   "win_rate": 32.3,
-   "avg_trade_pct": 0.17,
-   "exposure": 0.39,
+   "trades": 95,
+   "win_rate": 33.7,
+   "avg_trade_pct": 0.18,
+   "exposure": 0.38,
    "period": "2023-12-19 → 2026-11-13",
-   "oos_start": "2025-12-30",
+   "oos_start": "2026-01-02",
    "forward_days": 28,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
@@ -1321,7 +1354,7 @@
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.69,
+    "cagr": 12.68,
     "sharpe": 0.7,
     "max_dd": -26.31,
     "total": 112.6
@@ -1333,24 +1366,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 22.02,
+    "cagr": 21.72,
     "sharpe": 0.66,
     "max_dd": -93.96,
-    "total": 501.79
+    "total": 488.94
    },
    "buyhold_out_sample": {
-    "cagr": -18.34,
-    "sharpe": 0.04,
+    "cagr": -19.81,
+    "sharpe": 0.01,
     "max_dd": -67.61,
-    "total": -42.22
+    "total": -44.98
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-13",
-   "oos_start": "2024-03-01",
-   "forward_days": 9,
+   "period": "2017-11-09 → 2026-11-14",
+   "oos_start": "2024-03-02",
+   "forward_days": 10,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1372,7 +1405,7 @@
     "cagr": 9.44,
     "sharpe": 0.8,
     "max_dd": -20.16,
-    "total": 1999.63
+    "total": 2000.08
    },
    "in_sample": {
     "cagr": 8.78,
@@ -1384,19 +1417,19 @@
     "cagr": 11.1,
     "sharpe": 0.91,
     "max_dd": -20.16,
-    "total": 190.42
+    "total": 190.48
    },
    "buyhold_full": {
     "cagr": 10.72,
     "sharpe": 0.64,
     "max_dd": -55.19,
-    "total": 3013.41
+    "total": 3014.06
    },
    "buyhold_out_sample": {
     "cagr": 15.06,
     "sharpe": 0.87,
     "max_dd": -33.72,
-    "total": 313.81
+    "total": 313.9
    },
    "trades": 14,
    "win_rate": 92.9,
@@ -1405,8 +1438,22 @@
    "period": "1993-02-01 → 2026-11-13",
    "oos_start": "2016-09-21",
    "forward_days": 12,
-   "forward_usd": 976.56,
+   "forward_usd": 976.77,
    "verdict": "رد: معامله‌ی کافی نیست"
+  },
+  "86a32d4c4f-green-thumb-algo": {
+   "name": "Green Thumb Algo",
+   "name_fa": "الگوریتم «انگشت سبز»",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xv6b12/green_thumb_algo/",
+   "claim": "«دو ماه، ۱۲۳ معامله‌ی بسته با نرخ برد ۱۰۰٪؛ پرتفوی ۱۰۰ هزار دلاری که هفته‌ای ۲ هزار دلار رشد می‌کند. بر پایه‌ی VWAP، VIX، پرایس اکشن و خوشه‌ی فوریه؛ حد ضرر به‌صورت مارتینگل. انتظار دو برابر شدن در سال»",
+   "claimed_return": "100% win rate (123 trades)",
+   "asset_class": "option",
+   "symbols": null,
+   "added": "2026-11-14",
+   "status": "not_testable",
+   "reason_not_testable": "قانون ورود و خروج منتشر نشده و «معیارهای اختصاصی» دارد؛ اطلاعات برای آزمون کافی نیست",
+   "verdict": "غیرقابل آزمون: قانون ورود و خروج منتشر نشده و «معیارهای اختصاصی» دارد؛ اطلاعات برای آزمون کافی نیست"
   },
   "875f3b14a3-btc-rsi-double-bottom-engulfing": {
    "name": "BTC RSI double bottom with engulfing",
@@ -1448,7 +1495,7 @@
     "cagr": 4.86,
     "sharpe": 0.37,
     "max_dd": -54.29,
-    "total": 150.4
+    "total": 150.41
    },
    "out_sample": {
     "cagr": 13.14,
@@ -1678,6 +1725,22 @@
    "reason_not_testable": "ستاپ‌ها (Silver Bullet، شکست محدوده‌ی ۱۵ دقیقه‌ای، شکار نقدینگی با FVG، Power of Three) روی کندل دقیقه‌ای و ساعت‌های مشخص نیویورک/لندن هستند؛ داده‌ی دقیقه‌ای دوساله و تشخیص FVG در موتور نداریم",
    "verdict": "غیرقابل آزمون: ستاپ‌ها (Silver Bullet، شکست محدوده‌ی ۱۵ دقیقه‌ای، شکار نقدینگی با FVG، Power of Three) روی کندل دقیقه‌ای و ساعت‌های مشخص نیویورک/لندن هستند؛ داده‌ی دقیقه‌ای دوساله و تشخیص FVG در موتور نداریم"
   },
+  "9ffc630092-btc-15m-mean-reversion-iv-range": {
+   "name": "BTC 15m mean reversion with expected-range filter",
+   "name_fa": "بازگشت به میانگین ۱۵ دقیقه‌ای بیت‌کوین با فیلتر دامنه‌ی مورد انتظار روزانه",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xvffd9/filtering_a_btc_meanreversion_bot_by_the_days/",
+   "claim": "«ربات بازگشت به میانگین روی قرارداد دائمی بیت‌کوین با کندل ۱۵ دقیقه‌ای؛ وقتی قیمت از دامنه‌ی روزانه‌ی مورد انتظار (از نوسان ضمنی آپشن) بیرون برود، معامله‌ی تازه باز نمی‌کند. حدود ۳۵٪ معامله‌ی کمتر، نرخ برد از ۵۲٪ به ۵۶٪، ۲ تا از ۳ بدترین روز حذف شد»",
+   "claimed_return": "نرخ برد ۵۲٪ → ۵۶٪",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-14",
+   "status": "not_testable",
+   "reason_not_testable": "کندل ۱۵ دقیقه‌ای و نوسان ضمنی آپشن لازم است و خود قانون بازگشت به میانگین هم گفته نشده",
+   "verdict": "غیرقابل آزمون: کندل ۱۵ دقیقه‌ای و نوسان ضمنی آپشن لازم است و خود قانون بازگشت به میانگین هم گفته نشده"
+  },
   "a1cb20d607-gc-asian-15m-ifvg": {
    "name": "Gold futures Asian session 15m IFVG",
    "name_fa": "شکاف منصفانه‌ی معکوس ۱۵ دقیقه‌ای طلا در جلسه‌ی آسیا",
@@ -1844,42 +1907,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.64,
+    "cagr": 66.62,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 85.94,
-    "sharpe": 1.45,
+    "cagr": 86.71,
+    "sharpe": 1.46,
     "max_dd": -74.38,
-    "total": 19604.0
+    "total": 20344.71
    },
    "out_sample": {
-    "cagr": 27.9,
-    "sharpe": 0.91,
+    "cagr": 29.0,
+    "sharpe": 0.94,
     "max_dd": -35.7,
-    "total": 145.61
+    "total": 153.42
    },
    "buyhold_full": {
-    "cagr": 50.91,
-    "sharpe": 0.96,
+    "cagr": 50.6,
+    "sharpe": 0.95,
     "max_dd": -83.4,
-    "total": 14845.24
+    "total": 14490.41
    },
    "buyhold_out_sample": {
-    "cagr": 27.46,
+    "cagr": 27.72,
     "sharpe": 0.76,
     "max_dd": -53.06,
-    "total": 142.58
+    "total": 144.35
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-13",
-   "oos_start": "2023-03-22",
-   "forward_days": 19,
+   "period": "2014-09-17 → 2026-11-14",
+   "oos_start": "2023-03-23",
+   "forward_days": 20,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
