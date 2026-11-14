@@ -1,0 +1,13 @@
+id: 3a3fc0f101-kalshi-btc-15m-pullback-rsi
+name: Kalshi BTC 15m pullback RSI
+name_fa: خرید در اصلاح بیت‌کوین در قراردادهای ۱۵ دقیقه‌ای Kalshi با RSI
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xvau5s/i_tested_100_versions_of_my_kalshi_bitcoin/
+claim: "«وقتی RSI یک‌دقیقه‌ای دوباره از ۵۰ بالا برود و RSI پنج‌دقیقه‌ای دست‌کم ۶۰ باشد، ۵ قرارداد YES می‌خرد (و برعکس برای NO)، فقط ۳ تا ۱۰ دقیقه مانده به پایان، قیمت ۳۰ تا ۷۰ سنت و اسپرد حداکثر ۳ سنت؛ بک‌تست ۳۰ روزه +۱۷٫۶۷ دلار، ۸۸ از ۱۰۰ ترکیب مثبت، میانگین +۹٫۲۶ دلار، p-value جابه‌جایی ۰٫۰۶۹۳»"
+claimed_return: "+$17.67 در ۳۰ روز (۸۸ از ۱۰۰ ترکیب مثبت)"
+added: '2026-11-14'
+status: not_testable
+asset_class: crypto
+symbols:
+- BTC-USD
+reason_not_testable: "به کندل یک‌دقیقه‌ای و پنج‌دقیقه‌ای و قیمت تاریخی قراردادهای Kalshi نیاز دارد که در دسترس نیست"

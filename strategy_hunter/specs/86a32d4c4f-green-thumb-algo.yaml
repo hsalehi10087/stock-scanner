@@ -1,0 +1,11 @@
+id: 86a32d4c4f-green-thumb-algo
+name: Green Thumb Algo
+name_fa: الگوریتم «انگشت سبز»
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xv6b12/green_thumb_algo/
+claim: "«دو ماه، ۱۲۳ معامله‌ی بسته با نرخ برد ۱۰۰٪؛ پرتفوی ۱۰۰ هزار دلاری که هفته‌ای ۲ هزار دلار رشد می‌کند. بر پایه‌ی VWAP، VIX، پرایس اکشن و خوشه‌ی فوریه؛ حد ضرر به‌صورت مارتینگل. انتظار دو برابر شدن در سال»"
+claimed_return: "100% win rate (123 trades)"
+added: '2026-11-14'
+status: not_testable
+asset_class: option
+reason_not_testable: "قانون ورود و خروج منتشر نشده و «معیارهای اختصاصی» دارد؛ اطلاعات برای آزمون کافی نیست"

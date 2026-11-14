@@ -1,0 +1,14 @@
+id: 654e45cbca-qqq-tqqq-put-credit-spread-exits
+name: QQQ/TQQQ put credit spread exit rules
+name_fa: قوانین خروج اسپرد اعتباری پوت روی QQQ و TQQQ
+source: reddit/options
+source_url: https://www.reddit.com/r/options/comments/1xuxlli/replayed_exit_rules_on_qqq_and_tqqq_put_credit/
+claim: "«اسپرد اعتباری پوت با دلتای ۲۵ و ۳۰ تا ۴۵ روز تا سررسید؛ QQQ با بال ۵٪ و TQQQ با بال ۱۰٪، از آوریل ۲۰۲۲ با قیمت واقعی خرید/فروش. نگه‌داشتن تا سررسید تقریباً در همه‌ی حالت‌ها بیشترین سود را داد؛ برداشت سود در ۵۰٪، بین ۱۳٪ تا ۵۵٪ کل سود را از دست داد؛ بستن در ۲۱ روز مانده بدترین بود»"
+claimed_return: "نگه‌داشتن تا سررسید بهترین (بدون عدد کل)"
+added: '2026-11-14'
+status: not_testable
+asset_class: option
+symbols:
+- QQQ
+- TQQQ
+reason_not_testable: "فروش آپشن (اسپرد اعتباری) است و داده‌ی تاریخی قیمت آپشن نداریم؛ موتور فقط خرید کال/پوت تقریبی را می‌آزماید"

@@ -1,0 +1,13 @@
+id: 9ffc630092-btc-15m-mean-reversion-iv-range
+name: BTC 15m mean reversion with expected-range filter
+name_fa: بازگشت به میانگین ۱۵ دقیقه‌ای بیت‌کوین با فیلتر دامنه‌ی مورد انتظار روزانه
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xvffd9/filtering_a_btc_meanreversion_bot_by_the_days/
+claim: "«ربات بازگشت به میانگین روی قرارداد دائمی بیت‌کوین با کندل ۱۵ دقیقه‌ای؛ وقتی قیمت از دامنه‌ی روزانه‌ی مورد انتظار (از نوسان ضمنی آپشن) بیرون برود، معامله‌ی تازه باز نمی‌کند. حدود ۳۵٪ معامله‌ی کمتر، نرخ برد از ۵۲٪ به ۵۶٪، ۲ تا از ۳ بدترین روز حذف شد»"
+claimed_return: "نرخ برد ۵۲٪ → ۵۶٪"
+added: '2026-11-14'
+status: not_testable
+asset_class: crypto
+symbols:
+- BTC-USD
+reason_not_testable: "کندل ۱۵ دقیقه‌ای و نوسان ضمنی آپشن لازم است و خود قانون بازگشت به میانگین هم گفته نشده"
