@@ -1,0 +1,5 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+001232.SZ,嘉立创,13.179648444832214,139.4423645385661,835.79938993,349.06078193,2026-11-13,2,3,⭐۲/۵ (۲ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+688809.SS,强一股份,19.10882916444987,34.10401931651045,150.05650487,111.89560584,2026-11-13,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+000530.SZ,冰山冷热,18.735633910072448,18.063234152376257,14.17075152,12.002679429999999,2026-11-13,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+301717.SZ,超纯应材,17.318326525826855,16.59273758129638,72.01061633,61.76252297,2026-11-13,1,3,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
