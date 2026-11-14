@@ -1,0 +1,32 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+POAS,Phaos Technology Holdings (Cayman) Limited Class A Ordinary Shares,3.009999990463257,234.07324239733182,17549841.0,2026-11-12,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+GP,GreenPower Motor Company Inc. - Common Shares,1.2300000190734863,174.55356721148593,3483356.0,2026-11-12,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+AIMD,"Ainos, Inc. - Common Stock",1.059999942779541,118.55668278654781,3692598.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+XLAB,Exascale Labs Holdings Inc. - Class A Common Stock,2.2699999809265137,118.2692369413096,21552680.0,2026-11-12,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+ADXN,Addex Therapeutics Ltd - American Depositary Shares,5.289999961853027,83.04497473464384,551340.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ICMB,"Investcorp Credit Management BDC, Inc. - Common Stock",1.059999942779541,71.5210344126179,1352907.0,2026-11-12,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+BGIN,Bgin Blockchain Limited - Class A Ordinary Shares,2.759999990463257,49.18918675101529,502640.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ADVB,Advanced Biomed Inc. - Common Stock,3.309999942779541,42.672415432054045,196635.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+TGEN,Tecogen Inc. Common Stock,2.2200000286102295,30.58823331417102,732780.0,2026-11-12,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+PLBL,Polibeli Group Ltd - Class A Ordinary Shares,7.269999980926514,28.786536855457868,183220.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+ENGN,enGene Therapeutics Inc. - Common Stock,2.2799999713897705,26.66666843273027,3700940.0,2026-11-12,0.0,5.0,⭐۰/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+RETO,"ReTo Eco-Solutions, Inc. - Class A Shares",7.760000228881836,25.36349203793651,256686.0,2026-11-12,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+USEA,United Maritime Corporation - Common Stock,3.0199999809265137,22.764224963238956,106306.0,2026-11-12,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+QTEX,QTREX Quantum Ltd. - Ordinary Shares,1.190000057220459,21.057993986540026,5223982.0,2026-11-12,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+NGEN,NervGen Pharma Corp. - Common stock,1.6299999952316284,20.740738255169866,1992074.0,2026-11-12,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+CURI,CuriosityStream Inc.  - Class A Common Stock,2.859999895095825,20.675106885971537,1969412.0,2026-11-12,4.0,5.0,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+AGBK,AGI Inc Class A Common Shares,6.320000171661377,17.254180486319058,267099.0,2026-11-12,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': None, 'analysts': True}"
+NUAI,"New Era Energy & Digital, Inc. - Common Stock",2.7200000286102295,16.73820247529656,21086008.0,2026-11-12,0.0,5.0,⭐۰/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+MBGL,Mobility Global Inc. Common Stock,23.1299991607666,16.114453173585865,5772054.0,2026-11-12,2.0,3.0,⭐۲/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': None, 'momentum': None, 'analysts': True}"
+SWRD,Stewards Inc - Common Stock,2.4700000286102295,15.962436427312344,413686.0,2026-11-12,0.0,1.0,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': False, 'momentum': None, 'analysts': None}"
+TREO,Tactical Resources Corp. - Common Shares,3.299999952316284,15.38461794963515,220451.0,2026-11-12,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+GMM,Global Mofy AI Limited  - Class A Ordinary Shares,1.0800000429153442,14.893621878151242,171872.0,2026-11-12,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+FRMI,Fermi Inc. - Common Stock,2.059999942779541,13.812155132783355,73554559.0,2026-11-12,0.0,4.0,⭐۰/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': False}"
+AVEX,AEVEX Corp. Class A Common Stock,13.760000228881836,13.43775844239592,2132822.0,2026-11-12,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+HPK,"HighPeak Energy, Inc. - Common Stock",8.329999923706055,13.179344736349542,403188.0,2026-11-12,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+NEXN,Nexxen International Ltd. - Ordinary Shares,10.210000038146973,12.817677601815802,858056.0,2026-11-12,,,,
+BUUU,BUUU Group Limited - Class A Ordinary Share,4.929999828338623,12.300682876451274,472268.0,2026-11-12,,,,
+ADRX,"ADARx Pharmaceuticals, Inc. - Common stock",14.90999984741211,12.105260402919505,587958.0,2026-11-12,,,,
+TTEC,"TTEC Holdings, Inc. - Common Stock",2.9600000381469727,10.8614214818884,1677560.0,2026-11-12,,,,
+GCL,GCL Global Holdings Ltd - Ordinary Shares,1.159999966621399,10.47619231433834,258813.0,2026-11-12,,,,
+BRCB,"Black Rock Coffee Bar, Inc. - Class A Common Stock",9.640000343322754,10.045663144386063,799576.0,2026-11-12,,,,
