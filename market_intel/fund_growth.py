@@ -23,9 +23,20 @@ import quality as Q  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fundamentals')
 THRESHOLD = 10.0
-MIN_PREV_USD = 1_000_000  # سود فصل قبل حداقل ۱ میلیون دلار؛ وگرنه درصد بی‌معناست
+MIN_PREV_USD = 3_000_000  # سود فصل قبل حداقل ۳ میلیون دلار؛ وگرنه درصد رشد از پایه‌ی خیلی کوچک و بی‌معناست
 EXCLUDE = re.compile(r'acquisition|\bspac\b|\betf\b|\btrust\b|\bfund\b|\bblank check\b', re.I)
+WARRANT_SUFFIX = re.compile(r'(WW|WS|WT|W)$')  # نماد وارانت/حق‌تقدم: اگر حذف این پسوند، نماد اصلی را بدهد
 UA = {'User-Agent': 'stock-scanner-research mahdi.salehi.sichani@gmail.com'}
+
+
+def is_warrant(ticker, all_tickers):
+    """نمادهای وارانت (مثل AERTW که وارانتِ سهم عادی AERT است) نوسان‌شان از اهرم مشتقه می‌آید، نه رشد واقعی
+    شرکت؛ چون داده‌ی SEC این‌ها را مثل سهم عادی گزارش می‌کند، با حذف پسوند W/WS/WT/WW تشخیص داده می‌شوند."""
+    m = WARRANT_SUFFIX.search(ticker)
+    if not m or len(ticker) < 4:
+        return False
+    base = ticker[:m.start()]
+    return len(base) >= 2 and base in all_tickers
 
 
 DIAG = []
@@ -98,6 +109,7 @@ def _main():
     time.sleep(0.2)
     prev = frame(prev_period)
     tickers = cik_map()
+    all_syms = {t for t, _ in tickers.values()}
 
     rows, checked = [], 0
     for cik, cur_val in cur.items():
@@ -110,7 +122,7 @@ def _main():
         growth = (cur_val - prev_val) / prev_val * 100
         if growth > THRESHOLD:
             t, title = tickers[cik]
-            if EXCLUDE.search(title):
+            if EXCLUDE.search(title) or is_warrant(t, all_syms):
                 continue
             rows.append({'ticker': t, 'name': title, 'cur_ni_musd': cur_val / 1e6,
                          'prev_ni_musd': prev_val / 1e6, 'growth': growth, 'period': period})
@@ -128,9 +140,14 @@ def _main():
         if state is None:
             state = T.bootstrap('fundamentals', HIST_DIR, event_col='period')
         cur_px = T.last_prices(set(state) | {r['ticker'] for r in rows})
+        # فیلتر مشترک: فقط سهم‌هایی که امتیاز کیفیت گرفته‌اند (یعنی جزو ۶۰ تای برتر رشد بوده‌اند) و دست‌کم
+        # ۱ معیار کیفیت را دارند وارد پیگیری بلندمدت می‌شوند. قبلاً هر سهمی که فقط رشد سود فصلی‌اش >۱۰٪ بود،
+        # بدون هیچ غربالی وارد می‌شد و همین باعث می‌شد نمادهای کم‌کیفیت یا وارانت در «بدترین بازده» سر برآورند.
         for r in rows:
+            if r.get('qs') is None or r['qs'] < 1:
+                continue
             T.add(state, r['ticker'], stamp, r['period'], cur_px.get(r['ticker']),
-                  {'qs': r.get('qs'), 'qs_flags': r.get('qs_flags')} if r.get('qs') is not None else None)
+                  {'qs': r['qs'], 'qs_flags': r.get('qs_flags')})
         T.save('fundamentals', state)
         trk = {x['ticker']: x for x in T.returns(state, cur_px)}
         for r in rows:
