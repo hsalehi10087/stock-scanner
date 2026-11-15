@@ -1376,23 +1376,6 @@
 "profit": false
 }
 },
-"SATLW": {
-"count": 1,
-"events": [
-"CY2026Q3"
-],
-"first_date": "2026-11-11",
-"first_price": 0.05,
-"last_date": "2026-11-11",
-"qs": 1,
-"qs_flags": {
-"analysts": null,
-"cash": false,
-"growth": true,
-"momentum": null,
-"profit": false
-}
-},
 "SBET": {
 "count": 1,
 "events": [

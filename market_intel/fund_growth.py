@@ -50,9 +50,20 @@ def get_json(url):
 
 
 def cik_map():
+    """یک CIK گاهی چند نماد دارد (مثلاً سهم عادی SATL و وارانتش SATLW با همان CIK). قبلاً هرکدام آخر در
+    فایل SEC می‌آمد به‌عنوان نمایندهٔ آن شرکت انتخاب می‌شد — گاهی خودِ وارانت! حالا بین نمادهای یک CIK
+    همیشه نماد بدون پسوند وارانت (و در صورت تساوی، کوتاه‌تر) ترجیح داده می‌شود."""
     js = get_json('https://www.sec.gov/files/company_tickers.json')
-    return {str(v['cik_str']).zfill(10): (v['ticker'], v['title'])
-            for v in js.values() if re.fullmatch(r'[A-Z]{1,5}', v.get('ticker', ''))}
+    by_cik = {}
+    for v in js.values():
+        t = v.get('ticker', '')
+        if re.fullmatch(r'[A-Z]{1,5}', t):
+            by_cik.setdefault(str(v['cik_str']).zfill(10), []).append((t, v['title']))
+    out = {}
+    for cik, cands in by_cik.items():
+        common = [c for c in cands if not WARRANT_SUFFIX.search(c[0])]
+        out[cik] = sorted(common or cands, key=lambda c: len(c[0]))[0]
+    return out
 
 
 def frame(period):
