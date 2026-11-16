@@ -2105,5 +2105,73 @@
   "none": "no_statement",
   "n": 20,
   "fetched": "2026-11-16"
+ },
+ "چافست": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۳/۳۱ (حسابرسی نشده)",
+  "period": "1405/03/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 5325400,
+  "np_prev": 2067354,
+  "codal_pct": "۱۵۸",
+  "np_growth": 157.6,
+  "verified": true,
+  "rev_cur": 10551123,
+  "rev_prev": 6315573,
+  "rev_growth": 67.1,
+  "fetched": "2026-11-16"
+ },
+ "دجابر": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 14706403,
+  "np_prev": 2610745,
+  "codal_pct": "۴۶۳",
+  "np_growth": 463.3,
+  "verified": true,
+  "rev_cur": 42079427,
+  "rev_prev": 11024626,
+  "rev_growth": 281.7,
+  "fetched": "2026-11-16"
+ },
+ "شپاکسا": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 11041187,
+  "np_prev": 3920630,
+  "codal_pct": "۱۸۲",
+  "np_growth": 181.6,
+  "verified": true,
+  "rev_cur": 82684449,
+  "rev_prev": 40319710,
+  "rev_growth": 105.1,
+  "fetched": "2026-11-16"
+ },
+ "قپیرا": {
+  "title": "صورت‌های مالی سال مالی منتهی به ۱۴۰۵/۰۴/۳۱ (حسابرسی شده)",
+  "period": "1405/04/31",
+  "consolidated": false,
+  "audited": true,
+  "np_cur": 7368328,
+  "np_prev": 2999557,
+  "codal_pct": "۱۴۶",
+  "np_growth": 145.6,
+  "verified": true,
+  "rev_cur": 38957095,
+  "rev_prev": 21241368,
+  "rev_growth": 83.4,
+  "fetched": "2026-11-16"
+ },
+ "غشهد": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "none": "no_table",
+  "fetched": "2026-11-16"
  }
 }
