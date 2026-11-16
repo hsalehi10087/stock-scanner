@@ -1,41 +1,15 @@
 {
-"2026-11-13": {
+"2026-11-16": {
 "APLD": [
 "drop"
 ],
-"CRWV": [
-"drop"
+"AVGO": [
+"ma50"
 ],
-"IONQ": [
+"CRDO": [
 "drop"
 ],
 "IREN": [
-"drop"
-],
-"NBIS": [
-"drop"
-],
-"OUST": [
-"drop"
-],
-"TEM": [
-"drop",
-"ma50"
-],
-"ALAB": [
-"drop"
-],
-"ARM": [
-"drop"
-],
-"AVGO": [
-"drop",
-"ma50"
-],
-"COHR": [
-"drop"
-],
-"CRDO": [
 "drop"
 ],
 "LITE": [
@@ -44,16 +18,89 @@
 "NVTS": [
 "drop"
 ],
-"RGTI": [
+"TSN": [
+"surge"
+],
+"ALAB": [
 "drop"
 ],
-"SITM": [
+"ARM": [
 "drop"
+],
+"COHR": [
+"drop"
+],
+"IONQ": [
+"drop"
+],
+"NBIS": [
+"drop"
+],
+"OUST": [
+"drop"
+],
+"POWL": [
+"surge"
 ],
 "WWW": [
-"hi52",
-"surge"
+"hi52"
+],
+"BILL": [
+"hi52"
+],
+"QBTS": [
+"drop"
+],
+"TEM": [
+"drop"
+],
+"CRWV": [
+"drop"
+],
+"INOD": [
+"drop"
 ]
 },
-"pending_2026-11-13": []
+"pending_2026-11-16": [
+{
+"code": "surge",
+"ticker": "TSN",
+"score": 1,
+"rvol": 2.1422173449201733,
+"line": "TSN ۶۵٫۰۱$ ▲۱۰٫۵٪ | حجم ۲٫۱ برابر | فروش ▼۰٫۱٪، سود ▲۱۹۸٫۴٪",
+"time": "09:50",
+"price": 65.01,
+"chg": 10.52
+},
+{
+"code": "surge",
+"ticker": "POWL",
+"score": 0,
+"rvol": 4.683942520290829,
+"line": "POWL ۱۵۳٫۶$ ▲۷٫۶٪ | حجم ۴٫۷ برابر | فروش ▲۸٫۹٪، AI ۳٫۵",
+"time": "10:50",
+"price": 153.6,
+"chg": 7.62
+},
+{
+"code": "hi52",
+"ticker": "WWW",
+"score": 0,
+"rvol": 3.0176686611961405,
+"line": "WWW ۲۵٫۴۸$ ▲۲٫۴٪ | حجم ۳٫۰ برابر",
+"time": "10:50",
+"price": 25.48,
+"chg": 2.35
+},
+{
+"code": "hi52",
+"ticker": "BILL",
+"score": 0,
+"rvol": 1.567016959086832,
+"line": "BILL ۵۸٫۳۲$ ▲۷٫۰٪ | حجم ۱٫۶ برابر",
+"time": "11:50",
+"price": 58.32,
+"chg": 7.05
+}
+]
 }
