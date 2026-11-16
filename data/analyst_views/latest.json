@@ -1,52 +1,45 @@
 {
- "date": "2026-11-14",
- "generated_at": "2026-11-13T23:49:37+00:00",
- "articles_read": 252,
- "method": "۲۵۲ خبر یکتا بررسی شد؛ متن حدود ۱۱۰ خبر خوانده شد (همه با BODY جمع‌کننده، بدون WebFetch)، خبرهای بدون متن فقط برچسب گرفتند و تبلیغ‌های بی‌کیفیت کنار ماندند.",
- "full_read": 110,
+ "date": "2026-11-17",
+ "generated_at": "2026-11-16T23:50:02+00:00",
+ "articles_read": 207,
+ "method": "۲۰۷ خبر یکتا؛ متن ۱۲۰ خبر از ورودی خوانده شد، برای خبرهای بدون متن WebFetch نزدم و آن‌ها فقط در شمارش نیامدند؛ تبلیغات و خبرهای بی‌ربط کنار گذاشته شد.",
+ "full_read": 49,
  "assets": {
   "gold": {
    "stance": "نزولی",
    "counts": {
-    "bull": 1,
-    "bear": 10,
-    "neutral": 2
+    "bull": 0,
+    "bear": 8,
+    "neutral": 0
    },
    "confidence": "بالا",
-   "summary_fa": "طلا هفته را با بدترین رشته‌ی افت چند دهه‌ی اخیر و نزدیک ۳۸۹۰ دلار بست. بازدهی واقعی اوراق و دلار قوی و احتمال بالای افزایش نرخ فدرال رزرو در دسامبر اصلی‌ترین فشار است.",
+   "summary_fa": "طلا به پایین‌ترین قیمت بیش از یک سال رسید و حدود ۳٬۸۷۰ دلار است. دلار قوی، بازده بالای اوراق خزانه و شرط‌بندی بازار روی افزایش نرخ فدرال رزرو در دسامبر (حدود ۹۰ درصد) فشار اصلی است.",
    "stories": [
     {
-     "id": "f03e879af5f4",
-     "title_fa": "بدترین رشته‌ی افت هفتگی طلا در حدود ۴ دهه",
-     "understood_fa": "بولیون‌ولت می‌گوید طلا این هفته حدود ۳٫۵٪ (۱۵۰ دلار) افت کرد و حدود ۳۸۹۰ دلار بسته شد؛ پایین‌ترین قیمت پایان هفته از اکتبر ۲۰۲۵. بازدهی ۱۰ ساله به ۵٫۱۳٪ رسید و بازدهی اوراق ضدتورم هم تقریباً معادل یک بار افزایش نرخ بالا رفت. این یعنی نگه‌داشتن طلا نسبت به اوراق گران‌تر شده است.",
-     "publisher": "BullionVault",
-     "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-price-week-111320261"
+     "id": "bfb93989fdc1",
+     "title_fa": "گلدمن هدف طلا را دوباره کاهش داد",
+     "understood_fa": "گلدمن ساکس هدف پایان ۲۰۲۷ طلا را از ۴٬۸۰۰ به ۴٬۶۵۰ دلار برد؛ دومین کاهش در یک ماه. دلیل: انتظار افزایش سوم نرخ فدرال رزرو در مارس ۲۰۲۷ بعد از افزایش دسامبر. طلا از سه‌شنبه گذشته حدود ۷ درصد افت کرده و ریسک فروش صندوق‌های ETF هم هست؛ سطح ۴٬۰۰۰ دلار حالا مقاومت شده است.",
+     "publisher": "investingLive",
+     "url": "https://investinglive.com/commodities/goldman-s-second-gold-forecast-downgrade-in-a-month-turns-its-bear-case-into-the-base-case/"
     },
     {
-     "id": "a3c829a6f189",
-     "title_fa": "حمایت ۳۸۵۰ و جهش بازدهی واقعی",
-     "understood_fa": "بازدهی واقعی ۱۰ ساله از ۲٫۶۳٪ به ۲٫۸۶٪ رسید و بازدهی اسمی از ۴٫۸۶٪ به ۵٫۱۰٪. تورم اکتبر (۰٫۴٪ ماهانه) هم نشانه‌ی عقب‌نشینی نداد؛ پس هزینه‌ی فرصت نگه‌داشتن طلا بالا رفته و حمایت هفتگی ۳۸۵۰ مهم شده است.",
+     "id": "29ec18ea0b7e",
+     "title_fa": "فشار دلار و بازده اوراق بر طلا",
+     "understood_fa": "طلا بعد از افت ۴٫۵ درصدی هفته پیش دوشنبه هم کمی پایین آمد. شاخص قیمت تولیدکننده سالانه ۶٫۵ درصد شد، بالاترین از نوامبر ۲۰۲۲، و مقام‌های فدرال گفتند تورم هنوز بالاست. بازار منتظر سخنان وارش و صورت‌جلسه فدرال در روز چهارشنبه است.",
      "publisher": "FXEmpire",
-     "url": "https://www.fxempire.com/forecasts/article/golds-3850-weekly-support-matters-as-real-yields-climb-to-2-86-1644571"
-    },
-    {
-     "id": "a68cdc6bb75b",
-     "title_fa": "شاخص قیمت تولیدکننده نتوانست طلا را بالا ببرد",
-     "understood_fa": "شاخص قیمت تولیدکننده (PPI) کمی کمتر از انتظار بود، اما طلا واکنش خاصی نشان نداد. احتمال افزایش ۲۵ نقطه‌ای نرخ در دسامبر حدود ۹۰٪ است و تحلیلگر مقاله این را روند معکوس‌شده نمی‌داند، فقط یک بازگشت کوتاه‌مدت.",
-     "publisher": "FXEmpire",
-     "url": "https://www.fxempire.com/forecasts/article/gold-news-tame-ppi-fails-to-lift-prices-as-rate-hike-fears-persist-1644459"
+     "url": "https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-gold-near-one-year-low-can-it-hold-3852-1644760"
     }
    ],
    "views": [
     {
-     "who": "Goldman Sachs / Standard Chartered",
-     "view_fa": "گلدمن پیش‌بینی پایان سال طلا را به ۴۱۵۰ دلار کاهش داد، اما استاندارد چارترد پیش‌بینی ۴۶۵۰ دلار خود را حفظ کرد.",
-     "url": "https://en.haberler.com/surprise-turnaround-in-gold-prices-major-banks-2335352"
+     "who": "Goldman Sachs",
+     "view_fa": "هدف پایان ۲۰۲۷ را به ۴٬۶۵۰ دلار کاهش داد چون انتظار می‌رود فدرال رزرو تا مارس ۲۰۲۷ نرخ را بالا ببرد؛ با این حال همچنان حدود ۱۶ درصد رشد تا دسامبر ۲۰۲۷ می‌بیند و خرید بانک‌های مرکزی را ادامه‌دار می‌داند.",
+     "url": "https://investinglive.com/commodities/goldman-s-second-gold-forecast-downgrade-in-a-month-turns-its-bear-case-into-the-base-case/"
     },
     {
-     "who": "Deutsche Bank (Daniel Ghali)",
-     "view_fa": "مسئول پژوهش فلزات دویچه‌بانک می‌گوید تقاضای فیزیکی طلا بسیار قوی است و ممکن است در حجم به رکوردهای قبلی برسد؛ او برای ۲۰۲۷ طلا را حمایت‌شده می‌بیند.",
-     "url": "https://www.mining.com/video/deutsche-banks-daniel-ghali-sees-stronger-gold-demand-and-higher-copper-prices-in-2027/"
+     "who": "Tim Waterer, KCM Trade",
+     "view_fa": "دلار قوی، بازده بالای اوراق و انتظار افزایش نرخ در دسامبر طلا را «خنثی تا کمی نزولی» نگه می‌دارد.",
+     "url": "https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-gold-near-one-year-low-can-it-hold-3852-1644760"
     }
    ],
    "prev_stance": "نزولی",
@@ -55,26 +48,33 @@
   "silver": {
    "stance": "نزولی",
    "counts": {
-    "bull": 0,
+    "bull": 1,
     "bear": 4,
-    "neutral": 2
+    "neutral": 0
    },
    "confidence": "متوسط",
-   "summary_fa": "نقره زیر ۵۰ دلار سقوط کرد و هفته را با حدود ۳٫۸٪ افت بست. بازدهی بالاتر اوراق و کوچک‌تر شدن کسری عرضه فشار می‌آورد، هرچند کسری ساختاری هنوز وجود دارد.",
+   "summary_fa": "نقره زیر ۵۰ دلار و نزدیک ۴۷ تا ۴۸٫۵ دلار است و هفته گذشته بیش از ۶ درصد افت کرد؛ دلار قوی و تقاضای ضعیف صنعتی فشار می‌آورند. بانک آمریکا برای ۲۰۲۷ خوش‌بین است ولی کوتاه‌مدت تحلیل‌ها نزولی‌اند.",
    "stories": [
     {
-     "id": "7db93d839d23",
-     "title_fa": "کسری عرضه‌ی نقره کوچک‌تر شد",
-     "understood_fa": "موسسه‌ی نقره و متالز فوکوس کسری ۲۰۲۶ را ۳۵ میلیون اونس می‌بینند (پارسال ۵۴ میلیون). تقاضای کل ۵٪ کم می‌شود و مصرف صنعتی هم ۳٪ افت می‌کند، چون نصب پنل خورشیدی کمتر از انتظار بوده و قیمت بالا مصرف را کم کرده است. یعنی کسری ساختاری هست اما قوی‌تر نمی‌شود.",
+     "id": "2f79a09c7976",
+     "title_fa": "پیش‌بینی بانک آمریکا برای نقره ۲۰۲۷",
+     "understood_fa": "بانک آمریکا میانگین نقره در ۲۰۲۷ را ۷۰ دلار و در فصل‌های دوم و سوم ۷۵ دلار پیش‌بینی کرده است، چون بازار از مازاد ۹۱۰ تنی ۲۰۲۶ به کسری ۸۵۲ تنی می‌رود. این پیش‌بینی از جی‌پی‌مورگان (۶۳ دلار) و بانک جهانی (۶۲ دلار) خوش‌بینانه‌تر است و نقره باید حدود ۵۶ درصد بالا برود.",
+     "publisher": "Finbold",
+     "url": "https://finbold.com/banking-giant-sets-silver-price-for-2027/"
+    },
+    {
+     "id": "71fec863a68d",
+     "title_fa": "نقره زیر ۵۰ دلار بسته شد",
+     "understood_fa": "نقره هفته را روی ۴۸٫۷۷ دلار بست و ۶٫۱ درصد افت کرد. تورم بالاتر از انتظار آمریکا، دلار و بازده اوراق قوی‌تر و تقاضای ضعیف صنعتی دلایل اصلی بود.",
      "publisher": "FXEmpire",
-     "url": "https://www.fxempire.com/forecasts/article/silvers-35-million-ounce-deficit-faces-a-higher-yield-headwind-1644553"
+     "url": "https://www.fxempire.com/forecasts/article/silver-price-forecast-silver-slides-below-50-as-treasury-yields-jump-1644724"
     }
    ],
    "views": [
     {
-     "who": "Silver Institute / Metals Focus",
-     "view_fa": "پیش‌بینی می‌کنند ششمین کسری سالانه پیاپی در ۲۰۲۶ رخ دهد اما کوچک‌تر از سال قبل باشد؛ تقاضای جواهر ۲۲٪ و مصرف ظروف نقره ۱۷٪ کم می‌شود.",
-     "url": "https://www.fxempire.com/forecasts/article/silver-faces-a-smaller-supply-deficit-as-etp-outflows-and-yields-rise-1644491"
+     "who": "Bank of America",
+     "view_fa": "میانگین نقره در ۲۰۲۷ حدود ۷۰ دلار و در فصل دوم و سوم ۷۵ دلار؛ دلیل: گذار از مازاد به کسری در بازار فیزیکی.",
+     "url": "https://finbold.com/banking-giant-sets-silver-price-for-2027/"
     }
    ],
    "prev_stance": "نزولی",
@@ -84,112 +84,99 @@
    "stance": "نزولی",
    "counts": {
     "bull": 0,
-    "bear": 20,
-    "neutral": 1
+    "bear": 11,
+    "neutral": 6
    },
    "confidence": "بالا",
-   "summary_fa": "بیت‌کوین زیر ۷۰ هزار دلار و حدود ۶۸ هزار رفت و به میانگین ۲۰۰ هفته‌ای رسید؛ ششمین هفته‌ی افت پیاپی است. خروج از ETFها، دلار قوی و انتظار افزایش نرخ فشار می‌آورند.",
+   "summary_fa": "بیت‌کوین بعد از ششمین هفته ضرر پیاپی تا ۶۲٬۰۰۰ دلار افت کرد و حدود ۶۴٬۰۰۰ دلار است. خروج پول از ETFها، تصفیه‌ی اهرم‌ها، دلار قوی و نگرانی از فناوری و انویدیا فشار اصلی است.",
    "stories": [
     {
-     "id": "dc0763b2ddc8",
-     "title_fa": "فروش نهنگ‌ها و خروج میلیاردی از ETF",
-     "understood_fa": "این ماه ۱٫۹ میلیارد دلار از ETFهای بیت‌کوین خارج شده و فقط در ۵ روز اخیر ۱٫۴ میلیارد. طبق داده‌ی سانتیمنت، کیف‌پول‌های بزرگ در نوامبر ۲۰ هزار بیت‌کوین فروخته‌اند. نویسنده سناریوی بازگشت به ۶۰ هزار دلار را محتمل می‌داند.",
-     "publisher": "FXEmpire",
-     "url": "https://www.fxempire.com/forecasts/article/bitcoin-price-prediction-btc-could-soon-revisit-60000-as-whales-start-dumping-1644164"
+     "id": "b0c20f5a96b4",
+     "title_fa": "سقوط تا ۶۲ هزار دلار و تصفیه‌ی اجباری",
+     "understood_fa": "بیت‌کوین شنبه شب به ۶۲٬۰۰۰ دلار رسید، پایین‌ترین از اوت، و از میانگین ۲۰۰ روزه (حدود ۷۳٬۰۰۰) پایین رفت که تصفیه‌ی اجباری پوزیشن‌های خرید را به راه انداخت. دلار قوی، فروش نهادی و نگرانی ارزش‌گذاری هوش مصنوعی هم فشار آوردند.",
+     "publisher": "CNBC",
+     "url": "https://www.cnbc.com/2026/11/16/bitcoin-slides-to-62000-following-liquidation-cascade-then-rebounds-slightly.html"
     },
     {
-     "id": "ed2ea01dd555",
-     "title_fa": "آزمون حمایت ۶۹ تا ۶۴ هزار دلار",
-     "understood_fa": "بیت‌کوین حدود ۲۱٪ از قله‌اش افت کرده و در محدوده‌ی ۶۹ تا ۶۴ هزار دلار است (فیبوناچی ۶۱٫۸ و ۷۸٫۶٪). تحلیلگری به نام Dan می‌گوید اگر این ناحیه بشکند، ریزش تا ۵۰ هزار دلار یا کمتر ممکن است.",
-     "publisher": "Cryptonews.net",
-     "url": "https://cryptonews.net/news/bitcoin/33745974/"
+     "id": "22fec5c22c42",
+     "title_fa": "خروج ۱٫۰۷ میلیارد دلاری از ETFها",
+     "understood_fa": "ETFهای بیت‌کوین هفته گذشته ۱٫۰۷ میلیارد دلار خروج داشتند، بعد از ۱٫۲۸ میلیارد هفته قبل. گزارش ۱۰x Research می‌گوید تقریباً همه‌ی اهرم‌های ساخته‌شده از اوت پاک شد و جهش کوتاه‌مدت محتمل است، اما بازگشت پایدار هنوز روشن نیست.",
+     "publisher": "www.tmgm.com",
+     "url": "https://www.tmgm.com/en-eu/analysis/market-news/article/bitcoin-price-forecast-etf-outflows-hit-107-billion-as-btc-struggles-to-recover-from-oversold-levels-202611160520"
     }
    ],
    "views": [
     {
-     "who": "Cryptonews.net (analyst Dan)",
-     "view_fa": "حمایت ۶۹ تا ۶۴ هزار دلار کلیدی است؛ شکست آن می‌تواند قیمت را به ۵۰ هزار دلار یا کمتر برساند، هرچند تضمینی برای حفظ حمایت نیست.",
-     "url": "https://cryptonews.net/news/bitcoin/33745974/"
+     "who": "Nansen (Nicolai Sondergaard)",
+     "view_fa": "آزمون بعدی بین ۶۰ تا ۶۲ هزار دلار است و اگر نتایج انویدیا فروش فناوری را بیشتر کند، شکست ۶۰ هزار ممکن است؛ بازگشت بالای ۷۳ هزار اولین نشانه‌ی پایان فروش است.",
+     "url": "https://www.cnbc.com/2026/11/16/bitcoin-slides-to-62000-following-liquidation-cascade-then-rebounds-slightly.html"
+    },
+    {
+     "who": "22V Research (John Roque)",
+     "view_fa": "به گزارش سی‌ان‌بی‌سی، شکست خط گردن ۶۰ هزار دلار در الگوی سر و شانه ریسک سقوط تا ۳۸ هزار دلار را نشان می‌دهد.",
+     "url": "https://blockchain.news/news/20261116-price-prediction-btc-oversold-bounce-meets-heavy-downside-risk"
     }
    ],
    "prev_stance": "نزولی",
    "change_fa": ""
   },
   "copper": {
-   "stance": "دوگانه",
+   "stance": "نزولی",
    "counts": {
-    "bull": 3,
-    "bear": 8,
-    "neutral": 1
+    "bull": 0,
+    "bear": 1,
+    "neutral": 2
    },
-   "confidence": "بالا",
-   "summary_fa": "مس پنجمین هفته‌ی افت پیاپی را با قیمت زیر ۱۳٫۵ هزار دلار تجربه می‌کند، چون نگرانی از تقاضای هوش مصنوعی پس از کناره‌گیری مدیرعامل انویدیا و دلار قوی بالاست. اما بانک‌ها برای ۲۰۲۷ هنوز قیمت‌های بالاتری می‌بینند.",
+   "confidence": "پایین",
+   "summary_fa": "مس به پایین‌ترین قیمت چهار ماه اخیر رسید و نزدیک حمایت کلیدی ۶ دلار است. تولید صنعتی ضعیف چین، سرمایه‌گذاری ملکی منفی و دلار قوی عوامل اصلی‌اند؛ نتایج انویدیا می‌تواند تقاضای مرتبط با هوش مصنوعی را روشن کند.",
    "stories": [
     {
-     "id": "bf84928a1a3b",
-     "title_fa": "پنجمین هفته‌ی افت پیاپی مس",
-     "understood_fa": "مس لندن زیر ۱۳٫۵ هزار دلار رفت؛ طولانی‌ترین رشته‌ی افت در نزدیک دو سال. نگرانی از تقاضای مراکز داده پس از آشوب انویدیا و دلار قوی علت است. مس هنوز حدود ۸٪ از ابتدای سال بالاتر است.",
-     "publisher": "TradingView",
-     "url": "https://www.tradingview.com/news/seekingalpha:cc222141b094b:0-copper-slides-to-fifth-straight-weekly-loss-worst-stretch-in-nearly-two-years/"
+     "id": "ded6f4d75d5e",
+     "title_fa": "مس در پایین‌ترین قیمت چهار ماه",
+     "understood_fa": "مس بیش از ۳ درصد در هفته گذشته افت کرد. تولید صنعتی چین در اکتبر ۴٫۸ درصد رشد کرد (انتظار ۵٫۳) و سرمایه‌گذاری ملکی ۲۱٫۶ درصد کاهش یافت. اگر حمایت ۶ دلار بشکند، تحلیل مقاله هدف ۵ تا ۵٫۲ دلار را مطرح می‌کند؛ ولی RSI نزدیک اشباع فروش است.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/copper-price-forecast-prices-hit-a-four-month-low-on-weak-china-data-1644784"
+    }
+   ],
+   "views": [],
+   "prev_stance": "دوگانه",
+   "change_fa": "از «دوگانه» به «نزولی»"
+  },
+  "oil": {
+   "stance": "دوگانه",
+   "counts": {
+    "bull": 2,
+    "bear": 4,
+    "neutral": 3
+   },
+   "confidence": "متوسط",
+   "summary_fa": "نفت با انتظار مازاد عرضه پایین آمد (برنت حدود ۹۴، WTI حدود ۸۷) چون آژانس بین‌المللی انرژی مازاد ۱٫۷ میلیون بشکه برای فصل چهارم می‌بیند. ولی حمله به نفتکش‌ها در هرمز و پیشروی حوثی‌ها ریسک کوتاه‌مدت را بالا نگه می‌دارد.",
+   "stories": [
+    {
+     "id": "898fc3e9bd3a",
+     "title_fa": "گلدمن: مازاد نفت در راه است",
+     "understood_fa": "گلدمن میانگین برنت ۲۰۲۷ را ۸۸ و پایان ۲۰۲۷ را ۷۸ دلار پیش‌بینی می‌کند، با مازاد ۲ میلیون بشکه‌ای در روز. همزمان هشدار داده که حمله به کشتی‌ها کوتاه‌مدت قیمت را بالا می‌برد؛ سپاه پاسداران ادعا کرده دو نفتکش در هرمز به مین خورده‌اند (تأیید مستقل نشده).",
+     "publisher": "investingLive",
+     "url": "https://investinglive.com/commodities/goldman-sees-brent-at-78-by-end-2027-as-oil-surplus-returns-flags-near-term-upside-risk/"
     },
     {
-     "id": "152326d5bbb4",
-     "title_fa": "بانک‌ها درباره‌ی ۲۰۲۷ اختلاف دارند",
-     "understood_fa": "دویچه‌بانک می‌گوید ذخایر در دسترس رو به اتمام‌اند و مس تا میانه‌ی ۲۰۲۷ می‌تواند به ۱۰ دلار برای هر پوند برسد. گلدمن در عین حال می‌گوید پیش‌بینی ۱۵٬۴۰۰ دلارش پس از انتخابات میان‌دوره‌ای ریسک نزولی دارد و میانگین ممکن است ۱۴٬۶۰۰ دلار شود.",
-     "publisher": "mining.com",
-     "url": "https://www.mining.com/copper-shortage-or-surplus-banks-split-on-2027-outlook/"
+     "id": "abf57c5e4520",
+     "title_fa": "آژانس انرژی: اولین مازاد از زمان جنگ",
+     "understood_fa": "آژانس بین‌المللی انرژی انتظار دارد عرضه‌ی فصل چهارم ۱٫۷ میلیون بشکه در روز بیشتر از تقاضا باشد و برای ۲۰۲۷ مازاد حدود ۳٫۸ میلیون بشکه می‌بیند. صادرات خلیج فارس از مسیرهای هرمز تقریباً به سطح پیش از جنگ برگشته است.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/natural-gas-and-oil-forecast-iea-flags-first-surplus-since-iran-war-can-wti-hold-85-22-1644754"
     }
    ],
    "views": [
     {
      "who": "Goldman Sachs",
-     "view_fa": "ریسک اصلی پیش‌بینی ۱۵٬۴۰۰ دلاری ۲۰۲۷ از موقعیت‌گیری مرتبط با هوش مصنوعی است نه تقاضای فیزیکی؛ میانگین ممکن است ۱۴٬۶۰۰ یا ۱۴٬۵۰۰ دلار شود.",
-     "url": "https://www.zawya.com/en/business/goldman-sachs-flags-risks-to-15400t-copper-price-forecast-for-2027-2267818"
+     "view_fa": "برنت ۲۰۲۷ به‌طور میانگین ۸۸ دلار و تا دسامبر ۲۰۲۷ حدود ۷۸ دلار؛ WTI به‌طور میانگین ۷۸ دلار. در کوتاه‌مدت ریسک افزایشی از حمله به کشتی‌ها وجود دارد.",
+     "url": "https://investinglive.com/commodities/goldman-sees-brent-at-78-by-end-2027-as-oil-surplus-returns-flags-near-term-upside-risk/"
     },
     {
-     "who": "Deutsche Bank (Daniel Ghali)",
-     "view_fa": "بازار «کمیاب‌ترین شرایط مس از دهه‌ی ۱۹۸۰» را تجربه می‌کند و قیمت‌گذاری هنوز این کمبود را نشان نمی‌دهد؛ بحران نقدینگی در حال شکل‌گیری است.",
-     "url": "https://www.mining.com/copper-shortage-or-surplus-banks-split-on-2027-outlook/"
-    }
-   ],
-   "prev_stance": "خنثی",
-   "change_fa": "از «خنثی» به «دوگانه»"
-  },
-  "oil": {
-   "stance": "دوگانه",
-   "counts": {
-    "bull": 8,
-    "bear": 6,
-    "neutral": 7
-   },
-   "confidence": "بالا",
-   "summary_fa": "نفت با خطر جنگ ایران و حمله به زیرساخت‌های عربستان بالا می‌رود، ولی افزایش تولید خلیج فارس و برآورد مازاد آژانس بین‌المللی انرژی آن را پایین نگه می‌دارد. برنت حدود ۹۵ تا ۹۶ دلار است.",
-   "stories": [
-    {
-     "id": "63ae77502c96",
-     "title_fa": "آژانس انرژی: بازار نفت به مازاد برمی‌گردد",
-     "understood_fa": "آژانس بین‌المللی انرژی می‌گوید عرضه در فصل چهارم ۱۰۵ میلیون بشکه و ۱٫۷ میلیون بشکه بیش از تقاضاست، چون صادرات خلیج فارس زودتر از تقاضا بازگشته. برنت پس از گزارش حدود ۹۵٫۷ دلار ماند.",
-     "publisher": "KELO-AM",
-     "url": "https://kelo.com/2026/11/13/world-oil-market-is-returning-to-surplus-as-gulf-exports-recover-iea-says/"
-    },
-    {
-     "id": "d9046accc1f5",
-     "title_fa": "برگشت تند وست‌تگزاس",
-     "understood_fa": "WTI به ۸۳٫۸۸ دلار رسید و دوباره به حدود ۸۸٫۲۰ برگشت. معامله‌گران با نرم‌تر شدن لحن ترامپ نسبت به ایران بخشی از ریسک جنگ را کم کردند، اما حمله به زیرساخت‌های انرژی عربستان خریداران را برگرداند.",
-     "publisher": "oilprice",
-     "url": "https://oilprice.com/Energy/Energy-General/WTI-Stages-Sharp-Comeback-as-Middle-East-Supply-Risks-Intensify.html"
-    }
-   ],
-   "views": [
-    {
-     "who": "Bernstein",
-     "view_fa": "احتمال کاهش تنش آمریکا و ایران را بیش از تشدید آن می‌داند و انتظار دارد نفت عادی شود؛ سهام نفتی را بالای ۷۵ دلار جذاب می‌بیند اما رشد سهام را محدود می‌داند.",
-     "url": "https://stocktwits.com/news-articles/markets/equity/xom-cvx-cop-this-analyst-trims-price-targets-warns-oil-stocks-may-struggle-to-appreciate/cNbbN7xR9Oa"
-    },
-    {
-     "who": "EIA",
-     "view_fa": "میانگین برنت را برای ۲۰۲۶ برابر ۹۷٫۴۴ و برای ۲۰۲۷ برابر ۸۵٫۷۸ دلار برآورد کرد و هر دو را باز هم بالا برد.",
-     "url": "https://www.rigzone.com/news/eia_raises_2026_2027_oil_price_forecasts_yet_again-12-nov-2026-185067-article/"
+     "who": "Ajit Mishra, Religare Broking",
+     "view_fa": "برنت ممکن است ۹۰ تا ۹۲ دلار را در معاملات خارجی آزمون کند، با نوسان و سوگیری نزولی.",
+     "url": "https://www.moneycontrol.com/news/india/crude-oil-may-extend-losses-next-week-brent-seen-testing-90-92-barrel-analysts-14080618.html"
     }
    ],
    "prev_stance": "دوگانه",
@@ -198,500 +185,315 @@
   "rates": {
    "stance": "صعودی",
    "counts": {
-    "bull": 15,
+    "bull": 7,
     "bear": 0,
-    "neutral": 3
+    "neutral": 5
    },
-   "confidence": "بالا",
-   "summary_fa": "بازار افزایش ۲۵ نقطه‌ای نرخ فدرال رزرو در دسامبر را تقریباً قطعی می‌داند (حدود ۹۰٪) و شانس ۵۰ نقطه‌ای حدود ۱۰٪ است. تورم بالا و سخنان مقام‌های فدرال رزرو لحن را سخت‌گیرانه نگه می‌دارد.",
+   "confidence": "متوسط",
+   "summary_fa": "تورم اکتبر آمریکا (شاخص قیمت مصرف‌کننده ۰٫۴ درصد ماهانه، تولیدکننده ۶٫۵ درصد سالانه) افزایش نرخ فدرال رزرو در دسامبر را تقریباً قطعی کرده است. والر حتی افزایش ۵۰ نقطه‌ای را مطرح کرد و بانک مرکزی ژاپن هم به افزایش نرخ نزدیک است.",
    "stories": [
     {
-     "id": "56336ba5738c",
-     "title_fa": "فدرال رزرو آماده‌ی نبرد تازه با تورم",
-     "understood_fa": "تورم اکتبر ۰٫۴٪ (انتظار ۰٫۳٪) و هسته ۰٫۳٪ (انتظار ۰٫۲٪) شد. بیش از ۸۸٪ معامله‌گران افزایش ۲۵ نقطه‌ای و بقیه ۵۰ نقطه‌ای را در دسامبر انتظار دارند. والر گفته اگر تورم هسته حدود ۰٫۳٪ باشد، افزایش ۵۰ نقطه‌ای باید روی میز باشد.",
-     "publisher": "cnbc-markets",
-     "url": "https://www.cnbc.com/2026/11/13/us-inflation-outlook-federal-reserve-rate-hike.html"
+     "id": "1fbf96b84e8c",
+     "title_fa": "تورم داغ، افزایش دسامبر فدرال رزرو",
+     "understood_fa": "CPI اکتبر ۰٫۴ درصد ماهانه و هسته ۰٫۳ شد. والر از افزایش ۲۵ نقطه‌ای در دسامبر حمایت کرد و گفت اگر تورم هسته ۰٫۳ یا بیشتر بماند، ۵۰ نقطه‌ای هم باید بررسی شود. لوگان دو افزایش ربع‌درصدی دیگر خواست.",
+     "publisher": "Latin Times",
+     "url": "https://www.latintimes.com/october-inflation-fed-rate-hike-december-601371"
     },
     {
-     "id": "f01068ca8c51",
-     "title_fa": "گلدمن: افزایش دیگر در مارس ۲۰۲۷",
-     "understood_fa": "گلدمن افزایش ۲۵ نقطه‌ای در دسامبر و یکی دیگر در مارس (شاید ژانویه) را پیش‌بینی می‌کند و اولین کاهش را به دسامبر ۲۰۲۷ برده است. دویچه‌بانک سه افزایش دیگر تا مارس می‌بیند.",
-     "publisher": "TradingView",
-     "url": "https://www.tradingview.com/news/gurufocus:438f174a8094b:0-goldman-sachs-makes-stark-fed-rate-call-for-2027/"
+     "id": "1737aff38c91",
+     "title_fa": "سخنان وارش درباره هوش مصنوعی",
+     "understood_fa": "وارش دوشنبه درباره‌ی فرصت‌ها و خطرهای هوش مصنوعی صحبت کرد ولی درباره‌ی تورم یا مسیر نرخ چیزی نگفت. این در حالی است که بیشتر همکارانش حمایت از افزایش‌های بیشتر را اعلام کرده‌اند.",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/economy/policy/articles/warsh-grapples-ai-potential-economic-172207017.html"
     }
    ],
    "views": [
     {
-     "who": "Goldman Sachs",
-     "view_fa": "افزایش ۲۵ نقطه‌ای دسامبر و یکی دیگر در مارس ۲۰۲۷ (ممکن است زودتر)؛ کاهش نرخ به دسامبر ۲۰۲۷ رفته است.",
-     "url": "https://www.tradingview.com/news/gurufocus:438f174a8094b:0-goldman-sachs-makes-stark-fed-rate-call-for-2027/"
+     "who": "Christopher Waller (Fed)",
+     "view_fa": "از افزایش ۲۵ نقطه‌ای در دسامبر حمایت می‌کند و اگر تورم هسته ۰٫۳ یا بالاتر باشد، ۵۰ نقطه‌ای را قابل بررسی می‌داند.",
+     "url": "https://www.latintimes.com/october-inflation-fed-rate-hike-december-601371"
     },
     {
-     "who": "Deutsche Bank",
-     "view_fa": "سه افزایش ۲۵ نقطه‌ای دیگر تا مارس را پیش‌بینی می‌کند که نرخ را به ۴٫۵۰ تا ۴٫۷۵٪ می‌رساند.",
-     "url": "https://www.tradingview.com/news/gurufocus:438f174a8094b:0-goldman-sachs-makes-stark-fed-rate-call-for-2027/"
+     "who": "Lorie Logan (Dallas Fed)",
+     "view_fa": "فدرال رزرو دست‌کم به دو افزایش ربع‌درصدی دیگر نیاز دارد و بعد باید مکث کند.",
+     "url": "https://www.latintimes.com/october-inflation-fed-rate-hike-december-601371"
     }
    ],
    "prev_stance": "صعودی",
    "change_fa": ""
   }
  },
- "watch_fa": "هفته‌ی آینده: گزارش انویدیا (سه‌شنبه)، قیمت‌گذاری عرضه‌ی اولیه‌ی آنتروپیک (چهارشنبه)، فروش خرده‌فروشی آمریکا، و ادامه‌ی خبرهای ایران و نشست ۸ دسامبر فدرال رزرو.",
+ "watch_fa": "سه‌شنبه: فروش خرده‌فروشی و تولید صنعتی آمریکا؛ چهارشنبه: صورت‌جلسه فدرال رزرو و نتایج انویدیا؛ پنجشنبه: درخواست‌های بیکاری.",
  "labels": [
   {
-   "id": "0912de944ec5",
+   "id": "15c05f648e27",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "14323de2d5be",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "2cd90933748c",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "2e1450b943cd",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "337ad65da8c3",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "4b6d18197b0a",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "58fbf2699cdc",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "5b07f09552a0",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "7d505f6d3533",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "81df1470fd56",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "82b739f24b42",
-   "asset": "bitcoin",
-   "label": "bear"
-  },
-  {
-   "id": "87946a078074",
+   "id": "1e1a7b409e7e",
    "asset": "bitcoin",
    "label": "neutral"
   },
   {
-   "id": "aecaef79d278",
+   "id": "22fec5c22c42",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "b2efb53f0112",
+   "id": "24d214b6083b",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "71c7b194d1ce",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "77e33d3e8f01",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "cf6de2d2e1e7",
+   "id": "84398805c4e7",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "d096f509d402",
+   "id": "8d60cf8a13e4",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "dc0763b2ddc8",
+   "id": "967bff92f6d1",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "98b2d675751f",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "dd2c1d5bae53",
+   "id": "9b1e117e77f8",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "9d5873865f65",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "ad131b6b4877",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "ddd1fcb7aab1",
+   "id": "b0c20f5a96b4",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "e3383764d742",
+   "id": "daaa3c0cf1e6",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "ed2ea01dd555",
+   "id": "e1712309d923",
    "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "071d91dd8cc5",
-   "asset": "copper",
+   "id": "fe43801a6ca2",
+   "asset": "bitcoin",
    "label": "bear"
   },
   {
-   "id": "120c8362a94f",
-   "asset": "copper",
-   "label": "bull"
-  },
-  {
-   "id": "152326d5bbb4",
+   "id": "23fb7964c6f9",
    "asset": "copper",
    "label": "neutral"
   },
   {
-   "id": "16aa2af9340e",
+   "id": "a99fa041e868",
+   "asset": "copper",
+   "label": "neutral"
+  },
+  {
+   "id": "ded6f4d75d5e",
    "asset": "copper",
    "label": "bear"
   },
   {
-   "id": "1ed229f89b15",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "2f964758aed4",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "763d52f778bc",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "979e91227e06",
-   "asset": "copper",
-   "label": "bull"
-  },
-  {
-   "id": "9c85af132158",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "bf84928a1a3b",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "d2c09f9c1694",
-   "asset": "copper",
-   "label": "bear"
-  },
-  {
-   "id": "ecba7d99c7b2",
-   "asset": "copper",
-   "label": "bull"
-  },
-  {
-   "id": "021a7f7d4f1d",
-   "asset": "gold",
-   "label": "bull"
-  },
-  {
-   "id": "024d40af61b7",
+   "id": "0badf054a826",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "59f7bc4fad1a",
+   "id": "29ec18ea0b7e",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "62179c30bd3e",
-   "asset": "gold",
-   "label": "neutral"
-  },
-  {
-   "id": "797b8a44c2d4",
-   "asset": "gold",
-   "label": "neutral"
-  },
-  {
-   "id": "8378d682b9bf",
+   "id": "71935c820577",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "9ac14f9071e0",
+   "id": "98b2d675751f",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "9cff4a12bdd0",
+   "id": "b5cd18c7d74f",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "a3c829a6f189",
+   "id": "bfb93989fdc1",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "a68cdc6bb75b",
+   "id": "e5e74a99912e",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "ce5c5d9f0796",
+   "id": "eb4457fccad3",
    "asset": "gold",
    "label": "bear"
   },
   {
-   "id": "e795cb430721",
-   "asset": "gold",
-   "label": "bear"
-  },
-  {
-   "id": "f03e879af5f4",
-   "asset": "gold",
-   "label": "bear"
-  },
-  {
-   "id": "0efe08498700",
+   "id": "24372cc08fb1",
    "asset": "oil",
    "label": "bull"
   },
   {
-   "id": "12bbb70a7b0f",
+   "id": "4dbed1578b2a",
    "asset": "oil",
    "label": "neutral"
   },
   {
-   "id": "2148cbf17e93",
-   "asset": "oil",
-   "label": "bull"
-  },
-  {
-   "id": "389d412c6915",
-   "asset": "oil",
-   "label": "bull"
-  },
-  {
-   "id": "401cf316af3f",
+   "id": "5382338fb58f",
    "asset": "oil",
    "label": "bear"
   },
   {
-   "id": "4be5515e2817",
+   "id": "66b0ec9e60a1",
    "asset": "oil",
-   "label": "bull"
+   "label": "neutral"
   },
   {
-   "id": "5057474e1d5c",
+   "id": "898fc3e9bd3a",
    "asset": "oil",
    "label": "bear"
   },
   {
-   "id": "6179eefbfe9a",
-   "asset": "oil",
-   "label": "neutral"
-  },
-  {
-   "id": "63ae77502c96",
+   "id": "932628f32bdb",
    "asset": "oil",
    "label": "bear"
   },
   {
-   "id": "714920eb3a2d",
+   "id": "ab9d4cbcf645",
    "asset": "oil",
    "label": "bull"
   },
   {
-   "id": "7994396f30cc",
-   "asset": "oil",
-   "label": "neutral"
-  },
-  {
-   "id": "84eb84d13917",
-   "asset": "oil",
-   "label": "bull"
-  },
-  {
-   "id": "898a5697fe44",
-   "asset": "oil",
-   "label": "neutral"
-  },
-  {
-   "id": "93826351f768",
+   "id": "abf57c5e4520",
    "asset": "oil",
    "label": "bear"
   },
   {
-   "id": "9719f61bb10a",
-   "asset": "oil",
-   "label": "bull"
-  },
-  {
-   "id": "ad2c9cc4e98c",
-   "asset": "oil",
-   "label": "bear"
-  },
-  {
-   "id": "c013a298ae4b",
+   "id": "e079776e937e",
    "asset": "oil",
    "label": "neutral"
   },
   {
-   "id": "d8b62984c01f",
-   "asset": "oil",
-   "label": "bear"
-  },
-  {
-   "id": "d9046accc1f5",
-   "asset": "oil",
-   "label": "neutral"
-  },
-  {
-   "id": "dfca5339eb40",
-   "asset": "oil",
-   "label": "bull"
-  },
-  {
-   "id": "fcd6e5c58cdf",
-   "asset": "oil",
-   "label": "neutral"
-  },
-  {
-   "id": "074f3c2f2768",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "2d86ce524c47",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "3ff2ea2b6eb7",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "44193ff55af0",
+   "id": "1737aff38c91",
    "asset": "rates",
    "label": "neutral"
   },
   {
-   "id": "56336ba5738c",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "698b0ca7980c",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "6ca4d9ecbac2",
+   "id": "1ecb584e417a",
    "asset": "rates",
    "label": "neutral"
   },
   {
-   "id": "74d1ad40b185",
+   "id": "1fbf96b84e8c",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "7ae4c276be3b",
+   "id": "29ec18ea0b7e",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "a72fa7f572b2",
+   "id": "3d8ed195a411",
    "asset": "rates",
    "label": "neutral"
   },
   {
-   "id": "bdc4bb559bb1",
+   "id": "5facb6043023",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "c36a80701473",
+   "id": "7ba35ddebe6d",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "d2ff91bb0246",
+   "id": "a11ee7b74b98",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "d83820b8cd55",
+   "id": "bb9cb76c1992",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "c91ca3607644",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "ce0e0cb9bbff",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "f01068ca8c51",
+   "id": "eb4457fccad3",
    "asset": "rates",
    "label": "bull"
   },
   {
-   "id": "f8ddd542503f",
-   "asset": "rates",
+   "id": "2f79a09c7976",
+   "asset": "silver",
    "label": "bull"
   },
   {
-   "id": "fded247eb66a",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "fef266e97f24",
-   "asset": "rates",
-   "label": "bull"
-  },
-  {
-   "id": "2e28f736a1ab",
+   "id": "6323052602d1",
    "asset": "silver",
    "label": "bear"
   },
   {
-   "id": "5c40cb8879da",
-   "asset": "silver",
-   "label": "neutral"
-  },
-  {
-   "id": "6b6b41e7c0f4",
+   "id": "71935c820577",
    "asset": "silver",
    "label": "bear"
   },
   {
-   "id": "7db93d839d23",
+   "id": "71fec863a68d",
    "asset": "silver",
    "label": "bear"
   },
   {
-   "id": "b699d738aefc",
+   "id": "e5e74a99912e",
    "asset": "silver",
    "label": "bear"
-  },
-  {
-   "id": "f2c6c9b947d4",
-   "asset": "silver",
-   "label": "neutral"
   }
  ]
 }
