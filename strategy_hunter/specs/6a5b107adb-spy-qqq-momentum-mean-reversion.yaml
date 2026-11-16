@@ -1,0 +1,13 @@
+id: 6a5b107adb-spy-qqq-momentum-mean-reversion
+name: SPY/QQQ pullback mean reversion
+name_fa: خرید اصلاح SPY و QQQ با بازگشت مومنتوم
+source: medium/options-trading
+source_url: https://blockstoxx.medium.com/buying-the-pullback-my-spy-and-qqq-mean-reversion-strategy-8dc03078a83a
+claim: «قیمت بازگشت به میانگین ندارد، ولی مومنتوم دارد. تغییر دادن این اندیکاتور رایج پایه‌ی استراتژی بازگشت به میانگین من شد، تا ۸۵٪…»
+claimed_return: 85% (truncated)
+added: '2026-11-16'
+status: not_testable
+asset_class: etf
+symbols:
+- SPY
+reason_not_testable: فقط خلاصه‌ی بریده‌ی مقاله در دسترس بود؛ اندیکاتور، پارامترها و قانون ورود و خروج معلوم نیست

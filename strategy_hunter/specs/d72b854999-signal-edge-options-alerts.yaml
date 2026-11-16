@@ -1,0 +1,13 @@
+id: d72b854999-signal-edge-options-alerts
+name: Signal Edge options alerts
+name_fa: هشدارهای آپشن Signal Edge
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xx5pya/over_a_year_building_an_options_trading_algo_and/
+claim: «در آوریل ۲۲۱ هشدار کال با میانگین ‎+۴۹٪ در نگه‌داری ۵ روزه… از نیمه‌ی اکتبر تا اوایل نوامبر ۹۲ هشدار پوت با ۷۰٪ برد و ضریب سود ۲٫۸»
+claimed_return: +49% avg call alert (5-day hold), 70% win rate puts
+added: '2026-11-16'
+status: not_testable
+asset_class: option
+symbols:
+- SPY
+reason_not_testable: قانون‌های انتخاب سهم، جهت و قرارداد خصوصی است و در پست نیامده

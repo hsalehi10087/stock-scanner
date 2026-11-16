@@ -1,0 +1,13 @@
+id: 1993dc73b3-two-edges-portfolio
+name: One portfolio, two trading edges
+name_fa: یک سبد با دو مزیت معاملاتی
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/one-portfolio-two-trading-edges/
+claim: «یک سبد، دو مزیت معاملاتی (۱۲٪ بازده – ۱۷٪ حضور در بازار)»
+claimed_return: 12%/yr, 17% exposure
+added: '2026-11-16'
+status: not_testable
+asset_class: etf
+symbols:
+- SPY
+reason_not_testable: متن کامل مقاله در این اجرا در دسترس نبود؛ دو روش و قانون‌هایشان معلوم نیست

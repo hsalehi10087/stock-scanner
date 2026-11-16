@@ -1,0 +1,13 @@
+id: 644c16147c-tqqq-sqqq-first-1pct-intraday
+name: TQQQ/SQQQ first 1% move intraday
+name_fa: خرید هر کدام از TQQQ یا SQQQ که زودتر ۱٪ بالا برود
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xwp1vs/need_help_checking_my_backtesting/
+claim: «ببین کدام (TQQQ یا SQQQ) در روز زودتر ۱٪ بالا می‌رود… با ۱۰۰٪ حساب بخر، قبل از ۹:۴۰ نخر، حد ضرر ‎-۱٪ و حد سود ‎+۷٪، اگر به هدف‌ها نرسید ساعت ۳:۵۰ همه را بفروش… حدود ۶۶۰٪ سود از ۲۰۱۶ تا الان، میانگین ۵۶٪ در سال»
+claimed_return: +660% (2016-2026), 56%/yr
+added: '2026-11-16'
+status: not_testable
+asset_class: etf
+symbols:
+- TQQQ
+reason_not_testable: به داده‌ی ۵ دقیقه‌ای ۱۰ ساله نیاز دارد (کدام زودتر ۱٪ بالا رفت، ساعت ورود و خروج)؛ با کندل روزانه یا ساعتیِ ۲ ساله قابل بازسازی نیست

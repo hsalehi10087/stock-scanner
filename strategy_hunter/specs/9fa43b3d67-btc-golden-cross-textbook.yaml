@@ -1,0 +1,29 @@
+id: 9fa43b3d67-btc-golden-cross-textbook
+name: Textbook golden cross on BTC
+name_fa: تقاطع طلایی کتابی روی بیت‌کوین
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xwckrx/i_tested_12_popular_strategies_with_real_trading/
+claim: "«۹ موردی که بعد از هزینه‌ها سودده ماندند: تقاطع طلایی روی BTC (‎+۳۰٪)، طلا (‎+۲۷٪) و EUR/USD (‎+۱۲٪)… تقاطع طلایی روی BTC فقط ۷۸ معامله در نزدیک ۶ سال داشت، که برای اینکه آن را مزیت بدانیم و نه شانس، خیلی کم است.» — ژانویه ۲۰۲۱ تا نوامبر ۲۰۲۶، قانون‌های کتابی، ریسک ۱٪ در هر معامله، با هزینه‌ها"
+claimed_return: "+30% (2021-2026, after costs)"
+added: 2026-11-16
+status: implemented
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1d
+start: '2021-01-01'
+notes: >-
+  نویسنده فقط گفته «قانون کتابی تقاطع طلایی» روی تایم‌فریم رایج آن؛ فرض شده: روزانه، میانگین ساده‌ی ۵۰ و ۲۰۰ روزه،
+  خرید وقتی ۵۰ از پایین ۲۰۰ را قطع کند و خروج وقتی از بالا قطع کند. فقط خرید آزموده می‌شود (معلوم نیست فروش هم داشته یا نه؛
+  ۷۸ معامله در ۶ سال احتمالاً تایم‌فریم کوتاه‌تر یا خرید و فروش را نشان می‌دهد).
+  حد ضرر و اندازه‌ی پوزیشن با ریسک ۱٪ گفته نشده، پس اینجا تمام سرمایه بدون حد ضرر است. نتایج طلا و EUR/USD آزموده نمی‌شوند.
+indicators:
+  sma50: {fn: sma, n: 50}
+  sma200: {fn: sma, n: 200}
+  sma50_prev: {fn: prev, col: sma50, k: 1}
+  sma200_prev: {fn: prev, col: sma200, k: 1}
+entry: sma50 > sma200 and sma50_prev <= sma200_prev
+exit: sma50 < sma200 and sma50_prev >= sma200_prev
+side: long
+stop_loss_pct: null
+take_profit_pct: null
+max_hold_bars: null

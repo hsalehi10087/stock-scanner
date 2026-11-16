@@ -1,0 +1,13 @@
+id: c25ef195fe-nasdaq-5-strongest
+name: Buy 5 strongest Nasdaq stocks
+name_fa: خرید ۵ سهم قوی‌تر نزدک
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/does-buying-the-5-strongest-nasdaq-stocks-work/
+claim: «آیا خرید ۵ سهم قوی‌تر نزدک جواب می‌دهد؟ (بک‌تست – ۲۰٪)»
+claimed_return: 20%
+added: '2026-11-16'
+status: not_testable
+asset_class: stock
+symbols:
+- QQQ
+reason_not_testable: متن کامل مقاله در این اجرا در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید

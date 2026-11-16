@@ -1,0 +1,13 @@
+id: 2619d89912-nifty50-rsi
+name: NIFTY 50 RSI strategy
+name_fa: استراتژی RSI روی شاخص نیفتی ۵۰
+source: quantifiedstrategies
+source_url: https://www.quantifiedstrategies.com/nifty-50-rsi-trading-strategy/
+claim: «قانون‌های ورود و خروج RSI نیفتی ۵۰ و نتیجه‌ی ۳۰۳ معامله‌ی تاریخی، با ضریب سود ۳٫۱۳ پس از هزینه‌های فرضی»
+claimed_return: profit factor 3.13 (303 trades)
+added: '2026-11-16'
+status: not_testable
+asset_class: etf
+symbols:
+- ^NSEI
+reason_not_testable: متن کامل مقاله در این اجرا در دسترس نبود؛ دوره‌ی RSI، آستانه‌ی ورود و شرط خروج معلوم نیست

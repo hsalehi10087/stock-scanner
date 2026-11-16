@@ -1,0 +1,13 @@
+id: 8baeffa2a8-atlas20-crypto-top20-rotation
+name: Atlas20 crypto top-20 momentum rotation
+name_fa: چرخش مومنتوم بین ۲۰ رمزارز بزرگ (Atlas20)
+source: github/backtesting
+source_url: https://github.com/WW-shan/Atlas20
+claim: '«H5 در ۲۰۲۲-۰۱-۰۱ تا ۲۰۲۶-۰۹-۲۱: ۲۴٫۱۲ برابر (با پرشدن ۳ ساعت بعد از بسته‌شدن) در برابر ۱٫۸۷ برابر بیت‌کوین»'
+claimed_return: 24.12x (2022-2026) vs BTC 1.87x
+added: '2026-11-16'
+status: not_testable
+asset_class: crypto
+symbols:
+- BTC-USD
+reason_not_testable: روش رتبه‌بندی و چرخش بین ۲۰ رمزارز برتر با فهرست تاریخی بدون سوگیری، فیلتر پهنای بازار و کنترل نوسان است؛ موتور تک‌دارایی است و این سبد را نمی‌آزماید
