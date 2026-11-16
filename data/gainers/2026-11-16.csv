@@ -1,0 +1,10 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+GDHG,Golden Heaven Group Holdings Ltd.  - Class A Ordinary Shares,7.900000095367432,857.5757829720437,71095584.0,2026-11-16,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+DMRC,Digimarc Corporation - Common Stock,8.140000343322754,14.325849356155974,122615.0,2026-11-16,2,5,⭐۲/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+CGON,"CG Oncology, Inc. - Common stock",84.05400085449219,12.975805283088992,5013053.0,2026-11-16,2,5,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': True, 'analysts': True}"
+OFRM,"Once Upon a Farm, PBC Common Stock",10.890000343322754,12.84974895140294,608425.0,2026-11-16,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': None, 'analysts': False}"
+EGG,Enigmatig Limited Class A Ordinary Shares,6.309999942779541,10.896307193746303,245021.0,2026-11-16,0,4,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+CLW,Clearwater Paper Corporation Common Stock,16.139999389648438,10.851640964948084,258401.0,2026-11-16,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+KPLT,"Katapult Holdings, Inc. - Common Stock",9.78499984741211,10.815401267922443,292264.0,2026-11-16,1,4,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+SWMR,"Swarmer, Inc - common stock",9.770000457763672,10.52036526157214,305017.0,2026-11-16,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+HTHT,H World Group Limited - American Depositary Shares,55.5099983215332,10.160744183173298,1893567.0,2026-11-16,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"

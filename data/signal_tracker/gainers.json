@@ -468,6 +468,23 @@
 "profit": true
 }
 },
+"CGON": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 84.054,
+"last_date": "2026-11-16",
+"qs": 2,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": false,
+"momentum": true,
+"profit": false
+}
+},
 "CHOW": {
 "count": 1,
 "events": [
@@ -583,6 +600,23 @@
 "qs": 2,
 "qs_flags": {
 "analysts": true,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"CLW": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 16.14,
+"last_date": "2026-11-16",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
 "cash": true,
 "growth": false,
 "momentum": false,
@@ -795,6 +829,23 @@
 "profit": false
 }
 },
+"DMRC": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 8.14,
+"last_date": "2026-11-16",
+"qs": 2,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "DNUT": {
 "count": 1,
 "events": [
@@ -983,6 +1034,23 @@
 "growth": true,
 "momentum": true,
 "profit": true
+}
+},
+"GDHG": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 7.9,
+"last_date": "2026-11-16",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
 }
 },
 "GDYN": {
@@ -1231,6 +1299,23 @@
 "profit": false
 }
 },
+"HTHT": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 55.51,
+"last_date": "2026-11-16",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "HUCK": {
 "count": 1,
 "events": [
@@ -1434,6 +1519,23 @@
 "cash": true,
 "growth": true,
 "momentum": true,
+"profit": true
+}
+},
+"KPLT": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 9.785,
+"last_date": "2026-11-16",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
 "profit": true
 }
 },
@@ -1850,6 +1952,23 @@
 "growth": false,
 "momentum": true,
 "profit": false
+}
+},
+"OFRM": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 10.89,
+"last_date": "2026-11-16",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": null,
+"profit": true
 }
 },
 "ONEG": {
@@ -2405,6 +2524,23 @@
 "cash": false,
 "growth": true,
 "momentum": false,
+"profit": false
+}
+},
+"SWMR": {
+"count": 1,
+"events": [
+"2026-11-16"
+],
+"first_date": "2026-11-16",
+"first_price": 9.77,
+"last_date": "2026-11-16",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": null,
 "profit": false
 }
 },
