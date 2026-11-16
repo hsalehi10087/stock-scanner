@@ -21,7 +21,7 @@ import quality as Q  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'gainers')
 THRESHOLD = 10.0
-MIN_PRICE = 1.0
+MIN_PRICE = 5.0  # زیر این قیمت نویز سهام پِنی/پامپ‌ودامپ زیاد است
 MIN_VOLUME = 100_000
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; gainers-scan/1.0)'}
 
@@ -139,9 +139,14 @@ def main():
     state = T.load('gainers')
     if state is None:
         state = T.bootstrap('gainers', HIST_DIR, price_col='price')
+    # فیلتر مشترک (همان فیلتری که در fund_growth.py اعمال شد): فقط سهم‌هایی که امتیاز کیفیت گرفته‌اند
+    # (یعنی جزو ۲۵ تای برتر رشد روزانه بوده‌اند) و دست‌کم ۱ معیار کیفیت را دارند وارد پیگیری بلندمدت می‌شوند.
+    # قبلاً هر سهمی که فقط امروز >۱۰٪ رشد کرده بود بدون هیچ غربالی اضافه می‌شد، و همین باعث می‌شد سهام
+    # پنی/پامپ‌ودامپ تک‌سیگنالی (مثل NIVF، JAGX با qs=۰) در «بدترین بازده» سر برآورند.
     for r in rows:
-        T.add(state, r['ticker'], date, date, r['price'],
-              {'qs': r.get('qs'), 'qs_flags': r.get('qs_flags')} if r.get('qs') is not None else None)
+        if r.get('qs') is None or r['qs'] < 1:
+            continue
+        T.add(state, r['ticker'], date, date, r['price'], {'qs': r['qs'], 'qs_flags': r.get('qs_flags')})
     T.save('gainers', state)
     trk = {x['ticker']: x for x in T.returns(state, {s: d['price'] for s, d in prices.items()})}
     for r in rows:
