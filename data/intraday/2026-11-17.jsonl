@@ -1,0 +1,9 @@
+{"time": "10:50", "ticker": "APP", "signal": "drop", "price": 390.09, "chg": -6.05, "rvol": 0.88, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "IONQ", "signal": "drop", "price": 24.35, "chg": -7.94, "rvol": 2.35, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "QBTS", "signal": "drop", "price": 8.0, "chg": -7.73, "rvol": 2.03, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "RGTI", "signal": "drop", "price": 8.33, "chg": -8.06, "rvol": 2.35, "urgent": true, "src": "Yahoo"}
+{"time": "11:50", "ticker": "ACM", "signal": "surge", "price": 81.66, "chg": 12.63, "rvol": 2.76, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "BILL", "signal": "hi52", "price": 62.0, "chg": 7.58, "rvol": 6.17, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "BILL", "signal": "surge", "price": 62.0, "chg": 7.58, "rvol": 6.17, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "ENR", "signal": "hi52", "price": 26.36, "chg": 8.3, "rvol": 2.35, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "ENR", "signal": "surge", "price": 26.36, "chg": 8.3, "rvol": 2.35, "urgent": false, "src": "Yahoo"}

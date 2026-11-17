@@ -1,106 +1,79 @@
 {
-"2026-11-16": {
-"APLD": [
-"drop"
-],
-"AVGO": [
-"ma50"
-],
-"CRDO": [
-"drop"
-],
-"IREN": [
-"drop"
-],
-"LITE": [
-"drop"
-],
-"NVTS": [
-"drop"
-],
-"TSN": [
-"surge"
-],
-"ALAB": [
-"drop"
-],
-"ARM": [
-"drop"
-],
-"COHR": [
+"2026-11-17": {
+"APP": [
 "drop"
 ],
 "IONQ": [
 "drop"
 ],
-"NBIS": [
-"drop"
-],
-"OUST": [
-"drop"
-],
-"POWL": [
-"surge"
-],
-"WWW": [
-"hi52"
-],
-"BILL": [
-"hi52"
-],
 "QBTS": [
 "drop"
 ],
-"TEM": [
+"RGTI": [
 "drop"
 ],
-"CRWV": [
-"drop"
+"ACM": [
+"surge"
 ],
-"INOD": [
-"drop"
+"BILL": [
+"hi52",
+"surge"
+],
+"ENR": [
+"hi52",
+"surge"
 ]
 },
-"pending_2026-11-16": [
+"pending_2026-11-17": [
 {
 "code": "surge",
-"ticker": "TSN",
-"score": 1,
-"rvol": 2.1422173449201733,
-"line": "TSN ۶۵٫۰۱$ ▲۱۰٫۵٪ | حجم ۲٫۱ برابر | فروش ▼۰٫۱٪، سود ▲۱۹۸٫۴٪",
-"time": "09:50",
-"price": 65.01,
-"chg": 10.52
-},
-{
-"code": "surge",
-"ticker": "POWL",
+"ticker": "ACM",
 "score": 0,
-"rvol": 4.683942520290829,
-"line": "POWL ۱۵۳٫۶$ ▲۷٫۶٪ | حجم ۴٫۷ برابر | فروش ▲۸٫۹٪، AI ۳٫۵",
-"time": "10:50",
-"price": 153.6,
-"chg": 7.62
-},
-{
-"code": "hi52",
-"ticker": "WWW",
-"score": 0,
-"rvol": 3.0176686611961405,
-"line": "WWW ۲۵٫۴۸$ ▲۲٫۴٪ | حجم ۳٫۰ برابر",
-"time": "10:50",
-"price": 25.48,
-"chg": 2.35
+"rvol": 2.76055347423482,
+"line": "ACM ۸۱٫۶۶$ ▲۱۲٫۶٪ | حجم ۲٫۸ برابر",
+"time": "11:50",
+"price": 81.66,
+"chg": 12.63
 },
 {
 "code": "hi52",
 "ticker": "BILL",
 "score": 0,
-"rvol": 1.567016959086832,
-"line": "BILL ۵۸٫۳۲$ ▲۷٫۰٪ | حجم ۱٫۶ برابر",
+"rvol": 6.169046236231014,
+"line": "BILL ۶۲٫۰$ ▲۷٫۶٪ | حجم ۶٫۲ برابر",
 "time": "11:50",
-"price": 58.32,
-"chg": 7.05
+"price": 62.0,
+"chg": 7.58
+},
+{
+"code": "surge",
+"ticker": "BILL",
+"score": 0,
+"rvol": 6.169046236231014,
+"line": "BILL ۶۲٫۰$ ▲۷٫۶٪ | حجم ۶٫۲ برابر",
+"time": "11:50",
+"price": 62.0,
+"chg": 7.58
+},
+{
+"code": "hi52",
+"ticker": "ENR",
+"score": 0,
+"rvol": 2.3535103468839225,
+"line": "ENR ۲۶٫۳۶$ ▲۸٫۳٪ | حجم ۲٫۴ برابر",
+"time": "11:50",
+"price": 26.36,
+"chg": 8.3
+},
+{
+"code": "surge",
+"ticker": "ENR",
+"score": 0,
+"rvol": 2.3535103468839225,
+"line": "ENR ۲۶٫۳۶$ ▲۸٫۳٪ | حجم ۲٫۴ برابر",
+"time": "11:50",
+"price": 26.36,
+"chg": 8.3
 }
 ]
 }
