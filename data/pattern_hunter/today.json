@@ -1,19 +1,19 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-17",
  "markets": {
   "us": {
-   "data_date": "2026-11-13",
-   "scored": 1480,
+   "data_date": "2026-11-16",
+   "scored": 1479,
    "picks": [
     {
      "ticker": "VCYT",
      "name": "Veracyte, Inc.",
-     "price": 24.33,
+     "price": 24.01,
      "prob": 0.954,
      "rank": 1,
-     "r6m": -36.8,
-     "from_hi": -59.8,
-     "volu_ratio": 1.71,
+     "r6m": -42.1,
+     "from_hi": -60.3,
+     "volu_ratio": 1.74,
      "passed": [
       "صورت مالی",
       "کن‌اسلیم"
@@ -26,12 +26,12 @@
     {
      "ticker": "MRVL",
      "name": "Marvell Technology",
-     "price": 156.76,
-     "prob": 0.934,
+     "price": 145.36,
+     "prob": 0.938,
      "rank": 2,
-     "r6m": -11.3,
-     "from_hi": -50.4,
-     "volu_ratio": 0.92,
+     "r6m": -13.9,
+     "from_hi": -54.0,
+     "volu_ratio": 0.93,
      "passed": [
       "صورت مالی"
      ],
@@ -43,30 +43,29 @@
     {
      "ticker": "PLTR",
      "name": "Palantir Technologies",
-     "price": 167.99,
-     "prob": 0.913,
+     "price": 160.39,
+     "prob": 0.923,
      "rank": 3,
-     "r6m": 25.4,
-     "from_hi": -19.6,
-     "volu_ratio": 0.71,
+     "r6m": 18.7,
+     "from_hi": -23.3,
+     "volu_ratio": 0.7,
      "passed": [
-      "صورت مالی",
-      "کن‌اسلیم"
+      "صورت مالی"
      ],
      "health": "5/5",
-     "canslim": "5/7",
+     "canslim": "4/7",
      "buffett": "4/5",
      "quality": "⭐۴/۵"
     },
     {
      "ticker": "FORM",
      "name": "FormFactor, Inc.",
-     "price": 87.53,
-     "prob": 0.909,
+     "price": 81.14,
+     "prob": 0.91,
      "rank": 4,
-     "r6m": -30.7,
-     "from_hi": -45.3,
-     "volu_ratio": 1.04,
+     "r6m": -30.9,
+     "from_hi": -49.3,
+     "volu_ratio": 1.03,
      "passed": [
       "بافت"
      ],
@@ -76,59 +75,58 @@
      "quality": "⭐۴/۵"
     },
     {
-     "ticker": "MTRN",
-     "name": "Materion Corp.",
-     "price": 203.93,
-     "prob": 0.89,
+     "ticker": "CORT",
+     "name": "Corcept Therapeutics Incorporated",
+     "price": 69.22,
+     "prob": 0.904,
      "rank": 5,
-     "r6m": -0.4,
-     "from_hi": -36.1,
-     "volu_ratio": 0.74,
+     "r6m": 25.6,
+     "from_hi": -44.0,
+     "volu_ratio": 1.13,
      "passed": [
-      "صورت مالی"
+      "بافت"
      ],
-     "health": "5/5",
+     "health": "4/5",
      "canslim": "4/7",
-     "buffett": "3/5",
-     "quality": "⭐۳/۵"
+     "buffett": "5/5",
+     "quality": "⭐۴/۵"
     }
    ],
-   "checked": 33,
-   "dropped": 28,
+   "checked": 29,
+   "dropped": 24,
    "market_up": true,
    "median_prob": 0.395
   },
   "cn": {
-   "data_date": "2026-11-13",
+   "data_date": "2026-11-17",
    "scored": 1500,
    "picks": [
     {
-     "ticker": "300684.SZ",
-     "name": "JONES TECH PLC",
-     "price": 62.78,
-     "prob": 0.779,
+     "ticker": "300491.SZ",
+     "name": "TONHE TECH.",
+     "price": 19.42,
+     "prob": 0.781,
      "rank": 1,
-     "r6m": 0.3,
-     "from_hi": -47.5,
-     "volu_ratio": 0.92,
+     "r6m": -32.0,
+     "from_hi": -54.2,
+     "volu_ratio": 0.76,
      "passed": [
-      "صورت مالی",
-      "بافت"
+      "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "2/7",
-     "buffett": "4/5",
-     "quality": "⭐۳/۵"
+     "buffett": "2/5",
+     "quality": "⭐۲/۵"
     },
     {
      "ticker": "300408.SZ",
      "name": "CCTC",
-     "price": 71.26,
-     "prob": 0.779,
+     "price": 63.11,
+     "prob": 0.767,
      "rank": 2,
-     "r6m": -19.2,
-     "from_hi": -58.2,
-     "volu_ratio": 0.86,
+     "r6m": -28.6,
+     "from_hi": -63.0,
+     "volu_ratio": 0.88,
      "passed": [
       "صورت مالی",
       "بافت"
@@ -139,14 +137,32 @@
      "quality": "⭐۴/۵"
     },
     {
+     "ticker": "002463.SZ",
+     "name": "HDGF",
+     "price": 72.9,
+     "prob": 0.764,
+     "rank": 3,
+     "r6m": -31.9,
+     "from_hi": -53.0,
+     "volu_ratio": 1.06,
+     "passed": [
+      "صورت مالی",
+      "بافت"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
+     "buffett": "4/5",
+     "quality": "⭐۴/۵"
+    },
+    {
      "ticker": "603228.SS",
      "name": "SHENZHEN KINWONG ELECTRONIC CO",
-     "price": 60.18,
-     "prob": 0.773,
-     "rank": 3,
-     "r6m": -20.4,
-     "from_hi": -46.1,
-     "volu_ratio": 0.91,
+     "price": 51.24,
+     "prob": 0.755,
+     "rank": 4,
+     "r6m": -30.2,
+     "from_hi": -54.1,
+     "volu_ratio": 0.96,
      "passed": [
       "صورت مالی"
      ],
@@ -156,76 +172,42 @@
      "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
     },
     {
-     "ticker": "600183.SS",
-     "name": "SHENGYI TECHNOLOGY CO LTD",
-     "price": 68.15,
-     "prob": 0.746,
-     "rank": 4,
-     "r6m": -20.0,
-     "from_hi": -63.6,
-     "volu_ratio": 1.14,
+     "ticker": "300684.SZ",
+     "name": "JONES TECH PLC",
+     "price": 50.91,
+     "prob": 0.743,
+     "rank": 5,
+     "r6m": -16.3,
+     "from_hi": -57.4,
+     "volu_ratio": 0.96,
      "passed": [
       "صورت مالی",
       "بافت"
      ],
      "health": "5/5",
      "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
-    },
-    {
-     "ticker": "688183.SS",
-     "name": "SHENGYI ELECTRONICS CO LTD",
-     "price": 66.79,
-     "prob": 0.728,
-     "rank": 5,
-     "r6m": -34.6,
-     "from_hi": -52.7,
-     "volu_ratio": 0.73,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "2/7",
-     "buffett": "3/5",
-     "quality": "⭐۴/۵"
+     "buffett": "4/5",
+     "quality": "⭐۳/۵"
     }
    ],
-   "checked": 11,
-   "dropped": 6,
+   "checked": 8,
+   "dropped": 3,
    "market_up": false,
-   "median_prob": 0.332
+   "median_prob": 0.356
   },
   "in": {
-   "data_date": "2026-11-13",
-   "scored": 708,
+   "data_date": "2026-11-17",
+   "scored": 706,
    "picks": [
-    {
-     "ticker": "SAREGAMA.NS",
-     "name": "Saregama India Ltd",
-     "price": 653.45,
-     "prob": 0.619,
-     "rank": 1,
-     "r6m": 95.0,
-     "from_hi": 0.0,
-     "volu_ratio": 1.87,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "5/7",
-     "buffett": "3/5",
-     "quality": "⭐۳/۵"
-    },
     {
      "ticker": "STLTECH.NS",
      "name": "Sterlite Technologies Ltd.",
-     "price": 710.75,
-     "prob": 0.556,
-     "rank": 2,
-     "r6m": 75.4,
-     "from_hi": -30.1,
-     "volu_ratio": 1.04,
+     "price": 641.5,
+     "prob": 0.619,
+     "rank": 1,
+     "r6m": 52.8,
+     "from_hi": -36.9,
+     "volu_ratio": 1.05,
      "passed": [
       "صورت مالی"
      ],
@@ -235,13 +217,30 @@
      "quality": "⭐۴/۵"
     },
     {
+     "ticker": "LOTUSDEV.NS",
+     "name": "SRI LOTUS DEVELOPERS AND REALTY Ltd.",
+     "price": 232.55,
+     "prob": 0.598,
+     "rank": 2,
+     "r6m": 68.0,
+     "from_hi": -6.2,
+     "volu_ratio": 1.09,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "4/7",
+     "buffett": "4/5",
+     "quality": "⭐۳/۵"
+    },
+    {
      "ticker": "QUESS.NS",
      "name": "Quess Corp Ltd.",
-     "price": 342.6,
+     "price": 337.15,
      "prob": 0.549,
      "rank": 3,
-     "r6m": 68.9,
-     "from_hi": -8.9,
+     "r6m": 70.3,
+     "from_hi": -10.3,
      "volu_ratio": 0.31,
      "passed": [
       "صورت مالی",
@@ -253,153 +252,170 @@
      "quality": "⭐۵/۵"
     },
     {
-     "ticker": "THERMAX.NS",
-     "name": "Thermax Ltd.",
-     "price": 2776.2,
-     "prob": 0.546,
+     "ticker": "MANYAVAR.NS",
+     "name": "Vedant Fashions Ltd.",
+     "price": 474.05,
+     "prob": 0.503,
      "rank": 4,
-     "r6m": -38.7,
-     "from_hi": -46.0,
-     "volu_ratio": 1.28,
+     "r6m": 9.3,
+     "from_hi": -23.6,
+     "volu_ratio": 0.16,
+     "passed": [
+      "بافت"
+     ],
+     "health": "3/5",
+     "canslim": "1/7",
+     "buffett": "5/5",
+     "quality": "⭐۳/۵"
+    },
+    {
+     "ticker": "ELLEN.NS",
+     "name": "Ellenbarrie Industrial Gases Ltd.",
+     "price": 289.9,
+     "prob": 0.503,
+     "rank": 5,
+     "r6m": 5.3,
+     "from_hi": -34.9,
+     "volu_ratio": 0.59,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "2/7",
-     "buffett": "1/5",
+     "buffett": "3/5",
      "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "MSTCLTD.NS",
-     "name": "MSTC Ltd.",
-     "price": 783.35,
-     "prob": 0.517,
-     "rank": 5,
-     "r6m": 83.8,
-     "from_hi": 0.0,
-     "volu_ratio": 0.65,
-     "passed": [
-      "بافت"
-     ],
-     "health": "2/5",
-     "canslim": "4/7",
-     "buffett": "4/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
     }
    ],
-   "checked": 13,
-   "dropped": 8,
+   "checked": 16,
+   "dropped": 11,
    "market_up": true,
-   "median_prob": 0.15
+   "median_prob": 0.152
   },
   "jp": {
-   "data_date": "2026-11-13",
+   "data_date": "2026-11-17",
    "scored": 1499,
    "picks": [
     {
-     "ticker": "4259.T",
-     "name": "EXAWIZARDS INC",
-     "price": 575.0,
-     "prob": 0.868,
-     "rank": 1,
-     "r6m": -24.5,
-     "from_hi": -58.5,
-     "volu_ratio": 0.97,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "3/5",
-     "quality": "⭐۴/۵ ⚠️رقیق‌شدن"
-    },
-    {
      "ticker": "3997.T",
      "name": "TRADE WORKS CO LTD",
-     "price": 380.0,
-     "prob": 0.845,
-     "rank": 2,
-     "r6m": 19.5,
-     "from_hi": -33.5,
-     "volu_ratio": 1.1,
+     "price": 342.0,
+     "prob": 0.872,
+     "rank": 1,
+     "r6m": 13.6,
+     "from_hi": -40.1,
+     "volu_ratio": 0.96,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
-     "canslim": "1/7",
+     "canslim": "0/7",
      "buffett": "1/5",
      "quality": "⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
     },
     {
-     "ticker": "6574.T",
-     "name": "CONVANO INC",
-     "price": 990.0,
-     "prob": 0.805,
-     "rank": 3,
-     "r6m": -2.9,
-     "from_hi": -34.7,
-     "volu_ratio": 1.79,
+     "ticker": "4165.T",
+     "name": "PLAID INC",
+     "price": 549.0,
+     "prob": 0.842,
+     "rank": 2,
+     "r6m": 9.4,
+     "from_hi": -48.0,
+     "volu_ratio": 0.86,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
-     "canslim": "3/7",
+     "canslim": "1/7",
+     "buffett": "0/5",
+     "quality": "⭐۴/۵"
+    },
+    {
+     "ticker": "4259.T",
+     "name": "EXAWIZARDS INC",
+     "price": 528.0,
+     "prob": 0.835,
+     "rank": 3,
+     "r6m": -45.4,
+     "from_hi": -61.8,
+     "volu_ratio": 1.05,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "0/7",
+     "buffett": "4/5",
+     "quality": "⭐۴/۵ ⚠️رقیق‌شدن"
+    },
+    {
+     "ticker": "6574.T",
+     "name": "CONVANO INC",
+     "price": 984.0,
+     "prob": 0.821,
+     "rank": 4,
+     "r6m": -2.6,
+     "from_hi": -33.4,
+     "volu_ratio": 1.97,
+     "passed": [
+      "صورت مالی"
+     ],
+     "health": "5/5",
+     "canslim": "2/7",
      "buffett": "1/5",
      "quality": "⭐۳/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "6356.T",
-     "name": "NIPPON GEAR CO LTD",
-     "price": 1055.0,
-     "prob": 0.778,
-     "rank": 4,
-     "r6m": -30.5,
-     "from_hi": -51.7,
-     "volu_ratio": 0.61,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "2/7",
-     "buffett": "3/5",
-     "quality": "⭐۱/۵ (۱ نامعلوم)"
-    },
-    {
      "ticker": "6994.T",
      "name": "SHIZUKI ELECTRIC CO INC",
-     "price": 924.0,
-     "prob": 0.768,
+     "price": 857.0,
+     "prob": 0.813,
      "rank": 5,
-     "r6m": -30.9,
-     "from_hi": -35.9,
-     "volu_ratio": 0.7,
+     "r6m": -32.5,
+     "from_hi": -40.5,
+     "volu_ratio": 0.71,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
-     "canslim": "2/7",
+     "canslim": "1/7",
      "buffett": "3/5",
      "quality": "⭐۳/۵"
     }
    ],
-   "checked": 40,
-   "dropped": 35,
-   "market_up": true,
-   "median_prob": 0.289
+   "checked": 25,
+   "dropped": 20,
+   "market_up": false,
+   "median_prob": 0.291
   },
   "tw": {
-   "data_date": "2026-11-13",
-   "scored": 1200,
+   "data_date": "2026-11-17",
+   "scored": 1199,
    "picks": [
+    {
+     "ticker": "6197.TW",
+     "name": "JPC CONNECTIVITY INC",
+     "price": 205.5,
+     "prob": 0.699,
+     "rank": 1,
+     "r6m": -4.0,
+     "from_hi": -47.4,
+     "volu_ratio": 0.58,
+     "passed": [
+      "بافت"
+     ],
+     "health": "4/5",
+     "canslim": "1/7",
+     "buffett": "5/5",
+     "quality": "⭐۳/۵"
+    },
     {
      "ticker": "1714.TW",
      "name": "HO TUNG CHEMICAL CORP",
-     "price": 15.25,
-     "prob": 0.653,
-     "rank": 1,
-     "r6m": 55.9,
-     "from_hi": -32.2,
-     "volu_ratio": 0.57,
+     "price": 14.05,
+     "prob": 0.679,
+     "rank": 2,
+     "r6m": 44.3,
+     "from_hi": -37.6,
+     "volu_ratio": 0.54,
      "passed": [
       "صورت مالی"
      ],
@@ -409,153 +425,86 @@
      "quality": "⭐۳/۵"
     },
     {
-     "ticker": "5511.TWO",
-     "name": "TE CHANG CONSTRUCTION",
-     "price": 71.2,
-     "prob": 0.608,
-     "rank": 2,
-     "r6m": 24.7,
-     "from_hi": -5.1,
-     "volu_ratio": 0.49,
+     "ticker": "2423.TW",
+     "name": "GOOD WILL INSTRUMENT",
+     "price": 62.1,
+     "prob": 0.651,
+     "rank": 3,
+     "r6m": -12.4,
+     "from_hi": -26.8,
+     "volu_ratio": 0.46,
      "passed": [
+      "صورت مالی",
       "بافت"
      ],
-     "health": "4/5",
-     "canslim": "3/7",
+     "health": "5/5",
+     "canslim": "1/7",
      "buffett": "5/5",
-     "quality": "⭐۲/۵"
+     "quality": "⭐۳/۵ (۱ نامعلوم)"
     },
     {
-     "ticker": "2468.TW",
-     "name": "FORTUNE INFORMATION SYSTEMS COR",
-     "price": 74.2,
-     "prob": 0.578,
-     "rank": 3,
-     "r6m": 128.3,
-     "from_hi": 0.0,
-     "volu_ratio": 4.07,
-     "passed": [
-      "کن‌اسلیم"
-     ],
-     "health": "3/5",
-     "canslim": "5/7",
-     "buffett": "3/5",
-     "quality": "⭐۰/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "6292.TWO",
-     "name": "AXIS CORPORATION",
-     "price": 51.3,
-     "prob": 0.575,
+     "ticker": "6727.TWO",
+     "name": "ASIA METAL INDUSTRIES INC",
+     "price": 299.0,
+     "prob": 0.633,
      "rank": 4,
-     "r6m": -2.8,
-     "from_hi": -27.9,
-     "volu_ratio": 0.45,
+     "r6m": -45.7,
+     "from_hi": -54.2,
+     "volu_ratio": 0.94,
      "passed": [
       "بافت"
      ],
      "health": "4/5",
      "canslim": "1/7",
      "buffett": "5/5",
-     "quality": "⭐۲/۵ (۱ نامعلوم)"
+     "quality": "⭐۳/۵"
     },
     {
-     "ticker": "2442.TW",
-     "name": "JEAN CO LTD",
-     "price": 12.45,
-     "prob": 0.555,
+     "ticker": "6196.TW",
+     "name": "MARKETECH INTERNATIONAL CORP",
+     "price": 346.5,
+     "prob": 0.625,
      "rank": 5,
-     "r6m": -17.9,
-     "from_hi": -42.1,
-     "volu_ratio": 0.74,
+     "r6m": -13.1,
+     "from_hi": -49.0,
+     "volu_ratio": 0.76,
      "passed": [
+      "صورت مالی",
       "بافت"
      ],
-     "health": "3/5",
+     "health": "5/5",
      "canslim": "1/7",
      "buffett": "4/5",
-     "quality": "⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن"
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
     }
    ],
-   "checked": 30,
-   "dropped": 25,
+   "checked": 14,
+   "dropped": 9,
    "market_up": false,
-   "median_prob": 0.375
+   "median_prob": 0.396
   },
   "kr": {
-   "data_date": "2026-11-13",
-   "scored": 1200,
-   "picks": [
-    {
-     "ticker": "458870.KQ",
-     "name": "SEERS",
-     "price": 14070.0,
-     "prob": 0.78,
-     "rank": 1,
-     "r6m": -66.5,
-     "from_hi": -77.7,
-     "volu_ratio": 1.66,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "2/7",
-     "buffett": "3/5",
-     "quality": "⭐۲/۵"
-    },
-    {
-     "ticker": "417970.KQ",
-     "name": "Model Solution",
-     "price": 8520.0,
-     "prob": 0.758,
-     "rank": 2,
-     "r6m": -54.0,
-     "from_hi": -70.3,
-     "volu_ratio": 0.63,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "3/5",
-     "quality": "⭐۰/۵ (۱ نامعلوم)"
-    },
-    {
-     "ticker": "033240.KS",
-     "name": "JahwaElec",
-     "price": 15500.0,
-     "prob": 0.757,
-     "rank": 3,
-     "r6m": -66.8,
-     "from_hi": -72.2,
-     "volu_ratio": 0.92,
-     "passed": [
-      "صورت مالی"
-     ],
-     "health": "5/5",
-     "canslim": "1/7",
-     "buffett": "3/5",
-     "quality": "⭐۳/۵"
-    }
-   ],
+   "data_date": "2026-11-17",
+   "scored": 1198,
+   "picks": [],
    "checked": 40,
-   "dropped": 37,
+   "dropped": 40,
    "market_up": false,
-   "median_prob": 0.537
+   "median_prob": 0.558
   },
   "hk": {
-   "data_date": "2026-11-13",
-   "scored": 1000,
+   "data_date": "2026-11-17",
+   "scored": 991,
    "picks": [
     {
      "ticker": "2359.HK",
      "name": "WUXI APPTEC",
-     "price": 191.6,
-     "prob": 0.72,
+     "price": 192.8,
+     "prob": 0.723,
      "rank": 1,
-     "r6m": 47.7,
-     "from_hi": -12.4,
-     "volu_ratio": 1.26,
+     "r6m": 53.7,
+     "from_hi": -11.8,
+     "volu_ratio": 1.21,
      "passed": [
       "کن‌اسلیم"
      ],
@@ -568,19 +517,19 @@
    "checked": 40,
    "dropped": 39,
    "market_up": false,
-   "median_prob": 0.331
+   "median_prob": 0.346
   },
   "gb": {
-   "data_date": "2026-11-13",
+   "data_date": "2026-11-17",
    "scored": 346,
    "picks": [],
    "checked": 40,
    "dropped": 40,
    "market_up": true,
-   "median_prob": 0.028
+   "median_prob": 0.03
   },
   "de": {
-   "data_date": "2026-11-13",
+   "data_date": "2026-11-17",
    "scored": 86,
    "picks": [],
    "checked": 40,
@@ -589,40 +538,22 @@
    "median_prob": 0.009
   },
   "ca": {
-   "data_date": "2026-11-13",
-   "scored": 573,
-   "picks": [
-    {
-     "ticker": "KEL.TO",
-     "name": "KELT EXPLORATION LTD",
-     "price": 11.49,
-     "prob": 0.719,
-     "rank": 1,
-     "r6m": 16.8,
-     "from_hi": -3.3,
-     "volu_ratio": 1.3,
-     "passed": [
-      "کن‌اسلیم"
-     ],
-     "health": "3/5",
-     "canslim": "5/7",
-     "buffett": "2/5",
-     "quality": "⭐۳/۵ (۱ نامعلوم)"
-    }
-   ],
-   "checked": 40,
-   "dropped": 39,
-   "market_up": true,
-   "median_prob": 0.128
-  },
-  "au": {
-   "data_date": "2026-11-13",
-   "scored": 462,
+   "data_date": "2026-11-17",
+   "scored": 409,
    "picks": [],
    "checked": 40,
    "dropped": 40,
    "market_up": true,
    "median_prob": 0.192
+  },
+  "au": {
+   "data_date": "2026-11-17",
+   "scored": 459,
+   "picks": [],
+   "checked": 40,
+   "dropped": 40,
+   "market_up": true,
+   "median_prob": 0.189
   }
  }
 }
