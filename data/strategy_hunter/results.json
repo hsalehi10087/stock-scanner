@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T23:48:15+00:00",
+ "updated": "2026-11-17T13:55:37+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -238,6 +238,24 @@
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ دوره‌های نُه مدل و روش وزن‌دهی معلوم نیست",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ دوره‌های نُه مدل و روش وزن‌دهی معلوم نیست"
   },
+  "17e022db2b-reversal-3-5-call-buying": {
+   "name": "Reversal 3.5 short-term reversal call buying",
+   "name_fa": "خرید کال بعد از افت روزانه (Reversal 3.5)",
+   "source": "github/algorithmic-trading",
+   "source_url": "https://github.com/randomwalkhan/Short-Term-Reversal-Strategy",
+   "claim": "«بک‌تست رسمی Reversal 3.3 (۲۰۲۵-۰۴-۲۳ تا ۲۰۲۶-۰۴-۲۳): بازده کل ‎+۶۹۰٫۸۵٪، بیشترین افت ‎−۲۶٫۴۲٪، نرخ برد ۶۹٫۲۳٪. حساب آزمایشی زنده: ارزش ۱۱۰٬۹۱۴٫۸۰ دلار.»",
+   "claimed_return": "+690.85% (1y backtest), 69.23% win rate",
+   "asset_class": "option",
+   "symbols": [
+    "QQQ",
+    "SOXL",
+    "UPRO"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "فیلتر اصلی احتمال برگشت تاریخی هر سهم و امتیاز زمان‌بندی است که در README تعریف دقیق ندارد؛ ورود ساعت ۱۵ و خروج با ‎+۱۵٪/‎−۱۰٪ قیمت آپشن در موتور قابل ساخت نیست.",
+   "verdict": "غیرقابل آزمون: فیلتر اصلی احتمال برگشت تاریخی هر سهم و امتیاز زمان‌بندی است که در README تعریف دقیق ندارد؛ ورود ساعت ۱۵ و خروج با ‎+۱۵٪/‎−۱۰٪ قیمت آپشن در موتور قابل ساخت نیست."
+  },
   "18da1bc880-spy-stochastic-grid-search": {
    "name": "SPY stochastic (grid search)",
    "name_fa": "استوکاستیک روی SPY با جست‌وجوی پارامتر",
@@ -401,16 +419,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.03,
+    "cagr": -4.98,
     "sharpe": -0.11,
-    "max_dd": -83.41,
-    "total": -68.01
+    "max_dd": -83.22,
+    "total": -67.64
    },
    "in_sample": {
-    "cagr": -8.75,
-    "sharpe": -0.27,
-    "max_dd": -78.86,
-    "total": -75.69
+    "cagr": -8.68,
+    "sharpe": -0.26,
+    "max_dd": -78.62,
+    "total": -75.41
    },
    "out_sample": {
     "cagr": 5.13,
@@ -577,16 +595,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.16,
-    "sharpe": 0.63,
+    "cagr": 3.14,
+    "sharpe": 0.62,
     "max_dd": -13.27,
-    "total": 185.58
+    "total": 184.24
    },
    "in_sample": {
-    "cagr": 3.7,
-    "sharpe": 0.74,
+    "cagr": 3.67,
+    "sharpe": 0.73,
     "max_dd": -13.27,
-    "total": 135.71
+    "total": 134.61
    },
    "out_sample": {
     "cagr": 1.91,
@@ -661,16 +679,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.4,
+    "cagr": 10.57,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 293.5
+    "total": 302.27
    },
    "in_sample": {
-    "cagr": 7.33,
-    "sharpe": 0.4,
+    "cagr": 7.58,
+    "sharpe": 0.41,
     "max_dd": -49.5,
-    "total": 98.62
+    "total": 103.04
    },
    "out_sample": {
     "cagr": 17.89,
@@ -690,10 +708,10 @@
     "max_dd": -40.55,
     "total": 317.51
    },
-   "trades": 93,
-   "win_rate": 71.0,
+   "trades": 94,
+   "win_rate": 71.3,
    "avg_trade_pct": 2.0,
-   "exposure": 0.46,
+   "exposure": 0.47,
    "period": "2013-01-02 → 2026-11-16",
    "oos_start": "2022-09-15",
    "forward_days": 17,
@@ -734,7 +752,7 @@
     "cagr": 9.23,
     "sharpe": 0.78,
     "max_dd": -21.98,
-    "total": 1870.52
+    "total": 1870.51
    },
    "in_sample": {
     "cagr": 8.58,
@@ -805,36 +823,36 @@
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.12,
+    "cagr": 1.06,
     "sharpe": 0.17,
     "max_dd": -28.05,
-    "total": 14.04
+    "total": 13.2
    },
    "out_sample": {
-    "cagr": 5.6,
-    "sharpe": 0.58,
+    "cagr": 5.48,
+    "sharpe": 0.57,
     "max_dd": -14.57,
-    "total": 31.7
+    "total": 30.94
    },
    "buyhold_full": {
-    "cagr": 7.63,
+    "cagr": 7.62,
     "sharpe": 0.51,
     "max_dd": -44.36,
-    "total": 245.03
+    "total": 244.38
    },
    "buyhold_out_sample": {
-    "cagr": 16.31,
+    "cagr": 16.14,
     "sharpe": 0.88,
-    "max_dd": -27.49,
-    "total": 114.69
+    "max_dd": -27.63,
+    "total": 113.03
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-16",
-   "oos_start": "2021-10-25",
-   "forward_days": 17,
+   "period": "2010-01-04 → 2026-11-17",
+   "oos_start": "2021-10-26",
+   "forward_days": 18,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -882,6 +900,22 @@
    "reason_not_testable": "در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست",
    "verdict": "غیرقابل آزمون: در خلاصه‌ی موجود قانون، نماد و پارامترها نیامده و متن کامل مقاله قابل خواندن نبود؛ اطلاعات کافی برای ساخت قانون نیست"
   },
+  "4db1fb17cb-usdjpy-london-lunch-breakout": {
+   "name": "USDJPY London lunch box breakout",
+   "name_fa": "شکست محدوده‌ی ناهار لندن در دلار/ین",
+   "source": "reddit/ForexTrading",
+   "source_url": "https://www.reddit.com/r/FOREXTRADING/comments/1xxuz4q/i_backtested_a_usdjpy_london_lunch_breakout_from/",
+   "claim": "«بدون اسپرد: ‎+۲۱٬۷۹۶ دلار، ۱٬۳۷۱ معامله، نرخ برد ۴۳٪، ضریب سود ۱٫۳۴. با اسپرد واقعی ‎+۴٬۰۱۵ دلار و با کمیسیون ‎−۲٬۲۸۷ دلار.»",
+   "claimed_return": "PF 1.34 zero-spread; -$2,287 after costs",
+   "asset_class": "forex",
+   "symbols": [
+    "USDJPY=X"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "محدوده‌ی ساعت ۱۱ تا ۱۳ لندن و سفارش‌های استاپ درون‌روزی لازم است؛ موتور ساعت روز را ندارد.",
+   "verdict": "غیرقابل آزمون: محدوده‌ی ساعت ۱۱ تا ۱۳ لندن و سفارش‌های استاپ درون‌روزی لازم است؛ موتور ساعت روز را ندارد."
+  },
   "4dd468bca1-spx-5dte-put-selling-stop200": {
    "name": "SPX 5DTE 47-delta put selling, 200% stop",
    "name_fa": "فروش پوت ۵ روزه‌ی SPX با دلتای ۰٫۴۷ و حد ضرر ۲۰۰٪",
@@ -920,7 +954,7 @@
     "cagr": 6.78,
     "sharpe": 0.61,
     "max_dd": -25.39,
-    "total": 371.5
+    "total": 371.49
    },
    "out_sample": {
     "cagr": 10.81,
@@ -1027,6 +1061,22 @@
    "status": "not_testable",
    "reason_not_testable": "قانون‌های ربات در متن نیامده؛ فقط سود روزانه‌ی یک هفته‌ی پول آزمایشی گزارش شده",
    "verdict": "غیرقابل آزمون: قانون‌های ربات در متن نیامده؛ فقط سود روزانه‌ی یک هفته‌ی پول آزمایشی گزارش شده"
+  },
+  "5d00f5b185-quant-sniper-korea-swing": {
+   "name": "Quant Sniper Korean stock swing bot",
+   "name_fa": "ربات نوسان‌گیری سهام کره (Quant Sniper)",
+   "source": "github/algorithmic-trading",
+   "source_url": "https://github.com/rundevelrun/quant-sniper",
+   "claim": "«ربات معامله‌ی خودکار سهام کره روی API کیوم: ورود با برگشت RSI(14) از اشباع فروش یا شکست نوسان بالای میانگین ۲۰ روزه، فقط وقتی شاخص بالای میانگین ۶۰ روزه‌ی صعودی است؛ حد ضرر ATR(14)×۱٫۵.» عدد سودی ادعا نشده.",
+   "claimed_return": "no return claimed",
+   "asset_class": "stock",
+   "symbols": [
+    "069500.KS"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "فهرست سهام هر روز از ۲۰ سهم پرمعامله‌ی روز قبل کره ساخته می‌شود که داده‌اش در دسترس نیست، تأیید ورود درون‌روزی است و ادعای سود ندارد.",
+   "verdict": "غیرقابل آزمون: فهرست سهام هر روز از ۲۰ سهم پرمعامله‌ی روز قبل کره ساخته می‌شود که داده‌اش در دسترس نیست، تأیید ورود درون‌روزی است و ادعای سود ندارد."
   },
   "604f020263-return-stacking-rsst-gde-zroz": {
    "name": "Return stacking ETF mix",
@@ -1138,13 +1188,13 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -11.52,
+    "cagr": -11.53,
     "sharpe": -0.7,
     "max_dd": -28.53,
     "total": -21.65
    },
    "in_sample": {
-    "cagr": -9.61,
+    "cagr": -9.62,
     "sharpe": -0.53,
     "max_dd": -28.53,
     "total": -13.16
@@ -1156,24 +1206,24 @@
     "total": -9.78
    },
    "buyhold_full": {
-    "cagr": -15.13,
-    "sharpe": -0.15,
+    "cagr": -15.66,
+    "sharpe": -0.17,
     "max_dd": -53.99,
-    "total": -27.9
+    "total": -28.77
    },
    "buyhold_out_sample": {
-    "cagr": -13.85,
-    "sharpe": -0.19,
+    "cagr": -13.21,
+    "sharpe": -0.17,
     "max_dd": -29.65,
-    "total": -8.53
+    "total": -8.12
    },
    "trades": 131,
    "win_rate": 29.8,
    "avg_trade_pct": -0.17,
    "exposure": 0.17,
-   "period": "2024-11-18 → 2026-11-16",
-   "oos_start": "2026-04-12",
-   "forward_days": 167,
+   "period": "2024-11-19 → 2026-11-17",
+   "oos_start": "2026-04-13",
+   "forward_days": 181,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1430,24 +1480,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 21.19,
+    "cagr": 21.23,
     "sharpe": 0.65,
     "max_dd": -93.96,
-    "total": 466.75
+    "total": 468.82
    },
    "buyhold_out_sample": {
-    "cagr": -20.81,
-    "sharpe": -0.0,
+    "cagr": -21.28,
+    "sharpe": -0.01,
     "max_dd": -67.61,
-    "total": -46.86
+    "total": -47.72
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-16",
-   "oos_start": "2024-03-03",
-   "forward_days": 12,
+   "period": "2017-11-09 → 2026-11-17",
+   "oos_start": "2024-03-04",
+   "forward_days": 13,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -1553,7 +1603,7 @@
     "cagr": 7.21,
     "sharpe": 0.5,
     "max_dd": -54.29,
-    "total": 585.11
+    "total": 585.1
    },
    "in_sample": {
     "cagr": 4.93,
@@ -1565,7 +1615,7 @@
     "cagr": 12.9,
     "sharpe": 0.77,
     "max_dd": -23.21,
-    "total": 173.6
+    "total": 173.59
    },
    "buyhold_full": {
     "cagr": 10.4,
@@ -1586,7 +1636,7 @@
    "period": "1999-03-10 → 2026-11-16",
    "oos_start": "2018-07-25",
    "forward_days": 6,
-   "forward_usd": 985.39,
+   "forward_usd": 985.37,
    "verdict": "قبول"
   },
   "8b0312fa04-turtle-26-markets": {
@@ -1678,6 +1728,22 @@
    "status": "not_testable",
    "reason_not_testable": "نمودار ۴۵ دقیقه‌ای است و «استخر نقدینگی»، «ساختار داخلی» و هم‌جهتی با تایم‌فریم بالاتر قضاوت تصویری‌اند و عدد مشخصی ندارند",
    "verdict": "غیرقابل آزمون: نمودار ۴۵ دقیقه‌ای است و «استخر نقدینگی»، «ساختار داخلی» و هم‌جهتی با تایم‌فریم بالاتر قضاوت تصویری‌اند و عدد مشخصی ندارند"
+  },
+  "937196dcaf-ema20-pullback-11-markets": {
+   "name": "20 EMA pullback across 11 markets",
+   "name_fa": "خرید در برگشت به EMA ۲۰ روی ۱۱ بازار",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xy43ax/tested_the_20_ema_pullback_on_11_markets_and_3/",
+   "claim": "«پولبک به EMA ۲۰ را روی ۱۱ بازار و ۳ تایم‌فریم بعد از هزینه‌ها آزمودم؛ ۲۵ مورد از ۳۳ ضرر دادند. تنها موردی که از همه‌ی آزمون‌ها رد شد SOL در تایم ۴ ساعته بود: ‎+۲۱٫۵٪ با ۲۲۲ معامله.»",
+   "claimed_return": "+21.5% (SOL 4h); 25 of 33 lost",
+   "asset_class": "crypto",
+   "symbols": [
+    "SOL-USD"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "تنها نتیجه‌ی مثبت روی تایم ۴ ساعته است که موتور ندارد، و حد ضرر و حد سود دقیق گفته نشده.",
+   "verdict": "غیرقابل آزمون: تنها نتیجه‌ی مثبت روی تایم ۴ ساعته است که موتور ندارد، و حد ضرر و حد سود دقیق گفته نشده."
   },
   "94a3d9a5f8-gold-asian-15m-ifvg": {
    "name": "Gold Asian session 15m IFVG",
@@ -1804,10 +1870,10 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 5.53,
+    "cagr": 5.55,
     "sharpe": 0.33,
     "max_dd": -48.75,
-    "total": 37.22
+    "total": 37.38
    },
    "in_sample": {
     "cagr": 23.54,
@@ -1816,31 +1882,31 @@
     "total": 138.82
    },
    "out_sample": {
-    "cagr": -27.67,
-    "sharpe": -1.01,
+    "cagr": -27.59,
+    "sharpe": -1.0,
     "max_dd": -44.68,
-    "total": -43.54
+    "total": -43.47
    },
    "buyhold_full": {
-    "cagr": 14.42,
+    "cagr": 14.44,
     "sharpe": 0.52,
     "max_dd": -76.63,
-    "total": 120.8
+    "total": 121.06
    },
    "buyhold_out_sample": {
-    "cagr": -20.6,
+    "cagr": -20.52,
     "sharpe": -0.31,
     "max_dd": -53.06,
-    "total": -33.44
+    "total": -33.36
    },
    "trades": 5,
    "win_rate": 60.0,
    "avg_trade_pct": 14.77,
    "exposure": 0.48,
-   "period": "2021-01-01 → 2026-11-16",
+   "period": "2021-01-01 → 2026-11-17",
    "oos_start": "2025-02-11",
-   "forward_days": 0,
-   "forward_usd": 1000.0,
+   "forward_days": 1,
+   "forward_usd": 1001.21,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "9fb231fb7f-nq-prev-day-range-filter": {
@@ -1909,6 +1975,22 @@
    "status": "not_testable",
    "reason_not_testable": "روی کندل ۵ و ۱۵ دقیقه‌ای و ۱ دقیقه‌ای کار می‌کند، با فیلتر کالمن و مدل HMM و اجرای میکر روی دفتر سفارش؛ پارامترها در متن نیامده",
    "verdict": "غیرقابل آزمون: روی کندل ۵ و ۱۵ دقیقه‌ای و ۱ دقیقه‌ای کار می‌کند، با فیلتر کالمن و مدل HMM و اجرای میکر روی دفتر سفارش؛ پارامترها در متن نیامده"
+  },
+  "a8ca2ef4e3-es-gap-fill-1min": {
+   "name": "ES opening gap fill",
+   "name_fa": "پر شدن گپ بازگشایی در ES",
+   "source": "reddit/Daytrading",
+   "source_url": "https://www.reddit.com/r/Daytrading/comments/1xy7e9m/backtested_the_es_gap_fill_on_16_years_of_1_min/",
+   "claim": "«۱۶ سال داده‌ی ۱ دقیقه‌ای ES: ۱٬۷۲۸ معامله، ۶۸٪ برد، ولی ‎−۴۵٬۶۳۸ دلار.»",
+   "claimed_return": "68% win rate, -$45,638",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "ورود در بسته‌شدن کندل ۹:۳۱ همان روز گپ است؛ موتور فقط فردای سیگنال در بازگشایی وارد می‌شود و داده‌ی ۱ دقیقه‌ای ندارد.",
+   "verdict": "غیرقابل آزمون: ورود در بسته‌شدن کندل ۹:۳۱ همان روز گپ است؛ موتور فقط فردای سیگنال در بازگشایی وارد می‌شود و داده‌ی ۱ دقیقه‌ای ندارد."
   },
   "ab0d637a16-ml-midday-intraday": {
    "name": "ML midday-to-close intraday long",
@@ -2041,42 +2123,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.58,
+    "cagr": 66.56,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
    },
    "in_sample": {
-    "cagr": 86.02,
+    "cagr": 85.98,
     "sharpe": 1.45,
     "max_dd": -74.38,
-    "total": 19738.1
+    "total": 19739.13
    },
    "out_sample": {
-    "cagr": 27.68,
-    "sharpe": 0.91,
+    "cagr": 28.73,
+    "sharpe": 0.94,
     "max_dd": -35.7,
-    "total": 144.24
+    "total": 151.71
    },
    "buyhold_full": {
     "cagr": 50.22,
     "sharpe": 0.95,
     "max_dd": -83.4,
-    "total": 14081.64
+    "total": 14098.5
    },
    "buyhold_out_sample": {
-    "cagr": 25.43,
-    "sharpe": 0.72,
+    "cagr": 26.51,
+    "sharpe": 0.74,
     "max_dd": -53.06,
-    "total": 128.9
+    "total": 136.18
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-16",
-   "oos_start": "2023-03-24",
-   "forward_days": 22,
+   "period": "2014-09-17 → 2026-11-17",
+   "oos_start": "2023-03-25",
+   "forward_days": 23,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -2346,6 +2428,22 @@
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی قیمت آپشن (دلتا، پریمیوم) در دسترس نیست؛ موتور فقط خرید آپشن را تقریب می‌زند"
   },
+  "cd2f29c624-gbpusd-5m-ema21-slope-london-ny": {
+   "name": "GBPUSD 5m 21-EMA slope, London/NY overlap",
+   "name_fa": "پوند/دلار با شیب EMA ۲۱ در تایم ۵ دقیقه، هم‌پوشانی لندن و نیویورک",
+   "source": "reddit/Forex",
+   "source_url": "https://www.reddit.com/r/Forex/comments/1xy9v0j/backtested_2_years_of_my_strategy_200_profit/",
+   "claim": "«بک‌تست ۲ ساله (ژانویه ۲۰۲۳ تا دسامبر ۲۰۲۴) روی GBP/USD: سود خالص ۲۲٬۰۲۸ دلار، ضریب سود ۲٫۰۰، نرخ برد ۳۱٪، نسبت سود به ضرر ۱ به ۴٫۴. فقط یک ستاپ در روز در هم‌پوشانی لندن/نیویورک بر اساس شیب EMA ۲۱ در تایم ۵ دقیقه.»",
+   "claimed_return": "PF 2.00, 31% win rate, +$22,028",
+   "asset_class": "forex",
+   "symbols": [
+    "GBPUSD=X"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "روی کندل ۵ دقیقه‌ای و ساعت خاص روز است و قانون ورود، حد ضرر و حد سود دقیق گفته نشده.",
+   "verdict": "غیرقابل آزمون: روی کندل ۵ دقیقه‌ای و ساعت خاص روز است و قانون ورود، حد ضرر و حد سود دقیق گفته نشده."
+  },
   "ce23056cf1-turtle-simple-changes": {
    "name": "Improved Turtle trading strategy",
    "name_fa": "بهبود ساده‌ی استراتژی لاک‌پشت‌ها",
@@ -2534,6 +2632,22 @@
    "status": "not_testable",
    "reason_not_testable": "فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است",
    "verdict": "غیرقابل آزمون: فروش آپشن است و داده‌ی تاریخی آپشن نداریم؛ انتخاب سهام هم دستی (Zacks و MarketBeat) است"
+  },
+  "e739c4417f-crypto-perps-15m-private": {
+   "name": "Private 15m crypto perps breakout rules",
+   "name_fa": "قانون خصوصی ۱۵ دقیقه‌ای روی فیوچرز کریپتو",
+   "source": "reddit/algotrading",
+   "source_url": "https://www.reddit.com/r/algotrading/comments/1xxo1w7/do_these_backtest_results_point_to_a_real_edge/",
+   "claim": "«BTC در ۲۰۲۵ تا نوامبر ۲۰۲۶: ۱۸۵ معامله، ‎+۴۳٫۹R، ضریب سود ۱٫۴۰؛ XRP ‎+۶۰٫۶R؛ DOGE ‎+۳۰٫۰R.»",
+   "claimed_return": "BTC +43.9R PF 1.40 (2025-2026)",
+   "asset_class": "crypto",
+   "symbols": [
+    "BTC-USD"
+   ],
+   "added": "2026-11-17",
+   "status": "not_testable",
+   "reason_not_testable": "نویسنده قانون‌ها را خصوصی نگه داشته و روی کندل ۱۵ دقیقه‌ای است.",
+   "verdict": "غیرقابل آزمون: نویسنده قانون‌ها را خصوصی نگه داشته و روی کندل ۱۵ دقیقه‌ای است."
   },
   "e76dbbf01c-profitto-invest-live": {
    "name": "Profitto Invest crypto live account",
