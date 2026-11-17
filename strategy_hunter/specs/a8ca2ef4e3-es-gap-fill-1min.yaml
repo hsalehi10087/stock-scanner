@@ -1,0 +1,14 @@
+id: a8ca2ef4e3-es-gap-fill-1min
+name: ES opening gap fill
+name_fa: پر شدن گپ بازگشایی در ES
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xy7e9m/backtested_the_es_gap_fill_on_16_years_of_1_min/
+claim: "«۱۶ سال داده‌ی ۱ دقیقه‌ای ES: ۱٬۷۲۸ معامله، ۶۸٪ برد، ولی ‎−۴۵٬۶۳۸ دلار.»"
+claimed_return: "68% win rate, -$45,638"
+added: 2026-11-17
+status: not_testable
+asset_class: etf
+symbols: [SPY]
+timeframe: 1d
+reason_not_testable: "ورود در بسته‌شدن کندل ۹:۳۱ همان روز گپ است؛ موتور فقط فردای سیگنال در بازگشایی وارد می‌شود و داده‌ی ۱ دقیقه‌ای ندارد."
+notes: "خود نویسنده نتیجه را زیان‌ده گزارش کرده است."

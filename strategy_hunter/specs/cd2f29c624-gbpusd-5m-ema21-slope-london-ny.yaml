@@ -1,0 +1,14 @@
+id: cd2f29c624-gbpusd-5m-ema21-slope-london-ny
+name: GBPUSD 5m 21-EMA slope, London/NY overlap
+name_fa: پوند/دلار با شیب EMA ۲۱ در تایم ۵ دقیقه، هم‌پوشانی لندن و نیویورک
+source: reddit/Forex
+source_url: https://www.reddit.com/r/Forex/comments/1xy9v0j/backtested_2_years_of_my_strategy_200_profit/
+claim: "«بک‌تست ۲ ساله (ژانویه ۲۰۲۳ تا دسامبر ۲۰۲۴) روی GBP/USD: سود خالص ۲۲٬۰۲۸ دلار، ضریب سود ۲٫۰۰، نرخ برد ۳۱٪، نسبت سود به ضرر ۱ به ۴٫۴. فقط یک ستاپ در روز در هم‌پوشانی لندن/نیویورک بر اساس شیب EMA ۲۱ در تایم ۵ دقیقه.»"
+claimed_return: "PF 2.00, 31% win rate, +$22,028"
+added: 2026-11-17
+status: not_testable
+asset_class: forex
+symbols: [GBPUSD=X]
+timeframe: 1h
+reason_not_testable: "روی کندل ۵ دقیقه‌ای و ساعت خاص روز است و قانون ورود، حد ضرر و حد سود دقیق گفته نشده."
+notes: "نویسنده خودش یک دوره‌ی ۲۵ ضرر پشت سر هم را گزارش کرده است."

@@ -1,0 +1,14 @@
+id: 17e022db2b-reversal-3-5-call-buying
+name: Reversal 3.5 short-term reversal call buying
+name_fa: خرید کال بعد از افت روزانه (Reversal 3.5)
+source: github/algorithmic-trading
+source_url: https://github.com/randomwalkhan/Short-Term-Reversal-Strategy
+claim: "«بک‌تست رسمی Reversal 3.3 (۲۰۲۵-۰۴-۲۳ تا ۲۰۲۶-۰۴-۲۳): بازده کل ‎+۶۹۰٫۸۵٪، بیشترین افت ‎−۲۶٫۴۲٪، نرخ برد ۶۹٫۲۳٪. حساب آزمایشی زنده: ارزش ۱۱۰٬۹۱۴٫۸۰ دلار.»"
+claimed_return: "+690.85% (1y backtest), 69.23% win rate"
+added: 2026-11-17
+status: not_testable
+asset_class: option
+symbols: [QQQ, SOXL, UPRO]
+timeframe: 1d
+reason_not_testable: "فیلتر اصلی احتمال برگشت تاریخی هر سهم و امتیاز زمان‌بندی است که در README تعریف دقیق ندارد؛ ورود ساعت ۱۵ و خروج با ‎+۱۵٪/‎−۱۰٪ قیمت آپشن در موتور قابل ساخت نیست."
+notes: "سرمایه‌ی شروع حساب زنده گفته نشده. بک‌تست فقط یک سال است."

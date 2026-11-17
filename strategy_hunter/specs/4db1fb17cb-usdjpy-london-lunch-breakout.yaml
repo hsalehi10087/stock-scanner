@@ -1,0 +1,14 @@
+id: 4db1fb17cb-usdjpy-london-lunch-breakout
+name: USDJPY London lunch box breakout
+name_fa: شکست محدوده‌ی ناهار لندن در دلار/ین
+source: reddit/ForexTrading
+source_url: https://www.reddit.com/r/FOREXTRADING/comments/1xxuz4q/i_backtested_a_usdjpy_london_lunch_breakout_from/
+claim: "«بدون اسپرد: ‎+۲۱٬۷۹۶ دلار، ۱٬۳۷۱ معامله، نرخ برد ۴۳٪، ضریب سود ۱٫۳۴. با اسپرد واقعی ‎+۴٬۰۱۵ دلار و با کمیسیون ‎−۲٬۲۸۷ دلار.»"
+claimed_return: "PF 1.34 zero-spread; -$2,287 after costs"
+added: 2026-11-17
+status: not_testable
+asset_class: forex
+symbols: [USDJPY=X]
+timeframe: 1h
+reason_not_testable: "محدوده‌ی ساعت ۱۱ تا ۱۳ لندن و سفارش‌های استاپ درون‌روزی لازم است؛ موتور ساعت روز را ندارد."
+notes: "خود نویسنده می‌گوید بعد از اسپرد و کمیسیون زیان‌ده است."

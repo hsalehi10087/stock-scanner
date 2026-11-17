@@ -1,0 +1,14 @@
+id: e739c4417f-crypto-perps-15m-private
+name: Private 15m crypto perps breakout rules
+name_fa: قانون خصوصی ۱۵ دقیقه‌ای روی فیوچرز کریپتو
+source: reddit/algotrading
+source_url: https://www.reddit.com/r/algotrading/comments/1xxo1w7/do_these_backtest_results_point_to_a_real_edge/
+claim: "«BTC در ۲۰۲۵ تا نوامبر ۲۰۲۶: ۱۸۵ معامله، ‎+۴۳٫۹R، ضریب سود ۱٫۴۰؛ XRP ‎+۶۰٫۶R؛ DOGE ‎+۳۰٫۰R.»"
+claimed_return: "BTC +43.9R PF 1.40 (2025-2026)"
+added: 2026-11-17
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1h
+reason_not_testable: "نویسنده قانون‌ها را خصوصی نگه داشته و روی کندل ۱۵ دقیقه‌ای است."
+notes: "تنظیمات از میان حدود ۳۲٬۰۰۰ حالت انتخاب شده است."

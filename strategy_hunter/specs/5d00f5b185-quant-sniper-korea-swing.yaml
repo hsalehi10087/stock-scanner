@@ -1,0 +1,14 @@
+id: 5d00f5b185-quant-sniper-korea-swing
+name: Quant Sniper Korean stock swing bot
+name_fa: ربات نوسان‌گیری سهام کره (Quant Sniper)
+source: github/algorithmic-trading
+source_url: https://github.com/rundevelrun/quant-sniper
+claim: "«ربات معامله‌ی خودکار سهام کره روی API کیوم: ورود با برگشت RSI(14) از اشباع فروش یا شکست نوسان بالای میانگین ۲۰ روزه، فقط وقتی شاخص بالای میانگین ۶۰ روزه‌ی صعودی است؛ حد ضرر ATR(14)×۱٫۵.» عدد سودی ادعا نشده."
+claimed_return: "no return claimed"
+added: 2026-11-17
+status: not_testable
+asset_class: stock
+symbols: [069500.KS]
+timeframe: 1d
+reason_not_testable: "فهرست سهام هر روز از ۲۰ سهم پرمعامله‌ی روز قبل کره ساخته می‌شود که داده‌اش در دسترس نیست، تأیید ورود درون‌روزی است و ادعای سود ندارد."
+notes: "خروج شامل حد ضرر پله‌ای و تریلینگ است که موتور فعلی پشتیبانی نمی‌کند."

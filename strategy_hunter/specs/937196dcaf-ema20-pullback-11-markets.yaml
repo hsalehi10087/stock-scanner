@@ -1,0 +1,14 @@
+id: 937196dcaf-ema20-pullback-11-markets
+name: 20 EMA pullback across 11 markets
+name_fa: خرید در برگشت به EMA ۲۰ روی ۱۱ بازار
+source: reddit/Daytrading
+source_url: https://www.reddit.com/r/Daytrading/comments/1xy43ax/tested_the_20_ema_pullback_on_11_markets_and_3/
+claim: "«پولبک به EMA ۲۰ را روی ۱۱ بازار و ۳ تایم‌فریم بعد از هزینه‌ها آزمودم؛ ۲۵ مورد از ۳۳ ضرر دادند. تنها موردی که از همه‌ی آزمون‌ها رد شد SOL در تایم ۴ ساعته بود: ‎+۲۱٫۵٪ با ۲۲۲ معامله.»"
+claimed_return: "+21.5% (SOL 4h); 25 of 33 lost"
+added: 2026-11-17
+status: not_testable
+asset_class: crypto
+symbols: [SOL-USD]
+timeframe: 1h
+reason_not_testable: "تنها نتیجه‌ی مثبت روی تایم ۴ ساعته است که موتور ندارد، و حد ضرر و حد سود دقیق گفته نشده."
+notes: "خود نویسنده می‌گوید روی ۱۵ دقیقه و ۱ ساعته‌ی SOL ضرر سنگین داده و نتیجه‌ی ۴ ساعته را اثبات‌شده نمی‌داند."
