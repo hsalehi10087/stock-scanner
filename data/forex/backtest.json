@@ -1,21 +1,21 @@
 {
- "date": "2026-11-16",
- "split": "2021-04-27",
+ "date": "2026-11-17",
+ "split": "2021-05-04",
  "rules": {
   "follow_flow": {
    "train": {
-    "cagr": -0.9,
+    "cagr": -1.0,
     "max_dd": -17.6,
     "sharpe": -0.17,
-    "weeks": 673,
-    "hit": 48.9
+    "weeks": 674,
+    "hit": 48.8
    },
    "test": {
     "cagr": -1.5,
     "max_dd": -10.7,
     "sharpe": -0.41,
-    "weeks": 289,
-    "hit": 45.3
+    "weeks": 288,
+    "hit": 45.5
    },
    "full": {
     "cagr": -1.1,
@@ -29,16 +29,16 @@
    "train": {
     "cagr": -0.9,
     "max_dd": -17.7,
-    "sharpe": -0.16,
-    "weeks": 673,
-    "hit": 47.4
+    "sharpe": -0.14,
+    "weeks": 674,
+    "hit": 47.5
    },
    "test": {
-    "cagr": 1.2,
+    "cagr": 1.1,
     "max_dd": -8.8,
-    "sharpe": 0.35,
-    "weeks": 289,
-    "hit": 51.6
+    "sharpe": 0.31,
+    "weeks": 288,
+    "hit": 51.4
    },
    "full": {
     "cagr": -0.3,
@@ -53,15 +53,15 @@
     "cagr": -0.1,
     "max_dd": -4.3,
     "sharpe": -0.09,
-    "weeks": 673,
-    "hit": 15.2
+    "weeks": 674,
+    "hit": 15.1
    },
    "test": {
     "cagr": 0.2,
     "max_dd": -1.4,
     "sharpe": 0.35,
-    "weeks": 289,
-    "hit": 18.0
+    "weeks": 288,
+    "hit": 18.1
    },
    "full": {
     "cagr": -0.0,
@@ -76,15 +76,15 @@
     "cagr": -1.3,
     "max_dd": -21.1,
     "sharpe": -0.26,
-    "weeks": 673,
-    "hit": 47.3
+    "weeks": 674,
+    "hit": 47.2
    },
    "test": {
-    "cagr": -0.7,
+    "cagr": -0.6,
     "max_dd": -7.0,
-    "sharpe": -0.17,
-    "weeks": 289,
-    "hit": 47.1
+    "sharpe": -0.16,
+    "weeks": 288,
+    "hit": 47.2
    },
    "full": {
     "cagr": -1.1,
@@ -96,18 +96,18 @@
   },
   "_buy_all_vs_usd": {
    "train": {
-    "cagr": 0.3,
+    "cagr": 0.4,
     "max_dd": -31.2,
-    "sharpe": 0.08,
-    "weeks": 673,
+    "sharpe": 0.09,
+    "weeks": 674,
     "hit": 50.1
    },
    "test": {
-    "cagr": -2.1,
-    "max_dd": -19.2,
-    "sharpe": -0.28,
-    "weeks": 289,
-    "hit": 46.4
+    "cagr": -2.4,
+    "max_dd": -18.9,
+    "sharpe": -0.32,
+    "weeks": 288,
+    "hit": 46.2
    },
    "full": {
     "cagr": -0.4,
