@@ -27,7 +27,9 @@
    با اولین ۴۲۹ خودش متوقف می‌شود (`blocked`)؛ **حلقه نزن**، آنچه هست را نگه دار؛ فردا ادامه می‌دهد. نتیجه (`window.__cdr`) را در `/tmp/codal.json` ذخیره کن.
 6. دوباره `browser_navigate https://www.tsetmc.com/` و `iran/browser/track.js` را اجرا کن، با `__ROWS__` = ردیف‌های `data/iran_growth/history.csv`
    به شکل `[{ticker,date,insCode}]` (insCode را به‌صورت رشته بگذار). خروجی را در `/tmp/track.json` ذخیره کن.
-7. `python3 iran/iran_agent.py merge /tmp/results.json /tmp/codal.json /tmp/track.json`
+6b. **رژیم بازار** (همان صفحه‌ی tsetmc): `browser_evaluate` با `iran/browser/regime_today.js` (۱ تا ۲ دقیقه) ← JSON فشرده را عیناً در `/tmp/regime.json` ذخیره کن.
+   روش برنده‌ی بک‌تست: اجماع K-Means و چینش میانگین‌ها (مستندات و نتایج: `iran/REGIME.md`). اگر خطا داد، مرحله ۷ را بدون `regime.json` اجرا کن (گزارش بدون بخش رژیم می‌رود).
+7. `python3 iran/iran_agent.py merge /tmp/results.json /tmp/codal.json /tmp/track.json /tmp/regime.json`
    ← کش کدال، تاریخچه، `track.json` و `today_message.txt` را در `data/iran_growth/` می‌نویسد و پیام را چاپ می‌کند.
 8. `git add -f data/iran_growth && git commit && git pull --rebase && git push`.
 9. تلگرام (فقط 75439320): `gh api -X POST repos/hsalehi10087/stock-scanner/actions/workflows/send-telegram-test.yml/dispatches -f ref=main -f 'inputs[chat_id]=75439320' -f "inputs[text]=<متن>"`

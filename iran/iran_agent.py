@@ -2,7 +2,7 @@
 
 مرورگر (iran/browser/*.js) داده‌ی tsetmc و کدال را می‌گیرد؛ این اسکریپت:
   plan   results.json            ← فهرست نمادهایی که رشد کدالشان باید گرفته شود (کش ۳۰ روزه؛ نمادهای ناموفق بعد از ۷ روز)
-  merge  results.json codal.json track.json
+  merge  results.json codal.json track.json [regime.json]
                                  ← کش کدال را به‌روز می‌کند، صافی رشد را اعمال می‌کند، سیگنال تازه را در تاریخچه می‌نویسد
                                    و پیام روزانه (سیگنال‌ها + بهترین/بدترین از روز سیگنال) را می‌سازد.
 قاعده‌ی بنیادی: P/E پیش‌بینی ≤ P/E گروه (از tsetmc)  و  رشد فروش > ۱۰٪  و  رشد سود خالص > ۱۵٪ (کدال، آخرین صورت مالی،
@@ -20,6 +20,8 @@ HIST = os.path.join(OUT, 'history.csv')
 CACHE = os.path.join(OUT, 'codal_cache.json')
 TRACK = os.path.join(OUT, 'track.json')
 MSG = os.path.join(OUT, 'today_message.txt')
+OPT_MSG = os.path.join(OUT, 'options_message.txt')
+OPT_JSON = os.path.join(OUT, 'options_today.json')
 COLS = ['date', 'ticker', 'name', 'price', 'setups', 'pe', 'sector_pe', 'chart', 'chart_score', 'sector', 'insCode',
         'rev_growth', 'np_growth']
 SETUP_FA = {'longpat': 'الگوی نموداری بلندمدت', 'breakout': 'شکست با حجم', 'trend': 'روند صعودی منظم',
@@ -81,8 +83,10 @@ def read_hist():
     return list(csv.DictReader(open(HIST, encoding='utf-8')))
 
 
-def merge(res_path, codal_path, track_path):
+def merge(res_path, codal_path, track_path, regime_path=None):
     res = norm_res(jload(res_path, {'meta': {}, 'final': []}))
+    reg = jload(regime_path, None) if regime_path else None
+    up_set = {nz(x) for x in (reg or {}).get('up', [])}
     cod = jload(codal_path, {'res': {}, 'status': 'none'})
     trk = jload(track_path, [])
     today = dt.date.today()
@@ -126,17 +130,43 @@ def merge(res_path, codal_path, track_path):
          f"آخرین جلسه: {m.get('date', '؟')} | {fa(m.get('total', '؟'))} سهم بررسی شد، {fa(m.get('liquid', '؟'))} تا نقدشوندگی کافی داشتند، "
          f"{fa(m.get('tech', '؟'))} تا از صافی تکنیکال گذشتند، {fa(len(res['final']))} تا از P/E؛ "
          f"از این‌ها رشد فروش و سود کدال: {fa(len(passed))} قبول، {fa(len(failed))} رد، {fa(len(missing))} ناقص.", '']
+    if reg and reg.get('breadth'):
+        b = reg['breadth']
+        tot = max(1, b['up'] + b['range'] + b['down'])
+        pc = lambda v: fa(round(100 * v / tot))
+        L += [f"🧭 رژیم بازار ({fa(tot)} سهم نقدشونده؛ اجماع K-Means و چینش میانگین‌ها): صعودی {pc(b['up'])}٪ | رنج {pc(b['range'])}٪ | نزولی {pc(b['down'])}٪", '']
     if passed:
         L.append(f"سیگنال‌های امروز ({fa(len(passed))} سهم؛ {fa(len(new))} تازه):")
-        for i, (x, c) in enumerate(sorted(passed, key=lambda p: (-len(p[0]['st']), -p[0]['rank']))[:12], 1):
+        for i, (x, c) in enumerate(sorted(passed, key=lambda p: (0 if (not reg or p[0]['sym'] in up_set) else 1, -len(p[0]['st']), -p[0]['rank']))[:12], 1):
             st = '، '.join(SETUP_FA.get(s, s) for s in x['st'])
             tag = ' 🆕' if x['sym'] in new else ''
-            L += [f"{fa(i)}. {x['sym']} — {x['name'].strip()} | قیمت {x['last']:,.0f} ریال{tag}",
+            rg = '' if not reg else (' | 🧭 رژیم: صعودی تأییدشده' if x['sym'] in up_set else ' | 🧭 رژیم: رنج/مختلط (احتیاط)')
+            L += [f"{fa(i)}. {x['sym']} — {x['name'].strip()} | قیمت {x['last']:,.0f} ریال{tag}{rg}",
                   f"   📊 {st}", f"   🗺 {({'up': 'روند صعودی', 'down': 'روند نزولی', 'range': 'خنثی'}).get(x['cp'], x['cp'])} (امتیاز نمودار {fa(x['cps'])} از ۳)",
                   f"   ✅ P/E پیش‌بینی {x['fpe']:.2f} در برابر گروه {x['spe']} | رشد فروش {c['rev_growth']:+.1f}٪، رشد سود {c['np_growth']:+.1f}٪"
                   f" ({'تلفیقی' if c.get('consolidated') else 'شرکتی'}، دوره {c.get('period', '؟')})"]
     else:
         L.append('امروز سهمی از هر سه صافی (تکنیکال، P/E، رشد کدال) نگذشت.')
+    if reg:
+        opt = jload(OPT_JSON, {}) or {}
+        has_put = {nz(x) for x in opt.get('undsDown', [])}
+        L += ['', '📉 سهم‌های رو به نزول (برای نخریدن، خروج، یا بررسی اختیار فروش)']
+        dn = reg.get('down', [])
+        if dn:
+            L.append('اجماع هر دو روش نزولی:')
+            for i, x in enumerate(dn[:8], 1):
+                L.append(f"{fa(i)}. {nz(x['sym'])} | قیمت {x['last']:,.0f} | ۲۰ روز {x['r20']:+.1f}٪ | از میانگین ۵۰: {x['d50']:+.1f}٪، از ۲۰۰: {x['d200']:+.1f}٪"
+                         + (' | اختیار فروش دارد' if nz(x['sym']) in has_put else ''))
+        else:
+            L.append('امروز هیچ سهم نقدشونده‌ای اجماع نزولی نداشت (بازار کلی صعودی است).')
+        wk = reg.get('weak', [])
+        if wk:
+            L.append('هشدار ضعیف‌تر (فقط یکی از دو روش نزولی):')
+            for x in wk[:5]:
+                L.append(f"• {nz(x['sym'])} | قیمت {x['last']:,.0f} | ۲۰ روز {x['r20']:+.1f}٪ | از میانگین ۵۰: {x['d50']:+.1f}٪"
+                         + (' | اختیار فروش دارد' if nz(x['sym']) in has_put else ''))
+        L.append('اعتبار (بک‌تست خارج از نمونه، ۳۶۰ سهم نقدشونده): برچسب نزولی حدود ۱۰٪ ضعیف‌تر از بازار در ۲۰ روز بعد بود (در هر دو نیمه‌ی زمانی)؛ '
+                 'برچسب صعودی فقط حدود ۱.۵٪ بهتر از بازار — پس رژیم بیشتر فیلتر ریسک است تا تضمین. فروش استقراضی سهم در بورس ایران عملاً محدود است.')
     if missing:
         L += ['', f"⚠️ رشد کدال برای {fa(len(missing))} سهم هنوز خوانده نشده (کدال محدودیت دارد؛ به‌تدریج تکمیل می‌شود): "
                   + '، '.join(x['sym'] for x, _ in missing[:15]) + (' …' if len(missing) > 15 else '')]
@@ -158,8 +188,6 @@ def merge(res_path, codal_path, track_path):
     print(json.dumps({'new': new, 'pass': len(passed), 'fail': len(failed), 'missing': len(missing)}, ensure_ascii=False), file=sys.stderr)
 
 
-OPT_MSG = os.path.join(OUT, 'options_message.txt')
-OPT_JSON = os.path.join(OUT, 'options_today.json')
 MAX_RATIO = 2.0  # قراردادی که نوسان ضمنی‌اش بیش از دو برابر نوسان واقعی پایه است «گران» حساب می‌شود و نمی‌آید
 
 
@@ -212,7 +240,7 @@ if __name__ == '__main__':
     if cmd == 'plan':
         plan(sys.argv[2])
     elif cmd == 'merge':
-        merge(sys.argv[2], sys.argv[3], sys.argv[4])
+        merge(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] if len(sys.argv) > 5 else None)
     elif cmd == 'options':
         options(sys.argv[2])
     else:
