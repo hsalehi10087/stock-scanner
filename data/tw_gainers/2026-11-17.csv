@@ -1,0 +1,6 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+2323.TW,中環,13.682099273279036,154.8459979566885,1521.609,597.07,2026-11-17,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+2355.TW,敬鵬,10.857144310360866,84.34980614191643,179.73,97.494,2026-11-17,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+6743.TW,安普新,27.402130786690336,80.79026782346284,210.881,116.644,2026-11-17,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+3570.TWO,大塚,20.123839009287934,34.90275813295615,76.301,56.56,2026-11-17,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+2471.TW,資通,29.411763880904584,12.368421052631579,69.601,61.94,2026-11-17,1,5,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
