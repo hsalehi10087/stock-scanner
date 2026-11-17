@@ -365,6 +365,23 @@
 "profit": false
 }
 },
+"BRCB": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 10.79,
+"last_date": "2026-11-13",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
+}
+},
 "BSEM": {
 "count": 1,
 "events": [
@@ -391,6 +408,23 @@
 "first_date": "2026-10-23",
 "first_price": 1.09,
 "last_date": "2026-10-27",
+"qs": 2,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": true,
+"momentum": null,
+"profit": false
+}
+},
+"CBRS": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 108.72,
+"last_date": "2026-11-13",
 "qs": 2,
 "qs_flags": {
 "analysts": true,
@@ -449,6 +483,23 @@
 "growth": true,
 "momentum": true,
 "profit": true
+}
+},
+"CDNL": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 6.46,
+"last_date": "2026-11-13",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": null,
+"profit": false
 }
 },
 "CDXS": {
@@ -1191,6 +1242,23 @@
 "profit": false
 }
 },
+"HAWK": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 18.16,
+"last_date": "2026-11-13",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": null,
+"profit": false
+}
+},
 "HELE": {
 "count": 1,
 "events": [
@@ -1868,6 +1936,23 @@
 "profit": true
 }
 },
+"NU": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 13.22,
+"last_date": "2026-11-13",
+"qs": 3,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "NWL": {
 "count": 1,
 "events": [
@@ -2527,6 +2612,40 @@
 "profit": false
 }
 },
+"STN": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 85.69,
+"last_date": "2026-11-13",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
+"STVN": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 15.8,
+"last_date": "2026-11-13",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "SWMR": {
 "count": 1,
 "events": [
@@ -2610,6 +2729,40 @@
 "growth": false,
 "momentum": false,
 "profit": true
+}
+},
+"TNDM": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 20.07,
+"last_date": "2026-11-13",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
+"TOP": {
+"count": 1,
+"events": [
+"2026-11-13"
+],
+"first_date": "2026-11-13",
+"first_price": 17.0,
+"last_date": "2026-11-13",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
 }
 },
 "TOYO": {
