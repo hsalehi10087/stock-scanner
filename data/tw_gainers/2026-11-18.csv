@@ -1,0 +1,7 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+2323.TW,中環,20.221331124083687,154.8459979566885,1521.609,597.07,2026-11-18,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+6190.TWO,萬泰科,11.775038257591142,150.27972620737884,236.209,94.378,2026-11-18,1,5,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+7722.TW,LINEPAY,19.621749408983447,132.843893784887,161.433,69.331,2026-11-18,1,5,⭐۱/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+6743.TW,安普新,17.218545137656882,80.79026782346284,210.881,116.644,2026-11-18,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+4148.TW,全宇生技-KY,16.83673101978862,40.219904882411974,96.411,68.757,2026-11-18,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+8099.TWO,大世科,15.614617940199338,34.21015314804311,94.645,70.52,2026-11-18,3,4,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
