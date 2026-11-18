@@ -1,238 +1,171 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-18",
  "markets": {
   "us": {
-   "data_date": "2026-11-16",
-   "scored": 1479,
-   "technical": 169,
-   "checked": 18,
+   "data_date": "2026-11-17",
+   "scored": 1477,
+   "technical": 128,
+   "checked": 14,
    "signals": [
     {
-     "ticker": "CHD",
-     "name": "Church & Dwight",
-     "price": 114.74,
+     "ticker": "PRSU",
+     "name": "Pursuit Attractions & Hospitality, Inc.",
+     "price": 52.84,
      "setups": [
-      "breakout",
+      "trend",
+      "pullback",
+      "longpat"
+     ],
+     "tech_rank": 0.434,
+     "fundamentals": [
+      "کیفیت رشد",
+      "سود پیاپی (SEC)"
+     ],
+     "quality": "⭐۵/۵",
+     "profit_streak": 2,
+     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
+     "profit_more": false,
+     "chart": "سقف دوقلو (هشدار)، مثلث صعودی",
+     "chart_score": 1.5,
+     "sec": {
+      "date": "2026-11-18",
+      "period_end": "2026-09-30",
+      "stale": false,
+      "derived": false,
+      "revenue_yoy": 4.4,
+      "net_income_yoy": 12.1,
+      "eps_yoy": 13.5,
+      "profit_streak_yoy": 2,
+      "revenue_streak_yoy": 8,
+      "operating_margin": null,
+      "margin_up": false,
+      "net_margin": 32.9,
+      "one_off": false,
+      "revenue_ttm": 493738000,
+      "net_income_ttm": 47347000,
+      "eps_ttm": 1.7
+     },
+     "k8": []
+    },
+    {
+     "ticker": "FTDR",
+     "name": "Frontdoor, Inc.",
+     "price": 93.92,
+     "setups": [
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.208,
+     "tech_rank": 0.778,
      "fundamentals": [
       "بافت",
       "کیفیت رشد",
       "سود پیاپی (SEC)"
      ],
      "quality": "⭐۴/۵",
-     "profit_streak": 2,
-     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
-     "profit_more": false,
-     "chart": "کف دوقلو (شکست خط گردن)، فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
-     "chart_score": 3.0,
-     "sec": {
-      "date": "2026-11-17",
-      "period_end": "2026-09-30",
-      "stale": false,
-      "derived": false,
-      "revenue_yoy": 1.0,
-      "net_income_yoy": 16.5,
-      "eps_yoy": 18.7,
-      "profit_streak_yoy": 2,
-      "revenue_streak_yoy": 5,
-      "operating_margin": 18.2,
-      "margin_up": true,
-      "net_margin": 13.2,
-      "one_off": false,
-      "revenue_ttm": 6245600000,
-      "net_income_ttm": 774800000,
-      "eps_ttm": 3.25
-     },
-     "k8": []
-    },
-    {
-     "ticker": "AMN",
-     "name": "Amn Healthcare Services, Inc.",
-     "price": 39.64,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.814,
-     "fundamentals": [
-      "کیفیت رشد",
-      "سود پیاپی (SEC)"
-     ],
-     "quality": "⭐۴/۵",
      "profit_streak": 3,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
      "profit_more": true,
-     "chart": "روند صعودی",
-     "chart_score": 1.0,
+     "chart": "کف دوقلو (شکست خط گردن)",
+     "chart_score": 2.5,
      "sec": {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "period_end": "2026-09-30",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 13.0,
-      "net_income_yoy": 14.0,
-      "eps_yoy": 9.2,
+      "revenue_yoy": 6.0,
+      "net_income_yoy": 9.4,
+      "eps_yoy": 16.2,
       "profit_streak_yoy": 3,
-      "revenue_streak_yoy": 4,
-      "operating_margin": 7.0,
-      "margin_up": true,
-      "net_margin": 4.7,
+      "revenue_streak_yoy": 8,
+      "operating_margin": null,
+      "margin_up": false,
+      "net_margin": 17.7,
       "one_off": false,
-      "revenue_ttm": 3517095000,
-      "net_income_ttm": 109024000,
-      "eps_ttm": 2.76
+      "revenue_ttm": 2183000000,
+      "net_income_ttm": 283000000,
+      "eps_ttm": 4.01
      },
-     "k8": []
+     "k8": [
+      [
+       "2026-11-12",
+       "5.02"
+      ]
+     ]
     }
    ],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 6,
-    "rsi": 1,
+    "ext": 7,
+    "rsi": 2,
     "earn": 0,
     "fund": 11,
-    "sec": 5
+    "sec": 1
    }
   },
   "cn": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 1500,
-   "technical": 24,
-   "checked": 3,
-   "signals": [
-    {
-     "ticker": "603236.SS",
-     "name": "QUECTEL WIRELESS SOLUTIONS CO L",
-     "price": 79.73,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.594,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۳/۵ ⚠️رقیق‌شدن",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "فنجان‌ودسته (شکست سقف)",
-     "chart_score": 2.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "688018.SS",
-     "name": "ESPRESSIF SYSTEMS (SHANGHAI) CO",
-     "price": 148.45,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.319,
-     "fundamentals": [
-      "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۳/۵ ⚠️رقیق‌شدن",
-     "profit_streak": 3,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.0,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "technical": 22,
+   "checked": 17,
+   "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 1,
-    "rsi": 0,
+    "rsi": 1,
     "earn": 0,
-    "fund": 1
+    "fund": 17
    }
   },
   "in": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 706,
-   "technical": 62,
-   "checked": 10,
+   "technical": 64,
+   "checked": 14,
    "signals": [
     {
-     "ticker": "KPRMILL.NS",
-     "name": "K.P.R. Mill Ltd.",
-     "price": 1217.1,
+     "ticker": "TIPSMUSIC.NS",
+     "name": "Tips Music Ltd.",
+     "price": 811.25,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.467,
+     "tech_rank": 0.725,
      "fundamentals": [
       "صورت مالی",
       "بافت",
-      "کیفیت رشد",
-      "سود پیاپی"
+      "کیفیت رشد"
      ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 3,
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
      "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "کف دوقلو (شکست خط گردن)، سقف دوقلو (هشدار)، فنجان‌ودسته (نزدیک سقف)",
+     "profit_more": false,
+     "chart": "کف دوقلو (شکست خط گردن)، فنجان‌ودسته (نزدیک سقف)",
      "chart_score": 3.0,
      "sec": null,
      "k8": []
     },
     {
-     "ticker": "LUMAXTECH.NS",
-     "name": "Lumax Auto Technologies Ltd.",
-     "price": 2404.0,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.381,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "QPOWER.NS",
-     "name": "QUALITY POWER ELECTRICAL EQUIPMENTS Ltd.",
-     "price": 1573.3,
+     "ticker": "STYLAMIND.NS",
+     "name": "Stylam Industries Ltd.",
+     "price": 3282.9,
      "setups": [
       "trend",
-      "longpat"
+      "pullback"
      ],
-     "tech_rank": 0.618,
+     "tech_rank": 0.486,
      "fundamentals": [
       "صورت مالی",
-      "کن‌اسلیم",
-      "بافت",
-      "سود پیاپی"
+      "بافت"
      ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 2,
+     "quality": "⭐۳/۵",
+     "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
+     "chart": "روند صعودی",
+     "chart_score": 1.0,
      "sec": null,
      "k8": []
     }
@@ -240,34 +173,33 @@
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 4,
-    "rsi": 2,
+    "ext": 5,
+    "rsi": 1,
     "earn": 0,
-    "fund": 7
+    "fund": 12
    }
   },
   "jp": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 1499,
-   "technical": 135,
-   "checked": 7,
+   "technical": 123,
+   "checked": 16,
    "signals": [
     {
-     "ticker": "6238.T",
-     "name": "FURYU CORPORATION",
-     "price": 1688.0,
+     "ticker": "3563.T",
+     "name": "FOOD & LIFE COMPANIES LTD",
+     "price": 6242.0,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.704,
+     "tech_rank": 0.791,
      "fundamentals": [
-      "صورت مالی",
+      "کن‌اسلیم",
       "کیفیت رشد"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 1,
+     "quality": "⭐۵/۵",
+     "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
      "chart": "شکست سقف ۵۲ هفته",
@@ -276,25 +208,26 @@
      "k8": []
     },
     {
-     "ticker": "6592.T",
-     "name": "MABUCHI MOTOR CO",
-     "price": 1752.0,
+     "ticker": "4220.T",
+     "name": "RIKEN TECHNOS CORPORATION",
+     "price": 2496.0,
      "setups": [
       "trend",
-      "pullback",
-      "longpat"
+      "pullback"
      ],
-     "tech_rank": 0.189,
+     "tech_rank": 0.762,
      "fundamentals": [
       "صورت مالی",
-      "کیفیت رشد"
+      "بافت",
+      "کیفیت رشد",
+      "سود پیاپی"
      ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 0,
+     "quality": "⭐۵/۵",
+     "profit_streak": 2,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "سقف دوقلو (هشدار)، مثلث صعودی",
-     "chart_score": 1.5,
+     "chart": "روند صعودی",
+     "chart_score": 1.0,
      "sec": null,
      "k8": []
     }
@@ -302,60 +235,37 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 1,
-    "rsi": 0,
+    "ext": 2,
+    "rsi": 1,
     "earn": 0,
-    "fund": 5
+    "fund": 14
    }
   },
   "tw": {
-   "data_date": "2026-11-17",
-   "scored": 1199,
-   "technical": 18,
-   "checked": 8,
+   "data_date": "2026-11-18",
+   "scored": 1198,
+   "technical": 14,
+   "checked": 5,
    "signals": [
     {
-     "ticker": "8415.TWO",
-     "name": "BRIGHTON-BEST INTERNATION (TAIW",
-     "price": 41.35,
+     "ticker": "2471.TW",
+     "name": "ARES INTERNATIONAL (TAIWAN)",
+     "price": 63.4,
      "setups": [
-      "breakout",
+      "trend",
       "longpat"
      ],
-     "tech_rank": 0.666,
+     "tech_rank": 0.799,
      "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
+      "بافت",
       "سود پیاپی"
      ],
      "quality": "⭐۲/۵",
      "profit_streak": 2,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "2221.TWO",
-     "name": "TACHIA YUNG HO MACHINE INDUSTRY",
-     "price": 149.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.323,
-     "fundamentals": [
-      "صورت مالی",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۲/۵ (۱ نامعلوم)",
-     "profit_streak": 4,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "مثلث صعودی",
-     "chart_score": 2.0,
+     "chart": "فنجان‌ودسته (شکست سقف)",
+     "chart_score": 2.5,
      "sec": null,
      "k8": []
     }
@@ -366,94 +276,141 @@
     "ext": 5,
     "rsi": 0,
     "earn": 0,
-    "fund": 6
+    "fund": 4
    }
   },
   "kr": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 1198,
-   "technical": 16,
-   "checked": 11,
+   "technical": 20,
+   "checked": 14,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 3,
+    "ext": 5,
     "rsi": 0,
     "earn": 0,
-    "fund": 11
+    "fund": 14
    }
   },
   "hk": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 991,
-   "technical": 34,
-   "checked": 21,
+   "technical": 32,
+   "checked": 9,
+   "signals": [
+    {
+     "ticker": "0178.HK",
+     "name": "SA SA INT'L",
+     "price": 1.465,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.955,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "شکست سقف ۵۲ هفته",
+     "chart_score": 1.7,
+     "sec": null,
+     "k8": []
+    },
+    {
+     "ticker": "3306.HK",
+     "name": "JNBY",
+     "price": 23.46,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.449,
+     "fundamentals": [
+      "صورت مالی",
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۵/۵",
+     "profit_streak": null,
+     "profit_basis": "",
+     "profit_more": false,
+     "chart": "فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0,
+     "sec": null,
+     "k8": []
+    }
+   ],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 4,
+    "rsi": 4,
+    "earn": 0,
+    "fund": 7
+   }
+  },
+  "gb": {
+   "data_date": "2026-11-18",
+   "scored": 346,
+   "technical": 45,
+   "checked": 24,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 3,
-    "rsi": 6,
-    "earn": 0,
-    "fund": 21
-   }
-  },
-  "gb": {
-   "data_date": "2026-11-17",
-   "scored": 346,
-   "technical": 44,
-   "checked": 24,
-   "signals": [],
-   "market_up50": true,
-   "cap": 8,
-   "dropped": {
-    "ext": 1,
+    "ext": 2,
     "rsi": 1,
     "earn": 0,
     "fund": 24
    }
   },
   "de": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 86,
-   "technical": 7,
-   "checked": 3,
+   "technical": 12,
+   "checked": 6,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
     "ext": 0,
-    "rsi": 0,
+    "rsi": 1,
     "earn": 0,
-    "fund": 3
+    "fund": 6
    }
   },
   "ca": {
    "data_date": "2026-11-17",
-   "scored": 409,
-   "technical": 38,
-   "checked": 19,
+   "scored": 571,
+   "technical": 43,
+   "checked": 21,
    "signals": [
     {
-     "ticker": "FTG.TO",
-     "name": "FIRAN TECHNOLOGY GROUP CORP.",
-     "price": 32.0,
+     "ticker": "VCM.TO",
+     "name": "VECIMA NETWORKS INC.",
+     "price": 13.02,
      "setups": [
       "trend",
-      "longpat"
+      "vcp"
      ],
-     "tech_rank": 0.685,
+     "tech_rank": 0.599,
      "fundamentals": [
       "کیفیت رشد",
       "سود پیاپی"
      ],
-     "quality": "⭐۴/۵ (۱ نامعلوم) ⚠️رقیق‌شدن",
+     "quality": "⭐۴/۵ (۱ نامعلوم)",
      "profit_streak": 2,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "فنجان‌ودسته (شکست سقف)",
-     "chart_score": 2.5,
+     "chart": "روند صعودی",
+     "chart_score": 1.0,
      "sec": null,
      "k8": []
     }
@@ -464,22 +421,22 @@
     "ext": 4,
     "rsi": 1,
     "earn": 0,
-    "fund": 18
+    "fund": 20
    }
   },
   "au": {
-   "data_date": "2026-11-17",
+   "data_date": "2026-11-18",
    "scored": 459,
-   "technical": 26,
-   "checked": 22,
+   "technical": 23,
+   "checked": 19,
    "signals": [],
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 1,
+    "ext": 2,
     "rsi": 0,
     "earn": 0,
-    "fund": 22
+    "fund": 19
    }
   }
  }

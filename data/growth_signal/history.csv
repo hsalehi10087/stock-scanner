@@ -208,3 +208,13 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-17,tw,8415.TWO,BRIGHTON-BEST INTERNATION (TAIW,41.35,59.2,breakout|longpat,صورت مالی|کن‌اسلیم|سود پیاپی,2,0.666,شکست سقف ۵۲ هفته,1.7
 2026-11-17,tw,2221.TWO,TACHIA YUNG HO MACHINE INDUSTRY,149.0,59.2,trend|longpat,صورت مالی|سود پیاپی,2,0.323,مثلث صعودی,2.0
 2026-11-17,ca,FTG.TO,FIRAN TECHNOLOGY GROUP CORP.,32.0,35642.1484,trend|longpat,کیفیت رشد|سود پیاپی,4,0.685,فنجان‌ودسته (شکست سقف),2.5
+2026-11-18,us,PRSU,"Pursuit Attractions & Hospitality, Inc.",52.84,732.44,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.434,سقف دوقلو (هشدار)، مثلث صعودی,1.5
+2026-11-18,us,FTDR,"Frontdoor, Inc.",93.92,732.44,trend|longpat,بافت|کیفیت رشد|سود پیاپی (SEC),4,0.778,کف دوقلو (شکست خط گردن),2.5
+2026-11-18,in,TIPSMUSIC.NS,Tips Music Ltd.,811.25,25227.9492,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.725,کف دوقلو (شکست خط گردن)، فنجان‌ودسته (نزدیک سقف),3.0
+2026-11-18,in,STYLAMIND.NS,Stylam Industries Ltd.,3282.8999,25227.9492,trend|pullback,صورت مالی|بافت,3,0.486,روند صعودی,1.0
+2026-11-18,jp,3563.T,FOOD & LIFE COMPANIES LTD,6242.0,2431.0,trend|longpat,کن‌اسلیم|کیفیت رشد,5,0.791,شکست سقف ۵۲ هفته,1.7
+2026-11-18,jp,4220.T,RIKEN TECHNOS CORPORATION,2496.0,2431.0,trend|pullback,صورت مالی|بافت|کیفیت رشد|سود پیاپی,5,0.762,روند صعودی,1.0
+2026-11-18,tw,2471.TW,ARES INTERNATIONAL (TAIWAN),63.4,59.4,trend|longpat,بافت|سود پیاپی,2,0.799,فنجان‌ودسته (شکست سقف),2.5
+2026-11-18,hk,0178.HK,SA SA INT'L,1.465,23294.75,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.955,شکست سقف ۵۲ هفته,1.7
+2026-11-18,hk,3306.HK,JNBY,23.46,23294.75,trend|longpat,صورت مالی|بافت|کیفیت رشد,5,0.449,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
+2026-11-18,ca,VCM.TO,VECIMA NETWORKS INC.,13.02,35315.3008,trend|vcp,کیفیت رشد|سود پیاپی,4,0.599,روند صعودی,1.0
