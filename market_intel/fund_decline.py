@@ -21,6 +21,7 @@ import summary as S  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import signal_tracker as T  # noqa: E402
 import quality as Q  # noqa: E402
+import fund_growth as FG  # noqa: E402  (همان UA رسمی SEC که برای fund_growth.py کار می‌کند)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HIST_DIR = os.path.join(ROOT, 'data', 'fund_decline')
@@ -29,7 +30,7 @@ THRESHOLD = 10.0
 MIN_PREV_USD = 3_000_000  # سود فصل قبل حداقل ۳ میلیون دلار؛ وگرنه درصد افت از پایه‌ی خیلی کوچک و بی‌معناست
 EXCLUDE = re.compile(r'acquisition|\bspac\b|\betf\b|\btrust\b|\bfund\b|\bblank check\b', re.I)
 WARRANT_SUFFIX = re.compile(r'(WW|WS|WT|W)$')  # نماد وارانت/حق‌تقدم: اگر حذف این پسوند، نماد اصلی را بدهد
-UA = {'User-Agent': 'stock-scanner-research (github.com/hsalehi10087/stock-scanner)'}
+UA = FG.UA  # SEC بدون UA شامل تماس واقعی گاهی ۴۰۳ می‌دهد؛ UA عمومی قبلی همین مشکل را داشت
 
 
 def is_warrant(ticker, all_tickers):

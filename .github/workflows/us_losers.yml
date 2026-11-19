@@ -35,5 +35,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Losers Bot"
-          git add -f data/losers data/losers_signal data/signal_tracker data/quality || true
+          for p in data/losers data/losers_signal data/signal_tracker data/quality; do git add -f "$p" 2>/dev/null || true; done
           git diff --cached --quiet || (git commit -m "📉 losers $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)
