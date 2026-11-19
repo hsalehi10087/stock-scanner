@@ -1,0 +1,26 @@
+id: 0d0247425f-btc-ema11-29-spread
+name: BTC EMA 11/29 spread trend hold
+name_fa: نگه‌داشتن بیت‌کوین با فاصله‌ی دو میانگین نمایی ۱۱ و ۲۹
+source: tradingview-ideas
+source_url: https://www.tradingview.com/chart/BTCUSDT.P/pRfCVl6N-Buy-and-Hold-the-Trend-No-Leverage/
+claim: "«دو EMA، ۱۱ و ۲۹. درصد فاصله = (EMA11 - EMA29) / میانگین این دو × ۱۰۰. وقتی فاصله بالای ‎+0.15%‎ است بخر. وقتی زیر ‎-0.006%‎ رفت بفروش. هر خرید با ۹۹٪ سرمایه… بدون اهرم، بدون فروش استقراضی، بدون حد ضرر.» — نویسنده می‌گوید برخلاف خرید و نگهداری، در روند نزولی کنار می‌کشد."
+claimed_return: "بدون عدد (ادعا: کنار رفتن از روندهای نزولی)"
+added: '2026-11-19'
+status: implemented
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1d
+start: '2015-01-01'
+notes: >-
+  متن پست عدد سود ندارد و صفحه‌ی کامل از این محیط باز نشد. نمودار پست قرارداد دائمی BTCUSDT در بایننس است؛
+  اینجا BTC-USD یاهو جای آن است. تایم‌فریم گفته نشده؛ روزانه فرض شده. قانون‌ها دقیقاً همان اعداد پست است:
+  فاصله‌ی درصدی دو EMA بالای ۰٫۱۵ ← خرید، زیر منفی ۰٫۰۰۶ ← فروش. بدون حد ضرر، فقط خرید. ۹۹٪ سرمایه ≈ تمام سرمایه.
+indicators:
+  ema11: {fn: ema, n: 11}
+  ema29: {fn: ema, n: 29}
+entry: (ema11 - ema29) / ((ema11 + ema29) / 2) * 100 > 0.15
+exit: (ema11 - ema29) / ((ema11 + ema29) / 2) * 100 < -0.006
+side: long
+stop_loss_pct: null
+take_profit_pct: null
+max_hold_bars: null
