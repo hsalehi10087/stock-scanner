@@ -50,6 +50,8 @@ jobs:
           - {script: report, data: ''}
           - {script: gainers, data: 'data/gainers data/signal_tracker data/quality'}
           - {script: fund_growth, data: 'data/fundamentals data/signal_tracker data/quality'}
+          - {script: losers, data: 'data/losers data/losers_signal data/signal_tracker data/quality'}
+          - {script: fund_decline, data: 'data/fund_decline data/fund_decline_signal data/signal_tracker data/quality'}
           - {script: jp_growth, data: 'data/jp_gainers data/quality'}
           - {script: cn_growth, data: 'data/cn_gainers data/quality'}
           - {script: tw_growth, data: 'data/tw_gainers data/quality'}
