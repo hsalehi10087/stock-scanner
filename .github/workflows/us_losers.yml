@@ -1,0 +1,39 @@
+name: 📉 US Losers >10% (daily)
+
+on:
+  # زمان‌بندی به ☀️ morning_digest.yml منتقل شد (گزارش صبحگاهی یکجا)
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت(ها) با کاما'
+        required: false
+        default: '75439320'
+
+permissions:
+  contents: write
+
+jobs:
+  losers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install packages
+        run: pip install -q yfinance pandas requests matplotlib
+      - name: Scan and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/losers.py
+      - name: Save history
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Losers Bot"
+          git add -f data/losers data/losers_signal data/signal_tracker data/quality || true
+          git diff --cached --quiet || (git commit -m "📉 losers $(date +%Y-%m-%d)" && git pull --rebase -q && git push -q)
