@@ -1,0 +1,10 @@
+{"time": "09:50", "ticker": "PANW", "signal": "surge", "price": 363.36, "chg": 6.89, "rvol": 3.83, "urgent": false, "src": "Yahoo"}
+{"time": "09:50", "ticker": "WMG", "signal": "hi20", "price": 33.53, "chg": 1.73, "rvol": 2.59, "urgent": false, "src": "Yahoo"}
+{"time": "10:50", "ticker": "P", "signal": "surge", "price": 113.54, "chg": 12.71, "rvol": 4.2, "urgent": true, "src": "Yahoo"}
+{"time": "10:50", "ticker": "OKTA", "signal": "surge", "price": 210.42, "chg": 7.57, "rvol": 2.06, "urgent": false, "src": "Yahoo"}
+{"time": "10:50", "ticker": "VVV", "signal": "surge", "price": 37.28, "chg": 11.73, "rvol": 3.06, "urgent": false, "src": "Yahoo"}
+{"time": "10:50", "ticker": "WWD", "signal": "surge", "price": 340.99, "chg": 6.87, "rvol": 3.58, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "AMBA", "signal": "surge", "price": 61.7, "chg": 12.92, "rvol": 2.84, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "BMRN", "signal": "hi20", "price": 63.06, "chg": 2.66, "rvol": 2.05, "urgent": false, "src": "Yahoo"}
+{"time": "11:50", "ticker": "GME", "signal": "hi20", "price": 27.03, "chg": 1.89, "rvol": 3.14, "urgent": false, "src": "Yahoo"}
+{"time": "13:50", "ticker": "NBIS", "signal": "drop", "price": 99.08, "chg": -7.37, "rvol": 1.38, "urgent": true, "src": "Yahoo"}
