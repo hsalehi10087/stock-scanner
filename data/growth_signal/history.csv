@@ -218,3 +218,11 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-18,hk,0178.HK,SA SA INT'L,1.465,23294.75,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.955,شکست سقف ۵۲ هفته,1.7
 2026-11-18,hk,3306.HK,JNBY,23.46,23294.75,trend|longpat,صورت مالی|بافت|کیفیت رشد,5,0.449,فنجان‌ودسته (شکست سقف)، شکست سقف ۵۲ هفته,3.0
 2026-11-18,ca,VCM.TO,VECIMA NETWORKS INC.,13.02,35315.3008,trend|vcp,کیفیت رشد|سود پیاپی,4,0.599,روند صعودی,1.0
+2026-11-19,us,LIVN,LivaNova,94.54,730.2,breakout|trend|longpat,کیفیت رشد|سود پیاپی (SEC),4,0.745,شکست سقف ۵۲ هفته,1.7
+2026-11-19,us,FIVE,Five Below,235.53,730.2,trend|pullback|longpat,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد|سود پیاپی (SEC),4,0.272,سقف دوقلو (هشدار)، سرووشانه معکوس,1.5
+2026-11-19,in,MINDACORP.NS,Minda Corporation Ltd.,753.2,25514.3008,breakout|trend|longpat,کن‌اسلیم|کیفیت رشد,5,0.7,شکست سقف ۵۲ هفته,1.7
+2026-11-19,in,KAJARIACER.NS,Kajaria Ceramics Ltd.,1203.0,25514.3008,trend|pullback|longpat,صورت مالی|کن‌اسلیم|بافت|کیفیت رشد|سود پیاپی,5,0.169,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-19,in,CRAFTSMAN.NS,Craftsman Automation Ltd.,11930.0,25514.3008,breakout|trend|longpat,صورت مالی|کن‌اسلیم|سود پیاپی,3,0.102,شکست سقف ۵۲ هفته,1.7
+2026-11-19,jp,2222.T,KOTOBUKI SPIRITS,2878.5,2417.0,trend|longpat,صورت مالی|بافت|کیفیت رشد,4,0.733,مثلث صعودی,2.0
+2026-11-19,jp,4578.T,OTSUKA HLDGS CO LTD,12155.0,2417.0,trend|longpat,صورت مالی|کیفیت رشد,5,0.71,سقف دوقلو (هشدار)، مثلث صعودی,1.5
+2026-11-19,tw,2412.TW,CHUNGHWA TELECOM,166.0,56.5,breakout|trend|longpat,صورت مالی|سود پیاپی,3,0.015,شکست سقف ۵۲ هفته,1.7
