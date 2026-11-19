@@ -1,13 +1,13 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "first_pick_date": "2026-10-23",
- "days_measured": 25,
- "portfolio_pct": -17.1,
+ "days_measured": 26,
+ "portfolio_pct": -18.8,
  "benchmarks_pct": {
-  "QQQ": -5.9,
-  "SMH": -5.8
+  "QQQ": -5.5,
+  "SMH": -6.0
  },
- "hit_rate_vs_qqq_pct": 28.0,
+ "hit_rate_vs_qqq_pct": 27.0,
  "per_ticker": [
   {
    "ticker": "AAOI",
@@ -28,42 +28,42 @@
   {
    "ticker": "INOD",
    "from": "2026-11-06",
-   "to": "2026-11-17",
+   "to": "2026-11-18",
    "in_list_now": true,
-   "ret_pct": -12.5,
-   "qqq_same_period_pct": 0.1
+   "ret_pct": -13.1,
+   "qqq_same_period_pct": 0.5
   },
   {
    "ticker": "IONQ",
    "from": "2026-10-23",
-   "to": "2026-11-17",
+   "to": "2026-11-18",
    "in_list_now": true,
-   "ret_pct": -20.6,
-   "qqq_same_period_pct": -6.7
+   "ret_pct": -24.9,
+   "qqq_same_period_pct": -6.4
   },
   {
    "ticker": "ONTO",
    "from": "2026-11-16",
-   "to": "2026-11-17",
+   "to": "2026-11-18",
    "in_list_now": true,
-   "ret_pct": 1.4,
-   "qqq_same_period_pct": -0.7
+   "ret_pct": 2.2,
+   "qqq_same_period_pct": -0.3
   },
   {
    "ticker": "OUST",
    "from": "2026-11-02",
-   "to": "2026-11-17",
+   "to": "2026-11-18",
    "in_list_now": true,
-   "ret_pct": 8.0,
-   "qqq_same_period_pct": -3.5
+   "ret_pct": 3.8,
+   "qqq_same_period_pct": -3.2
   },
   {
    "ticker": "SITM",
    "from": "2026-10-23",
-   "to": "2026-11-17",
+   "to": "2026-11-18",
    "in_list_now": true,
-   "ret_pct": -8.2,
-   "qqq_same_period_pct": -6.7
+   "ret_pct": -9.0,
+   "qqq_same_period_pct": -6.4
   },
   {
    "ticker": "SOUN",
