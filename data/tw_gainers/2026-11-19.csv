@@ -1,0 +1,8 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+2323.TW,中環,17.11711789114061,154.8459979566885,1521.609,597.07,2026-11-19,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+6807.TW,峰源-KY,10.174882942166153,147.30123943077993,167.005,67.531,2026-11-18,1,5,⭐۱/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+6416.TW,瑞祺電通,17.96116504854368,135.625635023729,183.206,77.753,2026-11-19,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+7722.TW,LINEPAY,14.087759815242485,132.843893784887,161.433,69.331,2026-11-19,1,5,⭐۱/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': False}"
+6743.TW,安普新,20.777025470514232,80.79026782346284,210.881,116.644,2026-11-19,2,5,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+8415.TWO,大國鋼,10.821386417210332,56.6728177386077,1811.824,1156.438,2026-11-19,2,5,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+4148.TW,全宇生技-KY,16.156469282247187,40.219904882411974,96.411,68.757,2026-11-18,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
