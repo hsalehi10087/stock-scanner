@@ -83,7 +83,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Morning Digest"
-          git add -f ${{ matrix.data }} || true
+          for p in ${{ matrix.data }}; do git add -f "$p" 2>/dev/null || true; done
           git diff --cached --quiet && exit 0
           git commit -q -m "☀️ ${{ matrix.script }} $(date -u +%F)"
           for i in 1 2 3 4 5 6; do git pull --rebase -q && git push -q && break; sleep $((i * 7)); done
