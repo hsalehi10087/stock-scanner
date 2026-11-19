@@ -1,0 +1,481 @@
+{
+ "date": "2026-11-19",
+ "markets": {
+  "us": {
+   "signals": [
+    {
+     "ticker": "BHR",
+     "name": "Braemar Hotels & Resorts Inc.",
+     "price": 1.5099999904632568,
+     "growth": -4162.57,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "BCBP",
+     "name": "BCB BANCORP INC",
+     "price": 9.050000190734863,
+     "growth": -3207.77,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "ADIG",
+     "name": "ADI GLOBAL DISTRIBUTION INC.",
+     "price": 8.899999618530273,
+     "growth": -2619.23,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "LILA",
+     "name": "Liberty Latin America Ltd.",
+     "price": 9.380000114440918,
+     "growth": -2248.48,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "KLC",
+     "name": "KinderCare Learning Companies, Inc.",
+     "price": 1.2200000286102295,
+     "growth": -1967.49,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "THRY",
+     "name": "Thryv Holdings, Inc.",
+     "price": 0.6941999793052673,
+     "growth": -1922.92,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "SECZ",
+     "name": "Securitize Corp.",
+     "price": 6.579999923706055,
+     "growth": -1718.9,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "Z",
+     "name": "ZILLOW GROUP, INC.",
+     "price": 27.290000915527344,
+     "growth": -1680.0,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "SSTK",
+     "name": "Shutterstock, Inc.",
+     "price": 2.359999895095825,
+     "growth": -1577.19,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "VERX",
+     "name": "Vertex, Inc.",
+     "price": 17.18000030517578,
+     "growth": -1252.86,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CNXC",
+     "name": "Concentrix Corp",
+     "price": 28.559999465942383,
+     "growth": -1221.45,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "UNM",
+     "name": "Unum Group",
+     "price": 77.04000091552734,
+     "growth": -1157.18,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "FISV",
+     "name": "FISERV INC",
+     "price": 56.619998931884766,
+     "growth": -850.13,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TXO",
+     "name": "TXO Partners, L.P.",
+     "price": 12.619999885559082,
+     "growth": -837.32,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TREE",
+     "name": "LendingTree, Inc.",
+     "price": 34.689998626708984,
+     "growth": -811.89,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "AHCO",
+     "name": "AdaptHealth Corp.",
+     "price": 7.25,
+     "growth": -728.29,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CARR",
+     "name": "CARRIER GLOBAL Corp",
+     "price": 51.52000045776367,
+     "growth": -705.84,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "SON",
+     "name": "SONOCO PRODUCTS CO",
+     "price": 46.2599983215332,
+     "growth": -695.6,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TRIP",
+     "name": "TripAdvisor, Inc.",
+     "price": 7.159999847412109,
+     "growth": -688.53,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CMCO",
+     "name": "COLUMBUS MCKINNON CORP",
+     "price": 19.139999389648438,
+     "growth": -655.67,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CPNG",
+     "name": "Coupang, Inc.",
+     "price": 14.0600004196167,
+     "growth": -627.37,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CABO",
+     "name": "Cable One, Inc.",
+     "price": 2.2899999618530273,
+     "growth": -599.05,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "DCH",
+     "name": "Dauch Corp",
+     "price": 4.070000171661377,
+     "growth": -592.39,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CRC",
+     "name": "California Resources Corp",
+     "price": 44.68000030517578,
+     "growth": -592.19,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "AIRT",
+     "name": "AIR T INC",
+     "price": 22.709999084472656,
+     "growth": -559.52,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "LOGC",
+     "name": "ContextLogic Holdings Inc.",
+     "price": 13.010000228881836,
+     "growth": -546.67,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TNGX",
+     "name": "Tango Therapeutics, Inc.",
+     "price": 22.709999084472656,
+     "growth": -530.58,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "QNBC",
+     "name": "QNB CORP.",
+     "price": 46.349998474121094,
+     "growth": -504.99,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "NWL",
+     "name": "NEWELL BRANDS INC.",
+     "price": 5.409999847412109,
+     "growth": -485.71,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "STRA",
+     "name": "Strategic Education, Inc.",
+     "price": 52.91999816894531,
+     "growth": -469.17,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "PRGO",
+     "name": "PERRIGO Co plc",
+     "price": 16.040000915527344,
+     "growth": -466.67,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "SLVM",
+     "name": "Sylvamo Corp",
+     "price": 36.349998474121094,
+     "growth": -449.12,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "SEPN",
+     "name": "Septerna, Inc.",
+     "price": 39.20000076293945,
+     "growth": -425.34,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "PTCT",
+     "name": "PTC THERAPEUTICS, INC.",
+     "price": 58.32500076293945,
+     "growth": -425.2,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "WHR",
+     "name": "WHIRLPOOL CORP /DE/",
+     "price": 25.31999969482422,
+     "growth": -424.66,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "RES",
+     "name": "RPC INC",
+     "price": 5.059999942779541,
+     "growth": -423.45,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "BFAM",
+     "name": "BRIGHT HORIZONS FAMILY SOLUTIONS INC.",
+     "price": 49.77000045776367,
+     "growth": -393.68,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "MNKD",
+     "name": "MANNKIND CORP",
+     "price": 3.950000047683716,
+     "growth": -390.85,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "NSLR",
+     "name": "Neostellar Capital Corp.",
+     "price": 5.239999771118164,
+     "growth": -385.27,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TCPC",
+     "name": "BlackRock TCP Capital Corp.",
+     "price": 4.070000171661377,
+     "growth": -373.92,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "RILY",
+     "name": "BRC Group Holdings, Inc.",
+     "price": 2.9700000286102295,
+     "growth": -364.6,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "RGEN",
+     "name": "REPLIGEN CORP",
+     "price": 170.2899932861328,
+     "growth": -357.74,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "HKHC",
+     "name": "Horizon Kinetics Holding Corp",
+     "price": 18.0,
+     "growth": -353.63,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "ORC",
+     "name": "Orchid Island Capital, Inc.",
+     "price": 4.480000019073486,
+     "growth": -348.23,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "OPK",
+     "name": "OPKO HEALTH, INC.",
+     "price": 1.6100000143051147,
+     "growth": -347.49,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "INSP",
+     "name": "Inspire Medical Systems, Inc.",
+     "price": 56.279998779296875,
+     "growth": -345.61,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "AVEX",
+     "name": "AEVEX Corp.",
+     "price": 12.859999656677246,
+     "growth": -341.26,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "MFA",
+     "name": "MFA FINANCIAL, INC.",
+     "price": 5.860000133514404,
+     "growth": -332.18,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "DX",
+     "name": "DYNEX CAPITAL INC",
+     "price": 9.850000381469727,
+     "growth": -323.11,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "ALHC",
+     "name": "Alignment Healthcare, Inc.",
+     "price": 6.5,
+     "growth": -315.93,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "CHTR",
+     "name": "CHARTER COMMUNICATIONS, INC. /MO/",
+     "price": 133.17999267578125,
+     "growth": -310.82,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "HIMS",
+     "name": "Hims & Hers Health, Inc.",
+     "price": 16.020000457763672,
+     "growth": -309.46,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "TVTX",
+     "name": "Travere Therapeutics, Inc.",
+     "price": 48.29999923706055,
+     "growth": -303.6,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "ARR",
+     "name": "Armour Residential REIT, Inc.",
+     "price": 10.829999923706055,
+     "growth": -303.28,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "ALK",
+     "name": "ALASKA AIR GROUP, INC.",
+     "price": 35.84000015258789,
+     "growth": -301.37,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "MCRB",
+     "name": "Seres Therapeutics, Inc.",
+     "price": 1.3300000429153442,
+     "growth": -298.51,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "JAZZ",
+     "name": "Jazz Pharmaceuticals plc",
+     "price": 236.4499969482422,
+     "growth": -292.28,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "INCY",
+     "name": "INCYTE CORP",
+     "price": 115.87000274658203,
+     "growth": -285.02,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
+     "ticker": "IVR",
+     "name": "Invesco Mortgage Capital Inc.",
+     "price": 5.210000038146973,
+     "growth": -278.86,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    }
+   ]
+  }
+ }
+}
