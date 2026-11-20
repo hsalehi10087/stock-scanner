@@ -1,0 +1,18 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+HY,"Hyster-Yale, Inc. Class A common stock",15.4399995803833,-41.06870560773586,2180103.0,2026-11-18,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+PRE,Prenetics Global Limited - Class A Ordinary Share,10.350000381469727,-36.619715677740075,821080.0,2026-11-18,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+NCT,Intercont (Cayman) Limited - Class A Ordinary shares,6.619999885559082,-34.26017789293845,792371.0,2026-11-18,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+KRNT,Kornit Digital Ltd. - Ordinary Shares,12.770000457763672,-22.886468178778006,1336214.0,2026-11-18,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+AGL,"agilon health, inc. Common Stock",90.52999877929688,-21.41492953340026,403190.0,2026-11-18,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+VCX,"Fundrise Innovation Fund, LLC Common Shares of Limited Liability Company Interests",17.489999771118164,-19.623163661993637,2524265.0,2026-11-19,,,,
+ARDT,"Ardent Health, Inc. Common Stock",14.399999618530273,-18.87324158574494,2193239.0,2026-11-18,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+HUM,Humana Inc. Common Stock,385.7799987792969,-12.983262966133225,1935430.0,2026-11-18,2.0,5.0,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+YSWY,"Yesway, Inc. - Class A Common Stock",21.290000915527344,-12.242371332786185,1300013.0,2026-11-18,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': None, 'analysts': False}"
+ALHC,"Alignment Healthcare, Inc. - Common Stock",6.71999979019165,-11.811025050972146,6207100.0,2026-11-18,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+ERO,Ero Copper Corp. Common Shares,23.920000076293945,-11.538464251463033,2318497.0,2026-11-18,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+CVI,CVR Energy Inc. Common Stock,33.7599983215332,-11.18126858109414,2232404.0,2026-11-18,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+SCTX,Scribe Therapeutics Inc. - Common Stock,14.050000190734863,-10.906786411550428,505068.0,2026-11-18,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': None, 'analysts': True}"
+ADUR,Aduro Clean Technologies Inc. - Common Stock,8.180000305175781,-10.698685137131292,601778.0,2026-11-18,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+TGB,Trekor Metals Limited Common Shares,5.559999942779541,-10.466990199268789,6854060.0,2026-11-18,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+UNH,UnitedHealth Group Incorporated Common Stock (DE),349.9100036621094,-10.205807267801148,19810978.0,2026-11-18,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+SKIN,SkinHealth Systems Inc. - Class A Common Stock,12.460000038146973,-10.198197923265063,123090.0,2026-11-18,3.0,5.0,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
