@@ -1,0 +1,12 @@
+id: b01f0a1bc6-nasdaq-swing-pf-194-vs-079
+name: Nasdaq swing strategies PF 1.94 vs 0.79
+name_fa: بک‌تست چند روش نوسانی نزدک (ضریب سود ۱٫۹۴ در برابر ۰٫۷۹)
+source: medium/algorithmic-trading
+source_url: https://mmcryptogem.medium.com/i-backtested-dozens-of-nasdaq-swing-trading-strategies-26afcdd2f759
+claim: "«ده‌ها روش معامله‌ی نوسانی نزدک را بک‌تست کردم؛ از جمله یک سیستم که در دو بازار مستقل ضریب سود ۱٫۹۴ نشان داد. عدد واقعی ۰٫۷۹ بود.»"
+claimed_return: "Profit Factor 1.94 (actual 0.79)"
+added: 2026-11-20
+status: not_testable
+asset_class: stock
+symbols: [QQQ]
+reason_not_testable: "فقط خلاصه‌ی پست در دسترس است و متن کامل خوانده نشد؛ قانون ورود و خروج هیچ‌کدام از روش‌ها گفته نشده؛ اطلاعات کافی نیست"
