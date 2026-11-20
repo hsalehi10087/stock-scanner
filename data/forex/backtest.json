@@ -1,123 +1,123 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-20",
  "split": "2021-05-04",
  "rules": {
   "follow_flow": {
    "train": {
-    "cagr": -1.0,
-    "max_dd": -17.6,
-    "sharpe": -0.17,
+    "cagr": -0.8,
+    "max_dd": -16.1,
+    "sharpe": -0.16,
     "weeks": 674,
-    "hit": 48.8
+    "hit": 48.4
    },
    "test": {
-    "cagr": -1.5,
+    "cagr": -1.2,
     "max_dd": -10.7,
-    "sharpe": -0.41,
+    "sharpe": -0.34,
     "weeks": 288,
-    "hit": 45.5
+    "hit": 48.3
    },
    "full": {
-    "cagr": -1.1,
-    "max_dd": -22.4,
-    "sharpe": -0.23,
+    "cagr": -0.9,
+    "max_dd": -20.7,
+    "sharpe": -0.2,
     "weeks": 962,
-    "hit": 47.8
+    "hit": 48.3
    }
   },
   "follow_net": {
    "train": {
-    "cagr": -0.9,
-    "max_dd": -17.7,
-    "sharpe": -0.14,
+    "cagr": -0.4,
+    "max_dd": -11.8,
+    "sharpe": -0.07,
     "weeks": 674,
-    "hit": 47.5
+    "hit": 48.7
    },
    "test": {
-    "cagr": 1.1,
-    "max_dd": -8.8,
-    "sharpe": 0.31,
+    "cagr": 1.0,
+    "max_dd": -9.3,
+    "sharpe": 0.33,
     "weeks": 288,
-    "hit": 51.4
+    "hit": 52.8
    },
    "full": {
-    "cagr": -0.3,
-    "max_dd": -18.8,
-    "sharpe": -0.04,
+    "cagr": 0.0,
+    "max_dd": -12.6,
+    "sharpe": 0.02,
     "weeks": 962,
-    "hit": 48.6
+    "hit": 49.9
    }
   },
   "contrarian_extreme": {
    "train": {
     "cagr": -0.1,
-    "max_dd": -4.3,
-    "sharpe": -0.09,
+    "max_dd": -3.9,
+    "sharpe": -0.1,
     "weeks": 674,
-    "hit": 15.1
+    "hit": 14.1
    },
    "test": {
     "cagr": 0.2,
     "max_dd": -1.4,
-    "sharpe": 0.35,
+    "sharpe": 0.28,
     "weeks": 288,
-    "hit": 18.1
+    "hit": 17.7
    },
    "full": {
     "cagr": -0.0,
-    "max_dd": -4.3,
-    "sharpe": -0.01,
+    "max_dd": -3.9,
+    "sharpe": -0.02,
     "weeks": 962,
-    "hit": 16.0
+    "hit": 15.2
    }
   },
   "flow_unless_extreme": {
    "train": {
-    "cagr": -1.3,
-    "max_dd": -21.1,
+    "cagr": -1.2,
+    "max_dd": -19.1,
     "sharpe": -0.26,
     "weeks": 674,
-    "hit": 47.2
+    "hit": 47.8
    },
    "test": {
-    "cagr": -0.6,
-    "max_dd": -7.0,
-    "sharpe": -0.16,
+    "cagr": -0.4,
+    "max_dd": -8.3,
+    "sharpe": -0.1,
     "weeks": 288,
-    "hit": 47.2
+    "hit": 48.6
    },
    "full": {
-    "cagr": -1.1,
-    "max_dd": -22.4,
-    "sharpe": -0.24,
+    "cagr": -1.0,
+    "max_dd": -21.2,
+    "sharpe": -0.22,
     "weeks": 962,
-    "hit": 47.2
+    "hit": 48.0
    }
   },
   "_buy_all_vs_usd": {
    "train": {
     "cagr": 0.4,
-    "max_dd": -31.2,
+    "max_dd": -31.0,
     "sharpe": 0.09,
     "weeks": 674,
-    "hit": 50.1
+    "hit": 50.0
    },
    "test": {
-    "cagr": -2.4,
-    "max_dd": -18.9,
-    "sharpe": -0.32,
+    "cagr": -2.3,
+    "max_dd": -19.9,
+    "sharpe": -0.29,
     "weeks": 288,
-    "hit": 46.2
+    "hit": 43.8
    },
    "full": {
     "cagr": -0.4,
-    "max_dd": -34.0,
+    "max_dd": -35.1,
     "sharpe": -0.02,
     "weeks": 962,
-    "hit": 49.0
+    "hit": 48.1
    }
   }
  },
- "chosen": "contrarian_extreme",
+ "chosen": "follow_net",
  "verdict": "رد"
 }
