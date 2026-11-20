@@ -1,116 +1,93 @@
 {
-"2026-11-19": {
-"PANW": [
+"2026-11-20": {
+"APLD": [
+"drop"
+],
+"ARM": [
+"drop"
+],
+"AVGO": [
+"ma50",
+"drop"
+],
+"COHR": [
+"drop"
+],
+"CRDO": [
+"drop"
+],
+"CRWV": [
+"drop"
+],
+"GAP": [
 "surge"
 ],
-"WMG": [
-"hi20"
+"IREN": [
+"drop"
 ],
-"OKTA": [
-"surge"
-],
-"P": [
-"surge"
-],
-"VVV": [
-"surge"
-],
-"WWD": [
-"surge"
-],
-"AMBA": [
-"surge"
-],
-"BMRN": [
-"hi20"
-],
-"GME": [
-"hi20"
+"LITE": [
+"drop"
 ],
 "NBIS": [
 "drop"
+],
+"NVTS": [
+"drop"
+],
+"ONTO": [
+"drop"
+],
+"ALAB": [
+"drop"
+],
+"OUST": [
+"drop"
+],
+"QBTS": [
+"drop"
+],
+"SITM": [
+"drop"
+],
+"TEM": [
+"drop"
+],
+"IONQ": [
+"drop"
+],
+"RGTI": [
+"drop"
+],
+"INOD": [
+"drop"
+],
+"NAVI": [
+"surge"
+],
+"APP": [
+"drop"
 ]
 },
-"pending_2026-11-19": [
+"pending_2026-11-20": [
 {
 "code": "surge",
-"ticker": "PANW",
-"score": 1,
-"rvol": 3.8307127596261923,
-"line": "PANW ۳۶۳٫۳۶$ ▲۶٫۹٪ | حجم ۳٫۸ برابر | فروش ▲۳۴٫۵٪، سود ▼۲۱۱٫۱٪",
+"ticker": "GAP",
+"score": 0,
+"rvol": 4.171753413303115,
+"line": "GAP ۲۱٫۵۳$ ▲۱۴٫۶٪ | حجم ۴٫۲ برابر",
 "time": "09:50",
-"price": 363.36,
-"chg": 6.89
-},
-{
-"code": "hi20",
-"ticker": "WMG",
-"score": 0,
-"rvol": 2.591441982586726,
-"line": "WMG ۳۳٫۵۳$ ▲۱٫۷٪ | حجم ۲٫۶ برابر",
-"time": "09:50",
-"price": 33.53,
-"chg": 1.73
+"price": 21.53,
+"chg": 14.58
 },
 {
 "code": "surge",
-"ticker": "OKTA",
+"ticker": "NAVI",
 "score": 0,
-"rvol": 2.0552484198857943,
-"line": "OKTA ۲۱۰٫۴۲$ ▲۷٫۶٪ | حجم ۲٫۱ برابر",
-"time": "10:50",
-"price": 210.42,
-"chg": 7.57
-},
-{
-"code": "surge",
-"ticker": "VVV",
-"score": 0,
-"rvol": 3.0643457502651446,
-"line": "VVV ۳۷٫۲۸$ ▲۱۱٫۷٪ | حجم ۳٫۱ برابر",
-"time": "10:50",
-"price": 37.28,
-"chg": 11.73
-},
-{
-"code": "surge",
-"ticker": "WWD",
-"score": 0,
-"rvol": 3.5828014243624775,
-"line": "WWD ۳۴۰٫۹۹$ ▲۶٫۹٪ | حجم ۳٫۶ برابر",
-"time": "10:50",
-"price": 340.99,
-"chg": 6.87
-},
-{
-"code": "surge",
-"ticker": "AMBA",
-"score": 0,
-"rvol": 2.8444300637569113,
-"line": "AMBA ۶۱٫۷$ ▲۱۲٫۹٪ | حجم ۲٫۸ برابر | فروش ▲۱۳٫۲٪، AI ۴٫۸",
-"time": "11:50",
-"price": 61.7,
-"chg": 12.92
-},
-{
-"code": "hi20",
-"ticker": "BMRN",
-"score": 0,
-"rvol": 2.0529316674255553,
-"line": "BMRN ۶۳٫۰۶$ ▲۲٫۷٪ | حجم ۲٫۱ برابر",
-"time": "11:50",
-"price": 63.06,
-"chg": 2.66
-},
-{
-"code": "hi20",
-"ticker": "GME",
-"score": 0,
-"rvol": 3.13929697899644,
-"line": "GME ۲۷٫۰۳$ ▲۱٫۹٪ | حجم ۳٫۱ برابر",
-"time": "11:50",
-"price": 27.03,
-"chg": 1.89
+"rvol": 3.5082335073098188,
+"line": "NAVI ۶٫۵$ ▲۷٫۹٪ | حجم ۳٫۵ برابر",
+"time": "12:50",
+"price": 6.5,
+"chg": 7.93
 }
 ]
 }
