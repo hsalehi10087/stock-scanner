@@ -1,13 +1,15 @@
 {
- "date": "2026-11-20",
- "new": 81,
+ "date": "2026-11-21",
+ "new": 14,
  "log": [
-  "Congress CapitolTrades: 43 rows",
-  "13F: 162 events",
-  "ARK: 55 events",
-  "Congress: 27 events from 43 rows",
+  "Congress CapitolTrades: 16882 rows",
+  "13F: 161 events",
+  "ARK: 0 events",
+  "Congress: 27 events from 16882 rows",
   "House PTR: 0 new reports, 0 stock events",
-  "Insiders: ReadTimeout HTTPConnectionPool(host='openinsider.com', port=80): Read timed out. (read timeo",
-  "new events: 81 (total sources: 13F/ARK/Congress/Insiders)"
+  "Insiders: 39 events",
+  "new events: 14 (total sources: 13F/ARK/Congress/Insiders)",
+  "select: 38/79 leaders pass (SPY 3y +58%)",
+  "select failed: Object of type bool is not JSON serializable"
  ]
 }
