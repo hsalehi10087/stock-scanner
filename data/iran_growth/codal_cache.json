@@ -1915,7 +1915,7 @@
   "np_growth": null,
   "verified": true,
   "none": "no_data",
-  "fetched": "2026-11-14"
+  "fetched": "2026-11-21"
  },
  "قرن": {
   "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
@@ -2027,7 +2027,7 @@
  "فولاد3": {
   "none": "no_statement",
   "n": 0,
-  "fetched": "2026-11-14"
+  "fetched": "2026-11-21"
  },
  "غبشهر": {
   "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
@@ -2173,5 +2173,82 @@
   "audited": false,
   "none": "no_table",
   "fetched": "2026-11-16"
+ },
+ "کپارس": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۷/۳۰ (حسابرسی نشده)",
+  "period": "1405/07/30",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 11420004,
+  "np_prev": 3924643,
+  "codal_pct": "۱۹۱",
+  "np_growth": 191,
+  "verified": true,
+  "rev_cur": 29074984,
+  "rev_prev": 14046493,
+  "rev_growth": 107,
+  "fetched": "2026-11-21"
+ },
+ "تکاردان": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)(اصلاحیه)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 37423967,
+  "np_prev": 16983548,
+  "codal_pct": "۱۲۰",
+  "np_growth": 120.4,
+  "verified": true,
+  "rev_cur": 71328217,
+  "rev_prev": 40251348,
+  "rev_growth": 77.2,
+  "fetched": "2026-11-21"
+ },
+ "لوتوس": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۷/۳۰ (حسابرسی نشده)",
+  "period": "1405/07/30",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 50656631,
+  "np_prev": 29651692,
+  "codal_pct": "۷۱",
+  "np_growth": 70.8,
+  "verified": true,
+  "rev_cur": 70612050,
+  "rev_prev": 44286060,
+  "rev_growth": 59.4,
+  "fetched": "2026-11-21"
+ },
+ "ولصنم": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 1523491,
+  "np_prev": 2277095,
+  "codal_pct": "(۳۳)",
+  "np_growth": -33.1,
+  "verified": true,
+  "rev_cur": 2758293,
+  "rev_prev": 2985944,
+  "rev_growth": -7.6,
+  "fetched": "2026-11-21"
+ },
+ "شتران3": {
+  "none": "no_statement",
+  "n": 0,
+  "fetched": "2026-11-21"
+ },
+ "وامید": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۷/۳۰ (حسابرسی نشده)",
+  "period": "1405/07/30",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 93538528,
+  "np_prev": 142969887,
+  "codal_pct": "(۳۵)",
+  "np_growth": -34.6,
+  "verified": true,
+  "fetched": "2026-11-21"
  }
 }
