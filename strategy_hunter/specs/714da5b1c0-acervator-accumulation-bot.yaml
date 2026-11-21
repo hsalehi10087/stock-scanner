@@ -1,0 +1,12 @@
+id: 714da5b1c0-acervator-accumulation-bot
+name: Acervator accumulation bot
+name_fa: ربات انباشت Acervator (فروش اضافه، خرید در افت)
+source: github/algorithmic-trading
+source_url: https://github.com/Acervator-LLC/ACERVATOR
+claim: "«نوسان را برداشت می‌کند: اضافه را می‌فروشد و افت را دوباره می‌خرد، در ۱۹ صرافی؛ بیش از ۶۲۰۰ معامله‌ی واقعی»"
+claimed_return: "6,200+ real trades (no return figure)"
+added: 2026-11-21
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+reason_not_testable: "قانون دقیق ربات (درصد فروش، درصد خرید مجدد، اندازه) در متن نیامده و عدد سودی هم گفته نشده؛ اطلاعات کافی نیست"

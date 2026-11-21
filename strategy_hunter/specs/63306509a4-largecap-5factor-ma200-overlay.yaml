@@ -1,0 +1,12 @@
+id: 63306509a4-largecap-5factor-ma200-overlay
+name: Large-cap 5-factor + 200d MA overlay
+name_fa: سهام بزرگ با ۵ عامل بنیادی و فیلتر میانگین ۲۰۰ روزه
+source: github/backtesting
+source_url: https://github.com/younghwan91/portfolio-research
+claim: "«سهام بزرگ، ۵ عامل + فیلتر زمان‌بندی میانگین ۲۰۰ روزه، آزمون پیش‌رونده ۲۰۰۲-۱۲ تا ۲۰۲۶-۰۸: رشد سالانه ۱۶٫۳۴٪ (لغزش ۱۵ واحد پایه)، بیشترین افت ‎-24.3%‎ در برابر ‎-55.2%‎ برای SPY، شارپ ۰٫۷۲۷»"
+claimed_return: "16.34% CAGR"
+added: 2026-11-21
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "انتخاب سهم با عامل‌های بنیادی و داده‌ی point-in-time شارادار (اشتراکی) انجام می‌شود؛ با داده‌ی قیمت روزانه‌ی یک نماد قابل آزمون نیست"

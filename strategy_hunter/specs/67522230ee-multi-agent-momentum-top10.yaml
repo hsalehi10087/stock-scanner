@@ -1,0 +1,12 @@
+id: 67522230ee-multi-agent-momentum-top10
+name: Multi-agent score top-10 momentum
+name_fa: امتیاز چندعاملی ایجنت‌ها و ۱۰ سهم برتر مومنتوم
+source: github/trading-strategy
+source_url: https://github.com/r2m-ai/trading-bot
+claim: "«بک‌تست سال‌به‌سال: ۲۰۲۳ ‎+92.4%‎، ۲۰۲۴ ‎+60.1%‎، ۲۰۲۵ ‎+24.2%‎؛ حساب آزمایشی از ۲۰۲۶-۰۳-۱۳ تا ۲۰۲۶-۰۸-۳۱ ‎+34.5%‎ در برابر ‎+16.1%‎ برای SPY، بیشترین افت ‎-26.8%‎»"
+claimed_return: "+92.4% (2023), +34.5% paper"
+added: 2026-11-21
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "هسته‌ی امتیازدهی (۳۰ عامل، امتیازدهنده و اندازه‌ی پوزیشن) خصوصی است و منتشر نشده؛ به سبد چندسهمی و اخبار هم نیاز دارد"
