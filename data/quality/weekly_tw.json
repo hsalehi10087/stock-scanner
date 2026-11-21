@@ -1,16 +1,16 @@
 {
  "market": "tw",
- "date": "2026-11-14",
- "scored": 1865,
- "no_data": 31,
- "universe": 1988,
- "liquid": 1896,
+ "date": "2026-11-21",
+ "scored": 1845,
+ "no_data": 1,
+ "universe": 1987,
+ "liquid": 1846,
  "distribution": {
-  "0": 330,
-  "1": 787,
-  "2": 477,
-  "3": 207,
-  "4": 61,
+  "0": 333,
+  "1": 772,
+  "2": 476,
+  "3": 201,
+  "4": 60,
   "5": 3
  },
  "fives": [
@@ -22,7 +22,7 @@
  "top": [
   {
    "ticker": "3044.TW",
-   "name": "",
+   "name": "TRIPOD TECHNOLOGY CORP",
    "date": "2026-11-14",
    "score": 5,
    "known": 5,
@@ -40,7 +40,7 @@
   },
   {
    "ticker": "1303.TW",
-   "name": "",
+   "name": "NAN YA PLASTIC",
    "date": "2026-11-14",
    "score": 5,
    "known": 5,
@@ -58,7 +58,7 @@
   },
   {
    "ticker": "3374.TWO",
-   "name": "",
+   "name": "XINTEC INC",
    "date": "2026-11-14",
    "score": 5,
    "known": 5,
@@ -75,7 +75,7 @@
   },
   {
    "ticker": "2408.TW",
-   "name": "",
+   "name": "NANYA TECHNOLOGY CORPORATION",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -93,7 +93,7 @@
   },
   {
    "ticker": "2615.TW",
-   "name": "",
+   "name": "WAN HAI LINES",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -111,7 +111,7 @@
   },
   {
    "ticker": "3029.TW",
-   "name": "",
+   "name": "ZERO ONE TECHNOLOGY",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -129,7 +129,7 @@
   },
   {
    "ticker": "2327.TW",
-   "name": "",
+   "name": "YAGEO CORP",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -147,7 +147,7 @@
   },
   {
    "ticker": "3443.TW",
-   "name": "",
+   "name": "GLOBAL UNICHIP CORP.",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -164,26 +164,8 @@
    }
   },
   {
-   "ticker": "2330.TW",
-   "name": "",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.64
-   }
-  },
-  {
    "ticker": "9939.TW",
-   "name": "",
+   "name": "TAIWAN HON CHUAN ENTERPRISE",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -201,7 +183,7 @@
   },
   {
    "ticker": "2303.TW",
-   "name": "",
+   "name": "UNITED MICRO ELECTRONICS",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -219,7 +201,7 @@
   },
   {
    "ticker": "2455.TW",
-   "name": "",
+   "name": "VISUAL PHOTONICS EPITAXY CO LTD",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -237,7 +219,7 @@
   },
   {
    "ticker": "2379.TW",
-   "name": "",
+   "name": "REALTEK SEMICONDUCTOR CORP",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -255,7 +237,7 @@
   },
   {
    "ticker": "6166.TW",
-   "name": "",
+   "name": "ADLINK TECHNOLOGY INC",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -273,7 +255,7 @@
   },
   {
    "ticker": "3105.TWO",
-   "name": "",
+   "name": "WIN SEMICONDUCTORS CORP",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -291,7 +273,7 @@
   },
   {
    "ticker": "3711.TW",
-   "name": "",
+   "name": "ASE TECHNOLOGY HOLDING CO LTD",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -309,7 +291,7 @@
   },
   {
    "ticker": "2855.TW",
-   "name": "",
+   "name": "PRESIDENT SECURITIES",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -327,7 +309,7 @@
   },
   {
    "ticker": "2404.TW",
-   "name": "",
+   "name": "UNITED INTEGRATION SERVICES CO",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -345,7 +327,7 @@
   },
   {
    "ticker": "3037.TW",
-   "name": "",
+   "name": "UNIMICRON TECHNOLOGY",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -363,7 +345,7 @@
   },
   {
    "ticker": "6285.TW",
-   "name": "",
+   "name": "WNC CORPORATION",
    "date": "2026-11-14",
    "score": 4,
    "known": 5,
@@ -377,6 +359,24 @@
    "badges": {
     "dilution_pct": -0.2,
     "peg": 1.84
+   }
+  },
+  {
+   "ticker": "1216.TW",
+   "name": "UNI-PRESIDENT ENTERPRISES CORP",
+   "date": "2026-11-14",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 1.93
    }
   }
  ]
