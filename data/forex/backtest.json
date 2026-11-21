@@ -11,18 +11,18 @@
     "hit": 48.8
    },
    "test": {
-    "cagr": -1.5,
+    "cagr": -1.4,
     "max_dd": -10.7,
-    "sharpe": -0.41,
-    "weeks": 288,
-    "hit": 45.5
+    "sharpe": -0.38,
+    "weeks": 289,
+    "hit": 45.7
    },
    "full": {
     "cagr": -1.1,
     "max_dd": -22.4,
-    "sharpe": -0.23,
-    "weeks": 962,
-    "hit": 47.8
+    "sharpe": -0.22,
+    "weeks": 963,
+    "hit": 47.9
    }
   },
   "follow_net": {
@@ -34,17 +34,17 @@
     "hit": 47.5
    },
    "test": {
-    "cagr": 1.1,
+    "cagr": 1.0,
     "max_dd": -8.8,
     "sharpe": 0.31,
-    "weeks": 288,
-    "hit": 51.4
+    "weeks": 289,
+    "hit": 51.2
    },
    "full": {
     "cagr": -0.3,
     "max_dd": -18.8,
     "sharpe": -0.04,
-    "weeks": 962,
+    "weeks": 963,
     "hit": 48.6
    }
   },
@@ -60,14 +60,14 @@
     "cagr": 0.2,
     "max_dd": -1.4,
     "sharpe": 0.35,
-    "weeks": 288,
-    "hit": 18.1
+    "weeks": 289,
+    "hit": 18.0
    },
    "full": {
     "cagr": -0.0,
     "max_dd": -4.3,
     "sharpe": -0.01,
-    "weeks": 962,
+    "weeks": 963,
     "hit": 16.0
    }
   },
@@ -82,15 +82,15 @@
    "test": {
     "cagr": -0.6,
     "max_dd": -7.0,
-    "sharpe": -0.16,
-    "weeks": 288,
-    "hit": 47.2
+    "sharpe": -0.14,
+    "weeks": 289,
+    "hit": 47.4
    },
    "full": {
     "cagr": -1.1,
     "max_dd": -22.4,
-    "sharpe": -0.24,
-    "weeks": 962,
+    "sharpe": -0.23,
+    "weeks": 963,
     "hit": 47.2
    }
   },
@@ -103,18 +103,18 @@
     "hit": 50.1
    },
    "test": {
-    "cagr": -2.4,
+    "cagr": -2.6,
     "max_dd": -18.9,
-    "sharpe": -0.32,
-    "weeks": 288,
-    "hit": 46.2
+    "sharpe": -0.35,
+    "weeks": 289,
+    "hit": 46.0
    },
    "full": {
-    "cagr": -0.4,
+    "cagr": -0.5,
     "max_dd": -34.0,
-    "sharpe": -0.02,
-    "weeks": 962,
-    "hit": 49.0
+    "sharpe": -0.03,
+    "weeks": 963,
+    "hit": 48.9
    }
   }
  },
