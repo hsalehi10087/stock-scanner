@@ -67,6 +67,23 @@
 "profit": true
 }
 },
+"BKHA": {
+"count": 1,
+"events": [
+"2026-11-19"
+],
+"first_date": "2026-11-19",
+"first_price": 6.48,
+"last_date": "2026-11-19",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": null
+}
+},
 "CHRN": {
 "count": 1,
 "events": [
@@ -142,6 +159,23 @@
 "analysts": false,
 "cash": true,
 "growth": true,
+"momentum": false,
+"profit": true
+}
+},
+"HQL": {
+"count": 1,
+"events": [
+"2026-11-19"
+],
+"first_date": "2026-11-19",
+"first_price": 15.38,
+"last_date": "2026-11-19",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
 "momentum": false,
 "profit": true
 }

@@ -1,33 +1,33 @@
 ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
-SA,"Seabridge Gold, Inc. Common Shares New",18.059999465942383,-29.31506847269819,7219275.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
-SNEX,StoneX Group Inc. - Common Stock,39.45000076293945,-26.71372947979238,5194345.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
-LQDT,"Liquidity Services, Inc. - Common Stock",33.029998779296875,-24.880605271066457,1439656.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-RRGB,"Red Robin Gourmet Burgers, Inc. - Common Stock",6.28000020980835,-21.006284773875418,1960559.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-CLRO,"ClearOne, Inc. - Common Stock",5.5,-20.28985617416691,717645.0,2026-11-19,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
-VCX,"Fundrise Innovation Fund, LLC Common Shares of Limited Liability Company Interests",17.489999771118164,-19.623163661993637,2517590.0,2026-11-19,,,,
-SLS,"SELLAS Life Sciences Group, Inc.  - Common Stock",14.859999656677246,-17.21449011100875,35904139.0,2026-11-19,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
-VRA,"Vera Bradley, Inc. - Common Stock",5.409999847412109,-16.512348279504575,748696.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
-RMIX,"Suncrete, Inc. - Class A Common Stock",6.300000190734863,-16.334661152749053,1459216.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
-SLQT,"SelectQuote, Inc. Common Stock",5.349999904632568,-15.348105074082907,160947.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
-WSM,"Williams-Sonoma, Inc. Common Stock (DE)",220.66000366210938,-15.160134273121596,4430091.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-CTEV,Claritev Corporation Class A Common Stock,19.030000686645508,-14.663671131345168,218919.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
-WRBY,Warby Parker Inc. Class A Common Stock,24.1299991607666,-14.493268079749344,6602474.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-NCT,Intercont (Cayman) Limited - Class A Ordinary shares,5.710000038146973,-13.746221497634615,792264.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
-TDAY,"USA TODAY Co., Inc. Common Stock",5.960000038146973,-13.245995088368968,8392241.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-OCC,Optical Cable Corporation - Common Stock,8.149999618530273,-13.205545042117572,299269.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-QNT,Quantinuum Inc. - Class A Common Stock,27.959999084472656,-12.597689013689683,4326855.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
-USAU,U.S. Gold Corp. - Common Stock,8.40999984741211,-12.395838403867154,329375.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
-KLAR,Klarna Group plc Ordinary Shares,12.670000076293945,-12.318337414993463,14399377.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
-SBMT,Silver Bow Mining Corp. Common Shares,5.239999771118164,-11.635751723348243,431948.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
-DAVE,Dave Inc.  - Class A Common Stock,237.57000732421875,-11.503074493808384,616947.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-NTES,"NetEase, Inc. - American Depositary Shares, each representing 5 ordinary shares",104.94000244140625,-11.39069309212859,2697049.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-CHRN,ChronoScale Holdings Corporation - Common Stock,8.510000228881836,-11.076274814466991,264570.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': None, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
-VNCE,Vince Holding Corp. - Common Stock,11.119999885559082,-10.825985184933662,291380.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
-SBC,SBC Medical Group Holdings Incorporated - Common Stock,5.599999904632568,-10.685806671963338,497354.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
-SOPH,SOPHiA GENETICS SA - Ordinary Shares,6.679999828338623,-10.575635663207416,1522622.0,2026-11-19,,,,
-NMAX,"Newsmax, Inc. Class B Common Stock",7.320000171661377,-10.294113865910582,1299049.0,2026-11-19,,,,
-WEST,Westrock Coffee Company - Common Stock,7.320000171661377,-10.294113865910582,744360.0,2026-11-19,,,,
-TCX,Tucows Inc. - Common Stock,12.670000076293945,-10.141845861614962,246398.0,2026-11-19,,,,
-EFOR,"Everforth, Inc. Common Stock",29.030000686645508,-10.123834760537987,1060518.0,2026-11-19,,,,
-WYFI,"WhiteFiber, Inc. - Ordinary Shares",7.650000095367432,-10.105759228956012,1619065.0,2026-11-19,,,,
-LUXE,"LuxExperience B.V. American Depositary Shares, each representing one Ordinary Share",10.550000190734863,-10.059670908363028,589597.0,2026-11-19,,,,
+SA,"Seabridge Gold, Inc. Common Shares New",18.059999465942383,-29.31506847269819,5681647.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+SNEX,StoneX Group Inc. - Common Stock,39.45000076293945,-26.71372947979238,3633546.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+LQDT,"Liquidity Services, Inc. - Common Stock",33.029998779296875,-24.880605271066457,1022913.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+BKHA,Black Hawk Acquisition Corporation - Class A Ordinary Shares,6.480000019073486,-24.738672735624302,2129759.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+RRGB,"Red Robin Gourmet Burgers, Inc. - Common Stock",6.28000020980835,-21.006284773875418,651359.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+CLRO,"ClearOne, Inc. - Common Stock",5.5,-20.28985617416691,282896.0,2026-11-19,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+VCX,"Fundrise Innovation Fund, LLC Common Shares of Limited Liability Company Interests",14.010000228881836,-19.89708169112141,2266225.0,2026-11-20,,,,
+SLS,"SELLAS Life Sciences Group, Inc.  - Common Stock",14.859999656677246,-17.21449011100875,15369854.0,2026-11-19,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+VRA,"Vera Bradley, Inc. - Common Stock",5.409999847412109,-16.512348279504575,486403.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+RMIX,"Suncrete, Inc. - Class A Common Stock",6.300000190734863,-16.334661152749053,1041729.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': None, 'analysts': None}"
+WSM,"Williams-Sonoma, Inc. Common Stock (DE)",220.66000366210938,-15.160134273121596,2346585.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+CTEV,Claritev Corporation Class A Common Stock,19.030000686645508,-14.663671131345168,246941.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+WRBY,Warby Parker Inc. Class A Common Stock,24.1299991607666,-14.493268079749344,7167962.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+NCT,Intercont (Cayman) Limited - Class A Ordinary shares,5.710000038146973,-13.746221497634615,104733.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+TDAY,"USA TODAY Co., Inc. Common Stock",5.960000038146973,-13.245995088368968,3838047.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+OCC,Optical Cable Corporation - Common Stock,8.149999618530273,-13.205545042117572,237230.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+QNT,Quantinuum Inc. - Class A Common Stock,27.959999084472656,-12.597689013689683,3616223.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+USAU,U.S. Gold Corp. - Common Stock,8.40999984741211,-12.395838403867154,442986.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+KLAR,Klarna Group plc Ordinary Shares,12.670000076293945,-12.318337414993463,10961546.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+HQL,abrdn Life Sciences Investors Shares of Beneficial Interest,15.380000114440918,-12.064034787247746,187606.0,2026-11-20,1.0,4.0,⭐۱/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+SBMT,Silver Bow Mining Corp. Common Shares,5.239999771118164,-11.635751723348243,1622448.0,2026-11-19,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': False, 'momentum': None, 'analysts': None}"
+DAVE,Dave Inc.  - Class A Common Stock,237.57000732421875,-11.503074493808384,746909.0,2026-11-19,3.0,4.0,⭐۳/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+NTES,"NetEase, Inc. - American Depositary Shares, each representing 5 ordinary shares",104.94000244140625,-11.39069309212859,1737358.0,2026-11-19,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+CHRN,ChronoScale Holdings Corporation - Common Stock,8.510000228881836,-11.076274814466991,225938.0,2026-11-19,1.0,3.0,⭐۱/۵ (۲ نامعلوم),"{'growth': None, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+VNCE,Vince Holding Corp. - Common Stock,11.119999885559082,-10.825985184933662,220412.0,2026-11-19,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+SBC,SBC Medical Group Holdings Incorporated - Common Stock,5.599999904632568,-10.685806671963338,377593.0,2026-11-19,,,,
+SOPH,SOPHiA GENETICS SA - Ordinary Shares,6.679999828338623,-10.575635663207416,827651.0,2026-11-19,,,,
+NMAX,"Newsmax, Inc. Class B Common Stock",7.320000171661377,-10.294113865910582,1165873.0,2026-11-19,,,,
+WEST,Westrock Coffee Company - Common Stock,7.320000171661377,-10.294113865910582,765557.0,2026-11-19,,,,
+EFOR,"Everforth, Inc. Common Stock",29.030000686645508,-10.123834760537987,859642.0,2026-11-19,,,,
+WYFI,"WhiteFiber, Inc. - Ordinary Shares",7.650000095367432,-10.105759228956012,2332179.0,2026-11-19,,,,
+LUXE,"LuxExperience B.V. American Depositary Shares, each representing one Ordinary Share",10.550000190734863,-10.059670908363028,608652.0,2026-11-19,,,,

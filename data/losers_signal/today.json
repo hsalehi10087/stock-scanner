@@ -1,103 +1,151 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "markets": {
   "us": {
    "signals": [
     {
-     "ticker": "HY",
-     "name": "Hyster-Yale, Inc. Class A common stock",
-     "price": 15.44,
-     "chg": -41.07
+     "ticker": "SA",
+     "name": "Seabridge Gold, Inc. Common Shares New",
+     "price": 18.06,
+     "chg": -29.32
     },
     {
-     "ticker": "PRE",
-     "name": "Prenetics Global Limited - Class A Ordinary Share",
-     "price": 10.35,
-     "chg": -36.62
+     "ticker": "SNEX",
+     "name": "StoneX Group Inc. - Common Stock",
+     "price": 39.45,
+     "chg": -26.71
+    },
+    {
+     "ticker": "LQDT",
+     "name": "Liquidity Services, Inc. - Common Stock",
+     "price": 33.03,
+     "chg": -24.88
+    },
+    {
+     "ticker": "BKHA",
+     "name": "Black Hawk Acquisition Corporation - Class A Ordinary Shares",
+     "price": 6.48,
+     "chg": -24.74
+    },
+    {
+     "ticker": "RRGB",
+     "name": "Red Robin Gourmet Burgers, Inc. - Common Stock",
+     "price": 6.28,
+     "chg": -21.01
+    },
+    {
+     "ticker": "CLRO",
+     "name": "ClearOne, Inc. - Common Stock",
+     "price": 5.5,
+     "chg": -20.29
+    },
+    {
+     "ticker": "SLS",
+     "name": "SELLAS Life Sciences Group, Inc.  - Common Stock",
+     "price": 14.86,
+     "chg": -17.21
+    },
+    {
+     "ticker": "VRA",
+     "name": "Vera Bradley, Inc. - Common Stock",
+     "price": 5.41,
+     "chg": -16.51
+    },
+    {
+     "ticker": "RMIX",
+     "name": "Suncrete, Inc. - Class A Common Stock",
+     "price": 6.3,
+     "chg": -16.33
+    },
+    {
+     "ticker": "WSM",
+     "name": "Williams-Sonoma, Inc. Common Stock (DE)",
+     "price": 220.66,
+     "chg": -15.16
+    },
+    {
+     "ticker": "CTEV",
+     "name": "Claritev Corporation Class A Common Stock",
+     "price": 19.03,
+     "chg": -14.66
+    },
+    {
+     "ticker": "WRBY",
+     "name": "Warby Parker Inc. Class A Common Stock",
+     "price": 24.13,
+     "chg": -14.49
     },
     {
      "ticker": "NCT",
      "name": "Intercont (Cayman) Limited - Class A Ordinary shares",
-     "price": 6.62,
-     "chg": -34.26
+     "price": 5.71,
+     "chg": -13.75
     },
     {
-     "ticker": "KRNT",
-     "name": "Kornit Digital Ltd. - Ordinary Shares",
-     "price": 12.77,
-     "chg": -22.89
+     "ticker": "TDAY",
+     "name": "USA TODAY Co., Inc. Common Stock",
+     "price": 5.96,
+     "chg": -13.25
     },
     {
-     "ticker": "AGL",
-     "name": "agilon health, inc. Common Stock",
-     "price": 90.53,
-     "chg": -21.41
+     "ticker": "OCC",
+     "name": "Optical Cable Corporation - Common Stock",
+     "price": 8.15,
+     "chg": -13.21
     },
     {
-     "ticker": "ARDT",
-     "name": "Ardent Health, Inc. Common Stock",
-     "price": 14.4,
-     "chg": -18.87
+     "ticker": "QNT",
+     "name": "Quantinuum Inc. - Class A Common Stock",
+     "price": 27.96,
+     "chg": -12.6
     },
     {
-     "ticker": "HUM",
-     "name": "Humana Inc. Common Stock",
-     "price": 385.78,
-     "chg": -12.98
+     "ticker": "USAU",
+     "name": "U.S. Gold Corp. - Common Stock",
+     "price": 8.41,
+     "chg": -12.4
     },
     {
-     "ticker": "YSWY",
-     "name": "Yesway, Inc. - Class A Common Stock",
-     "price": 21.29,
-     "chg": -12.24
+     "ticker": "KLAR",
+     "name": "Klarna Group plc Ordinary Shares",
+     "price": 12.67,
+     "chg": -12.32
     },
     {
-     "ticker": "ALHC",
-     "name": "Alignment Healthcare, Inc. - Common Stock",
-     "price": 6.72,
-     "chg": -11.81
+     "ticker": "HQL",
+     "name": "abrdn Life Sciences Investors Shares of Beneficial Interest",
+     "price": 15.38,
+     "chg": -12.06
     },
     {
-     "ticker": "ERO",
-     "name": "Ero Copper Corp. Common Shares",
-     "price": 23.92,
-     "chg": -11.54
+     "ticker": "SBMT",
+     "name": "Silver Bow Mining Corp. Common Shares",
+     "price": 5.24,
+     "chg": -11.64
     },
     {
-     "ticker": "CVI",
-     "name": "CVR Energy Inc. Common Stock",
-     "price": 33.76,
-     "chg": -11.18
+     "ticker": "DAVE",
+     "name": "Dave Inc.  - Class A Common Stock",
+     "price": 237.57,
+     "chg": -11.5
     },
     {
-     "ticker": "SCTX",
-     "name": "Scribe Therapeutics Inc. - Common Stock",
-     "price": 14.05,
-     "chg": -10.91
+     "ticker": "NTES",
+     "name": "NetEase, Inc. - American Depositary Shares, each representing 5 ordinary shares",
+     "price": 104.94,
+     "chg": -11.39
     },
     {
-     "ticker": "ADUR",
-     "name": "Aduro Clean Technologies Inc. - Common Stock",
-     "price": 8.18,
-     "chg": -10.7
+     "ticker": "CHRN",
+     "name": "ChronoScale Holdings Corporation - Common Stock",
+     "price": 8.51,
+     "chg": -11.08
     },
     {
-     "ticker": "TGB",
-     "name": "Trekor Metals Limited Common Shares",
-     "price": 5.56,
-     "chg": -10.47
-    },
-    {
-     "ticker": "UNH",
-     "name": "UnitedHealth Group Incorporated Common Stock (DE)",
-     "price": 349.91,
-     "chg": -10.21
-    },
-    {
-     "ticker": "SKIN",
-     "name": "SkinHealth Systems Inc. - Class A Common Stock",
-     "price": 12.46,
-     "chg": -10.2
+     "ticker": "VNCE",
+     "name": "Vince Holding Corp. - Common Stock",
+     "price": 11.12,
+     "chg": -10.83
     }
    ]
   }
