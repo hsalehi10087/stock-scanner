@@ -1,16 +1,16 @@
 {
  "market": "jp",
- "date": "2026-11-14",
- "scored": 1959,
- "no_data": 41,
+ "date": "2026-11-21",
+ "scored": 1997,
+ "no_data": 3,
  "universe": 3594,
  "liquid": 2000,
  "distribution": {
-  "0": 168,
-  "1": 536,
-  "2": 666,
-  "3": 445,
-  "4": 130,
+  "0": 173,
+  "1": 551,
+  "2": 681,
+  "3": 449,
+  "4": 129,
   "5": 14
  },
  "fives": [
@@ -24,38 +24,12 @@
   "1980.T",
   "8020.T",
   "3399.T",
-  "7085.T",
   "4220.T",
+  "7085.T",
   "7366.T",
   "5136.T"
  ],
- "dropped": [
-  {
-   "ticker": "4503.T",
-   "name": "Astellas Pharma Inc.",
-   "score": 2
-  },
-  {
-   "ticker": "6448.T",
-   "name": "BROTHER INDUSTRIES,LTD.",
-   "score": 3
-  },
-  {
-   "ticker": "4021.T",
-   "name": "Nissan Chemical Corporation",
-   "score": 2
-  },
-  {
-   "ticker": "2782.T",
-   "name": "Seria Co.,Ltd.",
-   "score": 1
-  },
-  {
-   "ticker": "9251.T",
-   "name": "AB&Company Co.,Ltd.",
-   "score": 1
-  }
- ],
+ "dropped": [],
  "top": [
   {
    "ticker": "8020.T",
@@ -234,23 +208,6 @@
    }
   },
   {
-   "ticker": "7085.T",
-   "name": "CURVES HOLDINGS Co.,Ltd.",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
    "ticker": "4220.T",
    "name": "RIKEN TECHNOS CORPORATION",
    "date": "2026-11-14",
@@ -265,6 +222,23 @@
    },
    "badges": {
     "dilution_pct": -7.0
+   }
+  },
+  {
+   "ticker": "7085.T",
+   "name": "CURVES HOLDINGS Co.,Ltd.",
+   "date": "2026-11-14",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0
    }
   },
   {
@@ -317,24 +291,6 @@
    "badges": {
     "dilution_pct": 0.0,
     "peg": 0.04
-   }
-  },
-  {
-   "ticker": "9104.T",
-   "name": "Mitsui O.S.K.Lines,Ltd.",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -1.7,
-    "peg": 0.14
    }
   },
   {
@@ -407,6 +363,24 @@
    "badges": {
     "dilution_pct": 0.0,
     "peg": 0.37
+   }
+  },
+  {
+   "ticker": "5975.T",
+   "name": "Topre Corporation",
+   "date": "2026-11-14",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": false,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.4,
+    "peg": 0.47
    }
   }
  ]
