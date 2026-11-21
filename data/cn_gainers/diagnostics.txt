@@ -1,7 +1,11 @@
-SSE type=1 try1 200 len=1724727
-SSE type=8 try1 200 len=632144
+SSE type=1 try1 ERR HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded wit
+SSE type=1 try2 ERR HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded wit
+SSE type=1 try3 ERR HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded wit
+SSE type=1 try4 ERR HTTPSConnectionPool(host='query.sse.com.cn', port=443): Max retries exceeded wit
+ERR sse_list: 'NoneType' object has no attribute 'raise_for_status'
+used cached universe_sse.csv: 2319 rows
 SZSE retry 1: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-SZSE xlsx 200 len=545177
+SZSE xlsx 200 len=545178
 tickers=5224
-priced=5224 price_gainers=90
-qualified=0 (growth computed for 0 of 90)
+priced=5223 price_gainers=57
+qualified=1 (growth computed for 1 of 57)

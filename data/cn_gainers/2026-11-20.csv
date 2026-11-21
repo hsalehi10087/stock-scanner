@@ -1,0 +1,2 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_cny,ni_prev_m_cny,date,qs,qs_known,qs_label,qs_flags
+000530.SZ,冰山冷热,18.97386304572004,18.063234152376257,14.17075152,12.002679429999999,2026-11-20,3,5,⭐۳/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': True, 'analysts': True}"
