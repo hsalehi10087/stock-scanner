@@ -234,3 +234,6 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-20,in,SANSERA.NS,Sansera Engineering Ltd.,4798.3999,25800.5996,trend|longpat,کن‌اسلیم|کیفیت رشد,4,0.742,شکست سقف ۵۲ هفته,1.7
 2026-11-20,jp,3697.T,SHIFT INC,1010.0,2338.0,trend|pullback,صورت مالی|کن‌اسلیم|کیفیت رشد,4,0.892,روند صعودی,1.0
 2026-11-20,jp,7085.T,CURVES HOLDINGS CO LTD,1079.0,2338.0,trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,5,0.63,شکست سقف ۵۲ هفته,1.7
+2026-11-21,us,TPC,Tutor Perini Corporation,87.02,689.81,trend|pullback,صورت مالی|کیفیت رشد|سود پیاپی (SEC),4,0.68,سقف دوقلو (هشدار),0.5
+2026-11-21,us,BTSG,BrightSpring Health Services,62.84,689.81,trend|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.658,سرووشانه معکوس,2.0
+2026-11-21,in,TANLA.NS,Tanla Platforms Ltd.,660.6,25800.5996,trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.822,کف دوقلو (شکست خط گردن),2.5

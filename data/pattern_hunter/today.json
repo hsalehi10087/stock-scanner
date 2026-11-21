@@ -1,19 +1,19 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-21",
  "markets": {
   "us": {
-   "data_date": "2026-11-19",
-   "scored": 1476,
+   "data_date": "2026-11-20",
+   "scored": 1475,
    "picks": [
     {
      "ticker": "MRVL",
      "name": "Marvell Technology",
-     "price": 138.47,
-     "prob": 0.959,
+     "price": 122.28,
+     "prob": 0.968,
      "rank": 1,
-     "r6m": -27.4,
-     "from_hi": -56.2,
-     "volu_ratio": 0.97,
+     "r6m": -37.7,
+     "from_hi": -61.3,
+     "volu_ratio": 1.04,
      "passed": [
       "صورت مالی"
      ],
@@ -25,12 +25,12 @@
     {
      "ticker": "VCYT",
      "name": "Veracyte, Inc.",
-     "price": 25.04,
+     "price": 25.13,
      "prob": 0.953,
      "rank": 2,
-     "r6m": -44.6,
-     "from_hi": -58.6,
-     "volu_ratio": 1.84,
+     "r6m": -44.2,
+     "from_hi": -58.5,
+     "volu_ratio": 1.89,
      "passed": [
       "صورت مالی"
      ],
@@ -40,48 +40,48 @@
      "quality": "⭐۳/۵"
     },
     {
-     "ticker": "CORT",
-     "name": "Corcept Therapeutics Incorporated",
-     "price": 64.98,
+     "ticker": "RSI",
+     "name": "Rush Street Interactive, Inc.",
+     "price": 11.23,
      "prob": 0.921,
      "rank": 3,
-     "r6m": 8.9,
-     "from_hi": -47.4,
-     "volu_ratio": 1.16,
+     "r6m": -58.5,
+     "from_hi": -67.5,
+     "volu_ratio": 1.5,
      "passed": [
-      "بافت"
+      "صورت مالی"
      ],
-     "health": "4/5",
-     "canslim": "2/7",
-     "buffett": "5/5",
-     "quality": "⭐۴/۵"
+     "health": "5/5",
+     "canslim": "4/7",
+     "buffett": "3/5",
+     "quality": "⭐۳/۵ ⚠️رقیق‌شدن"
     },
     {
-     "ticker": "PLTR",
-     "name": "Palantir Technologies",
-     "price": 153.68,
-     "prob": 0.915,
+     "ticker": "RDDT",
+     "name": "Reddit",
+     "price": 85.33,
+     "prob": 0.919,
      "rank": 4,
-     "r6m": 11.8,
-     "from_hi": -26.5,
-     "volu_ratio": 0.72,
+     "r6m": -39.8,
+     "from_hi": -67.0,
+     "volu_ratio": 1.41,
      "passed": [
       "صورت مالی"
      ],
      "health": "5/5",
      "canslim": "3/7",
      "buffett": "4/5",
-     "quality": "⭐۴/۵"
+     "quality": "⭐۴/۵ ⚠️رقیق‌شدن"
     },
     {
      "ticker": "LQDT",
      "name": "Liquidity Services, Inc.",
-     "price": 33.03,
-     "prob": 0.89,
+     "price": 31.87,
+     "prob": 0.908,
      "rank": 5,
-     "r6m": -3.4,
-     "from_hi": -29.4,
-     "volu_ratio": 1.32,
+     "r6m": -7.4,
+     "from_hi": -31.8,
+     "volu_ratio": 1.45,
      "passed": [
       "بافت"
      ],
@@ -91,10 +91,10 @@
      "quality": "⭐۳/۵"
     }
    ],
-   "checked": 38,
-   "dropped": 33,
+   "checked": 32,
+   "dropped": 27,
    "market_up": false,
-   "median_prob": 0.395
+   "median_prob": 0.389
   },
   "cn": {
    "data_date": "2026-11-20",
@@ -196,7 +196,7 @@
   },
   "in": {
    "data_date": "2026-11-20",
-   "scored": 706,
+   "scored": 708,
    "picks": [
     {
      "ticker": "LOTUSDEV.NS",
@@ -389,7 +389,7 @@
   },
   "tw": {
    "data_date": "2026-11-20",
-   "scored": 1198,
+   "scored": 1200,
    "picks": [
     {
      "ticker": "3558.TWO",
@@ -478,14 +478,14 @@
      "quality": "⭐۴/۵"
     }
    ],
-   "checked": 32,
-   "dropped": 27,
+   "checked": 33,
+   "dropped": 28,
    "market_up": false,
    "median_prob": 0.462
   },
   "kr": {
    "data_date": "2026-11-20",
-   "scored": 1197,
+   "scored": 1200,
    "picks": [],
    "checked": 40,
    "dropped": 40,
@@ -494,7 +494,7 @@
   },
   "hk": {
    "data_date": "2026-11-20",
-   "scored": 995,
+   "scored": 1000,
    "picks": [],
    "checked": 40,
    "dropped": 40,
@@ -508,7 +508,7 @@
    "checked": 40,
    "dropped": 40,
    "market_up": false,
-   "median_prob": 0.031
+   "median_prob": 0.032
   },
   "de": {
    "data_date": "2026-11-20",
@@ -517,25 +517,25 @@
    "checked": 40,
    "dropped": 40,
    "market_up": false,
-   "median_prob": 0.008
+   "median_prob": 0.007
   },
   "ca": {
-   "data_date": "2026-11-19",
+   "data_date": "2026-11-20",
    "scored": 573,
    "picks": [],
    "checked": 40,
    "dropped": 40,
    "market_up": false,
-   "median_prob": 0.146
+   "median_prob": 0.171
   },
   "au": {
    "data_date": "2026-11-20",
-   "scored": 457,
+   "scored": 462,
    "picks": [],
    "checked": 40,
    "dropped": 40,
    "market_up": false,
-   "median_prob": 0.206
+   "median_prob": 0.204
   }
  }
 }

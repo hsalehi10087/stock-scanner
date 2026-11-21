@@ -1,24 +1,23 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-21",
  "markets": {
   "us": {
-   "data_date": "2026-11-19",
-   "scored": 1476,
-   "technical": 88,
-   "checked": 10,
+   "data_date": "2026-11-20",
+   "scored": 1475,
+   "technical": 67,
+   "checked": 12,
    "signals": [
     {
-     "ticker": "CHE",
-     "name": "Chemed Corp.",
-     "price": 551.33,
+     "ticker": "TPC",
+     "name": "Tutor Perini Corporation",
+     "price": 87.02,
      "setups": [
-      "breakout",
       "trend",
-      "longpat"
+      "pullback"
      ],
-     "tech_rank": 0.28,
+     "tech_rank": 0.68,
      "fundamentals": [
-      "بافت",
+      "صورت مالی",
       "کیفیت رشد",
       "سود پیاپی (SEC)"
      ],
@@ -26,64 +25,64 @@
      "profit_streak": 2,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
      "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
+     "chart": "سقف دوقلو (هشدار)",
+     "chart_score": 0.5,
      "sec": {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "period_end": "2026-09-30",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 10.6,
-      "net_income_yoy": 11.5,
-      "eps_yoy": 22.2,
+      "revenue_yoy": 21.5,
+      "net_income_yoy": 470.1,
+      "eps_yoy": 457.1,
       "profit_streak_yoy": 2,
       "revenue_streak_yoy": 8,
-      "operating_margin": 14.0,
+      "operating_margin": 7.3,
       "margin_up": true,
-      "net_margin": 10.4,
+      "net_margin": 1.2,
       "one_off": false,
-      "revenue_ttm": 2661041000,
-      "net_income_ttm": 282404000,
-      "eps_ttm": 20.87
+      "revenue_ttm": 6254126000,
+      "net_income_ttm": 140976000,
+      "eps_ttm": 2.63
      },
      "k8": []
     },
     {
-     "ticker": "DFIN",
-     "name": "Donnelley Financial Solutions, Inc.",
-     "price": 65.41,
+     "ticker": "BTSG",
+     "name": "BrightSpring Health Services",
+     "price": 62.84,
      "setups": [
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.75,
+     "tech_rank": 0.658,
      "fundamentals": [
-      "بافت",
+      "کیفیت رشد",
       "سود پیاپی (SEC)"
      ],
-     "quality": "⭐۳/۵",
-     "profit_streak": 3,
+     "quality": "⭐۵/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 8,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
      "profit_more": true,
-     "chart": "سرووشانه معکوس (شکست)، فنجان‌ودسته (نزدیک سقف)، مثلث صعودی",
-     "chart_score": 3.0,
+     "chart": "سرووشانه معکوس",
+     "chart_score": 2.0,
      "sec": {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "period_end": "2026-09-30",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 5.5,
-      "net_income_yoy": 152.1,
-      "eps_yoy": 157.0,
-      "profit_streak_yoy": 3,
-      "revenue_streak_yoy": 4,
-      "operating_margin": 17.6,
-      "margin_up": false,
-      "net_margin": 11.5,
+      "revenue_yoy": 26.4,
+      "net_income_yoy": 79.3,
+      "eps_yoy": 73.1,
+      "profit_streak_yoy": 8,
+      "revenue_streak_yoy": 8,
+      "operating_margin": 3.8,
+      "margin_up": true,
+      "net_margin": 2.4,
       "one_off": false,
-      "revenue_ttm": 787200000,
-      "net_income_ttm": 97400000,
-      "eps_ttm": 3.87
+      "revenue_ttm": 15250726000,
+      "net_income_ttm": 410275000,
+      "eps_ttm": 1.84
      },
      "k8": []
     }
@@ -91,11 +90,11 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 6,
+    "ext": 4,
     "rsi": 0,
     "earn": 0,
-    "fund": 7,
-    "sec": 1
+    "fund": 8,
+    "sec": 2
    }
   },
   "cn": {
@@ -115,102 +114,31 @@
   },
   "in": {
    "data_date": "2026-11-20",
-   "scored": 706,
+   "scored": 708,
    "technical": 88,
-   "checked": 14,
+   "checked": 12,
    "signals": [
     {
-     "ticker": "VIJAYA.NS",
-     "name": "Vijaya Diagnostic Centre Ltd.",
-     "price": 1572.3,
+     "ticker": "TANLA.NS",
+     "name": "Tanla Platforms Ltd.",
+     "price": 660.6,
      "setups": [
-      "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.347,
+     "tech_rank": 0.822,
      "fundamentals": [
       "صورت مالی",
       "بافت",
       "کیفیت رشد",
       "سود پیاپی"
      ],
-     "quality": "⭐۵/۵",
+     "quality": "⭐۴/۵",
      "profit_streak": 4,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "GESHIP.NS",
-     "name": "Great Eastern Shipping Co. Ltd.",
-     "price": 1531.6,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.16,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
-      "بافت",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 0,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "فنجان‌ودسته (نزدیک سقف)",
-     "chart_score": 2.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "ABDL.NS",
-     "name": "Allied Blenders and Distillers Ltd.",
-     "price": 794.3,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.877,
-     "fundamentals": [
-      "صورت مالی",
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "SANSERA.NS",
-     "name": "Sansera Engineering Ltd.",
-     "price": 4798.4,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.742,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
+     "chart": "کف دوقلو (شکست خط گردن)",
+     "chart_score": 2.5,
      "sec": null,
      "k8": []
     }
@@ -221,75 +149,27 @@
     "ext": 5,
     "rsi": 1,
     "earn": 0,
-    "fund": 10
+    "fund": 11
    }
   },
   "jp": {
    "data_date": "2026-11-20",
    "scored": 1499,
    "technical": 95,
-   "checked": 17,
-   "signals": [
-    {
-     "ticker": "3697.T",
-     "name": "SHIFT INC",
-     "price": 1010.0,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.892,
-     "fundamentals": [
-      "صورت مالی",
-      "کن‌اسلیم",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 0,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "7085.T",
-     "name": "CURVES HOLDINGS CO LTD",
-     "price": 1079.0,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.63,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت",
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "checked": 18,
+   "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 4,
     "rsi": 1,
     "earn": 0,
-    "fund": 15
+    "fund": 18
    }
   },
   "tw": {
    "data_date": "2026-11-20",
-   "scored": 1198,
+   "scored": 1200,
    "technical": 2,
    "checked": 0,
    "signals": [],
@@ -304,14 +184,14 @@
   },
   "kr": {
    "data_date": "2026-11-20",
-   "scored": 1197,
-   "technical": 22,
+   "scored": 1200,
+   "technical": 21,
    "checked": 13,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 7,
+    "ext": 6,
     "rsi": 1,
     "earn": 0,
     "fund": 13
@@ -319,7 +199,7 @@
   },
   "hk": {
    "data_date": "2026-11-20",
-   "scored": 995,
+   "scored": 1000,
    "technical": 19,
    "checked": 13,
    "signals": [],
@@ -335,8 +215,8 @@
   "gb": {
    "data_date": "2026-11-20",
    "scored": 346,
-   "technical": 28,
-   "checked": 28,
+   "technical": 25,
+   "checked": 25,
    "signals": [],
    "market_up50": false,
    "cap": 2,
@@ -344,14 +224,14 @@
     "ext": 0,
     "rsi": 0,
     "earn": 0,
-    "fund": 28
+    "fund": 25
    }
   },
   "de": {
    "data_date": "2026-11-20",
    "scored": 86,
    "technical": 6,
-   "checked": 4,
+   "checked": 5,
    "signals": [],
    "market_up50": false,
    "cap": 2,
@@ -359,29 +239,29 @@
     "ext": 0,
     "rsi": 0,
     "earn": 0,
-    "fund": 4
+    "fund": 5
    }
   },
   "ca": {
-   "data_date": "2026-11-19",
+   "data_date": "2026-11-20",
    "scored": 573,
-   "technical": 31,
-   "checked": 26,
+   "technical": 21,
+   "checked": 17,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
     "ext": 3,
-    "rsi": 0,
+    "rsi": 1,
     "earn": 0,
-    "fund": 26
+    "fund": 17
    }
   },
   "au": {
    "data_date": "2026-11-20",
-   "scored": 457,
-   "technical": 20,
-   "checked": 18,
+   "scored": 462,
+   "technical": 21,
+   "checked": 19,
    "signals": [],
    "market_up50": false,
    "cap": 2,
@@ -389,7 +269,7 @@
     "ext": 1,
     "rsi": 0,
     "earn": 0,
-    "fund": 18
+    "fund": 19
    }
   }
  }
