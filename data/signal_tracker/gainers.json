@@ -135,6 +135,23 @@
 "profit": false
 }
 },
+"AEMD": {
+"count": 1,
+"events": [
+"2026-11-20"
+],
+"first_date": "2026-11-20",
+"first_price": 5.46,
+"last_date": "2026-11-20",
+"qs": 1,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "AESI": {
 "count": 1,
 "events": [
@@ -1326,6 +1343,23 @@
 "growth": true,
 "momentum": false,
 "profit": false
+}
+},
+"GAP": {
+"count": 1,
+"events": [
+"2026-11-20"
+],
+"first_date": "2026-11-20",
+"first_price": 20.94,
+"last_date": "2026-11-20",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
 }
 },
 "GDHG": {
