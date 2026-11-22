@@ -1,5 +1,5 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "split": "2021-05-04",
  "rules": {
   "follow_flow": {
@@ -36,7 +36,7 @@
    "test": {
     "cagr": 1.0,
     "max_dd": -8.8,
-    "sharpe": 0.31,
+    "sharpe": 0.3,
     "weeks": 289,
     "hit": 51.2
    },
@@ -103,16 +103,16 @@
     "hit": 50.1
    },
    "test": {
-    "cagr": -2.6,
+    "cagr": -2.7,
     "max_dd": -18.9,
-    "sharpe": -0.35,
+    "sharpe": -0.36,
     "weeks": 289,
     "hit": 46.0
    },
    "full": {
     "cagr": -0.5,
     "max_dd": -34.0,
-    "sharpe": -0.03,
+    "sharpe": -0.04,
     "weeks": 963,
     "hit": 48.9
    }
