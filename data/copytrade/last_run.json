@@ -1,15 +1,13 @@
 {
- "date": "2026-11-21",
- "new": 14,
+ "date": "2026-11-22",
+ "new": 0,
  "log": [
-  "Congress CapitolTrades: 16882 rows",
+  "Congress CapitolTrades: 33 rows",
   "13F: 161 events",
   "ARK: 0 events",
-  "Congress: 27 events from 16882 rows",
+  "Congress: 27 events from 33 rows",
   "House PTR: 0 new reports, 0 stock events",
-  "Insiders: 39 events",
-  "new events: 14 (total sources: 13F/ARK/Congress/Insiders)",
-  "select: 38/79 leaders pass (SPY 3y +58%)",
-  "select failed: Object of type bool is not JSON serializable"
+  "Insiders: 37 events",
+  "new events: 0 (total sources: 13F/ARK/Congress/Insiders)"
  ]
 }
