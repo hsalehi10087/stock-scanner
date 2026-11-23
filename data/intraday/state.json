@@ -1,93 +1,225 @@
 {
-"2026-11-20": {
-"APLD": [
-"drop"
+"2026-11-23": {
+"HZO": [
+"hi52"
+],
+"NVDA": [
+"surge"
+],
+"SYM": [
+"surge"
+],
+"AEHR": [
+"surge"
+],
+"ALAB": [
+"surge"
+],
+"AMAT": [
+"surge"
+],
+"AMD": [
+"surge"
 ],
 "ARM": [
-"drop"
+"surge"
 ],
-"AVGO": [
-"ma50",
-"drop"
-],
-"COHR": [
-"drop"
+"COIN": [
+"surge"
 ],
 "CRDO": [
-"drop"
+"surge"
 ],
-"CRWV": [
-"drop"
+"DIOD": [
+"surge"
 ],
-"GAP": [
+"ESE": [
+"surge"
+],
+"ESTC": [
+"surge"
+],
+"GLW": [
+"surge"
+],
+"IBKR": [
 "surge"
 ],
 "IREN": [
-"drop"
-],
-"LITE": [
-"drop"
-],
-"NBIS": [
-"drop"
-],
-"NVTS": [
-"drop"
-],
-"ONTO": [
-"drop"
-],
-"ALAB": [
-"drop"
-],
-"OUST": [
-"drop"
-],
-"QBTS": [
-"drop"
-],
-"SITM": [
-"drop"
-],
-"TEM": [
-"drop"
-],
-"IONQ": [
-"drop"
-],
-"RGTI": [
-"drop"
-],
-"INOD": [
-"drop"
-],
-"NAVI": [
 "surge"
 ],
-"APP": [
-"drop"
+"LITE": [
+"surge"
+],
+"MRVL": [
+"surge"
+],
+"MU": [
+"surge"
+],
+"NVTS": [
+"surge"
+],
+"PLTR": [
+"surge"
+],
+"RGTI": [
+"surge"
+],
+"TSLA": [
+"surge"
 ]
 },
-"pending_2026-11-20": [
+"pending_2026-11-23": [
 {
-"code": "surge",
-"ticker": "GAP",
+"code": "hi52",
+"ticker": "HZO",
 "score": 0,
-"rvol": 4.171753413303115,
-"line": "GAP ۲۱٫۵۳$ ▲۱۴٫۶٪ | حجم ۴٫۲ برابر",
+"rvol": 2.4146360717295527,
+"line": "HZO ۵۲٫۹۵$ ▲۰٫۲٪ | حجم ۲٫۴ برابر",
 "time": "09:50",
-"price": 21.53,
-"chg": 14.58
+"price": 52.95,
+"chg": 0.25
 },
 {
 "code": "surge",
-"ticker": "NAVI",
+"ticker": "SYM",
+"score": 1,
+"rvol": 4.0408772233952766,
+"line": "SYM ۳۷٫۲۵$ ▲۱۹٫۸٪ | حجم ۴٫۰ برابر | فروش ▲۲۱٫۷٪، AI ۲٫۸",
+"time": "09:50",
+"price": 37.25,
+"chg": 19.77
+},
+{
+"code": "surge",
+"ticker": "AEHR",
 "score": 0,
-"rvol": 3.5082335073098188,
-"line": "NAVI ۶٫۵$ ▲۷٫۹٪ | حجم ۳٫۵ برابر",
-"time": "12:50",
-"price": 6.5,
-"chg": 7.93
+"rvol": 2.72559131054794,
+"line": "AEHR ۴۸٫۳۵$ ▲۲۱٫۴٪ | حجم ۲٫۷ برابر | AI ۴٫۲",
+"time": "10:50",
+"price": 48.35,
+"chg": 21.36
+},
+{
+"code": "surge",
+"ticker": "ARM",
+"score": 1,
+"rvol": 2.581208544826083,
+"line": "ARM ۱۷۷٫۶۸$ ▲۱۶٫۷٪ | حجم ۲٫۶ برابر | فروش ▲۲۷٫۱٪، AI ۳٫۸",
+"time": "10:50",
+"price": 177.68,
+"chg": 16.74
+},
+{
+"code": "surge",
+"ticker": "COIN",
+"score": 0,
+"rvol": 2.2199654300856095,
+"line": "COIN ۱۱۰٫۴$ ▲۸٫۳٪ | حجم ۲٫۲ برابر | فروش ▼۱۷٫۳٪، سود ▼۱۲۵٫۲٪",
+"time": "10:50",
+"price": 110.4,
+"chg": 8.27
+},
+{
+"code": "surge",
+"ticker": "CRDO",
+"score": 1,
+"rvol": 2.2480502014380717,
+"line": "CRDO ۱۲۲٫۹۶$ ▲۲۳٫۱٪ | حجم ۲٫۲ برابر | فروش ▲۱۱۴٫۷٪، AI ۷٫۱",
+"time": "10:50",
+"price": 122.96,
+"chg": 23.13
+},
+{
+"code": "surge",
+"ticker": "DIOD",
+"score": 0,
+"rvol": 2.144384115516913,
+"line": "DIOD ۸۲٫۰۶$ ▲۱۲٫۵٪ | حجم ۲٫۱ برابر",
+"time": "10:50",
+"price": 82.06,
+"chg": 12.48
+},
+{
+"code": "surge",
+"ticker": "ESE",
+"score": 0,
+"rvol": 3.5956712828592754,
+"line": "ESE ۲۲۶٫۹۹$ ▲۷٫۸٪ | حجم ۳٫۶ برابر",
+"time": "10:50",
+"price": 226.99,
+"chg": 7.84
+},
+{
+"code": "surge",
+"ticker": "ESTC",
+"score": 0,
+"rvol": 2.459447078232572,
+"line": "ESTC ۸۰٫۲۳$ ▲۷٫۳٪ | حجم ۲٫۵ برابر | فروش ▲۱۷٫۱٪، AI ۴٫۶",
+"time": "10:50",
+"price": 80.23,
+"chg": 7.27
+},
+{
+"code": "surge",
+"ticker": "GLW",
+"score": 1,
+"rvol": 2.31057379347003,
+"line": "GLW ۱۰۹٫۳۲$ ▲۱۵٫۸٪ | حجم ۲٫۳ برابر | فروش ▲۱۶٫۶٪، سود ▲۱۹٫۲٪",
+"time": "10:50",
+"price": 109.32,
+"chg": 15.83
+},
+{
+"code": "surge",
+"ticker": "IREN",
+"score": 0,
+"rvol": 4.02026174344615,
+"line": "IREN ۱۵٫۳۴$ ▲۲۹٫۷٪ | حجم ۴٫۰ برابر | فروش ▼۵٫۰٪، AI ۳٫۱",
+"time": "10:50",
+"price": 15.34,
+"chg": 29.74
+},
+{
+"code": "surge",
+"ticker": "LITE",
+"score": 1,
+"rvol": 2.0722907363416723,
+"line": "LITE ۵۵۴٫۷۲$ ▲۲۰٫۴٪ | حجم ۲٫۱ برابر | فروش ▲۱۰۹٫۳٪، سود ▼۳۴۵۷٫۶٪، AI ۶٫۸",
+"time": "10:50",
+"price": 554.72,
+"chg": 20.45
+},
+{
+"code": "surge",
+"ticker": "NVTS",
+"score": 1,
+"rvol": 2.491043698611897,
+"line": "NVTS ۷٫۵۵$ ▲۲۴٫۲٪ | حجم ۲٫۵ برابر | فروش ▲۳۸٫۴٪",
+"time": "10:50",
+"price": 7.55,
+"chg": 24.18
+},
+{
+"code": "surge",
+"ticker": "RGTI",
+"score": 0,
+"rvol": 2.027711331624718,
+"line": "RGTI ۸٫۳۵$ ▲۱۶٫۶٪ | حجم ۲٫۰ برابر | فروش ▼۲۷٫۵٪",
+"time": "10:50",
+"price": 8.35,
+"chg": 16.62
+},
+{
+"code": "surge",
+"ticker": "TSLA",
+"score": 1,
+"rvol": 2.458703052617345,
+"line": "TSLA ۳۸۹٫۶۳$ ▲۱۲٫۷٪ | حجم ۲٫۵ برابر | فروش ▲۲۵٫۵٪، سود ▼۴٫۹٪، AI ۱٫۰",
+"time": "10:50",
+"price": 389.63,
+"chg": 12.67
 }
 ]
 }
