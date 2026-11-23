@@ -36,6 +36,7 @@ date = dt.date.today().isoformat()
 
 out = []
 rows = []
+verdicts = {}
 for t in tickers:
     try:
         ta = TradingAgentsGraph(debug=False, config=cfg)
@@ -43,9 +44,18 @@ for t in tickers:
         txt = str(state.get('final_trade_decision', ''))[:900]
         out.append(f"📌 {t}: {rating}\n{txt}")
         rows.append((date, t, rating, price_of.get(t) if not tick_in else ''))
+        verdicts[t] = {'date': date, 'rating': str(rating), 'summary': txt[:400]}
     except Exception as e:
         out.append(f"📌 {t}: ❌ خطا ({type(e).__name__}: {str(e)[:150]})")
     print(out[-1][:300], flush=True)
+
+if os.getenv('TA_LOG') == '1' and verdicts:
+    # آخرین نظر هر سهم؛ گزارش «احتمال رشد» آن را کنار سیگنال همان سهم نشان می‌دهد
+    RJ = 'data/ta_review/ratings.json'
+    os.makedirs('data/ta_review', exist_ok=True)
+    allv = json.load(open(RJ, encoding='utf-8')) if os.path.exists(RJ) else {}
+    allv.update(verdicts)
+    json.dump(allv, open(RJ, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 if os.getenv('TA_LOG') == '1' and rows:
     import csv

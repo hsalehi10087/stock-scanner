@@ -34,7 +34,7 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           TELEGRAM_CHAT_ID: none
           TA_LOG: '1'
-          TA_MAX: '3'
+          TA_MAX: '8'
           TRADINGAGENTS_LLM_MAX_RETRIES: '6'
           TRADINGAGENTS_OUTPUT_LANGUAGE: Persian
           TRADINGAGENTS_MAX_DEBATE_ROUNDS: '1'

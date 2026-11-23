@@ -40,6 +40,9 @@ def entry_lines(i, s):
     if ps is not None and ps >= 2:
         out.insert(3, f"   📈 سود خالص {fa(ps)} فصل پیاپی بالا رفته" + (
             ' (فصل قبل‌تر هم افزایش داشته ✅)' if s.get('profit_more') else '') + f" ({s.get('profit_basis') or ''})")
+    ta = s.get('ta')
+    if ta:
+        out.append(f"   🤖 TradingAgents ({fa(ta['date'][5:].replace('-', '/'))}): {e(ta['rating'])} — فقط نظر مدل، تأییدشده نیست")
     if s.get('chart'):
         out.append(f"   🗺 نمودار بلندمدت: {e(s['chart'])} (امتیاز {fa(s.get('chart_score', 0))})")
     return out
@@ -56,6 +59,16 @@ def main():
             except Exception:
                 sg['iv'] = None
     IV.save()
+    try:   # نظر چندعاملی TradingAgents (اگر در ۱۴ روز اخیر برای سهم آمریکایی ثبت شده باشد)
+        import datetime as dt
+        tav = json.load(open(os.path.join(ROOT, 'data', 'ta_review', 'ratings.json'), encoding='utf-8'))
+        cut = (dt.date.today() - dt.timedelta(days=14)).isoformat()
+        for sg in today['markets'].get('us', {}).get('signals', []):
+            v = tav.get(sg['ticker'])
+            if v and v['date'] >= cut:
+                sg['ta'] = v
+    except Exception:
+        pass
     total = sum(len(v['signals']) for v in today['markets'].values())
     scored = sum(v['scored'] for v in today['markets'].values())
     L = [f"<b>📈 احتمال رشد تکنیکال و بنیادی</b> — {fa(today['date'].replace('-', '/'))}",
