@@ -1,0 +1,12 @@
+id: a5e54cf4c0-etf-trend-vol-target-dual-momentum
+name: ETF trend vol target and dual momentum
+name_fa: سبد ۱۱ ای‌تی‌اف با روند و هدف‌گذاری نوسان / مومنتوم دوگانه
+source: github/algorithmic-trading
+source_url: https://github.com/BichengWang/financial-agent
+claim: "«بک‌تست کامل ۲۰۰۶-۰۲-۰۶ تا ۲۰۲۶-۱۰-۱۲ با پارامترهای پیش‌فرض: Trend vol target رشد سالانه 5.625%، شارپ خالص 0.740، بیشترین افت 16.533%؛ Dual momentum رشد سالانه 11.100%، شارپ خالص 0.754، بیشترین افت 26.397%؛ (SPY نگه‌داشتن: 11.122%، شارپ 0.652، افت 54.299%)»"
+claimed_return: "11.1% CAGR (dual momentum), Sharpe 0.74 (trend vol target)"
+added: '2026-11-23'
+status: not_testable
+asset_class: etf
+symbols: [SPY, QQQ, IWM, EFA, EEM, TLT, IEF, LQD, GLD, DBC, VNQ]
+reason_not_testable: "سبد چنددارایی با وزن‌دهی بر اساس نوسان (target_vol=0.12، max_weight=0.25) و بازتنظیم هفتگی است؛ قانون دقیق روند و مومنتوم در README نیامده و موتور فقط قانون تک‌نماد را می‌آزماید"
