@@ -679,6 +679,23 @@
 "profit": true
 }
 },
+"HYPD": {
+"count": 1,
+"events": [
+"CY2026Q3"
+],
+"first_date": "2026-11-23",
+"first_price": 2.08,
+"last_date": "2026-11-23",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "IMAX": {
 "count": 1,
 "events": [
