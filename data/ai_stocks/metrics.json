@@ -1,9 +1,9 @@
 {
- "date": "2026-11-22",
- "built_at": "2026-11-22T01:27:25+00:00",
+ "date": "2026-11-23",
+ "built_at": "2026-11-23T01:51:28+00:00",
  "count": 77,
  "from_news": [
-  "NVDA"
+  "AAPL"
  ],
  "rules": {
   "max_cap_b": 20,
@@ -579,7 +579,7 @@
    "analyst_target": 371.9185,
    "analyst_upside_pct": 98.7,
    "analysts": 25,
-   "recommendation": "buy",
+   "recommendation": "strong_buy",
    "next_earnings": "2027-02-03",
    "data_flags": [],
    "suspect": false,
@@ -1237,8 +1237,8 @@
    "ret_6m_pct": -77.1,
    "ret_12m_pct": -73.5,
    "from_52w_high_pct": -84.9,
-   "analyst_target": 9.891378,
-   "analyst_upside_pct": 353.7,
+   "analyst_target": 9.874482,
+   "analyst_upside_pct": 353.0,
    "analysts": 15,
    "recommendation": "strong_buy",
    "next_earnings": "2026-11-23",
@@ -1477,7 +1477,7 @@
    "name": "MongoDB, Inc.",
    "segment": "software/data",
    "price": 285.9,
-   "market_cap_b": 23.03,
+   "market_cap_b": 23.0,
    "revenue_ttm_b": 2.783,
    "revenue_growth_pct": 30.5,
    "gross_margin_pct": 72.7,
@@ -2178,7 +2178,7 @@
    "operating_margin_pct": -185.0,
    "cash_b": 1.08,
    "debt_b": 0.02,
-   "fcf_b": -0.188,
+   "fcf_b": -0.212,
    "ps_ratio": 10.0,
    "ret_6m_pct": -62.9,
    "ret_12m_pct": -70.9,
@@ -2448,13 +2448,13 @@
    "eligible": false,
    "eligible_new": false,
    "cash_covers_burn": false,
-   "quality_score": 2,
+   "quality_score": 0,
    "quality_flags": {
-    "growth": true,
+    "growth": false,
     "cash": false,
     "profit": false,
     "momentum": false,
-    "analysts": true
+    "analysts": false
    }
   },
   "ARBE": {
@@ -2516,7 +2516,7 @@
    "analyst_upside_pct": 221.7,
    "analysts": 4,
    "recommendation": "strong_buy",
-   "next_earnings": null,
+   "next_earnings": "2027-03-03",
    "data_flags": [
     "growth_from_tiny_base",
     "revenue_tiny"
@@ -2840,40 +2840,40 @@
     "analysts": true
    }
   },
-  "NVDA": {
-   "name": "NVIDIA Corporation",
+  "AAPL": {
+   "name": "Apple Inc.",
    "segment": "from-news",
-   "price": 125.53,
-   "market_cap_b": 3031.17,
-   "revenue_ttm_b": 361.808,
-   "revenue_growth_pct": 103.2,
-   "gross_margin_pct": 74.9,
-   "operating_margin_pct": 66.1,
-   "cash_b": 97.73,
-   "debt_b": 38.15,
-   "fcf_b": 99.241,
-   "ps_ratio": 8.4,
-   "ret_6m_pct": -41.6,
-   "ret_12m_pct": -30.3,
-   "from_52w_high_pct": -48.4,
-   "analyst_target": 244.18286,
-   "analyst_upside_pct": 94.5,
-   "analysts": 56,
+   "price": 342.56,
+   "market_cap_b": 4978.14,
+   "revenue_ttm_b": 478.834,
+   "revenue_growth_pct": 11.7,
+   "gross_margin_pct": 48.8,
+   "operating_margin_pct": 33.0,
+   "cash_b": 56.72,
+   "debt_b": 94.48,
+   "fcf_b": 105.658,
+   "ps_ratio": 10.4,
+   "ret_6m_pct": 11.1,
+   "ret_12m_pct": 29.1,
+   "from_52w_high_pct": -5.1,
+   "analyst_target": 345.6313,
+   "analyst_upside_pct": 0.9,
+   "analysts": 39,
    "recommendation": "buy",
-   "next_earnings": "2027-02-23",
+   "next_earnings": "2027-01-28",
    "data_flags": [],
    "suspect": false,
-   "quant_score": 5.81,
+   "quant_score": 1.11,
    "eligible": false,
    "eligible_new": false,
    "cash_covers_burn": true,
-   "quality_score": 3,
+   "quality_score": 2,
    "quality_flags": {
-    "growth": true,
-    "cash": false,
+    "growth": false,
+    "cash": true,
     "profit": true,
     "momentum": false,
-    "analysts": true
+    "analysts": false
    }
   }
  }
