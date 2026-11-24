@@ -10,12 +10,6 @@
      "chg": -24.94
     },
     {
-     "ticker": "RTSN",
-     "name": "Retension Pharmaceuticals, Inc. - Common Stock",
-     "price": 10.51,
-     "chg": -19.22
-    },
-    {
      "ticker": "SIND",
      "name": "Sinda Ltd. Common Stock",
      "price": 9.09,
@@ -146,6 +140,18 @@
      "name": "Almonty Industries Inc. - Common Shares",
      "price": 6.39,
      "chg": -15.48
+    },
+    {
+     "ticker": "AOSL",
+     "name": "Alpha and Omega Semiconductor Limited - Common Shares",
+     "price": 21.28,
+     "chg": -15.32
+    },
+    {
+     "ticker": "BE",
+     "name": "Bloom Energy Corporation Class A Common Stock",
+     "price": 142.39,
+     "chg": -15.3
     }
    ]
   }

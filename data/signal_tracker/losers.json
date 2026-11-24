@@ -135,6 +135,23 @@
 "profit": true
 }
 },
+"AOSL": {
+"count": 1,
+"events": [
+"2026-11-20"
+],
+"first_date": "2026-11-20",
+"first_price": 21.28,
+"last_date": "2026-11-20",
+"qs": 1,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "APLD": {
 "count": 1,
 "events": [
@@ -165,6 +182,23 @@
 "analysts": true,
 "cash": true,
 "growth": false,
+"momentum": false,
+"profit": true
+}
+},
+"BE": {
+"count": 1,
+"events": [
+"2026-11-20"
+],
+"first_date": "2026-11-20",
+"first_price": 142.39,
+"last_date": "2026-11-20",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
 "momentum": false,
 "profit": true
 }
