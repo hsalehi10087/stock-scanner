@@ -34,7 +34,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install packages
-        run: pip install -q pandas numpy requests yfinance
+        run: pip install -q pandas numpy requests yfinance matplotlib
       - name: Scan and alert
         env:
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
