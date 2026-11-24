@@ -1,5 +1,5 @@
 {
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "markets": {
   "us": {
    "signals": [
@@ -196,6 +196,14 @@
      "decline_streak": 1
     },
     {
+     "ticker": "SOAR",
+     "name": "SOAR AI, Inc.",
+     "price": 0.16500000655651093,
+     "growth": -564.35,
+     "period": "CY2026Q3",
+     "decline_streak": 1
+    },
+    {
      "ticker": "AIRT",
      "name": "AIR T INC",
      "price": 21.43000030517578,
@@ -342,7 +350,7 @@
     {
      "ticker": "HKHC",
      "name": "Horizon Kinetics Holding Corp",
-     "price": 18.0,
+     "price": 18.25,
      "growth": -353.63,
      "period": "CY2026Q3",
      "decline_streak": 1
@@ -464,14 +472,6 @@
      "name": "INCYTE CORP",
      "price": 114.62999725341797,
      "growth": -285.02,
-     "period": "CY2026Q3",
-     "decline_streak": 1
-    },
-    {
-     "ticker": "IVR",
-     "name": "Invesco Mortgage Capital Inc.",
-     "price": 5.380000114440918,
-     "growth": -278.86,
      "period": "CY2026Q3",
      "decline_streak": 1
     }

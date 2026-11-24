@@ -3968,6 +3968,23 @@
 "first_price": 1.59,
 "last_date": "2026-11-19"
 },
+"SOAR": {
+"count": 1,
+"events": [
+"CY2026Q3"
+],
+"first_date": "2026-11-24",
+"first_price": 0.165,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "SOLV": {
 "count": 1,
 "events": [
