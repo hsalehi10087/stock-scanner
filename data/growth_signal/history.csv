@@ -237,3 +237,10 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-21,us,TPC,Tutor Perini Corporation,87.02,689.81,trend|pullback,صورت مالی|کیفیت رشد|سود پیاپی (SEC),4,0.68,سقف دوقلو (هشدار),0.5
 2026-11-21,us,BTSG,BrightSpring Health Services,62.84,689.81,trend|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.658,سرووشانه معکوس,2.0
 2026-11-21,in,TANLA.NS,Tanla Platforms Ltd.,660.6,25800.5996,trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.822,کف دوقلو (شکست خط گردن),2.5
+2026-11-24,us,CNO,CNO Financial Group,55.83,714.6792,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),4,0.293,مثلث صعودی,2.0
+2026-11-24,us,CSX,CSX Corporation,49.485,714.6792,trend|pullback|longpat,بافت|کیفیت رشد|سود پیاپی (SEC),5,0.274,مثلث صعودی,2.0
+2026-11-24,in,COFORGE.NS,Coforge Ltd.,2142.3,25349.6504,breakout|trend|longpat,صورت مالی|کن‌اسلیم|کیفیت رشد,5,0.301,شکست سقف ۵۲ هفته,1.7
+2026-11-24,in,DCBBANK.NS,DCB Bank Ltd.,237.93,25349.6504,trend|longpat,کیفیت رشد|سود پیاپی,4,0.636,شکست سقف ۵۲ هفته,1.7
+2026-11-24,in,MAHABANK.NS,Bank of Maharashtra,97.56,25349.6504,trend|longpat,کن‌اسلیم|کیفیت رشد,4,0.602,کف دوقلو (شکست خط گردن),2.5
+2026-11-24,in,ARVIND.NS,Arvind Ltd.,537.7,25349.6504,trend|pullback,صورت مالی|کیفیت رشد,4,0.508,روند صعودی,1.0
+2026-11-24,tw,2597.TW,RUENTEX ENGINEERING & CONST. CO,192.0,56.7,breakout|trend|longpat,صورت مالی|بافت|سود پیاپی,2,0.081,شکست سقف ۵۲ هفته,1.7
