@@ -1,0 +1,6 @@
+ticker,name,price_chg,ni_growth,ni_cur_m_twd,ni_prev_m_twd,date,qs,qs_known,qs_label,qs_flags
+3044.TW,健鼎,11.073059360730596,112.41787400276482,6273.849,2953.541,2026-11-24,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+7788.TW,松川精密,29.761904761904766,103.22574835200462,225.67,111.044,2026-11-24,2,5,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+3665.TW,貿聯-KY,11.347517730496449,63.32532809981524,4293.328,2628.697,2026-11-24,3,5,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+6782.TW,視陽,10.65420560747663,55.61815336463224,397.76,255.6,2026-11-24,4,5,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+3023.TW,信邦,11.380597014925375,19.018849431144506,903.434,759.068,2026-11-24,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
