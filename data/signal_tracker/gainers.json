@@ -135,6 +135,23 @@
 "profit": false
 }
 },
+"AEF": {
+"count": 1,
+"events": [
+"2026-11-20"
+],
+"first_date": "2026-11-20",
+"first_price": 7.43,
+"last_date": "2026-11-20",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": null,
+"momentum": false,
+"profit": null
+}
+},
 "AEMD": {
 "count": 1,
 "events": [

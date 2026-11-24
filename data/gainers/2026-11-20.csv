@@ -1,6 +1,5 @@
 ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
-MACI,Melar Acquisition Corp. I - Class A Ordinary Shares,13.300000190734863,62.19512804996974,414300.0,2026-11-20,0,3,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
-FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",44.040000915527344,19.059202263201303,674400.0,2026-11-20,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
-VXX,iPath Series B S&P 500 VIX Short-Term Futures ETN,27.309999465942383,14.603439166503861,54161200.0,2026-11-20,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
-AEMD,"Aethlon Medical, Inc. - Common Stock",5.460000038146973,12.809914587039328,211800.0,2026-11-20,1,5,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
-GAP,"Gap, Inc. (The) Common Stock",20.940000534057617,11.442253931736612,28018800.0,2026-11-20,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",44.040000915527344,19.059202263201303,485715.0,2026-11-20,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+VXX,iPath Series B S&P 500 VIX Short-Term Futures ETN,27.309999465942383,14.603439166503861,25999615.0,2026-11-20,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+GAP,"Gap, Inc. (The) Common Stock",20.940000534057617,11.442253931736612,12227150.0,2026-11-20,2,5,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+AEF,"abrdn Emerging Markets ex-China Fund, Inc. Common Stock",7.429999828338623,11.061281984885607,253269.0,2026-11-23,1,2,⭐۱/۵ (۳ نامعلوم),"{'growth': None, 'cash': True, 'profit': None, 'momentum': False, 'analysts': None}"
