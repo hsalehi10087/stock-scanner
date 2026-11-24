@@ -1,0 +1,12 @@
+id: e3c9b01808-txd-taiex-ma-spine-move-lev
+name: TXD TAIEX MA spine with MOVE leverage
+name_fa: زمان‌بندی آتی شاخص تایوان با سه میانگین و اهرم بر پایه‌ی MOVE
+source: github/trading-strategy
+source_url: https://github.com/jonatw/finlab-txd
+claim: "«spine: نسبت بالای MA60/120/200 بودن شاخص وزنی (^TWII) (0 / .33 / .67 / 1)؛ lev: اگر MOVE زیر میانه‌ی ۲۵۲ روزه‌ی خودش باشد ۲ برابر، وگرنه ۱ برابر؛ خاموشی DTP: اگر صدک ۲۵۰ روزه‌ی ATR(14)% دیروز در ۴٪ بالا باشد، امروز بدون موقعیت. ورود T+1، هزینه 2bps هر طرف. بک‌تست (از 2016-11) شارپ ~1.40 / بیشترین افت −20%، انتظار صادقانه‌ی زنده ~1.35»"
+claimed_return: "Sharpe ~1.40, MDD -20%"
+added: '2026-11-24'
+status: not_testable
+asset_class: etf
+symbols: ['^TWII']
+reason_not_testable: "اندازه‌ی موقعیت کسری است (۰، ⅓، ⅔، ۱ و تا ۲ برابر اهرم) و به داده‌ی شاخص دیگری (MOVE) و صدک ۲۵۰ روزه‌ی ATR نیاز دارد؛ موتور فقط ورود/خروج کامل روی یک نماد را می‌آزماید"
