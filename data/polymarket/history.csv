@@ -1,1 +1,2 @@
 date,id,event_slug,ticker,yahoo,kind,question,prob,target,price,end,volume,above_already,resolved,correct
+2026-11-24,6436445,nvda-above-in-november-2026,NVDA,NVDA,above,Will NVIDIA (NVDA) close above $150 end of November?,0.865,150.0,125.53,2026-11-30,11490,0,,
