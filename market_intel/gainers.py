@@ -23,6 +23,7 @@ HIST_DIR = os.path.join(ROOT, 'data', 'gainers')
 THRESHOLD = 10.0
 MIN_PRICE = 5.0  # زیر این قیمت نویز سهام پِنی/پامپ‌ودامپ زیاد است
 MIN_VOLUME = 100_000
+FILTER_DATE = '2026-11-13'  # از این تاریخ فیلتر قیمت/حجم/کیفیت فعال است؛ سیگنال‌های قدیمی‌تر در آمار خلاصه نمی‌آیند
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; gainers-scan/1.0)'}
 
 
@@ -152,9 +153,17 @@ def main():
     for r in rows:
         r['count'] = trk.get(r['ticker'], {}).get('count', 1)
         r['ret'] = trk.get(r['ticker'], {}).get('ret', 0.0)
-    since = min((v['first_date'] for v in state.values()), default=date)
-    track_msg = T.summary_text('رشد قیمت بیش از ۱۰٪', list(trk.values()), since, 'بار')
+    # آمار خلاصه فقط برای سیگنال‌های بعد از فعال‌شدن فیلتر (سیگنال‌های قدیمی در فایل می‌مانند ولی آمار را آلوده نمی‌کنند)
+    cur = [x for x in trk.values() if x['first_date'] >= FILTER_DATE]
+    since = min((x['first_date'] for x in cur), default=FILTER_DATE)
+    track_msg = T.summary_text('رشد قیمت بیش از ۱۰٪', cur, since, 'بار')
     track_msg = '\n'.join([Q.best_line(rows), Q.LEGEND, '', track_msg]) if rows else track_msg
+
+    try:   # ثبت بازده T+1/T+5/T+10 برای همه‌ی سیگنال‌ها (فقط ذخیره در data/gainers_forward؛ ارسالی ندارد)
+        import gainers_forward as GF
+        GF.update()
+    except Exception as e:
+        print(f'⚠️ gainers_forward: {e}', file=sys.stderr)
 
     head = [f'<b>🚀 سهام آمریکا با رشد بیش از ۱۰٪</b> — {date}',
             f'<i>{len(rows)} سهم از {checked} سهم بررسی‌شده</i>']
