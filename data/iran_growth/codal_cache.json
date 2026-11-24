@@ -990,7 +990,7 @@
   "consolidated": true,
   "audited": false,
   "none": "no_table",
-  "fetched": "2026-11-17"
+  "fetched": "2026-11-24"
  },
  "سبهان": {
   "period": "1405/06/31",
@@ -2393,5 +2393,35 @@
   "rev_prev": 22770982,
   "rev_growth": 76.6,
   "fetched": "2026-11-23"
+ },
+ "فاما": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی شده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": true,
+  "np_cur": 10853726,
+  "np_prev": 2238449,
+  "codal_pct": "۳۸۵",
+  "np_growth": 384.9,
+  "verified": true,
+  "rev_cur": 26955268,
+  "rev_prev": 12596355,
+  "rev_growth": 114,
+  "fetched": "2026-11-24"
+ },
+ "شفارس": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی شده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": true,
+  "np_cur": 1275396,
+  "np_prev": 626430,
+  "codal_pct": "۱۰۴",
+  "np_growth": 103.6,
+  "verified": true,
+  "rev_cur": 19758637,
+  "rev_prev": 8599950,
+  "rev_growth": 129.8,
+  "fetched": "2026-11-24"
  }
 }
