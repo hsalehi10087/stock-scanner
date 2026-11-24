@@ -1,13 +1,17 @@
 {
- "date": "2026-11-23",
- "new": 68,
+ "date": "2026-11-24",
+ "new": 24,
  "log": [
-  "Congress CapitolTrades: 33 rows",
+  "Congress CapitolTrades: 0 rows",
+  "Congress S3 representative: HTTPError 403 Client Error: Forbidden for url: https://house-stock-wat",
+  "Congress S3 senator: HTTPError 403 Client Error: Forbidden for url: https://senate-stock-wa",
+  "Congress Finnhub probe: 403 {\"error\":\"You don't have access to this resource.\"}",
   "13F: 161 events",
-  "ARK: 60 events",
-  "Congress: 29 events from 33 rows",
-  "House PTR: 0 new reports, 0 stock events",
-  "Insiders: 38 events",
-  "new events: 68 (total sources: 13F/ARK/Congress/Insiders)"
+  "ARK: 1 events",
+  "Congress: 0 events from 0 rows",
+  "House PTR 20036848: PtrError HTTP 404 for https://disclosures-clerk.house.gov/public_disc",
+  "House PTR: 4 new reports, 14 stock events",
+  "Insiders: 35 events",
+  "new events: 24 (total sources: 13F/ARK/Congress/Insiders)"
  ]
 }
