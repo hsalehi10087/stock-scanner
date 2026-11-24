@@ -1,0 +1,45 @@
+name: 📊 Momentum chart (3-month returns + leader alert)
+
+on:
+  schedule:
+    - cron: '45 2 * * *'   # حدود ۰۶:۱۵ تهران، بعد از گزارش صبحگاهی
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'شناسه چت(ها) با کاما (خالی = secret؛ none = بدون ارسال)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: momentum-chart
+  cancel-in-progress: false
+
+jobs:
+  chart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yfinance pandas numpy matplotlib arabic-reshaper python-bidi requests
+      - name: Build chart and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ (github.event.inputs.chat_id == 'none' && '') || github.event.inputs.chat_id || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "::add-mask::$TELEGRAM_BOT_TOKEN"
+          python3 market_intel/momentum_chart.py
+      - name: Save chart and history
+        if: always()
+        run: |
+          git config user.email noreply@anthropic.com
+          git config user.name Claude
+          git add -f data/momentum
+          git diff --cached --quiet && exit 0
+          git commit -m "📊 momentum chart $(date -u +%F)" -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; done
