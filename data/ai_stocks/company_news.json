@@ -1,9 +1,10 @@
 {
- "date": "2026-11-24",
- "built_at": "2026-11-24T05:24:03+00:00",
+ "date": "2026-11-25",
+ "built_at": "2026-11-25T04:21:21+00:00",
  "tickers": [
   "AAOI",
   "APLD",
+  "CRDO",
   "FN",
   "INOD",
   "IONQ",
@@ -22,6 +23,55 @@
  "news": {
   "AAOI": [
    {
+    "headline": "AAOI vs. Lumentum: Which Optical Networking Stock Has an Edge Now?",
+    "summary": "Applied Optoelectronics benefits from strong AI-driven transceiver demand, but LITE has an edge with superior stock performance, improving profitability, and rising earnings estimates.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=20563bb5f1fb7a15079c8dc5b3f48f1db2d79d2e59b9be8fc4c3aedf337d838f",
+    "published": "2026-11-24T16:36:00+00:00"
+   },
+   {
+    "headline": "Applied Optoelectronics Climbs 5% on $2.2 Billion Hyperscaler Supply Deal; Lumentum and Coherent Drop 6%",
+    "summary": "While AI stocks sell off, one small optical player is rallying on a massive four-year contract from a mystery buyer. But a thin profit, heavy dilution, and a stalled factory expansion raise a harder question about whether it can deliver.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=279feed7f8e83c0bab8dca5730281447f596e24431227f8e50ac870e7ae96808",
+    "published": "2026-11-24T14:58:24+00:00"
+   },
+   {
+    "headline": "Applied Optoelectronics stock rises on datacenter deal",
+    "summary": "Investing.com -- Applied Optoelectronics (NASDAQ:AAOI) shares rose 2.6% Tuesday despite a 2% decline in the Nasdaq, following the company’s announcement of a multi-year long-term agreement with a Tier-1 hyperscale datacenter customer.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=06c60c675e55ea4a43b4151a09d624fe2ecc117171efab0de520dbb70d9f02ed",
+    "published": "2026-11-24T14:44:09+00:00"
+   },
+   {
+    "headline": "Wall Street May Not Be Ready for What’s Coming Next for This Little-Known AI Stock",
+    "summary": "A small optics maker just beat earnings estimates, landed a huge AI supply deal, and watched its stock crater anyway. The market now values it at less than its bank balance, and the reason may be hiding in the production calendar.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=005d35ce55962582701abd63406841e586ca4df8706a772402155569b61ec831",
+    "published": "2026-11-24T14:04:04+00:00"
+   },
+   {
+    "headline": "AOI Announces Multi-Year Long-Term Agreement with Tier-1 Hyperscale Datacenter Customer",
+    "summary": "AOI (NASDAQ: AAOI), a leading provider of advanced optical and HFC networking products that power AI, today announced it has signed a multiyear long-term agreement (LTA) with an existing Tier-1 hyperscale datacenter customer.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=27e37b0fa057b577c7b48e95a6f20c9f6f70fe748b622e2c1b0dc736278f02da",
+    "published": "2026-11-24T12:00:00+00:00"
+   },
+   {
+    "headline": "AOI Enters Multi-Year Long-Term Agreement With An Existing Hyperscale Datacenter Customer To Supply 800G Transceiver Products And Laser Diodes",
+    "summary": "AOI (NASDAQ:AAOI), a leading provider of advanced optical and HFC networking products that power AI, today announced it has signed a multiyear long-term agreement (LTA) with an existing Tier-1 hyperscale datacenter",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=76d6ad8393f8ced8f11df7dab546bac711a8c461f6ad9200e8419d1b27ca5a95",
+    "published": "2026-11-24T08:02:31+00:00"
+   },
+   {
+    "headline": "Applied Optoelectronics: The Market Got This Wrong",
+    "summary": "Applied Optoelectronics (AAOI) stock is a strong buy as 9.8x projected 2027 earnings and $400M-$450M in 1.6T orders could drive upside.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=68109c9a59586411a845b041012b3220f559e192964da05bbdf92c61e9e798b2",
+    "published": "2026-11-24T05:07:21+00:00"
+   },
+   {
     "headline": "Applied Optoelectronics and Lumentum Soar 22% as Jensen Huang’s Return to NVIDIA Sparks AI Optics Rebound; Coherent Jumps 19%",
     "summary": "One boardroom announcement sent three AI optics suppliers surging after a brutal month of selling. Behind the rally sit a pending stock sale, an open investigation, and a question about which of these names can keep the momentum.",
     "source": "Yahoo",
@@ -29,14 +79,84 @@
     "published": "2026-11-23T15:57:07+00:00"
    },
    {
-    "headline": "3 AI Infrastructure Stocks With Up To 68% Revenue Growth",
-    "summary": "Wall Street just reminded everyone that AI stocks can fall hard, with a sharp sell-off that pulled the Dow and S&P 500 into correction territory after a steep drop in artificial intelligence favorites. When headline AI companies stumble, attention often shifts to the quieter plumbing behind them: the routers, switches and servers that keep AI running. This article walks through three hardware-focused AI networking and server stocks from the screener that may be worth a closer look. The stocks...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=07388f6b892b3dc6f8d384ce25319df199dca1337ae4b45595c22fc729fcdf49",
-    "published": "2026-11-21T08:13:41+00:00"
+    "headline": "Nvidia, Micron, Arm Holdings, Kymera Therapeutics And Other Big Stocks Moving Higher On Monday",
+    "summary": "Nasdaq surged over 6% as NVIDIA jumped 28.8% after Jensen Huang returned as CEO, while AI and semiconductor stocks rallied broadly.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=dba59853f2c293d87ab8aaae74cd1af72d44ffea058988f5e142bcb814ede9e2",
+    "published": "2026-11-23T11:08:38+00:00"
    }
   ],
   "APLD": [
+   {
+    "headline": "Applied Digital Is Down 33% in a Month. What Will It Take to Get APLD Stock Back to $20?",
+    "summary": "A multibillion-dollar hyperscaler lease should have been a triumph for Applied Digital, yet the market shrugged and sold anyway. Bulls and bears disagree sharply on what happens next, and the answer hinges on debt, tenants, and one looming earnings test.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=5575b7062cb720306a888945e41384e499610eb40246f6da059299758707a444",
+    "published": "2026-11-24T20:02:46+00:00"
+   },
+   {
+    "headline": "Can Applied Digital Stock Double From Here?",
+    "summary": "For questions about this article or underlying research, email help@trefis.com.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=0bf8e77ae308e0168ccfbc5939a49017f67fb63c802d9e42d84974ade823effc",
+    "published": "2026-11-24T17:56:49+00:00"
+   },
+   {
+    "headline": "Why Is Applied Digital Stock Going Up?",
+    "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a226f92b458158e5bee958ff6df9e785a8570b99ea78b51d9c048bdf33ba52e2",
+    "published": "2026-11-24T15:45:48+00:00"
+   },
+   {
+    "headline": "Needham keeps Applied Digital at Buy with $70 target after 150 MW lease at $2.0 million per MW",
+    "summary": "Applied Digital's new 18-year hyperscaler lease pays about 20% more per MW than its earlier deals, Needham said. Management also told the firm it has more than 1 GW of…",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=db297405066b00121366d67a334162642f2bf8500134e96fecf530864ad737e2",
+    "published": "2026-11-24T15:29:35+00:00"
+   },
+   {
+    "headline": "JonesTrading reiterates Applied Digital Buy, $70 target after 18-year, $5.4 billion hyperscaler lease",
+    "summary": "Applied Digital's fourth customer pays $2.00 million per MW per year on an 18-year base term, above earlier deals. Jones left estimates unchanged because the lease energizes in 2H28.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=31a7a7aa34364382117263ac84f4ebaa549b995799e9553190ca3378c385752b",
+    "published": "2026-11-24T15:12:38+00:00"
+   },
+   {
+    "headline": "Applied Digital Achieves Initial 25 MW Ready for Service in Harwood, North Dakota, for Hyperscaler, Completes Base-Build Commissioning of First 75 MW",
+    "summary": "On-schedule Polaris Forge 2 milestone establishes the foundation for the next 50 MW of customer deliveries, reinforcing repeatable execution against more than $41 billion in contracted base-term lease revenueDALLAS, Nov. 24, 2026 (GLOBE NEWSWIRE) -- Applied Digital (NASDAQ: APLD), a U.S. based AI data center infrastructure company specializing in the design, development, ownership and operation of large-scale, purpose-built campuses serving hyperscale off-takers under long-term contracts, today",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=7366fd331280d8c3b689d61e56f9c1f2d27a7d46541c7aad1bf7f7cd0f4d1b5a",
+    "published": "2026-11-24T13:00:00+00:00"
+   },
+   {
+    "headline": "I’m Treating Applied Digital Like a Long-Term Call Option on $41B+ in Hyperscaler Leases",
+    "summary": "Applied Digital has fallen more than 70% from its high, yet one investor keeps buying every dip. The reason sits in a gap between the company's market value and what its tenants have signed up to pay, and the risks are not small.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=7bac2beb8b844bc2706b2b4bea2577a0e7a4897324dce842f839f2c3363c66a1",
+    "published": "2026-11-24T12:15:46+00:00"
+   },
+   {
+    "headline": "Applied Digital Completes Base-Build Commissioning For First 75 MW Of Initial 150 MW Data Center Building At Polaris Forge 2 In Harwood, North Dakota",
+    "summary": "On-schedule Polaris Forge 2 milestone establishes the foundation for the next 50 MW of customer deliveries, reinforcing repeatable execution against more than $41 billion in contracted base-term lease revenueDALLAS,",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=ea1c0943669cf5eb24dabd98171c1d47197b6dd2a37f02c30bccb2898a229399",
+    "published": "2026-11-24T09:04:32+00:00"
+   },
+   {
+    "headline": "Applied Digital Jumps on an 18-Year, $5.4 Billion Hyperscaler Lease With Higher Pricing",
+    "summary": "Key TakeawaysApplied Digital signed a 150 MW, 18-year lease with an unnamed investment-grade hyperscaler worth about $5. 4 billion in base-term revenue.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=7e3a6639551a68a7beffd2873ec20d79ef3ab6c07ac5d94dc591c52b8ada14c6",
+    "published": "2026-11-24T06:34:51+00:00"
+   },
+   {
+    "headline": "Dead Cat Bounce? AI Stocks Climb 20%+, but IREN, Applied Digital Stay Down 50%+",
+    "summary": "Is it a dead cat bounce? AI stocks jumped 20%+ on Huang's return, yet IREN and Applied Digital sit down 50%+ in a year.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=af9de0750afbcd335d98e07191c599534c0ec5c5d8db80819b5365b42e95951b",
+    "published": "2026-11-24T03:05:00+00:00"
+   },
    {
     "headline": "Applied Digital Stock Surged 20% on a Hyperscaler Deal. What to Know About Its $41 Billion in Leases",
     "summary": "The data center developer says it now has more than $41 billion in contracted revenue. Its filings show how much of that has actually started and how much it has borrowed to build.",
@@ -71,79 +191,172 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=f1fc543785c11ec7aa6160a5f901f6073f04a923a7193b88dee5e3213cd70123",
     "published": "2026-11-23T17:30:47+00:00"
-   },
+   }
+  ],
+  "CRDO": [
    {
-    "headline": "Bill Ackman Predicts “The Fed Will Put the U.S. and World in Recession” if It Hikes Rates after Thanksgiving",
-    "summary": "Key TakeawaysBill Ackman warned that the Fed will push the U. S.",
+    "headline": "Sandisk Sinks 14% as Memory Stocks Give Back Nvidia’s Huang Rally",
+    "summary": "Key TakeawaysSandisk fell 14% today, giving back most of Monday’s Nvidia rally, and Coherent fell with it. None of the three had news of its own: Nvidia slid on reports of an unconfirmed SEC probe.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5d59bffc67e028b0e88ee22a191f6b7ce253943d5b89135eb63c3c4a0de023cb",
-    "published": "2026-11-23T17:18:56+00:00"
+    "url": "https://finnhub.io/api/news?id=e807449de607bb7c06ec05d29cf2131ca53dea8b14e876b86b171800331f2375",
+    "published": "2026-11-24T15:48:28+00:00"
    },
    {
-    "headline": "Gap Movers: RGTIW Leads Nov. 23, 2026 Gap-Up Stocks, CAPR Tops Gap-Down List",
-    "summary": "Nov. 23, 2026 gap movers: RGTIW led gap-up stocks with a 65.14% session gain, while CAPR led gap-down stocks with a 76.44% decline.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=36f18312cc3e37cbc7573967d3de2998d8aa5fcad5e7e136848e26a8ef2229b2",
-    "published": "2026-11-23T15:30:34+00:00"
-   },
-   {
-    "headline": "CoreWeave, Nebius lead neocloud stocks higher as Jensen Huang's Nvidia return lifts AI trade",
-    "summary": "CoreWeave and Nebius shares soared on Monday as CEO Jensen Huang returned to Nvidia, a major backer of the AI trade.",
+    "headline": "Nvidia Sinks 7% as US Blacklists Customer Megaspeed and Kyle Bass Slams “Calamitous Governance Failure”",
+    "summary": "Key TakeawaysNvidia fell 7% today after the US blacklisted its customer Megaspeed and a Singapore unit of Alibaba, a day after a 31% jump on Jensen Huang’s return. Huang faces a Senate hearing on Dec.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=948de46c42d400fe0d905ff9c0bcb4f10e72aa8583accbfacd64fd638812c92b",
-    "published": "2026-11-23T15:14:17+00:00"
+    "url": "https://finnhub.io/api/news?id=9946312ba28ba3afe6fad6dc82420eb93b0405fa3b5691220e3554290eb09871",
+    "published": "2026-11-24T15:25:51+00:00"
    },
    {
-    "headline": "Applied Digital Soars 26% on $5.4B Hyperscaler Lease; Cipher Digital Jumps 19%, TeraWulf Surges 15%",
-    "summary": "An 18-year lease with a mystery hyperscaler lit up AI data center stocks, but a surprise boardroom reversal at NVIDIA may be doing just as much of the lifting. Can the rebound survive a week of heavy macro data and chip export curbs?",
+    "headline": "MaxLinear Stock Drops 24% in a Month: Should You Buy it on the Dip?",
+    "summary": "MXL's 24.3% monthly slide highlights supply constraints and rising debt, but booming AI demand and strong order visibility make the dip a buying opportunity.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=48c9cfda4f35b557bb14799e008af398442ad180605f2f3326c88a2226031e0f",
-    "published": "2026-11-23T15:02:41+00:00"
+    "url": "https://finnhub.io/api/news?id=c77619bac2caed93357e2b7c8839f9382d24f169b06cbb621863a0e6b994a473",
+    "published": "2026-11-24T12:14:00+00:00"
    },
    {
-    "headline": "PENG vs. APLD: Which AI Infrastructure Stock Is the Better Investment?",
-    "summary": "Penguin beats Applied Digital on profitability and valuation, while its rival grapples with rising debt and losses.",
+    "headline": "Credo's Optical Expansion: Can It Gain Ground Against Rivals?",
+    "summary": "CRDO targets over $600 million in fiscal 2027 optical revenues as AI infrastructure demand, ZeroFlap innovations and expanding customer adoption fuel growth.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5409038fb495653640e350b06555cb5a9848a2a67f265be19bb1604d6e114639",
-    "published": "2026-11-23T15:02:00+00:00"
+    "url": "https://finnhub.io/api/news?id=747f0b9fbdd26a868e00b6dee2408ef9508f1659a0f412b99c35baf768bc2a38",
+    "published": "2026-11-24T12:03:00+00:00"
    },
    {
-    "headline": "Whispers From Texas: AI Infrastructure Hits New Stride",
-    "summary": "Analyst sees AI infrastructure maturing, not collapsing: capital, commitments and power govern progress; 2030 new loads may reach 12â15 GW, perhaps 20 GW.",
+    "headline": "Credo: Buy Ahead Of Q2 Earnings (Earnings Preview)",
+    "summary": "Credo Technology (CRDO) stock is a buy with under 13x forward FY2028 earnings; shares could gain nearly 67% to $203.91 if assumptions hold.",
     "source": "SeekingAlpha",
-    "url": "https://finnhub.io/api/news?id=873009640e9f6b7c9b396317ddf3287c8f7e7d25319e4d96e07501b9fc0e0a0c",
-    "published": "2026-11-23T15:00:59+00:00"
+    "url": "https://finnhub.io/api/news?id=6f4b56ebc42afb303a8cec01f83582b9cceeca61684e4d17f17890152be92889",
+    "published": "2026-11-24T07:23:29+00:00"
    },
    {
-    "headline": "Applied Digital Shares Surge 13% After Securing $5.4 Billion AI Data Centre Lease Agreement",
-    "summary": "Applied Digital (NASDAQ:APLD) shares jumped 13% in Monday morning trading after the company announced a long-term lease agreement worth approximately $5. 4 billion with a tier-one, investment-grade hyperscaler, strengthening its contracted revenue pipeline and expanding its artificial intelligence data centre infrastructure business.",
+    "headline": "Watch these chip stocks for bargain buys after Nvidia’s post-reinstatement rally",
+    "summary": "Investing.com -- Jensen Huang was reinstated as Nvidia CEO on Nov 23, 2026, 11 days after he resigned, sparking a broad-based rally across battered chipmaking and artificial intelligence names on Monday.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=19af03619c75d488ca956ed660ebf7eeb34011f917d1012fbf26fc5ba26d6374",
-    "published": "2026-11-23T14:57:07+00:00"
+    "url": "https://finnhub.io/api/news?id=32d3efd4f8e2b8560c0c5e9fa268869ff25ae9c5ca71aeeae4607e6a01554c12",
+    "published": "2026-11-24T04:02:18+00:00"
    },
    {
-    "headline": "Applied Digital Soars 27% on 18-Year Hyperscaler Lease as Potential Revenue “Nears $100 Billion”",
-    "summary": "Key TakeawaysApplied Digital stock jumped 27% after an 18-year, 150 MW hyperscaler lease lifted contracted base-term revenue above $41 billion. The lease pays more per megawatt than earlier ones and shrinks CoreWeave’s share of the backlog to about a quarter.",
+    "headline": "Credo Technology (CRDO) Just Made a Stunning Comeback",
+    "summary": "Credo Technology Group Holding Ltd. (NASDAQ:CRDO) is one of the 10 Stocks With Eye-Popping Gains. Credo Technology snapped a three-day losing streak on Monday, soaring 22.63 percent to end at $122.46 apiece, as investor sentiment was bolstered by renewed AI optimism, thanks to the reinstatement of Jensen Huang as Nvidia Corp.’s CEO. The stock rallied […]",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=426c8728f253c44d7fa2213f64a943347f407658d70c640a7a7f227d604a8ac2",
-    "published": "2026-11-23T14:33:00+00:00"
+    "url": "https://finnhub.io/api/news?id=51bd7a0f9c00599d84f348e6ea3df7c2d2aa450e7167958dd09520e274416917",
+    "published": "2026-11-24T03:17:59+00:00"
    },
    {
-    "headline": "Applied Digital Signs $5.4B Hyperscaler Lease For 150 MW AI Capacity, Targets First Deliveries In 2028",
-    "summary": "The deal lifts Applied Digital’s total contracted base-term lease revenue above $41 billion, which could approach $100 billion if customers exercise all renewal options.",
+    "headline": "5 Stocks Up 20% Or More on Monday Following NVIDIA CEO Jensen Huang’s Return",
+    "summary": "Eric Bleeker, Chief Investment Officer at 24/7 Wall St., looks at the chip stocks jumping on Monday after Jensen Huang's return to NVIDIA (NASDAQ: NVDA). The Philadelphia Semiconductor Index is up 13% in late trading, but five stocks tied closely to Nvidia's plans are up 20% or more, and Bleeker walks through what they share.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=743481892dba16b32fd8497c470e5c22968b5c0647449a38e16a0de85299dfd1",
-    "published": "2026-11-23T14:09:59+00:00"
+    "url": "https://finnhub.io/api/news?id=000100dd30da31e3afc264e35ec5d55539282168ffa91adcccc08879d1a9763b",
+    "published": "2026-11-23T20:21:35+00:00"
    },
    {
-    "headline": "Applied Digital Stock Gets A Lift From New 18 Year Lease",
-    "summary": "Applied Digital has closed a US$300 million senior secured bridge facility and signed an 18 year, 150 MW lease with a tier one investment grade hyperscaler. This lifts contracted base term lease revenue above US$41b, with potential renewal value near US$100b. The new long duration hyperscaler agreement improves pricing and extends Applied Digital's contracted cash flow runway. This directly intersects with earlier concerns about heavy debt, high interest costs and concentration risk tied to...",
+    "headline": "Credo Technology’s AI rebound potential versus Broadcom",
+    "summary": "Investing.com -- The top rebound candidate is Credo Technology (CRDO). It offers a combination of AI exposure, oversold momentum, operating acceleration, and rebound sensitivity.",
     "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=21db72ebe960e68bf8f56f470c53d8ecf0d8166c672505d1d0d436175daa0be0",
-    "published": "2026-11-23T14:08:24+00:00"
+    "url": "https://finnhub.io/api/news?id=a2962f6fcf41c029c4fb058007c886eb80287113455eb7c4fd521db39989157d",
+    "published": "2026-11-23T18:58:17+00:00"
+   },
+   {
+    "headline": "Broadcom Stock Rises After Jensen Huang's Reinstatement to Nvidia's Board",
+    "summary": "Broadcom is rising Monday with other fabless semiconductor stocks after Nvidia reinstated Jensen Huang, bolstering AI spending optimism.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=8a92a0ac4a88f64491bf5cf8674d65b533fedb30f5cab353466ff03b413e9d15",
+    "published": "2026-11-23T13:32:10+00:00"
+   },
+   {
+    "headline": "Marvell Stock Soars After Jensen Huang Reurns as Nvidia CEO",
+    "summary": "Marvell Technology shares are surging Monday as Nvidia CEO Jensen Huang&#39;s reinstatement boosts confidence in AI infrastructure demand.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=b240ca40b9bb6b24edf75221a35187b89cc0fe2ab371ed6efcd2ed0f7b316914",
+    "published": "2026-11-23T12:10:43+00:00"
+   },
+   {
+    "headline": "What Sent Astera Labs Stock Lower?",
+    "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=6dda12a4c54341233a2b60968a4993a7b0cfe71d3eb1aa6ec63c3975b0f055a2",
+    "published": "2026-11-23T11:48:27+00:00"
+   },
+   {
+    "headline": "CoreWeave Stock Jumps 29% as Jensen Huang Returns: 10 Nvidia-Linked Names Rally",
+    "summary": "CoreWeave stock jumped 29% as Nvidia reinstated Jensen Huang as CEO, lifting IREN, Nebius, Dell, SK Hynix and the Nvidia AI ecosystem.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=885a67d0ac9a5eb7c7e78231077d3671f82df55128f7f2f8ac7d3eafba55d753",
+    "published": "2026-11-23T11:35:46+00:00"
+   },
+   {
+    "headline": "Credo Technology Group Stock And 2 Undervalued Stocks To Watch",
+    "summary": "After a bruising correction that pushed major indices into formal pullback territory, investor attention has swung back to cash rather than headlines about the next hot theme. When sentiment is fragile, companies that generate solid cash can slip through the cracks and trade at a discount. This article highlights three stocks currently priced below their estimated cash flow value and explains why patient buyers may find them appealing now. The three examples below are just a starting sample,...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=4f8b576345f4f5478354ffc6b969800bb2a84cec787d48ad3771d62422cb8d92",
+    "published": "2026-11-23T11:12:51+00:00"
+   },
+   {
+    "headline": "Nvidia, Micron, Arm Holdings, Kymera Therapeutics And Other Big Stocks Moving Higher On Monday",
+    "summary": "Nasdaq surged over 6% as NVIDIA jumped 28.8% after Jensen Huang returned as CEO, while AI and semiconductor stocks rallied broadly.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=dba59853f2c293d87ab8aaae74cd1af72d44ffea058988f5e142bcb814ede9e2",
+    "published": "2026-11-23T11:08:38+00:00"
    }
   ],
   "FN": [
+   {
+    "headline": "Why Bel Fuse (BELFB) Stock Is Down Today: AI Chip Selloff Hits Components",
+    "summary": "Bel Fuse shares fell 8.0% on Tuesday, Nov. 24, as an AI chip selloff dragged down semiconductor and electronic component stocks.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9fb568a30a74eb0ff76a113f1a694d8e4dcdbf3e98fdba94be273843c3b6ddff",
+    "published": "2026-11-24T20:46:29+00:00"
+   },
+   {
+    "headline": "Why Flex (FLEX) Stock Is Down Today: AI Chip Selloff Hits Peers",
+    "summary": "On Tuesday, Nov. 24, the stock fell 9.4% as chip stocks slid in an AI selloff, according to GuruFocus.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=c9def6c8272b7aef01470feae2de2bdd18d0205cfcef30ce77f1638491b28dff",
+    "published": "2026-11-24T20:31:25+00:00"
+   },
+   {
+    "headline": "Methode Electronics (MEI) Stock Is Down 11.1% Today: AI Selloff Hits Peers",
+    "summary": "On Tuesday, Nov. 24, the shares fell 11.1% as AI chip stocks sold off, without company-specific news",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a8fcb748540d6f8c305af4437c54928bef1aca7cec978b34093285376c9ca364",
+    "published": "2026-11-24T18:00:51+00:00"
+   },
+   {
+    "headline": "Why Is Knowles (KN) Stock Down Today? Tech Selloff Hits Component Makers",
+    "summary": "On Tuesday, Nov. 24, the stock fell 8.1% as a tech selloff hit electronics component makers",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a5260f17e4229fe4908ed29c008ee403e8b68b99448815433f403c7fb8458230",
+    "published": "2026-11-24T16:31:01+00:00"
+   },
+   {
+    "headline": "Benchmark Electronics (BHE) Stock Is Down 8.4% Today Along With Tech Selloff",
+    "summary": "On Tuesday, Nov. 24, the stock fell 8.4% along with electronics makers and tech stocks, without company-specific news",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a7b892439d495dcefa81f9dc4c15f182b06c674696fab3239fb0931818fbdf21",
+    "published": "2026-11-24T16:30:50+00:00"
+   },
+   {
+    "headline": "Plexus (PLXS) Stock Is Down 8.9% Today Without Company News",
+    "summary": "On Tuesday, Nov. 24, the shares fell 8.9% without company-specific news, as electronics manufacturing peers and tech stocks dropped.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=b50163d6ae4ecd9ad7a99570d5d3569d873eca2ab2a277cecaca219db115d613",
+    "published": "2026-11-24T16:00:42+00:00"
+   },
+   {
+    "headline": "Wall Street Analysts Predict a 64.43% Upside in Fabrinet (FN): Here's  What You Should Know",
+    "summary": "The consensus price target hints at a 64.4% upside potential for Fabrinet (FN). While empirical research shows that this sought-after metric is hardly effective, an upward trend in earnings estimate revisions could mean that the stock will witness an upside in the near term.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=8c0cfd9564307912da6b019cdf07e4de7a0ad312b0978591af8ba0bc795c6011",
+    "published": "2026-11-24T13:55:02+00:00"
+   },
+   {
+    "headline": "Fabrinet (NYSE:FN) Screens Well for Growth-at-a-Reasonable-Price Investors",
+    "summary": "Fabrinet passes a Peter Lynch GARP screen with zero debt, 24.7% EPS growth, 19.3% ROE and 0.86 PEG; low margins and growth durability are risks.",
+    "source": "ChartMill",
+    "url": "https://finnhub.io/api/news?id=c7c4fe964f8f9586f54ae68195fea4978500b3b9dad12bf99907dc5b083d0edf",
+    "published": "2026-11-24T10:40:54+00:00"
+   },
    {
     "headline": "Corning Surges 15.1% as Nvidia Rally Lifts AI Hardware Stocks on Nov. 23",
     "summary": "Corning shares rose 15.1% as AI hardware stocks rallied after Nvidia reinstated Jensen Huang as CEO, according to GuruFocus.",
@@ -164,30 +377,23 @@
     "source": "SeekingAlpha",
     "url": "https://finnhub.io/api/news?id=05e7a0b4e548bba3d45f0d84f9163c6d72fe5f3b966c25b858164931bb91073b",
     "published": "2026-11-23T12:15:00+00:00"
-   },
-   {
-    "headline": "3 US AI Infrastructure Stocks With Earnings Growth Investors Should Watch",
-    "summary": "AI infrastructure has moved from niche theme to household talking point, with data centers, chips and cloud capacity now sitting at the crossroads of growth hopes, inflation worries and higher-for-longer interest rates. That mix is creating sharp separation between potential winners and everyone else. This article walks through three stocks exposed to these macro currents and AI buildout trends, helping you decide which stories deserve a closer look. The three stocks in focus here are just a...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=cde1f052e94558a51db326a424848ac2c32dcc0081d0d3785b62ecad684a566d",
-    "published": "2026-11-21T22:12:06+00:00"
-   },
-   {
-    "headline": "Fabrinet (NYSE:FN): Affordable Growth With Strong Earnings Momentum",
-    "summary": "Fabrinet (FN) pairs strong earnings and revenue growth with reasonable valuation and a debt-free balance sheet, making it an affordable growth candidate.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=6044a83b7a108ca5bbc07b9f16497f456a86d96cb18a51a1ffc01ca0a9927622",
-    "published": "2026-11-21T13:11:15+00:00"
-   },
-   {
-    "headline": "Fabrinet Stock Gets An AI Infrastructure Boost",
-    "summary": "Fabrinet has been swept up in renewed interest in AI infrastructure after Coherent announced a US$2b share repurchase plan and Anthropic completed its IPO, which together refocused attention on suppliers tied to data center and telecommunications build outs. The fresh enthusiasm around AI related hardware highlights how Fabrinet’s role in optical packaging and manufacturing for high performance compute and networking can become more central as customers scale out capacity. We will now look...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=8c4e1e24cccd95bef25bae3d9fe87f914b7700013d70ddc8933d62c4cf0dd708",
-    "published": "2026-11-21T08:11:44+00:00"
    }
   ],
   "INOD": [
+   {
+    "headline": "Innodata vs. IonQ: Is the Artificial Intelligence or Quantum Computing Stock the Better Buy for 2027?",
+    "summary": "Innodata's revenue grew nearly 48% last year, while IonQ's quantum hardware sales surged even faster, though its losses tell a very different story.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=f85214721e0c99e2eb9194a6439d8bbdad5292e87c77d024240926fe19c3b42a",
+    "published": "2026-11-24T05:22:14+00:00"
+   },
+   {
+    "headline": "Innodata Stock Is AI Data Shift Changing The Bull Case",
+    "summary": "Innodata has already shifted its core operations toward AI enabled data engineering services, reporting stronger revenue and operational leverage in 2026 as its technology becomes more embedded in major client workflows and government contracts. The interesting twist is how deeply Innodata’s tools are now wired into large tech and public sector systems, which can raise switching costs for customers even as the company still faces risks from project based work and customer concentration. We...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=cacc2fbc1e0a3cfdfd7b0a8038018ee1120d55b3c9272a3f3d5592a6a4ba95f9",
+    "published": "2026-11-24T01:12:14+00:00"
+   },
    {
     "headline": "Innodata Jumps 16.9% Amid AI Rally Without Company News on Monday",
     "summary": "Innodata shares rose 16.9% by 12:01 p.m. ET, with no company-specific news explaining the move.",
@@ -211,6 +417,55 @@
    }
   ],
   "IONQ": [
+   {
+    "headline": "D-Wave Is Down 42% in a Month. What Will It Take to Get QBTS Stock Back to $10?",
+    "summary": "D-Wave has shed more ground than IonQ or Rigetti, even after a quarter with growing revenue and a swelling pipeline. A $20 million university order, a shrinking cash pile, and a crowded share count will decide whether the rebound is real.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=1dc20c85eb0b79408a16b41f65dd552f504281a245b218ab882f347128542d39",
+    "published": "2026-11-24T20:02:45+00:00"
+   },
+   {
+    "headline": "5 Best Affordable Growth Stocks to Buy for 2027",
+    "summary": "The Dow Jones Industrial Average lost 8% in the week ended November 20, its worst week since March 2020, while the S&P 500 fell 8.6% and the Nasdaq Composite dropped 10%, Yahoo Finance reported. Friday’s sell-off pushed both the Dow and the S&P 500 into correction territory, and the Nasdaq Composite fell 5.28%, which wiped […]",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=50ffa6a933a32b1e377946dfb1c0ffc395d0860329b8b3f9e68e1173c035177c",
+    "published": "2026-11-24T19:12:07+00:00"
+   },
+   {
+    "headline": "D-Wave Declines 9% as Quantum Stocks Reverse Monday’s Surge; Rigetti Drops 7%, IonQ Falls 5%",
+    "summary": "Quantum computing stocks are giving back a big piece of Monday’s surge, and D-Wave is leading the retreat. D-Wave Quantum (NASDAQ:QBTS) stock is at $6.67 in afternoon trading, down 9%. That pullback compounds a rough year, with D-Wave stock down 74% year to date (YTD). The selling reaches well beyond D-Wave. Speculative tech and artificial […]",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=840bb025fbbae2c3c1a034c5b70148d86d5590ea3fd3ddf14c2500e53e3a169b",
+    "published": "2026-11-24T17:52:13+00:00"
+   },
+   {
+    "headline": "The Zacks Analyst Blog Highlights IonQ, Rigetti and Quantum Computing",
+    "summary": "IonQ and Rigetti face steep sell-offs in 2026, while Quantinuum and D-Wave Quantum stand out as 2027 picks amid government funding and commercial progress.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=14adad93fb8ae422814b41cce809529829f9fb2d94cefa8d925e4d8414ce5200",
+    "published": "2026-11-24T14:21:00+00:00"
+   },
+   {
+    "headline": "Quantum Art Names Mark Solomon as Head of U.S. Strategic Growth & Business Development and Tal Inbar as SVP of Business Development",
+    "summary": "Quantum Art, a developer of full-stack, fault tolerant quantum computers based on trapped-ion qubits and a proprietary, dynamically reconfigurable multi-core architecture, today announced two additions to its leadership team: Mark Solomon has joined as Head of U.S. Strategic Growth and Business Development, and Tal Inbar has joined as Senior Vice President of Business Development, leading efforts outside of the United States.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=dbdffff40116397a071804dbd832ae536d9f5463c88c2c15a6775e9ea75a1af6",
+    "published": "2026-11-24T13:00:00+00:00"
+   },
+   {
+    "headline": "Innodata vs. IonQ: Is the Artificial Intelligence or Quantum Computing Stock the Better Buy for 2027?",
+    "summary": "Innodata's revenue grew nearly 48% last year, while IonQ's quantum hardware sales surged even faster, though its losses tell a very different story.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=f85214721e0c99e2eb9194a6439d8bbdad5292e87c77d024240926fe19c3b42a",
+    "published": "2026-11-24T05:22:14+00:00"
+   },
+   {
+    "headline": "IonQ Stock And Quantum Peers Tied To Energy Grid Demand",
+    "summary": "Quantum computing is moving out of the lab and into the engine room of the energy system, where better chemistry, sharper grid planning and faster subsurface modeling could start to matter for real cash flows. That shift has traders scanning for companies exposed to this news trend before the crowd catches on. This article walks through three stocks from our screener that appear well positioned, and explains how their quantum focus could be relevant for your portfolio decisions. The three...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=746c13e4a9ae3e4651124ab038acc1791c8f0148b8a3ea72788ffe10f9650b8d",
+    "published": "2026-11-24T04:28:30+00:00"
+   },
    {
     "headline": "Investor Warns: Quantum “One of the Most Overhyped Technologies of Our Time.” IonQ Is Down 25% in a Month",
     "summary": "Key TakeawaysIonQ stock is down 25% in the past month, and Rigetti Computing and D-Wave Quantum have fallen even further. Dmitri Alperovitch argues AI will likely break today’s encryption before quantum computers can, taking away one of quantum’s few sure uses.",
@@ -266,23 +521,44 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=ceb126a01185600eac3226b2f8b8b80c82a2dedeefe4ff8fd124a307988aefc1",
     "published": "2026-11-23T13:00:05+00:00"
-   },
-   {
-    "headline": "Is IonQ Stock a Buy Right Now?",
-    "summary": "IonQ has a long way to go before becoming a viable company.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=8930d9a51e90bdb44cdf3981af54b4636333d34a5954f7765513fa4d7d213b84",
-    "published": "2026-11-21T17:20:02+00:00"
-   },
-   {
-    "headline": "IonQ vs. Alphabet: Which is the Better Quantum Computing Stock to Own for Next 5 Years?",
-    "summary": "IonQ is getting closer to producing a viable product.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=d093733e9e9cde7ef07d760d104f819f0d174e9f2cc736c543e025c4445eb08b",
-    "published": "2026-11-21T10:55:02+00:00"
    }
   ],
   "JOBY": [
+   {
+    "headline": "Joby Aviation Drops 7%, Archer Aviation Slides 6% as Air Taxi Stocks Give Back Monday’s Rebound; EHang Falls 5% Ahead of Earnings",
+    "summary": "Three air taxi stocks are bleeding after a brief rally, and one of them still hasn't told investors what its year looks like. Why an upcoming earnings report in China could reset expectations for Joby, Archer, and the whole sector.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=30ed6e4b2107db1258de9d52ebb74ef0b8f33cbb8f62f2e1d9fb7f4e3703d726",
+    "published": "2026-11-24T17:55:30+00:00"
+   },
+   {
+    "headline": "Joby, Archer Stocks Falter After Rally as 50% Losses Loom",
+    "summary": "Flying taxi stocks struggle to sustain gains as certification and commercialization challenges weigh on investor sentiment.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a5bd8df51fe62959b46661c1699c2f9ec7b6df6e09d31adf1652a8e6c7c6f2fc",
+    "published": "2026-11-24T16:04:34+00:00"
+   },
+   {
+    "headline": "Does Archer Aviation Stock's Fall Change Anything?",
+    "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=63f7caa1dbabc5334e12b198841d5a8ba0d0866e441b7c624a3dde9e23786695",
+    "published": "2026-11-24T16:02:54+00:00"
+   },
+   {
+    "headline": "Can Archer's Formula 1 Partnership Expand Its Air Taxi Market Reach?",
+    "summary": "ACHR's Formula 1 partnership is likely to expand its air taxi market reach, connecting Grand Prix venues with key destinations while showcasing its eVTOL technology.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=ad3ac5466dcbc755da8ae66133cd64fd22536bdce0c5e23b0d61dc596e1e0fb8",
+    "published": "2026-11-24T13:56:00+00:00"
+   },
+   {
+    "headline": "Joby Aviation: FAA Progress Is Real, But So Is The Cash Burn",
+    "summary": "Joby Aviation (JOBY) remains a speculative Buy, with a $5.25 target implying 45% upside at twice the peer EV/sales multiple.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=b76dcf7dc6c901d40bb915fb42088e5dd24790b514d63e9963f2ba7d0b3f90c0",
+    "published": "2026-11-24T07:30:43+00:00"
+   },
    {
     "headline": "Archer Aviation's Real Bet Is Boeing's Drone Maker",
     "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
@@ -293,11 +569,32 @@
   ],
   "LSCC": [
    {
+    "headline": "Lattice Semiconductor (LSCC) Could Be 37% Below Fair Value On AI Chip Optimism",
+    "summary": "Lattice Semiconductor (LSCC) is back on investors’ radar after a sharp 13.8% jump that coincided with a broad semiconductor rally tied to Nvidia’s decision to reinstate Jensen Huang as CEO. The jump sits against a choppy backdrop for Lattice Semiconductor, where the share price is down 11.21% over the past day and 8.66% over the past week. However, it remains up 27.51% year to date and is supported by a 47.55% 1-year total shareholder return that signals momentum has been rebuilding over a...",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=dfe4dcfdd0fccafe4caa4a6c169879d535f78278add0559ab8ce8bd06db573b4",
+    "published": "2026-11-25T03:12:32+00:00"
+   },
+   {
+    "headline": "Why Lattice Semiconductor (LSCC) Stock Is Down Today: Chip Stocks Sell Off",
+    "summary": "On Tuesday, Nov. 24, shares fell 12.1% as chip stocks sold off amid fresh US tariff concerns.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=a6f478bfa1f5d5074631d2323622ac841b6bd53282a475783a9e7a1325e124e1",
+    "published": "2026-11-24T16:30:30+00:00"
+   },
+   {
     "headline": "Lattice Semiconductor Stock Jumps 14% as Chips Rally on Nvidia on Monday",
     "summary": "Lattice shares rose 13.8% by 12:01 p.m. ET as semiconductor stocks jumped 14.0% after Nvidia's rally.",
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=33b59c988a46fd2cb6546444fd411feef298bd03365ac7abc7d6604eea7589f8",
     "published": "2026-11-23T17:02:09+00:00"
+   },
+   {
+    "headline": "Broadcom Stock Rises After Jensen Huang's Reinstatement to Nvidia's Board",
+    "summary": "Broadcom is rising Monday with other fabless semiconductor stocks after Nvidia reinstated Jensen Huang, bolstering AI spending optimism.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=8a92a0ac4a88f64491bf5cf8674d65b533fedb30f5cab353466ff03b413e9d15",
+    "published": "2026-11-23T13:32:10+00:00"
    },
    {
     "headline": "LSCC Rides on Balanced Organic & Inorganic Growth: Should You Buy?",
@@ -307,9 +604,53 @@
     "published": "2026-11-23T12:15:00+00:00"
    }
   ],
-  "ONTO": [],
-  "OUST": [],
+  "ONTO": [
+   {
+    "headline": "Onto Innovation Consensus Price Target Decreased by 13.13% to $338.44",
+    "summary": "",
+    "source": "Fintel",
+    "url": "https://finnhub.io/api/news?id=d97f2ef90fc1632eb9f0f8f78b52bbf9277cc8c524f0a0a66d696860a5774dbb",
+    "published": "2026-11-25T00:39:51+00:00"
+   },
+   {
+    "headline": "The Other Elon Musk ETF Responds as Tesla Tops $100",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=e42b3627f12e6226392494f6e97ac3f5053bdc5406bd9a5873c25295a3fc84d4",
+    "published": "2026-11-23T11:11:03+00:00"
+   }
+  ],
+  "OUST": [
+   {
+    "headline": "Novanta Shares Just Jumped And We’re Buying This Robotics Play",
+    "summary": "Just as early investors targeted foundational chipmakers like Taiwan Semiconductor (TSM), Nvidia (NVDA), and Broadcom (AVGO) at the start of the AI computing wave, investors are currently examining diversified industrial and sensor plays such as Regal Rexnord (RRX), Timken (TKR), Allegro MicroSystems (ALGM), Ouster (OUST), and STMicroelectronics (STM). During a recent episode of The AI Investor Podcast, hosts Eric Bleeker and Austin Smith took a closer look at Novanta, and shared why they are optimistic about the robotics manufacturer as an AI investment play to target in 2027.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=4ce3e2d56955efd8cab8b4f49bdaef89ca8e9421b82091cae7f883d29b212057",
+    "published": "2026-11-24T22:59:22+00:00"
+   },
+   {
+    "headline": "Top analyst-favored midcap stock with meaningful target upside",
+    "summary": "Investing.com -- The standout is Ouster (OUST): a midcap stock with a 1.0 analyst recommendation score, 82.2% analyst-target upside, and coverage from 6 analysts.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=77161dda1c19b3f9c4700123480f3f4b60b65f5882aa96b6187aa910de3cb6cc",
+    "published": "2026-11-24T13:58:01+00:00"
+   },
+   {
+    "headline": "Shares of electronic equipment, instruments and component companies are trading higher amid overall market strength after Nvidia reinstated Jensen Huang as CEO, boosting confidence in sustained AI investment that stimulates infrastructure growth. The sector helps with the development of semiconductor chips, and growing demand will contribute to an increase in orders that boost profit margins.",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=5ef0bce2e0ba814a77ad40d679642615d9929592c97ee04ea6d1e7d0b2a03f14",
+    "published": "2026-11-23T14:15:53+00:00"
+   }
+  ],
   "PONY": [
+   {
+    "headline": "Top 3 Tech Stocks Which Could Rescue Your Portfolio This Quarter",
+    "summary": "Amdocs, Pony AI and Xerox are among the most oversold IT stocks, with RSIs near or below 30, offering potential opportunities for investors.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=39b36da26ffeab07dc02ea77a4fda714c188037299f74d429b34d99e508ae1ff",
+    "published": "2026-11-24T07:01:06+00:00"
+   },
    {
     "headline": "Amplitude And 2 Other AI Stocks To Watch",
     "summary": "AI stocks have been hit hard as investors question whether massive spending on data centers and chips will ever pay off. That kind of selloff can punish the giants most and leave smaller, focused players mispriced. For patient investors, early stage businesses applying machine learning and automation can offer very different risk and reward profiles. This article walks through three small cap AI stocks from our screener worth a closer look. The three AI stocks that follow are just a small...",
@@ -320,6 +661,20 @@
   ],
   "RDDT": [
    {
+    "headline": "What Should Reddit Stock Owners Watch Now?",
+    "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=ddc032bddce598ae2520798f649c2849f1ff17c7e6c64245978362eac22886d5",
+    "published": "2026-11-24T18:02:38+00:00"
+   },
+   {
+    "headline": "META Rides on Strong Demand in Ad Business: Can It Beat RDDT and SNAP?",
+    "summary": "Meta Platforms' strong ad demand, AI-powered advertising tools, and expanding monetization strengthen its competitive position against Reddit and Snap.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=d51b11b39bec193bcec333f4ff25e0c0299bf8bcad5927cbd703febfc976bcb1",
+    "published": "2026-11-24T16:35:00+00:00"
+   },
+   {
     "headline": "Did Anthropic Stock's 9% Slide Make It Cheap?",
     "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
     "source": "Yahoo",
@@ -327,27 +682,55 @@
     "published": "2026-11-23T18:48:30+00:00"
    },
    {
+    "headline": "Shares of companies within the broader communication services sector are trading higher as Nvidia’s reinstatement of Jensen Huang fuels a broader market rally, boosting sentiment for sector giants Alphabet and Meta.",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=6f6d94f7d7e5e0d4ad694a1933e57c90b34d19831ac2b8980f9bce934d80ef8a",
+    "published": "2026-11-23T15:44:50+00:00"
+   },
+   {
     "headline": "Reddit Stock Tumbles, Short Interest Jumps as Valuation Metric Slips on Growth Worries",
     "summary": "Reddit stock has tumbled to its lowest level since April last year, amid the ongoing revenue slowdown concerns",
     "source": "Benzinga",
     "url": "https://finnhub.io/api/news?id=6b169717c76e9f00a7d9a3a124efcc73dd434ed578a2a849c53222cf31313f79",
     "published": "2026-11-22T16:10:05+00:00"
-   },
-   {
-    "headline": "AppLovin vs. Reddit: Which Technology Stock Is a Better Buy for 2027?",
-    "summary": "AppLovin is growing fast and is highly profitable, but its stock has been volatile. Reddit is profitable and still growing, but Google's AI search is sending it fewer visitors.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=1f919bdef503726774b890bbd1d7912ac077608e8a29b240fe9a0c3e96002df1",
-    "published": "2026-11-21T23:39:26+00:00"
    }
   ],
   "SITM": [
+   {
+    "headline": "Why SiTime (SITM) Stock Is Plunging Today: Chip Sector Selloff",
+    "summary": "On Tuesday, Nov. 24, the stock fell 14.4% as chip stocks sold off alongside the AI selloff",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=0db623b06b97f2414e0ea6d9b71073bfa2f4bd65e1438409505d0869df32bab9",
+    "published": "2026-11-24T20:46:42+00:00"
+   },
+   {
+    "headline": "SiTime: The Market Is Overlooking Their Earnings Potential",
+    "summary": "Analyst rates SiTime a Buy: Q3 organic revenue grew 154% on AI data-center demand, and projected earnings growth could compress its stretched valuation.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=6d0645cf842f484fe5d9b7b7acefb8fcd618f18d7e923d243870da39d664000f",
+    "published": "2026-11-24T10:44:50+00:00"
+   },
+   {
+    "headline": "Beware, The AI Trade May Not Have Bottomed Yet",
+    "summary": "Analyst sees Nvidia Corporation's AI trade as cautiously bullish: fundamentals stay robust, but a durable bottom needs broader buying; cash exceeds 11%.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=9b54774e4ea64a6c20bb99348fa0a94b16042ecf0e038bfedbac60fcecf3211e",
+    "published": "2026-11-24T10:20:49+00:00"
+   },
    {
     "headline": "Can SiTime (SITM) Be Overvalued Even With Its AI Push?",
     "summary": "SiTime has ridden a powerful multi‑year upswing while pushing deeper into high performance timing for AI data centers, which puts a sharp spotlight on whether the current share price lines up with the cash the business is expected to generate. With the stock now reflecting years of optimism, the central issue is how that market value stacks up against its intrinsic value estimated from future cash flows. Over the past 3 years, SiTime has delivered a very large 284.5% share price return. This...",
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=0d171afeffa0ea3cc5d064ca06940be7dd8481a281ba471a38404628aca21200",
     "published": "2026-11-24T01:15:08+00:00"
+   },
+   {
+    "headline": "ValuEngine Weekly Market Commentary: Bear Market For Nasdaq-100 Headlines Historic Weekly Meltdown",
+    "summary": "U.S. equity markets experienced a sharp and broad-based selloff this week, with all major ETFs and sector benchmarks posting significant declines.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=369b3937d721260ebe6829513943004ecdbe129e99c74ee587455a53ac8ff1ad",
+    "published": "2026-11-24T00:35:00+00:00"
    },
    {
     "headline": "SiTime to Participate at Upcoming Investor Conferences",
@@ -362,16 +745,100 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=1bb020e2533c67347d1a3e5b9bcdd2bcfba8b223276c84e529f55d87335a7c41",
     "published": "2026-11-23T17:03:20+00:00"
-   },
-   {
-    "headline": "Cognex Sees More Margin Upside, Targets Deeper Customer Ties in 2027",
-    "summary": "Cognex (NASDAQ:CGNX) sees room to expand margins further and plans to shift its sales focus toward deepening relationships with recently acquired customers, Chief Financial Officer Dennis Fehr said at a Stephens conference in Nashville. Fehr also outlined the rationale for the company’s announced R",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=8bbdb1db3fbc08e01d20b8e2402d8d8bd5dda987c55f6bca513bcc6a8ae26aca",
-    "published": "2026-11-21T14:12:09+00:00"
    }
   ],
   "SMCI": [
+   {
+    "headline": "Nvidia degrades U.S. national security as Chinese military snags its chips",
+    "summary": "Set aside the scrutiny swirling around Megaspeed. Official endorsements cannot wish away the serious security record piling up in the public view.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=01214a757d640e8f8efcf1c7ace3c23edee60fe4eee6a2c00577f430b3de5dfe",
+    "published": "2026-11-24T19:43:25+00:00"
+   },
+   {
+    "headline": "5 Best Affordable Growth Stocks to Buy for 2027",
+    "summary": "The Dow Jones Industrial Average lost 8% in the week ended November 20, its worst week since March 2020, while the S&P 500 fell 8.6% and the Nasdaq Composite dropped 10%, Yahoo Finance reported. Friday’s sell-off pushed both the Dow and the S&P 500 into correction territory, and the Nasdaq Composite fell 5.28%, which wiped […]",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=50ffa6a933a32b1e377946dfb1c0ffc395d0860329b8b3f9e68e1173c035177c",
+    "published": "2026-11-24T19:12:07+00:00"
+   },
+   {
+    "headline": "S&P 500 Most Active Stocks for Nov. 24, 2026",
+    "summary": "S&P 500 most-active stocks on Nov. 24, 2026, including Ford, HPE, Super Micro, Netflix, Nike, Bank of America, Alphabet, AT&T, Marvell and Pfizer.",
+    "source": "ChartMill",
+    "url": "https://finnhub.io/api/news?id=714287aa0ad1dff9a762cf4f5839c2b109eba6074c93d68db52b5df53ca38897",
+    "published": "2026-11-24T19:05:58+00:00"
+   },
+   {
+    "headline": "Super Micro Just Fell 32% in a Month: Is SMCI an Unbeatable Bargain or a Toxic Stock?",
+    "summary": "Super Micro trades at a single-digit earnings multiple while revenue guidance climbs, yet Dell and HPE are sinking too. Value hunters face a puzzle: does a rock-bottom price signal opportunity, or a market bracing for profits to vanish?",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=08ad0003ca71ade5d15ca623d96c808933060403011b10c6c386f51a5a083ee1",
+    "published": "2026-11-24T19:02:27+00:00"
+   },
+   {
+    "headline": "4 PEG-Based Value Stocks to Buy as NVIDIA Leads Wall Street Rebound",
+    "summary": "Four stocks, ARW, SMCI, BP & INGM pass key PEG-based screening criteria, combining discounted valuations, improving earnings estimates & strong growth prospects.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=fd72809efb0e1e727acbc9bb004e242c59691bf20dd590270c269331998c07ad",
+    "published": "2026-11-24T19:00:00+00:00"
+   },
+   {
+    "headline": "Nvidia, Anthropic, Micron, HPE, Analog Devices, Insmed, and More Stocks That Explain Today’s Market",
+    "summary": "AMD, Anthropic, Intel, Marvell, Nvidia, and other AI stocks struggle as the euphoria from Monday fades.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=56456bd48e3055a43da37df3744398a0ace0b186ad4bc75a7d04037491d43891",
+    "published": "2026-11-24T17:37:00+00:00"
+   },
+   {
+    "headline": "The U.S. Just Blacklisted the Firm Suspected of Funneling Nvidia Chips to China",
+    "summary": "Washington blacklisted seven Megaspeed entities while Wall Street stared at Jensen Huang's return. The real exposure for Nvidia is not revenue, and three December hearings could force answers about how its chips reached China.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=b12f494587f1eba14918abb645226ae361b2736fe012cf115f4b6df991c8130d",
+    "published": "2026-11-24T14:23:08+00:00"
+   },
+   {
+    "headline": "Own Dell Stock? Its Cash Gap Rarely Hurt It",
+    "summary": "Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=1d6f89551f9de6d328df71342feb47d7c862c1079f2a0056aec8eb3aac4a1878",
+    "published": "2026-11-24T14:03:51+00:00"
+   },
+   {
+    "headline": "Dell Just Dropped 26% in a Month. Steve Eisman Warns It Will “Slow Along With Nvidia.” Is He Right?",
+    "summary": "Key TakeawaysDell fell 27% in a month with Super Micro and Nvidia, even after Monday’s rebound. Estimates barely moved, so the selloff came out of the multiple, now back near its average.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=b434c6160a78583a0fb7faf4f797a5423eafceb862c3c336652449b33d0a13be",
+    "published": "2026-11-24T12:35:36+00:00"
+   },
+   {
+    "headline": "Nvidia, Anthropic, Intel, HPE, Sanofi, and More Stocks That Explain Today’s Market",
+    "summary": "AMD, Anthropic, Intel, Marvell, Nvidia, and other AI stocks struggle as the euphoria from Monday fades.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=06a8d0c1aa7a4b7a7f8276363ec2166ebf61a4ca600555085b4e11cd048b8344",
+    "published": "2026-11-24T11:21:00+00:00"
+   },
+   {
+    "headline": "Super Micro Computer: Fairly Valued At Best",
+    "summary": "Super Micro (SMCI) stock is a sell as $19.9 billion Q1 sales came with -$475.6 million free cash flow, and alleged China sales scrutiny could weigh on shares.",
+    "source": "SeekingAlpha",
+    "url": "https://finnhub.io/api/news?id=8e8690f6a82d6839bffaf7824e9b0fbd4bcc9cf793d5836515009080c23fb306",
+    "published": "2026-11-24T08:39:14+00:00"
+   },
+   {
+    "headline": "Jim Cramer Says Dell Is “One of the Few” AI Stocks to Ride. Its November 24 Report Must Prove It",
+    "summary": "Key TakeawaysDell fell 11% on Friday, then jumped 20. 5% on Monday, a day before its Nov.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=25bae4759c64a6ed7ae59ad87252ce10513ed1cd3b3308e221e1a907284f5e18",
+    "published": "2026-11-24T08:36:00+00:00"
+   },
+   {
+    "headline": "Dell Fell 37% Before Its November 24 Report. Now Its Thin Margin Has to Hold",
+    "summary": "Key TakeawaysDell Technologies stock fell 37% in the month to Nov. 20, then rebounded 20.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=faaffdb9a0b4c9af3cf07017c8270a49d6cb4baf783191bddba46fc35d0b59e0",
+    "published": "2026-11-24T05:32:24+00:00"
+   },
    {
     "headline": "Dell Wants Up to 45% More on Signed AI Deals. IREN Has a Big Problem",
     "summary": "Key TakeawaysDell, HPE, Lenovo and Supermicro are asking for up to 45% more for AI servers already under contract, the Financial Times reported. IREN agreed to buy about $5.",
@@ -385,100 +852,23 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=fb764e39d9e6bc0066544d04034697fec7448fe4e71d3c71401a8753e8d58685",
     "published": "2026-11-23T19:32:15+00:00"
-   },
-   {
-    "headline": "S&P 500 Most Active Stocks Today: Heavy Turnover and Double-Digit Moves",
-    "summary": "S&P 500 most active stocks today included INTC, SMCI, F, ORCL, MRVL, T, NFLX, HPE, GOOG and BE, with volumes from 16.83M to 90.27M shares and several double-digit moves.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=522bd3d5cda9dc1c68603f8761449d667a6a9be5fc5b8c7da7e282124e903310",
-    "published": "2026-11-23T19:06:02+00:00"
-   },
-   {
-    "headline": "Goldman Sachs Names Top Communication Technology Stock",
-    "summary": "Investing.com -- Goldman Sachs has released its latest rankings for the communication technology sector, highlighting key players positioned to benefit from ongoing digital transformation and cloud infrastructure growth.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=bce800c7a73891d112c69b046dccc8863766762cd63ff3dedd1b9874b5a7d42b",
-    "published": "2026-11-23T17:15:53+00:00"
-   },
-   {
-    "headline": "Nvidia, Dell, Micron, Anthropic, CrowdStrike, UnitedHealth, and More Stocks That Explain Today’s Market",
-    "summary": "Nvidia surges after saying it will reinstate Jensen Huang as CEO.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=09cf19af0fe9a0487238ba27a10caf366fe163161448fa75ad70d74e6b741720",
-    "published": "2026-11-23T17:03:00+00:00"
-   },
-   {
-    "headline": "Super Micro Stock Falls Nearly 29% in a Month: Is SMCI Undervalued?",
-    "summary": "The server manufacturer faces a challenging investment outlook as concerns over AI spending, profitability and financing weigh on technology stocks.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=743e9ac2f85b2f8bda8c09d031047dd802303267b86250b7bec40372dc7e0ee1",
-    "published": "2026-11-23T16:13:37+00:00"
-   },
-   {
-    "headline": "S&P 500 Gap Movers: NVDA and DELL Lead Today's Session",
-    "summary": "S&P 500 gap movers in today's session: NVIDIA and Dell led gap-up stocks, while CrowdStrike led gap-down names.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=59c932892b045bdd2b6295616425e0926ea82c999c3d9a6dc12ae4e4195802e5",
-    "published": "2026-11-23T15:36:18+00:00"
-   },
-   {
-    "headline": "The Next $1 Trillion Technology Opportunity Could Be Hiding in Plain Sight",
-    "summary": "Supermicro just posted the biggest quarter in its history, yet a Justice Department probe has investors running for the exits. Is the market punishing real danger, or ignoring earnings power that is already visible in the numbers?",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=bbd459feb44394382808f08e317650de7bc9377c0d0c925352769c23d50986c0",
-    "published": "2026-11-23T15:34:30+00:00"
-   },
-   {
-    "headline": "Super Micro Soars 20% on Report It’s Seeking Up to 45% More for AI Servers Already Sold",
-    "summary": "Key TakeawaysSuper Micro rose 20% on a report that it and Dell want up to 45% more for AI servers already sold. Making buyers cover memory costs would protect Super Micro’s thin 12.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=0aeab0d3e45481d0762e6e86e271a2376d6673e5a2b3e129b8affbd41f85f7eb",
-    "published": "2026-11-23T15:18:20+00:00"
-   },
-   {
-    "headline": "DELL Gears Up to Report Q3 Earnings: Should You Buy the Stock?",
-    "summary": "Dell heads into Q3 earnings with surging AI server demand, a $95B backlog and strong PC sales prospects, but supply constraints and margin risks remain.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=3efad68823e12f35776b303c4539364bef28f2bad621d4dc11a64153d9e8bdcb",
-    "published": "2026-11-23T15:16:00+00:00"
-   },
-   {
-    "headline": "Nvidia, Arm, Anthropic, CrowdStrike, Zscaler, UnitedHealth, and More Stocks That Explain Today’s Market",
-    "summary": "Nvidia surges after saying it will reinstate Jensen Huang as CEO following his resignation earlier this month.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=936e6e0a5673865c50c8c5da28de8369c90dbc2c9585f4af09c40b55a4b65211",
-    "published": "2026-11-23T15:11:00+00:00"
-   },
-   {
-    "headline": "Super Micro Jumps 19% on Reports of Rising AI Server Prices; Dell Soars 30%, Hewlett Packard Enterprise Rallies 15% Ahead of Earnings",
-    "summary": "Server makers are surging on a pricing report and a surprise CEO reversal at NVIDIA, but one of them is still under an independent review and burning cash. Which stock has the most to prove before the rally holds?",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=0bcbcd9b4e168fa12b48dcca5043dd0845876bba12689a26a864d6002b26c796",
-    "published": "2026-11-23T15:03:35+00:00"
-   },
-   {
-    "headline": "Nvidia Poised For Biggest One Day Gain In History Of Stock Market As Jensen Huang Returns",
-    "summary": "The board swore it would not bring him back, then reversed in six days, and Wall Street responded with a number no company has ever posted. Behind the rally sit a congressional hearing, an open investigation, and a discount that could return fast.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=1d7a5e75e71b2af66cea40cfff033717023888f951169e2d4a8badf7fb4b187a",
-    "published": "2026-11-23T15:03:09+00:00"
-   },
-   {
-    "headline": "Nvidia Stock: The Whole Picture, Upside And Downside",
-    "summary": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=b51a4200f0d512e9729975c4fe9662ac38e17ca8508c23d90c4be0a1dac7c769",
-    "published": "2026-11-23T14:05:32+00:00"
-   },
-   {
-    "headline": "Premarket Movers: Nvidia, Dell, HPE Gain; CrowdStrike, UnitedHealth Slide",
-    "summary": "Premarket movers: Nvidia rose 8.66%, Dell 8.27%, and HPE 7.46%, while CrowdStrike fell 6.76% and UnitedHealth 6.28%.",
-    "source": "ChartMill",
-    "url": "https://finnhub.io/api/news?id=ec07e5dc041b7fa4bdae54192db66181218072d0d93055406ae6bcae196b1f42",
-    "published": "2026-11-23T13:36:23+00:00"
    }
   ],
   "SOUN": [
+   {
+    "headline": "SoundHound AI Guides to Up to $400 Million in 2027 Sales: Take Profits, or Buy More?",
+    "summary": "Key TakeawaysSoundHound AI grew third-quarter revenue 48. 5% to $62.",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=2cfc90f7763f7778da940d7f0053d2b3e465315642627296de3a9b8c8811642a",
+    "published": "2026-11-24T06:26:35+00:00"
+   },
+   {
+    "headline": "Trading Halt: Halt status updated at 12:10:00 PM ET: Quotation Resumption: News and Resumption Times",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=a15ae1a176ff94a0240f7e2b4551e1328c886c6bbd7630e1d53c79261da9beb5",
+    "published": "2026-11-23T14:38:54+00:00"
+   },
    {
     "headline": "Is Trending Stock SoundHound AI, Inc. (SOUN) a Buy Now?",
     "summary": "Zacks.com users have recently been watching SoundHound AI (SOUN) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.",
@@ -492,23 +882,16 @@
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=77c430574bc04902d467723731058f83ae03427c8e017e991b9d0e304bdb4af0",
     "published": "2026-11-23T00:10:02+00:00"
-   },
-   {
-    "headline": "5 Most Overvalued AI Stocks According to Short Sellers",
-    "summary": "The U.S. stock market has suffered a broad sell-off heading into year-end, driven by renewed concerns about elevated AI valuations and uncertainty surrounding the profitability of artificial intelligence investments. Short sellers are increasingly piling pressure amid concerns that technology companies have committed enormous amounts of capital to AI infrastructure without demonstrating that the resulting investments […]",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=a149de4ad5256b9a8ebcc66b85f35d31c11ed5e402567a12c1ce8652457583a2",
-    "published": "2026-11-21T14:50:11+00:00"
-   },
-   {
-    "headline": "SoundHound AI Sinks 44% in a Month. Now Its $120 Million of Cost Cuts Have to Land",
-    "summary": "Key TakeawaysSoundHound AI stock fell 44% in the month through Nov. 20 to a new 52-week low.",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=8a96e700de015eef104eedf707d1386c41d034d6f70ae87fa1e8d8da6a88a0ae",
-    "published": "2026-11-21T01:28:00+00:00"
    }
   ],
   "WULF": [
+   {
+    "headline": "Morgan Stanley says new chip export rule favors US data center developers TeraWulf, Hut 8, Cipher",
+    "summary": "Morgan Stanley said the BIS remote-access rule is tighter than expected and pushes GPU deployment onshore, a tailwind for TeraWulf, Hut 8, Cipher, Riot, Galaxy and Equinix. It sees near-term…",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=52709f777d1482955bc1534a45c33456815da680f24ab387314af23a8739b26e",
+    "published": "2026-11-24T15:45:09+00:00"
+   },
    {
     "headline": "Nebius & CoreWeave Jump 21% While Oracle Sees 12% Gains on Monday Following Jensen’s Return",
     "summary": "Eric Bleeker, Chief Investment Officer at 24/7 Wall St., says neocloud stocks rallied Monday on the return of Jensen Huang to NVIDIA. At 1:30 p.m. Eastern, Nebius Group (NASDAQ: NBIS) and CoreWeave (NASDAQ: CRWV) were each up 21%, IREN (NASDAQ: IREN) was up 25%, TeraWulf (NASDAQ: WULF) was up 13% and Oracle (NYSE: ORCL) was up 12%. Leading ETFs showed software up closer to 4% and semiconductors up 13%. Bleeker also pointed to two company-specific items. The New York Times reported that Anthropic's demand is so large that SpaceX needs new data centers by October to fill its orders. On Friday, O",
@@ -531,11 +914,32 @@
     "published": "2026-11-23T17:05:24+00:00"
    },
    {
+    "headline": "B. Riley cuts TeraWulf and Bitdeer price targets, keeps Buy ratings",
+    "summary": "Analyst Nick Giles lowered TeraWulf to $22 and Bitdeer to $12 after rolling in third-quarter results. He still ranks TeraWulf as his top pick and argues the group trades at…",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=6e40f205a256bf17b0c02eae257be0c18a46792bce343bc320dc30f51b577e6c",
+    "published": "2026-11-23T15:53:33+00:00"
+   },
+   {
+    "headline": "TeraWulf CEO says he won’t rush a Muskie lease, citing dilution risk",
+    "summary": "Paul Prager says the same parties remain interested in TeraWulf's 1 GW Kentucky site. He wants a deal funded through prepayments, customer-funded equipment or strategic capital rather than new stock,…",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=9c17f759ad5cec8e12a669e2f4118f170b3dccea3f44382003b0b1bdf0191469",
+    "published": "2026-11-23T15:03:10+00:00"
+   },
+   {
     "headline": "Applied Digital Soars 26% on $5.4B Hyperscaler Lease; Cipher Digital Jumps 19%, TeraWulf Surges 15%",
     "summary": "An 18-year lease with a mystery hyperscaler lit up AI data center stocks, but a surprise boardroom reversal at NVIDIA may be doing just as much of the lifting. Can the rebound survive a week of heavy macro data and chip export curbs?",
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=48c9cfda4f35b557bb14799e008af398442ad180605f2f3326c88a2226031e0f",
     "published": "2026-11-23T15:02:41+00:00"
+   },
+   {
+    "headline": "CoreWeave Stock Surges After Nvidia Reinstates Jensen Huang as CEO",
+    "summary": "CoreWeave shares are soaring Monday with its AI cloud services peers after Nvidia brought back CEO Jensen Huang, lifting AI demand optimism.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=5c9064630462202d7e960f905dd85c04e5486d287668bfa781623ce9629ee857",
+    "published": "2026-11-23T14:48:41+00:00"
    },
    {
     "headline": "Applied Digital Soars 27% on 18-Year Hyperscaler Lease as Potential Revenue “Nears $100 Billion”",
@@ -545,21 +949,28 @@
     "published": "2026-11-23T14:33:00+00:00"
    },
    {
+    "headline": "B. Riley Securities Maintains Buy on TeraWulf, Lowers Price Target to $22",
+    "summary": "B. Riley Securities  analyst Nick Giles   maintains TeraWulf (NASDAQ:WULF) with a Buy and lowers the price target from $26 to $22.",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=222271f1ea93c108c7ddaf4ee78c7381d02556d2af1c4c2476005d1745594b8b",
+    "published": "2026-11-23T09:58:37+00:00"
+   },
+   {
     "headline": "WULF Stock In Focus As CEO Says He Won't Rush A Muskie Lease Deal In A ‘Terrible Market’",
     "summary": "Interest in Muskie's gigawatt-scale data center site is unchanged, and the same potential customers are still in the mix, Prager said.",
     "source": "Yahoo",
     "url": "https://finnhub.io/api/news?id=a5b47512c543b21ae00a5fb7bb8a8543c9f8ab4b1816c3b0caee33eb59fa318a",
     "published": "2026-11-23T05:38:33+00:00"
-   },
-   {
-    "headline": "5 Most Overvalued AI Stocks According to Short Sellers",
-    "summary": "The U.S. stock market has suffered a broad sell-off heading into year-end, driven by renewed concerns about elevated AI valuations and uncertainty surrounding the profitability of artificial intelligence investments. Short sellers are increasingly piling pressure amid concerns that technology companies have committed enormous amounts of capital to AI infrastructure without demonstrating that the resulting investments […]",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=a149de4ad5256b9a8ebcc66b85f35d31c11ed5e402567a12c1ce8652457583a2",
-    "published": "2026-11-21T14:50:11+00:00"
    }
   ],
   "ZETA": [
+   {
+    "headline": "Zeta Global Sees Athena Adoption Climb as Customer Growth and Spending Accelerate",
+    "summary": "Zeta Global (NYSE:ZETA) executives said adoption of the company’s Athena platform accelerated in the third quarter, as more of its largest customers used the marketing software and expanded their activity across the platform. Speaking at the RBC TIMT Conference, Chief Financial Officer Chris Greine",
+    "source": "Yahoo",
+    "url": "https://finnhub.io/api/news?id=b9ca664fc0074c38e29c956301fbfdbde44fafc4b84a9d25965d27aaae977e15",
+    "published": "2026-11-24T11:12:57+00:00"
+   },
    {
     "headline": "Zeta Global Targets $2.3 Billion in 2028 Revenue as Organic Growth Accelerates",
     "summary": "Zeta Global (NYSE:ZETA) reported accelerating organic revenue growth in its most recent quarter and is targeting at least $2.3 billion in annual revenue by 2028, Chief Financial Officer Chris Greiner told investors at the Three Part Advisors Southwest IDEAS Conference. Greiner said the marketing te",
@@ -568,11 +979,11 @@
     "published": "2026-11-24T00:12:37+00:00"
    },
    {
-    "headline": "3 Stocks Riding The Agentic AI Boom For Solopreneur Platforms",
-    "summary": "Agentic AI is not just writing code or invoices any more. It is spinning up one person companies at scale, handling admin, and quietly reshaping how work is organised. That shift creates fresh revenue streams for platforms serving solopreneurs and microbusinesses, while potentially sidelining slower incumbents. This article introduces 3 stocks that appear closely linked to this AI driven surge and explores how each might affect patient shareholders. The three stocks covered next are only a...",
-    "source": "Yahoo",
-    "url": "https://finnhub.io/api/news?id=5a2c621fd04174b4ccfd9222d576284c0c452f6c57ed8c6583cdb7f728e0f353",
-    "published": "2026-11-21T17:09:12+00:00"
+    "headline": "Trading Halt: Halt status updated at 12:10:00 PM ET: Quotation Resumption: News and Resumption Times",
+    "summary": "",
+    "source": "Benzinga",
+    "url": "https://finnhub.io/api/news?id=a15ae1a176ff94a0240f7e2b4551e1328c886c6bbd7630e1d53c79261da9beb5",
+    "published": "2026-11-23T14:38:54+00:00"
    }
   ]
  }
