@@ -244,3 +244,7 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-24,in,MAHABANK.NS,Bank of Maharashtra,97.56,25349.6504,trend|longpat,کن‌اسلیم|کیفیت رشد,4,0.602,کف دوقلو (شکست خط گردن),2.5
 2026-11-24,in,ARVIND.NS,Arvind Ltd.,537.7,25349.6504,trend|pullback,صورت مالی|کیفیت رشد,4,0.508,روند صعودی,1.0
 2026-11-24,tw,2597.TW,RUENTEX ENGINEERING & CONST. CO,192.0,56.7,breakout|trend|longpat,صورت مالی|بافت|سود پیاپی,2,0.081,شکست سقف ۵۲ هفته,1.7
+2026-11-25,us,KNTK,"Kinetik Holdings, Inc.",53.91,701.19,trend|pullback|longpat,کن‌اسلیم|بافت|کیفیت رشد|سود پیاپی (SEC),4,0.653,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-25,us,ANF,Abercrombie & Fitch,170.355,701.19,trend|longpat,بافت|کیفیت رشد,4,0.954,کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته,3.0
+2026-11-25,in,TRENT.NS,Trent Ltd.,3319.6001,25819.25,breakout|trend|longpat,صورت مالی|بافت,3,0.142,سرووشانه معکوس,2.0
+2026-11-25,in,HAL.NS,Hindustan Aeronautics Ltd.,4936.0,25819.25,trend|pullback|longpat,صورت مالی|بافت|کیفیت رشد,4,0.058,فنجان‌ودسته (نزدیک سقف),2.0

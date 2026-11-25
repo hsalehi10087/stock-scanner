@@ -1,99 +1,99 @@
 {
- "date": "2026-11-24",
+ "date": "2026-11-25",
  "markets": {
   "us": {
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "scored": 1476,
-   "technical": 134,
-   "checked": 5,
+   "technical": 140,
+   "checked": 8,
    "signals": [
     {
-     "ticker": "CNO",
-     "name": "CNO Financial Group",
-     "price": 55.83,
+     "ticker": "KNTK",
+     "name": "Kinetik Holdings, Inc.",
+     "price": 53.91,
      "setups": [
       "trend",
       "pullback",
       "longpat"
      ],
-     "tech_rank": 0.293,
+     "tech_rank": 0.653,
      "fundamentals": [
-      "کیفیت رشد",
-      "سود پیاپی (SEC)"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 3,
-     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
-     "profit_more": true,
-     "chart": "مثلث صعودی",
-     "chart_score": 2.0,
-     "sec": {
-      "date": "2026-11-24",
-      "period_end": "2026-09-30",
-      "stale": false,
-      "derived": false,
-      "revenue_yoy": -8.6,
-      "net_income_yoy": 597.4,
-      "eps_yoy": 612.5,
-      "profit_streak_yoy": 3,
-      "revenue_streak_yoy": 0,
-      "operating_margin": 20.3,
-      "margin_up": true,
-      "net_margin": 14.8,
-      "one_off": false,
-      "revenue_ttm": 4543900000,
-      "net_income_ttm": 417600000,
-      "eps_ttm": 4.38
-     },
-     "k8": []
-    },
-    {
-     "ticker": "CSX",
-     "name": "CSX Corporation",
-     "price": 49.485,
-     "setups": [
-      "trend",
-      "pullback",
-      "longpat"
-     ],
-     "tech_rank": 0.274,
-     "fundamentals": [
+      "کن‌اسلیم",
       "بافت",
       "کیفیت رشد",
       "سود پیاپی (SEC)"
      ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 3,
+     "quality": "⭐۴/۵ ⚠️رقیق‌شدن",
+     "profit_streak": 2,
      "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
-     "profit_more": true,
-     "chart": "مثلث صعودی",
+     "profit_more": false,
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
      "chart_score": 2.0,
      "sec": {
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "period_end": "2026-09-30",
       "stale": false,
       "derived": false,
-      "revenue_yoy": 12.0,
-      "net_income_yoy": 51.6,
-      "eps_yoy": 54.1,
-      "profit_streak_yoy": 3,
-      "revenue_streak_yoy": 3,
-      "operating_margin": 39.1,
-      "margin_up": true,
-      "net_margin": 26.2,
+      "revenue_yoy": 22.7,
+      "net_income_yoy": 319.5,
+      "eps_yoy": 766.7,
+      "profit_streak_yoy": 2,
+      "revenue_streak_yoy": 2,
+      "operating_margin": 11.2,
+      "margin_up": false,
+      "net_margin": 3.9,
       "one_off": false,
-      "revenue_ttm": 14942000000,
-      "net_income_ttm": 3581000000,
-      "eps_ttm": 1.93
+      "revenue_ttm": 1991236000,
+      "net_income_ttm": 213180000,
+      "eps_ttm": 3.05
+     },
+     "k8": []
+    },
+    {
+     "ticker": "ANF",
+     "name": "Abercrombie & Fitch",
+     "price": 170.355,
+     "setups": [
+      "trend",
+      "longpat"
+     ],
+     "tech_rank": 0.954,
+     "fundamentals": [
+      "بافت",
+      "کیفیت رشد"
+     ],
+     "quality": "⭐۴/۵",
+     "profit_streak": 1,
+     "profit_basis": "گزارش رسمی SEC، نسبت به همان فصل سال قبل",
+     "profit_more": false,
+     "chart": "کف دوقلو (شکست خط گردن)، شکست سقف ۵۲ هفته",
+     "chart_score": 3.0,
+     "sec": {
+      "date": "2026-11-24",
+      "period_end": "2026-08-01",
+      "stale": false,
+      "derived": false,
+      "revenue_yoy": 4.8,
+      "net_income_yoy": 29.9,
+      "eps_yoy": 43.3,
+      "profit_streak_yoy": 1,
+      "revenue_streak_yoy": 8,
+      "operating_margin": 19.9,
+      "margin_up": true,
+      "net_margin": 14.5,
+      "one_off": false,
+      "revenue_ttm": 5340931000,
+      "net_income_ttm": 535979000,
+      "eps_ttm": 11.6
      },
      "k8": [
       [
-       "2026-11-17",
-       "1.01"
+       "2026-11-24",
+       "5.02"
       ],
       [
-       "2026-11-17",
-       "1.02"
+       "2026-11-24",
+       "2.02"
       ]
      ]
     }
@@ -101,120 +101,78 @@
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 0,
+    "ext": 1,
     "rsi": 0,
-    "earn": 1,
-    "fund": 2
+    "earn": 0,
+    "fund": 5,
+    "sec": 1
    }
   },
   "cn": {
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "scored": 1500,
-   "technical": 18,
-   "checked": 11,
+   "technical": 11,
+   "checked": 6,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 1,
-    "rsi": 2,
+    "ext": 0,
+    "rsi": 3,
     "earn": 0,
-    "fund": 11
+    "fund": 6
    }
   },
   "in": {
-   "data_date": "2026-11-23",
-   "scored": 708,
-   "technical": 66,
-   "checked": 15,
+   "data_date": "2026-11-25",
+   "scored": 706,
+   "technical": 73,
+   "checked": 17,
    "signals": [
     {
-     "ticker": "COFORGE.NS",
-     "name": "Coforge Ltd.",
-     "price": 2142.3,
+     "ticker": "TRENT.NS",
+     "name": "Trent Ltd.",
+     "price": 3319.6,
      "setups": [
       "breakout",
       "trend",
       "longpat"
      ],
-     "tech_rank": 0.301,
+     "tech_rank": 0.142,
      "fundamentals": [
       "صورت مالی",
-      "کن‌اسلیم",
-      "کیفیت رشد"
+      "بافت"
      ],
-     "quality": "⭐۵/۵",
-     "profit_streak": 1,
+     "quality": "⭐۳/۵",
+     "profit_streak": 0,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
+     "chart": "سرووشانه معکوس",
+     "chart_score": 2.0,
      "sec": null,
      "k8": []
     },
     {
-     "ticker": "DCBBANK.NS",
-     "name": "DCB Bank Ltd.",
-     "price": 237.93,
+     "ticker": "HAL.NS",
+     "name": "Hindustan Aeronautics Ltd.",
+     "price": 4936.0,
      "setups": [
       "trend",
+      "pullback",
       "longpat"
      ],
-     "tech_rank": 0.636,
-     "fundamentals": [
-      "کیفیت رشد",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 4,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": true,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "MAHABANK.NS",
-     "name": "Bank of Maharashtra",
-     "price": 97.56,
-     "setups": [
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.602,
-     "fundamentals": [
-      "کن‌اسلیم",
-      "کیفیت رشد"
-     ],
-     "quality": "⭐۴/۵",
-     "profit_streak": 1,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "کف دوقلو (شکست خط گردن)",
-     "chart_score": 2.5,
-     "sec": null,
-     "k8": []
-    },
-    {
-     "ticker": "ARVIND.NS",
-     "name": "Arvind Ltd.",
-     "price": 537.7,
-     "setups": [
-      "trend",
-      "pullback"
-     ],
-     "tech_rank": 0.508,
+     "tech_rank": 0.058,
      "fundamentals": [
       "صورت مالی",
+      "بافت",
       "کیفیت رشد"
      ],
      "quality": "⭐۴/۵",
      "profit_streak": 1,
      "profit_basis": "فصل‌به‌فصل",
      "profit_more": false,
-     "chart": "روند صعودی",
-     "chart_score": 1.0,
+     "chart": "فنجان‌ودسته (نزدیک سقف)",
+     "chart_score": 2.0,
      "sec": null,
      "k8": []
     }
@@ -222,15 +180,15 @@
    "market_up50": true,
    "cap": 8,
    "dropped": {
-    "ext": 4,
+    "ext": 2,
     "rsi": 0,
     "earn": 0,
-    "fund": 11
+    "fund": 15
    }
   },
   "jp": {
-   "data_date": "2026-11-24",
-   "scored": 61,
+   "data_date": "2026-11-25",
+   "scored": 1,
    "technical": 0,
    "checked": 0,
    "signals": [],
@@ -244,47 +202,22 @@
    }
   },
   "tw": {
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "scored": 1199,
-   "technical": 9,
-   "checked": 4,
-   "signals": [
-    {
-     "ticker": "2597.TW",
-     "name": "RUENTEX ENGINEERING & CONST. CO",
-     "price": 192.0,
-     "setups": [
-      "breakout",
-      "trend",
-      "longpat"
-     ],
-     "tech_rank": 0.081,
-     "fundamentals": [
-      "صورت مالی",
-      "بافت",
-      "سود پیاپی"
-     ],
-     "quality": "⭐۲/۵",
-     "profit_streak": 2,
-     "profit_basis": "فصل‌به‌فصل",
-     "profit_more": false,
-     "chart": "شکست سقف ۵۲ هفته",
-     "chart_score": 1.7,
-     "sec": null,
-     "k8": []
-    }
-   ],
+   "technical": 7,
+   "checked": 3,
+   "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 1,
+    "ext": 0,
     "rsi": 0,
     "earn": 0,
     "fund": 3
    }
   },
   "kr": {
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "scored": 1,
    "technical": 0,
    "checked": 0,
@@ -299,55 +232,25 @@
    }
   },
   "hk": {
-   "data_date": "2026-11-24",
-   "scored": 52,
-   "technical": 3,
-   "checked": 2,
+   "data_date": "2026-11-25",
+   "scored": 995,
+   "technical": 16,
+   "checked": 10,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 1,
-    "rsi": 0,
+    "ext": 4,
+    "rsi": 1,
     "earn": 0,
-    "fund": 2
+    "fund": 10
    }
   },
   "gb": {
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "scored": 346,
-   "technical": 32,
-   "checked": 28,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 1,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 28
-   }
-  },
-  "de": {
-   "data_date": "2026-11-24",
-   "scored": 86,
-   "technical": 6,
-   "checked": 5,
-   "signals": [],
-   "market_up50": false,
-   "cap": 2,
-   "dropped": {
-    "ext": 0,
-    "rsi": 0,
-    "earn": 0,
-    "fund": 5
-   }
-  },
-  "ca": {
-   "data_date": "2026-11-24",
-   "scored": 489,
    "technical": 27,
-   "checked": 24,
+   "checked": 25,
    "signals": [],
    "market_up50": false,
    "cap": 2,
@@ -355,22 +258,52 @@
     "ext": 2,
     "rsi": 0,
     "earn": 0,
-    "fund": 24
+    "fund": 25
    }
   },
-  "au": {
-   "data_date": "2026-11-24",
-   "scored": 455,
-   "technical": 26,
-   "checked": 21,
+  "de": {
+   "data_date": "2026-11-25",
+   "scored": 86,
+   "technical": 7,
+   "checked": 6,
    "signals": [],
    "market_up50": false,
    "cap": 2,
    "dropped": {
-    "ext": 4,
+    "ext": 0,
     "rsi": 0,
     "earn": 0,
-    "fund": 21
+    "fund": 6
+   }
+  },
+  "ca": {
+   "data_date": "2026-11-25",
+   "scored": 493,
+   "technical": 26,
+   "checked": 24,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 1,
+    "rsi": 0,
+    "earn": 0,
+    "fund": 24
+   }
+  },
+  "au": {
+   "data_date": "2026-11-25",
+   "scored": 456,
+   "technical": 30,
+   "checked": 25,
+   "signals": [],
+   "market_up50": false,
+   "cap": 2,
+   "dropped": {
+    "ext": 3,
+    "rsi": 1,
+    "earn": 0,
+    "fund": 25
    }
   }
  }
