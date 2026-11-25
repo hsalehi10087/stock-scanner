@@ -1,0 +1,32 @@
+id: e4eeca06e0-btc-prudential-signal
+name: BTC Prudential Signal (SMA200/RSI/volume, 2 closes below SMA50 exit)
+name_fa: سیگنال محتاط بیت‌کوین (میانگین ۲۰۰، RSI و حجم؛ خروج با دو بسته‌شدن زیر میانگین ۵۰)
+source: github/trading-strategy
+source_url: https://github.com/giuse2003/BTC_Prudential_Signal
+claim: "«خرید: هر چهار شرط درست باشد — بسته‌شدن بالای SMA200، RSI14 دست‌کم ۴۰، بسته‌شدن بالاتر از ۷ روز قبل و حجم BTC-USD بالای میانگین ۲۰ روزه. فروش: دو بسته‌شدن روزانه‌ی پشت‌سرهم زیر SMA50؛ فروش اولویت دارد. در بقیه‌ی حالت‌ها وضعیت قبلی حفظ می‌شود.» — مدل مدیریت ریسک شفاف بیت‌کوین با بک‌تست تاریخی از ۲۰۱۵"
+claimed_return: "no number in README (backtest vs buy & hold, from 2015)"
+added: 2026-11-25
+status: implemented
+asset_class: crypto
+symbols: [BTC-USD]
+timeframe: 1d
+start: '2015-07-20'
+notes: >-
+  قانون از README ریپو گرفته شده. عدد سود در README نبود و صفحه‌ی ریپو از این محیط باز نشد.
+  داده‌ی اصلی کوین‌بیس است، اینجا داده‌ی Yahoo برای BTC-USD استفاده می‌شود (حجم کمی فرق دارد).
+  در اصل معامله در بسته‌شدن همان روز و قرار گرفتن در بازار از روز بعد است؛ اینجا معامله در بازگشایی روز بعد.
+  «فروش اولویت دارد» با این پیاده شده که اگر شرط فروش برقرار باشد، خرید انجام نمی‌شود. در اصل هزینه‌ای حساب نشده، اینجا ۰٫۱٪ در هر طرف.
+indicators:
+  sma50: {fn: sma, n: 50}
+  sma200: {fn: sma, n: 200}
+  rsi14: {fn: rsi, n: 14}
+  close_p7: {fn: prev, col: close, k: 7}
+  vol_sma20: {fn: sma, n: 20, col: volume}
+  close_p1: {fn: prev, col: close, k: 1}
+  sma50_p1: {fn: prev, col: sma50, k: 1}
+entry: close > sma200 and rsi14 >= 40 and close > close_p7 and volume > vol_sma20 and not (close < sma50 and close_p1 < sma50_p1)
+exit: close < sma50 and close_p1 < sma50_p1
+side: long
+stop_loss_pct: null
+take_profit_pct: null
+max_hold_bars: null

@@ -1,0 +1,29 @@
+id: 17e3424e9b-ema9-daily-close-2-below
+name: Daily EMA9 close-above entry, 2 closes below exit
+name_fa: ورود با بسته‌شدن روزانه بالای EMA9، خروج با دو بسته‌شدن زیر آن
+source: tradingview-ideas
+source_url: https://www.tradingview.com/chart/MRVL/0g0rlp1W-Assets-Watching-upside-if-above-ema9-DAILY-for-AI-Crypto-ETF/
+claim: "«من از EMA9 روزانه به‌عنوان اندیکاتور اصلی برای ورود و خروج استفاده می‌کنم. سیگنال خرید: یک کندل روزانه بالای EMA9 بسته شود. نگه‌داری: تا وقتی قیمت بالای EMA9 روزانه بسته می‌شود. سیگنال فروش: دو کندل روزانه‌ی پشت‌سرهم زیر EMA9 بسته شوند.» — همراه با هدف‌های قیمتی مثل NVDA از ۱۵۵ به ۲۱۵ دلار و QQQ از ۶۳۸ به ۷۳۵–۷۵۰ دلار"
+claimed_return: "upside targets only (e.g. NVDA $155 -> $215), no backtest"
+added: 2026-11-25
+status: implemented
+asset_class: stock
+symbols: [NVDA, MU, LRCX, MRVL, INTC, GOOGL, AVGO, KLAC, AMAT, ARM, TSM, STX, QQQ, SMH, SOXX]
+timeframe: 1d
+start: '2015-01-01'
+notes: >-
+  نویسنده عدد سود یا بک‌تست نداده؛ فقط هدف قیمتی گفته. فقط قانون EMA9 آزموده می‌شود.
+  نمادها از فهرست خود پست انتخاب شده‌اند (سهام و ETFهای فناوری)؛ کریپتو، فلزات و SOXL و نمادهای تازه‌وارد مثل SNDK، IREN، CRWV، NBIS، MSTR کنار گذاشته شدند.
+  موتور یک نوع دارایی دارد، پس ETFها هم با هزینه‌ی سهام حساب می‌شوند. سرمایه بین نمادها مساوی تقسیم می‌شود.
+  ورود: وقتی بیرون از بازار هستیم و کندل روزانه بالای EMA9 بسته شود. خروج: دو بسته‌شدن پشت‌سرهم زیر EMA9.
+  اشاره‌ی نویسنده به EMA20 فقط توضیح است و جزو قانون نیامده. حد ضرر و حد سود گفته نشده.
+indicators:
+  ema9: {fn: ema, n: 9}
+  close_p1: {fn: prev, col: close, k: 1}
+  ema9_p1: {fn: prev, col: ema9, k: 1}
+entry: close > ema9
+exit: close < ema9 and close_p1 < ema9_p1
+side: long
+stop_loss_pct: null
+take_profit_pct: null
+max_hold_bars: null
