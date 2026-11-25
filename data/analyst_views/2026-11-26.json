@@ -1,0 +1,739 @@
+{
+ "date": "2026-11-26",
+ "generated_at": "2026-11-25T23:50:14+00:00",
+ "articles_read": 204,
+ "method": "۲۰۴ خبر یکتا از سه فایل آخر؛ متن ۱۰۰ خبر که بدنه داشتند خوانده شد (بدون WebFetch)؛ خبرهای بدون متن فقط برچسب گرفتند و خبرهای شرکتی، حقوقی، قدیمی (نشانی‌های فوریه و ژوئن) و تحلیل تبلیغاتی «۹۷۰۰٪ رشد» کنار گذاشته شد.",
+ "full_read": 100,
+ "assets": {
+  "gold": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 1,
+    "bear": 13,
+    "neutral": 1
+   },
+   "confidence": "بالا",
+   "summary_fa": "طلا با تورم بالای آمریکا، انتظار افزایش نرخ بهره‌ی فدرال رزرو در دسامبر و دلار قوی به پایین‌ترین سطح حدود ۱۵ ماه نزدیک ۳۵۰۰ دلار رسید. فروش سهام هوش مصنوعی هم باعث شده سرمایه‌گذاران برای تأمین نقدینگی طلا بفروشند. جی‌پی‌مورگان برای کوتاه‌مدت ضعف می‌بیند اما از سه‌ماهه‌ی دوم ۲۰۲۷ انتظار بازگشت دارد.",
+   "stories": [
+    {
+     "id": "b4d41bbc43b9",
+     "title_fa": "تورم PCE آمریکا به ۳.۸٪ رسید و طلا افت کرد",
+     "understood_fa": "تورم PCE آمریکا در اکتبر به ۳.۸٪ رسید و تورم هسته ۳.۳٪ شد که ۰.۱ واحد بالاتر از انتظار بود. پیش از این گزارش، احتمال افزایش ربع درصدی نرخ در دسامبر طبق FedWatch حدود ۹۹.۸٪ بود. بعد از انتشار داده، طلا و نقره به کف‌های تازه‌ی روز رسیدند؛ یعنی تورم چسبنده همچنان فشار اصلی روی طلاست.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/pce-inflation-rises-to-3-8-as-stocks-gold-and-silver-weaken-1647180"
+    },
+    {
+     "id": "ed6cab5640dd",
+     "title_fa": "جی‌پی‌مورگان: طلا نزدیک کف چرخه است",
+     "understood_fa": "جی‌پی‌مورگان در چشم‌انداز فلزات ۲۰۲۷/۲۸ می‌گوید طلا بعد از بیش از ۳۰٪ اصلاح به کف چرخه‌ای نزدیک شده است. به گفته‌ی این بانک، عوامل فشار یعنی قیمت انرژی، تورم چسبنده و ازسرگیری افزایش نرخ بهره در ۲۰۲۷ یکی‌یکی برمی‌گردند و طلا در نیمه‌ی دوم ۲۰۲۷ می‌تواند به ۴۵۰۰ دلار برگردد. پس دید کوتاه‌مدت ضعیف است اما دید میان‌مدت مثبت.",
+     "publisher": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/e81353dd-0da9-4850-8d48-6fa370bf15dc"
+    },
+    {
+     "id": "b8eecd19cdaa",
+     "title_fa": "طلا امسال مثل سهام رفتار می‌کند، نه پناهگاه",
+     "understood_fa": "سی‌ان‌بی‌سی می‌نویسد همبستگی طلا با شاخص S&P 500 در ۲۰۲۶ به حدود ۰.۴۱ رسیده، در حالی که از ۲۰۰۴ تا ۲۰۲۵ تقریباً صفر بود. از پایان اوت، GLD در ۷۷٪ روزهای افت S&P 500 پایین آمده است. یعنی در موج‌های فروش سهام، طلا هم فروخته می‌شود و نقش پناهگاه امن را کمتر بازی می‌کند.",
+     "publisher": "CNBC",
+     "url": "https://www.cnbc.com/2026/11/24/gold-is-doing-something-strange-heres-one-way-to-play-it-.html"
+    }
+   ],
+   "views": [
+    {
+     "who": "JPMorgan",
+     "view_fa": "طلا بعد از بیش از ۳۰٪ اصلاح به کف چرخه‌ای نزدیک است و با برگشت عوامل فشار (انرژی، تورم، افزایش نرخ) از سه‌ماهه‌ی دوم ۲۰۲۷ بهبود می‌یابد و در نیمه‌ی دوم ۲۰۲۷ می‌تواند به ۴۵۰۰ دلار برسد.",
+     "url": "https://finance.biggo.com/news/e81353dd-0da9-4850-8d48-6fa370bf15dc"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "silver": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 0,
+    "bear": 11,
+    "neutral": 0
+   },
+   "confidence": "بالا",
+   "summary_fa": "نقره به حدود ۴۰ دلار و پایین‌ترین سطح بیش از ۱۴ ماه رسیده و فقط در نوامبر حدود ۲۰٪ ریخته است. دلار قوی، انتظار افزایش نرخ بهره و ضعف تقاضای صنعتی فشار اصلی‌اند و دویچه‌بانک می‌گوید دوران کمبود نقره گذشته است.",
+   "stories": [
+    {
+     "id": "7ef214ef35ee",
+     "title_fa": "نقره روی ۴۰ دلار؛ شکست آن راه ۳۷ دلار را باز می‌کند",
+     "understood_fa": "نقره با ۱.۵٪ افت به حدود ۴۰.۱۰ دلار رسید که پایین‌ترین سطح در بیش از ۱۴ ماه است و دلیلش برگشت دلار بود. شاخص قدرت نسبی (RSI) حدود ۲۸ است و نشان اشباع فروش است، اما تا وقتی قیمت زیر میانگین ۹ هفته‌ای (حدود ۵۰ دلار) است برگشت پایدار دیده نمی‌شود. شکست ۴۰ دلار می‌تواند نقره را به سمت کف ژوئیه ۲۰۲۵ یعنی ۳۶.۱۶ دلار ببرد.",
+     "publisher": "www.tmgm.com",
+     "url": "https://www.tmgm.com/en-in/analysis/market-news/article/40-a-level-whose-breakdown-could-expose-silver-price-below-37-202611250731"
+    },
+    {
+     "id": "4cfd1a83cc01",
+     "title_fa": "بازار نقره ممکن است از ۲۰۲۷ مازاد شود",
+     "understood_fa": "طبق Silver Institute و Metals Focus کسری بازار نقره در ۲۰۲۶ حدود ۳۵ میلیون اونس است، اما ضعف تقاضای صنعتی ممکن است بازار را از ۲۰۲۷ به مازاد ببرد. دویچه‌بانک برآورد می‌کند مصرف نقره در صنعت خورشیدی امسال بیش از ۲۰٪ کم شود، چون تولیدکنندگان برای کاهش هزینه نقره‌ی کمتری مصرف می‌کنند. این یعنی پشتوانه‌ی بنیادی رالی قبلی ضعیف‌تر شده است.",
+     "publisher": "mining.com",
+     "url": "https://www.mining.com/silver-miners-struggle-to-close-persistent-supply-gap/"
+    },
+    {
+     "id": "cc273780de04",
+     "title_fa": "بانک آمریکا برای فلزات گران‌بها ریسک کوتاه‌مدت می‌بیند",
+     "understood_fa": "بانک آمریکا در گزارش ۲۴ نوامبر برای فلزات گران‌بها ریسک کوتاه‌مدت می‌بیند و رتبه‌ی سهام Pan American Silver را از خرید به خنثی کاهش داد. این بانک قیمت‌های هدف بیشتر سهام معدنی را هم پایین آورد. در مقابل، مس و اورانیوم را برای میان‌مدت ترجیح می‌دهد.",
+     "publisher": "TradingView",
+     "url": "https://www.tradingview.com/news/seekingalpha:d75f8fdc7094b:0-bofa-favors-copper-and-uranium-downgrades-pan-american-silver/"
+    }
+   ],
+   "views": [
+    {
+     "who": "Deutsche Bank",
+     "view_fa": "دنیل غالی، رئیس پژوهش فلزات دویچه‌بانک: «اوج کمبود نقره پشت سر گذاشته شده است»؛ این بانک انتظار دارد مصرف نقره در صنعت خورشیدی امسال بیش از ۲۰٪ کم شود.",
+     "url": "https://www.mining.com/silver-miners-struggle-to-close-persistent-supply-gap/"
+    },
+    {
+     "who": "BofA Securities",
+     "view_fa": "برای فلزات گران‌بها ریسک کوتاه‌مدت می‌بیند و رتبه‌ی Pan American Silver را به خنثی کاهش داد.",
+     "url": "https://www.tradingview.com/news/seekingalpha:d75f8fdc7094b:0-bofa-favors-copper-and-uranium-downgrades-pan-american-silver/"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "bitcoin": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 0,
+    "bear": 14,
+    "neutral": 1
+   },
+   "confidence": "بالا",
+   "summary_fa": "بیت‌کوین زیر ۶۰ هزار دلار و زیر همه‌ی میانگین‌های متحرک مهم معامله می‌شود. خروج رکورد حدود ۴.۹ میلیارد دلار از ETFهای بیت‌کوین در نوامبر، کوچک شدن استیبل‌کوین‌ها و فروش سهام هوش مصنوعی فشار اصلی‌اند. شاخص‌ها اشباع فروش نشان می‌دهند اما هنوز نشانه‌ی برگشت روند نیست.",
+   "stories": [
+    {
+     "id": "8e65ca3feddc",
+     "title_fa": "خروج رکورد نزدیک ۵ میلیارد دلار از ETFهای بیت‌کوین",
+     "understood_fa": "ETFهای نقدی بیت‌کوین در آمریکا در نوامبر ۴.۹۴ میلیارد دلار خروج خالص داشتند که از رکورد ژوئن بیشتر است. دلیل آن ضعف سهام هوش مصنوعی و نبود اطمینان درباره‌ی نرخ بهره است. این یعنی تقاضای نهادی، که پشتوانه‌ی اصلی قیمت بود، فعلاً برعکس شده است.",
+     "publisher": "Cointelegraph",
+     "url": "https://cointelegraph.com/markets/bitcoin-etfs-near-record-5-billion-monthly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+    },
+    {
+     "id": "4d6a47f09ee9",
+     "title_fa": "بیت‌کوین زیر سطوح کلیدی روند شکست",
+     "understood_fa": "بیت‌کوین حدود ۵۹٬۲۰۰ دلار است و زیر میانگین‌های ۷، ۲۰، ۵۰ و ۲۰۰ روزه قرار دارد؛ یعنی ساختار روند نزولی است. RSI حدود ۲۴ است و اشباع فروش را نشان می‌دهد، اما متن تأکید می‌کند که در بازار روند‌دار اشباع فروش می‌تواند ادامه پیدا کند. برای بهتر شدن تصویر، قیمت باید بالای ۶۰٬۳۰۰ تا ۶۱٬۴۰۰ دلار برگردد و خروج از ETFها متوقف شود.",
+     "publisher": "Blockchain News",
+     "url": "https://blockchain.news/news/20261125-price-prediction-btc-bitcoin-breaks-below-key-trend-levels"
+    },
+    {
+     "id": "b4584aa160ed",
+     "title_fa": "بازخرید ۱۲ میلیارد دلاری استیبل‌کوین‌ها",
+     "understood_fa": "طبق داده‌های Kaiko، در ۳۰ روز تا ۱۳ نوامبر حدود ۱۲ میلیارد دلار از ۱۱ استیبل‌کوین بازخرید خالص شد و ارزش بازار USDT در ۶۰ روز ۹ میلیارد دلار کم شد. این الگو یادآور بازار نزولی ۲۰۲۲ است و یعنی نقدینگی از بازار کریپتو بیرون می‌رود.",
+     "publisher": "Cointelegraph",
+     "url": "https://cointelegraph.com/markets/stablecoin-cash-out-2022-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+    }
+   ],
+   "views": [
+    {
+     "who": "Glassnode",
+     "view_fa": "اگر الگوی بازارهای نزولی قبلی تکرار شود، بیت‌کوین ممکن است مدتی زیر «قیمت تحقق‌یافته» یعنی حدود ۵۳٬۲۰۰ دلار معامله شود.",
+     "url": "https://cointelegraph.com/markets/bitcoin-price-bear-market-history-repeats"
+    },
+    {
+     "who": "Grayscale",
+     "view_fa": "بیت‌کوین بعد از خروج بیش از ۲ میلیارد دلار از محصولات سرمایه‌گذاری کریپتو در یک هفته اشباع فروش به نظر می‌رسد، اما ریسک‌های هوش مصنوعی می‌تواند قیمت کوتاه‌مدت را تعیین کند.",
+     "url": "https://cointelegraph.com/markets/bitcoin-oversold-ai-risks-grayscale"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "copper": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 1,
+    "bear": 5,
+    "neutral": 1
+   },
+   "confidence": "متوسط",
+   "summary_fa": "مس حدود ۲۱٪ از رکورد سپتامبر پایین آمده و وارد بازار نزولی شده است، چون سرمایه‌گذاران بعد از فروش سهام هوش مصنوعی برنگشته‌اند و ذخایر مس آمریکا به چین می‌رود. جی‌پی‌مورگان و BMO افت بیشتر تا حدود ۱۰ تا ۱۱ هزار دلار در هر تن را ممکن می‌دانند، هرچند BMO و بانک آمریکا برای میان‌مدت مثبت‌اند.",
+   "stories": [
+    {
+     "id": "ad4329773995",
+     "title_fa": "مس رشد ناشی از خبر انویدیا را پس داد",
+     "understood_fa": "مس کامکس با ۳.۵٪ افت به حدود ۵.۴۴ دلار در پوند رسید و ۲۱٪ زیر رکورد ۹ سپتامبر است، یعنی وارد بازار نزولی شده است. به گفته‌ی BMO، معامله‌گران ۳۰ تا ۱۰۰ هزار تن مس آمریکا را برای ارسال به چین رزرو کرده‌اند که نشان می‌دهد به تعرفه‌ی مس دیگر باور ندارند. افزایش نرخ بهره و دلار قوی هم فشار را بیشتر کرده، هرچند بازار فیزیکی هنوز تنگ است.",
+     "publisher": "mining.com",
+     "url": "https://www.mining.com/copper-price-erases-nvidia-rebound-as-investors-steer-clear-of-metals/"
+    },
+    {
+     "id": "ed6cab5640dd",
+     "title_fa": "جی‌پی‌مورگان: اصلاح مس تمام نشده",
+     "understood_fa": "جی‌پی‌مورگان می‌گوید قیمت بالای ۱۴ هزار دلار مس ناشی از انبارسازی حدود ۲ میلیون تن مس در آمریکا از ترس تعرفه بود، نه کمبود واقعی. با باز شدن این گره، مس تا نیمه‌ی اول ۲۰۲۷ به سمت ۱۱ هزار دلار در هر تن می‌رود و بعد آرام می‌گیرد. بزرگ‌ترین ریسک صعودی، برگشت ناگهانی تعرفه‌های آمریکاست.",
+     "publisher": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/e81353dd-0da9-4850-8d48-6fa370bf15dc"
+    },
+    {
+     "id": "cc273780de04",
+     "title_fa": "بانک آمریکا: مس همچنان موضوع ترجیحی است",
+     "understood_fa": "بانک آمریکا پیش‌بینی قیمت مس در ۲۰۲۷ را ۴.۱٪ کم کرد و به ۶.۶۳ دلار در پوند رساند. با این حال انتظار دارد مس تا سه‌ماهه‌ی چهارم ۲۰۲۷ به ۷.۲۶ دلار برسد، چون عرضه‌ی معادن تنگ است و تقاضای چین برمی‌گردد. یعنی کوتاه‌مدت ضعیف، میان‌مدت مثبت.",
+     "publisher": "TradingView",
+     "url": "https://www.tradingview.com/news/seekingalpha:d75f8fdc7094b:0-bofa-favors-copper-and-uranium-downgrades-pan-american-silver/"
+    }
+   ],
+   "views": [
+    {
+     "who": "JPMorgan",
+     "view_fa": "اصلاح مس تمام نشده و با باز شدن انبارهای آمریکا، قیمت تا نیمه‌ی اول ۲۰۲۷ به سمت ۱۱ هزار دلار در هر تن می‌رود؛ برگشت تعرفه‌ها بزرگ‌ترین ریسک صعودی است.",
+     "url": "https://finance.biggo.com/news/e81353dd-0da9-4850-8d48-6fa370bf15dc"
+    },
+    {
+     "who": "BMO Capital Markets",
+     "view_fa": "فروش تا وقتی واشنگتن تکلیف تعرفه را روشن کند یا قیمت به محدوده‌ی ۱۰ تا ۱۱ هزار دلار در هر تن برسد ادامه دارد؛ با این حال دید میان‌مدت ساختاری این بانک صعودی است.",
+     "url": "https://www.mining.com/copper-price-erases-nvidia-rebound-as-investors-steer-clear-of-metals/"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "oil": {
+   "stance": "نزولی",
+   "counts": {
+    "bull": 6,
+    "bear": 11,
+    "neutral": 5
+   },
+   "confidence": "بالا",
+   "summary_fa": "نفت در نوامبر بیش از ۲۰٪ افت کرده و برنت حدود ۸۸ تا ۹۱ دلار است، چون بازار پس از گزارش آژانس بین‌المللی انرژی انتظار مازاد عرضه دارد. حمله‌های تکراری به نفتکش‌ها در تنگه‌ی هرمز و ادعای حمله‌ی حوثی‌ها به راس‌تنوره فقط افت را کند کرده است.",
+   "stories": [
+    {
+     "id": "1241b953faff",
+     "title_fa": "نگرانی از مازاد عرضه بر ریسک خاورمیانه غلبه کرد",
+     "understood_fa": "نفت بعد از رشد بیش از ۲٪ روز سه‌شنبه دوباره پایین آمد، چون آژانس بین‌المللی انرژی انتظار دارد بازار در سه‌ماهه‌ی چهارم به مازاد برگردد. خط لوله‌ی میدان شراره‌ی لیبی دوباره باز شده و چین و هند واردات نفت روسیه را به رکورد می‌رسانند. ذخایر نفت آمریکا هم طبق API کمی (۱۲۶ هزار بشکه) بالا رفت.",
+     "publisher": "BigGo Finance",
+     "url": "https://finance.biggo.com/news/9f676d30-11cb-4496-b57a-0babf415428b"
+    },
+    {
+     "id": "fd21b28b33b1",
+     "title_fa": "حمله به پالایشگاه سعودی هم نفت را بالا نبرد",
+     "understood_fa": "حوثی‌های یمن گفتند به پالایشگاه راس‌تنوره عربستان حمله کرده‌اند که بخشی از یک پایانه‌ی بزرگ صادرات نفت است، اما قیمت باز هم پایین آمد. توجه بازار به نشست اوپک‌پلاس در ۲۹ نوامبر است که سیاست تولید ۲۰۲۷ را تعیین می‌کند و عراق خواستار افزایش برآورد ظرفیت تولیدش است. تولید بیشتر در سال آینده برای بازاری که نگران مازاد است خبر بدی است.",
+     "publisher": "FXEmpire",
+     "url": "https://www.fxempire.com/forecasts/article/oil-news-supply-glut-fears-weigh-on-crude-despite-saudi-refinery-attack-1647159"
+    },
+    {
+     "id": "8a96075c47ea",
+     "title_fa": "BMI: اوپک‌پلاس بر سر دوراهی ۲۰۲۷",
+     "understood_fa": "BMI، واحد فیچ، چهار سناریو برای اوپک‌پلاس در ۲۰۲۷ دارد و محتمل‌ترین آن (۴۵٪) کاهش محدود تولید با مشارکت ناهماهنگ است. در این سناریو بار کاهش تولید بیشتر روی عربستان می‌افتد و در نیمه‌ی دوم ۲۰۲۷ مازاد بزرگی پدید می‌آید. نتیجه: برنت در سه‌ماهه‌ی چهارم ۲۰۲۷ به‌طور میانگین ۶۵ تا ۷۰ دلار.",
+     "publisher": "Rigzone",
+     "url": "https://www.rigzone.com/news/opec_at_a_crossroads-24-nov-2026-185156-article/"
+    }
+   ],
+   "views": [
+    {
+     "who": "BMI (Fitch Solutions)",
+     "view_fa": "در سناریوی اصلی، اوپک‌پلاس نمی‌تواند کاهش تولید فراگیر را اجرا کند و با مازاد بزرگ نیمه‌ی دوم ۲۰۲۷، برنت در سه‌ماهه‌ی چهارم ۲۰۲۷ حدود ۶۵ تا ۷۰ دلار خواهد بود.",
+     "url": "https://www.rigzone.com/news/opec_at_a_crossroads-24-nov-2026-185156-article/"
+    },
+    {
+     "who": "NLI Research Institute",
+     "view_fa": "تسویوشی اوئنو: از زمان گزارش آژانس بین‌المللی انرژی، تصور مازاد عرضه قیمت‌ها را مهار کرده، اما حمله به کشتی‌ها و درگیری عربستان و حوثی‌ها پایداری این روند را نامطمئن کرده است.",
+     "url": "https://www.fxempire.com/forecasts/article/natural-gas-and-oil-forecast-surplus-fears-outweigh-gulf-attacks-can-brent-hold-87-39-1647061"
+    }
+   ],
+   "prev_stance": "نزولی",
+   "change_fa": ""
+  },
+  "rates": {
+   "stance": "صعودی",
+   "counts": {
+    "bull": 14,
+    "bear": 0,
+    "neutral": 6
+   },
+   "confidence": "بالا",
+   "summary_fa": "تورم PCE آمریکا به ۳.۸٪ و تورم هسته به ۳.۳٪ رسید و رشد اقتصادی سه‌ماهه‌ی سوم به ۴.۳٪ بازنگری شد؛ بازار افزایش ربع درصدی نرخ در نشست ۸ و ۹ دسامبر را کاملاً قیمت‌گذاری کرده است. معامله‌گران دو افزایش دیگر را محتمل می‌دانند، هرچند احتمال افزایش سوم در ۲۰۲۷ به حدود یک‌سوم کم شد.",
+   "stories": [
+    {
+     "id": "4fc9c7b0e27d",
+     "title_fa": "تورم PCE به ۳.۸٪ رسید؛ فشار بر فدرال رزرو برای ۲۰۲۷",
+     "understood_fa": "تورم PCE اکتبر ۳.۸٪ (تقریباً دو برابر هدف فدرال رزرو) و تورم هسته ۳.۳٪ بود که از انتظار بالاتر است؛ رشد اقتصادی سه‌ماهه‌ی سوم هم به ۴.۳٪ بازنگری شد. افزایش ربع درصدی نرخ در نشست ۸ و ۹ دسامبر کاملاً قیمت‌گذاری شده و معامله‌گران دو افزایش دیگر را در نظر دارند، اما احتمال افزایش سوم از ۵۰٪ به حدود یک‌سوم کم شد. کاخ سفید هم همان روز تعرفه‌های تازه بر ۱۴ شریک تجاری از جمله چین، اتحادیه‌ی اروپا و ژاپن اعلام کرد.",
+     "publisher": "cnbc-markets",
+     "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html"
+    },
+    {
+     "id": "a898320d4f5a",
+     "title_fa": "درخواست بیمه‌ی بیکاری آمریکا کمتر از انتظار",
+     "understood_fa": "درخواست‌های اولیه‌ی بیمه‌ی بیکاری در هفته‌ی منتهی به ۲۱ نوامبر به ۱۸۹ هزار رسید که از پیش‌بینی ۲۰۱ هزار کمتر بود و درخواست‌های ادامه‌دار هم ۹۵ هزار کم شد. بازار کار قوی دست فدرال رزرو را برای ادامه‌ی افزایش نرخ باز می‌گذارد.",
+     "publisher": "forexlive",
+     "url": "https://investinglive.com/news/us-initial-jobless-claims-200k-vs-200k-estimate-continuing-claim-1-721m-vs-1-721m-estimate/"
+    },
+    {
+     "id": "41209e3c7e99",
+     "title_fa": "نوسان انویدیا و رویکرد وارش به سیگنال‌های بازار",
+     "understood_fa": "به نوشته‌ی لیسمن در سی‌ان‌بی‌سی، با افت سهام در جمعه احتمال افزایش نرخ کم شد و با رالی دوشنبه دوباره اطمینان به دو افزایش دیگر برگشت. کوین وارش، رئیس فدرال رزرو، می‌خواهد بازار از این نوسان‌های روزانه عبور کند و از راهنمایی آینده‌نگر دوری می‌کند. پس تصمیم‌های نرخ بیشتر به داده‌ها و شرایط مالی وابسته است تا وعده‌ی قبلی.",
+     "publisher": "CNBC",
+     "url": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html"
+    }
+   ],
+   "views": [
+    {
+     "who": "Fwdbonds",
+     "view_fa": "کریس راپکی، اقتصاددان ارشد: «تورم بیش از حد داغ است و تا وقتی تقاضای اقتصادی هم بیش از حد داغ است، مهار نمی‌شود.»",
+     "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html"
+    },
+    {
+     "who": "Navy Federal Credit Union",
+     "view_fa": "هدر لانگ، اقتصاددان ارشد: «مشکل تورم آمریکا بزرگ‌تر از یک شوک انرژی است.»",
+     "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html"
+    }
+   ],
+   "prev_stance": "صعودی",
+   "change_fa": ""
+  }
+ },
+ "watch_fa": "نشست اوپک‌پلاس در ۲۹ نوامبر درباره‌ی تولید ۲۰۲۷، اجرای تعرفه‌های تازه‌ی آمریکا بر ۱۴ شریک تجاری و نشست فدرال رزرو در ۸ و ۹ دسامبر که افزایش نرخ در آن کاملاً قیمت‌گذاری شده است.",
+ "labels": [
+  {
+   "id": "1684182ea77d",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "4d6a47f09ee9",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "723e79605260",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "75dbc4e8befb",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "769d11e20750",
+   "asset": "bitcoin",
+   "label": "neutral"
+  },
+  {
+   "id": "76c91e67d3ae",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "77427f61f438",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "7f7873cc0b4d",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "8e65ca3feddc",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "9de0957d72f8",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "b4584aa160ed",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "c0d19b16bb8a",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "cf5deb468b1b",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "d3f18c72c10b",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "d82c6430bea7",
+   "asset": "bitcoin",
+   "label": "bear"
+  },
+  {
+   "id": "48d7fd25969a",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "951a2c36148b",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "ad4329773995",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "ba71d94a75ea",
+   "asset": "copper",
+   "label": "neutral"
+  },
+  {
+   "id": "cc273780de04",
+   "asset": "copper",
+   "label": "bull"
+  },
+  {
+   "id": "d47b901e98ff",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "ed6cab5640dd",
+   "asset": "copper",
+   "label": "bear"
+  },
+  {
+   "id": "082b265213ea",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "168b1f8b4a48",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "3a35264dfd97",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "422ef86b9a98",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "57eed7b358ba",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "5ade48cde3b2",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "723e79605260",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "875928b8924a",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "92af6587971d",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "b4d41bbc43b9",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "b8eecd19cdaa",
+   "asset": "gold",
+   "label": "neutral"
+  },
+  {
+   "id": "c91f181a1d18",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "d47b901e98ff",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "d4865b95d896",
+   "asset": "gold",
+   "label": "bear"
+  },
+  {
+   "id": "ed6cab5640dd",
+   "asset": "gold",
+   "label": "bull"
+  },
+  {
+   "id": "1241b953faff",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "29b136e377da",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "4233e36866e0",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "4a156e8047bb",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "500f0fc0a2f5",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "516f8bdfb695",
+   "asset": "oil",
+   "label": "neutral"
+  },
+  {
+   "id": "5a38670a94a3",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "6ba6749416d6",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "735802b16ca8",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "8a96075c47ea",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "a6c81d197116",
+   "asset": "oil",
+   "label": "neutral"
+  },
+  {
+   "id": "b550302e9e67",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "baf67e7badb6",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "c7997c2110ae",
+   "asset": "oil",
+   "label": "neutral"
+  },
+  {
+   "id": "c8c4050dc4a8",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "ccea790cd761",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "ce0f772a3986",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "d2eadd787e8e",
+   "asset": "oil",
+   "label": "neutral"
+  },
+  {
+   "id": "d2ec54cb74ab",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "d725d1bfb089",
+   "asset": "oil",
+   "label": "bull"
+  },
+  {
+   "id": "f975e771e486",
+   "asset": "oil",
+   "label": "neutral"
+  },
+  {
+   "id": "fd21b28b33b1",
+   "asset": "oil",
+   "label": "bear"
+  },
+  {
+   "id": "1469a5d4e6d1",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "2d4025f09993",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "2fd76eee5219",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "3a9c003c658c",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "3bbd48273841",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "41209e3c7e99",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "41b1f8cc1329",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "4e2b95277074",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "4fc9c7b0e27d",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "6192654fd05a",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "681e86365ce3",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "9e70368e2a23",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "a898320d4f5a",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "b10d7353b2fc",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "b4d41bbc43b9",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "be1d0a3a479d",
+   "asset": "rates",
+   "label": "neutral"
+  },
+  {
+   "id": "d1d23008aaa4",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "deb32053db52",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "e154b7c06b40",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "f47983e629e0",
+   "asset": "rates",
+   "label": "bull"
+  },
+  {
+   "id": "2e17888e033a",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "3a35264dfd97",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "4cfd1a83cc01",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "5ade48cde3b2",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "7ef214ef35ee",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "90a12497d520",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "9275b4d39d26",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "b4d41bbc43b9",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "c07fd9240d04",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "c91f181a1d18",
+   "asset": "silver",
+   "label": "bear"
+  },
+  {
+   "id": "cc273780de04",
+   "asset": "silver",
+   "label": "bear"
+  }
+ ]
+}
