@@ -2081,8 +2081,15 @@
   "period": "1405/06/31",
   "consolidated": false,
   "audited": false,
-  "none": "no_table",
-  "fetched": "2026-11-16"
+  "np_cur": 35097080,
+  "np_prev": 12302513,
+  "codal_pct": "۱۸۵",
+  "np_growth": 185.3,
+  "verified": true,
+  "rev_cur": 25264002,
+  "rev_prev": 12573000,
+  "rev_growth": 100.9,
+  "fetched": "2026-11-25"
  },
  "شتران": {
   "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)",
@@ -2200,7 +2207,7 @@
   "consolidated": false,
   "audited": false,
   "none": "no_table",
-  "fetched": "2026-11-16"
+  "fetched": "2026-11-25"
  },
  "کپارس": {
   "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۹ ماهه منتهی به ۱۴۰۵/۰۷/۳۰ (حسابرسی نشده)",
@@ -2423,5 +2430,50 @@
   "rev_prev": 8599950,
   "rev_growth": 129.8,
   "fetched": "2026-11-24"
+ },
+ "فنوال": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی شده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": true,
+  "np_cur": 12867087,
+  "np_prev": 4401489,
+  "codal_pct": "۱۹۲",
+  "np_growth": 192.3,
+  "verified": true,
+  "rev_cur": 44251705,
+  "rev_prev": 20706094,
+  "rev_growth": 113.7,
+  "fetched": "2026-11-25"
+ },
+ "ولساپا": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی شده)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": true,
+  "np_cur": 1760366,
+  "np_prev": 4286869,
+  "codal_pct": "(۵۹)",
+  "np_growth": -58.9,
+  "verified": true,
+  "rev_cur": 3420747,
+  "rev_prev": 4097102,
+  "rev_growth": -16.5,
+  "fetched": "2026-11-25"
+ },
+ "فولاژ": {
+  "title": "اطلاعات و صورت‌های مالی میاندوره‌ای دوره ۶ ماهه منتهی به ۱۴۰۵/۰۶/۳۱ (حسابرسی نشده)(اصلاحیه)",
+  "period": "1405/06/31",
+  "consolidated": false,
+  "audited": false,
+  "np_cur": 14201484,
+  "np_prev": 3256000,
+  "codal_pct": "۳۳۶",
+  "np_growth": 336.2,
+  "verified": true,
+  "rev_cur": 340793556,
+  "rev_prev": 104984042,
+  "rev_growth": 224.6,
+  "fetched": "2026-11-25"
  }
 }
