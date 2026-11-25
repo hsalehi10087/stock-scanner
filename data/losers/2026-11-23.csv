@@ -1,0 +1,7 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+FNGD,"MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",34.209999084472656,-22.320621314040178,542781.0,2026-11-23,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+SIND,Sinda Ltd. Common Stock,7.579999923706055,-16.611663405219467,466685.0,2026-11-23,0,3,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': None, 'analysts': False}"
+CHA,"Chagee Holdings Limited - American Depositary Shares, each representing 1 Class A ordinary share",11.0600004196167,-15.765420234441185,1064185.0,2026-11-23,2,5,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+VXX,iPath Series B S&P 500 VIX Short-Term Futures ETN,23.600000381469727,-13.58476439774121,21128980.0,2026-11-23,0,1,⭐۰/۵ (۴ نامعلوم),"{'growth': None, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+EGG,Enigmatig Limited Class A Ordinary Shares,7.090000152587891,-12.36093919825344,183487.0,2026-11-23,0,4,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+MNRO,"Monro, Inc.  - Common Stock",8.380000114440918,-11.789472479569286,1878704.0,2026-11-23,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"

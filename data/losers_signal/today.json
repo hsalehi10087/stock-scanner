@@ -1,157 +1,43 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-23",
  "markets": {
   "us": {
    "signals": [
     {
-     "ticker": "CSIQ",
-     "name": "Canadian Solar Inc. - Common Shares",
-     "price": 6.02,
-     "chg": -24.94
+     "ticker": "FNGD",
+     "name": "MicroSectors FANG  Index -3X Inverse Leveraged ETNs due January 8, 2038",
+     "price": 34.21,
+     "chg": -22.32
     },
     {
      "ticker": "SIND",
      "name": "Sinda Ltd. Common Stock",
-     "price": 9.09,
-     "chg": -18.69
-    },
-    {
-     "ticker": "MARA",
-     "name": "MARA Holdings, Inc. - Common Stock",
-     "price": 5.09,
-     "chg": -18.56
-    },
-    {
-     "ticker": "SHAZ",
-     "name": "SharonAI Holdings, Inc. - Class A Common Stock",
-     "price": 16.83,
-     "chg": -18.06
-    },
-    {
-     "ticker": "IREN",
-     "name": "IREN Limited - Ordinary Shares",
-     "price": 11.82,
-     "chg": -17.97
-    },
-    {
-     "ticker": "APLD",
-     "name": "Applied Digital Corporation - Common Stock",
-     "price": 11.49,
-     "chg": -17.81
-    },
-    {
-     "ticker": "KPLT",
-     "name": "Katapult Holdings, Inc. - Common Stock",
      "price": 7.58,
-     "chg": -17.7
+     "chg": -16.61
     },
     {
-     "ticker": "AEVA",
-     "name": "Aeva Technologies, Inc. - Common Stock",
-     "price": 7.88,
-     "chg": -17.66
+     "ticker": "CHA",
+     "name": "Chagee Holdings Limited - American Depositary Shares, each representing 1 Class A ordinary share",
+     "price": 11.06,
+     "chg": -15.77
     },
     {
-     "ticker": "HUT",
-     "name": "Hut 8 Corp. - Common Stock",
-     "price": 45.95,
-     "chg": -17.65
+     "ticker": "VXX",
+     "name": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+     "price": 23.6,
+     "chg": -13.58
     },
     {
-     "ticker": "QMCO",
-     "name": "Quantum Corporation - Common Stock",
-     "price": 11.48,
-     "chg": -17.23
+     "ticker": "EGG",
+     "name": "Enigmatig Limited Class A Ordinary Shares",
+     "price": 7.09,
+     "chg": -12.36
     },
     {
-     "ticker": "WYFI",
-     "name": "WhiteFiber, Inc. - Ordinary Shares",
-     "price": 6.35,
-     "chg": -16.99
-    },
-    {
-     "ticker": "AEHR",
-     "name": "Aehr Test Systems - Common Stock",
-     "price": 39.84,
-     "chg": -16.9
-    },
-    {
-     "ticker": "AAOI",
-     "name": "Applied Optoelectronics, Inc. - Common Stock",
-     "price": 32.93,
-     "chg": -16.55
-    },
-    {
-     "ticker": "MRAM",
-     "name": "Everspin Technologies, Inc. - Common Stock",
-     "price": 9.0,
-     "chg": -16.36
-    },
-    {
-     "ticker": "GRRR",
-     "name": "Gorilla Technology Group Inc. - Ordinary shares",
-     "price": 5.255,
-     "chg": -16.32
-    },
-    {
-     "ticker": "CIFR",
-     "name": "Cipher Digital Inc. - Common Stock",
-     "price": 5.435,
-     "chg": -16.13
-    },
-    {
-     "ticker": "NBIS",
-     "name": "Nebius Group N.V. - Class A Ordinary Shares",
-     "price": 81.31,
-     "chg": -16.11
-    },
-    {
-     "ticker": "CLS",
-     "name": "Celestica, Inc. Common Stock",
-     "price": 201.8,
-     "chg": -16.0
-    },
-    {
-     "ticker": "AGCC",
-     "name": "Agencia Comercial Spirits Ltd - Class A Ordinary Share",
-     "price": 9.91,
-     "chg": -15.8
-    },
-    {
-     "ticker": "BLTE",
-     "name": "Belite Bio, Inc - American Depositary Shares",
-     "price": 127.38,
-     "chg": -15.65
-    },
-    {
-     "ticker": "EROC",
-     "name": "ERock, Inc. Class A Common Stock",
-     "price": 6.12,
-     "chg": -15.59
-    },
-    {
-     "ticker": "OUST",
-     "name": "Ouster, Inc. - Common Stock",
-     "price": 23.8,
-     "chg": -15.48
-    },
-    {
-     "ticker": "ALM",
-     "name": "Almonty Industries Inc. - Common Shares",
-     "price": 6.39,
-     "chg": -15.48
-    },
-    {
-     "ticker": "AOSL",
-     "name": "Alpha and Omega Semiconductor Limited - Common Shares",
-     "price": 21.28,
-     "chg": -15.32
-    },
-    {
-     "ticker": "BE",
-     "name": "Bloom Energy Corporation Class A Common Stock",
-     "price": 142.39,
-     "chg": -15.3
+     "ticker": "MNRO",
+     "name": "Monro, Inc.  - Common Stock",
+     "price": 8.38,
+     "chg": -11.79
     }
    ]
   }

@@ -237,6 +237,23 @@
 "profit": false
 }
 },
+"CHA": {
+"count": 1,
+"events": [
+"2026-11-23"
+],
+"first_date": "2026-11-23",
+"first_price": 11.06,
+"last_date": "2026-11-23",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "CHRN": {
 "count": 1,
 "events": [
@@ -350,6 +367,23 @@
 "first_price": 29.03,
 "last_date": "2026-11-19"
 },
+"EGG": {
+"count": 1,
+"events": [
+"2026-11-23"
+],
+"first_date": "2026-11-23",
+"first_price": 7.09,
+"last_date": "2026-11-23",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "ERO": {
 "count": 1,
 "events": [
@@ -382,6 +416,23 @@
 "growth": true,
 "momentum": null,
 "profit": false
+}
+},
+"FNGD": {
+"count": 1,
+"events": [
+"2026-11-23"
+],
+"first_date": "2026-11-23",
+"first_price": 34.21,
+"last_date": "2026-11-23",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": null,
+"growth": null,
+"momentum": false,
+"profit": null
 }
 },
 "GRRR": {
@@ -559,6 +610,23 @@
 "qs_flags": {
 "analysts": false,
 "cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"MNRO": {
+"count": 1,
+"events": [
+"2026-11-23"
+],
+"first_date": "2026-11-23",
+"first_price": 8.38,
+"last_date": "2026-11-23",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": true,
 "growth": false,
 "momentum": false,
 "profit": false
@@ -792,13 +860,14 @@
 }
 },
 "SIND": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-11-20"
+"2026-11-20",
+"2026-11-23"
 ],
 "first_date": "2026-11-20",
 "first_price": 9.09,
-"last_date": "2026-11-20",
+"last_date": "2026-11-23",
 "qs": 0,
 "qs_flags": {
 "analysts": false,
@@ -948,6 +1017,23 @@
 "first_date": "2026-11-19",
 "first_price": 5.41,
 "last_date": "2026-11-19"
+},
+"VXX": {
+"count": 1,
+"events": [
+"2026-11-23"
+],
+"first_date": "2026-11-23",
+"first_price": 23.6,
+"last_date": "2026-11-23",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": null,
+"growth": null,
+"momentum": false,
+"profit": null
+}
 },
 "WEST": {
 "count": 1,
