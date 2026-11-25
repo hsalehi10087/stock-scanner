@@ -1,11 +1,7 @@
 {
-"2026-11-24": {
+"2026-11-25": {
 "ALAB": [
 "drop"
-],
-"ANF": [
-"hi52",
-"surge"
 ],
 "APLD": [
 "drop"
@@ -13,8 +9,11 @@
 "ARM": [
 "drop"
 ],
-"BURL": [
-"surge"
+"AVGO": [
+"drop"
+],
+"COHR": [
+"drop"
 ],
 "CRDO": [
 "drop"
@@ -22,23 +21,33 @@
 "CRWV": [
 "drop"
 ],
-"DKS": [
-"surge"
+"INOD": [
+"drop"
 ],
-"DLTR": [
-"hi52",
-"surge"
+"IONQ": [
+"drop"
 ],
 "IREN": [
 "drop"
 ],
 "KSS": [
-"surge"
+"hi52"
+],
+"LITE": [
+"drop"
 ],
 "NBIS": [
 "drop"
 ],
+"NPK": [
+"hi20",
+"surge",
+"hi52"
+],
 "NVTS": [
+"drop"
+],
+"OKLO": [
 "drop"
 ],
 "ONTO": [
@@ -47,187 +56,85 @@
 "OUST": [
 "drop"
 ],
-"SITM": [
-"drop"
-],
-"TEX": [
-"surge"
-],
-"ALKS": [
-"hi20",
-"surge"
-],
-"BMRN": [
-"surge"
-],
-"COHR": [
-"drop"
-],
-"LITE": [
-"drop"
-],
-"OKLO": [
-"drop"
-],
-"PINS": [
-"surge"
-],
 "QBTS": [
 "drop"
 ],
 "RGTI": [
 "drop"
 ],
-"SYM": [
-"surge"
+"SITM": [
+"drop"
 ],
 "TEM": [
 "drop"
 ],
-"AMTM": [
+"HPQ": [
 "surge"
+],
+"WTW": [
+"hi52"
 ]
 },
-"pending_2026-11-24": [
+"pending_2026-11-25": [
 {
 "code": "hi52",
-"ticker": "ANF",
-"score": 0,
-"rvol": 7.354563984388571,
-"line": "ANF ۱۷۲٫۴۶$ ▲۲۲٫۸٪ | حجم ۷٫۴ برابر",
-"time": "09:50",
-"price": 172.46,
-"chg": 22.79
-},
-{
-"code": "surge",
-"ticker": "ANF",
-"score": 0,
-"rvol": 7.354563984388571,
-"line": "ANF ۱۷۲٫۴۶$ ▲۲۲٫۸٪ | حجم ۷٫۴ برابر",
-"time": "09:50",
-"price": 172.46,
-"chg": 22.79
-},
-{
-"code": "surge",
-"ticker": "BURL",
-"score": 0,
-"rvol": 2.7928740817861066,
-"line": "BURL ۲۵۱٫۷۳$ ▲۷٫۰٪ | حجم ۲٫۸ برابر",
-"time": "09:50",
-"price": 251.73,
-"chg": 7.04
-},
-{
-"code": "surge",
-"ticker": "DKS",
-"score": 0,
-"rvol": 4.330259912730032,
-"line": "DKS ۱۵۲٫۳۸$ ▲۱۴٫۰٪ | حجم ۴٫۳ برابر",
-"time": "09:50",
-"price": 152.38,
-"chg": 14.0
-},
-{
-"code": "hi52",
-"ticker": "DLTR",
-"score": 1,
-"rvol": 3.2309439312548616,
-"line": "DLTR ۱۵۴٫۰۵$ ▲۱۰٫۸٪ | حجم ۳٫۲ برابر | فروش ▲۷٫۰٪، سود ▲۱۷۳٫۱٪",
-"time": "09:50",
-"price": 154.05,
-"chg": 10.75
-},
-{
-"code": "surge",
-"ticker": "DLTR",
-"score": 1,
-"rvol": 3.2309439312548616,
-"line": "DLTR ۱۵۴٫۰۵$ ▲۱۰٫۸٪ | حجم ۳٫۲ برابر | فروش ▲۷٫۰٪، سود ▲۱۷۳٫۱٪",
-"time": "09:50",
-"price": 154.05,
-"chg": 10.75
-},
-{
-"code": "surge",
 "ticker": "KSS",
 "score": 0,
-"rvol": 2.707771662056904,
-"line": "KSS ۲۳٫۷۸$ ▲۱۲٫۲٪ | حجم ۲٫۷ برابر",
+"rvol": 1.7962681808580498,
+"line": "KSS ۲۶٫۰۸$ ▲۳٫۰٪ | حجم ۱٫۸ برابر",
 "time": "09:50",
-"price": 23.78,
-"chg": 12.17
-},
-{
-"code": "surge",
-"ticker": "TEX",
-"score": 0,
-"rvol": 2.2057490539321947,
-"line": "TEX ۵۹٫۶$ ▲۹٫۳٪ | حجم ۲٫۲ برابر",
-"time": "09:50",
-"price": 59.6,
-"chg": 9.3
+"price": 26.08,
+"chg": 2.98
 },
 {
 "code": "hi20",
-"ticker": "ALKS",
+"ticker": "NPK",
 "score": 0,
-"rvol": 2.7846672680736795,
-"line": "ALKS ۴۹٫۵۳$ ▲۷٫۱٪ | حجم ۲٫۸ برابر",
-"time": "10:50",
-"price": 49.53,
-"chg": 7.08
+"rvol": 5.262072014540453,
+"line": "NPK ۱۵۸٫۰۴$ ▲۷٫۳٪ | حجم ۵٫۳ برابر",
+"time": "09:50",
+"price": 158.04,
+"chg": 7.26
 },
 {
 "code": "surge",
-"ticker": "ALKS",
+"ticker": "NPK",
 "score": 0,
-"rvol": 2.7846672680736795,
-"line": "ALKS ۴۹٫۵۳$ ▲۷٫۱٪ | حجم ۲٫۸ برابر",
-"time": "10:50",
-"price": 49.53,
-"chg": 7.08
+"rvol": 5.262072014540453,
+"line": "NPK ۱۵۸٫۰۴$ ▲۷٫۳٪ | حجم ۵٫۳ برابر",
+"time": "09:50",
+"price": 158.04,
+"chg": 7.26
 },
 {
 "code": "surge",
-"ticker": "BMRN",
+"ticker": "HPQ",
 "score": 0,
-"rvol": 3.053563283364193,
-"line": "BMRN ۶۷٫۷۶$ ▲۸٫۳٪ | حجم ۳٫۱ برابر",
-"time": "10:50",
-"price": 67.76,
-"chg": 8.28
+"rvol": 2.7006729388436654,
+"line": "HPQ ۳۱٫۰۲$ ▲۱۱٫۰٪ | حجم ۲٫۷ برابر | فروش ▲۱۲٫۵٪، سود ▼۱۳٫۴٪",
+"time": "12:50",
+"price": 31.02,
+"chg": 11.04
 },
 {
-"code": "surge",
-"ticker": "PINS",
+"code": "hi52",
+"ticker": "WTW",
 "score": 0,
-"rvol": 3.336993792164708,
-"line": "PINS ۱۸٫۶۶$ ▲۱۰٫۴٪ | حجم ۳٫۳ برابر",
-"time": "10:50",
-"price": 18.66,
-"chg": 10.38
+"rvol": 1.5592656488549619,
+"line": "WTW ۳۵۴٫۵۸$ ▲۲٫۳٪ | حجم ۱٫۶ برابر | فروش ▲۹٫۱٪، سود ▼۳۰٫۸٪",
+"time": "12:50",
+"price": 354.58,
+"chg": 2.26
 },
 {
-"code": "surge",
-"ticker": "SYM",
-"score": 1,
-"rvol": 3.9501677170950384,
-"line": "SYM ۳۷٫۷۶$ ▲۸٫۰٪ | حجم ۴٫۰ برابر | فروش ▲۲۱٫۷٪، AI ۲٫۸",
-"time": "10:50",
-"price": 37.76,
-"chg": 7.99
-},
-{
-"code": "surge",
-"ticker": "AMTM",
+"code": "hi52",
+"ticker": "NPK",
 "score": 0,
-"rvol": 7.157127415826581,
-"line": "AMTM ۲۴٫۴$ ▲۱۸٫۲٪ | حجم ۷٫۲ برابر",
-"time": "11:50",
-"price": 24.4,
-"chg": 18.16
+"rvol": 2.0762035172176647,
+"line": "NPK ۱۵۸٫۷۳$ ▲۷٫۷٪ | حجم ۲٫۱ برابر",
+"time": "14:50",
+"price": 158.73,
+"chg": 7.73
 }
 ]
 }
