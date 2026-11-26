@@ -1,0 +1,14 @@
+id: 2ec4711b92-keynesai-rf-direction
+name: KeynesAI random forest direction
+name_fa: پیش‌بینی جهت سهم با جنگل تصادفی (KeynesAI)
+source: github/backtesting
+source_url: https://github.com/mostafaamer1234/KeynesAI
+claim: "«پیش‌بینی سهام با مدل یادگیری ماشین با دقت ۶۵٪» (طبقه‌بند جنگل تصادفی روی داده‌ی YFinance)"
+claimed_return: "65% accuracy"
+added: 2026-11-26
+status: not_testable
+asset_class: stock
+symbols: [SPY]
+reason_not_testable: "مدل یادگیری ماشین (جنگل تصادفی) با ویژگی‌های نامشخص است و قانون ورود/خروج عددی ندارد؛ با اندیکاتورهای موتور قابل بازسازی نیست"
+notes: >-
+  نماد خاصی گفته نشده؛ SPY به‌عنوان نماد اصلی گذاشته شد. ادعا دقت پیش‌بینی است نه سود.

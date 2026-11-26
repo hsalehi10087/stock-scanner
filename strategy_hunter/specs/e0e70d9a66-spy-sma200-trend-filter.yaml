@@ -1,0 +1,22 @@
+id: e0e70d9a66-spy-sma200-trend-filter
+name: SPY 200-day MA trend filter
+name_fa: فیلتر روند میانگین ۲۰۰ روزه روی SPY
+source: medium/algorithmic-trading
+source_url: https://medium.com/@Kryptera/the-day-the-trend-filter-learned-to-sleep-through-the-night-0c88d25d2abe
+claim: "«میانگین متحرک ۲۰۰ روزه بدترین افت SPY را از ۳۲٪ به ۱۷٪ کاهش داد و ۳٫۴ واحد از رشد سالانه (CAGR) کم کرد»"
+claimed_return: "max DD 32% -> 17%, CAGR -3.4 pts vs buy&hold"
+added: 2026-11-26
+status: implemented
+asset_class: etf
+symbols: [SPY]
+timeframe: 1d
+start: '1993-02-01'
+notes: >-
+  متن کامل مقاله در دسترس نبود (فقط خلاصه‌ی آن). فرض: میانگین ساده‌ی ۲۰۰ روزه، خرید وقتی بسته‌شدن بالای آن است
+  و خروج به نقد وقتی بسته‌شدن زیر آن است، بدون باند. بازه‌ی زمانی آزمون مقاله معلوم نیست، از ابتدای داده‌ی SPY آزموده می‌شود.
+  ادعا درباره‌ی کاهش افت است نه سود بیشتر. فقط خرید.
+indicators:
+  sma200: {fn: sma, n: 200}
+entry: close > sma200
+exit: close < sma200
+side: long
