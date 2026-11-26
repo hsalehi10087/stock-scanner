@@ -276,6 +276,57 @@
 "profit": true
 }
 },
+"ALTG": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 6.14,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
+"AMTM": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 24.8,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"ANF": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 168.1,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "ANGI": {
 "count": 1,
 "events": [
@@ -845,13 +896,14 @@
 }
 },
 "CUE": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-11-23"
+"2026-11-23",
+"2026-11-24"
 ],
 "first_date": "2026-11-23",
 "first_price": 5.75,
-"last_date": "2026-11-23",
+"last_date": "2026-11-24",
 "qs": 1,
 "qs_flags": {
 "analysts": true,
@@ -992,6 +1044,23 @@
 "qs_flags": {
 "analysts": true,
 "cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
+"EMBC": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 8.08,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
 "growth": false,
 "momentum": false,
 "profit": true
@@ -1287,6 +1356,23 @@
 "growth": true,
 "momentum": false,
 "profit": false
+}
+},
+"GOSS": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 13.01,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": null
 }
 },
 "GPK": {
@@ -1615,6 +1701,23 @@
 "profit": false
 }
 },
+"KSS": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 25.33,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "LASR": {
 "count": 2,
 "events": [
@@ -1835,6 +1938,23 @@
 "growth": true,
 "momentum": false,
 "profit": true
+}
+},
+"NAMS": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 24.45,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": null
 }
 },
 "NBIS": {
@@ -2145,6 +2265,23 @@
 "profit": false
 }
 },
+"PHAT": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 5.8,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "PRCH": {
 "count": 1,
 "events": [
@@ -2314,6 +2451,23 @@
 "analysts": true,
 "cash": true,
 "growth": true,
+"momentum": false,
+"profit": true
+}
+},
+"RXST": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 5.56,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
 "momentum": false,
 "profit": true
 }
@@ -2538,6 +2692,23 @@
 "growth": false,
 "momentum": false,
 "profit": true
+}
+},
+"STOK": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 32.84,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": null
 }
 },
 "STVN": {

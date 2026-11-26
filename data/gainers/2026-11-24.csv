@@ -1,0 +1,72 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+JAGX,"Jaguar Health, Inc. - Common Stock",12.800000190734863,108.97959495077329,647968.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+AKAN,Akanda Corp. - Common Shares,5.199999809265137,101.55038616418133,9344401.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': None, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+EMBC,Embecta Corp. - Common Stock,8.079999923706055,40.64403976780477,2043558.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+ALTG,Alta Equipment Group Inc. Class A Common Stock,6.139999866485596,33.188713419945294,741970.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+CD,Chaince Digital Holdings Inc. - American Ordinary Shares,5.880000114440918,30.376936053920023,384833.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+VEEA,Veea Inc. - Common Stock,5.920000076293945,28.416483835996576,141197.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+NCT,Intercont (Cayman) Limited - Class A Ordinary shares,6.789999961853027,25.508320764575345,1217880.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+PHAT,"Phathom Pharmaceuticals, Inc. - Common Stock",5.800000190734863,22.36287913082844,1024361.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+YARW,"Yarrow Bioscience, Inc. - Common Stock",15.819999694824219,22.256570385109775,107091.0,2026-11-24,0.0,2.0,⭐۰/۵ (۳ نامعلوم),"{'growth': False, 'cash': None, 'profit': None, 'momentum': False, 'analysts': None}"
+HELP,Helus Pharma Inc.  - Common Stock,7.670000076293945,21.746029271140046,3132592.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+MPLT,"MapLight Therapeutics, Inc. - Common Stock",7.03000020980835,20.583195571286915,345372.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+AMTM,"Amentum Holdings, Inc. Common Stock",24.799999237060547,20.096850824182443,5577314.0,2026-11-24,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+ANF,Abercrombie & Fitch Company Common Stock,168.10000610351562,19.686728199405266,2174615.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+KSS,Kohl's Corporation Common Stock,25.329999923706055,19.481127415742417,9068590.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+STRO,"Sutro Biopharma, Inc. - Common Stock",10.520000457763672,19.139304061831798,303748.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+CUE,"Cue Biopharma, Inc. - Common Stock",6.849999904632568,19.13043312404468,1111046.0,2026-11-24,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+CELC,Celcuity Inc. - Common Stock,68.0199966430664,18.481095321118634,1104708.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+FTH,"Faeth Therapeutics, Inc.  - Common Stock",9.710000038146973,18.270401863951214,557947.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+RXST,"RxSight, Inc. - Common Stock",5.559999942779541,17.796614193361716,855626.0,2026-11-24,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+COGT,"Cogent Biosciences, Inc. - Common Stock",33.0099983215332,17.431510511519544,6127264.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+GOSS,"Gossamer Bio, Inc. - Common Stock",13.010000228881836,16.996406140050336,432158.0,2026-11-24,1.0,3.0,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+NAMS,NewAmsterdam Pharma Company N.V. - Ordinary Shares,24.450000762939453,16.929703210712677,1539705.0,2026-11-24,1.0,3.0,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+IMTX,Immatics N.V. - Ordinary Shares,7.059999942779541,16.88741700941312,1196214.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+STOK,"Stoke Therapeutics, Inc. - Common Stock",32.84000015258789,16.743694036046787,1326804.0,2026-11-24,1.0,3.0,⭐۱/۵ (۲ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': None, 'momentum': False, 'analysts': None}"
+TRDA,"Entrada Therapeutics, Inc. - Common Stock",5.679999828338623,16.63244274771789,410032.0,2026-11-24,0.0,3.0,⭐۰/۵ (۲ نامعلوم),"{'growth': False, 'cash': False, 'profit': None, 'momentum': False, 'analysts': None}"
+VSTM,"Verastem, Inc. - Common Stock",7.739999771118164,16.566263957092133,3047892.0,2026-11-24,,,,
+KYMR,"Kymera Therapeutics, Inc. - Common Stock",173.9199981689453,15.66137116211559,4822430.0,2026-11-24,,,,
+IRON,"Disc Medicine, Inc. - Common Stock",88.33999633789062,15.296258380559014,450775.0,2026-11-24,,,,
+EPSN,Epsilon Energy Ltd. - Common Shares,5.46999979019165,14.91595645314916,129267.0,2026-11-24,,,,
+ODTX,"Odyssey Therapeutics, Inc. - Common Stock",19.489999771118164,14.647057477165681,305822.0,2026-11-24,,,,
+DKS,Dick's Sporting Goods Inc Common Stock,153.1699981689453,14.588165083502114,3116219.0,2026-11-24,,,,
+CMP,Compass Minerals Intl Inc Common Stock,23.280000686645508,14.51057931141242,871434.0,2026-11-24,,,,
+KURA,"Kura Oncology, Inc. - Common Stock",8.380000114440918,14.168936515435227,1656814.0,2026-11-24,,,,
+INSM,Insmed Incorporated - Common Stock,170.14999389648438,14.125694597821536,31389984.0,2026-11-24,,,,
+MMED,"MiniMed Group, Inc. - Common Stock",19.06999969482422,14.055026782164703,7746350.0,2026-11-24,,,,
+ERAS,"Erasca, Inc. - Common Stock",15.829999923706055,13.966879283166488,4466671.0,2026-11-24,,,,
+IMNM,"Immunome, Inc. - Common Stock",18.450000762939453,13.25966682637345,982804.0,2026-11-24,,,,
+KRRO,"Korro Bio, Inc. - Common Stock",14.369999885559082,12.971694841919113,176451.0,2026-11-24,,,,
+KROS,"Keros Therapeutics, Inc. - common stock",13.289999961853027,12.722646351597145,427795.0,2026-11-24,,,,
+TRAX,"First Tracks Biotherapeutics, Inc. - Ordinary Shares",49.130001068115234,12.4771078865896,987132.0,2026-11-24,,,,
+SIND,Sinda Ltd. Common Stock,8.520000457763672,12.40106257940472,364476.0,2026-11-24,,,,
+BBNX,"Beta Bionics, Inc. - Common Stock",15.59000015258789,12.400867204185118,617231.0,2026-11-24,,,,
+GRRR,Gorilla Technology Group Inc. - Ordinary shares,8.529999732971191,12.384710955016232,2010411.0,2026-11-24,,,,
+AVBP,"ArriVent BioPharma, Inc. - Common Stock",12.640000343322754,12.255773413762693,2726784.0,2026-11-24,,,,
+RNAC,"Cartesian Therapeutics, Inc. - Common Stock",7.574999809265137,12.22221939652055,205586.0,2026-11-24,,,,
+TRVI,"Trevi Therapeutics, Inc. - Common Stock",15.34000015258789,12.216533042966127,2590467.0,2026-11-24,,,,
+PRAX,"Praxis Precision Medicines, Inc. - Common Stock",344.489990234375,12.211723203379488,392944.0,2026-11-24,,,,
+KARD,"Kardigan, Inc. - Common Stock",13.479999542236328,12.146414549673734,355584.0,2026-11-24,,,,
+ARVN,"Arvinas, Inc. - Common Stock",7.849999904632568,11.982876580943014,1042669.0,2026-11-24,,,,
+VRDN,"Viridian Therapeutics, Inc.  - Common Stock",35.70000076293945,11.947323443749426,3673721.0,2026-11-24,,,,
+LEGN,Legend Biotech Corporation - American Depositary Shares,17.68000030517578,11.898734757885343,1860064.0,2026-11-24,,,,
+PBLS,"Parabilis Medicines, Inc. - Common Stock",33.13999938964844,11.695312788782196,707764.0,2026-11-24,,,,
+MLTX,MoonLake Immunotherapeutics - Class A Ordinary Shares,13.069999694824219,11.6140021541149,1255743.0,2026-11-24,,,,
+RGNX,REGENXBIO Inc. - Common Stock,8.229999542236328,11.517607244099647,619336.0,2026-11-24,,,,
+ORIC,"Oric Pharmaceuticals, Inc. - Common Stock",8.399999618530273,11.405831048119698,1996940.0,2026-11-24,,,,
+CYTK,"Cytokinetics, Incorporated - Common Stock",59.900001525878906,11.358989600960978,1485063.0,2026-11-24,,,,
+MIRM,"Mirum Pharmaceuticals, Inc. - common stock",109.70999908447266,11.18881232431399,674831.0,2026-11-24,,,,
+DLTR,"Dollar Tree, Inc. - Common Stock",154.64999389648438,11.178998641737481,3424316.0,2026-11-24,,,,
+PCVX,"Vaxcyte, Inc. - Common Stock",63.18000030517578,11.036904412806825,735839.0,2026-11-24,,,,
+SNY,Sanofi - American Depositary Shares,51.900001525878906,10.96857177230084,9832717.0,2026-11-24,,,,
+INBX,"Inhibrx Biosciences, Inc. - Common Stock",77.80000305175781,10.93684029477988,407174.0,2026-11-24,,,,
+ZBIO,"Zenas BioPharma, Inc. - Common Stock",27.420000076293945,10.922333486800827,265654.0,2026-11-24,,,,
+OMER,Omeros Corporation - Common Stock,14.720000267028809,10.510515047148171,936106.0,2026-11-24,,,,
+MLYS,"Mineralys Therapeutics, Inc. - Common Stock",15.630000114440918,10.381357929869385,919981.0,2026-11-24,,,,
+DNTH,"Dianthus Therapeutics, Inc. - Common Stock",101.13999938964844,10.354607425827345,907919.0,2026-11-24,,,,
+ANRO,"Alto Neuroscience, Inc. Common Stock",29.31999969482422,10.35001893709353,740751.0,2026-11-24,,,,
+MAZE,"Maze Therapeutics, Inc. - Common Stock",35.75,10.33950097639762,978984.0,2026-11-24,,,,
+BNTC,Benitec Biopharma Inc. - Common Stock,8.859999656677246,10.336238496971228,266396.0,2026-11-24,,,,
+ABVX,Abivax SA - American Depositary Shares,77.61000061035156,10.100727709401136,1948044.0,2026-11-24,,,,
+CGEM,"Cullinan Therapeutics, Inc. - Common Stock",10.220000267028809,10.010767588746884,890804.0,2026-11-24,,,,
+SLDB,Solid Biosciences Inc. - Common Stock,7.260000228881836,10.00000505736387,1414595.0,2026-11-24,,,,
