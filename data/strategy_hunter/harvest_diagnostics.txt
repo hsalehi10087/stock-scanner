@@ -1,69 +1,67 @@
-2026-11-25 21:48 raw={'reddit': 0, 'rss_sites': 67, 'hackernews': 76, 'stackexchange': 50, 'medium': 69, 'devto': 42, 'github_repos': 12, 'forex': 59} new_claims=8 dup_titles_skipped=1 source_penalty={'tradingview-ideas': -3}
+2026-11-26 08:20 raw={'reddit': 0, 'rss_sites': 67, 'hackernews': 82, 'stackexchange': 50, 'medium': 70, 'devto': 71, 'github_repos': 12, 'forex': 59} new_claims=4 dup_titles_skipped=2 source_penalty={'tradingview-ideas': -3}
 PENALTY source=tradingview-ideas n=380 spec_rate=1.3% -> score -3
-404 https://www.reddit.com/r/options/top/.rss len=266 try=1
-429 https://www.reddit.com/r/thetagang/top/.rss len=0 try=1
-404 https://www.reddit.com/r/thetagang/top/.rss len=266 try=2
 404 https://www.reddit.com/r/swingtrading/top/.rss len=266 try=1
 429 https://www.reddit.com/r/CryptoMarkets/top/.rss len=0 try=1
 404 https://www.reddit.com/r/CryptoMarkets/top/.rss len=266 try=2
-429 https://www.reddit.com/r/Trading/top/.rss len=0 try=1
-404 https://www.reddit.com/r/Trading/top/.rss len=266 try=2
-404 https://www.reddit.com/r/algotrading/top/.rss len=266 try=1
-429 https://www.reddit.com/r/Daytrading/top/.rss len=0 try=1
-SKIP https://www.reddit.com/r/Daytrading/top/.rss (Reddit time budget used)
-SKIP https://www.reddit.com/r/Forex/top/.rss (Reddit time budget used)
+404 https://www.reddit.com/r/Trading/top/.rss len=266 try=1
+429 https://www.reddit.com/r/algotrading/top/.rss len=0 try=1
+404 https://www.reddit.com/r/algotrading/top/.rss len=266 try=2
+404 https://www.reddit.com/r/Daytrading/top/.rss len=266 try=1
+429 https://www.reddit.com/r/Forex/top/.rss len=0 try=1
+404 https://www.reddit.com/r/Forex/top/.rss len=266 try=2
+429 https://www.reddit.com/r/options/top/.rss len=0 try=1
+SKIP https://www.reddit.com/r/options/top/.rss (Reddit time budget used)
+SKIP https://www.reddit.com/r/thetagang/top/.rss (Reddit time budget used)
 200 https://www.quantifiedstrategies.com/feed/ len=1980
 200 https://quantpedia.com/feed/ len=17614
 403 https://forums.babypips.com/latest.rss len=5578
-200 https://www.elitetrader.com/et/forums/-/index.rss len=23098
-200 https://www.tradingview.com/feed/?sort=recent len=108731
+200 https://www.elitetrader.com/et/forums/-/index.rss len=22913
+200 https://www.tradingview.com/feed/?sort=recent len=155718
 200 https://robotwealth.com/feed/ len=19737
-404 https://www.forexfactory.com/rss.php len=41757
-200 https://hn.algolia.com/api/v1/search_by_date len=114655
-200 https://hn.algolia.com/api/v1/search_by_date len=38091
-200 https://hn.algolia.com/api/v1/search_by_date len=109491
+404 https://www.forexfactory.com/rss.php len=40875
+200 https://hn.algolia.com/api/v1/search_by_date len=114711
+200 https://hn.algolia.com/api/v1/search_by_date len=37802
+200 https://hn.algolia.com/api/v1/search_by_date len=110576
 200 https://api.stackexchange.com/2.3/search/excerpts len=165650
-200 https://medium.com/feed/tag/trading-strategy len=17900
-200 https://medium.com/feed/tag/algorithmic-trading len=17508
-200 https://medium.com/feed/tag/forex-trading len=16039
-200 https://medium.com/feed/tag/crypto-trading len=15141
-200 https://medium.com/feed/tag/options-trading len=17039
-200 https://medium.com/feed/tag/day-trading len=16585
-200 https://medium.com/feed/tag/backtesting len=15750
+200 https://medium.com/feed/tag/trading-strategy len=17424
+200 https://medium.com/feed/tag/algorithmic-trading len=17362
+200 https://medium.com/feed/tag/forex-trading len=16616
+200 https://medium.com/feed/tag/crypto-trading len=16696
+200 https://medium.com/feed/tag/options-trading len=16956
+200 https://medium.com/feed/tag/day-trading len=16594
+200 https://medium.com/feed/tag/backtesting len=16022
+DUP title [medium/backtesting] How Much Fake Sharpe a Backtest Bug Can Create
 DUP title [medium/backtesting] I Let an AI Agent Do Quant Research. The Validation Gate Rejects 94% o
-200 https://dev.to/api/articles len=67302
-200 https://dev.to/api/articles len=19046
+200 https://dev.to/api/articles len=67590
+200 https://dev.to/api/articles len=17070
 200 https://dev.to/api/articles len=7271
-429 https://dev.to/api/articles len=12
-200 https://api.github.com/search/repositories len=59610
+200 https://dev.to/api/articles len=66279
+200 https://api.github.com/search/repositories len=60333
 200 https://api.github.com/repos/Krexind/quant-trading/readme len=31556
 200 https://api.github.com/repos/JustinGuese/python_tradingbot_framework/readme len=37946
-200 https://api.github.com/repos/Surri757/wall-street-dog/readme len=40002
-200 https://api.github.com/search/repositories len=58791
-200 https://api.github.com/repos/randomwalkhan/Short-Term-Reversal-Strategy/readme len=58512
-200 https://api.github.com/repos/aerdogan15/twitter-x-influencer-ca-sniper-bot/readme len=8713
-200 https://api.github.com/repos/sandra95508/bybit-uta-perp-copytrading-bot/readme len=8360
-200 https://api.github.com/search/repositories len=58451
-200 https://api.github.com/repos/BrockStar3540/mr-scrooge-v6/readme len=17671
-200 https://api.github.com/repos/drewautomates/optd-starter/readme len=21682
-200 https://api.github.com/repos/mostafaamer1234/KeynesAI/readme len=3894
-200 https://api.github.com/search/repositories len=57077
-200 https://api.github.com/repos/quantbelt/jupyter-quant/readme len=7973
+200 https://api.github.com/repos/blackbanquett/ai-grid-bot/readme len=5580
+200 https://api.github.com/search/repositories len=56111
+200 https://api.github.com/repos/marketcalls/openalgo/readme len=26377
+200 https://api.github.com/repos/ZhuLinsen/alphasift/readme len=18626
+200 https://api.github.com/repos/KCNyu/clawock/readme len=50484
+200 https://api.github.com/search/repositories len=56998
+200 https://api.github.com/repos/ZhuLinsen/alphasift/readme len=18626
+200 https://api.github.com/repos/xiaomaozjj666/stock-research-system/readme len=44515
+200 https://api.github.com/repos/folknor/mogwai/readme len=15423
+200 https://api.github.com/search/repositories len=58524
+200 https://api.github.com/repos/pseudo-longinus/quant-buddy-view/readme len=16218
 200 https://api.github.com/repos/gameworkerkim/cassandra-ai/readme len=8356
 200 https://api.github.com/repos/Krexibd/quant-trading/readme len=31904
-200 https://api.github.com/repos/aerdogan15/twitter-x-influencer-ca-sniper-bot/readme len=8713
-200 https://api.github.com/repos/sandra95508/bybit-uta-perp-copytrading-bot/readme len=8360
-404 https://api.github.com/repos/yourusername/KeynesAI.git/readme len=128
-404 https://www.reddit.com/search.rss len=266 try=1
 404 https://www.reddit.com/search.rss len=266 try=1
 429 https://www.reddit.com/search.rss len=0 try=1
 404 https://www.reddit.com/search.rss len=266 try=2
+429 https://www.reddit.com/search.rss len=0 try=1
+404 https://www.reddit.com/search.rss len=266 try=2
+404 https://www.reddit.com/r/ForexTrading/top/.rss len=266 try=1
 429 https://www.reddit.com/r/Forexstrategy/top/.rss len=0 try=1
-404 https://www.reddit.com/r/Forexstrategy/top/.rss len=266 try=2
+SKIP https://www.reddit.com/r/Forexstrategy/top/.rss (Reddit time budget used)
 404 https://www.reddit.com/r/Forex_Trading/top/.rss len=266 try=1
-429 https://www.reddit.com/r/ForexTrading/top/.rss len=0 try=1
-SKIP https://www.reddit.com/r/ForexTrading/top/.rss (Reddit time budget used)
-200 https://medium.com/feed/tag/forex len=17515
+200 https://medium.com/feed/tag/forex len=16154
 200 https://medium.com/feed/tag/forex-strategy len=16213
 200 https://www.mql5.com/en/articles/rss len=3906
 200 https://api.stackexchange.com/2.3/search/excerpts len=52810
