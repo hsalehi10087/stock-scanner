@@ -16,6 +16,23 @@
 "profit": false
 }
 },
+"ADI": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 312.95,
+"last_date": "2026-11-24",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
+}
+},
 "ADUR": {
 "count": 1,
 "events": [
@@ -34,13 +51,14 @@
 }
 },
 "AEHR": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-11-20"
+"2026-11-20",
+"2026-11-24"
 ],
 "first_date": "2026-11-20",
 "first_price": 39.84,
-"last_date": "2026-11-20",
+"last_date": "2026-11-24",
 "qs": 2,
 "qs_flags": {
 "analysts": true,
@@ -101,6 +119,23 @@
 "profit": false
 }
 },
+"ALAB": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 191.3,
+"last_date": "2026-11-24",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "ALHC": {
 "count": 1,
 "events": [
@@ -135,18 +170,53 @@
 "profit": true
 }
 },
-"AOSL": {
+"AMBA": {
 "count": 1,
 "events": [
-"2026-11-20"
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 44.47,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"AOSL": {
+"count": 2,
+"events": [
+"2026-11-20",
+"2026-11-24"
 ],
 "first_date": "2026-11-20",
 "first_price": 21.28,
-"last_date": "2026-11-20",
+"last_date": "2026-11-24",
 "qs": 1,
 "qs_flags": {
 "analysts": true,
 "cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"AP": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 5.86,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": true,
+"cash": true,
 "growth": false,
 "momentum": false,
 "profit": false
@@ -184,6 +254,40 @@
 "growth": false,
 "momentum": false,
 "profit": true
+}
+},
+"ARQQ": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 9.95,
+"last_date": "2026-11-24",
+"qs": 0,
+"qs_flags": {
+"analysts": null,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
+"AXTI": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 31.58,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": false
 }
 },
 "BE": {
@@ -306,6 +410,23 @@
 "profit": true
 }
 },
+"CRDO": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 106.46,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "CSIQ": {
 "count": 1,
 "events": [
@@ -357,6 +478,23 @@
 "first_date": "2026-11-19",
 "first_price": 237.57,
 "last_date": "2026-11-19"
+},
+"DY": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 179.01,
+"last_date": "2026-11-24",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
 },
 "EFOR": {
 "count": 1,
@@ -418,6 +556,40 @@
 "profit": false
 }
 },
+"EUDA": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 9.0,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
+"EVCM": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 5.31,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "FNGD": {
 "count": 1,
 "events": [
@@ -435,6 +607,23 @@
 "profit": null
 }
 },
+"FRVO": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 9.37,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": null,
+"profit": false
+}
+},
 "GRRR": {
 "count": 1,
 "events": [
@@ -450,6 +639,23 @@
 "growth": true,
 "momentum": false,
 "profit": false
+}
+},
+"HPE": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 40.19,
+"last_date": "2026-11-24",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
 }
 },
 "HQL": {
@@ -518,6 +724,23 @@
 "growth": false,
 "momentum": false,
 "profit": true
+}
+},
+"ICHR": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 26.39,
+"last_date": "2026-11-24",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
 }
 },
 "IREN": {
@@ -649,6 +872,40 @@
 "profit": true
 }
 },
+"MTSI": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 200.2,
+"last_date": "2026-11-24",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
+"MXL": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 41.89,
+"last_date": "2026-11-24",
+"qs": 3,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "NBIS": {
 "count": 1,
 "events": [
@@ -702,6 +959,23 @@
 "first_date": "2026-11-19",
 "first_price": 8.15,
 "last_date": "2026-11-19"
+},
+"OPTX": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 6.155,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
+}
 },
 "OUST": {
 "count": 1,
@@ -843,13 +1117,14 @@
 }
 },
 "SHAZ": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-11-20"
+"2026-11-20",
+"2026-11-24"
 ],
 "first_date": "2026-11-20",
 "first_price": 16.83,
-"last_date": "2026-11-20",
+"last_date": "2026-11-24",
 "qs": 2,
 "qs_flags": {
 "analysts": true,
@@ -857,6 +1132,23 @@
 "growth": true,
 "momentum": null,
 "profit": false
+}
+},
+"SHOE": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 11.58,
+"last_date": "2026-11-24",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
 }
 },
 "SIND": {
@@ -875,6 +1167,23 @@
 "growth": false,
 "momentum": null,
 "profit": null
+}
+},
+"SITM": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 378.29,
+"last_date": "2026-11-24",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
 }
 },
 "SKIN": {
@@ -912,6 +1221,23 @@
 "first_price": 14.86,
 "last_date": "2026-11-19"
 },
+"SMTC": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 86.46,
+"last_date": "2026-11-24",
+"qs": 4,
+"qs_flags": {
+"analysts": true,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
+}
+},
 "SNEX": {
 "count": 1,
 "events": [
@@ -929,6 +1255,23 @@
 "first_date": "2026-11-19",
 "first_price": 6.68,
 "last_date": "2026-11-19"
+},
+"SVCO": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 6.31,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": false,
+"momentum": false,
+"profit": true
+}
 },
 "TCX": {
 "count": 1,
@@ -956,6 +1299,23 @@
 "first_date": "2026-11-18",
 "first_price": 5.56,
 "last_date": "2026-11-18",
+"qs": 2,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": false
+}
+},
+"TTMI": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 59.42,
+"last_date": "2026-11-24",
 "qs": 2,
 "qs_flags": {
 "analysts": false,
@@ -1071,6 +1431,23 @@
 "first_date": "2026-11-19",
 "first_price": 7.65,
 "last_date": "2026-11-20"
+},
+"XE": {
+"count": 1,
+"events": [
+"2026-11-24"
+],
+"first_date": "2026-11-24",
+"first_price": 8.63,
+"last_date": "2026-11-24",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": false,
+"growth": true,
+"momentum": null,
+"profit": false
+}
 },
 "YSWY": {
 "count": 1,

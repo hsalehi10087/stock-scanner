@@ -1,0 +1,64 @@
+ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
+EUDA,Euda Health Holdings Limited - Class A Ordinary Shares,9.0,-43.99502071615661,309528.0,2026-11-24,2.0,5.0,⭐۲/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+AMBA,"Ambarella, Inc. - Ordinary Shares",44.470001220703125,-19.96040294901632,14743492.0,2026-11-24,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+EVCM,EverCommerce Inc. - Common Stock,5.309999942779541,-18.807339850885583,231826.0,2026-11-24,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+SHOE,"Shoe Station Group, Inc. - Common Stock",11.579999923706055,-18.39323279674646,1686069.0,2026-11-24,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+DY,"Dycom Industries, Inc. Common Stock",179.00999450683594,-18.024454591039007,1198150.0,2026-11-24,4.0,5.0,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+ADI,"Analog Devices, Inc. - Common Stock",312.95001220703125,-17.372934070750823,8602252.0,2026-11-24,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+SMTC,Semtech Corporation - Common Stock,86.45999908447266,-16.969171838103847,4277425.0,2026-11-24,4.0,5.0,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+AXTI,AXT Inc - Common Stock,31.579999923706055,-16.93845464629018,11830704.0,2026-11-24,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+MXL,"MaxLinear, Inc - Common Stock",41.88999938964844,-16.73623882688394,2467376.0,2026-11-24,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+ICHR,Ichor Holdings - Ordinary Shares,26.389999389648438,-16.487344711794492,1801523.0,2026-11-24,3.0,5.0,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+HPE,Hewlett Packard Enterprise Company Common Stock,40.189998626708984,-16.3057096135216,27545599.0,2026-11-24,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+SVCO,"Silvaco Group, Inc. - Common Stock",6.309999942779541,-15.754337308377032,322386.0,2026-11-24,1.0,5.0,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",6.15500020980835,-15.103445381953795,843930.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+AP,Ampco-Pittsburgh Corporation Common Stock,5.860000133514404,-14.94919815574055,214915.0,2026-11-24,2.0,5.0,⭐۲/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+ALAB,"Astera Labs, Inc. - Common Stock",191.3000030517578,-13.875379408850375,5969512.0,2026-11-24,4.0,5.0,⭐۴/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+SITM,SiTime Corporation - Common Stock,378.2900085449219,-13.793810165673403,735721.0,2026-11-24,3.0,5.0,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': True}"
+SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",16.760000228881836,-13.652754453182503,2871151.0,2026-11-24,2.0,4.0,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': True}"
+AEHR,Aehr Test Systems - Common Stock,41.88999938964844,-13.64666905986307,2897248.0,2026-11-24,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+ARQQ,Arqit Quantum Inc. - Ordinary Shares,9.949999809265137,-13.478262528129248,518831.0,2026-11-24,0.0,4.0,⭐۰/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+MTSI,"MACOM Technology Solutions Holdings, Inc. - Common Stock",200.1999969482422,-13.445743922690912,1884494.0,2026-11-24,4.0,5.0,⭐۴/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': True}"
+TTMI,"TTM Technologies, Inc. - Common Stock",59.41999816894531,-13.344030285258357,5744441.0,2026-11-24,2.0,5.0,⭐۲/۵,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+FRVO,Fervo Energy Company - Class A common stock,9.369999885559082,-13.079776274015586,6737709.0,2026-11-24,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+CRDO,Credo Technology Group Holding Ltd - Ordinary Shares,106.45999908447266,-13.0654908701765,8248643.0,2026-11-24,2.0,5.0,⭐۲/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': False}"
+AOSL,Alpha and Omega Semiconductor Limited - Common Shares,21.350000381469727,-13.03461896145447,840707.0,2026-11-24,1.0,5.0,⭐۱/۵,"{'growth': False, 'cash': False, 'profit': False, 'momentum': False, 'analysts': True}"
+XE,"X-Energy, Inc. - Class A Common Stock",8.630000114440918,-12.82827831338741,14622528.0,2026-11-24,1.0,4.0,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': None, 'analysts': False}"
+UCTT,"Ultra Clean Holdings, Inc. - Common Stock",36.08000183105469,-12.384648946882336,1458713.0,2026-11-24,,,,
+MEI,"Methode Electronics, Inc. Common Stock",9.899999618530273,-12.31178341912601,718649.0,2026-11-24,,,,
+RELL,"Richardson Electronics, Ltd. - Common Stock",14.869999885559082,-12.271391054614089,169250.0,2026-11-24,,,,
+DIOD,Diodes Incorporated - Common Stock,72.51000213623047,-12.172959931631155,551468.0,2026-11-24,,,,
+OTLY,Oatly Group AB - American Depositary Shares,12.75,-12.06896551724138,1106399.0,2026-11-24,,,,
+SIMO,"Silicon Motion Technology Corporation - American Depositary Shares, each representing four ordinary shares",135.00999450683594,-11.999741807998443,1206163.0,2026-11-24,,,,
+WOLF,"Wolfspeed, Inc. Common Stock New",18.200000762939453,-11.949682168541887,3896245.0,2026-11-24,,,,
+QUIK,QuickLogic Corporation - Common Stock,8.260000228881836,-11.94029714173237,290907.0,2026-11-24,,,,
+FN,Fabrinet Ordinary Shares,290.1199951171875,-11.876558519694457,1079064.0,2026-11-24,,,,
+CRWV,"CoreWeave, Inc. - Class A Common Stock",42.60499954223633,-11.845648814231435,81743136.0,2026-11-24,,,,
+DELL,Dell Technologies Inc. Class C Common Stock ,295.2799987792969,-11.833031097749835,26453565.0,2026-11-24,,,,
+VICR,Vicor Corporation - Common Stock,125.55000305175781,-11.609399474665349,981623.0,2026-11-24,,,,
+APLD,Applied Digital Corporation - Common Stock,12.220000267028809,-11.577420138400086,29350279.0,2026-11-24,,,,
+IREN,IREN Limited - Ordinary Shares,12.949999809265137,-11.54371922421723,81909550.0,2026-11-24,,,,
+HQ,Horizon Quantum Holdings Ltd. - Class A Ordinary Shares,7.869999885559082,-11.373876304791297,173536.0,2026-11-24,,,,
+TXN,Texas Instruments Incorporated - Common Stock,258.44000244140625,-11.24695206752162,10463676.0,2026-11-24,,,,
+NVTS,Navitas Semiconductor Corporation - Common Stock,6.510000228881836,-11.186899090847824,16985256.0,2026-11-24,,,,
+LSCC,Lattice Semiconductor Corporation - Common Stock,100.37000274658203,-11.137666703457082,2322990.0,2026-11-24,,,,
+CORZ,"Core Scientific, Inc. - Common Stock",10.989999771118164,-11.084141776807954,19154490.0,2026-11-24,,,,
+PENG,"Penguin Solutions, Inc. - Common Stock",37.56999969482422,-11.055875468923714,2361099.0,2026-11-24,,,,
+MU,"Micron Technology, Inc. - Common Stock",629.7899780273438,-11.008906716945999,52310650.0,2026-11-24,,,,
+CIFR,Cipher Digital Inc. - Common Stock,5.519999980926514,-10.9677395041601,45895290.0,2026-11-24,,,,
+GCT,GigaCloud Technology Inc - Class A Ordinary Shares,58.959999084472656,-10.882714901904167,635158.0,2026-11-24,,,,
+MPWR,"Monolithic Power Systems, Inc. - Common Stock",1190.1600341796875,-10.774580185400673,922576.0,2026-11-24,,,,
+NBIS,Nebius Group N.V. - Class A Ordinary Shares,87.30999755859375,-10.725976652181224,40047363.0,2026-11-24,,,,
+ACMR,"ACM Research, Inc. - Class A Common Stock",40.34000015258789,-10.692933832523554,1575990.0,2026-11-24,,,,
+AMBQ,"Ambiq Micro, Inc. Common Stock",40.22999954223633,-10.56024910702753,1096812.0,2026-11-24,,,,
+LITE,Lumentum Holdings Inc. - Common Stock,487.1199951171875,-10.518389590365507,5370776.0,2026-11-24,,,,
+OUST,"Ouster, Inc. - Common Stock",24.989999771118164,-10.430107122579969,2731765.0,2026-11-24,,,,
+BALY,Bally's Corporation Common Stock,8.739999771118164,-10.358976706480371,107901.0,2026-11-24,,,,
+ACCV,Accelevation Holdings Corp. - Class A ordinary shares,9.649999618530273,-10.315990583086743,656382.0,2026-11-24,,,,
+VSH,"Vishay Intertechnology, Inc. Common Stock",22.290000915527344,-10.157189055462634,2731919.0,2026-11-24,,,,
+FLEX,Flex Ltd. - Ordinary Shares,66.44000244140625,-10.143359145738973,6438104.0,2026-11-24,,,,
+FORM,"FormFactor, Inc. - Common Stock",73.30000305175781,-10.138527245319029,1734200.0,2026-11-24,,,,
+SANM,Sanmina Corporation - Common Stock,138.27999877929688,-10.137773335395872,1085544.0,2026-11-24,,,,
+AEVA,"Aeva Technologies, Inc. - Common Stock",8.260000228881836,-10.119688726500197,1944249.0,2026-11-24,,,,
+STDN,"Standard Nuclear, Inc. Class A Common Stock",7.679999828338623,-10.070259219624155,532452.0,2026-11-24,,,,
+ENTG,"Entegris, Inc. - Common Stock",127.81999969482422,-10.023932217720988,4250207.0,2026-11-24,,,,
