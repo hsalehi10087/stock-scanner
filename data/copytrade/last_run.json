@@ -1,13 +1,13 @@
 {
- "date": "2026-11-25",
- "new": 19,
+ "date": "2026-11-26",
+ "new": 14,
  "log": [
-  "Congress CapitolTrades: 23 rows",
+  "Congress CapitolTrades: 26 rows",
   "13F: 161 events",
-  "ARK: 1 events",
-  "Congress: 9 events from 23 rows",
-  "House PTR: 1 new reports, 0 stock events",
-  "Insiders: 40 events",
-  "new events: 19 (total sources: 13F/ARK/Congress/Insiders)"
+  "ARK: 0 events",
+  "Congress: 12 events from 26 rows",
+  "House PTR: 2 new reports, 13 stock events",
+  "Insiders: 43 events",
+  "new events: 14 (total sources: 13F/ARK/Congress/Insiders)"
  ]
 }
