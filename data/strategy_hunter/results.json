@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T23:44:06+00:00",
+ "updated": "2026-11-26T14:00:28+00:00",
  "results": {
   "0268bc9aff-spx-0dte-iron-butterfly-250pm": {
    "name": "SPX 0DTE iron butterfly 2:50pm",
@@ -149,42 +149,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 65.48,
+    "cagr": 65.46,
     "sharpe": 1.3,
     "max_dd": -56.35,
     "total": 40191.78
    },
    "in_sample": {
-    "cagr": 83.84,
+    "cagr": 84.27,
     "sharpe": 1.42,
     "max_dd": -56.35,
-    "total": 15922.04
+    "total": 16257.96
    },
    "out_sample": {
-    "cagr": 27.95,
-    "sharpe": 0.93,
+    "cagr": 29.42,
+    "sharpe": 0.96,
     "max_dd": -33.17,
-    "total": 141.36
+    "total": 151.48
    },
    "buyhold_full": {
-    "cagr": 55.48,
+    "cagr": 55.58,
     "sharpe": 1.0,
     "max_dd": -83.4,
-    "total": 19082.18
+    "total": 19247.18
    },
    "buyhold_out_sample": {
-    "cagr": 22.39,
-    "sharpe": 0.67,
+    "cagr": 24.1,
+    "sharpe": 0.7,
     "max_dd": -53.06,
-    "total": 105.95
+    "total": 116.43
    },
    "trades": 55,
    "win_rate": 47.3,
    "avg_trade_pct": 20.11,
    "exposure": 0.56,
-   "period": "2015-01-01 → 2026-11-25",
-   "oos_start": "2023-05-01",
-   "forward_days": 6,
+   "period": "2015-01-01 → 2026-11-26",
+   "oos_start": "2023-05-02",
+   "forward_days": 7,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -541,16 +541,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -5.06,
+    "cagr": -5.04,
     "sharpe": -0.11,
-    "max_dd": -83.3,
-    "total": -68.26
+    "max_dd": -83.22,
+    "total": -68.11
    },
    "in_sample": {
-    "cagr": -8.66,
+    "cagr": -8.64,
     "sharpe": -0.26,
-    "max_dd": -78.72,
-    "total": -75.39
+    "max_dd": -78.62,
+    "total": -75.28
    },
    "out_sample": {
     "cagr": 4.08,
@@ -570,9 +570,9 @@
     "max_dd": -60.81,
     "total": -3.3
    },
-   "trades": 636,
-   "win_rate": 53.9,
-   "avg_trade_pct": -0.07,
+   "trades": 635,
+   "win_rate": 54.0,
+   "avg_trade_pct": -0.06,
    "exposure": 0.7,
    "period": "2004-10-08 → 2026-11-25",
    "oos_start": "2020-04-03",
@@ -595,6 +595,22 @@
    "status": "not_testable",
    "reason_not_testable": "متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید",
    "verdict": "غیرقابل آزمون: متن کامل مقاله در دسترس نبود؛ معیار قدرت و دوره‌ی بازچینی معلوم نیست، و روش رتبه‌بندی سبد سهام است که موتور تک‌دارایی آن را نمی‌آزماید"
+  },
+  "2ec4711b92-keynesai-rf-direction": {
+   "name": "KeynesAI random forest direction",
+   "name_fa": "پیش‌بینی جهت سهم با جنگل تصادفی (KeynesAI)",
+   "source": "github/backtesting",
+   "source_url": "https://github.com/mostafaamer1234/KeynesAI",
+   "claim": "«پیش‌بینی سهام با مدل یادگیری ماشین با دقت ۶۵٪» (طبقه‌بند جنگل تصادفی روی داده‌ی YFinance)",
+   "claimed_return": "65% accuracy",
+   "asset_class": "stock",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-26",
+   "status": "not_testable",
+   "reason_not_testable": "مدل یادگیری ماشین (جنگل تصادفی) با ویژگی‌های نامشخص است و قانون ورود/خروج عددی ندارد؛ با اندیکاتورهای موتور قابل بازسازی نیست",
+   "verdict": "غیرقابل آزمون: مدل یادگیری ماشین (جنگل تصادفی) با ویژگی‌های نامشخص است و قانون ورود/خروج عددی ندارد؛ با اندیکاتورهای موتور قابل بازسازی نیست"
   },
   "2fd8cbbac8-spy-calendar-hedged-strangles": {
    "name": "SPY weekly strangles with 90-day hedge",
@@ -717,16 +733,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 3.08,
+    "cagr": 3.07,
     "sharpe": 0.6,
     "max_dd": -13.27,
-    "total": 178.94
+    "total": 177.64
    },
    "in_sample": {
-    "cagr": 3.69,
-    "sharpe": 0.74,
+    "cagr": 3.67,
+    "sharpe": 0.73,
     "max_dd": -13.27,
-    "total": 135.71
+    "total": 134.61
    },
    "out_sample": {
     "cagr": 1.67,
@@ -801,16 +817,16 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 10.65,
+    "cagr": 10.48,
     "sharpe": 0.5,
     "max_dd": -66.12,
-    "total": 307.5
+    "total": 298.62
    },
    "in_sample": {
-    "cagr": 7.38,
-    "sharpe": 0.4,
+    "cagr": 7.14,
+    "sharpe": 0.39,
     "max_dd": -49.5,
-    "total": 99.71
+    "total": 95.35
    },
    "out_sample": {
     "cagr": 18.67,
@@ -830,10 +846,10 @@
     "max_dd": -37.75,
     "total": 321.47
    },
-   "trades": 95,
-   "win_rate": 70.5,
+   "trades": 94,
+   "win_rate": 70.2,
    "avg_trade_pct": 1.8,
-   "exposure": 0.47,
+   "exposure": 0.46,
    "period": "2013-01-02 → 2026-11-25",
    "oos_start": "2022-09-21",
    "forward_days": 24,
@@ -874,7 +890,7 @@
     "cagr": 9.15,
     "sharpe": 0.77,
     "max_dd": -21.98,
-    "total": 1828.0
+    "total": 1828.01
    },
    "in_sample": {
     "cagr": 8.59,
@@ -939,42 +955,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 2.41,
+    "cagr": 2.4,
     "sharpe": 0.31,
     "max_dd": -28.05,
     "total": 49.32
    },
    "in_sample": {
-    "cagr": 1.07,
-    "sharpe": 0.17,
+    "cagr": 1.04,
+    "sharpe": 0.16,
     "max_dd": -28.05,
-    "total": 13.35
+    "total": 12.94
    },
    "out_sample": {
-    "cagr": 5.73,
-    "sharpe": 0.6,
+    "cagr": 5.6,
+    "sharpe": 0.59,
     "max_dd": -14.57,
-    "total": 32.62
+    "total": 31.74
    },
    "buyhold_full": {
     "cagr": 7.18,
     "sharpe": 0.49,
     "max_dd": -44.36,
-    "total": 222.23
+    "total": 222.08
    },
    "buyhold_out_sample": {
-    "cagr": 14.88,
-    "sharpe": 0.81,
+    "cagr": 14.72,
+    "sharpe": 0.8,
     "max_dd": -33.9,
-    "total": 101.89
+    "total": 100.46
    },
    "trades": 186,
    "win_rate": 40.9,
    "avg_trade_pct": 0.26,
    "exposure": 0.39,
-   "period": "2010-01-04 → 2026-11-25",
-   "oos_start": "2021-11-01",
-   "forward_days": 24,
+   "period": "2010-01-04 → 2026-11-26",
+   "oos_start": "2021-11-02",
+   "forward_days": 25,
    "forward_usd": 1000.0,
    "verdict": "رد: بهتر از نگه‌داشتن ساده نیست"
   },
@@ -1356,42 +1372,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": -12.66,
+    "cagr": -12.67,
     "sharpe": -0.8,
     "max_dd": -28.53,
     "total": -23.65
    },
    "in_sample": {
-    "cagr": -10.53,
-    "sharpe": -0.59,
+    "cagr": -9.49,
+    "sharpe": -0.51,
     "max_dd": -28.53,
-    "total": -14.38
+    "total": -12.98
    },
    "out_sample": {
-    "cagr": -17.53,
-    "sharpe": -1.53,
+    "cagr": -19.64,
+    "sharpe": -1.78,
     "max_dd": -13.68,
-    "total": -10.89
+    "total": -12.25
    },
    "buyhold_full": {
-    "cagr": -19.07,
-    "sharpe": -0.25,
+    "cagr": -20.72,
+    "sharpe": -0.3,
     "max_dd": -55.86,
-    "total": -34.41
+    "total": -37.04
    },
    "buyhold_out_sample": {
-    "cagr": -31.89,
-    "sharpe": -0.74,
+    "cagr": -34.12,
+    "sharpe": -0.82,
     "max_dd": -36.1,
-    "total": -20.52
+    "total": -22.08
    },
    "trades": 127,
    "win_rate": 29.9,
    "avg_trade_pct": -0.19,
    "exposure": 0.16,
-   "period": "2024-11-27 → 2026-11-25",
-   "oos_start": "2026-04-21",
-   "forward_days": 383,
+   "period": "2024-11-28 → 2026-11-26",
+   "oos_start": "2026-04-22",
+   "forward_days": 398,
    "forward_usd": 1000.0,
    "verdict": "رد: در آزمون خارج از نمونه زیان‌ده"
   },
@@ -1652,7 +1668,7 @@
     "total": 151.44
    },
    "in_sample": {
-    "cagr": 12.64,
+    "cagr": 12.63,
     "sharpe": 0.7,
     "max_dd": -26.31,
     "total": 112.6
@@ -1664,24 +1680,24 @@
     "total": 18.27
    },
    "buyhold_full": {
-    "cagr": 20.16,
+    "cagr": 20.23,
     "sharpe": 0.64,
     "max_dd": -93.96,
-    "total": 427.03
+    "total": 430.45
    },
    "buyhold_out_sample": {
-    "cagr": -26.41,
+    "cagr": -26.4,
     "sharpe": -0.11,
     "max_dd": -67.61,
-    "total": -56.55
+    "total": -56.53
    },
    "trades": 221,
    "win_rate": 51.6,
    "avg_trade_pct": 0.49,
    "exposure": 0.17,
-   "period": "2017-11-09 → 2026-11-25",
-   "oos_start": "2024-03-09",
-   "forward_days": 21,
+   "period": "2017-11-09 → 2026-11-26",
+   "oos_start": "2024-03-10",
+   "forward_days": 22,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -2054,43 +2070,43 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 4.21,
+    "cagr": 4.35,
     "sharpe": 0.29,
     "max_dd": -53.01,
-    "total": 27.55
+    "total": 28.63
    },
    "in_sample": {
-    "cagr": 23.45,
-    "sharpe": 0.76,
+    "cagr": 23.36,
+    "sharpe": 0.75,
     "max_dd": -44.76,
-    "total": 138.88
+    "total": 138.3
    },
    "out_sample": {
-    "cagr": -29.98,
-    "sharpe": -1.11,
+    "cagr": -29.48,
+    "sharpe": -1.08,
     "max_dd": -49.28,
-    "total": -46.83
+    "total": -46.15
    },
    "buyhold_full": {
-    "cagr": 12.95,
+    "cagr": 13.11,
     "sharpe": 0.5,
     "max_dd": -76.63,
-    "total": 105.23
+    "total": 106.98
    },
    "buyhold_out_sample": {
-    "cagr": -23.16,
-    "sharpe": -0.38,
+    "cagr": -22.61,
+    "sharpe": -0.37,
     "max_dd": -53.06,
-    "total": -37.32
+    "total": -36.52
    },
    "trades": 5,
    "win_rate": 60.0,
    "avg_trade_pct": 14.77,
-   "exposure": 0.48,
-   "period": "2021-01-01 → 2026-11-25",
-   "oos_start": "2025-02-17",
-   "forward_days": 9,
-   "forward_usd": 929.53,
+   "exposure": 0.49,
+   "period": "2021-01-01 → 2026-11-26",
+   "oos_start": "2025-02-18",
+   "forward_days": 10,
+   "forward_usd": 937.44,
    "verdict": "رد: معامله‌ی کافی نیست"
   },
   "9fb231fb7f-nq-prev-day-range-filter": {
@@ -2304,7 +2320,7 @@
     "cagr": 3.92,
     "sharpe": 0.5,
     "max_dd": -18.15,
-    "total": 110.68
+    "total": 110.69
    },
    "out_sample": {
     "cagr": 2.98,
@@ -2349,7 +2365,7 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 66.41,
+    "cagr": 66.39,
     "sharpe": 1.32,
     "max_dd": -74.38,
     "total": 49834.37
@@ -2361,30 +2377,30 @@
     "total": 20448.98
    },
    "out_sample": {
-    "cagr": 28.0,
+    "cagr": 27.98,
     "sharpe": 0.92,
     "max_dd": -35.7,
     "total": 146.86
    },
    "buyhold_full": {
-    "cagr": 49.2,
+    "cagr": 49.29,
     "sharpe": 0.94,
     "max_dd": -83.4,
-    "total": 13081.93
+    "total": 13194.07
    },
    "buyhold_out_sample": {
-    "cagr": 23.27,
+    "cagr": 23.53,
     "sharpe": 0.69,
     "max_dd": -53.06,
-    "total": 115.05
+    "total": 116.88
    },
    "trades": 170,
    "win_rate": 40.0,
    "avg_trade_pct": 6.24,
    "exposure": 0.6,
-   "period": "2014-09-17 → 2026-11-25",
+   "period": "2014-09-17 → 2026-11-26",
    "oos_start": "2023-03-31",
-   "forward_days": 31,
+   "forward_days": 32,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
@@ -2810,6 +2826,60 @@
    "reason_not_testable": "به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست",
    "verdict": "غیرقابل آزمون: به داده‌ی معاملات کیف‌پول‌های پالی‌مارکت نیاز دارد؛ با داده‌ی قیمت یاهو قابل آزمون نیست"
   },
+  "e0e70d9a66-spy-sma200-trend-filter": {
+   "name": "SPY 200-day MA trend filter",
+   "name_fa": "فیلتر روند میانگین ۲۰۰ روزه روی SPY",
+   "source": "medium/algorithmic-trading",
+   "source_url": "https://medium.com/@Kryptera/the-day-the-trend-filter-learned-to-sleep-through-the-night-0c88d25d2abe",
+   "claim": "«میانگین متحرک ۲۰۰ روزه بدترین افت SPY را از ۳۲٪ به ۱۷٪ کاهش داد و ۳٫۴ واحد از رشد سالانه (CAGR) کم کرد»",
+   "claimed_return": "max DD 32% -> 17%, CAGR -3.4 pts vs buy&hold",
+   "asset_class": "etf",
+   "symbols": [
+    "SPY"
+   ],
+   "added": "2026-11-26",
+   "status": "implemented",
+   "reason_not_testable": null,
+   "full": {
+    "cagr": 7.58,
+    "sharpe": 0.67,
+    "max_dd": -28.57,
+    "total": 1078.72
+   },
+   "in_sample": {
+    "cagr": 6.51,
+    "sharpe": 0.59,
+    "max_dd": -28.57,
+    "total": 344.02
+   },
+   "out_sample": {
+    "cagr": 10.16,
+    "sharpe": 0.86,
+    "max_dd": -19.53,
+    "total": 166.79
+   },
+   "buyhold_full": {
+    "cagr": 10.55,
+    "sharpe": 0.63,
+    "max_dd": -55.19,
+    "total": 2858.56
+   },
+   "buyhold_out_sample": {
+    "cagr": 14.35,
+    "sharpe": 0.83,
+    "max_dd": -33.72,
+    "total": 289.31
+   },
+   "trades": 108,
+   "win_rate": 28.7,
+   "avg_trade_pct": 2.85,
+   "exposure": 0.76,
+   "period": "1993-02-01 → 2026-11-25",
+   "oos_start": "2016-09-28",
+   "forward_days": 0,
+   "forward_usd": 1000.0,
+   "verdict": "قبول"
+  },
   "e1eae742e4-fib-ote-15m-shift": {
    "name": "Fib 0.6-0.7 OTE with 15m shift",
    "name_fa": "ورود در ناحیه‌ی فیبوناچی ۰٫۶ تا ۰٫۷ با تأیید ۱۵ دقیقه‌ای",
@@ -2890,42 +2960,42 @@
    "status": "implemented",
    "reason_not_testable": null,
    "full": {
-    "cagr": 73.33,
+    "cagr": 73.31,
     "sharpe": 1.48,
     "max_dd": -49.24,
     "total": 51667.82
    },
    "in_sample": {
-    "cagr": 94.76,
+    "cagr": 94.81,
     "sharpe": 1.63,
     "max_dd": -49.24,
-    "total": 19968.5
+    "total": 20042.8
    },
    "out_sample": {
-    "cagr": 32.06,
+    "cagr": 32.02,
     "sharpe": 1.06,
     "max_dd": -30.3,
-    "total": 158.23
+    "total": 157.96
    },
    "buyhold_full": {
-    "cagr": 60.5,
+    "cagr": 60.6,
     "sharpe": 1.05,
     "max_dd": -83.4,
-    "total": 21509.17
+    "total": 21693.0
    },
    "buyhold_out_sample": {
-    "cagr": 22.17,
-    "sharpe": 0.66,
+    "cagr": 22.44,
+    "sharpe": 0.67,
     "max_dd": -53.06,
-    "total": 98.01
+    "total": 99.49
    },
    "trades": 40,
    "win_rate": 52.5,
    "avg_trade_pct": 27.67,
    "exposure": 0.46,
-   "period": "2015-07-20 → 2026-11-25",
-   "oos_start": "2023-06-30",
-   "forward_days": 0,
+   "period": "2015-07-20 → 2026-11-26",
+   "oos_start": "2023-07-01",
+   "forward_days": 1,
    "forward_usd": 1000.0,
    "verdict": "قبول"
   },
