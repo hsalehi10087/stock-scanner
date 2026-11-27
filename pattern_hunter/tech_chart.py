@@ -8,6 +8,9 @@ import datetime as dt
 
 import numpy as np
 import pandas as pd
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import to_shamsi as _to_shamsi  # noqa: E402
 
 
 def fa(x):
@@ -135,6 +138,6 @@ def render(d, s, a, path):
     ticks = [i for i in range(0, len(d), 21)]
     axv.set_xticks(ticks)
     axv.set_xticklabels([d.index[i].strftime('%b %y') for i in ticks], fontsize=8)
-    fig.text(0.99, 0.005, f'{dt.date.today()} • not investment advice', ha='right', fontsize=7, color='#9ca3af')
+    fig.text(0.99, 0.005, f'{_to_shamsi(dt.date.today(), fa_digits=False)} • not investment advice', ha='right', fontsize=7, color='#9ca3af')
     fig.savefig(path, bbox_inches='tight')
     plt.close(fig)

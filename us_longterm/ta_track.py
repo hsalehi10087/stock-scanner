@@ -3,6 +3,9 @@
 TELEGRAM_CHAT_ID=none = فقط چاپ."""
 import csv, os, sys, datetime as dt
 import pandas as pd, yfinance as yf, requests
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 LOG = 'data/ta_review/history.csv'
 if not os.path.exists(LOG):
@@ -40,5 +43,5 @@ df.to_csv('data/ta_review/track.csv', index=False)
 msg = "\n".join(lines); print(msg)
 chat = os.getenv('TELEGRAM_CHAT_ID', '75439320'); tok = os.getenv('TELEGRAM_BOT_TOKEN', '')
 if chat != 'none' and tok:
-    r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage', data={'chat_id': chat, 'text': msg}, timeout=30)
+    r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage', data={'chat_id': chat, 'text': shamsi_text(msg)}, timeout=30)
     print('telegram', r.status_code)

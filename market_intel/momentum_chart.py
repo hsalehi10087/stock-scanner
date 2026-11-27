@@ -19,6 +19,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text, to_shamsi  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'momentum')
@@ -101,7 +104,7 @@ def draw(r3, path, last_change=None):
     ax0.text(0.5, 0.92, fa('کدام دارایی در ۳ ماه گذشته بیشتر سود داده؟'), ha='center', fontsize=25, fontweight='bold', color=INK)
     ax0.text(0.5, 0.50, fa('اگر ۳ ماه پیش این دارایی را خریده بودی، امروز چند درصد سود (سبز) یا زیان (قرمز) داشتی'),
              ha='center', fontsize=14, color=GREY)
-    ax0.text(0.5, 0.12, digits(day.strftime('%Y-%m-%d')) + '  |  ' + fa('برترین الان: ') + name(leader) + ' ' + pct(now.iloc[0]),
+    ax0.text(0.5, 0.12, digits(to_shamsi(day, fa_digits=False)) + '  |  ' + fa('برترین الان: ') + name(leader) + ' ' + pct(now.iloc[0]),
              ha='center', fontsize=17, color=GREEN, fontweight='bold')
     if last_change:
         ax0.text(0.5, -0.22, fa(last_change), ha='center', fontsize=12, color=RED)
@@ -160,6 +163,10 @@ def draw(r3, path, last_change=None):
 
 def send(token, chat, method, **kw):
     import requests
+    d = kw.get('data') or {}
+    for k in ('text', 'caption'):
+        if isinstance(d.get(k), str):
+            d[k] = shamsi_text(d[k])
     r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **kw)
     ok = r.status_code == 200 and '"ok":true' in r.text
     if not ok:

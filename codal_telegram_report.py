@@ -10,6 +10,9 @@ import os
 from datetime import datetime, timedelta
 import logging
 import requests
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.abspath(__file__)), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -160,7 +163,7 @@ class CodalTelegramReport:
             url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
             data = {
                 'chat_id': chat_id,
-                'text': message,
+                'text': shamsi_text(message),
                 'parse_mode': 'HTML'
             }
 

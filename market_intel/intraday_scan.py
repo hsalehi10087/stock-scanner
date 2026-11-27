@@ -24,6 +24,9 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import intrinsic as IV  # noqa: E402
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(ROOT, 'data', 'intraday')
@@ -62,7 +65,7 @@ def tg(text):
     ok = True
     for c in chats:
         r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage',
-                          data={'chat_id': c, 'text': text, 'parse_mode': 'HTML', 'disable_web_page_preview': 'true'}, timeout=20)
+                          data={'chat_id': c, 'text': shamsi_text(text), 'parse_mode': 'HTML', 'disable_web_page_preview': 'true'}, timeout=20)
         print('telegram', c[-4:], r.status_code)
         ok = ok and r.ok
     return ok

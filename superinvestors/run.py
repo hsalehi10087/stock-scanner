@@ -21,6 +21,9 @@ import requests
 sys.path.insert(0, os.path.dirname(__file__))
 from parse import parse_managers, parse_holdings  # noqa: E402
 from report_fa import FA_NAMES, build_daily, build_first  # noqa: E402
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SNAP_DIR = os.path.join(ROOT, 'data', 'superinvestors')
@@ -169,7 +172,7 @@ def send(text_chunks, token, chat_ids):
     for cid in chat_ids:
         for ch in text_chunks:
             r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
-                              data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'}, timeout=20)
+                              data={'chat_id': cid, 'text': shamsi_text(ch), 'parse_mode': 'HTML'}, timeout=20)
             if r.status_code != 200 or '"ok":true' not in r.text:
                 print(f'❌ ارسال به {cid} ناموفق: {r.status_code} {r.text[:200]}', file=sys.stderr)
                 ok = False

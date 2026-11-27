@@ -18,6 +18,9 @@ import sys
 import time
 
 import requests
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 
 try:
     from bs4 import BeautifulSoup
@@ -200,7 +203,7 @@ def send_telegram(text):
     ok = True
     for cid in [c.strip() for c in chat.split(',') if c.strip()]:
         r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
-                          data={'chat_id': cid, 'text': text}, timeout=30)
+                          data={'chat_id': cid, 'text': shamsi_text(text)}, timeout=30)
         ok &= r.ok
         print('telegram', cid, r.status_code)
     return ok

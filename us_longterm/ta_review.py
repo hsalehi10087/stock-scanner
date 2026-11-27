@@ -31,6 +31,9 @@ if not tickers:
 
 from tradingagents.default_config import DEFAULT_CONFIG
 from tradingagents.graph.trading_graph import TradingAgentsGraph
+import os as _os_j, sys as _sys_j
+_sys_j.path.insert(0, _os_j.path.join(_os_j.path.dirname(_os_j.path.dirname(_os_j.path.abspath(__file__))), 'market_summary'))
+from jalali import shamsi_text  # noqa: E402  تاریخ شمسی در پیام‌ها
 cfg = DEFAULT_CONFIG.copy()
 date = dt.date.today().isoformat()
 
@@ -62,6 +65,7 @@ msg = (f"🤖 بررسی TradingAgents ({date})\n"
 print('=== MESSAGE ===\n' + msg + '\n=== END ===')
 if dry or not token:
     print('dry-run: not sent'); sys.exit(0)
+msg = shamsi_text(msg)
 for i in range(0, len(msg), 3800):
     r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
                       data={'chat_id': chat, 'text': msg[i:i+3800]}, timeout=30)

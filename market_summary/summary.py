@@ -14,6 +14,9 @@ import pandas as pd
 import requests
 import yfinance as yf
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from jalali import shamsi_payload  # noqa: E402  همه‌ی تاریخ‌های پیام‌ها شمسی می‌شوند
+
 PRICE_TICKERS = [
     # (برچسب فارسی, نماد Yahoo, واحد)
     ('طلا (انس)', 'GC=F', '$'),
@@ -197,6 +200,7 @@ def _digest_record(cid, method, kw):
 
 
 def tg_post(token, cid, method, **kw):
+    shamsi_payload(kw.get('data'))
     if os.getenv('DIGEST_DIR'):
         return _digest_record(cid, method, kw)
     r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **kw)
