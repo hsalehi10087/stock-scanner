@@ -1,6 +1,9 @@
 """سنجش عملکرد تصمیم‌های TradingAgents نسبت به SPY.
 بازده هر سهم از قیمت بسته‌ی روز تصمیم (یا اولین بسته‌ی بعد از آن) تا امروز؛ به تفکیک امتیاز.
 TELEGRAM_CHAT_ID=none = فقط چاپ."""
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import csv, os, sys, datetime as dt
 import pandas as pd, yfinance as yf, requests
 
@@ -40,5 +43,5 @@ df.to_csv('data/ta_review/track.csv', index=False)
 msg = "\n".join(lines); print(msg)
 chat = os.getenv('TELEGRAM_CHAT_ID', '75439320'); tok = os.getenv('TELEGRAM_BOT_TOKEN', '')
 if chat != 'none' and tok:
-    r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage', data={'chat_id': chat, 'text': msg}, timeout=30)
+    r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage', data={'chat_id': chat, 'text': _jt(msg)}, timeout=30)
     print('telegram', r.status_code)

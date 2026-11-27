@@ -8,6 +8,9 @@
 قانون تغییر: معامله‌ای که ارزشش بیش از 5٪ کل پورتفوی همان سرمایه‌گذار باشد.
   ارزش معامله = (تغییر تعداد سهم) × (قیمت فعلی سهم)، قیمت = value / shares.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import argparse
 import datetime as dt
 import html
@@ -169,7 +172,7 @@ def send(text_chunks, token, chat_ids):
     for cid in chat_ids:
         for ch in text_chunks:
             r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
-                              data={'chat_id': cid, 'text': ch, 'parse_mode': 'HTML'}, timeout=20)
+                              data={'chat_id': cid, 'text': _jt(ch), 'parse_mode': 'HTML'}, timeout=20)
             if r.status_code != 200 or '"ok":true' not in r.text:
                 print(f'❌ ارسال به {cid} ناموفق: {r.status_code} {r.text[:200]}', file=sys.stderr)
                 ok = False

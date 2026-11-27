@@ -9,6 +9,12 @@
 اجرای آزمایشی با داده‌ی ساختگی (فقط برای دیدن شکل نمودار):  python3 market_intel/momentum_chart.py --demo
 این نمودار توصیه‌ی خرید نیست؛ فقط نشان می‌دهد در ۳ ماه گذشته کدام دارایی جلوتر بوده است.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import convert_kw as _jconv  # noqa: E402
 import datetime as dt
 import json
 import os
@@ -101,7 +107,7 @@ def draw(r3, path, last_change=None):
     ax0.text(0.5, 0.92, fa('کدام دارایی در ۳ ماه گذشته بیشتر سود داده؟'), ha='center', fontsize=25, fontweight='bold', color=INK)
     ax0.text(0.5, 0.50, fa('اگر ۳ ماه پیش این دارایی را خریده بودی، امروز چند درصد سود (سبز) یا زیان (قرمز) داشتی'),
              ha='center', fontsize=14, color=GREY)
-    ax0.text(0.5, 0.12, digits(day.strftime('%Y-%m-%d')) + '  |  ' + fa('برترین الان: ') + name(leader) + ' ' + pct(now.iloc[0]),
+    ax0.text(0.5, 0.12, digits(_jd(day.strftime('%Y-%m-%d'))) + '  |  ' + fa('برترین الان: ') + name(leader) + ' ' + pct(now.iloc[0]),
              ha='center', fontsize=17, color=GREEN, fontweight='bold')
     if last_change:
         ax0.text(0.5, -0.22, fa(last_change), ha='center', fontsize=12, color=RED)
@@ -147,7 +153,7 @@ def draw(r3, path, last_change=None):
     ax2.set_title(fa('بازدهی ۳ ماهه در ۹۰ روز اخیر (هر خط = یک دارایی)'), fontsize=16, color=INK, pad=10)
     ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: digits(f'{v:.0f}%')))
     ax2.tick_params(labelsize=11, colors=GREY)
-    ax2.xaxis.set_major_formatter(matplotlib.dates.DateFormatter('%m/%d'))
+    ax2.xaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: digits(_jd(matplotlib.dates.num2date(v).strftime('%Y-%m-%d'), short=True))))
     ax2.set_xticks([t for t in ax2.get_xticks() if t <= matplotlib.dates.date2num(h.index[-1])])
     for s in ('top', 'right'):
         ax2.spines[s].set_visible(False)
@@ -160,7 +166,7 @@ def draw(r3, path, last_change=None):
 
 def send(token, chat, method, **kw):
     import requests
-    r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **kw)
+    r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **_jconv(kw))
     ok = r.status_code == 200 and '"ok":true' in r.text
     if not ok:
         print(f'❌ telegram {method}: {r.status_code} {r.text[:200]}', file=sys.stderr)

@@ -1,6 +1,9 @@
 """اجرای TradingAgents روی سیگنال‌های رشد آمریکا و ارسال نتیجه به تلگرام.
 فقط دستی اجرا می‌شود. TELEGRAM_CHAT_ID=none یعنی فقط چاپ، بدون ارسال.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import json, os, sys, datetime as dt
 import requests
 
@@ -64,5 +67,5 @@ if dry or not token:
     print('dry-run: not sent'); sys.exit(0)
 for i in range(0, len(msg), 3800):
     r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage',
-                      data={'chat_id': chat, 'text': msg[i:i+3800]}, timeout=30)
+                      data={'chat_id': chat, 'text': _jt(msg[i:i+3800])}, timeout=30)
     print('telegram', r.status_code)

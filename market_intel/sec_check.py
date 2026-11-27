@@ -4,6 +4,9 @@
 سال قبل، تعداد فصل‌های پیاپی رشد سود، حاشیه‌ها، و نشانه‌ی «سود از اقلام غیرعملیاتی» (سود خالص بیشتر از سود عملیاتی).
 نتیجه ۷ روز در data/quality/sec_cache.json نگه داشته می‌شود. داده‌ی Yahoo فقط وقتی SEC چیزی نداشت به کار می‌رود.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
 import datetime as dt
 import json
 import os
@@ -150,7 +153,7 @@ def events_8k(ticker, days=7):
 def label_8k(ev):
     if not ev:
         return ''
-    parts = [('⚠️ ' if i in WARN_8K else '') + f"{ITEMS_8K[i]} ({fa(d[5:].replace('-', '/'))})" for d, i in ev[:3]]
+    parts = [('⚠️ ' if i in WARN_8K else '') + f"{ITEMS_8K[i]} ({fa(_jd(d, short=True))})" for d, i in ev[:3]]
     return '📰 اطلاعیه‌ی رسمی ۸-K در هفته‌ی اخیر: ' + '، '.join(parts)
 
 

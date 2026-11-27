@@ -5,6 +5,9 @@
 هر سیگنال یک بار در data/polymarket/history.csv ثبت می‌شود؛ هر روز بازده، بیشترین رشد و افت از روز سیگنال،
 و بعد از بسته‌شدن بازار پلی‌مارکت نتیجه‌ی نهایی (درست/غلط) حساب می‌شود. پیام از راه گزارش صبحگاهی می‌رود.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
 import csv
 import datetime as dt
 import json
@@ -276,7 +279,7 @@ def main():
     if low_vol:
         L.append(f"<i>{fa(low_vol)} بازار با احتمال بالا کنار گذاشته شد چون حجمش زیر ۱۰ هزار دلار بود.</i>")
     if perf:
-        row = lambda x: (f"{x['ticker']} (از {fa(x['date'][5:].replace('-', '/'))}): {fa(f'{x['ret']:+.1f}')}٪ "  # noqa: E731
+        row = lambda x: (f"{x['ticker']} (از {fa(_jd(x['date'], short=True))}): {fa(f'{x['ret']:+.1f}')}٪ "  # noqa: E731
                          f"(بیشترین رشد {fa(f'{x['max']:+.1f}')}٪، بیشترین افت {fa(f'{x['min']:+.1f}')}٪)")
         best = sorted(perf, key=lambda x: -x['ret'])[:5]
         worst = [x for x in sorted(perf, key=lambda x: x['ret'])[:5] if x['ret'] < 0]

@@ -4,6 +4,9 @@
 یک پیام تلگرام جدا برای هر روش. هیچ سفارشی ثبت نمی‌شود.
 اجرا: python3 strategy_hunter/alpaca_test.py <spec_id> [<spec_id> ...]
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import datetime as dt
 import json
 import os
@@ -91,7 +94,7 @@ def tg(text):
     ok = True
     for c in chats:
         r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage',
-                          data={'chat_id': c, 'text': text, 'disable_web_page_preview': 'true'}, timeout=20)
+                          data={'chat_id': c, 'text': _jt(text), 'disable_web_page_preview': 'true'}, timeout=20)
         print('telegram', c[-4:], r.status_code)
         ok = ok and r.ok
     return ok

@@ -4,6 +4,9 @@
 سقف ۵۲ هفته، حمایت (کف ۲۰ روزه و میانگین ۵۰)، سطح ابطال (حد ضرر فرضی) و حجم با میانگین ۵۰ روزه.
 همه‌ی محاسبات فقط با داده تا امروز است.
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
 import datetime as dt
 
 import numpy as np
@@ -134,7 +137,7 @@ def render(d, s, a, path):
         lambda y, _: f'{y / 1e6:.1f}M' if y >= 1e6 else f'{y / 1e3:.0f}K'))
     ticks = [i for i in range(0, len(d), 21)]
     axv.set_xticks(ticks)
-    axv.set_xticklabels([d.index[i].strftime('%b %y') for i in ticks], fontsize=8)
+    axv.set_xticklabels([_jd(d.index[i].strftime('%Y-%m-%d'), ym=True) for i in ticks], fontsize=8)
     fig.text(0.99, 0.005, f'{dt.date.today()} • not investment advice', ha='right', fontsize=7, color='#9ca3af')
     fig.savefig(path, bbox_inches='tight')
     plt.close(fig)
