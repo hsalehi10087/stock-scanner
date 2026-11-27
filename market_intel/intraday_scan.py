@@ -12,6 +12,9 @@
 
 اجرا: python3 market_intel/intraday_scan.py [--force]   (--force: بدون چک ساعت بازار، برای آزمایش)
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import csv
 import datetime as dt
 import json
@@ -62,7 +65,7 @@ def tg(text):
     ok = True
     for c in chats:
         r = requests.post(f'https://api.telegram.org/bot{tok}/sendMessage',
-                          data={'chat_id': c, 'text': text, 'parse_mode': 'HTML', 'disable_web_page_preview': 'true'}, timeout=20)
+                          data={'chat_id': c, 'text': _jt(text), 'parse_mode': 'HTML', 'disable_web_page_preview': 'true'}, timeout=20)
         print('telegram', c[-4:], r.status_code)
         ok = ok and r.ok
     return ok

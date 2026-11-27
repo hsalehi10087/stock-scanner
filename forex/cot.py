@@ -10,6 +10,9 @@
   python3 forex/cot.py weekly     سیگنال این هفته + دفتر معاملات آزمایشی ← data/forex/{signals,ledger}.json
   python3 forex/cot.py report     گزارش تلگرام
 """
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
 import datetime as dt
 import json
 import os
@@ -263,7 +266,7 @@ def report():
         L.append(f"{FA_CUR[cur]}: هج‌فاندها {fa(f'{c['lev_net_pct']:+.1f}')}٪ "
                  f"(تغییر ۴ هفته {fa(f'{c['d4_pct']:+.1f}') if c['d4_pct'] is not None else '—'}٪){ext} ← {p}")
     L += ['', f"<b>📐 قاعده‌ی انتخاب‌شده:</b> {RN[bt['chosen']]}",
-          f"آزمون جدا (از {fa(bt['split'][:7].replace('-', '/'))}): سالانه {fa(f'{t['cagr']:+.1f}')}٪، "
+          f"آزمون جدا (از {fa(_jd(bt['split'], ym=True))}): سالانه {fa(f'{t['cagr']:+.1f}')}٪، "
           f"ریزش {fa(f'{t['max_dd']:.1f}')}٪، شارپ {fa(t['sharpe'])} | خرید همه‌ی ارزها: سالانه {fa(f'{bh['cagr']:+.1f}')}٪",
           ('✅ قاعده آزمون را قبول شد.' if bt['verdict'] == 'قبول' else
            '❌ هیچ قاعده‌ای آزمون جدا را قبول نشد؛ سیگنال فقط برای اطلاع است و معامله‌ی واقعی (حتی آزمایشی OANDA) انجام نمی‌شود.'), '']

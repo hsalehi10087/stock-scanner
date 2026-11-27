@@ -5,6 +5,9 @@
 داده‌های پویا از تاریخچهٔ روزانه
 """
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'market_summary'))
+from jalali import to_jalali_text as _jt  # noqa: E402
 import csv
 import os
 from datetime import datetime, timedelta
@@ -160,7 +163,7 @@ class CodalTelegramReport:
             url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
             data = {
                 'chat_id': chat_id,
-                'text': message,
+                'text': _jt(message),
                 'parse_mode': 'HTML'
             }
 

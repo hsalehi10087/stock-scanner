@@ -4,6 +4,9 @@
   - قیمت‌ها: Yahoo Finance (کتابخانه yfinance)
   - نرخ‌ها و شاخص‌های کلان: FRED (فایل CSV عمومی)
 """
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import jalali as _jalali  # noqa: E402
 import html
 import io
 import os
@@ -197,6 +200,7 @@ def _digest_record(cid, method, kw):
 
 
 def tg_post(token, cid, method, **kw):
+    kw = _jalali.convert_kw(kw)                    # همه‌ی تاریخ‌های میلادی متن/کپشن ← شمسی
     if os.getenv('DIGEST_DIR'):
         return _digest_record(cid, method, kw)
     r = requests.post(f'https://api.telegram.org/bot{token}/{method}', timeout=60, **kw)

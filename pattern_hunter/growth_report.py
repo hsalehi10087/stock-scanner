@@ -1,4 +1,7 @@
 """گزارش تلگرام «احتمال رشد تکنیکال و بنیادی»: سیگنال‌های امروز + پیگیری همه‌ی سیگنال‌های قبلی."""
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'market_summary'))
+from jalali import jdate as _jd  # noqa: E402
 import html
 import json
 import os
@@ -104,7 +107,7 @@ def main():
         ranked = sorted(items, key=lambda x: x['ret_pct'], reverse=True)
         k = min(5, len(ranked))
         def line(x):
-            return (f"{'🛑 ' if x.get('stopped') else ''}{FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
+            return (f"{'🛑 ' if x.get('stopped') else ''}{FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(_jd(x['date'], short=True))}: "
                     f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، کمترین {pct(x['min_pct'])}، شاخص {pct(x['index_pct'])})")
         L.append('')
         L.append('<b>🏆 بهترین سیگنال‌ها از روز سیگنال تا امروز</b>')
@@ -115,7 +118,7 @@ def main():
         L.append('<b>فهرست تازه‌ترین سیگنال‌ها</b>')
         for x in sorted(items, key=lambda x: x['date'], reverse=True)[:25]:
             st = '🛑' if x.get('stopped') else ('🚀' if x['max_pct'] >= 10 else '⏳')
-            L.append(f"{st} {FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(x['date'][5:].replace('-', '/'))}: "
+            L.append(f"{st} {FLAG.get(x['market'], '')} <b>{e(x['ticker'])}</b> از {fa(_jd(x['date'], short=True))}: "
                      f"{pct(x['ret_pct'])} (بیشترین {pct(x['max_pct'])}، شاخص {pct(x['index_pct'])})")
         L.append('<i>🚀 دست‌کم ۱۰٪ رشد از روز سیگنال | 🛑 حد ضرر ۸٪ خورد و سیگنال بسته شد | ⏳ هنوز در جریان</i>')
     L.append('<i>صرفاً برای بررسی بیشتر؛ توصیه‌ی خرید نیست.</i>')
