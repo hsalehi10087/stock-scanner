@@ -47,6 +47,32 @@ def fa(x):
     return str(x).translate(FA)
 
 
+def g2j(gy, gm, gd):
+    """تبدیل میلادی به شمسی (الگوریتم استاندارد)."""
+    g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
+    gy2 = gy + 1 if gm > 2 else gy
+    days = 355666 + 365 * gy + (gy2 + 3) // 4 - (gy2 + 99) // 100 + (gy2 + 399) // 400 + gd + g_d_m[gm - 1]
+    jy = -1595 + 33 * (days // 12053)
+    days %= 12053
+    jy += 4 * (days // 1461)
+    days %= 1461
+    if days > 365:
+        jy += (days - 1) // 365
+        days = (days - 1) % 365
+    jm = 1 + days // 31 if days < 186 else 7 + (days - 186) // 30
+    jd = 1 + (days % 31 if days < 186 else (days - 186) % 30)
+    return jy, jm, jd
+
+
+def jdate(x, short=False):
+    """'2026-11-25' یا 20261125 ← '1405/09/04' (short: '09/04')؛ اگر قابل‌خواندن نبود همان را برمی‌گرداند."""
+    s = str(x).replace('-', '').replace('/', '')
+    if len(s) != 8 or not s.isdigit():
+        return str(x)
+    jy, jm, jd = g2j(int(s[:4]), int(s[4:6]), int(s[6:]))
+    return f"{jm:02d}/{jd:02d}" if short else f"{jy}/{jm:02d}/{jd:02d}"
+
+
 def jload(p, default):
     try:
         return json.load(open(p, encoding='utf-8'))
@@ -127,7 +153,7 @@ def merge(res_path, codal_path, track_path, regime_path=None):
 
     m = res.get('meta', {})
     L = ['📈 احتمال رشد تکنیکال و بنیادی — بورس ایران',
-         f"آخرین جلسه: {m.get('date', '؟')} | {fa(m.get('total', '؟'))} سهم بررسی شد، {fa(m.get('liquid', '؟'))} تا نقدشوندگی کافی داشتند، "
+         f"آخرین جلسه: {jdate(m.get('date', '؟'))} | {fa(m.get('total', '؟'))} سهم بررسی شد، {fa(m.get('liquid', '؟'))} تا نقدشوندگی کافی داشتند، "
          f"{fa(m.get('tech', '؟'))} تا از صافی تکنیکال گذشتند، {fa(len(res['final']))} تا از P/E؛ "
          f"از این‌ها رشد فروش و سود کدال: {fa(len(passed))} قبول، {fa(len(failed))} رد، {fa(len(missing))} ناقص.", '']
     if reg and reg.get('breadth'):
@@ -176,10 +202,10 @@ def merge(res_path, codal_path, track_path, regime_path=None):
         rk = sorted(old, key=lambda t: -t['ret_pct'])
         k = min(5, max(1, len(rk) // 2))
         L += ['', '🏆 بهترین سیگنال‌ها از روز سیگنال تا امروز']
-        L += [f"{fa(i)}. {t['ticker']} (از {t['date'][5:].replace('-', '/')}): {t['ret_pct']:+.1f}٪ (بیشترین {t['max_pct']:+.1f}٪، کمترین {t['min_pct']:+.1f}٪)"
+        L += [f"{fa(i)}. {t['ticker']} (از {jdate(t['date'], True)}): {t['ret_pct']:+.1f}٪ (بیشترین {t['max_pct']:+.1f}٪، کمترین {t['min_pct']:+.1f}٪)"
               for i, t in enumerate(rk[:k], 1)]
         L += ['⚠️ بدترین سیگنال‌ها از روز سیگنال تا امروز']
-        L += [f"{fa(i)}. {t['ticker']} (از {t['date'][5:].replace('-', '/')}): {t['ret_pct']:+.1f}٪ (بیشترین {t['max_pct']:+.1f}٪، کمترین {t['min_pct']:+.1f}٪)"
+        L += [f"{fa(i)}. {t['ticker']} (از {jdate(t['date'], True)}): {t['ret_pct']:+.1f}٪ (بیشترین {t['max_pct']:+.1f}٪، کمترین {t['min_pct']:+.1f}٪)"
               for i, t in enumerate(reversed(rk[-k:]), 1)]
         L.append('بازده با قیمت تعدیل‌شده‌ی tsetmc (افزایش سرمایه و سود نقدی) حساب شده؛ مقایسه با شاخص بورس هنوز ندارد.')
     L += ['', 'همه‌ی سیگنال‌های تازه در تاریخچه ثبت می‌شود و سود/زیانشان از روز سیگنال پیگیری می‌شود. صرفاً برای بررسی بیشتر؛ توصیه‌ی خرید نیست.']
@@ -206,7 +232,7 @@ def options(res_path):
                 f"   نوسان ضمنی {fa(x['iv'])}٪ در برابر واقعی {fa(x['hv'])}٪ ({x['ratio']:.1f} برابر) | بازده ۲۰ روزه‌ی پایه {x['ret20']:+.1f}٪"]
 
     L = ['🎯 موقعیت های آپشن ایران',
-         f"آخرین جلسه: {d.get('date', '؟')} | {fa(c['total'])} قرارداد، {fa(c['traded'])} تا معامله شدند روی {fa(d['unds'])} دارایی پایه؛ "
+         f"آخرین جلسه: {jdate(d.get('date', '؟'))} | {fa(c['total'])} قرارداد، {fa(c['traded'])} تا معامله شدند روی {fa(d['unds'])} دارایی پایه؛ "
          f"{fa(d['liq'])} تا نقدشونده بودند ({fa(d['liqCalls'])} کال، {fa(d['liqPuts'])} پوت).", '']
     calls = [x for x in d.get('calls', []) if x['ratio'] <= MAX_RATIO]
     puts = [x for x in d.get('puts', []) if x['ratio'] <= MAX_RATIO]
