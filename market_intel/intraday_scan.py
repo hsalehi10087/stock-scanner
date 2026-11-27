@@ -8,6 +8,8 @@
        🔴 هشدار ریسک (فقط برای سهم‌های زیر نظر): افت شدید یا شکست میانگین ۵۰ روزه به پایین
   ۴) برچسب بنیادی: رشد فروش و سود (fundamentals.csv)، امتیاز AI و احتمال شکارچی الگو
   ۵) فقط هشدارهای تازه‌ی همان روز به تلگرام می‌رود (data/intraday/state.json تکرار را می‌گیرد)
+  ۶) «هشدار فوری» خرید فقط وقتی فرستاده می‌شود که فیلتر بنیادی سخت را رد کند (رشد فروش و سود هر دو ≥ ۱۰٪ و ⭐)؛
+     سهم‌های ردنشده به خلاصه‌ی پایان روز می‌روند. به هر سهم فوری یک نمودار کوچک ۶ ماهه (با میانگین ۵۰ روزه) پیوست می‌شود.
 هیچ سفارشی ثبت نمی‌شود. این هشدار است، نه توصیه‌ی خرید.
 
 اجرا: python3 market_intel/intraday_scan.py [--force]   (--force: بدون چک ساعت بازار، برای آزمایش)
@@ -34,6 +36,9 @@ DATA = 'https://data.alpaca.markets'
 MIN_PRICE = 5.0
 MIN_DOLLAR_VOL = 5e6        # میانگین ارزش معاملات روزانه‌ی ۲۰ روزه
 MAX_LINES = 12              # حداکثر هشدار مثبت در هر پیام
+FUND_MIN_REV = 10.0         # فیلتر بنیادی هشدار فوری: رشد فروش فصل آخر نسبت به سال قبل (٪)
+FUND_MIN_PROFIT = 10.0      # و رشد سود (٪) — هر دو باید موجود و بالاتر از آستانه باشند
+CHART_DAYS = 126            # حدود ۶ ماه کاری
 
 
 # ---------------------------------------------------------------- کمکی
@@ -250,6 +255,74 @@ def fund_tag(f):
     return (' | ' + '، '.join(bits) + star) if bits else '', score
 
 
+def fund_pass(f):
+    """فیلتر بنیادی سخت برای هشدار فوری: داده‌ی فروش و سود باید موجود باشد و هر دو ≥ آستانه."""
+    return bool(f) and f.get('rev') is not None and f.get('profit') is not None \
+        and f['rev'] >= FUND_MIN_REV and f['profit'] >= FUND_MIN_PROFIT
+
+
+def make_chart(sym, df, path):
+    """نمودار کوچک ~۶ ماهه‌ی قیمت پایانی + میانگین ۵۰ روزه (متن انگلیسی تا حروف فارسی در تصویر به‌هم نریزد)."""
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    close = df['close']
+    ma50 = close.rolling(50).mean()
+    view = close.iloc[-CHART_DAYS:]
+    ma = ma50.iloc[-CHART_DAYS:]
+    ret = (view.iloc[-1] / view.iloc[0] - 1) * 100
+    col = '#16a34a' if ret >= 0 else '#dc2626'
+    fig, ax = plt.subplots(figsize=(3.8, 1.9), dpi=110)
+    x = range(len(view))
+    ax.plot(x, view.values, color=col, lw=1.6)
+    ax.fill_between(x, view.values, view.values.min(), color=col, alpha=0.10)
+    ax.plot(x, ma.values, color='#64748b', lw=1, ls='--')
+    ax.scatter([len(view) - 1], [view.iloc[-1]], color=col, s=18, zorder=5)
+    ax.set_title(f'{sym}   6M {ret:+.0f}%   (MA50 dashed)', fontsize=8, loc='left')
+    ax.set_xticks([0, len(view) // 2, len(view) - 1])
+    ax.set_xticklabels([str(view.index[i])[5:] for i in (0, len(view) // 2, len(view) - 1)], fontsize=6)
+    ax.tick_params(axis='y', labelsize=6)
+    for sp in ('top', 'right'):
+        ax.spines[sp].set_visible(False)
+    ax.grid(alpha=0.2)
+    fig.tight_layout()
+    fig.savefig(path)
+    plt.close(fig)
+
+
+def tg_photos(items):
+    """items: [(مسیر تصویر، کپشن)] — آلبوم‌های ≤۱۰ تایی. خطای نمودار هرگز ارسال متن هشدار را خراب نمی‌کند."""
+    tok = os.getenv('TELEGRAM_BOT_TOKEN', '')
+    chats = [c.strip() for c in os.getenv('TELEGRAM_CHAT_ID', '').split(',') if c.strip() and c.strip() != 'none']
+    if not items:
+        return
+    if not tok or not chats:
+        print(f'(telegram skipped) {len(items)} chart(s): ' + ', '.join(p for p, _ in items))
+        return
+    for i in range(0, len(items), 10):
+        part = items[i:i + 10]
+        for c in chats:
+            try:
+                if len(part) == 1:
+                    with open(part[0][0], 'rb') as f:
+                        r = requests.post(f'https://api.telegram.org/bot{tok}/sendPhoto',
+                                          data={'chat_id': c, 'caption': part[0][1], 'parse_mode': 'HTML'},
+                                          files={'photo': f}, timeout=60)
+                else:
+                    media, files = [], {}
+                    for j, (path, cap) in enumerate(part):
+                        files[f'p{j}'] = open(path, 'rb')
+                        media.append({'type': 'photo', 'media': f'attach://p{j}', 'caption': cap, 'parse_mode': 'HTML'})
+                    r = requests.post(f'https://api.telegram.org/bot{tok}/sendMediaGroup',
+                                      data={'chat_id': c, 'media': json.dumps(media, ensure_ascii=False)},
+                                      files=files, timeout=90)
+                    for f in files.values():
+                        f.close()
+                print('telegram charts', c[-4:], r.status_code)
+            except Exception as e:
+                print(f'⚠️ chart send failed: {e}')
+
+
 def main():
     force = '--force' in sys.argv
     now = dt.datetime.now(NY)
@@ -307,7 +380,9 @@ def main():
         tag, score = fund_tag(finfo.get(s))
         item = {'code': code, 'ticker': s, 'score': score, 'rvol': d['rvol'], 'line': line(s, d, d['rvol'], tag),
                 'time': now.strftime('%H:%M'), 'price': round(d['price'], 2), 'chg': round(d['chg'], 2)}
-        (urgent if score >= 2 or code in ('drop', 'ma50') else normal).append(item)
+        # فوری: هشدار ریسک سهم‌های زیر نظر، یا هشدار مثبتِ ⭐ که فیلتر بنیادی سخت را هم رد کرده باشد
+        is_urgent = code in ('drop', 'ma50') or (score >= 2 and fund_pass(finfo.get(s)))
+        (urgent if is_urgent else normal).append(item)
         sent.setdefault(s, []).append(code)
     pending += normal
 
@@ -328,14 +403,28 @@ def main():
         msgs.append([f'⚡ <b>هشدار فوری</b> — {stamp}', ''] + block(urgent) + [IV.LEGEND])
     if last_run and pending:
         msgs.append([f'🌙 <b>خلاصه‌ی اسکن ساعتی امروز</b> — {stamp}',
-                     f'{fa(len(pending))} هشدار عادی امروز (بدون ⭐)؛ هشدارهای فوری جدا فرستاده شده بودند.', '']
+                     f'{fa(len(pending))} هشدار عادی امروز (بدون تأیید بنیادی کامل)؛ هشدارهای فوری جدا فرستاده شده بودند.', '']
                     + block(pending, cap=8)
-                    + ['⭐ = رشد فروش/سود یا تأیید شکارچی الگو. حجم = حجم پیش‌بینی‌شده‌ی روز نسبت به میانگین ۲۰ روزه.',
+                    + ['⭐ = رشد فروش/سود یا تأیید شکارچی الگو (هشدار فوری فقط با فروش و سود هر دو ≥ ۱۰٪). حجم = حجم پیش‌بینی‌شده‌ی روز نسبت به میانگین ۲۰ روزه.',
                        IV.LEGEND, 'هشدار است، نه توصیه‌ی خرید. داده با حدود ۱۵ دقیقه تأخیر.'])
     IV.save()
     ok = all(tg('\n'.join(m)) for m in msgs) if msgs else True
     if not ok:
         return
+    if urgent:                                              # نمودار ۶ ماهه‌ی هر سهم فوری (بی‌خطر برای متن هشدار)
+        photos, seen = [], set()
+        os.makedirs(OUT_DIR, exist_ok=True)
+        for x in urgent:
+            if x['ticker'] in seen or data.get(x['ticker']) is None:
+                continue
+            seen.add(x['ticker'])
+            try:
+                path = os.path.join('/tmp', f'chart_{x["ticker"]}.png')
+                make_chart(x['ticker'], data[x['ticker']], path)
+                photos.append((path, f'<b>{x["ticker"]}</b> — {LABELS[x["code"]]}\n{x["line"]}'))
+            except Exception as e:
+                print(f'⚠️ chart {x["ticker"]}: {e}')
+        tg_photos(photos)
     if last_run and pending:
         pending = []
     state = {str(today): sent, 'pending_' + str(today): pending}     # فقط روز جاری
