@@ -256,3 +256,12 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-26,in,INOXINDIA.NS,INOX India Ltd.,2162.8,25884.5,trend|longpat,صورت مالی|بافت,3,0.433,کف دوقلو (در انتظار شکست),1.5
 2026-11-26,kr,251970.KQ,PUM-TECH KOREA,79800.0,10230.0,trend|longpat,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.702,شکست سقف ۵۲ هفته,1.7
 2026-11-26,kr,028050.KS,SamsungE&A,59400.0,10230.0,trend|longpat,بافت|سود پیاپی,3,0.637,فنجان‌ودسته (نزدیک سقف),2.0
+2026-11-27,us,BGC,"BGC Group, Inc.",11.575,720.46,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.808,کف دوقلو (در انتظار شکست),1.5
+2026-11-27,us,RS,"Reliance, Inc.",421.175,720.46,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),5,0.35,کف دوقلو (در انتظار شکست)، سقف دوقلو (هشدار)، مثلث صعودی,2.0
+2026-11-27,in,CUPID.NS,Cupid Ltd.,389.5,25607.1992,trend|longpat,صورت مالی|کن‌اسلیم|بافت|سود پیاپی,3,0.972,شکست سقف ۵۲ هفته,1.7
+2026-11-27,in,SHREEJISPG.NS,Shreeji Shipping Global Ltd.,923.7,25607.1992,trend|longpat,صورت مالی|بافت,3,0.925,شکست سقف ۵۲ هفته,1.7
+2026-11-27,in,AEGISLOG.NS,Aegis Logistics Ltd.,1297.9,25607.1992,trend|pullback,کن‌اسلیم|بافت,2,0.856,روند صعودی,1.0
+2026-11-27,in,PARAS.NS,Paras Defence and Space Technologies Ltd.,1302.6,25607.1992,trend|pullback,صورت مالی|کن‌اسلیم,1,0.639,سرووشانه,0.0
+2026-11-27,in,ASAHIINDIA.NS,Asahi India Glass Ltd.,1158.2,25607.1992,trend|longpat,کیفیت رشد|سود پیاپی,4,0.493,فنجان‌ودسته (شکست سقف),2.5
+2026-11-27,jp,3932.T,AKATSUKI INC,1485.0,2374.0,trend|longpat,صورت مالی|بافت,2,0.812,شکست سقف ۵۲ هفته,1.7
+2026-11-27,jp,2124.T,JAC RECRUITMENT CO LTD,1161.0,2374.0,trend|longpat,صورت مالی|بافت,3,0.683,سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف)، مثلث صعودی,3.0
