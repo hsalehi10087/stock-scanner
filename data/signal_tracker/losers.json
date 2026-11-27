@@ -171,13 +171,14 @@
 }
 },
 "AMBA": {
-"count": 1,
+"count": 2,
 "events": [
-"2026-11-24"
+"2026-11-24",
+"2026-11-25"
 ],
 "first_date": "2026-11-24",
 "first_price": 44.47,
-"last_date": "2026-11-24",
+"last_date": "2026-11-25",
 "qs": 1,
 "qs_flags": {
 "analysts": false,
@@ -743,6 +744,23 @@
 "profit": false
 }
 },
+"IMKTA": {
+"count": 1,
+"events": [
+"2026-11-25"
+],
+"first_date": "2026-11-25",
+"first_price": 74.57,
+"last_date": "2026-11-25",
+"qs": 2,
+"qs_flags": {
+"analysts": null,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": true
+}
+},
 "IREN": {
 "count": 1,
 "events": [
@@ -942,6 +960,23 @@
 "first_price": 7.32,
 "last_date": "2026-11-19"
 },
+"NOAH": {
+"count": 1,
+"events": [
+"2026-11-25"
+],
+"first_date": "2026-11-25",
+"first_price": 5.53,
+"last_date": "2026-11-25",
+"qs": 1,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": false,
+"momentum": false,
+"profit": false
+}
+},
 "NTES": {
 "count": 1,
 "events": [
@@ -950,6 +985,23 @@
 "first_date": "2026-11-19",
 "first_price": 104.94,
 "last_date": "2026-11-19"
+},
+"NTNX": {
+"count": 1,
+"events": [
+"2026-11-25"
+],
+"first_date": "2026-11-25",
+"first_price": 46.3,
+"last_date": "2026-11-25",
+"qs": 3,
+"qs_flags": {
+"analysts": true,
+"cash": false,
+"growth": true,
+"momentum": false,
+"profit": true
+}
 },
 "OCC": {
 "count": 1,
@@ -992,6 +1044,23 @@
 "growth": true,
 "momentum": false,
 "profit": false
+}
+},
+"PHAR": {
+"count": 1,
+"events": [
+"2026-11-25"
+],
+"first_date": "2026-11-25",
+"first_price": 10.05,
+"last_date": "2026-11-25",
+"qs": 3,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
+"momentum": false,
+"profit": true
 }
 },
 "PRE": {
@@ -1338,6 +1407,23 @@
 "analysts": false,
 "cash": true,
 "growth": false,
+"momentum": false,
+"profit": true
+}
+},
+"URBN": {
+"count": 1,
+"events": [
+"2026-11-25"
+],
+"first_date": "2026-11-25",
+"first_price": 76.74,
+"last_date": "2026-11-25",
+"qs": 3,
+"qs_flags": {
+"analysts": false,
+"cash": true,
+"growth": true,
 "momentum": false,
 "profit": true
 }
