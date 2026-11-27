@@ -280,7 +280,9 @@ def make_chart(sym, df, path):
     ax.scatter([len(view) - 1], [view.iloc[-1]], color=col, s=18, zorder=5)
     ax.set_title(f'{sym}   6M {ret:+.0f}%   (MA50 dashed)', fontsize=8, loc='left')
     ax.set_xticks([0, len(view) // 2, len(view) - 1])
-    ax.set_xticklabels([str(view.index[i])[5:] for i in (0, len(view) // 2, len(view) - 1)], fontsize=6)
+    sys.path.insert(0, os.path.join(ROOT, 'market_summary'))
+    from jalali import jdate
+    ax.set_xticklabels([jdate(view.index[i], short=True) for i in (0, len(view) // 2, len(view) - 1)], fontsize=6)
     ax.tick_params(axis='y', labelsize=6)
     for sp in ('top', 'right'):
         ax.spines[sp].set_visible(False)
