@@ -1,5 +1,5 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "split": "2021-05-04",
  "rules": {
   "follow_flow": {
@@ -14,14 +14,14 @@
     "cagr": -1.4,
     "max_dd": -10.7,
     "sharpe": -0.38,
-    "weeks": 289,
-    "hit": 45.7
+    "weeks": 290,
+    "hit": 45.9
    },
    "full": {
     "cagr": -1.1,
     "max_dd": -22.4,
     "sharpe": -0.22,
-    "weeks": 963,
+    "weeks": 964,
     "hit": 47.9
    }
   },
@@ -37,15 +37,15 @@
     "cagr": 1.0,
     "max_dd": -8.8,
     "sharpe": 0.3,
-    "weeks": 289,
-    "hit": 51.2
+    "weeks": 290,
+    "hit": 51.0
    },
    "full": {
     "cagr": -0.3,
     "max_dd": -18.8,
     "sharpe": -0.04,
-    "weeks": 963,
-    "hit": 48.6
+    "weeks": 964,
+    "hit": 48.5
    }
   },
   "contrarian_extreme": {
@@ -60,14 +60,14 @@
     "cagr": 0.2,
     "max_dd": -1.4,
     "sharpe": 0.33,
-    "weeks": 289,
-    "hit": 18.0
+    "weeks": 290,
+    "hit": 17.9
    },
    "full": {
     "cagr": -0.0,
     "max_dd": -4.3,
     "sharpe": -0.01,
-    "weeks": 963,
+    "weeks": 964,
     "hit": 16.0
    }
   },
@@ -82,16 +82,16 @@
    "test": {
     "cagr": -0.6,
     "max_dd": -7.0,
-    "sharpe": -0.15,
-    "weeks": 289,
-    "hit": 47.4
+    "sharpe": -0.14,
+    "weeks": 290,
+    "hit": 47.6
    },
    "full": {
     "cagr": -1.1,
     "max_dd": -22.4,
     "sharpe": -0.23,
-    "weeks": 963,
-    "hit": 47.2
+    "weeks": 964,
+    "hit": 47.3
    }
   },
   "_buy_all_vs_usd": {
@@ -103,18 +103,18 @@
     "hit": 50.1
    },
    "test": {
-    "cagr": -2.5,
+    "cagr": -2.4,
     "max_dd": -18.9,
-    "sharpe": -0.34,
-    "weeks": 289,
-    "hit": 46.0
+    "sharpe": -0.33,
+    "weeks": 290,
+    "hit": 46.2
    },
    "full": {
     "cagr": -0.5,
     "max_dd": -34.0,
     "sharpe": -0.03,
-    "weeks": 963,
-    "hit": 48.9
+    "weeks": 964,
+    "hit": 49.0
    }
   }
  },
