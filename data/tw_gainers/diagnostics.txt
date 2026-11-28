@@ -1,7 +1,7 @@
-openapi.twse.com.tw try1 200 len=776916
+openapi.twse.com.tw try1 200 len=776904
 twse_list: 1092
-www.tpex.org.tw try1 200 len=5219183
+www.tpex.org.tw try1 200 len=5163839
 tpex_list: 896
 tickers=1988
-priced=1988 price_gainers=375
-qualified=121 (growth computed for 131 of 375)
+priced=1988 price_gainers=308
+qualified=103 (growth computed for 111 of 308)
