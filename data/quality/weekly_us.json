@@ -1,92 +1,167 @@
 {
  "market": "us",
- "date": "2026-11-21",
- "scored": 2000,
- "no_data": 0,
- "universe": 6917,
+ "date": "2026-11-28",
+ "scored": 1998,
+ "no_data": 2,
+ "universe": 6908,
  "liquid": 2000,
  "distribution": {
-  "0": 82,
-  "1": 338,
-  "2": 581,
-  "3": 613,
-  "4": 320,
-  "5": 66
+  "0": 88,
+  "1": 323,
+  "2": 584,
+  "3": 626,
+  "4": 314,
+  "5": 63
  },
  "fives": [
   "XOM",
-  "TXN",
-  "ANET",
+  "ABBV",
   "COP",
   "UNP",
   "ABNB",
   "SHEL",
-  "ROST",
+  "URI",
   "JCI",
   "CSX",
+  "ROST",
   "EOG",
+  "MSI",
+  "CBOE",
+  "GWW",
+  "LYV",
   "FAST",
   "TRGP",
-  "GWW",
-  "CNQ",
-  "DXCM",
   "NUE",
+  "DXCM",
   "MET",
   "OKE",
-  "SU",
   "APA",
-  "ETSY",
   "EXPD",
-  "THC",
-  "NTRS",
   "CPAY",
+  "HAS",
+  "NTRS",
   "HNGE",
-  "EQNR",
   "ZETA",
   "PAYC",
-  "CAKE",
   "CHYM",
+  "QLYS",
+  "CAKE",
+  "PKG",
   "ELF",
-  "VSXY",
-  "TTE",
-  "CNI",
   "CLH",
+  "CNI",
   "EXEL",
-  "MUSA",
+  "MANH",
+  "TTE",
   "BTSG",
+  "RRC",
   "RS",
   "NDSN",
-  "MSM",
-  "ALSN",
-  "STNG",
-  "WTS",
-  "WRBY",
-  "TREX",
-  "CDNA",
+  "DHT",
+  "ALKS",
   "XMTR",
+  "TREX",
   "IMO",
-  "VIRT",
-  "CXW",
   "AXGN",
   "MGNI",
-  "ATRC",
-  "TBBB",
   "KNSA",
+  "TBBB",
+  "APPN",
   "MEOH",
-  "PACS",
   "GCT",
+  "PACS",
+  "AVPT",
+  "BGC",
+  "UFPT",
   "ETON",
   "FLYW",
   "AMPL",
-  "HAFN",
   "XERS"
  ],
- "dropped": [],
+ "dropped": [
+  {
+   "ticker": "EQNR",
+   "name": "Equinor ASA",
+   "score": 3
+  }
+ ],
  "top": [
+  {
+   "ticker": "FLYW",
+   "name": "Flywire Corporation - Voting Common Stoc",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.7,
+    "peg": 0.07
+   }
+  },
+  {
+   "ticker": "DHT",
+   "name": "DHT Holdings, Inc.",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.5,
+    "peg": 0.1
+   }
+  },
+  {
+   "ticker": "IMO",
+   "name": "Imperial Oil Limited Common Stock",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -5.0,
+    "peg": 0.17
+   }
+  },
+  {
+   "ticker": "ETON",
+   "name": "Eton Pharmaceuticals, Inc. - Common Stoc",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 1.3,
+    "peg": 0.26
+   }
+  },
   {
    "ticker": "MGNI",
    "name": "Magnite, Inc. - Common Stock",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -98,13 +173,13 @@
    },
    "badges": {
     "dilution_pct": 1.1,
-    "peg": 0.09
+    "peg": 0.33
    }
   },
   {
-   "ticker": "MEOH",
-   "name": "Methanex Corporation - Common Stock",
-   "date": "2026-11-14",
+   "ticker": "KNSA",
+   "name": "Kiniksa Pharmaceuticals International, p",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -115,14 +190,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 14.8,
-    "peg": 0.2
+    "dilution_pct": 5.2,
+    "peg": 0.39
    }
   },
   {
-   "ticker": "CLH",
-   "name": "Clean Harbors, Inc. Common Stock",
-   "date": "2026-11-14",
+   "ticker": "EXEL",
+   "name": "Exelixis, Inc. - Common Stock",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -133,14 +208,32 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -1.8,
-    "peg": 0.27
+    "dilution_pct": -6.8,
+    "peg": 0.44
+   }
+  },
+  {
+   "ticker": "TRGP",
+   "name": "Targa Resources, Inc. Common Stock",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -1.4,
+    "peg": 0.46
    }
   },
   {
    "ticker": "GCT",
    "name": "GigaCloud Technology Inc - Class A Ordin",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -152,13 +245,13 @@
    },
    "badges": {
     "dilution_pct": -8.5,
-    "peg": 0.27
+    "peg": 0.46
    }
   },
   {
    "ticker": "MET",
    "name": "MetLife, Inc. Common Stock",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -170,13 +263,13 @@
    },
    "badges": {
     "dilution_pct": -4.9,
-    "peg": 0.54
+    "peg": 0.51
    }
   },
   {
-   "ticker": "ALSN",
-   "name": "Allison Transmission Holdings, Inc. Comm",
-   "date": "2026-11-14",
+   "ticker": "ABBV",
+   "name": "AbbVie Inc. Common Stock",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -187,14 +280,32 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -3.4,
-    "peg": 0.57
+    "dilution_pct": 0.1,
+    "peg": 0.58
+   }
+  },
+  {
+   "ticker": "BGC",
+   "name": "BGC Group, Inc. - Class A Common Stock",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.3,
+    "peg": 0.61
    }
   },
   {
    "ticker": "TTE",
    "name": "TotalEnergies SE Ordinary Shares",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -206,31 +317,13 @@
    },
    "badges": {
     "dilution_pct": -4.7,
-    "peg": 0.66
-   }
-  },
-  {
-   "ticker": "ZETA",
-   "name": "Zeta Global Holdings Corp. Class A Commo",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 3.2,
-    "peg": 0.77
+    "peg": 0.64
    }
   },
   {
    "ticker": "CPAY",
    "name": "Corpay, Inc. Common Stock",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -242,85 +335,31 @@
    },
    "badges": {
     "dilution_pct": -2.6,
+    "peg": 0.82
+   }
+  },
+  {
+   "ticker": "RRC",
+   "name": "Range Resources Corporation Common Stock",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -2.2,
     "peg": 0.87
-   }
-  },
-  {
-   "ticker": "COP",
-   "name": "ConocoPhillips Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -4.0,
-    "peg": 0.91
-   }
-  },
-  {
-   "ticker": "EQNR",
-   "name": "Equinor ASA",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -8.3,
-    "peg": 0.94
-   }
-  },
-  {
-   "ticker": "TXN",
-   "name": "Texas Instruments Incorporated - Common ",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.5,
-    "peg": 0.95
-   }
-  },
-  {
-   "ticker": "ETSY",
-   "name": "Etsy, Inc. Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -10.6,
-    "peg": 0.95
    }
   },
   {
    "ticker": "NTRS",
    "name": "Northern Trust Corporation - Common Stoc",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -332,13 +371,13 @@
    },
    "badges": {
     "dilution_pct": -4.9,
-    "peg": 0.98
+    "peg": 0.89
    }
   },
   {
-   "ticker": "TREX",
-   "name": "Trex Company, Inc. Common Stock",
-   "date": "2026-11-14",
+   "ticker": "COP",
+   "name": "ConocoPhillips Common Stock",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -349,14 +388,50 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -1.3,
-    "peg": 1.0
+    "dilution_pct": -4.0,
+    "peg": 0.9
+   }
+  },
+  {
+   "ticker": "UFPT",
+   "name": "UFP Technologies, Inc. - Common Stock",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.5,
+    "peg": 0.9
+   }
+  },
+  {
+   "ticker": "BTSG",
+   "name": "BrightSpring Health Services, Inc. - Com",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 10.3,
+    "peg": 0.96
    }
   },
   {
    "ticker": "PAYC",
    "name": "Paycom Software, Inc. Common Stock",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -368,79 +443,7 @@
    },
    "badges": {
     "dilution_pct": -1.8,
-    "peg": 1.05
-   }
-  },
-  {
-   "ticker": "CXW",
-   "name": "CoreCivic, Inc. Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -8.9,
-    "peg": 1.06
-   }
-  },
-  {
-   "ticker": "EOG",
-   "name": "EOG Resources, Inc. Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -3.5,
-    "peg": 1.18
-   }
-  },
-  {
-   "ticker": "APA",
-   "name": "APA Corporation - Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -3.4,
-    "peg": 1.18
-   }
-  },
-  {
-   "ticker": "PACS",
-   "name": "PACS Group, Inc. Common Stock",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.9,
-    "peg": 1.21
+    "peg": 1.02
    }
   }
  ]
