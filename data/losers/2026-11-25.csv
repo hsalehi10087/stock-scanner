@@ -1,7 +1,6 @@
 ticker,name,price,chg,volume,date,qs,qs_known,qs_label,qs_flags
-PHAR,"Pharming Group N.V. - ADS, each representing 10 ordinary shares",10.050000190734863,-23.978820062508234,150000.0,2026-11-25,3,5,⭐۳/۵ ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
-AMBA,"Ambarella, Inc. - Ordinary Shares",35.68000030517578,-19.766135988849797,14774200.0,2026-11-25,1,5,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
-NTNX,"Nutanix, Inc. - Class A Common Stock",46.29999923706055,-15.185933123933781,13604100.0,2026-11-25,3,5,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
-IMKTA,"Ingles Markets, Incorporated - Class A Common Stock",74.56999969482422,-11.32119997343457,184800.0,2026-11-25,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
-NOAH,Noah Holdings Limited American Depositary Shares,5.53000020980835,-11.23595196022551,804300.0,2026-11-25,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
-URBN,"Urban Outfitters, Inc. - Common Stock",76.73999786376953,-10.329520656866077,6471800.0,2026-11-25,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
+AMBA,"Ambarella, Inc. - Ordinary Shares",35.68000030517578,-19.766135988849797,2948573.0,2026-11-25,1,5,⭐۱/۵ ⚠️رقیق‌شدن,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+NTNX,"Nutanix, Inc. - Class A Common Stock",46.29999923706055,-15.185933123933781,3630884.0,2026-11-25,3,5,⭐۳/۵,"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': True}"
+IMKTA,"Ingles Markets, Incorporated - Class A Common Stock",74.56999969482422,-11.32119997343457,110198.0,2026-11-25,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': False, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+NOAH,Noah Holdings Limited American Depositary Shares,5.53000020980835,-11.23595196022551,478524.0,2026-11-25,1,5,⭐۱/۵,"{'growth': False, 'cash': True, 'profit': False, 'momentum': False, 'analysts': False}"
+URBN,"Urban Outfitters, Inc. - Common Stock",76.73999786376953,-10.329520656866077,1184188.0,2026-11-25,3,5,⭐۳/۵,"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': False}"
