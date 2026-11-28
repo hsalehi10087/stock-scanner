@@ -265,3 +265,7 @@ date,market,ticker,name,price,index_price,setups,fundamentals,quality,tech_rank,
 2026-11-27,in,ASAHIINDIA.NS,Asahi India Glass Ltd.,1158.2,25607.1992,trend|longpat,کیفیت رشد|سود پیاپی,4,0.493,فنجان‌ودسته (شکست سقف),2.5
 2026-11-27,jp,3932.T,AKATSUKI INC,1485.0,2374.0,trend|longpat,صورت مالی|بافت,2,0.812,شکست سقف ۵۲ هفته,1.7
 2026-11-27,jp,2124.T,JAC RECRUITMENT CO LTD,1161.0,2374.0,trend|longpat,صورت مالی|بافت,3,0.683,سرووشانه معکوس (شکست)، فنجان‌ودسته (شکست سقف)، مثلث صعودی,3.0
+2026-11-28,us,NIC,Nicolet Bankshares,170.15,728.32,trend|pullback|longpat,کیفیت رشد|سود پیاپی (SEC),4,0.147,مثلث صعودی,2.0
+2026-11-28,jp,4417.T,GLOBAL SECURITY EXPERTS INC,8490.0,2409.0,trend|vcp|longpat,صورت مالی|کن‌اسلیم|بافت,3,0.327,شکست سقف ۵۲ هفته,1.7
+2026-11-28,jp,4180.T,APPIER GROUP INC,1475.0,2409.0,trend|pullback,کیفیت رشد|سود پیاپی,4,0.885,روند صعودی,1.0
+2026-11-28,kr,077500.KS,Uniquest,10470.0,10860.0,trend|pullback,صورت مالی|بافت|کیفیت رشد|سود پیاپی,4,0.707,روند صعودی,1.0
