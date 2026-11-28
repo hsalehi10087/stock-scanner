@@ -1,0 +1,12 @@
+id: 2dec8e53ae-12-coin-crypto-4h
+name: 12-coin crypto 4h strategy
+name_fa: استراتژی ۱۲ رمزارز روی کندل ۴ ساعته
+source: medium/algorithmic-trading
+source_url: https://lucytrade.medium.com/i-backtested-a-12-coin-crypto-strategy-for-a-year-it-made-201-and-lost-43-on-the-way-e18ed46741a1
+claim: "«یک استراتژی ۱۲ رمزارزی را یک سال بک‌تست کردم: ‎+201%‎ سود و ‎43%‎ افت در مسیر؛ ۲۵۷ معامله‌ی شبیه‌سازی‌شده روی کندل ۴ ساعته»"
+claimed_return: "+201% in 1y, -43% drawdown"
+added: 2026-11-28
+status: not_testable
+asset_class: crypto
+symbols: [BTC-USD]
+reason_not_testable: "متن کامل مقاله در دسترس نبود؛ قانون ورود و خروج، اندیکاتورها و فهرست ۱۲ رمزارز گفته نشده؛ اطلاعات کافی نیست"
