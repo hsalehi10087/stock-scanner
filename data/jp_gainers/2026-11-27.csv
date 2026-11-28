@@ -1,1 +1,17 @@
-
+ticker,name,price_chg,ni_growth,ni_cur_m,ni_prev_m,date,qs,qs_known,qs_label,qs_flags
+6627,"Tera Probe,Inc.",15.18235793044953,130.7619808053061,2034.633,881.702,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+7826,"FURUYA METAL CO.,LTD.",13.351498637602187,280.71305841924396,8863.0,2328.0,2026-11-27,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+6834,"SEIKOH GIKEN Co.,Ltd.",13.30275229357798,77.20031980848894,2273.955,1283.268,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+6855,JAPAN ELECTRONIC MATERIALS CORPORATION,13.138686131386867,188.73239436619718,2050.0,710.0,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم) ⚠️رقیق‌شدن,"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6777,santec Holdings Corporation,12.858094603597593,101.15225006028972,3369.791,1675.244,2026-11-27,3,4,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+6526,Socionext Inc.,12.563494751100567,31.872260488415783,2106.0,1597.0,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
+6871,"MICRONICS JAPAN CO.,LTD.",12.340079088160039,248.26839826839827,8045.0,2310.0,2026-11-27,3,4,⭐۳/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': True, 'momentum': False, 'analysts': None}"
+6787,"Meiko Electronics Co.,Ltd.",12.244897959183664,24.150809176596123,6981.0,5623.0,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6508,MEIDENSHA CORPORATION,12.232914695808184,128.12299807815504,3561.0,1561.0,2026-11-27,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+6862,MINATO HOLDINGS INC.,11.731619124146242,660.5924434601704,2833.397,372.525,2026-11-27,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+3891,NIPPON KODOSHI CORPORATION,10.80797481636937,108.25541601498985,1344.851,645.77,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6779,"NIHON DEMPA KOGYO CO.,LTD.",10.72137657180674,139.57703927492446,793.0,331.0,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+6622,DAIHEN CORPORATION,10.53511705685619,43.39268978444236,4590.0,3201.0,2026-11-27,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+5805,SWCC Corporation,10.461630695443635,66.59364731653888,6084.0,3652.0,2026-11-27,1,4,⭐۱/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': False, 'momentum': False, 'analysts': None}"
+1942,"KANDENKO CO.,LTD.",10.374306839186698,15.655904595695173,15905.0,13752.0,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': True, 'profit': False, 'momentum': False, 'analysts': None}"
+4971,MEC COMPANY LTD.,10.040160642570273,24.329912707867436,1784.644,1435.41,2026-11-27,2,4,⭐۲/۵ (۱ نامعلوم),"{'growth': True, 'cash': False, 'profit': True, 'momentum': False, 'analysts': None}"
