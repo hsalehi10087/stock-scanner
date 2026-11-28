@@ -1,32 +1,143 @@
 {
  "market": "cn",
- "date": "2026-11-21",
- "scored": 2000,
- "no_data": 0,
+ "date": "2026-11-28",
+ "scored": 1962,
+ "no_data": 38,
  "universe": 5224,
  "liquid": 2000,
  "distribution": {
-  "0": 247,
-  "1": 786,
-  "2": 669,
-  "3": 245,
-  "4": 47,
-  "5": 6
+  "0": 255,
+  "1": 765,
+  "2": 648,
+  "3": 237,
+  "4": 48,
+  "5": 9
  },
  "fives": [
   "002415.SZ",
   "300613.SZ",
   "601225.SS",
   "603129.SS",
+  "300012.SZ",
+  "688617.SS",
+  "600428.SS",
   "002832.SZ",
   "601083.SS"
  ],
  "dropped": [],
  "top": [
   {
+   "ticker": "600428.SS",
+   "name": "COSCO SHIPPING SPECIALIZED CARR",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 27.8,
+    "peg": 0.23
+   }
+  },
+  {
+   "ticker": "603129.SS",
+   "name": "ZHEJIANG CF MOTO POWER CO LTD",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.8,
+    "peg": 0.57
+   }
+  },
+  {
+   "ticker": "300613.SZ",
+   "name": "FHM",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.3,
+    "peg": 0.93
+   }
+  },
+  {
+   "ticker": "688617.SS",
+   "name": "APT MEDICAL INC",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.1,
+    "peg": 1.09
+   }
+  },
+  {
+   "ticker": "300012.SZ",
+   "name": "CTI",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 2.34
+   }
+  },
+  {
+   "ticker": "601225.SS",
+   "name": "SHAANXI COAL INDUSTRY",
+   "date": "2026-11-28",
+   "score": 5,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": true,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 3.41
+   }
+  },
+  {
    "ticker": "002415.SZ",
    "name": "HIKVISION",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -38,64 +149,13 @@
    },
    "badges": {
     "dilution_pct": -0.7,
-    "peg": 0.75
-   }
-  },
-  {
-   "ticker": "300613.SZ",
-   "name": "FHM",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.3
-   }
-  },
-  {
-   "ticker": "601225.SS",
-   "name": "SHAANXI COAL INDUSTRY",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "603129.SS",
-   "name": "ZHEJIANG CF MOTO POWER CO LTD",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.8
+    "peg": 7.1
    }
   },
   {
    "ticker": "002832.SZ",
    "name": "BIEM",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 5,
    "known": 5,
    "flags": {
@@ -106,7 +166,8 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.0
+    "dilution_pct": 0.0,
+    "peg": 23.31
    }
   },
   {
@@ -127,27 +188,9 @@
    }
   },
   {
-   "ticker": "601857.SS",
-   "name": "PETROCHINA CO",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.28
-   }
-  },
-  {
-   "ticker": "000933.SZ",
-   "name": "SHENHUO CO.LTD",
-   "date": "2026-11-14",
+   "ticker": "601233.SS",
+   "name": "TONGKUN GROUP CO LTD",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -158,14 +201,68 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.36
+    "dilution_pct": -0.3,
+    "peg": 0.04
+   }
+  },
+  {
+   "ticker": "300475.SZ",
+   "name": "SHANNON SEMI",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 1.6,
+    "peg": 0.07
+   }
+  },
+  {
+   "ticker": "688578.SS",
+   "name": "SHANGHAI ALLIST PHARMACEUTICALS",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.07
+   }
+  },
+  {
+   "ticker": "600961.SS",
+   "name": "ZHUZHOU SMELTER GROUP CO. LTD.",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.08
    }
   },
   {
    "ticker": "601872.SS",
    "name": "CHINA MERCHANTS ENERGY SHIPPING",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -177,49 +274,13 @@
    },
    "badges": {
     "dilution_pct": -0.9,
-    "peg": 0.42
+    "peg": 0.16
    }
   },
   {
-   "ticker": "002475.SZ",
-   "name": "LXJM",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.7,
-    "peg": 0.63
-   }
-  },
-  {
-   "ticker": "000973.SZ",
-   "name": "FSPG",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.75
-   }
-  },
-  {
-   "ticker": "600183.SS",
-   "name": "SHENGYI TECHNOLOGY CO LTD",
-   "date": "2026-11-14",
+   "ticker": "000933.SZ",
+   "name": "SHENHUO CO.LTD",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -231,13 +292,13 @@
    },
    "badges": {
     "dilution_pct": -0.0,
-    "peg": 0.85
+    "peg": 0.19
    }
   },
   {
-   "ticker": "688235.SS",
-   "name": "BEIGENE LTD",
-   "date": "2026-11-14",
+   "ticker": "603986.SS",
+   "name": "GIGA DEVICE SEMICONDUCTOR INC",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -248,14 +309,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 4.1,
-    "peg": 1.16
+    "dilution_pct": 0.6,
+    "peg": 0.3
    }
   },
   {
    "ticker": "601168.SS",
    "name": "WESTERN MINING CO. LTD.",
-   "date": "2026-11-14",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -267,49 +328,31 @@
    },
    "badges": {
     "dilution_pct": 0.0,
-    "peg": 1.32
+    "peg": 0.3
    }
   },
   {
-   "ticker": "600026.SS",
-   "name": "COSCO SHIPPING ENGY TPT CO LTD",
-   "date": "2026-11-14",
+   "ticker": "603259.SS",
+   "name": "WUXI APPTEC CO LTD",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
     "growth": true,
-    "cash": true,
+    "cash": false,
     "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 14.6,
-    "peg": 1.54
-   }
-  },
-  {
-   "ticker": "601328.SS",
-   "name": "BANK OF COMMUNICATIONS CO LTD",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
     "momentum": true,
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 19.0,
-    "peg": 1.9
+    "dilution_pct": 3.3,
+    "peg": 0.36
    }
   },
   {
-   "ticker": "600428.SS",
-   "name": "COSCO SHIPPING SPECIALIZED CARR",
-   "date": "2026-11-14",
+   "ticker": "300483.SZ",
+   "name": "SINO PRIMA GAS",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -320,14 +363,14 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 27.8,
-    "peg": 14.83
+    "dilution_pct": 8.1,
+    "peg": 0.38
    }
   },
   {
-   "ticker": "603986.SS",
-   "name": "GIGA DEVICE SEMICONDUCTOR INC",
-   "date": "2026-11-14",
+   "ticker": "600487.SS",
+   "name": "HENGTONG OPTIC-ELECTRIC CO.LTD",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -338,41 +381,8 @@
     "analysts": true
    },
    "badges": {
-    "dilution_pct": 0.6
-   }
-  },
-  {
-   "ticker": "600176.SS",
-   "name": "CHINA JUSHI CO LTD",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
-   "ticker": "002463.SZ",
-   "name": "HDGF",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.3
+    "dilution_pct": 0.0,
+    "peg": 0.42
    }
   }
  ]
