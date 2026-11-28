@@ -1,82 +1,25 @@
 {
  "market": "tw",
- "date": "2026-11-21",
- "scored": 1845,
- "no_data": 1,
- "universe": 1987,
- "liquid": 1846,
+ "date": "2026-11-28",
+ "scored": 1862,
+ "no_data": 3,
+ "universe": 1988,
+ "liquid": 1865,
  "distribution": {
-  "0": 333,
-  "1": 772,
-  "2": 476,
-  "3": 201,
-  "4": 60,
-  "5": 3
+  "0": 320,
+  "1": 757,
+  "2": 515,
+  "3": 209,
+  "4": 61,
+  "5": 0
  },
- "fives": [
-  "1303.TW",
-  "3374.TWO",
-  "3044.TW"
- ],
+ "fives": [],
  "dropped": [],
  "top": [
   {
-   "ticker": "3044.TW",
-   "name": "TRIPOD TECHNOLOGY CORP",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.32
-   }
-  },
-  {
-   "ticker": "1303.TW",
-   "name": "NAN YA PLASTIC",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 6.46
-   }
-  },
-  {
-   "ticker": "3374.TWO",
-   "name": "XINTEC INC",
-   "date": "2026-11-14",
-   "score": 5,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0
-   }
-  },
-  {
    "ticker": "2408.TW",
-   "name": "NANYA TECHNOLOGY CORPORATION",
-   "date": "2026-11-14",
+   "name": "",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -88,13 +31,13 @@
    },
    "badges": {
     "dilution_pct": -0.0,
-    "peg": 0.04
+    "peg": 0.03
    }
   },
   {
-   "ticker": "2615.TW",
-   "name": "WAN HAI LINES",
-   "date": "2026-11-14",
+   "ticker": "8046.TW",
+   "name": "",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -106,13 +49,265 @@
    },
    "badges": {
     "dilution_pct": 0.0,
-    "peg": 0.04
+    "peg": 0.08
    }
   },
   {
-   "ticker": "3029.TW",
-   "name": "ZERO ONE TECHNOLOGY",
-   "date": "2026-11-14",
+   "ticker": "8096.TWO",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.11
+   }
+  },
+  {
+   "ticker": "2344.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.14
+   }
+  },
+  {
+   "ticker": "7711.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 15.0,
+    "peg": 0.14
+   }
+  },
+  {
+   "ticker": "6442.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 2.5,
+    "peg": 0.18
+   }
+  },
+  {
+   "ticker": "3006.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.4,
+    "peg": 0.2
+   }
+  },
+  {
+   "ticker": "6166.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.1,
+    "peg": 0.21
+   }
+  },
+  {
+   "ticker": "3702.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.25
+   }
+  },
+  {
+   "ticker": "4931.TWO",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.1,
+    "peg": 0.27
+   }
+  },
+  {
+   "ticker": "2421.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": -0.3,
+    "peg": 0.28
+   }
+  },
+  {
+   "ticker": "6944.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 11.0,
+    "peg": 0.28
+   }
+  },
+  {
+   "ticker": "3693.TWO",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.31
+   }
+  },
+  {
+   "ticker": "3036.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 13.3,
+    "peg": 0.33
+   }
+  },
+  {
+   "ticker": "2404.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.7,
+    "peg": 0.34
+   }
+  },
+  {
+   "ticker": "2327.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.1,
+    "peg": 0.35
+   }
+  },
+  {
+   "ticker": "6782.TW",
+   "name": "",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -128,9 +323,45 @@
    }
   },
   {
-   "ticker": "2327.TW",
-   "name": "YAGEO CORP",
-   "date": "2026-11-14",
+   "ticker": "3147.TWO",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.0,
+    "peg": 0.41
+   }
+  },
+  {
+   "ticker": "3017.TW",
+   "name": "",
+   "date": "2026-11-28",
+   "score": 4,
+   "known": 5,
+   "flags": {
+    "growth": true,
+    "cash": true,
+    "profit": true,
+    "momentum": false,
+    "analysts": true
+   },
+   "badges": {
+    "dilution_pct": 0.8,
+    "peg": 0.45
+   }
+  },
+  {
+   "ticker": "2337.TW",
+   "name": "",
+   "date": "2026-11-28",
    "score": 4,
    "known": 5,
    "flags": {
@@ -143,240 +374,6 @@
    "badges": {
     "dilution_pct": 0.1,
     "peg": 0.46
-   }
-  },
-  {
-   "ticker": "3443.TW",
-   "name": "GLOBAL UNICHIP CORP.",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": false,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.5
-   }
-  },
-  {
-   "ticker": "9939.TW",
-   "name": "TAIWAN HON CHUAN ENTERPRISE",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.64
-   }
-  },
-  {
-   "ticker": "2303.TW",
-   "name": "UNITED MICRO ELECTRONICS",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.2,
-    "peg": 0.75
-   }
-  },
-  {
-   "ticker": "2455.TW",
-   "name": "VISUAL PHOTONICS EPITAXY CO LTD",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0,
-    "peg": 0.83
-   }
-  },
-  {
-   "ticker": "2379.TW",
-   "name": "REALTEK SEMICONDUCTOR CORP",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.5,
-    "peg": 0.85
-   }
-  },
-  {
-   "ticker": "6166.TW",
-   "name": "ADLINK TECHNOLOGY INC",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.1,
-    "peg": 0.9
-   }
-  },
-  {
-   "ticker": "3105.TWO",
-   "name": "WIN SEMICONDUCTORS CORP",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": false,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 0.91
-   }
-  },
-  {
-   "ticker": "3711.TW",
-   "name": "ASE TECHNOLOGY HOLDING CO LTD",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.7,
-    "peg": 0.99
-   }
-  },
-  {
-   "ticker": "2855.TW",
-   "name": "PRESIDENT SECURITIES",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": false,
-    "profit": true,
-    "momentum": true,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.08
-   }
-  },
-  {
-   "ticker": "2404.TW",
-   "name": "UNITED INTEGRATION SERVICES CO",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.7,
-    "peg": 1.21
-   }
-  },
-  {
-   "ticker": "3037.TW",
-   "name": "UNIMICRON TECHNOLOGY",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.0,
-    "peg": 1.45
-   }
-  },
-  {
-   "ticker": "6285.TW",
-   "name": "WNC CORPORATION",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": -0.2,
-    "peg": 1.84
-   }
-  },
-  {
-   "ticker": "1216.TW",
-   "name": "UNI-PRESIDENT ENTERPRISES CORP",
-   "date": "2026-11-14",
-   "score": 4,
-   "known": 5,
-   "flags": {
-    "growth": true,
-    "cash": true,
-    "profit": true,
-    "momentum": false,
-    "analysts": true
-   },
-   "badges": {
-    "dilution_pct": 0.0,
-    "peg": 1.93
    }
   }
  ]
